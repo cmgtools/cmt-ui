@@ -1,0 +1,208 @@
+/**********************************************************************
+Description: It defines the form elements styles for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+
+// Forms
+
+form {
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    // Fixed width forms
+    &.small {
+        width: 230px;
+        padding: 10px;
+        position: relative;
+    }
+
+    &.medium {
+        width: 430px;
+        padding: 10px;
+        position: relative;
+    }
+
+    &.large {
+        width: 630px;
+        padding: 10px;
+        position: relative;
+    }
+    
+    @include responsive-max( screen-tablet-large ) {
+
+        &.small, &.medium, &.large {
+            width: 80%;
+            padding: 5%;
+        }
+    }
+}
+
+// Labels
+
+label {
+    border: none;
+    box-shadow: none;
+    font-size: 1em;
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+    text-align: left;
+}
+
+// Input Fields
+
+%input-style {
+    vertical-align: middle;
+    font-size: normal;
+    line-height: normal;
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: $border-default-d;
+    box-shadow: none;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    @extend %input-style;
+    @include transit-all( $transit-eio, $transit-time-small );
+    background-color: $color-field;
+    color: $color-field-text;
+    text-align: left;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    box-shadow: 0 0 5px $color-shadow-default;
+}
+
+// Buttons
+
+input[type="submit"], input[type="button"], button, select, .btn {
+    @extend %input-style;
+    @include transit-all( $transit-eio, $transit-time-small );
+    background-color: $color-button;
+    color: $color-button-text;
+    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
+    background-color: $color-button-h;
+    color: $color-button-h-text;
+    box-shadow: 0 0 5px $color-shadow-default;
+}
+
+.btn {
+    display: inline-block;
+}
+
+// Fixed width elements
+
+input[type="text"], input[type="email"], input[type="password"], textarea, input[type="submit"], input[type="button"], button, select, .btn {
+    
+    &.half {
+        width: 50%;
+    }
+
+    &.small {
+        width: 80px;
+    }
+
+    &.medium {
+        width: 120px;
+    }
+
+    &.large {
+        width: 180px;
+    }
+
+    &.xlarge {
+        width: 250px;
+    }
+}
+
+// Splitted forms
+
+.frm-split-40-60 label {
+    width: 40%;
+    float: left;
+}
+
+.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"], 
+.frm-split-40-60 textarea, .frm-split-40-60 select {
+    width: 60%;
+    float: left;
+}
+
+// Round cornered elements
+
+.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"], 
+.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
+.frm-rounded-all button, .frm-rounded-all .btn {
+      @include rounded( $radius-default );
+}
+
+.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"], 
+.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"],
+.frm-rounded-top button, .frm-rounded-top .btn {
+      @include rounded-top( $radius-default );
+}
+
+.frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"], 
+.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"],
+.frm-rounded-right button, .frm-rounded-right .btn {
+      @include rounded-right( $radius-default );
+}
+
+.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"], 
+.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"],
+.frm-rounded-bottom button, .frm-rounded-bottom .btn {
+      @include rounded-bottom( $radius-default );
+}
+
+.frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"], 
+.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"],
+.frm-rounded-left button, .frm-rounded-left .btn {
+      @include rounded-left( $radius-default );
+}
+
+// Iconified Elements
+
+.frm-icon-field {
+    display: inline-block;
+    width: 100%;
+
+    .wrap-icon {
+        display: inline-block;
+        border: none;
+        margin: 0;
+        padding: 10px 1%;
+        width: 10%;
+        background-color: $color-field;
+        color: $color-field-text;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], textarea, input[type="submit"], input[type="button"], button, .btn {
+        display: inline-block;
+        border: none;
+        margin: 0;
+        width: 90%;
+        padding: 10px;
+    }
+
+    &.rounded {
+
+        .wrap-icon {
+            @include rounded-left( $radius-default );
+        }
+    
+        input[type="text"], input[type="email"], input[type="password"], textarea, input[type="submit"], input[type="button"], button, .btn {
+            @include rounded-right( $radius-default );
+        }
+    }
+}

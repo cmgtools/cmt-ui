@@ -1,0 +1,101 @@
+/**********************************************************************
+Description: It defines the styles for the module components forming the page. We can devide the entire page in one or more modules. 
+Each module can have background image with or without parallax effect, a content wrapper which wraps module header and content.
+Dependencies: variables, variables-ext, mixins
+Javascript: jquery, cmg-module
+***********************************************************************/
+
+// Common for all the modules
+.module {
+    position: relative;
+
+    .splitter {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        z-index: 10000;
+
+        &.top {
+            top: 0;
+            margin-top: -50px;
+        }
+
+        &.bottom {
+            bottom: 0;
+            margin-bottom: -50px;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+// The Basic Module component
+// 1. Basic Module takes 100 % width and height of it's parent. The height in % won't work in case parent's min-height property is set.
+// 2. The Basic Module can have background image with or without parallax effects.
+// 3. The content wrapper wraps the module header and module content. This gives opportunity to set module background and even content wrapper background in the form of image or texture.
+// 4. Module height must not be set using min-height to get background with parallax working.
+.module-basic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    // responsive background
+    .bkg {
+        @include bkg-image;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    // responsive background with parallax
+    .bkg-parallax {
+        @include bkg-image;
+        width: 100%;
+        height: 110%;
+        position: absolute;
+        top: -5%;
+        left: 0;
+        z-index: 5;
+    }
+
+    // Texture on top of module background but under content
+    .texture {
+        z-index: 10;
+    }
+
+    // Content Wrapper on top of texture
+    .wrap-content {
+        position: relative;
+        z-index: 15;
+
+        // header
+        .header {
+    
+        }
+
+        // content
+        .content {
+
+            // Content Box
+            .box-content {
+
+                .title {
+                    
+                }
+
+                .text {
+                    
+                }
+            }
+        }
+    }
+}

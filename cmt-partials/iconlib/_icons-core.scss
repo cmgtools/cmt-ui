@@ -1,0 +1,34 @@
+.cmt-icon {
+    font-size: 1em;
+    display: inline-block;
+
+    &.small {
+        font-size: 2em;
+    }
+
+    &.medium {
+        font-size: 3em;
+    }
+
+    &.large {
+        font-size: 5em;
+    }
+}
+
+.cmt-action-icon {
+    font-size: 1em;
+    display: inline-block;
+    cursor: pointer;
+
+    &.small {
+        font-size: 2em;
+    }
+
+    &.medium {
+        font-size: 3em;
+    }
+
+    &.large {
+        font-size: 5em;
+    }
+}

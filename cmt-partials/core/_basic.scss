@@ -1,0 +1,234 @@
+/**********************************************************************
+Description: The basic styles for CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+
+// Make all box elements to follow border-box. It gives flexibility to use css width as the element width which includes border and padding. 
+// The remaining space will be used by element content.
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+    background-color: $color-primary;
+}
+
+// Floating Elements
+
+.clear {
+    clear: both !important;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.no-float {
+    float: none !important;
+}
+
+.no-float-center {
+    float: none !important;
+    margin: 0 auto;
+}
+
+// Width
+
+.width-auto {
+    width: auto;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-75 {
+    width: 75%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+// Height
+
+.height-auto {
+    height: auto;
+}
+
+.height-25 {
+    height: 25%;
+}
+
+.height-50 {
+    height: 50%;
+}
+
+.height-75 {
+    height: 75%;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+// Alignment
+
+.align-left {
+    text-align: left !important;
+}
+
+.align-middle {
+    text-align: center !important;
+}
+
+.align-right {
+    text-align: right !important;
+}
+
+// Space fillers
+
+.filler-space {
+    height: 1em;
+    
+    &.small {
+        height: 1.5em;
+    }
+
+    &.large {
+        height: 2em;
+    }
+
+    &.medium {
+        height: 2.5em;
+    }
+}
+
+// Visibility - Without own space
+
+.visible {
+    display:block;
+}
+
+.hidden {
+    display:none;
+}
+
+// Visibility - Hidden/Displayed having own space
+
+.visible-space {
+    visibility: visible;
+}
+
+.hidden-space {
+    visibility: hidden;
+}
+
+// Fluid Elements (blocks, images)
+
+.fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+// Messages - Most probably used for form and ajax processing
+
+.warning, .error, .success {
+    display: inline-block;
+    width: 100%;
+    font-size: $font-size-8;
+}
+
+.error {
+    color: $color-error;
+}
+
+// Required for Yii Forms
+.error-field {
+    border: 1px solid $color-error;
+    box-shadow: 0 0 5px $color-shadow-error;
+}
+
+.warning {
+    color: $color-warning;
+}
+
+.success {
+    color: $color-success;
+}
+
+// Header Blocks - Can be used for dialogs, content boxes
+
+.header-error {
+    background-color: $color-error;
+    color: $color-primary-text;
+}
+
+.header-warning {
+    background-color: $color-warning;
+    color: $color-primary-text;
+}
+
+.header-success {
+    background-color: $color-success;
+    color: $color-primary-text;
+}
+
+// Transparent backgrounds
+
+.bkg-transparent-black {
+    background-color: $color-transparent-black;
+}
+
+.bkg-transparent-gray {
+    background-color: $color-transparent-gray;
+}
+
+.bkg-transparent-primary {
+    background-color: $color-transparent-primary;
+}
+
+.bkg-transparent-secondary {
+    background-color: $color-transparent-secondary;
+}
+
+.bkg-transparent-tertiary {
+    background-color: $color-transparent-tertiary;
+}
+
+// Textures
+
+%textures {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include bkg-tile;
+}
+
+// Default Texture
+
+.texture {
+    @extend %textures;
+}
+
+.texture-default {
+    background-image: url( $images-path + "texture-default.png" );
+}

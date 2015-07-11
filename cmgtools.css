@@ -1,0 +1,3199 @@
+/*
+Color Palatte:
+1. primary: #f2f2f2
+2. primary text: #363636
+3. primary light: #td
+4. primary text light: #td
+5. primary dark: #td
+6. primary text dark: #td
+7. secondary: #515151
+8. secondary text: #98a2ad
+9. secondary light: #515151
+10. secondary text light: #td
+11. secondary dark: #515151
+12. secondary text dark: #td
+13. tertiary: #td
+14. tertiary text: #td
+15. tertiary light: #td
+16. tertiary text light: #td
+17. tertiary dark: #td
+18. tertiary text dark: #td
+ */
+/*! CMGTools CSS Library by CMSGears Team
+ *  Version - alpha
+ *  License - GPLv3
+ */
+/**********************************************************************
+Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
+Dependencies: variables, variables-ext
+***********************************************************************/
+.clearfix, .sidebar-standard .title {
+  zoom: 1;
+}
+.clearfix:before, .sidebar-standard .title:before, .clearfix:after, .sidebar-standard .title:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after, .sidebar-standard .title:after {
+  clear: both;
+}
+
+.font-size-100 {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.opaque-25 {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = 25 )";
+  -moz-opacity: 0.25;
+  -khtml-opacity: 0.25;
+  filter: alpha(opacity=25);
+  opacity: 0.25;
+}
+
+.opaque-50 {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = 50 )";
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.opaque-75 {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = 75 )";
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+}
+
+.rounded-all {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+
+.rounded-top {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-top-right: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-top-right: 5px;
+  border-radius: 5px 5px 0 0;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-top-right: 5px;
+}
+
+.rounded-right {
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+
+.rounded-bottom {
+  -moz-border-radius-bottom-left: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 0 5px 5px;
+  -khtml-border-radius-bottom-left: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+
+.rounded-left {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  border-radius: 5px 0 0 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px;
+}
+
+.circled1 {
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #515151;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -khtml-border-radius: 100%;
+}
+
+.circled2 {
+  width: 250px;
+  height: 250px;
+  background: #515151;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.circled3 {
+  width: 50%;
+  height: 0;
+  background-color: #515151;
+  padding-bottom: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.shape-text {
+  width: 50%;
+}
+.shape-text:after {
+  width: 100%;
+  height: 0;
+  background-color: #515151;
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.shape-text span {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding-top: 50%;
+  line-height: 1em;
+  margin-top: -0.5em;
+  text-align: center;
+  color: #98a2ad;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-shadow {
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.linear-gradient {
+  background-color: #515151;
+  background-image: -moz-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: -o-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2f2f2), color-stop(1, #515151));
+  background-image: -webkit-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: -ms-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: linear-gradient(to "bottom", #f2f2f2, #515151);
+}
+
+.valign-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.child-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.max-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.max-area-transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.max-area-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #363636;
+  z-index: 1000000;
+  display: none;
+}
+
+.bkg-tile {
+  background-repeat: repeat;
+}
+
+.bkg-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.bkg-image-fill {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+/**********************************************************************
+Description: The transition effects available in CMGTools.
+Dependencies: none
+***********************************************************************/
+/* transit-xxx
+ * 1. eio - ease-in-out
+ * 2. eo - ease-out
+ */
+.transit-all {
+  -moz-transition: all 250ms linear 0s;
+  -ms-transition: all 250ms linear 0s;
+  -o-transition: all 250ms linear 0s;
+  -webkit-transition: all 250ms linear 0s;
+  transition: all 250ms linear 0s;
+}
+
+.transit-visibility {
+  -moz-transition: opacity 250ms linear 0s;
+  -ms-transition: opacity 250ms linear 0s;
+  -o-transition: opacity 250ms linear 0s;
+  -webkit-transition: opacity 250ms linear 0s;
+  transition: opacity 250ms linear 0s;
+}
+
+.transit-opacity {
+  -moz-transition: opacity 250ms linear 0s;
+  -ms-transition: opacity 250ms linear 0s;
+  -o-transition: opacity 250ms linear 0s;
+  -webkit-transition: opacity 250ms linear 0s;
+  transition: opacity 250ms linear 0s;
+}
+
+.transit-visibility-opacity {
+  -moz-transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+  -ms-transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+  -o-transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+  -webkit-transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+  transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+}
+
+.transit-color {
+  -moz-transition: color 250ms linear 0s;
+  -ms-transition: color 250ms linear 0s;
+  -o-transition: color 250ms linear 0s;
+  -webkit-transition: color 250ms linear 0s;
+  transition: color 250ms linear 0s;
+}
+
+.transit-bkg-color {
+  -moz-transition: background-color 250ms linear 0s;
+  -ms-transition: background-color 250ms linear 0s;
+  -o-transition: background-color 250ms linear 0s;
+  -webkit-transition: background-color 250ms linear 0s;
+  transition: background-color 250ms linear 0s;
+}
+
+.transit-color-bkg-color {
+  -moz-transition: color 250ms linear 0s, background-color 250ms linear 0s;
+  -ms-transition: color 250ms linear 0s, background-color 250ms linear 0s;
+  -o-transition: color 250ms linear 0s, background-color 250ms linear 0s;
+  -webkit-transition: color 250ms linear 0s, background-color 250ms linear 0s;
+  transition: color 250ms linear 0s, background-color 250ms linear 0s;
+}
+
+.transit-padding {
+  -moz-transition: padding 250ms ease-out 0s;
+  -ms-transition: padding 250ms ease-out 0s;
+  -o-transition: padding 250ms ease-out 0s;
+  -webkit-transition: padding 250ms ease-out 0s;
+  transition: padding 250ms ease-out 0s;
+}
+
+.transit-width {
+  -moz-transition: width 250ms linear 0s;
+  -ms-transition: width 250ms linear 0s;
+  -o-transition: width 250ms linear 0s;
+  -webkit-transition: width 250ms linear 0s;
+  transition: width 250ms linear 0s;
+}
+
+.transit-height {
+  -moz-transition: height 250ms linear 0s;
+  -ms-transition: height 250ms linear 0s;
+  -o-transition: height 250ms linear 0s;
+  -webkit-transition: height 250ms linear 0s;
+  transition: height 250ms linear 0s;
+}
+
+.transit-width-height {
+  -moz-transition: width 250ms linear 0s, height 250ms linear 0s;
+  -ms-transition: width 250ms linear 0s, height 250ms linear 0s;
+  -o-transition: width 250ms linear 0s, height 250ms linear 0s;
+  -webkit-transition: width 250ms linear 0s, height 250ms linear 0s;
+  transition: width 250ms linear 0s, height 250ms linear 0s;
+}
+
+.transform-rotate {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/**********************************************************************
+Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com) 
+and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css 
+for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr,
+address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
+th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  vertical-align: middle;
+  background: transparent;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: scroll;
+  line-height: 1;
+}
+
+code, kbd, pre, samp {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+  margin: 1em 40px;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  quotes: none;
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 2.1 and 3 */
+  word-wrap: break-word;
+  /* IE */
+}
+
+hr {
+  display: block;
+  border: 0;
+  border-top: 1px solid #515151;
+  margin: 1em 0;
+  padding: 0;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid #515151;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: middle;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+[hidden] {
+  display: none;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* Basic nav for ul and ol. */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+.clickable, button, input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  width: auto;
+  overflow: visible;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+a {
+  color: #363636;
+}
+
+/**********************************************************************
+Description: The basic styles for CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.clear {
+  clear: both !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.no-float {
+  float: none !important;
+}
+
+.no-float-center {
+  float: none !important;
+  margin: 0 auto;
+}
+
+.width-auto {
+  width: auto;
+}
+
+.width-25 {
+  width: 25%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-75 {
+  width: 75%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.height-auto {
+  height: auto;
+}
+
+.height-25 {
+  height: 25%;
+}
+
+.height-50 {
+  height: 50%;
+}
+
+.height-75 {
+  height: 75%;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.align-middle {
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.filler-space {
+  height: 1em;
+}
+.filler-space.small {
+  height: 1.5em;
+}
+.filler-space.large {
+  height: 2em;
+}
+.filler-space.medium {
+  height: 2.5em;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible-space {
+  visibility: visible;
+}
+
+.hidden-space {
+  visibility: hidden;
+}
+
+.fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.warning, .error, .success {
+  display: inline-block;
+  width: 100%;
+  font-size: 0.75em;
+}
+
+.error {
+  color: #e74343;
+}
+
+.warning {
+  color: #800020;
+}
+
+.success {
+  color: #a5d75a;
+}
+
+.header-error {
+  background-color: #e74343;
+  color: #363636;
+}
+
+.header-warning {
+  background-color: #800020;
+  color: #363636;
+}
+
+.header-success {
+  background-color: #a5d75a;
+  color: #363636;
+}
+
+.bkg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bkg-transparent-gray {
+  background-color: rgba(72, 72, 72, 0.6);
+}
+
+.bkg-transparent-primary {
+  background-color: rgba(242, 242, 242, 0.6);
+}
+
+.bkg-transparent-secondary {
+  background-color: rgba(81, 81, 81, 0.6);
+}
+
+.bkg-transparent-tertiary {
+  background-color: rgba(54, 54, 54, 0.6);
+}
+
+.texture, .texture-default {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: repeat;
+}
+
+.texture-default {
+  background-image: url("../images/texture-default.png");
+}
+
+/**********************************************************************
+Description: The default text elements styles for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #363636;
+}
+@media only screen and (min-width: 481px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  -ms-text-size-adjust: 2.5em;
+  -webkit-text-size-adjust: 2.5em;
+}
+
+h2 {
+  font-size: 2.25em;
+  -ms-text-size-adjust: 2.25em;
+  -webkit-text-size-adjust: 2.25em;
+}
+
+h3 {
+  font-size: 2em;
+  -ms-text-size-adjust: 2em;
+  -webkit-text-size-adjust: 2em;
+}
+
+h4 {
+  font-size: 1.75em;
+  -ms-text-size-adjust: 1.75em;
+  -webkit-text-size-adjust: 1.75em;
+}
+
+h5 {
+  font-size: 1.5em;
+  -ms-text-size-adjust: 1.5em;
+  -webkit-text-size-adjust: 1.5em;
+}
+
+h6 {
+  font-size: 1.25em;
+  -ms-text-size-adjust: 1.25em;
+  -webkit-text-size-adjust: 1.25em;
+}
+
+h1, h2, h3, h4, h5, h6, .default-header {
+  font-weight: bold;
+  verticle-align: middle;
+  padding: 0.25em 0;
+  margin: 1em 0;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+p, span, em, div, a {
+  font-size: 1em;
+  -ms-text-size-adjust: 1em;
+  -webkit-text-size-adjust: 1em;
+}
+
+pre {
+  font-family: "Courier New", Courier, monospace;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+/**********************************************************************
+Description: It defines the grid system and basic containers for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+/* Grid System ********************* */
+.row {
+  margin: 0 auto;
+  width: 100%;
+}
+.row.small {
+  width: 30%;
+}
+.row.medium {
+  width: 60%;
+}
+.row.large {
+  width: 80%;
+}
+
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
+  display: block;
+  float: left;
+  margin: 1% 1%;
+}
+
+.col1 {
+  width: 98%;
+}
+
+.col2 {
+  width: 48%;
+}
+
+.col3 {
+  width: 31.33333%;
+}
+
+.col4 {
+  width: 23%;
+}
+
+.col5 {
+  width: 18%;
+}
+
+.col6 {
+  width: 14.66666%;
+}
+
+.col7 {
+  width: 12.28571%;
+}
+
+.col8 {
+  width: 10.5%;
+}
+
+.col9 {
+  width: 9.11111%;
+}
+
+.col10 {
+  width: 8%;
+}
+
+.col11 {
+  width: 7.09090%;
+}
+
+.col12 {
+  width: 6.33333%;
+}
+
+.col13, .col14, .col15, .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
+  display: block;
+  float: left;
+  margin: 0.5% 0.5%;
+}
+
+.col13 {
+  width: 6.69230%;
+}
+
+.col14 {
+  width: 6.14285%;
+}
+
+.col15 {
+  width: 5.66666%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .row.small {
+    width: 100%;
+  }
+  .row.medium {
+    width: 100%;
+  }
+  .row.large {
+    width: 100%;
+  }
+
+  .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col13, .col14, .col15 {
+    width: 98%;
+  }
+}
+.col3x2 {
+  width: 64.666666%;
+}
+
+.col4x2 {
+  width: 48%;
+}
+
+.col4x3 {
+  width: 73%;
+}
+
+.col5x2 {
+  width: 38%;
+}
+
+.col5x3 {
+  width: 58%;
+}
+
+.col5x4 {
+  width: 78%;
+}
+
+.col6x2 {
+  width: 31.33332%;
+}
+
+.col6x3 {
+  width: 47.99998%;
+}
+
+.col6x4 {
+  width: 64.66664%;
+}
+
+.col6x5 {
+  width: 81.33330%;
+}
+
+.col12x2 {
+  width: 14.66666%;
+}
+
+.col12x3 {
+  width: 22.99999%;
+}
+
+.col12x4 {
+  width: 31.33332%;
+}
+
+.col12x5 {
+  width: 39.66665%;
+}
+
+.col12x6 {
+  width: 47.99993%;
+}
+
+.col12x7 {
+  width: 56.33331%;
+}
+
+.col12x8 {
+  width: 64.66664%;
+}
+
+.col12x9 {
+  width: 72.99997%;
+}
+
+.col12x10 {
+  width: 81.33333%;
+}
+
+.col12x11 {
+  width: 89.66663%;
+}
+
+.col15x2 {
+  width: 12.33332%;
+}
+
+.col15x3 {
+  width: 18.99998%;
+}
+
+.col15x4 {
+  width: 25.66664%;
+}
+
+.col15x5 {
+  width: 32.33330%;
+}
+
+.col15x6 {
+  width: 38.99996%;
+}
+
+.col15x7 {
+  width: 45.66662%;
+}
+
+.col15x8 {
+  width: 52.33328%;
+}
+
+.col15x9 {
+  width: 58.99994%;
+}
+
+.col15x10 {
+  width: 65.66660%;
+}
+
+.col15x11 {
+  width: 72.33326%;
+}
+
+.col15x12 {
+  width: 78.99992%;
+}
+
+.col15x13 {
+  width: 85.66658%;
+}
+
+.col15x14 {
+  width: 92.33324%;
+}
+
+/* full width for mobile, tablet */
+@media only screen and (max-width: 1024px) {
+  .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5,
+  .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11,
+  .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
+    width: 98%;
+  }
+}
+.colf1, .colf2, .colf3, .colf4, .colf5, .colf6, .colf7, .colf8, .colf9, .colf10, .colf11, .colf12, .colf13, .colf14, .colf15, .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5, .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11, .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 {
+  display: block;
+  float: left;
+  margin: 0;
+}
+
+.colf1 {
+  width: 100%;
+}
+
+.colf2 {
+  width: 50%;
+}
+
+.colf3 {
+  width: 33.33333%;
+}
+
+.colf4 {
+  width: 25%;
+}
+
+.colf5 {
+  width: 20%;
+}
+
+.colf6 {
+  width: 16.66666%;
+}
+
+.colf7 {
+  width: 14.28571%;
+}
+
+.colf8 {
+  width: 12.5%;
+}
+
+.colf9 {
+  width: 11.11111%;
+}
+
+.colf10 {
+  width: 10%;
+}
+
+.colf11 {
+  width: 9.09090%;
+}
+
+.colf12 {
+  width: 8.33333%;
+}
+
+.colf13 {
+  width: 7.69230%;
+}
+
+.colf14 {
+  width: 7.14285%;
+}
+
+.colf15 {
+  width: 6.66666%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .colf1, .colf2, .colf3, .colf4, .colf5, .colf6, .colf7, .colf8, .colf9, .colf10, .colf11, .colf12, .colf13, .colf14, .colf15 {
+    width: 100%;
+  }
+}
+.colf3x2 {
+  width: 66.666666%;
+}
+
+.colf4x2 {
+  width: 50%;
+}
+
+.colf4x3 {
+  width: 75%;
+}
+
+.colf5x2 {
+  width: 40%;
+}
+
+.colf5x3 {
+  width: 60%;
+}
+
+.colf5x4 {
+  width: 80%;
+}
+
+.colf6x2 {
+  width: 33.33332%;
+}
+
+.colf6x3 {
+  width: 49.99998%;
+}
+
+.colf6x4 {
+  width: 66.66664%;
+}
+
+.colf6x5 {
+  width: 83.33330%;
+}
+
+.colf12x2 {
+  width: 16.66666%;
+}
+
+.colf12x3 {
+  width: 24.99999%;
+}
+
+.colf12x4 {
+  width: 33.33332%;
+}
+
+.colf12x5 {
+  width: 41.66665%;
+}
+
+.colf12x6 {
+  width: 49.99993%;
+}
+
+.colf12x7 {
+  width: 58.33331%;
+}
+
+.colf12x8 {
+  width: 66.66664%;
+}
+
+.colf12x9 {
+  width: 74.99997%;
+}
+
+.colf12x10 {
+  width: 83.33333%;
+}
+
+.colf12x11 {
+  width: 91.66663%;
+}
+
+.colf15x2 {
+  width: 13.33332%;
+}
+
+.colf15x3 {
+  width: 19.99998%;
+}
+
+.colf15x4 {
+  width: 26.66664%;
+}
+
+.colf15x5 {
+  width: 33.33330%;
+}
+
+.colf15x6 {
+  width: 39.99996%;
+}
+
+.colf15x7 {
+  width: 46.66662%;
+}
+
+.colf15x8 {
+  width: 53.33328%;
+}
+
+.colf15x9 {
+  width: 59.99994%;
+}
+
+.colf15x10 {
+  width: 66.66660%;
+}
+
+.colf15x11 {
+  width: 73.33326%;
+}
+
+.colf15x12 {
+  width: 79.99992%;
+}
+
+.colf15x13 {
+  width: 86.66658%;
+}
+
+.colf15x14 {
+  width: 93.33324%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5,
+  .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11,
+  .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 {
+    width: 100%;
+  }
+}
+.full-height-cols {
+  position: relative;
+}
+
+.col-filler {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  bottom: 0px;
+  float: none;
+}
+
+/* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
+ * 1. keep body and html to 100% width and height to occupy full screen.
+ * 2. The main container should also occupy full width and set min-height to 100%.
+ * 3. The main container can have it's child elements as header, footer, sidebar, content wrapper.
+ * 3. The header within main container can be either fixed or regular. We can also have header outside of main container.
+ * 4. The footer within main container need to be positioned with bottom 0 to stick at bottom in case enough content is not there. Please refer footers section.
+ * 5. The content wrapper block can have the page content in this setup. It will adjust it's height automatically.
+ * 6. The sidebar within main container can have navigation links and ui widgets.
+ */
+.container-main, .wrap-content {
+  position: relative;
+  z-index: 1;
+}
+
+.container h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container .content {
+  padding: 2.5%;
+}
+
+.content-80 {
+  position: relative;
+  padding: 0 10%;
+  width: 100%;
+}
+
+.content-74 {
+  position: relative;
+  padding: 0 13%;
+  width: 100%;
+}
+
+.content-50 {
+  position: relative;
+  padding: 0 25%;
+  width: 100%;
+}
+
+.content-26 {
+  position: relative;
+  padding: 0 37%;
+  width: 100%;
+}
+
+.content-left-25 {
+  position: relative;
+  padding-right: 75%;
+  width: 100%;
+}
+
+.content-left-50 {
+  position: relative;
+  padding-right: 50%;
+  width: 100%;
+}
+
+.content-right-25 {
+  position: relative;
+  padding-left: 75%;
+  width: 100%;
+}
+
+.content-right-50 {
+  position: relative;
+  padding-left: 50%;
+  width: 100%;
+}
+
+/**********************************************************************
+Description: It defines the form elements styles for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+form {
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+form .warning, form .error, form .success {
+  display: none;
+}
+form .small {
+  width: 230px;
+  padding: 10px;
+  position: relative;
+}
+form .medium {
+  width: 430px;
+  padding: 10px;
+  position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  form .small, form .medium {
+    width: 80%;
+    padding: 5%;
+  }
+}
+
+label {
+  border: none;
+  box-shadow: none;
+  font-size: 1em;
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, input[type="submit"], input[type="button"], button, select, .btn {
+  vertical-align: middle;
+  font-size: normal;
+  line-height: normal;
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #515151;
+  box-shadow: none;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+  background-color: #e1e1e1;
+  color: #363636;
+  text-align: left;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"].error-field, input[type="email"].error-field, input[type="password"].error-field, textarea.error-field, select.error-field {
+  border: 1px solid #e74343;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
+input[type="submit"], input[type="button"], button, select, .btn {
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+  background-color: #363636;
+  color: #949ea8;
+  text-align: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
+  background-color: #e74343;
+  color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  display: inline-block;
+}
+
+input[type="text"].half, input[type="email"].half, input[type="password"].half, textarea.half, input[type="submit"].half, input[type="button"].half, button.half, .btn.half {
+  width: 50%;
+}
+input[type="text"].small, input[type="email"].small, input[type="password"].small, textarea.small, input[type="submit"].small, input[type="button"].small, button.small, .btn.small {
+  width: 80px;
+}
+input[type="text"].medium, input[type="email"].medium, input[type="password"].medium, textarea.medium, input[type="submit"].medium, input[type="button"].medium, button.medium, .btn.medium {
+  width: 120px;
+}
+input[type="text"].large, input[type="email"].large, input[type="password"].large, textarea.large, input[type="submit"].large, input[type="button"].large, button.large, .btn.large {
+  width: 180px;
+}
+input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xlarge, textarea.xlarge, input[type="submit"].xlarge, input[type="button"].xlarge, button.xlarge, .btn.xlarge {
+  width: 250px;
+}
+
+.frm-split-40-60 label {
+  width: 40%;
+  float: left;
+}
+
+.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+.frm-split-40-60 textarea, .frm-split-40-60 select {
+  width: 60%;
+  float: left;
+}
+
+.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
+.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
+.frm-rounded-all button, .frm-rounded-all .btn {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+
+.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
+.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"],
+.frm-rounded-top button, .frm-rounded-top .btn {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-top-right: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-top-right: 5px;
+  border-radius: 5px 5px 0 0;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-top-right: 5px;
+}
+
+.frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
+.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"],
+.frm-rounded-right button, .frm-rounded-right .btn {
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+
+.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
+.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"],
+.frm-rounded-bottom button, .frm-rounded-bottom .btn {
+  -moz-border-radius-bottom-left: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 0 5px 5px;
+  -khtml-border-radius-bottom-left: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+
+.frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
+.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"],
+.frm-rounded-left button, .frm-rounded-left .btn {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  border-radius: 5px 0 0 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px;
+}
+
+.frm-icon-field {
+  display: inline-block;
+  width: 100%;
+}
+.frm-icon-field .wrap-icon {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 10px 1%;
+  width: 10%;
+  background-color: #e1e1e1;
+  color: #363636;
+}
+.frm-icon-field input[type="text"], .frm-icon-field input[type="email"], .frm-icon-field input[type="password"], .frm-icon-field textarea, .frm-icon-field input[type="submit"], .frm-icon-field input[type="button"], .frm-icon-field button, .frm-icon-field .btn {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  width: 90%;
+  padding: 10px;
+}
+.frm-icon-field.rounded .wrap-icon {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  border-radius: 5px 0 0 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px;
+}
+.frm-icon-field.rounded input[type="text"], .frm-icon-field.rounded input[type="email"], .frm-icon-field.rounded input[type="password"], .frm-icon-field.rounded textarea, .frm-icon-field.rounded input[type="submit"], .frm-icon-field.rounded input[type="button"], .frm-icon-field.rounded button, .frm-icon-field.rounded .btn {
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+
+/**********************************************************************
+Description: It defines the default table style and data table components available in CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* The default data table defining styles for action buttons, search box, filters, table header and rows, pagination. */
+/* The default responsive data grid defining styles for action buttons, search box, filters, table header and rows, pagination. */
+.cmt-select-wrap {
+  position: relative;
+}
+.cmt-select-wrap select {
+  display: none;
+}
+.cmt-select-wrap .cmt-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.cmt-select-wrap .cmt-select .cmt-selected {
+  cursor: pointer;
+  position: relative;
+  z-index: 100000;
+  padding-right: 32px;
+}
+.cmt-select-wrap .cmt-select .cmt-selected .s-text {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  padding: 10px;
+}
+.cmt-select-wrap .cmt-select .cmt-selected .s-icon {
+  display: inline-block;
+  width: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cmt-select-wrap .cmt-select .cmt-selected.disabled {
+  cursor: default;
+}
+.cmt-select-wrap .cmt-select .cmt-select-list {
+  position: relative;
+  z-index: 100001;
+  max-height: 175px;
+  overflow-y: auto;
+}
+.cmt-select-wrap .cmt-select .cmt-select-list li {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "cmgtools";
+  src: url("../fonts/cmgtools/cmgtools.eot");
+  src: url("../fonts/cmgtools/cmgtools.eot?#iefix") format("embedded-opentype"), url("../fonts/cmgtools/cmgtools.woff") format("woff"), url("../fonts/cmgtools/cmgtools.ttf") format("truetype"), url("../fonts/cmgtools/cmgtools.svg#cmgtools") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "cmgtools" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="cmt-"]:before,
+[class*=" cmt-"]:before {
+  font-family: "cmgtools" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cmt-airoplane-border:before {
+  content: "a";
+}
+
+.cmt-airoplane-fill:before {
+  content: "b";
+}
+
+.cmt-alarm:before {
+  content: "c";
+}
+
+.cmt-approve:before {
+  content: "d";
+}
+
+.cmt-arrow-down:before {
+  content: "e";
+}
+
+.cmt-arrow-left:before {
+  content: "f";
+}
+
+.cmt-arrow-right:before {
+  content: "g";
+}
+
+.cmt-arrow-up:before {
+  content: "h";
+}
+
+.cmt-attachment:before {
+  content: "i";
+}
+
+.cmt-blog:before {
+  content: "j";
+}
+
+.cmt-calendar-border:before {
+  content: "k";
+}
+
+.cmt-calendar-fill:before {
+  content: "l";
+}
+
+.cmt-checked:before {
+  content: "m";
+}
+
+.cmt-game:before {
+  content: "n";
+}
+
+.cmt-free-shipping:before {
+  content: "o";
+}
+
+.cmt-forum:before {
+  content: "p";
+}
+
+.cmt-flag:before {
+  content: "q";
+}
+
+.cmt-eye:before {
+  content: "r";
+}
+
+.cmt-exchange:before {
+  content: "s";
+}
+
+.cmt-edit:before {
+  content: "t";
+}
+
+.cmt-down:before {
+  content: "u";
+}
+
+.cmt-delete:before {
+  content: "v";
+}
+
+.cmt-dashboard:before {
+  content: "w";
+}
+
+.cmt-company:before {
+  content: "x";
+}
+
+.cmt-close-fill:before {
+  content: "y";
+}
+
+.cmt-close-border:before {
+  content: "z";
+}
+
+.cmt-graph:before {
+  content: "A";
+}
+
+.cmt-groups:before {
+  content: "B";
+}
+
+.cmt-guarantee:before {
+  content: "C";
+}
+
+.cmt-hand:before {
+  content: "D";
+}
+
+.cmt-headphone:before {
+  content: "E";
+}
+
+.cmt-key:before {
+  content: "F";
+}
+
+.cmt-list:before {
+  content: "G";
+}
+
+.cmt-lock:before {
+  content: "H";
+}
+
+.cmt-meter:before {
+  content: "I";
+}
+
+.cmt-minus:before {
+  content: "J";
+}
+
+.cmt-newsletter:before {
+  content: "K";
+}
+
+.cmt-page:before {
+  content: "L";
+}
+
+.cmt-pencil:before {
+  content: "M";
+}
+
+.cmt-shout:before {
+  content: "N";
+}
+
+.cmt-shop:before {
+  content: "O";
+}
+
+.cmt-server:before {
+  content: "P";
+}
+
+.cmt-save:before {
+  content: "Q";
+}
+
+.cmt-room:before {
+  content: "R";
+}
+
+.cmt-return:before {
+  content: "S";
+}
+
+.cmt-widget:before {
+  content: "T";
+}
+
+.cmt-wallet:before {
+  content: "U";
+}
+
+.cmt-radio-normal:before {
+  content: "V";
+}
+
+.cmt-radio-active:before {
+  content: "W";
+}
+
+.cmt-users:before {
+  content: "X";
+}
+
+.cmt-user-single:before {
+  content: "Y";
+}
+
+.cmt-product:before {
+  content: "Z";
+}
+
+.cmt-prize:before {
+  content: "0";
+}
+
+.cmt-user-group:before {
+  content: "1";
+}
+
+.cmt-user:before {
+  content: "2";
+}
+
+.cmt-power:before {
+  content: "3";
+}
+
+.cmt-plus:before {
+  content: "4";
+}
+
+.cmt-suspend:before {
+  content: "5";
+}
+
+.cmt-slider:before {
+  content: "6";
+}
+
+.cmt-permission:before {
+  content: "7";
+}
+
+.cmt-add-user:before {
+  content: "8";
+}
+
+.cmt-active-user:before {
+  content: "9";
+}
+
+.cmt-bag:before {
+  content: "!";
+}
+
+.cmt-blcok-user:before {
+  content: "\"";
+}
+
+.cmt-check:before {
+  content: "#";
+}
+
+.cmt-close:before {
+  content: "$";
+}
+
+.cmt-cmg:before {
+  content: "%";
+}
+
+.cmt-cmt:before {
+  content: "&";
+}
+
+.cmt-crop:before {
+  content: "'";
+}
+
+.cmt-gmail:before {
+  content: "(";
+}
+
+.cmt-gift:before {
+  content: ")";
+}
+
+.cmt-fox-slider:before {
+  content: "*";
+}
+
+.cmt-facebook:before {
+  content: "+";
+}
+
+.cmt-instagram:before {
+  content: ",";
+}
+
+.cmt-linkedin:before {
+  content: "-";
+}
+
+.cmt-google-plus:before {
+  content: ".";
+}
+
+.cmt-google:before {
+  content: "/";
+}
+
+.cmt-pie:before {
+  content: ":";
+}
+
+.cmt-pinterest:before {
+  content: ";";
+}
+
+.cmt-star-blank:before {
+  content: "<";
+}
+
+.cmt-star-fill:before {
+  content: "=";
+}
+
+.cmt-skype:before {
+  content: ">";
+}
+
+.cmt-rotate-clock:before {
+  content: "?";
+}
+
+.cmt-rotate-anti-clock:before {
+  content: "@";
+}
+
+.cmt-return-1:before {
+  content: "[";
+}
+
+.cmt-star-half:before {
+  content: "]";
+}
+
+.cmt-twitter:before {
+  content: "^";
+}
+
+.cmt-uknown:before {
+  content: "_";
+}
+
+.cmt-user-1:before {
+  content: "`";
+}
+
+.cmt-user-2:before {
+  content: "{";
+}
+
+.cmt-vulpine-fox:before {
+  content: "|";
+}
+
+.cmt-zoom-out:before {
+  content: "}";
+}
+
+.cmt-zoom-in:before {
+  content: "~";
+}
+
+.cmt-youtube:before {
+  content: "\\";
+}
+
+.cmt-yahoo:before {
+  content: "\e000";
+}
+
+.cmt-wordpress:before {
+  content: "\e001";
+}
+
+.cmt-icon {
+  font-size: 1em;
+  display: inline-block;
+}
+.cmt-icon.small {
+  font-size: 2em;
+}
+.cmt-icon.medium {
+  font-size: 3em;
+}
+.cmt-icon.large {
+  font-size: 5em;
+}
+
+/**********************************************************************
+Description: It defines the breadcrumbs available for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+.breadcrumb {
+  list-style: none;
+}
+.breadcrumb li {
+  display: inline-block;
+}
+.breadcrumb a {
+  display: inline-block;
+}
+
+/**********************************************************************
+Description: It defines the styles for the menu components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+/* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
+   It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
+.hnav-regular {
+  background-color: #f2f2f2;
+  border-bottom: 5px solid #515151;
+  position: relative;
+}
+.hnav-regular > li {
+  display: inline-block;
+  text-align: left;
+  background-color: #f2f2f2;
+  border-bottom: 5px solid #515151;
+  margin-bottom: -5px;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.hnav-regular > li > a {
+  color: #363636;
+  font-size: 1em;
+  line-height: 48px;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+.hnav-regular > li:hover > a {
+  background-color: #td;
+  color: #td;
+}
+.hnav-regular li a {
+  display: inline-block;
+  text-decoration: none;
+  -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+}
+.hnav-regular li.active > a {
+  background-color: #515151;
+  color: #98a2ad;
+}
+.hnav-regular li:hover .nav-sub {
+  display: block;
+}
+.hnav-regular .nav-sub {
+  display: none;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  padding: 10px 2%;
+  width: 96%;
+  background-color: #515151;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.hnav-regular .nav-sub > li {
+  display: inline-block;
+  float: none;
+  padding: 10px 1%;
+  vertical-align: top;
+  width: 22%;
+}
+.hnav-regular .nav-sub > li > a {
+  font-size: 1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.hnav-regular .nav-sub > li a {
+  line-height: 20px;
+  color: #td;
+}
+.hnav-regular .nav-sub > li li {
+  float: none;
+  padding-left: 5px;
+  -moz-transition: padding 250ms ease-out 0s;
+  -ms-transition: padding 250ms ease-out 0s;
+  -o-transition: padding 250ms ease-out 0s;
+  -webkit-transition: padding 250ms ease-out 0s;
+  transition: padding 250ms ease-out 0s;
+}
+.hnav-regular .nav-sub > li li:hover {
+  padding-left: 10px;
+}
+@media only screen and (max-width: 1024px) {
+  .hnav-regular li, .hnav-regular a {
+    width: 100%;
+  }
+  .hnav-regular .nav-sub {
+    position: relative;
+    top: 0px;
+  }
+  .hnav-regular .nav-sub li, .hnav-regular .nav-sub a {
+    width: 100%;
+  }
+}
+
+/* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
+.vnav-regular {
+  border: 2px solid #515151;
+  position: relative;
+}
+.vnav-regular li {
+  text-align: left;
+  border-bottom: 1px solid #515151;
+  position: relative;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.vnav-regular li .last {
+  border: none;
+}
+.vnav-regular a {
+  display: block;
+  background-color: #f2f2f2;
+  color: #363636;
+  font-size: 1em;
+  line-height: 35px;
+  width: 98%;
+  padding: 0 1%;
+  text-decoration: none;
+  -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+}
+.vnav-regular li:hover > a {
+  background-color: #td;
+  color: #td;
+}
+.vnav-regular li:hover > .nav-sub {
+  display: block;
+}
+.vnav-regular .nav-sub {
+  display: none;
+  position: absolute;
+  top: -2px;
+  width: 250px;
+  margin-left: 100%;
+  border: 2px solid #515151;
+}
+@media only screen and (max-width: 1024px) {
+  .vnav-regular .nav-sub {
+    position: relative;
+    top: 0px;
+    margin-left: 0;
+    width: 100%;
+    border: none;
+  }
+  .vnav-regular .nav-sub a {
+    background-color: #515151;
+  }
+}
+
+/**********************************************************************
+Description: It defines the styles for the header components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+.header-standard {
+  background-color: #f2f2f2;
+  color: #363636;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
+  z-index: 10;
+}
+.header-standard .logo {
+  cursor: pointer;
+  margin: 5px;
+  width: 140px;
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+}
+.header-standard #menu-main {
+  margin-top: 5px;
+  text-align: right;
+  display: block;
+  z-index: 1;
+}
+.header-standard #btn-mobile-menu {
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  margin: 10px;
+  display: none;
+  z-index: 2;
+}
+.header-standard #btn-mobile-menu span {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+@media only screen and (max-width: 1024px) {
+  .header-standard #menu-main {
+    margin-top: 55px;
+    display: none;
+  }
+  .header-standard #btn-mobile-menu {
+    display: inline-block;
+  }
+}
+
+/**********************************************************************
+Description: It defines the styles for the sidebar components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+.sidebar-standard {
+  position: relative;
+}
+.sidebar-standard .title {
+  display: none;
+  background-color: #td;
+  line-height: 32px;
+  padding: 5px;
+  font-size: 16px;
+}
+.sidebar-standard .title span {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+}
+.sidebar-standard .menu {
+  display: block;
+}
+@media only screen and (max-width: 1024px) {
+  .sidebar-standard .title {
+    display: block;
+  }
+  .sidebar-standard .menu {
+    display: none;
+  }
+}
+
+/**********************************************************************
+Description: It defines the styles for the footer components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+.footer-standard {
+  background-color: #f2f2f2;
+  color: #363636;
+  width: 100%;
+  min-height: 50px;
+  z-index: 10000;
+}
+.footer-standard.sticky {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.footer-standard p {
+  color: #363636;
+}
+
+.popup {
+  display: none;
+  background: #FFFFFF;
+  border: 2px solid gray;
+  -moz-box-shadow: 0 0 5px black;
+  -webkit-box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+  border-radius: 12px;
+}
+.popup .title {
+  width: 100%;
+  background-color: #00133C;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  height: 30px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.popup .title .text {
+  padding-left: 10px;
+}
+.popup .title .close {
+  font-size: 20px;
+  right: 0px;
+  top: 3px;
+  position: absolute;
+  color: #6fa5e2;
+  font-weight: 500;
+  width: 25px;
+  height: 25px;
+  background-image: url("../images/icons/close.png");
+  background-size: cover;
+}
+.popup .elements {
+  padding: 10px;
+}
+.popup .elements ul {
+  padding: 0px;
+}
+.popup .small {
+  height: 200px;
+  width: 400px;
+}
+.popup .medium {
+  height: 300px;
+  width: 600px;
+}
+.popup .large {
+  height: 400px;
+  width: 800px;
+}
+
+/**********************************************************************
+Description: It defines the styles for the module components forming the page. We can devide the entire page in one or more modules. 
+Each module can have background image with or without parallax effect, a content wrapper which wraps module header and content.
+Dependencies: variables, variables-ext, mixins
+Javascript: jquery, cmg-module
+***********************************************************************/
+.module {
+  position: relative;
+}
+.module .splitter {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  z-index: 10000;
+}
+.module .splitter.top {
+  top: 0;
+  margin-top: -50px;
+}
+.module .splitter.bottom {
+  bottom: 0;
+  margin-bottom: -50px;
+}
+.module .splitter .icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.module-basic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.module-basic .bkg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.module-basic .bkg-parallax {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: 0;
+  z-index: 5;
+}
+.module-basic .texture {
+  z-index: 10;
+}
+.module-basic .wrap-content {
+  position: relative;
+  z-index: 15;
+}
+
+/* The basic gallery to be used for the default gallery widget from CMSGears core module. We can also use it for any other platform. 
+ * The preferred image size for gallery item is 360 x 270. We can maintain the same aspect ratio for larger images for expected results. */
+.gallery-basic {
+  padding: 0 10%;
+}
+.gallery-basic .header {
+  background-color: #515151;
+  color: #98a2ad;
+  min-height: 150px;
+  height: auto;
+  padding: 1em;
+  line-height: 1.4em;
+}
+.gallery-basic .header h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.gallery-basic .items {
+  padding: 1em;
+}
+.gallery-basic .items li {
+  display: inline-block;
+  width: 49%;
+  padding: 1%;
+}
+.gallery-basic .items .wrap-item {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+}
+.gallery-basic .items .wrap-item:hover .flip2 {
+  opacity: 1;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.gallery-basic .items .wrap-item .flip1 {
+  width: 100%;
+  height: 100%;
+}
+.gallery-basic .items .wrap-item .flip2 {
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  -moz-transition: all 350ms linear 0s;
+  -ms-transition: all 350ms linear 0s;
+  -o-transition: all 350ms linear 0s;
+  -webkit-transition: all 350ms linear 0s;
+  transition: all 350ms linear 0s;
+}
+.gallery-basic .items .wrap-item .flip2 .info {
+  display: inline-block;
+  width: 100%;
+  height: 60%;
+  padding: 5% 0;
+}
+@media only screen and (min-width: 481px) {
+  .gallery-basic .items .wrap-item {
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .gallery-basic .items li {
+    width: 33%;
+  }
+  .gallery-basic .items .wrap-item {
+    height: 220px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .gallery-basic .header {
+    height: 400px;
+    width: 30%;
+    padding: 2em;
+    float: left;
+  }
+  .gallery-basic .items {
+    width: 70%;
+    float: left;
+    padding: 0;
+  }
+  .gallery-basic .items li {
+    width: 32%;
+    padding-top: 0;
+  }
+  .gallery-basic .items .wrap-item {
+    height: 175px;
+  }
+}
+@media only screen and (min-width: 1281px) {
+  .gallery-basic .header {
+    height: 450px;
+  }
+  .gallery-basic .items .wrap-item {
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1601px) {
+  .gallery-basic {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .gallery-basic .header {
+    height: 500px;
+  }
+  .gallery-basic .items .wrap-item {
+    height: 250px;
+  }
+}
+
+/**********************************************************************
+Description: It defines the styles for the Blog Widgets of cms module for CMSGears following components approach.
+Dependencies: variables, mixins
+***********************************************************************/
+.blog-posts-regular .post {
+  margin: 10px 0;
+  border: 1px solid #515151;
+  background-color: #f2f2f2;
+}
+.blog-posts-regular .banner {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+.blog-posts-regular .post-content {
+  width: 80%;
+  display: inline-block;
+}
+.blog-posts-regular .post-content.full {
+  width: 100%;
+}
+.blog-posts-regular .post-content .header {
+  background-color: #515151;
+  padding: 0.25em;
+}
+.blog-posts-regular .post-content .header a {
+  color: #f2f2f2;
+}
+.blog-posts-regular .post-content .header a:hover {
+  color: #515151;
+}
+.blog-posts-regular .post-content .summary {
+  padding: 1em;
+}
+.blog-posts-regular .post-content .info {
+  background-color: #515151;
+  padding: 5px;
+}
+.blog-posts-regular .post-content .info .author, .blog-posts-regular .post-content .info .time {
+  display: inline-block;
+}
+.blog-posts-regular .post-content .info .author {
+  float: left;
+}
+.blog-posts-regular .post-content .info .author img {
+  width: 40px;
+  border: 5px solid #f2f2f2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+.blog-posts-regular .post-content .info .time {
+  float: right;
+  margin-top: 15px;
+}
+.blog-posts-regular .wrap-pagination {
+  margin: 10px 0;
+}
+.blog-posts-regular .wrap-pagination .info {
+  float: left;
+}
+.blog-posts-regular .wrap-pagination .pagination {
+  float: right;
+}
+.blog-posts-regular .wrap-pagination .pagination, .blog-posts-regular .wrap-pagination .pagination li {
+  display: inline-block;
+  list-style: none;
+}
+.blog-posts-regular .wrap-pagination .pagination li {
+  margin: 0 2px;
+  font-size: 1em;
+  line-heigh: 1em;
+}
+.blog-posts-regular .wrap-pagination .pagination .prev, .blog-posts-regular .wrap-pagination .pagination .next, .blog-posts-regular .wrap-pagination .pagination li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  height: 1.6em;
+  background-color: #515151;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.blog-posts-regular .wrap-pagination .pagination li a {
+  padding: 2px 8px;
+}
+.blog-posts-regular .wrap-pagination .pagination .disabled span, .blog-posts-regular .wrap-pagination .pagination .disabled span:hover {
+  background-color: #515151;
+  padding: 2px 8px;
+  height: 1.6em;
+}
+.blog-posts-regular .wrap-pagination .pagination .disabled span {
+  line-height: 1.6em;
+}
+.blog-posts-regular .wrap-pagination .pagination .active, .blog-posts-regular .wrap-pagination .pagination .active a, .blog-posts-regular .wrap-pagination .pagination li a:hover, .blog-posts-regular .wrap-pagination .pagination .next:hover, .blog-posts-regular .wrap-pagination .pagination .prev:hover {
+  background-color: #515151;
+  color: #f2f2f2;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+
+/**********************************************************************
+Description: It defines the styles for the FoxSlider Widget for CMSGears following components approach.
+Dependencies: variables, mixins
+***********************************************************************/
+.fx-slider-basic {
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+  height: 100%;
+  /* Slide Background Image */
+  /* Slider Controls */
+  /* Slider Bullets */
+}
+.fx-slider-basic .slides-wrap {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.fx-slider-basic .slide, .fx-slider-basic .slide-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  overflow: hidden;
+}
+.fx-slider-basic .slide-content {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.fx-slider-basic .slide-content .texture {
+  z-index: 5;
+}
+.fx-slider-basic .slide-content .content {
+  position: relative;
+  z-index: 10;
+}
+.fx-slider-basic .control {
+  color: #363636;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  height: 80px;
+  width: 48px;
+  position: relative;
+  z-index: 50;
+  top: 45%;
+  background-image: url("../images/slider-arrow.png");
+  background-repeat: none;
+  background-position: 0px 0px;
+}
+.fx-slider-basic .control-left {
+  float: left;
+  left: 20px;
+  background-position: 0px 80px;
+}
+.fx-slider-basic .control-left:hover {
+  background-position: 0px 0px;
+}
+.fx-slider-basic .control-right {
+  float: right;
+  right: 20px;
+  background-position: -48px 80px;
+}
+.fx-slider-basic .control-right:hover {
+  background-position: -48px 0px;
+}
+.fx-slider-basic .bullets {
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  z-index: 15;
+}
+.fx-slider-basic .bullets .bullet {
+  width: 16px;
+  height: 16px;
+  color: white;
+  border-radius: 9px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 3px;
+  display: inline-block;
+  background-image: url("../images/slider-bullet.png");
+  background-position: -16px 0px;
+}
+.fx-slider-basic .bullets .bullet:hover {
+  background-position: 0px 0px;
+}
+.fx-slider-basic .bullets .bullet.active {
+  background-position: 0px 0px;
+}
+
+.fx-slider-regular {
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+  height: 100%;
+  /* Slide Background Image */
+  /* Slider Controls */
+  /* Slider Bullets */
+}
+.fx-slider-regular .slides-wrap {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.fx-slider-regular .slide, .fx-slider-regular .slide-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  overflow: hidden;
+}
+.fx-slider-regular .slide-content {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.fx-slider-regular .slide-content .texture {
+  z-index: 5;
+}
+.fx-slider-regular .slide-content .content {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  width: 75%;
+  padding: 50px;
+  margin: 0px auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.fx-slider-regular .control {
+  color: #363636;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  height: 80px;
+  width: 48px;
+  position: relative;
+  z-index: 50;
+  top: 45%;
+  background-image: url("../images/slider-arrow.png");
+  background-repeat: none;
+  background-position: 0px 0px;
+}
+.fx-slider-regular .control-left {
+  float: left;
+  left: 20px;
+  background-position: 0px 80px;
+}
+.fx-slider-regular .control-left:hover {
+  background-position: 0px 0px;
+}
+.fx-slider-regular .control-right {
+  float: right;
+  right: 20px;
+  background-position: -48px 80px;
+}
+.fx-slider-regular .control-right:hover {
+  background-position: -48px 0px;
+}
+.fx-slider-regular .bullets {
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  z-index: 15;
+}
+.fx-slider-regular .bullets .bullet {
+  width: 16px;
+  height: 16px;
+  color: white;
+  border-radius: 9px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-top: 3px;
+  display: inline-block;
+  background-image: url("../images/slider-bullet.png");
+  background-position: -16px 0px;
+}
+.fx-slider-regular .bullets .bullet:hover {
+  background-position: 0px 0px;
+}
+.fx-slider-regular .bullets .bullet.active {
+  background-position: 0px 0px;
+}
+
+.file-container {
+  position: relative;
+}
+
+.file-container .file-fields {
+  position: relative;
+  border: 1px solid #C0C0C0;
+  margin: 0 1%;
+  width: 98%;
+}
+
+.file-container .file-fields label, .file-container .file-fields input {
+  width: 45%;
+}
+
+.file-fieldset {
+  position: relative;
+}
+
+/* Modern File Selector */
+.file-selector-modern {
+  border: 1px solid #C0C0C0;
+  display: none;
+  width: 30%;
+  padding: 1em;
+}
+
+.file-target-container {
+  border: 1px solid black;
+  width: 100px;
+  height: 120px;
+  margin: 0px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.file-target:hover {
+  background: gray;
+}
+
+.file-target-drag {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100px;
+  height: 120px;
+  z-index: 10;
+  text-align: center;
+  line-height: 120px;
+}
+
+.file-preview {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100px;
+  height: 120px;
+  z-index: 50;
+}
+
+/* Legacy File Selector */
+.file-selector-legacy {
+  padding: 1em;
+  width: 30%;
+}
+
+.file-input-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.file-input-wrap input[type="file"] {
+  opacity: 0;
+  cursor: pointer !important;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.frm-inner .btn.file-input-wrap {
+  width: 60%;
+}
+
+.file-image {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 58%;
+  height: 96%;
+  overflow: hidden;
+}
+
+.file-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.box-avatar {
+  border: 1px solid #515151;
+  padding: 1em;
+}
+.box-avatar .avatar img {
+  width: 100%;
+}
+
+#wrap-avatar-uploader {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000000;
+}
+
+#avatar-uploader {
+  width: 360px;
+  height: 512px;
+  background-color: #td;
+  position: absolute;
+}
+#avatar-uploader .header {
+  position: relative;
+  padding-left: 10px;
+  height: 56px;
+  line-height: 56px;
+}
+#avatar-uploader .header span {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+#avatar-uploader .header span input[type="file"] {
+  cursor: pointer;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#avatar-uploader .content {
+  padding: 10px;
+}
+#avatar-uploader .content .actions {
+  width: 40px;
+  height: 320px;
+  float: left;
+}
+#avatar-uploader .content .actions .cmt-icon {
+  margin: 10px 0;
+  cursor: pointer;
+}
+#avatar-uploader .content .actions .cmt-icon:hover {
+  background-color: #f2f2f2;
+}
+#avatar-uploader .content .avatar-wrap {
+  margin-left: 20px;
+  width: 280px;
+  height: 320px;
+  float: left;
+  background-color: #f2f2f2;
+}
+
+/**********************************************************************
+Description: It defines the theme for JQuery UI Components from CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+.ui-datepicker-header {
+  background-color: black;
+}
+
+.ui-datepicker-next, .ui-datepicker-prev {
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.ui-datepicker-next {
+  margin-left: 160px;
+}
+
+.ui-datepicker-title {
+  color: white;
+  margin-left: 75px;
+  position: absolute;
+  top: 5px;
+}
+
+.ui-datepicker-calendar {
+  margin: 0px;
+  background: gray;
+  width: 100%;
+}
+
+.ui-datepicker-calendar td {
+  height: 25px;
+  padding: 0px 5px;
+}
+
+/**********************************************************************
+Description: It defines the ad-hoc styles and fixes.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+/* ** Recaptcha responsive fix ********************************* */
+#recaptcha_widget_div {
+  margin: 1%;
+}
+
+@media only screen and (max-width: 480px) {
+  #recaptcha_challenge_image {
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #recaptcha_response_field {
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .recaptchatable #recaptcha_image {
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .recaptchatable .recaptcha_r1_c1,
+  .recaptchatable .recaptcha_r3_c1,
+  .recaptchatable .recaptcha_r3_c2,
+  .recaptchatable .recaptcha_r7_c1,
+  .recaptchatable .recaptcha_r8_c1,
+  .recaptchatable .recaptcha_r3_c3,
+  .recaptchatable .recaptcha_r2_c1,
+  .recaptchatable .recaptcha_r4_c1,
+  .recaptchatable .recaptcha_r4_c2,
+  .recaptchatable .recaptcha_r4_c4,
+  .recaptchatable .recaptcha_image_cell {
+    margin: 0 !important;
+    width: 100% !important;
+    background: none !important;
+    height: auto !important;
+  }
+
+  #recaptcha_area, #recaptcha_table {
+    margin-left: -125px;
+  }
+}
+
+/*# sourceMappingURL=cmgtools.css.map */

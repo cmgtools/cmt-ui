@@ -1,0 +1,342 @@
+/**********************************************************************
+Description: It defines the grid system and basic containers for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+
+/* Grid System ********************* */
+
+// Responsive Row - Aligned middle by default
+.row {
+    margin: 0 auto;
+    width: 100%;
+
+    &.small {
+        width: 30%;
+    }
+
+    &.medium {
+        width: 60%;
+    }
+
+    &.large {
+        width: 80%;
+    }
+}
+
+// Responsive Columns
+
+%col {
+    display: block;
+    float:left;
+    margin: 1% 1%;
+}
+
+.col1 { @extend %col; width: 98%; }
+.col2 { @extend %col; width: 48%; }
+.col3 { @extend %col; width: 31.33333%; }
+.col4 { @extend %col; width: 23%; }
+.col5 { @extend %col; width: 18%; }
+.col6 { @extend %col; width: 14.66666%; }
+.col7 { @extend %col; width: 12.28571%; }
+.col8 { @extend %col; width: 10.5%; }
+.col9 { @extend %col; width:  9.11111%; }
+.col10 { @extend %col; width: 8%; }
+.col11 { @extend %col; width: 7.09090%; }
+.col12 { @extend %col; width: 6.33333%; }
+
+// Smaller Columns
+
+%col-small {
+    display: block;
+    float:left;
+    margin: 0.5% 0.5%;
+}
+
+.col13 { @extend %col-small; width: 6.69230%; }
+.col14 { @extend %col-small; width: 6.14285%; }
+.col15 { @extend %col-small; width: 5.66666%; }
+
+// Full width columns for mobiles and small tablets
+
+@media only screen and ( max-width: $screen-tablet-large ) {
+
+    .row {
+    
+        &.small {
+            width: 50%;
+        }
+    
+        &.medium {
+            width: 50%;
+        }
+    
+        &.large {
+            width: 50%;
+        }
+    }
+
+    .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col13, .col14, .col15 { 
+        width: 48%; 
+    }
+}
+
+@media only screen and ( max-width: $screen-mobile-large ) {
+
+    .row {
+    
+        &.small {
+            width: 100%;
+        }
+    
+        &.medium {
+            width: 100%;
+        }
+    
+        &.large {
+            width: 100%;
+        }
+    }
+
+    .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col13, .col14, .col15 { 
+        width: 98%; 
+    }
+}
+
+// Column multipliers
+
+.col3x2 { @extend %col; width: 64.666666%; }
+.col4x2 { @extend %col; width: 48%; }
+.col4x3 { @extend %col; width: 73%; }
+.col5x2 { @extend %col; width: 38%; }
+.col5x3 { @extend %col; width: 58%; }
+.col5x4 { @extend %col; width: 78%; }
+.col6x2 { @extend %col; width: 31.33332%;  }
+.col6x3 { @extend %col; width: 47.99998%;  }
+.col6x4 { @extend %col; width: 64.66664%;  }
+.col6x5 { @extend %col; width: 81.33330%;  }
+.col12x2 { @extend %col; width: 14.66666%; }
+.col12x3 { @extend %col; width: 22.99999%; }
+.col12x4 { @extend %col; width: 31.33332%; }
+.col12x5 { @extend %col; width: 39.66665%; }
+.col12x6 { @extend %col; width: 47.99993%; }
+.col12x7 { @extend %col; width: 56.33331%; }
+.col12x8 { @extend %col; width: 64.66664%; }
+.col12x9 { @extend %col; width: 72.99997%; }
+.col12x10 { @extend %col; width: 81.33333%; }
+.col12x11 { @extend %col; width: 89.66663%; }
+.col15x2 { @extend %col-small; width:12.33332%; }
+.col15x3 { @extend %col-small; width:18.99998%; }
+.col15x4 { @extend %col-small; width:25.66664%; }
+.col15x5 { @extend %col-small; width:32.33330%; }
+.col15x6 { @extend %col-small; width:38.99996%; }
+.col15x7 { @extend %col-small; width:45.66662%; }
+.col15x8 { @extend %col-small; width:52.33328%; }
+.col15x9 { @extend %col-small; width:58.99994%; }
+.col15x10 { @extend %col-small; width:65.66660%; }
+.col15x11 { @extend %col-small; width:72.33326%; }
+.col15x12 { @extend %col-small; width:78.99992%; }
+.col15x13 { @extend %col-small; width:85.66658%; }
+.col15x14 { @extend %col-small; width:92.33324%; }
+
+/* full width for mobile, tablet */
+
+@media only screen and ( max-width: $screen-tablet-large ) {
+
+    .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, 
+    .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11,
+    .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 { 
+        width: 48%;
+    }
+}
+
+@media only screen and ( max-width: $screen-mobile-large ) {
+
+    .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, 
+    .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11,
+    .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 { 
+        width: 98%;
+    }
+}
+
+// Full Width Columns
+
+%colf {
+    display: block;
+    float:left;
+    margin: 0;
+}
+
+.colf1 { @extend %colf; width: 100%; }
+.colf2 { @extend %colf; width: 50%; }
+.colf3 { @extend %colf; width: 33.33333%; }
+.colf4 { @extend %colf; width: 25%; }
+.colf5 { @extend %colf; width: 20%; }
+.colf6 { @extend %colf; width: 16.66666%; }
+.colf7 { @extend %colf; width: 14.28571%; }
+.colf8 { @extend %colf; width: 12.5%; }
+.colf9 { @extend %colf; width:  11.11111%; }
+.colf10 { @extend %colf; width: 10%; }
+.colf11 { @extend %colf; width: 9.09090%; }
+.colf12 { @extend %colf; width: 8.33333%; }
+.colf13 { @extend %colf; width: 7.69230%; }
+.colf14 { @extend %colf; width: 7.14285%; }
+.colf15 { @extend %colf; width: 6.66666%; }
+
+// full width for mobile, tablet
+
+@media only screen and ( max-width: $screen-tablet-large ) {
+
+    .colf1, .colf2, .colf3, .colf4, .colf5, .colf6, .colf7, .colf8, .colf9, .colf10, .colf11, .colf12, .colf13, .colf14, .colf15 { 
+        width: 50%;
+    }
+}
+
+@media only screen and ( max-width: $screen-mobile-large ) {
+
+    .colf1, .colf2, .colf3, .colf4, .colf5, .colf6, .colf7, .colf8, .colf9, .colf10, .colf11, .colf12, .colf13, .colf14, .colf15 { 
+        width: 100%;
+    }
+}
+
+// Standard Layouts
+ 
+.colf3x2 { @extend %colf; width: 66.666666%; }
+.colf4x2 { @extend %colf; width: 50%; }
+.colf4x3 { @extend %colf; width: 75%; }
+.colf5x2 { @extend %colf; width: 40%; }
+.colf5x3 { @extend %colf; width: 60%; }
+.colf5x4 { @extend %colf; width: 80%; }
+.colf6x2 { @extend %colf; width: 33.33332%;  }
+.colf6x3 { @extend %colf; width: 49.99998%;  }
+.colf6x4 { @extend %colf; width: 66.66664%;  }
+.colf6x5 { @extend %colf; width: 83.33330%;  }
+.colf12x2 { @extend %colf; width: 16.66666%; }
+.colf12x3 { @extend %colf; width: 24.99999%; }
+.colf12x4 { @extend %colf; width: 33.33332%; }
+.colf12x5 { @extend %colf; width: 41.66665%; }
+.colf12x6 { @extend %colf; width: 49.99993%; }
+.colf12x7 { @extend %colf; width: 58.33331%; }
+.colf12x8 { @extend %colf; width: 66.66664%; }
+.colf12x9 { @extend %colf; width: 74.99997%; }
+.colf12x10 { @extend %colf; width: 83.33333%; }
+.colf12x11 { @extend %colf; width: 91.66663%; }
+.colf15x2 { @extend %colf; width:13.33332%; }
+.colf15x3 { @extend %colf; width:19.99998%; }
+.colf15x4 { @extend %colf; width:26.66664%; }
+.colf15x5 { @extend %colf; width:33.33330%; }
+.colf15x6 { @extend %colf; width:39.99996%; }
+.colf15x7 { @extend %colf; width:46.66662%; }
+.colf15x8 { @extend %colf; width:53.33328%; }
+.colf15x9 { @extend %colf; width:59.99994%; }
+.colf15x10 { @extend %colf; width:66.66660%; }
+.colf15x11 { @extend %colf; width:73.33326%; }
+.colf15x12 { @extend %colf; width:79.99992%; }
+.colf15x13 { @extend %colf; width:86.66658%; }
+.colf15x14 { @extend %colf; width:93.33324%; }
+
+// full width for mobile, tablet
+
+@media only screen and ( max-width: $screen-tablet-large ) {
+
+    .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5, 
+    .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11,
+    .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 { 
+        width: 50%;
+    }
+}
+
+@media only screen and ( max-width: $screen-mobile-large ) {
+
+    .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5, 
+    .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11,
+    .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 { 
+        width: 100%;
+    }
+}
+
+// full height first column
+
+// set it to parent container for columns
+.full-height-cols {
+    position: relative;
+}
+
+// place it for first column with lower z-index. We need to repeat first column so that the column with col-filler will be overlapped by column having content.
+.col-filler {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    bottom: 0px;
+    float: none;
+}
+
+// Full Height Containers - Set if required
+/* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
+ * 1. keep body and html to 100% width and height to occupy full screen.
+ * 2. The main container should also occupy full width and set min-height to 100%.
+ * 3. The main container can have it's child elements as header, footer, sidebar, content wrapper.
+ * 3. The header within main container can be either fixed or regular. We can also have header outside of main container.
+ * 4. The footer within main container need to be positioned with bottom 0 to stick at bottom in case enough content is not there. Please refer footers section.
+ * 5. The content wrapper block can have the page content in this setup. It will adjust it's height automatically.
+ * 6. The sidebar within main container can have navigation links and ui widgets.
+ */
+.container-main, .wrap-content {
+    position: relative;
+    z-index: 1;
+}
+
+// Container Boxes to wrap content header and content
+.container h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container .content {
+    padding: 2.5%;
+}
+
+// Restrict the content to x% width of parent having content in center. Works well with parents having background image, but content within a limited area.
+.content-80 {
+    position: relative;
+    padding: 0 10%;
+    width: 100%;
+}
+
+.content-74 {
+    position: relative;
+    padding: 0 13%;
+    width: 100%;
+}
+
+.content-50 {
+    position: relative;
+    padding: 0 25%;
+    width: 100%;
+}
+
+.content-26 {
+    position: relative;
+    padding: 0 37%;
+    width: 100%;
+}
+
+// Restrict the content to 25% width of parent with left align - Works well with parents having background image, but content within a limited area.
+.content-left-25 {
+    position: relative;
+    padding-right: 75%;
+    width: 100%;
+}
+
+.content-left-50 {
+    position: relative;
+    padding-right: 50%;
+    width: 100%;
+}
+
+// Restrict the content to 25% width of parent with right align - Works well with parents having background image, but content within a limited area.
+.content-right-25 {
+    position: relative;
+    padding-left: 75%;
+    width: 100%;
+}
+
+.content-right-50 {
+    position: relative;
+    padding-left: 50%;
+    width: 100%;
+}

@@ -1,0 +1,62 @@
+// Popup ---------------------------------
+
+.popup {
+    display:none; 
+    background:#FFFFFF;
+    border:2px solid gray; 
+    -moz-box-shadow: 0 0 5px black;
+    -webkit-box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px black;
+    border-radius: 12px;
+
+    &.small {
+        height:200px;  
+        width:400px;  
+    }
+
+    &.medium { 
+        height:300px;  
+        width:600px;  
+    }
+
+    &.large {
+        height:400px;  
+        width:800px;  
+    }
+
+    .close {
+        font-size:20px; 
+        right:0px;  
+        top:3px;  
+        position:absolute;  
+        color:#6fa5e2;  
+        font-weight:500;
+        width: 25px;
+        height: 25px; 
+        background-image: url( $images-path + "icons/close.png" );
+        background-size: cover;
+    }
+
+    .title {
+        width: 100%;
+        background-color: #00133C;
+        color: white;
+        font-weight: bold;  
+        font-size: 1.1em;
+        height: 30px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+
+        .text {
+            padding: 10px 0 0 10px;
+        }
+    }
+
+    .elements {
+        padding: 10px;
+
+        ul {
+            padding: 0px;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+/**********************************************************************
+Description: It defines the theme for JQuery UI Components from CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+
+// Calendar
+
+.ui-datepicker-header {
+    background-color: black;  
+}
+
+.ui-datepicker-next, .ui-datepicker-prev {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.ui-datepicker-next {
+    margin-left: 160px;
+}
+
+.ui-datepicker-title {
+    color: white;
+    margin-left: 75px;
+    position: absolute;
+    top: 5px;
+}
+
+.ui-datepicker-calendar {
+    margin: 0px;
+    background: gray;
+    width: 100%;
+}
+
+.ui-datepicker-calendar td {
+    height: 25px;
+    padding: 0px 5px;
+}
+
+.ui-state-disabled span {
+    background-color: $color-secondary;
+}

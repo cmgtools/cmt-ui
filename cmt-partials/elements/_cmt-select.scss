@@ -1,0 +1,73 @@
+.cmt-select-wrap {
+    position: relative;
+
+    select {
+        display: none;
+    }
+
+    .cmt-select {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        // Default icon having width 32px. It can be changed based on icon dimensions.
+        .cmt-selected {
+            cursor: pointer;
+            position: relative;
+            z-index: 100000;
+            padding-right: 32px;
+
+            .s-text {
+                display: inline-block;
+                width: 100%;
+                overflow: hidden;
+                text-align: left;
+                padding: 12px;
+            }
+
+            .s-icon {
+                display: inline-block;
+                width: 32px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            
+            &.disabled {
+                cursor: default;
+            }
+        }
+
+        .cmt-select-list {
+            position: relative;
+            z-index: 100001;
+            max-height: 175px;
+            overflow-y: auto;
+
+            li {
+                width: 100%;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            li:hover {
+                
+            }
+        }
+    }
+}
+
+.cmt-select-wrap, .cmt-select, .cmt-selected, .s-text {
+    letter-spacing: 1px;
+    color: $color-secondary-text;
+    font-weight:500 !important        
+}
+
+.cmt-select-list li {
+    padding:10px;
+    background-color: $color-tertiary-l !important;
+}    
+.cmt-select-list li:hover {
+    background-color: $color-primary !important;
+}

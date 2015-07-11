@@ -1,0 +1,544 @@
+/**********************************************************************
+Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
+Dependencies: variables, variables-ext
+***********************************************************************/
+
+// Clearfix
+%clearfix {
+    zoom: 1;
+
+    &:before, &:after {
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Font Size
+@mixin font-size( $size ) {
+    font-size: $size;
+    -ms-text-size-adjust: $size;
+    -webkit-text-size-adjust: $size;
+}
+
+// Opacity
+@mixin opaque( $value ) {
+    zoom: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = " + $value*100 + " )";
+    -moz-opacity: $value;
+    -khtml-opacity: $value;
+    filter: alpha( opacity = $value*100 );
+    opacity: $value;
+}
+
+// Round Corners
+@mixin rounded( $radius ) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    -khtml-border-radius: $radius;
+}
+
+@mixin rounded-top( $radius ) {
+    -moz-border-radius-top-left: $radius;       -moz-border-radius-top-right: $radius;
+    -webkit-border-radius-top-left: $radius;    -webkit-border-radius-top-right: $radius;
+    border-radius: $radius $radius 0 0;
+    -khtml-border-radius-top-left: $radius;     -khtml-border-radius-top-right: $radius;
+}
+
+@mixin rounded-right( $radius ) {
+    -moz-border-radius-top-right: $radius;      -moz-border-radius-bottom-right: $radius;
+    -webkit-border-radius-top-right: $radius;   -webkit-border-radius-bottom-right: $radius;
+    border-radius: 0 $radius $radius 0;
+    -khtml-border-radius-top-right: $radius;    -khtml-border-radius-bottom-right: $radius;
+}
+
+@mixin rounded-bottom( $radius ) {
+    -moz-border-radius-bottom-left: $radius;      -moz-border-radius-bottom-right: $radius;
+    -webkit-border-radius-bottom-left: $radius;   -webkit-border-radius-bottom-right: $radius;
+    border-radius: 0 0 $radius $radius;
+    -khtml-border-radius-bottom-left: $radius;    -khtml-border-radius-bottom-right: $radius;
+}
+
+@mixin rounded-left( $radius ) {
+    -moz-border-radius-top-left: $radius;      -moz-border-radius-bottom-left: $radius;
+    -webkit-border-radius-top-left: $radius;   -webkit-border-radius-bottom-left: $radius;
+    border-radius: $radius 0 0 $radius;
+    -khtml-border-radius-top-left: $radius;    -khtml-border-radius-bottom-left: $radius;
+}
+
+// Circled - Style having border radius 100% and child elements aligned at center position
+@mixin circled1( $bkg-color ) {
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    background-color: $bkg-color;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    -khtml-border-radius: 100%;
+}
+
+// Circled - Style having border radius 50% with fixed height and width without child consideration
+@mixin circled2( $width, $height, $bkg-color ) {
+    width: $width;
+    height: $height;
+    background: $bkg-color;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+
+// Circled - Style having border radius 50% and responsive without child consideration
+@mixin circled3( $bkg-color, $pad: 50% ) {
+    width: 50%;
+    height:0;
+    background-color: $bkg-color;
+    padding-bottom: $pad;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+
+// Text wrapper - Can be used to wrap text aligned centre both horizontally and vertically. The radius can be set to 50% for circle effect.
+@mixin shape-text( $bkg-color, $txt-color, $pad1: 100%, $pad2: 50%, $radius: 0 ) {
+    width: 50%;
+
+    &:after {
+        width: 100%;
+        height: 0;
+        background-color: $bkg-color;
+        content: "";
+        display: block;
+        padding-bottom: $pad1;
+        -moz-border-radius: $radius; 
+        -webkit-border-radius: $radius; 
+        border-radius: $radius;
+    }
+
+    span {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        padding-top: $pad2;
+        line-height: 1em;
+        margin-top: -0.5em;
+        text-align: center;
+        color: $txt-color;
+    }
+}
+
+// Box Shadow with x and y distance having blur ratio and color of shadow
+@mixin shadow( $x, $y, $blur, $color ) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+}
+
+// Box Shadow with x and y distance having blur ratio and color of shadow
+@mixin text-shadow( $x, $y, $blur, $color ) {
+    -webkit-text-shadow: $x $y $blur $color;
+    -moz-text-shadow: $x $y $blur $color;
+    text-shadow: $x $y $blur $color;
+}
+
+// Linear Gradient - Default - Top to Bottom
+@mixin linear-gradient( $start, $end, $direction: 'bottom' ) {
+    background-color: $end;
+    background-image: -moz-linear-gradient( $direction, $start, $end );
+    background-image: -o-linear-gradient( $direction, $start, $end );
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop( 0, $start ), color-stop( 1, $end ) );
+    background-image: -webkit-linear-gradient( $direction, $start, $end );
+    background-image: -ms-linear-gradient( $direction, $start, $end );
+    background-image: linear-gradient( to $direction, $start, $end );
+}
+
+// Radial Gradient - Default - Top to Bottom
+@mixin radial-gradient( $start, $end, $direction: circle at center top ) {
+    //background-image: -webkit-gradient( radial, center center, 0, center center, 141, from(black), to(white), color-stop(25%, blue), color-stop(40%, green), color-stop(60%, red), color-stop(80%, purple));
+    //background-image: -webkit-radial-gradient( 45px 45px, farthest-corner, #F00 0%, #00F 100% ) repeat scroll 0% 0% rgba( 0, 0, 0, 0 );
+    background-image: radial-gradient( $direction, $start, $end );
+}
+
+// Vertically Align Center - It works for containers or elements having parent without min-height.
+@mixin valign-center {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY( -50% );
+      -ms-transform: translateY( -50% );
+        transform: translateY( -50% );
+}
+
+// Align child - vertically and horizontally at center
+@mixin vh-align-child-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+// Max area boxes - Parent must have position attribute
+
+%max-area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+}
+
+@mixin max-area() {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+}
+
+@mixin max-area-transparent( $r: 0, $g: 0, $b: 0, $a: 0.6 ) {
+      @include max-area;
+      background-color: rgba( $r, $g, $b, $a );
+}
+
+// Max Area Cover - The element overlays(cover) all other child elements of it's parent unless the other child got greater z-index. 
+// Initially it's set to hidden and can be made visible when required. most useful example is
+// having a full cover pre-loader with spinner on top of all other elements. 
+@mixin max-area-cover {
+    @include max-area-transparent;
+    text-align: center;
+    color: $color-primary-text;
+    z-index: 1000000;
+    display: none;
+}
+
+// Backgrounds
+@mixin bkg-tile {
+    background-repeat: repeat;
+}
+
+// Cover the background keeping perspective in mind
+@mixin bkg-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50%9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+// Cover the background and fill with specified width and height
+@mixin bkg-image-fill( $width: 100%, $height: 100% ) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50%9 !important;
+    -webkit-background-size: $width $height;
+    -moz-background-size: $width $height;
+    background-size: $width $height;
+}
+
+// background center align with auto height
+@mixin bkg-auto {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+}
+
+// Mixins Default implementation ***********************
+
+// Clearfix
+.clearfix {
+    @extend %clearfix;
+}
+
+// Font Size
+
+.font-size-100 {
+    @include font-size( 100% );
+}
+
+// Opacity
+
+.opaque-25 {
+    @include opaque( 0.25 );
+}
+
+.opaque-50 {
+    @include opaque( 0.50 );
+}
+
+.opaque-75 {
+    @include opaque( 0.75 );
+}
+
+// Round Corners
+.rounded-all {
+    @include rounded( $radius-default );  
+}
+
+.rounded-top {
+    @include rounded-top( $radius-default );  
+}
+
+.rounded-right {
+    @include rounded-right( $radius-default );  
+}
+
+.rounded-bottom {
+    @include rounded-bottom( $radius-default );  
+}
+
+.rounded-left {
+    @include rounded-left( $radius-default );  
+}
+
+// Circled
+.circled1 {
+    @include circled1( $color-secondary );
+}
+
+.circled2 {
+    @include circled2( 250px, 250px, $color-secondary );
+}
+
+.circled3 {
+    @include circled3( $color-secondary );
+}
+
+.shape-text {
+    @include shape-text( $color-secondary, $color-secondary-text );
+}
+
+// Shadow
+.shadow {
+    @include shadow( 1px, 1px, 5px, $color-shadow-default );
+}
+
+.text-shadow {
+    @include text-shadow( 1px, 1px, 5px, $color-shadow-default );
+}
+
+// Gradients
+.linear-gradient {
+    @include linear-gradient( $color-primary, $color-secondary );
+}
+
+// Alignments
+
+.valign-center {
+    @include valign-center;
+}
+
+.child-center {
+    @include vh-align-child-center;  
+}
+
+// Max Area
+
+.max-area {
+    @include max-area;  
+}
+
+.max-area-transparent {
+    @include max-area-transparent;
+}
+
+.max-area-cover {
+    @include max-area-cover;
+}
+
+// Backgrounds
+
+.bkg-tile {
+    @include bkg-tile;  
+}
+
+.bkg-image {
+    @include bkg-image;
+}
+
+.bkg-image-fill {
+    @include bkg-image-fill;
+}
+
+// Media Queries **************************************
+
+@mixin responsive( $width ) {
+  
+    @if $width == screen-mobile-small {
+  
+        @media only screen and ( min-width: $screen-mobile-small ) {
+            @content;
+        }
+    }
+  
+    @else if $width == screen-mobile-large {
+  
+        @media only screen and ( min-width: $screen-mobile-small + 1 ) and ( max-width: $screen-mobile-large ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-tablet-small {
+  
+        @media only screen and ( min-width: $screen-mobile-large + 1 ) and ( max-width: $screen-tablet-small ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-tablet-large {
+  
+        @media only screen and ( min-width: $screen-tablet-small + 1 ) and ( max-width: $screen-tablet-large ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-small {
+  
+        @media only screen and ( min-width: $screen-tablet-large + 1 ) and ( max-width: $screen-desktop-small ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-medium {
+  
+        @media only screen and ( min-width: $screen-desktop-small + 1 ) and ( max-width: $screen-desktop-medium ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-large {
+  
+        @media only screen and ( min-width: $screen-desktop-medium + 1 ) and ( max-width: $screen-desktop-large ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-xlarge {
+  
+        @media only screen and ( min-width: $screen-desktop-large + 1 ) and ( max-width: $screen-desktop-xlarge ) {
+            @content;
+        }
+    }
+ }
+
+@mixin responsive-max( $width ) {
+  
+    @if $width == screen-mobile-small {
+  
+        @media only screen and ( max-width: $screen-mobile-small ) {
+            @content;
+        }
+    }
+  
+    @else if $width == screen-mobile-large {
+  
+        @media only screen and ( max-width: $screen-mobile-large ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-tablet-small {
+  
+        @media only screen and ( max-width: $screen-tablet-small ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-tablet-large {
+  
+        @media only screen and ( max-width: $screen-tablet-large ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-small {
+  
+        @media only screen and ( max-width: $screen-desktop-small ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-medium {
+  
+        @media only screen and ( max-width: $screen-desktop-medium ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-large {
+  
+        @media only screen and ( max-width: $screen-desktop-large ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-xlarge {
+  
+        @media only screen and ( max-width: $screen-desktop-xlarge ) {
+            @content;
+        }
+    }
+}
+
+@mixin responsive-min( $width ) {
+  
+    @if $width == screen-mobile-small {
+  
+        @media only screen and ( min-width: $screen-mobile-small + 1 ) {
+            @content;
+        }
+    }
+  
+    @else if $width == screen-mobile-large {
+  
+        @media only screen and ( min-width: $screen-mobile-large + 1 ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-tablet-small {
+  
+        @media only screen and ( min-width: $screen-tablet-small + 1 ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-tablet-large {
+  
+        @media only screen and ( min-width: $screen-tablet-large + 1 ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-small {
+  
+        @media only screen and ( min-width: $screen-desktop-small + 1 ) {
+           @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-medium {
+  
+        @media only screen and ( min-width: $screen-desktop-medium + 1 ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-large {
+  
+        @media only screen and ( min-width: $screen-desktop-large + 1 ) {
+            @content;
+        }
+    }
+    
+    @else if $width == screen-desktop-xlarge {
+  
+        @media only screen and ( min-width: $screen-desktop-xlarge + 1 ) {
+            @content;
+        }
+    }
+ }
