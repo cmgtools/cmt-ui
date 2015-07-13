@@ -318,50 +318,50 @@ Dependencies: variables, mixins
 // Restrict the content to x% width of parent having content in center. Works well with parents having background image, but content within a limited area.
 .content-80 {
     position: relative;
-    padding: 0 10%;
-    width: 100%;
+    padding: 0 10% !important;
+    width: 100% !important;
 }
 
 .content-74 {
     position: relative;
-    padding: 0 13%;
-    width: 100%;
+    padding: 0 13% !important;
+    width: 100% !important;
 }
 
 .content-50 {
     position: relative;
-    padding: 0 25%;
-    width: 100%;
+    padding: 0 25% !important;
+    width: 100% !important;
 }
 
 .content-26 {
     position: relative;
-    padding: 0 37%;
-    width: 100%;
+    padding: 0 37% !important;
+    width: 100% !important;
 }
 
 // Restrict the content to 25% width of parent with left align - Works well with parents having background image, but content within a limited area.
 .content-left-25 {
     position: relative;
-    padding-right: 75%;
-    width: 100%;
+    padding-right: 75% !important;
+    width: 100% !important;
 }
 
 .content-left-50 {
     position: relative;
-    padding-right: 50%;
-    width: 100%;
+    padding-right: 50% !important;
+    width: 100% !important;
 }
 
 // Restrict the content to 25% width of parent with right align - Works well with parents having background image, but content within a limited area.
 .content-right-25 {
     position: relative;
-    padding-left: 75%;
-    width: 100%;
+    padding-left: 75% !important;
+    width: 100% !important;
 }
 
 .content-right-50 {
     position: relative;
-    padding-left: 50%;
-    width: 100%;
+    padding-left: 50% !important;
+    width: 100% !important;
 }
