@@ -109,9 +109,13 @@ $color-warning: #800020;
 // 1. cmg - basic - .success, .header-success
 $color-success: #a5d75a;
 
-// Transparent Colors
+// Standard and Transparent Colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-transparent-white: rgba(255, 255, 255, 0.6);
 $color-transparent-black: rgba(0, 0, 0, 0.6);
 $color-transparent-gray: rgba(72, 72, 72, 0.6);
+$color-transparent-gray-l: rgba(189, 189, 188, 0.6);
 $color-transparent-primary: rgba(242, 242, 242, 0.6);
 $color-transparent-secondary: rgba(81, 81, 81, 0.6);
 $color-transparent-tertiary: rgba(54, 54, 54, 0.6);
