@@ -1,0 +1,130 @@
+// The Grid Data acts as wrapper to the data
+.grid-data-basic {
+
+    // Grid Filters
+    .grid-filters {
+        padding: 0.5em;
+    }
+
+    // Grid Header
+    .grid-header {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+        padding: 0.5em;
+
+        .info {
+            display: inline-block;
+        }
+    }
+
+    // Grid Content
+    .grid-content {
+        padding: 0.5em;
+    }
+    
+    // Grid Rows
+    .grid-row-header {
+        display: none;
+    }
+
+    .grid-row-data {
+        
+        .avatar {
+            width: 64px;
+        }
+
+        &:nth-child( even ) {
+            background-color: $color-primary;
+        }
+
+        .view-desktop {
+            display: none;             
+        }
+
+        .view-mobile {
+            
+            .highlight {
+                font-weight: bold;
+            }
+        }
+    }
+
+    // Grid Footer
+    .grid-footer {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+        padding: 0.5em;
+
+        .info {
+            display: inline-block;
+        }
+    }
+    
+    // Sorting
+
+    .sort {
+        cursor: pointer;
+        padding-left: 10px;
+    }
+
+    .sort-title {
+        padding-left: 10px;  
+    }
+
+    .sort-asc {
+        color: $color-success;
+    }
+
+    .sort-desc {
+        color: $color-error;
+    }
+
+    // Grid Pagination
+
+    .pagination {
+        float: right;
+    }
+
+    .pagination, .pagination li {
+        display: inline-block;
+        list-style: none;
+    }
+
+    .pagination a {
+        background-color: $color-secondary;
+        border-radius: 4px;
+        color: $color-secondary-text;
+        padding: 3px 8px;
+        text-decoration: none;
+    }
+
+    .pagination li {
+        margin: 0 3px;
+    }
+
+    .pagination .active, .pagination li a:hover {
+        background-color: $color-secondary-l;
+        color: white;
+        -moz-transition: 0.5s;
+    }
+
+    @include responsive-min( screen-tablet-large ) {
+
+        // Grid Rows
+        .grid-row-header {
+            display: block;
+        }
+
+        .grid-row-data {
+    
+            .view-desktop {
+                display: block;
+                padding: 0.5em 0;
+            }
+    
+            .view-mobile {
+                display: none;
+            }
+        }
+    }
+}
