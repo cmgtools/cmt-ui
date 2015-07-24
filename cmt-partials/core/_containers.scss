@@ -30,6 +30,7 @@ Dependencies: variables, mixins
     display: block;
     float:left;
     margin: 1% 1%;
+    word-wrap: break-word;
 }
 
 // generic column - it does not relate with col width
@@ -56,6 +57,7 @@ Dependencies: variables, mixins
     display: block;
     float:left;
     margin: 0.5% 0.5%;
+    word-wrap: break-word;
 }
 
 .col13 { @extend %col-small; width: 6.69230%; }
@@ -175,6 +177,7 @@ Dependencies: variables, mixins
     display: block;
     float:left;
     margin: 0;
+    word-wrap: break-word;
 }
 
 // generic column - it does not relate with col width

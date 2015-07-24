@@ -37,15 +37,15 @@
             background-color: $color-primary;
         }
 
-        .view-desktop {
-            display: none;             
+        .title {
+            font-weight: bold;
         }
 
-        .view-mobile {
-            
-            .highlight {
-                font-weight: bold;
-            }
+        span {
+            display: inline-block;
+            width: 48%;
+            padding: 1%;
+            word-wrap: break-word;
         }
     }
 
@@ -116,14 +116,14 @@
         }
 
         .grid-row-data {
-    
-            .view-desktop {
-                display: block;
-                padding: 0.5em 0;
-            }
-    
-            .view-mobile {
+
+            .title {
                 display: none;
+            }
+
+            span {
+                width: 100%;
+                padding: 0;
             }
         }
     }
