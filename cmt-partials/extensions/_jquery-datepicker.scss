@@ -5,40 +5,79 @@ Dependencies: variables, mixins
 
 // Calendar
 
-.ui-datepicker-header {
-    background-color: black;  
-}
+.calendar-basic {
 
-.ui-datepicker-next, .ui-datepicker-prev {
-    display: inline-block;
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: white;
-}
+    .ui-datepicker {
+        position: relative;
+    }
 
-.ui-datepicker-next {
-    margin-left: 160px;
-}
+    .ui-datepicker-header {
+        @extend %clearfix;
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+        text-align: center;
+    }
 
-.ui-datepicker-title {
-    color: white;
-    margin-left: 75px;
-    position: absolute;
-    top: 5px;
-}
+    .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-title {
+        display: inline-block;
+        margin: 1em;
+    }
 
-.ui-datepicker-calendar {
-    margin: 0px;
-    background: gray;
-    width: 100%;
-}
+    .ui-datepicker-prev {
+        float: left;
+    }
 
-.ui-datepicker-calendar td {
-    height: 25px;
-    padding: 0px 5px;
-}
+    .ui-datepicker-next {
+        float: right;
+    }
 
-.ui-state-disabled span {
-    background-color: $color-secondary;
+    .ui-datepicker-prev-hover, .ui-datepicker-next-hover {
+        color: $color-primary;
+    }
+
+    .ui-datepicker-title {
+        font-weight: bold;
+    }
+
+    .ui-datepicker-calendar {
+        background: $color-tertiary;
+        color: $color-secondary;
+        width: 100%;
+
+        th {
+            padding: 1em 0.25em;
+        }
+
+        td {
+            width: 12.28571%;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+
+            span, a {
+                display: inline-block;
+                width: 90%;
+                margin: 5px 5%;
+            }
+
+            a {
+                background-color: gray;
+                color: white;
+                @include transit-bkg-color( $transit-eio, $transit-time-medium );
+                
+                &:hover {
+                    background-color: $color-secondary;
+                }
+
+                &.ui-state-active {
+                    background-color: $color-secondary;
+                }
+            }
+        }
+
+        .ui-state-disabled span {
+            background: $color-tertiary;
+            color: $color-secondary;
+        }
+    }
 }

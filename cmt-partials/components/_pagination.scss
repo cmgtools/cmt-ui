@@ -1,0 +1,23 @@
+.pagination-basic {
+    display: inline-block;
+
+    li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 5px;
+    }
+
+    a {
+        background-color: $color-tertiary;
+        color: $color-secondary-text;
+        padding: 3px 8px;
+        @include rounded( 5px );
+        text-decoration: none;
+    }
+
+    .active a, a:hover {
+        background-color: $color-primary;
+        color: $color-primary-text;
+        -moz-transition: 0.5s;
+    }
+}
