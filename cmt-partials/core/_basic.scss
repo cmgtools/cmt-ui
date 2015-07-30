@@ -21,6 +21,11 @@ body {
     background-color: $color-primary;
 }
 
+// Show global pre-loader if exists
+#pre-loader-main {
+    display: block;  
+}
+
 // Floating Elements
 
 .clear {
