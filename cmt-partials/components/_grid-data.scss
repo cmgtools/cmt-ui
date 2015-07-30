@@ -1,51 +1,128 @@
 // The Grid Data acts as wrapper to the data
-.grid-data-basic {
+.grid-data {
+
+    // Grid Filters
+    .grid-title {
+
+        .title {
+            // grid title
+        }
+
+        .info {
+            // grid info
+        }
+    }
 
     // Grid Filters
     .grid-filters {
-        padding: 0.5em;
+        // The grid filters
     }
+
+    // Grid Header
+    .grid-header {
+        // Grid Header having grid columns, pagination
+    }
+
+    // Grid Content Wrapper
+    .grid-content {
+        // Grid content like grid rows or blocks goes here
+    }
+
+    // Grid Rows
+    .grid-rows {
+        
+        // rows header hidden for mobile
+        .grid-rows-header {
+            display: none;
+            font-weight: bold;
+        }
+
+        .grid-row {
+
+            &:nth-child( even ) {
+                background-color: $color-primary;
+            }
+
+            .grid-row-header {
+                // row title         
+            }
+
+            .grid-row-data {
+                // row data - it can be anything ex: content box
+                span {
+                    display: inline-block;
+                    width: 48%;
+                    padding: 1%;
+                    word-wrap: break-word;
+                }
+            }
+
+            .grid-row-footer {
+                // row title         
+            }
+        }
+        
+        // rows footer hidden for mobile
+        .grid-rows-footer {
+            display: none;
+            font-weight: bold;
+        }
+    }
+
+    // Grid Blocks
+    .grid-blocks {
+        // block - it can be anything ex: content box
+    }
+
+    // Grid Footer
+    .grid-footer {
+        // Grid Footer having grid columns, pagination
+    }
+
+    @include responsive-min( screen-tablet-large ) {
+
+        // Grid Rows
+        .grid-rows {
+
+            .grid-rows-header {
+                display: block;
+            }
+
+            .grid-row {
+
+                .grid-row-data {
+
+                    .title {
+                        display: none;
+                    }
+
+                    span {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+            }
+
+            .grid-rows-footer {
+                display: block;
+            }
+        }
+    }
+}
+
+// Basic Grid
+.grid-basic {
+    background-color: $color-primary-d;
+    padding: 10px;
 
     // Grid Header
     .grid-header {
         background-color: $color-secondary;
         color: $color-secondary-text;
-        padding: 0.5em;
+        padding: 10px;
 
         .info {
             display: inline-block;
-        }
-    }
-
-    // Grid Content
-    .grid-content {
-        padding: 0.5em;
-    }
-
-    // Grid Rows
-    .grid-row-header {
-        display: none;
-    }
-
-    .grid-row-data {
-
-        .avatar {
-            width: 64px;
-        }
-
-        &:nth-child( even ) {
-            background-color: $color-primary;
-        }
-
-        .title {
-            font-weight: bold;
-        }
-
-        span {
-            display: inline-block;
-            width: 48%;
-            padding: 1%;
-            word-wrap: break-word;
         }
     }
 
@@ -53,35 +130,25 @@
     .grid-footer {
         background-color: $color-secondary;
         color: $color-secondary-text;
-        padding: 0.5em;
+        padding: 10px;
 
         .info {
             display: inline-block;
         }
     }
-    
+
+    // Grid Rows
+    .grid-rows {
+        margin: 10px 0;
+    }
+
+    // Avatar in Grid
+    .avatar {
+        width: 32px;
+    }
+
     // Grid Pagination
     .pagination {
         float: right;
-    }
-
-    @include responsive-min( screen-tablet-large ) {
-
-        // Grid Rows
-        .grid-row-header {
-            display: block;
-        }
-
-        .grid-row-data {
-
-            .title {
-                display: none;
-            }
-
-            span {
-                width: 100%;
-                padding: 0;
-            }
-        }
     }
 }
