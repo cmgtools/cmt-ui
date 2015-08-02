@@ -14,3 +14,13 @@ $border-fat-l: 5px solid $color-secondary-l;
 $border-default-d: 1px solid $color-secondary-d;
 $border-medium-d: 2px solid $color-secondary-d;
 $border-fat-d: 5px solid $color-secondary-d;
+
+// Transparent Colors
+$color-transparent-primary: rgba(242, 242, 242, 0.6);
+$color-transparent-secondary: rgba(81, 81, 81, 0.6);
+$color-transparent-tertiary: rgba(54, 54, 54, 0.6);
+
+// Shadow Colors
+$color-shadow-primary: rgba( 0, 0, 0, 0.2 );
+$color-shadow-secondary: rgba( 0, 0, 0, 0.2 );
+$color-shadow-tertiary: rgba( 0, 0, 0, 0.2 );

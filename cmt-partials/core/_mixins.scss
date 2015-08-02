@@ -317,6 +317,18 @@ Dependencies: variables, variables-ext
     @include shadow( 1px, 1px, 5px, $color-shadow-default );
 }
 
+.shadow-primary {
+    @include shadow( 1px, 1px, 5px, $color-shadow-primary );
+}
+
+.shadow-secondary {
+    @include shadow( 1px, 1px, 5px, $color-shadow-secondary );
+}
+
+.shadow-tertiary {
+    @include shadow( 1px, 1px, 5px, $color-shadow-tertiary );
+}
+
 .text-shadow {
     @include text-shadow( 1px, 1px, 5px, $color-shadow-default );
 }
