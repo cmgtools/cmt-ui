@@ -6,44 +6,11 @@ Javascript: jquery, cmg-module
 ***********************************************************************/
 
 // Common for all the modules
+// 1. The Module can have background image with or without parallax effects.
+// 2. The content wrapper wraps the module header and module content. This gives opportunity to set module background and even content wrapper background in the form of image or texture.
+// 3. Module height must not be set using min-height to get background with parallax working.
 .module {
     position: relative;
-
-    .module-splitter {
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        text-align: center;
-        z-index: 10000;
-
-        &.top {
-            top: 0;
-            margin-top: -50px;
-        }
-
-        &.bottom {
-            bottom: 0;
-            margin-bottom: -50px;
-        }
-
-        .icon {
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-        }
-    }
-}
-
-// The Basic Module component
-// 1. Basic Module takes 100 % width and height of it's parent. The height in % won't work in case parent's min-height property is set.
-// 2. The Basic Module can have background image with or without parallax effects.
-// 3. The content wrapper wraps the module header and module content. This gives opportunity to set module background and even content wrapper background in the form of image or texture.
-// 4. Module height must not be set using min-height to get background with parallax working.
-.module-basic {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
 
     // responsive background
     .module-bkg {
@@ -85,17 +52,50 @@ Javascript: jquery, cmg-module
         // content
         .module-content {
 
-            // Content Box
+            // Default Content Box having title and text content
             .box-content {
 
-                .title {
-
+                .box-content-title {
+                    // default content box title
                 }
 
-                .text {
-
+                .box-content-text {
+                  // default content box text
                 }
             }
         }
     }
+
+    .module-splitter {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        z-index: 10000;
+
+        &.top {
+            top: 0;
+            margin-top: -50px;
+        }
+
+        &.bottom {
+            bottom: 0;
+            margin-bottom: -50px;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+// The Basic Module component
+// 1. Basic Module takes 100 % width and height of it's parent. The height in % won't work in case parent's min-height property is set.
+.module-basic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
