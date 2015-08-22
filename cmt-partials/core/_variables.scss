@@ -112,36 +112,25 @@ $color-success: #a5d75a;
 // Standard and Transparent Colors
 $color-white: #ffffff;
 $color-black: #000000;
-$color-transparent-white: rgba(255, 255, 255, 0.6);
-$color-transparent-black: rgba(0, 0, 0, 0.6);
-$color-transparent-gray: rgba(72, 72, 72, 0.6);
-$color-transparent-gray-l: rgba(189, 189, 188, 0.6);
 
-// Default Shadow Color
-// 1. cmg - forms - field focus and hover
-// 2. mixins - .shadow, .text-shadow
-$color-shadow-default: rgba( 0, 0, 0, 0.2 );
-// Error Shadow Color - Error Fields
-// 1. cmg - forms - .error-field
-$color-shadow-error: rgba( 255, 0, 0, 0.2 );
-$color-shadow-warning: rgba( 128, 0, 32, 0.2 );
-$color-shadow-success: rgba( 165, 215, 90, 0.2 );
-
-// Form Fields Default Color
+// Form Fields Color
 // 1. cmg - forms - fields
 $color-field: #e1e1e1;
 $color-field-text: #363636;
-// Buttons Color
+
+// Button Color
 // 1. cmg - forms - buttons
 $color-button: #363636;
 $color-button-text: #949ea8;
-// Buttons Hover Color
+
+// Button Hover Color
 // 1. cmg - forms - buttons
 $color-button-h: #e74343;
 $color-button-h-text: white;
 
-$color-header: $color-primary-text;
-$color-social: $color-tertiary;
+// Additional Colors
+$color-header: #363636;
+$color-social: #a5d75a;
 
 // Radius
 // 1. mixins - .rounded-all, .rounded-top, .rounded-right, .rounded-bottom, .rounded-left
