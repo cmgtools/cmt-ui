@@ -15,8 +15,14 @@
             }
         }
 
+        .message-upload {
+            margin: 1em 0;
+            display: none;          
+        }
+
         .btn-show-chooser {
             position: absolute;
+            cursor: pointer;
             top: 0;
             right: 0;
             padding: 1em;
