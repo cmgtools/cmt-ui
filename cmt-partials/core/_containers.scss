@@ -305,7 +305,8 @@ Dependencies: variables, mixins
     position: relative;
 }
 
-// place it for first column with lower z-index. We need to repeat first column so that the column with col-filler will be overlapped by column having content.
+// The main usage of col filler is to fill background of an element in floated elements case. Ex: Sidebar need to show background color with same height as that of content. 
+// Place it for first column with lower z-index. We need to repeat first column so that the column with col-filler will be overlapped by column having content.
 .col-filler {
     position: absolute;
     z-index: -1;
@@ -337,25 +338,29 @@ Dependencies: variables, mixins
 // Restrict the content to x% width of parent having content in center. Works well with parents having background image, but content within a limited area.
 .content-80 {
     position: relative;
-    padding: 0 10% !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
     width: 100% !important;
 }
 
 .content-74 {
     position: relative;
-    padding: 0 13% !important;
+    padding-left: 13% !important;
+    padding-right: 13% !important;
     width: 100% !important;
 }
 
 .content-50 {
     position: relative;
-    padding: 0 25% !important;
+    padding-left: 25% !important;
+    padding-right: 25% !important;
     width: 100% !important;
 }
 
 .content-26 {
     position: relative;
-    padding: 0 37% !important;
+    padding-left: 37% !important;
+    padding-right: 37% !important;
     width: 100% !important;
 }
 
@@ -383,4 +388,25 @@ Dependencies: variables, mixins
     position: relative;
     padding-left: 50% !important;
     width: 100% !important;
+}
+
+// Sometimes we need a container to cover full height
+.max-height {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+// Sometimes we need a container to cover full height and width
+.max-block {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+// Sticky container to stick at bottom
+.stick-bottom {
+    bottom: 0;
+    position: absolute;
 }

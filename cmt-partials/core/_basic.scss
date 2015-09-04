@@ -238,6 +238,10 @@ body {
     background-image: url( $images-path + "texture-default.png" );
 }
 
+.pattern {
+    @extend %textures;
+}
+
 .pattern-default {
     background-image: url( $images-path + "pattern-default.jpg" );
 }

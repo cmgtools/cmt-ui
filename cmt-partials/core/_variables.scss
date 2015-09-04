@@ -37,33 +37,33 @@ $screen-desktop-xlarge: 1920px;
 $color-factor: 30;
 
 // Primary Color:
-// 1. cmg - mixins - Default color for .linear-gradient
-// 2. cmg - basic - Body background color
-// 3. cmg - reset - a
+// 1. cmt - mixins - Default color for .linear-gradient
+// 2. cmt - basic - Body background color
+// 3. cmt - reset - a
 $color-primary: #f2f2f2;
 $color-primary-l: #td;
 $color-primary-d: #td;
 
 // Primary Text Color:
-// 1. cmg - basic - .max-area-cover, .header-error, .header-warning, .header-success
-// 2. cmg - typography - body
+// 1. cmt - basic - .max-area-cover, .header-error, .header-warning, .header-success
+// 2. cmt - typography - body
 $color-primary-text: #363636;
 $color-primary-text-l: #td;
 $color-primary-text-d: #td;
 
 // Secondary Color:
-// 1. cmg - variables-ext - $border-default, $border-default-medium, $border-default-fat
-// 2. cmg - mixins - .circled1, .circled2, .circled3, .circled-text, .linear-gradient
+// 1. cmt - variables-ext - $border-default, $border-default-medium, $border-default-fat
+// 2. cmt - mixins - .circled1, .circled2, .circled3, .circled-text, .linear-gradient
 $color-secondary: #515151;
 // Secondary Color - Light:
-// 1. cmg - variables-ext - $border-default-l, $border-default-medium-l, $border-default-fat-l
+// 1. cmt - variables-ext - $border-default-l, $border-default-medium-l, $border-default-fat-l
 $color-secondary-l: #515151;
 // Secondary Color - Dark:
-// 1. cmg - variables-ext - $border-default-d, $border-default-medium-d, $border-default-fat-d
+// 1. cmt - variables-ext - $border-default-d, $border-default-medium-d, $border-default-fat-d
 $color-secondary-d: #515151;
 
 // Secondary Text Color:
-// 1. cmg - mixins - .circled-text
+// 1. cmt - mixins - .circled-text
 $color-secondary-text: #98a2ad;
 $color-secondary-text-l: #td;
 $color-secondary-text-d: #td;
@@ -109,7 +109,7 @@ $color-warning: #800020;
 // 1. cmg - basic - .success, .header-success
 $color-success: #a5d75a;
 
-// Standard and Transparent Colors
+// Standard Colors
 $color-white: #ffffff;
 $color-black: #000000;
 
