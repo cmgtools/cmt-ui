@@ -1,19 +1,19 @@
 /**********************************************************************
-Description: It defines the styles for the module components forming the page. We can devide the entire page in one or more modules. 
-Each module can have background image with or without parallax effect, a content wrapper which wraps module header and content.
+Description: It defines the styles for the block components forming the page. We can devide the entire page in one or more blocks. 
+Each block can have background image with or without parallax effect, a content wrapper which wraps block header and content.
 Dependencies: variables, variables-ext, mixins
-Javascript: jquery, cmg-module
+Javascript: jquery, cmt-block
 ***********************************************************************/
 
-// Common for all the modules
-// 1. The Module can have background image with or without parallax effects.
-// 2. The content wrapper wraps the module header and module content. This gives opportunity to set module background and even content wrapper background in the form of image or texture.
-// 3. Module height must not be set using min-height to get background with parallax working.
-.module {
+// Common for all the blocks
+// 1. The block can have background image with or without parallax effects.
+// 2. The content wrapper wraps the block header and block content. This gives opportunity to set block background and even content wrapper background in the form of image or texture.
+// 3. block height must not be set using min-height to get background with parallax working.
+.block {
     position: relative;
 
     // responsive background
-    .module-bkg {
+    .block-bkg {
         @include bkg-image;
         width: 100%;
         height: 100%;
@@ -23,8 +23,8 @@ Javascript: jquery, cmg-module
         z-index: 1;
     }
 
-    // responsive background - full height modules
-    .module-bkg-fixed {
+    // responsive background - full height blocks
+    .block-bkg-fixed {
         @include bkg-image-fixed;
         width: 100%;
         height: 100%;
@@ -34,8 +34,8 @@ Javascript: jquery, cmg-module
         z-index: 1;
     }
 
-    // responsive background - fixed height modules
-    .module-bkg-scroll {
+    // responsive background - fixed height blocks
+    .block-bkg-scroll {
         @include bkg-image-scroll;
         width: 100%;
         height: 100%;
@@ -46,7 +46,7 @@ Javascript: jquery, cmg-module
     }
 
     // responsive background with parallax
-    .module-bkg-parallax {
+    .block-bkg-parallax {
         @include bkg-image;
         width: 100%;
         height: 110%;
@@ -56,23 +56,23 @@ Javascript: jquery, cmg-module
         z-index: 5;
     }
 
-    // Texture on top of module background but under content
+    // Texture on top of block background but under content
     .texture {
         z-index: 10;
     }
 
     // Content Wrapper on top of texture
-    .module-wrap-content {
+    .block-wrap-content {
         position: relative;
         z-index: 15;
 
         // header
-        .module-header {
+        .block-header {
 
         }
 
         // content
-        .module-content {
+        .block-content {
 
             // Default Content Box having title and text content
             .box-content {
@@ -88,7 +88,7 @@ Javascript: jquery, cmg-module
         }
     }
 
-    .module-splitter {
+    .block-splitter {
         position: absolute;
         width: 100%;
         height: 100px;
@@ -113,9 +113,9 @@ Javascript: jquery, cmg-module
     }
 }
 
-// The Basic Module component
-// 1. Basic Module takes 100 % width and height of it's parent. The height in % won't work in case parent's min-height property is set.
-.module-basic {
+// The Basic Block Component
+// 1. Basic Block takes 100 % width and height of it's parent. The height in % won't work in case parent's min-height property is set.
+.block-basic {
     position: relative;
     width: 100%;
     height: 100%;
