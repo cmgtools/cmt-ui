@@ -84,15 +84,15 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 input[type="submit"], input[type="button"], button, select, .btn {
     @extend %input-style;
     @include transit-all( $transit-eio, $transit-time-small );
-    background-color: $color-button;
-    color: $color-button-text;
+    background-color: $color-btn;
+    color: $color-btn-text;
     text-align: center;
     margin: 10px 0;
     cursor: pointer;
 
     &:hover {
-        background-color: $color-button-h;
-        color: $color-button-h-text;
+        background-color: $color-btn-h;
+        color: $color-btn-h-text;
         box-shadow: 0 0 5px $color-shadow-default;
     }
 }

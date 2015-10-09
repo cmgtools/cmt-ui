@@ -1,3 +1,5 @@
+// TODO: use clr for colors and btn for buttons.
+
 // Description: The variables used by CMGTools.
 // Dependency: none
 
@@ -118,15 +120,19 @@ $color-black: #000000;
 $color-field: #e1e1e1;
 $color-field-text: #363636;
 
-// Button Color
+// Regular Buttons
 // 1. cmg - forms - buttons
-$color-button: #363636;
-$color-button-text: #949ea8;
+$color-btn: #363636;
+$color-btn-text: #949ea8;
 
-// Button Hover Color
+// Regular Buttons Hover
 // 1. cmg - forms - buttons
-$color-button-h: #e74343;
-$color-button-h-text: white;
+$color-btn-h: #e74343;
+$color-btn-h-text: white;
+
+// Regular Buttons Disabled
+$color-btn-d: #363636;
+$color-btn-d-text: #949ea8;
 
 // Additional Colors
 $color-header: #363636;
