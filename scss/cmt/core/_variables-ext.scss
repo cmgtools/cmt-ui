@@ -1,6 +1,18 @@
 // Description: The extended variables created using variables used by CMGTools.
 // Dependency: variables
 
+// Transparent Colors
+
+$color-transparent-white: rgba( 255, 255, 255, 0.6 );
+$color-transparent-gray: rgba( 72, 72, 72, 0.6 );
+$color-transparent-gray-l: rgba( 189, 189, 188, 0.6 );
+$color-transparent-gray-d: rgba( 189, 189, 188, 0.6 );
+$color-transparent-black: rgba( 0, 0, 0, 0.6 );
+
+$color-transparent-primary: rgba( 242, 242, 242, 0.6 );
+$color-transparent-secondary: rgba( 81, 81, 81, 0.6 );
+$color-transparent-tertiary: rgba( 54, 54, 54, 0.6 );
+
 // Border Styles
 
 $border-default: 1px solid $color-secondary;
@@ -15,29 +27,13 @@ $border-default-d: 1px solid $color-secondary-d;
 $border-medium-d: 2px solid $color-secondary-d;
 $border-fat-d: 5px solid $color-secondary-d;
 
-// Transparent Colors
-
-$color-transparent-white: rgba( 255, 255, 255, 0.6 );
-$color-transparent-black: rgba( 0, 0, 0, 0.6 );
-
-$color-transparent-gray: rgba( 72, 72, 72, 0.6 );
-$color-transparent-gray-l: rgba( 189, 189, 188, 0.6 );
-
-$color-transparent-primary: rgba( 242, 242, 242, 0.6 );
-$color-transparent-secondary: rgba( 81, 81, 81, 0.6 );
-$color-transparent-tertiary: rgba( 54, 54, 54, 0.6 );
-
 // Shadow Colors
 
-// 1. cmg - forms - field focus and hover
-// 2. mixins - .shadow, .text-shadow
 $color-shadow-default: rgba( 0, 0, 0, 0.2 );
-
 $color-shadow-primary: rgba( 0, 0, 0, 0.2 );
 $color-shadow-secondary: rgba( 0, 0, 0, 0.2 );
 $color-shadow-tertiary: rgba( 0, 0, 0, 0.2 );
 
-// 1. cmg - forms - .error-field
 $color-shadow-error: rgba( 255, 0, 0, 0.2 );
 $color-shadow-warning: rgba( 128, 0, 32, 0.2 );
 $color-shadow-success: rgba( 165, 215, 90, 0.2 );

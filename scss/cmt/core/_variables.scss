@@ -1,0 +1,112 @@
+// Description: The variables used by CMGTools.
+// Dependency: none
+
+// Current Version
+$version: 'alpha';
+
+// Images Path
+$images-path: '../images/';
+
+// Default Fonts
+$font-default: Arial, Helvetica, sans-serif; // Default Font - typography - body
+$font-heading: Verdana, Geneva, sans-serif; // Font for Headers - typography - h1, h2, h3, h4, h5, h6, .default-header
+$font-code: "Courier New", Courier, monospace; // Code Font - typography - pre
+
+// Font Sizing - 1 to 6 are for headers, 7 for (p, a, em), 8 for errors
+$font-size-1: 2.5em;
+$font-size-2: 2.25em;
+$font-size-3: 2.00em;
+$font-size-4: 1.75em;
+$font-size-5: 1.50em;
+$font-size-6: 1.25em;
+$font-size-7: 1em;
+$font-size-8: 0.75em;
+$font-size-9: 0.65em;
+
+// Standard screen sizes - mobile to desktop
+$screen-mobile-small: 320px;
+$screen-mobile-large: 480px;
+$screen-tablet-small: 768px;
+$screen-tablet-large: 1024px;
+$screen-desktop-small: 1280px;
+$screen-desktop-medium: 1360px;
+$screen-desktop-large: 1600px;
+$screen-desktop-xlarge: 1920px;
+
+// Color Factor - We can use it using lighten/darken methods - ex: $color-primary-l: lighten( $color-primary, $color-factor )
+$color-factor: 15;
+
+// Primary Color:
+$color-primary: #f2f2f2;
+$color-primary-l: lighten( $color-primary, $color-factor );
+$color-primary-d: darken( $color-primary, $color-factor );
+
+// Primary Text Color:
+$color-primary-text: #363636;
+$color-primary-text-l: darken( $color-primary-text, $color-factor );
+$color-primary-text-d: lighten( $color-primary-text, $color-factor );
+
+// Secondary Color:
+$color-secondary: #515151;
+$color-secondary-l: lighten( $color-secondary, $color-factor );
+$color-secondary-d: darken( $color-secondary, $color-factor );
+
+// Secondary Text Color:
+$color-secondary-text: #98a2ad;
+$color-secondary-text-l: darken( $color-secondary-text, $color-factor );
+$color-secondary-text-d: lighten( $color-secondary-text, $color-factor );
+
+// Tertiary Color:
+$color-tertiary: #000000;
+$color-tertiary-l: lighten( $color-tertiary, $color-factor );
+$color-tertiary-d: darken( $color-tertiary, $color-factor );
+
+// Tertiary Text Color:
+$color-tertiary-text: #td;
+$color-tertiary-text-l: darken( $color-tertiary-text, $color-factor );
+$color-tertiary-text-d: lighten( $color-tertiary-text, $color-factor );
+
+// Standard Colors
+$color-white: #ffffff;
+$color-gray: #000000;
+$color-gray-l: #000000;
+$color-gray-d: #000000;
+$color-black: #000000;
+
+// Highlighting Colors - errors, warnings and success
+$color-error: #e74343;
+$color-warning: #800020;
+$color-success: #a5d75a;
+
+// Form Fields Color
+$color-field: #e1e1e1;
+$color-field-text: #363636;
+$color-field-h: #e1e1e1;
+$color-field-h-text: #363636;
+$color-field-f: #e1e1e1;
+$color-field-f-text: #363636;
+$color-field-d: #e1e1e1;
+$color-field-d-text: #363636;
+$color-placeholder: #e1e1e1;
+
+// Regular Buttons
+$color-btn: #363636;
+$color-btn-text: #949ea8;
+$color-btn-h: #e74343;
+$color-btn-h-text: white;
+$color-btn-a: #e74343;
+$color-btn-a-text: white;
+$color-btn-d: #363636;
+$color-btn-d-text: #949ea8;
+
+// Additional Colors
+$color-header: #363636;
+$color-social: #a5d75a;
+
+// Radius, Border, Shadow
+$size-default: 1px;
+$size-1x: 2px;
+$size-2x: 4px;
+$size-3x: 8px;
+$size-4x: 10px;
+$size-5x: 12px;

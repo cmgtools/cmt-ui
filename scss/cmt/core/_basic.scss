@@ -3,6 +3,28 @@ Description: The basic styles for CMGTools.
 Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
 
+/*
+Color Palatte:
+1. primary: #{$color-primary}
+2. primary text: #{$color-primary-text}
+3. primary light: #{$color-primary-l}
+4. primary text light: #{$color-primary-text-l}
+5. primary dark: #{$color-primary-d}
+6. primary text dark: #{$color-primary-text-d}
+7. secondary: #{$color-secondary}
+8. secondary text: #{$color-secondary-text}
+9. secondary light: #{$color-secondary-l}
+10. secondary text light: #{$color-secondary-text-l}
+11. secondary dark: #{$color-secondary-d}
+12. secondary text dark: #{$color-secondary-text-d}
+13. tertiary: #{$color-tertiary}
+14. tertiary text: #{$color-tertiary-text}
+15. tertiary light: #{$color-tertiary-l}
+16. tertiary text light: #{$color-tertiary-text-l}
+17. tertiary dark: #{$color-tertiary-d}
+18. tertiary text dark: #{$color-tertiary-text-d}
+ */
+
 // Make all box elements to follow border-box. It gives flexibility to use css width as the element width which includes border and padding. 
 // The remaining space will be used by element content.
 html {
