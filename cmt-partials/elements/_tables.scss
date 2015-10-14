@@ -1,5 +1,5 @@
 /**********************************************************************
-Description: It defines the default table style and data table components available in CMGTools.
+Description: It defines the default table style available in CMGTools.
 Dependencies: variables, mixins
 ***********************************************************************/
 
@@ -18,15 +18,4 @@ th {
 td {
     font-weight: normal; 
     vertical-align: middle;
-}
-
-// Data Table - Regular - Preferred for Admin Panels
-/* The default data table defining styles for action buttons, search box, filters, table header and rows, pagination. */
-.data-table-regular {
-
-}
-
-/* The default responsive data grid defining styles for action buttons, search box, filters, table header and rows, pagination. */
-.data-grid-regular {
-
 }

@@ -247,6 +247,28 @@ Dependencies: variables, variables-ext
     background-size: 100% auto;
 }
 
+// Cover the background keeping perspective in mind
+// Cover the background keeping perspective in mind
+@mixin bkg-image-scroll {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-position: 50% 50%9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+@mixin bkg-image-fixed {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50%9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 // Mixins Default implementation ***********************
 
 // Clearfix
@@ -317,6 +339,18 @@ Dependencies: variables, variables-ext
     @include shadow( 1px, 1px, 5px, $color-shadow-default );
 }
 
+.shadow-primary {
+    @include shadow( 1px, 1px, 5px, $color-shadow-primary );
+}
+
+.shadow-secondary {
+    @include shadow( 1px, 1px, 5px, $color-shadow-secondary );
+}
+
+.shadow-tertiary {
+    @include shadow( 1px, 1px, 5px, $color-shadow-tertiary );
+}
+
 .text-shadow {
     @include text-shadow( 1px, 1px, 5px, $color-shadow-default );
 }
@@ -362,6 +396,14 @@ Dependencies: variables, variables-ext
 
 .bkg-image-fill {
     @include bkg-image-fill;
+}
+
+.bkg-auto {
+    @include bkg-auto;
+}
+
+.bkg-image-fixed {
+    @include bkg-image-fixed;
 }
 
 // Media Queries **************************************

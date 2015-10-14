@@ -21,6 +21,11 @@ body {
     background-color: $color-primary;
 }
 
+// Show global pre-loader if exists
+#pre-loader-main {
+    display: block;  
+}
+
 // Floating Elements
 
 .clear {
@@ -231,4 +236,12 @@ body {
 
 .texture-default {
     background-image: url( $images-path + "texture-default.png" );
+}
+
+.pattern {
+    @extend %textures;
+}
+
+.pattern-default {
+    background-image: url( $images-path + "pattern-default.jpg" );
 }

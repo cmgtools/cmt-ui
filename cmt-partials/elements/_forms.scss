@@ -28,7 +28,7 @@ form {
         padding: 10px;
         position: relative;
     }
-    
+
     @include responsive-max( screen-tablet-large ) {
 
         &.small, &.medium, &.large {
@@ -44,9 +44,9 @@ label {
     border: none;
     box-shadow: none;
     font-size: 1em;
-    margin: 0;
+    margin: 5px 0;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     display: inline-block;
     text-align: left;
 }
@@ -57,9 +57,9 @@ label {
     vertical-align: middle;
     font-size: normal;
     line-height: normal;
-    margin: 0;
+    margin: 5px 0;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     outline: none;
     border: $border-default-d;
     box-shadow: none;
@@ -84,17 +84,17 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 input[type="submit"], input[type="button"], button, select, .btn {
     @extend %input-style;
     @include transit-all( $transit-eio, $transit-time-small );
-    background-color: $color-button;
-    color: $color-button-text;
+    background-color: $color-btn;
+    color: $color-btn-text;
     text-align: center;
     margin: 10px 0;
     cursor: pointer;
-}
 
-input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
-    background-color: $color-button-h;
-    color: $color-button-h-text;
-    box-shadow: 0 0 5px $color-shadow-default;
+    &:hover {
+        background-color: $color-btn-h;
+        color: $color-btn-h-text;
+        box-shadow: 0 0 5px $color-shadow-default;
+    }
 }
 
 .btn {

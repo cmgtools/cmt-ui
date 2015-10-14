@@ -1,5 +1,6 @@
 /* The basic gallery to be used for the default gallery widget from CMSGears core module. We can also use it for any other platform. 
  * The preferred image size for gallery item is 360 x 270. We can maintain the same aspect ratio for larger images for expected results. */
+/*
 .gallery-basic {
     padding: 0 10%;
 
@@ -229,4 +230,93 @@
             }
         }
     }
+}
+*/
+
+.gallery-basic {
+        width:80%;
+        margin:0 10%;
+                
+        .header {
+            background-color: #1E2328;
+            color: #E6E6E6;
+            float:left;
+            width:30%;
+            padding:2em;
+            overflow:hidden;
+        }
+        
+        .items {
+            float: left;
+            width: 70%;
+
+            .flip-container {
+                position: relative;  
+                z-index: 1;
+                width:100%;
+                padding:0 4px 8px;                
+                perspective: 1000;
+            }
+            
+            .flipper {
+              width: 100%;
+              transform-style: preserve-3d;
+              transition: all 0.5s linear;
+            }
+            
+            .flip-container:hover .flipper {
+              transform: rotateY(180deg);  
+            } 
+            .face {
+              width: 100%;
+              backface-visibility: hidden;
+            }
+            .face.back {
+              display: block;
+              transform: rotateY(180deg);
+              box-sizing: border-box;
+              padding: 10px;
+              color: white;
+              text-align: center;
+              background-color: $color-secondary;
+            }
+            .back {
+              position:absolute;
+              top:0;
+              height:100%;
+            }
+        } // items   
+        
+        @include responsive-max( screen-tablet-large ) {
+      
+                width:90%;
+                margin:0 5%;
+                  
+                .header, .items {
+                    width:100%;
+                    margin-bottom:1em;
+                }
+                
+                .colf3 {
+                    width:33.3333%;
+                }                     
+        }
+
+        @include responsive-max( screen-tablet-small ) {
+                                         
+              .colf3 {
+                  width:50%;
+              }
+        }
+
+        @include responsive-max( screen-mobile-large ) {
+       
+              .colf3 {
+                  width:100%;
+                  
+                  .flip-container {
+                      padding:0 0 8px;
+                  }
+              }          
+        }
 }

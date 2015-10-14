@@ -1,0 +1,193 @@
+// The Grid Data acts as wrapper to the data
+.grid-data {
+
+    // Grid Filters
+    .grid-title {
+
+        .title {
+            // grid title
+        }
+
+        .info {
+            // grid info
+        }
+    }
+
+    // Grid Filters
+    .grid-filters {
+        // The grid filters
+    }
+
+    // Grid Header
+    .grid-header {
+        // Grid Header having grid columns, pagination
+    }
+
+    // Grid Content Wrapper
+    .grid-content {
+        // Grid content like grid rows or blocks goes here
+    }
+
+    // Grid Rows
+    .grid-rows {
+        
+        // rows header hidden for mobile
+        .grid-rows-header {
+            display: none;
+            font-weight: bold;
+        }
+
+        .grid-row {
+
+            &:nth-child( even ) {
+                background-color: $color-primary;
+            }
+
+            .grid-row-header {
+                // row title         
+            }
+
+            .grid-row-data {
+                // row data - it can be anything ex: content box
+                span {
+                    display: inline-block;
+                    width: 48%;
+                    padding: 1%;
+                    word-wrap: break-word;
+                }
+            }
+
+            .grid-row-footer {
+                // row title         
+            }
+        }
+        
+        // rows footer hidden for mobile
+        .grid-rows-footer {
+            display: none;
+            font-weight: bold;
+        }
+    }
+
+    // Grid Blocks
+    .grid-blocks {
+        // block - it can be anything ex: content box
+    }
+
+    // Grid Footer
+    .grid-footer {
+        // Grid Footer having grid columns, pagination
+    }
+
+    @include responsive-min( screen-tablet-large ) {
+
+        // Grid Rows
+        .grid-rows {
+
+            .grid-rows-header {
+                display: block;
+            }
+
+            .grid-row {
+
+                .grid-row-data {
+
+                    .title {
+                        display: none;
+                    }
+
+                    span {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+            }
+
+            .grid-rows-footer {
+                display: block;
+            }
+        }
+    }
+}
+
+// Basic Grid
+.grid-basic {
+    background-color: $color-primary-d;
+    padding: 10px;
+
+    // Grid Header
+    .grid-header {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+        padding: 0.25em 10px;
+        text-align: right;
+        min-height: 2em;
+
+        .info {
+            display: inline-block;
+            float: left;
+            padding: 0.25em 0.5em;
+        }
+    }
+
+    // Grid Footer
+    .grid-footer {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+        padding: 0.25em 10px;
+        text-align: right;
+        min-height: 2em;
+
+        .info {
+            display: inline-block;
+            float: left;
+            padding: 0.25em 0.5em;
+        }
+    }
+
+    // Grid Rows
+    .grid-rows {
+        margin: 10px 0;
+    }
+
+    // Avatar in Grid
+    .avatar {
+        width: 48px;
+    }
+
+    // Grid Pagination
+    .pagination {
+
+        &, li {
+            display: inline-block;
+            list-style: none;
+        }
+
+        li {
+            margin: 0 0.5em;
+
+            span, a {
+                display: inline-block;
+                background-color: $color-tertiary;
+                color: $color-golden;
+                @include rounded( 5px );
+                font-size: 1em;
+                padding: 0.25em 0.5em;
+                @include transit-bkg-color( $transit-eio, $transit-time-small );
+                
+                &:hover {
+                    background-color: $color-tertiary-l;
+                    color: $color-tertiary-text-l;
+                }
+            }
+
+            &.disabled, &.disabled:hover {
+                
+                span, a {
+                    background-color: gray;
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
