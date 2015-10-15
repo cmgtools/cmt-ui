@@ -1,6 +1,6 @@
 /**********************************************************************
 Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
-Dependencies: variables, variables-ext
+Dependencies: variables
 ***********************************************************************/
 
 // Clearfix
@@ -19,13 +19,6 @@ Dependencies: variables, variables-ext
     }
 }
 
-// Font Size
-@mixin font-size( $size ) {
-    font-size: $size;
-    -ms-text-size-adjust: $size;
-    -webkit-text-size-adjust: $size;
-}
-
 // Opacity
 @mixin opaque( $value ) {
     zoom: 1;
@@ -34,6 +27,11 @@ Dependencies: variables, variables-ext
     -khtml-opacity: $value;
     filter: alpha( opacity = $value*100 );
     opacity: $value;
+}
+
+// Transparent Background
+@mixin transparentBkg( $color, $alpha: 0.6 ) {
+    background-color: rgba( $color, $alpha );
 }
 
 // Round Corners
@@ -70,6 +68,34 @@ Dependencies: variables, variables-ext
     -webkit-border-radius-top-left: $radius;   -webkit-border-radius-bottom-left: $radius;
     border-radius: $radius 0 0 $radius;
     -khtml-border-radius-top-left: $radius;    -khtml-border-radius-bottom-left: $radius;
+}
+
+@mixin rounded-top-left( $radius ) {
+    -moz-border-radius-top-left: $radius;
+    -webkit-border-radius-top-left: $radius;
+    border-radius: $radius 0 0 0;
+    -khtml-border-radius-top-left: $radius;
+}
+
+@mixin rounded-top-right( $radius ) {
+    -moz-border-radius-top-right: $radius;
+    -webkit-border-radius-top-right: $radius;
+    border-radius: 0 $radius 0 0;
+    -khtml-border-radius-top-right: $radius;
+}
+
+@mixin rounded-bottom-left( $radius ) {
+    -moz-border-radius-bottom-left: $radius;
+    -webkit-border-radius-bottom-left: $radius;
+    border-radius: 0 0 $radius 0;
+    -khtml-border-radius-bottom-left: $radius;
+}
+
+@mixin rounded-bottom-right( $radius ) {
+    -moz-border-radius-bottom-right: $radius;
+    -webkit-border-radius-bottom-right: $radius;
+    border-radius: 0 0 0 $radius;
+    -khtml-border-radius-bottom-right: $radius;
 }
 
 // Circled - Style having border radius 100% and child elements aligned at center position
@@ -134,18 +160,32 @@ Dependencies: variables, variables-ext
 }
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
-@mixin shadow( $x, $y, $blur, $color ) {
-    -webkit-box-shadow: $x $y $blur $color;
-    -moz-box-shadow: $x $y $blur $color;
-    box-shadow: $x $y $blur $color;
+@mixin shadow( $x, $y, $blur, $color, $spread: 0px ) {
+    -webkit-box-shadow: $x $y $blur $spread $color;
+    -moz-box-shadow: $x $y $blur $spread $color;
+    box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
+    -webkit-box-shadow: inset $x $y $blur $spread $color;
+    -moz-box-shadow: inset $x $y $blur $spread $color;
+    box-shadow: inset $x $y $blur $spread $color;
 }
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
-@mixin text-shadow( $x, $y, $blur, $color ) {
-    -webkit-text-shadow: $x $y $blur $color;
-    -moz-text-shadow: $x $y $blur $color;
-    text-shadow: $x $y $blur $color;
+@mixin text-shadow( $x, $y, $blur, $color, $spread: 0px ) {
+    -webkit-text-shadow: $x $y $blur $spread $color;
+    -moz-text-shadow: $x $y $blur $spread $color;
+    text-shadow: $x $y $blur $spread $color;
 }
+
+@mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
+    -webkit-text-shadow: inset $x $y $blur $spread $color;
+    -moz-text-shadow: inset $x $y $blur $spread $color;
+    text-shadow: inset $x $y $blur $spread $color;
+}
+
+// TODO: Add missing gradient mixins
 
 // Linear Gradient - Default - Top to Bottom
 @mixin linear-gradient( $start, $end, $direction: 'bottom' ) {
@@ -199,9 +239,14 @@ Dependencies: variables, variables-ext
       height: 100%;
 }
 
-@mixin max-area-transparent( $r: 0, $g: 0, $b: 0, $a: 0.6 ) {
+@mixin max-area-transparent( $color: $color-black, $alpha: 0.6 ) {
       @include max-area;
-      background-color: rgba( $r, $g, $b, $a );
+      background-color: rgba( $color, $alpha );
+}
+
+@mixin max-area-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: 0.6 ) {
+      @include max-area;
+      background-color: rgba( $r, $g, $b, $alpha );
 }
 
 // Max Area Cover - The element overlays(cover) all other child elements of it's parent unless the other child got greater z-index. 
@@ -247,8 +292,12 @@ Dependencies: variables, variables-ext
     background-size: 100% auto;
 }
 
-// Cover the background keeping perspective in mind
-// Cover the background keeping perspective in mind
+// Cover the background keeping perspective in mind. It need little javascript/jquery code.
+//  jQuery( window ).scroll(function() {
+//    var scrolledY = jQuery( window ).scrollTop();
+//    jQuery( <selector> ).css( 'background-position', 'center ' + ( ( scrolledY ) ) + 'px' );
+//  });
+//
 @mixin bkg-image-scroll {
     background-repeat: no-repeat;
     background-position: top center;
@@ -276,12 +325,6 @@ Dependencies: variables, variables-ext
     @extend %clearfix;
 }
 
-// Font Size
-
-.font-size-100 {
-    @include font-size( 100% );
-}
-
 // Opacity
 
 .opaque-25 {
@@ -296,28 +339,72 @@ Dependencies: variables, variables-ext
     @include opaque( 0.75 );
 }
 
+// Transparent backgrounds
+
+.bkg-transparent-white {
+    @include transparentBkg( $color-transparent-white );
+}
+
+.bkg-transparent-gray {
+    @include transparentBkg( $color-transparent-gray );
+}
+
+.bkg-transparent-black {
+    @include transparentBkg( $color-transparent-black );
+}
+
+.bkg-transparent-primary {
+    @include transparentBkg( $color-transparent-primary );
+}
+
+.bkg-transparent-secondary {
+    @include transparentBkg( $color-transparent-secondary );
+}
+
+.bkg-transparent-tertiary {
+    @include transparentBkg( $color-transparent-tertiary );
+}
+
 // Round Corners
+
 .rounded-all {
-    @include rounded( $radius-default );  
+    @include rounded( $size-default );  
 }
 
 .rounded-top {
-    @include rounded-top( $radius-default );  
+    @include rounded-top( $size-default );  
 }
 
 .rounded-right {
-    @include rounded-right( $radius-default );  
+    @include rounded-right( $size-default );  
 }
 
 .rounded-bottom {
-    @include rounded-bottom( $radius-default );  
+    @include rounded-bottom( $size-default );  
 }
 
 .rounded-left {
-    @include rounded-left( $radius-default );  
+    @include rounded-left( $size-default );  
+}
+
+.rounded-top-left {
+    @include rounded-top-left( $size-default );  
+}
+
+.rounded-top-right {
+    @include rounded-top-right( $size-default );  
+}
+
+.rounded-bottom-left {
+    @include rounded-bottom-left( $size-default );  
+}
+
+.rounded-bottom-right {
+    @include rounded-bottom-right( $size-default );  
 }
 
 // Circled
+
 .circled1 {
     @include circled1( $color-secondary );
 }
@@ -334,30 +421,49 @@ Dependencies: variables, variables-ext
     @include shape-text( $color-secondary, $color-secondary-text );
 }
 
+// TODO: Add inset shadows
+
 // Shadow
 .shadow {
-    @include shadow( 1px, 1px, 5px, $color-shadow-default );
+    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-black, 0.4 ) );
 }
 
 .shadow-primary {
-    @include shadow( 1px, 1px, 5px, $color-shadow-primary );
+    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, 0.4 ) );
 }
 
 .shadow-secondary {
-    @include shadow( 1px, 1px, 5px, $color-shadow-secondary );
+    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, 0.4 ) );
 }
 
 .shadow-tertiary {
-    @include shadow( 1px, 1px, 5px, $color-shadow-tertiary );
+    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, 0.4 ) );
 }
 
 .text-shadow {
-    @include text-shadow( 1px, 1px, 5px, $color-shadow-default );
+    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-black, 0.4 ) );
+}
+
+.text-shadow-primary {
+    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, 0.4 ) );
+}
+
+.text-shadow-secondary {
+    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, 0.4 ) );
+}
+
+.text-shadow-tertiary {
+    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, 0.4 ) );
 }
 
 // Gradients
-.linear-gradient {
+
+.gradient-linear {
     @include linear-gradient( $color-primary, $color-secondary );
+}
+
+.gradient-radial {
+    @include radial-gradient( $color-primary, $color-secondary );
 }
 
 // Alignments
@@ -402,11 +508,17 @@ Dependencies: variables, variables-ext
     @include bkg-auto;
 }
 
+.bkg-image-scroll {
+    @include bkg-image-scroll;
+}
+
 .bkg-image-fixed {
     @include bkg-image-fixed;
 }
 
 // Media Queries **************************************
+
+// Current and Lower
 
 @mixin responsive( $width ) {
   
@@ -467,6 +579,8 @@ Dependencies: variables, variables-ext
     }
  }
 
+// Desktop First
+
 @mixin responsive-max( $width ) {
   
     @if $width == screen-mobile-small {
@@ -525,6 +639,8 @@ Dependencies: variables, variables-ext
         }
     }
 }
+
+// Mobile First
 
 @mixin responsive-min( $width ) {
   

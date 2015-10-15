@@ -2,7 +2,7 @@
 // Dependency: none
 
 // Current Version
-$version: 'alpha';
+$version: '1.0.0-alpha1';
 
 // Images Path
 $images-path: '../images/';
@@ -19,15 +19,19 @@ $font-size-3: 2.00em;
 $font-size-4: 1.75em;
 $font-size-5: 1.50em;
 $font-size-6: 1.25em;
+
 $font-size-7: 1em;
+
 $font-size-8: 0.75em;
 $font-size-9: 0.65em;
 
 // Standard screen sizes - mobile to desktop
 $screen-mobile-small: 320px;
 $screen-mobile-large: 480px;
+
 $screen-tablet-small: 768px;
 $screen-tablet-large: 1024px;
+
 $screen-desktop-small: 1280px;
 $screen-desktop-medium: 1360px;
 $screen-desktop-large: 1600px;
@@ -103,10 +107,9 @@ $color-btn-d-text: #949ea8;
 $color-header: #363636;
 $color-social: #a5d75a;
 
-// Radius, Border, Shadow
+// Standard size for radius, border, shadow
 $size-default: 1px;
-$size-1x: 2px;
-$size-2x: 4px;
-$size-3x: 8px;
-$size-4x: 10px;
-$size-5x: 12px;
+$size-small: 2px;
+$size-medium: 4px;
+$size-large: 8px;
+$size-xlarge: 10px;

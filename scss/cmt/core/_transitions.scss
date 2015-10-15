@@ -112,14 +112,6 @@ $transit-time-big: 450ms;
     transition: width $duration $transit $delay, height $duration $transit $delay;
 }
 
-// Transformations
-
-@mixin transform-rotate( $angle ) {
-  -webkit-transform: rotate( $angle ); 
-      -ms-transform: rotate( $angle ); 
-          transform: rotate( $angle ); 
-}
-
 // Mixins Default implementation ***********************
 
 // All transitions
@@ -171,9 +163,4 @@ $transit-time-big: 450ms;
 
 .transit-width-height {
     @include transit-width-height( $transit-linear, $transit-time-small );
-}
-
-// transformation - rotate
-.transform-rotate {
-    @include transform-rotate( 180deg );
 }

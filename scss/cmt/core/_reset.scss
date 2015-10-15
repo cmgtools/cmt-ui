@@ -2,7 +2,7 @@
 Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com) 
 and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css 
 for CMGTools.
-Dependencies: variables, mixins
+Dependencies: variables
 ***********************************************************************/
 
 // == From Eric Meyer == 
@@ -16,7 +16,7 @@ th, td, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, s
     padding: 0;
     border: 0;
     outline: 0;
-    @include font-size( 100% );
+    font-size: 100%;
     font: inherit;
     vertical-align: middle;
     background: transparent;
@@ -24,9 +24,7 @@ th, td, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, s
 
 // Default font
 html {
-    font-family: $font-default;
     overflow-y: scroll;
-    line-height: 1;
 }
 
 code, kbd, pre, samp {
@@ -206,7 +204,18 @@ textarea {
     vertical-align: top;
 }
 
-// Fix anchor color issue
+// Anchor Fix
+
 a {
+    text-decoration: none;
+    cursor: pointer;
     color: $color-primary-text;
+}
+
+a:focus {
+    outline: none;
+}
+
+a:active, a:hover {
+    outline: 0;
 }
