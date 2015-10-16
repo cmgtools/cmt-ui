@@ -61,10 +61,10 @@ label {
     width: 100%;
     padding: 5px;
     outline: none;
-    border: $border-default-d;
     box-shadow: none;
     font-size: 1em;
     line-height: 1em;
+    @include border-all( 1px, solid, $color-secondary-d );
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
@@ -76,7 +76,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
-    box-shadow: 0 0 5px $color-shadow-default;
+    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparency-low ) );
 }
 
 // Buttons
@@ -93,7 +93,7 @@ input[type="submit"], input[type="button"], button, select, .btn {
     &:hover {
         background-color: $color-btn-h;
         color: $color-btn-h-text;
-        box-shadow: 0 0 5px $color-shadow-default;
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparency-low ) );
     }
 }
 
@@ -144,31 +144,31 @@ input[type="text"], input[type="email"], input[type="password"], textarea, input
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"], 
 .frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
 .frm-rounded-all button, .frm-rounded-all .btn {
-      @include rounded( $radius-default );
+      @include rounded( $size-medium );
 }
 
 .frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"], 
 .frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"],
 .frm-rounded-top button, .frm-rounded-top .btn {
-      @include rounded-top( $radius-default );
+      @include rounded-top( $size-medium );
 }
 
 .frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"], 
 .frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"],
 .frm-rounded-right button, .frm-rounded-right .btn {
-      @include rounded-right( $radius-default );
+      @include rounded-right( $size-medium );
 }
 
 .frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"], 
 .frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"],
 .frm-rounded-bottom button, .frm-rounded-bottom .btn {
-      @include rounded-bottom( $radius-default );
+      @include rounded-bottom( $size-medium );
 }
 
 .frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"], 
 .frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"],
 .frm-rounded-left button, .frm-rounded-left .btn {
-      @include rounded-left( $radius-default );
+      @include rounded-left( $size-medium );
 }
 
 // Iconified Elements
@@ -198,11 +198,11 @@ input[type="text"], input[type="email"], input[type="password"], textarea, input
     &.rounded {
 
         .wrap-icon {
-            @include rounded-left( $radius-default );
+            @include rounded-left( $size-medium );
         }
     
         input[type="text"], input[type="email"], input[type="password"], textarea, input[type="submit"], input[type="button"], button, .btn {
-            @include rounded-right( $radius-default );
+            @include rounded-right( $size-medium );
         }
     }
 }

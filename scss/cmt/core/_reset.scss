@@ -73,7 +73,6 @@ pre {
 hr {
   	display: block; 
   	border: 0;
-  	border-top: $border-default; 
   	margin: 1em 0;
   	padding: 0;
     -moz-box-sizing: content-box;
@@ -97,7 +96,6 @@ svg:not( :root ) {
 }
 
 fieldset {
-    border: $border-default;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
 }

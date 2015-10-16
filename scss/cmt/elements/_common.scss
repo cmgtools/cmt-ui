@@ -1,0 +1,3 @@
+fieldset {
+    @include border-all( 1px, solid, $color-secondary );
+}

@@ -160,6 +160,7 @@ Dependencies: variables
 }
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
+
 @mixin shadow( $x, $y, $blur, $color, $spread: 0px ) {
     -webkit-box-shadow: $x $y $blur $spread $color;
     -moz-box-shadow: $x $y $blur $spread $color;
@@ -173,6 +174,7 @@ Dependencies: variables
 }
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
+
 @mixin text-shadow( $x, $y, $blur, $color, $spread: 0px ) {
     -webkit-text-shadow: $x $y $blur $spread $color;
     -moz-text-shadow: $x $y $blur $spread $color;
@@ -183,6 +185,12 @@ Dependencies: variables
     -webkit-text-shadow: inset $x $y $blur $spread $color;
     -moz-text-shadow: inset $x $y $blur $spread $color;
     text-shadow: inset $x $y $blur $spread $color;
+}
+
+// Borders
+
+@mixin border-all( $width, $style, $color ) {
+    border: $width $style $color;
 }
 
 // TODO: Add missing gradient mixins
@@ -454,6 +462,12 @@ Dependencies: variables
 
 .text-shadow-tertiary {
     @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, 0.4 ) );
+}
+
+// Borders
+
+.border-default {
+    @include border-all( 1px, solid, $color-secondary );
 }
 
 // Gradients

@@ -39,6 +39,9 @@ $screen-desktop-xlarge: 1920px;
 
 // Color Factor - We can use it using lighten/darken methods - ex: $color-primary-l: lighten( $color-primary, $color-factor )
 $color-factor: 15;
+$color-transparency-low: 0.25;
+$color-transparency-medium: 0.50;
+$color-transparency-high: 0.75;
 
 // Primary Color:
 $color-primary: #f2f2f2;
@@ -66,7 +69,7 @@ $color-tertiary-l: lighten( $color-tertiary, $color-factor );
 $color-tertiary-d: darken( $color-tertiary, $color-factor );
 
 // Tertiary Text Color:
-$color-tertiary-text: #td;
+$color-tertiary-text: #ffffff;
 $color-tertiary-text-l: darken( $color-tertiary-text, $color-factor );
 $color-tertiary-text-d: lighten( $color-tertiary-text, $color-factor );
 
