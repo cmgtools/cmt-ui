@@ -1,0 +1,412 @@
+/**********************************************************************
+Description: The basic styles for CMGTools.
+Dependencies: variables
+***********************************************************************/
+
+/** 
+ * Fonts - The font classes default, heading and code can be used for global headers and code font.
+ */
+
+.font {
+
+    &.font-default {
+        font-family: $font-default;
+    }
+
+    &.font-heading {
+        font-family: $font-heading;
+    }
+
+    &.font-code {
+        font-family: $font-code;
+    }
+}
+
+/**
+ * Font Size - The font size for headers h1 to h6, default and small.
+ */
+
+.font-size {
+
+    &.font-size-large-1 {
+        font-size: $font-size-1;
+    }
+
+    &.font-size-large-2 {
+        font-size: $font-size-2;
+    }
+
+    &.font-size-large-3 {
+        font-size: $font-size-3;
+    }
+
+    &.font-size-large-4 {
+        font-size: $font-size-4;
+    }
+
+    &.font-size-large-5 {
+        font-size: $font-size-5;
+    }
+
+    &.font-size-large-6 {
+        font-size: $font-size-6;
+    }
+
+    &.font-size-default {
+        font-size: $font-size-7;
+    }
+
+    &.font-size-small {
+        font-size: $font-size-8;
+    }
+
+    &.font-size-tiny {
+        font-size: $font-size-9;
+    }
+}
+
+/**
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive. 
+ * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
+ */
+
+.screen {
+
+    &.screen-mobile-small {
+        width: $screen-mobile-small;
+    }
+
+    &.screen-mobile-large {
+        width: $screen-mobile-large;
+    }
+
+    &.screen-tablet-small {
+        width: $screen-tablet-small;
+    }
+
+    &.screen-tablet-large {
+        width: $screen-tablet-large;
+    }
+
+    &.screen-desktop-small {
+        width: $screen-desktop-small;
+    }
+
+    &.screen-desktop-medium {
+        width: $screen-desktop-medium;
+    }
+
+    &.screen-desktop-large {
+        width: $screen-desktop-large;
+    }
+
+    &.screen-desktop-xlarge {
+        width: $screen-desktop-xlarge;
+    }
+}
+
+/**
+ * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in 
+ * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating 
+ * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
+ */ 
+
+.color {
+
+/**
+ * Color Palatte:
+ * 1. primary: #{$color-primary}
+ * 2. primary text: #{$color-primary-text}
+ * 3. primary light: #{$color-primary-l}
+ * 4. primary text light: #{$color-primary-text-l}
+ * 5. primary dark: #{$color-primary-d}
+ * 6. primary text dark: #{$color-primary-text-d}
+ * 7. secondary: #{$color-secondary}
+ * 8. secondary text: #{$color-secondary-text}
+ * 9. secondary light: #{$color-secondary-l}
+ * 10. secondary text light: #{$color-secondary-text-l}
+ * 11. secondary dark: #{$color-secondary-d}
+ * 12. secondary text dark: #{$color-secondary-text-d}
+ * 13. tertiary: #{$color-tertiary}
+ * 14. tertiary text: #{$color-tertiary-text}
+ * 15. tertiary light: #{$color-tertiary-l}
+ * 16. tertiary text light: #{$color-tertiary-text-l}
+ * 17. tertiary dark: #{$color-tertiary-d}
+ * 18. tertiary text dark: #{$color-tertiary-text-d}
+ */
+
+    &.color-primary {
+        background-color: $color-primary;
+        color: $color-primary-text;
+    }
+
+    &.color-primary-l {
+        background-color: $color-primary-l;
+        color: $color-primary-text-l;
+    }
+
+    &.color-primary-d {
+        background-color: $color-primary-d;
+        color: $color-primary-text-d;
+    }
+
+    &.color-secondary {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+    }
+
+    &.color-secondary-l {
+        background-color: $color-secondary-l;
+        color: $color-secondary-text-l;
+    }
+
+    &.color-secondary-d {
+        background-color: $color-secondary-d;
+        color: $color-secondary-text-d;
+    }
+
+    &.color-tertiary {
+        background-color: $color-tertiary;
+        color: $color-tertiary-text;
+    }
+
+    &.color-tertiary-l {
+        background-color: $color-tertiary-l;
+        color: $color-tertiary-text-l;
+    }
+
+    &.color-tertiary-d {
+        background-color: $color-tertiary-d;
+        color: $color-tertiary-text-d;
+    }
+}
+
+/**
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
+ * padding. The remaining space deducting border and padding from given width will be used by element content.
+ */
+
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/** 
+ * The primary color will be used as default color for document body and text.
+ */
+
+body {
+    background-color: $color-primary;
+    color: $color-primary-text;
+}
+
+.margin-none {
+    margin: 0;
+}
+
+.padding-none {    
+    padding: 0;
+}
+
+.mp-none {
+    margin: 0;
+    padding: 0;
+}
+
+/** 
+ * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
+ */
+
+#pre-loader-main {
+    display: block;  
+}
+
+/** 
+ * Floating - These classes can be used to clear or float the elements.
+ */
+
+.clear {
+    clear: both !important;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.float-none {
+    float: none !important;
+}
+
+.float-none-center {
+    float: none !important;
+    margin: 0 auto;
+}
+
+/** 
+ * Pre-defined width and height, handy at few places.
+ */
+
+// Width
+
+.width {
+
+    &.width-auto {
+        width: auto;
+    }
+    
+    &.width-25 {
+        width: 25%;
+    }
+    
+    &.width-50 {
+        width: 50%;
+    }
+    
+    &.width-75 {
+        width: 75%;
+    }
+
+    &.width-80 {
+        width: 80%;
+    }
+
+    &.width-100 {
+        width: 100%;
+    }
+}
+
+// Height
+
+.height {
+
+    &.height-auto {
+        height: auto;
+    }
+    
+    &.height-25 {
+        height: 25%;
+    }
+    
+    &.height-50 {
+        height: 50%;
+    }
+    
+    &.height-75 {
+        height: 75%;
+    }
+    
+    &.height-100 {
+        height: 100%;
+    }
+}
+
+/** 
+ * Alignments for centered box and text.
+ */
+
+.align {
+
+    &.align-center {
+        margin-left: 0 auto !important;
+        margin-right: 0 auto !important;
+    }
+
+    &.align-left {
+        text-align: left !important;
+    }
+
+    &.align-middle {
+        text-align: center !important;
+    }
+
+    &.align-right {
+        text-align: right !important;
+    }
+}
+
+/** 
+ * Height fillers to seperate boxes.
+ */
+
+.filler-height {
+
+    &.filler-height-default {
+        height: 1em;
+    }
+
+    &.filler-height-small {
+        height: 1.5em;
+    }
+
+    &.filler-height-medium {
+        height: 2em;
+    }
+
+    &.filler-height-large {
+        height: 2.5em;
+    }
+}
+
+// Visibility - Without own space
+
+.visible {
+    display:block;
+}
+
+.hidden {
+    display:none;
+}
+
+// Visibility - Hidden/Displayed occupying space on screen
+
+.visible-space {
+    visibility: visible;
+}
+
+.hidden-space {
+    visibility: hidden;
+}
+
+// Fluid Elements (blocks, images)
+
+.fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+// Messages - Most probably used for form and ajax processing
+
+.warning, .error, .success {
+    display: inline-block;
+    width: 100%;
+    font-size: $font-size-8;
+}
+
+.error {
+    color: $color-error;
+}
+
+.warning {
+    color: $color-warning;
+}
+
+.success {
+    color: $color-success;
+}
+
+// Required for Yii Forms
+.error-field {
+    @include border-all( $size-default, solid, $color-error );
+    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparency-low ) );
+}
