@@ -1,0 +1,241 @@
+<html>
+	<head>
+		<title> Template </title>
+		<link rel="cmti" type="images/x-cmti" href="../assets/images/favcmti.ico"/>
+    	<link rel="shortcut cmti" type="images/x-cmti" href="../assets/images/favcmti.ico">
+
+		<link type="text/css" rel="stylesheet" href="../assets/styles/cmti.css">
+		<link type="text/css" rel="stylesheet" href="styles/elements.css">
+
+		<script type="text/javascript"  src="scripts/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript"  src="scripts/jquery-ui-1.11.4.min.js"></script>
+
+		<script type="text/javascript"  src="../../../cmt-js/src/ui-elements/cmt-select.js"></script>
+
+		<script type="text/javascript"  src="scripts/main.js"></script>
+	</head>
+	<body>
+				
+		<div class="header">
+			<img src="../assets/images/logo.png" />	
+		</div>
+		
+		<h2 class="padding-none align align-middle"> UI ELEMENTS</h2>
+		
+		<!-- INPUT BOX -->
+		<div class="row row-large">
+			<form>
+				<fieldset>
+				    <legend>Input</legend>
+				    
+				    <div class="row">
+				    	<div class="colf12x6">
+							<h6>Normal and Hover</h6>
+						</div>
+					    <div class="colf12x6">
+								<input type="text" name="email" placeholder="Your Email">
+						</div>
+				    </div>
+				    
+					
+					<div class="row">
+						<div class="colf12x6">
+							<h6>Focus</h6>
+						</div>
+					    <div class="colf12x6">
+								<input type="text" onblur="this.focus()" autofocus name="email" placeholder="Your Email">
+						</div>						
+					</div>
+					
+					<div class="row">
+						<div class="colf12x6">
+							<h6>Icon Field</h6>
+						</div>
+							
+						<div class="colf12x6">
+							<div class="frm-icon-field">
+								<span class="wrap-icon cmti cmti-user"></span>
+								<input type="text" placeholder="Name *" name="Contact[name]">
+							</div>	
+						</div>					
+						
+					</div>						
+					
+				</fieldset>
+			</form>				
+		</div>
+		
+		<!-- SELECT BOX -->
+		<div class="row row-large">
+			<form>
+				<fieldset>
+				    <legend>Select Box</legend>
+				    <div class="colf12x6">
+						<h6>Your Country</h6>
+					</div>
+				    <div class="colf12x6">
+						<select class="ca-select" name="Address[provinceId]">
+											<option value="576">Alberta</option>
+											<option value="577">British Columbia</option>
+											<option value="578">Manitoba</option>
+											<option value="579">New Brunswick</option>
+											<option value="580">Newfoundland and Labrador</option>
+											<option value="581">Northwest Territories</option>
+											<option>Nova Scotia</option>
+											<option>Nunavut</option>
+											<option>Ontario</option>
+											<option>Prince Edward Island</option>
+											<option>Quebec</option>
+											<option>Saskatchewan</option>
+											<option>Yukon Territory</option>																
+						</select>
+					</div>
+				</fieldset>
+			</form>				
+		</div>
+
+		<!-- Search Box -->
+		<div class="row row-large">
+			<form>
+				<fieldset>
+				    <legend>Search Box</legend>
+				     <div class="row">
+				    	<div class="colf12x6">
+							<h6>Search</h6>							
+						</div>
+					    <div class="colf12x6">								
+							<form id="search-field" style="display: block;">
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<input type="text" placeholder="Search">
+											</td>
+											<td class="button">
+												<button type="submit">SEARCH</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</form>				
+						</div>
+					</div>							
+				</fieldset>
+			</form>				
+		</div>
+		
+		<!-- BUTTON -->
+		<div class="row row-large">
+			<form>
+				<fieldset>
+				    <legend>Regular Buttons</legend>
+				     <div class="row">
+				    	<div class="colf12x6">
+							<h6>Normal, Hover and Active</h6>							
+						</div>
+					    <div class="colf12x6">								
+							<form>
+								<ul>
+									<li>
+										<button class="medium" type="submit">SUBMIT</button>
+									</li>								
+								</ul>
+							</form>
+						</div>
+					</div>
+					<div class="row">
+				    	<div class="colf12x6">							
+							<h6>Disable</h6>
+						</div>
+					    <div class="colf12x6">								
+							<form>
+								<ul>																	
+									<li>
+										<button class="medium" type="submit" disabled>DISABLE</button>
+									</li>									
+								</ul>
+							</form>
+						</div>
+					</div>		
+				</fieldset>
+			</form>				
+		</div>	
+				
+		<!-- RADIO BUTTON -->
+		<div class="row row-large">
+			<form>
+				<fieldset>
+				    <legend>Radio Buttons</legend>
+				    <div class="colf12x6">
+						<h6>Your Mood</h6>
+					</div>
+				    <div class="colf12x6">
+						<div class="cmt-radios">					
+							<form>
+								<ul>
+									<li>
+										<label>
+											<input type="radio" name="radio" />
+											<span class="label pad-label">First option</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="radio" name="radio" />
+											<span class="label pad-label">Second option</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="radio" name="radio" disabled />
+											<span class="label pad-label">Disabled Radio button</span>
+										</label>
+									</li>
+								</ul>
+							</form>			
+						</div>
+					</div>
+				</fieldset>
+			</form>				
+		</div>			
+		
+		<!-- CheckBox BUTTON -->
+		<div class="row row-large">
+			<form>
+				<fieldset>
+				    <legend>CheckBox Buttons</legend>
+				    <div class="colf12x6">
+						<h6>Your Hobby</h6>
+					</div>
+				    <div class="colf12x6">
+						<div class="cmt-radios">					
+							<form>
+								<ul>
+									<li>
+										<label>
+											<input type="checkbox" />
+											<span class="label pad-label">First checkbox</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" />
+											<span class="label pad-label">Second checkbox</span>
+										</label>
+									</li>
+									<li>
+										<label>
+											<input type="checkbox" disabled />
+											<span class="label pad-label">Disabled Chekcbox</span>
+										</label>
+									</li>									
+								</ul>
+							</form>			
+						</div>
+					</div>
+				</fieldset>
+			</form>				
+		</div>
+								
+	</body>		
+</html>	

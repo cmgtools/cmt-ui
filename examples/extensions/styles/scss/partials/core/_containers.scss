@@ -1,0 +1,11 @@
+.row {
+  
+    &.row-large {
+        margin:0 auto;
+        padding:0.5em 0;
+        
+        .colf12x6 {
+            padding:1em 2em;
+        }
+    }
+}

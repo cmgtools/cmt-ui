@@ -15,6 +15,7 @@ Dependencies: variables, mixins, transitions, transformation
         top: 0;
         left: 0;
         width: 100%;
+        background-color:$color-field;
         
         // Default icon having width 32px. It can be changed based on icon dimensions.
         .cmt-selected {
@@ -29,6 +30,7 @@ Dependencies: variables, mixins, transitions, transformation
                 overflow: hidden;
                 text-align: left;
                 padding: 12px;
+                color:$color-field-text;
             }
 
             .s-icon {
@@ -47,8 +49,8 @@ Dependencies: variables, mixins, transitions, transformation
         .cmt-select-list {
             position: relative;
             z-index: 100001;
-            max-height: 175px;
-            overflow-y: auto;
+            max-height: 180px;
+            overflow-y: auto;            
 
             li {
                 width: 100%;
@@ -65,14 +67,115 @@ Dependencies: variables, mixins, transitions, transformation
 
 .cmt-select-wrap, .cmt-select, .cmt-selected, .s-text {
     letter-spacing: 1px;
-    color: $color-secondary-text;
     font-weight:500 !important        
 }
 
 .cmt-select-list li {
     padding:10px;
-    background-color: $color-tertiary-l !important;
+    background-color: $color-white;     
 }    
 .cmt-select-list li:hover {
-    background-color: $color-primary !important;
+    color:$color-btn-a-text;
+    background-color: $color-btn;
 }
+
+
+//radio
+.cmt-radios{  
+    
+    label {
+        cursor: pointer;
+        display: inline;
+        font-size: 1em;
+        line-height: 2.5;
+        margin-right:2em;
+        
+        input[type=checkbox],input[type=radio] {
+              display:none;
+          //  display:inline-block;
+          //  position:absolute;
+          //  z-index:12;
+          //  width:18px;
+          //  height:18px;
+          }
+          
+          
+          
+          // input[type=checkbox]+.label,input[type=radio]+.label {
+          //  position:relative;
+          //  z-index:11;
+          //  display:inline-block;
+          //  margin:0;
+          //  line-height:20px;
+          //  min-height:14px;
+          //  min-width:14px;
+          //  font-weight:normal;
+          //} 
+          
+          input[type=checkbox]+.label.pad-label::before,input[type=radio]+.label.pad-label::before {
+            margin-right:8px;
+          }
+          
+          
+          input[type=radio]+.label::before, input[type=checkbox]+.label::before { 
+            font-family:"cmti-core";
+            font-weight:normal;
+            color:gray; 
+            border-radius:16px;
+            display:inline-block;
+            vertical-align:middle;
+            margin-top: -5px;
+            line-height:13px;
+          //  font-size:16px;  
+          //  text-align:center;  
+          //  height:13px;  
+          //  min-width:13px;
+          //  margin-right:1px;
+            
+          }
+          
+          input[type=checkbox]:checked,input[type=radio]:checked,input[type=checkbox]:focus,input[type=radio]:focus {
+            outline:none !important;
+          }
+          
+          input[type=checkbox]:checked+.label::before,input[type=radio]:checked+.label::before {
+            display:inline-block;
+            content:'\e046';
+            background-color:#F5F8FC;
+            color:$color-btn; 
+          }
+          
+          input[type=checkbox]:checked+.label,input[type=radio]:checked+.label {
+            color:$color-btn-a;
+          }  
+          
+          input[type=checkbox]:hover+.label::before,input[type=radio]:hover+.label::before,input[type=checkbox]+.label:hover::before,input[type=radio]+.label:hover::before {
+            color:$color-btn-h;
+          }
+          
+          input[type=checkbox]:disabled+.label::before,input[type=radio]:disabled+.label::before {
+            background-color:#DDD !important;  
+            color:#BBB;  
+          }
+          
+          input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
+            content:"\e045";
+          }
+          
+          input[type=radio]:checked+.label::before {
+            content:"\e046";
+          }
+          
+          input[type=checkbox]+.label::before, input[type=checkbox]:disabled+.label::before {
+            content:"V";
+          }
+          
+          input[type=checkbox]:checked+.label::before {
+            content:"g";
+          }        
+    }        
+}
+
+
+
+

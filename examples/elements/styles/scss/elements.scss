@@ -1,0 +1,36 @@
+// =================== CMGTools ======================= //
+
+// Core - Required
+
+@import "cmt/core/variables";
+
+/*! CMGTools - The advanced css framework following component approach.
+ * Version - #{$version}
+ * License - GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ * Copyright © 2015 by VulpineCode Technologies Private Limited (http://www.vulpinecode.com) All rights reserved.
+ */
+
+@import "partials/core/fonts";
+@import "cmt/core/variables-ext";
+
+@import "cmt/core/mixins";
+@import "cmt/core/transitions";
+@import "cmt/core/transformations";
+
+@import "cmt/core/reset";
+@import "cmt/core/basic";
+@import "cmt/core/typography";
+@import "cmt/core/containers";
+
+@import "partials/core/containers";
+@import "partials/core/basic";
+
+// Theming Elements - Optional - need cmt-iconlib for custom elements
+
+@import "cmt/elements/common";
+@import "cmt/elements/form";
+@import "cmt/elements/table";
+@import "cmt/elements/custom";
+@import "cmt/extensions/jquery-datepicker";
+
+@import "partials/elements/form";

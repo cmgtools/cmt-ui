@@ -5,30 +5,37 @@ Dependencies: variables, mixins
 
 .ui-datepicker {
     position: relative;
+    width:300px;
+    background-color:$color-white;
+    padding:5px;
+    display:none; 
+    @include shadow-inset( 0, 0, 0, $color-tertiary-l, $spread: 1px );   
 }
 
 .ui-datepicker-header {
     @extend %clearfix;
-    background-color: $color-secondary;
-    color: $color-secondary-text;
+    background-color: $color-tertiary;    
     text-align: center;
 }
 
 .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-title {
     display: inline-block;
-    margin: 1em;
+    padding: 1em;
+    color: $color-tertiary-text;
 }
+
+
 
 .ui-datepicker-prev {
     float: left;
 }
 
-.ui-datepicker-next {
+.ui-datepicker-next { 
     float: right;
 }
 
 .ui-datepicker-prev-hover, .ui-datepicker-next-hover {
-    color: $color-primary;
+    background-color: $color-tertiary-d;
 }
 
 .ui-datepicker-title {
@@ -36,12 +43,13 @@ Dependencies: variables, mixins
 }
 
 .ui-datepicker-calendar {
-    background: $color-tertiary;
+    background: $color-white;
     color: $color-secondary;
     width: 100%;
 
     th {
         padding: 1em 0.25em;
+        color:$color-tertiary-text-l;
     }
 
     td {
@@ -53,20 +61,20 @@ Dependencies: variables, mixins
         span, a {
             display: inline-block;
             width: 90%;
-            margin: 5px 5%;
+            margin: 5%;
         }
 
-        a {
-            background-color: gray;
-            color: white;
-            @include transit-bkg-color( $transit-eio, $transit-time-medium );
-            
+        a {               
+            color: $color-tertiary-text-l;
+                       
             &:hover {
-                background-color: $color-secondary;
+                background-color: $color-tertiary;
+                color: $color-tertiary-text;                
             }
 
             &.ui-state-active {
-                background-color: $color-secondary;
+                background-color: $color-tertiary-d;
+                color: $color-tertiary-text;                
             }
         }
     }

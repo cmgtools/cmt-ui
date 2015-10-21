@@ -64,14 +64,14 @@ $color-secondary-text-l: darken( $color-secondary-text, $color-factor );
 $color-secondary-text-d: lighten( $color-secondary-text, $color-factor );
 
 // Tertiary Color:
-$color-tertiary: #000000;
+$color-tertiary: #CDA828;
 $color-tertiary-l: lighten( $color-tertiary, $color-factor );
 $color-tertiary-d: darken( $color-tertiary, $color-factor );
 
 // Tertiary Text Color:
 $color-tertiary-text: #ffffff;
-$color-tertiary-text-l: darken( $color-tertiary-text, $color-factor );
-$color-tertiary-text-d: lighten( $color-tertiary-text, $color-factor );
+$color-tertiary-text-l: darken( $color-tertiary, $color-factor );
+$color-tertiary-text-d: lighten( $color-tertiary-l, $color-factor );
 
 // Standard Colors
 $color-white: #ffffff;
@@ -88,23 +88,23 @@ $color-success: #a5d75a;
 // Form Fields Color
 $color-field: #e1e1e1;
 $color-field-text: #363636;
-$color-field-h: #e1e1e1;
+$color-field-h: #e9e9e9;
 $color-field-h-text: #363636;
-$color-field-f: #e1e1e1;
+$color-field-f: #e74343;
 $color-field-f-text: #363636;
 $color-field-d: #e1e1e1;
-$color-field-d-text: #363636;
-$color-placeholder: #e1e1e1;
+$color-field-d-text: #464646;
+$color-placeholder: #aaaaaa;
 
 // Regular Buttons
-$color-btn: #363636;
-$color-btn-text: #949ea8;
-$color-btn-h: #e74343;
+$color-btn: #e74343;
+$color-btn-text: #FFFFFF;
+$color-btn-h: #ff5555;
 $color-btn-h-text: white;
-$color-btn-a: #e74343;
+$color-btn-a: #b51717;
 $color-btn-a-text: white;
-$color-btn-d: #363636;
-$color-btn-d-text: #949ea8;
+$color-btn-d: gray;
+$color-btn-d-text: #363636;
 
 // Additional Colors
 $color-header: #363636;

@@ -1,3 +1,19 @@
+/**********************************************************************
+
+Dependencies: variables, mixins
+***********************************************************************/
 fieldset {
     @include border-all( 1px, solid, $color-secondary );
+    
+    & legend {        
+        background-color:$color-secondary;
+        color:$color-white;
+        padding:0.5em;
+        @include rounded( 1em );
+        
+    }
+}
+
+optgroup {
+    font-style: italic;
 }
