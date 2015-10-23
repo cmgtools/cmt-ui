@@ -168,15 +168,24 @@ input[type="text"], input[type="email"], input[type="password"], textarea, input
 
 // Splitted forms
 
-.frm-split-40-60 label {
+.frm-split-40-60 label, .element-40 {
     width: 40%;
     float: left;
 }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"], 
-.frm-split-40-60 textarea, .frm-split-40-60 select {
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60 {
     width: 60%;
     float: left;
+}  
+
+.element-40 label {     
+    width: 100%;  
+}
+
+.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"], 
+.element-60 textarea, .element-60 select  {
+    width: 100%;
 }
 
 // Round cornered elements
