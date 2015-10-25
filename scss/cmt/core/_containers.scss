@@ -169,9 +169,9 @@ Dependencies: variables, mixins
 
     .max-cols-100 {
 
-        .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, 
-        .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11,
-        .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 { 
+        & >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5, 
+        & >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
+        & >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 { 
             width: 98%;
         }
     }
@@ -181,9 +181,9 @@ Dependencies: variables, mixins
     
     .max-cols, .max-cols-100 {
 
-        .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, 
-        .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11,
-        .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 { 
+        & >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5, 
+        & >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
+        & >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 { 
             width: 98%;
         }
     }
@@ -309,12 +309,12 @@ Dependencies: variables, mixins
             }
         }
     }
+    
+    .max-cols, .max-cols-100 {
 
-    .max-cols-100 {
-
-        .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5, 
-        .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11,
-        .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 {
+        & >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5, 
+        & >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
+        & >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
             width: 100%;
         }
     }
@@ -322,11 +322,11 @@ Dependencies: variables, mixins
 
 @media only screen and ( max-width: $screen-mobile-large ) {
 
-    .max-cols, .max-cols-100 {
+    .max-cols-100 {
 
-        .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5, 
-        .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11,
-        .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 { 
+        & >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5, 
+        & >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
+        & >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
             width: 100%;
         }
     }

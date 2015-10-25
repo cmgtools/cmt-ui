@@ -15,7 +15,7 @@ $transit-eo: ease-out;
 // Transition period
 $transit-time-small: 250ms;
 $transit-time-medium: 350ms;
-$transit-time-big: 450ms;
+$transit-time-big: 450ms; 
 
 // All transitions
 @mixin transit-all( $transit, $duration, $delay: 0s ) {
