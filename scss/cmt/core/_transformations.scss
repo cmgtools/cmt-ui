@@ -1,15 +1,56 @@
 /**********************************************************************
-Description: The translation effects available in CMGTools.
+Description: The transformation effects available in CMGTools.
 Dependencies: none
 ***********************************************************************/
 
-@mixin transform-rotate( $angle ) {
+@mixin transform-rotate( $degrees, $angle ) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=#{ $angle } );
   -webkit-transform: rotate( $angle ); 
       -ms-transform: rotate( $angle ); 
           transform: rotate( $angle ); 
 }
 
-// transformation - rotate
-.transform-rotate {
-    @include transform-rotate( 180deg );
+@mixin transform-flip( $horizontal, $vertical, $angle ) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=#{ $angle } );
+  -webkit-transform: scale( $horizontal, $vertical );
+      -ms-transform: scale( $horizontal, $vertical );
+          transform: scale( $horizontal, $vertical );
+}
+
+// Default Implementation
+
+.rotate-45 {
+    @include transform-rotate( 45deg, 0.5 );
+}
+
+.rotate-90 {
+    @include transform-rotate( 90deg, 1 );
+}
+
+.rotate-135 {
+    @include transform-rotate( 135deg, 1.5 );
+}
+
+.rotate-180 {
+    @include transform-rotate( 180deg, 2 );
+}
+
+.rotate-225 {
+    @include transform-rotate( 225deg, 2.5 );
+}
+
+.rotate-270 {
+    @include transform-rotate( 270deg, 3 );
+}
+
+.rotate-315 {
+    @include transform-rotate( 315deg, 3.5 );
+}
+
+.flip-horizontal {
+     @include transform-flip( -1, 1, 0 );
+}
+
+.flip-vertical {
+    @include transform-flip( 1, -1, 2 );
 }

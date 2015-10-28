@@ -407,6 +407,6 @@ body {
 
 // Required for Yii Forms
 .error-field {
-    @include border-all( $size-default, solid, $color-error );
+    @include border( $size-default, solid, $color-error );
     @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparency-low ) );
 }

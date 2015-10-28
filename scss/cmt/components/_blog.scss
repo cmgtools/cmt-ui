@@ -8,7 +8,7 @@ Dependencies: variables, mixins
 
     .post {
         margin: 10px 0;
-        border: $border-default;
+        @include border( $size-default, solid, $color-secondary );
         background-color: $color-primary;
     }
 
@@ -23,7 +23,7 @@ Dependencies: variables, mixins
         display: inline-block;
 
         &.full {
-            width: 100%;          
+            width: 100%;
         }
 
         .post-header {

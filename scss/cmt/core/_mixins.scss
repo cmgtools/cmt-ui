@@ -189,8 +189,24 @@ Dependencies: variables
 
 // Borders
 
-@mixin border-all( $width, $style, $color ) {
+@mixin border( $width, $style, $color ) {
     border: $width $style $color;
+}
+
+@mixin border-top( $width, $style, $color ) {
+    border-top: $width $style $color;
+}
+
+@mixin border-right( $width, $style, $color ) {
+    border-right: $width $style $color;
+}
+
+@mixin border-bottom( $width, $style, $color ) {
+    border-bottom: $width $style $color;
+}
+
+@mixin border-left( $width, $style, $color ) {
+    border-left: $width $style $color;
 }
 
 // TODO: Add missing gradient mixins
@@ -326,6 +342,17 @@ Dependencies: variables
     background-attachment: fixed;
 }
 
+// Textures
+
+%textures {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include bkg-tile;
+}
+
 // Mixins Default implementation ***********************
 
 // Clearfix
@@ -375,8 +402,16 @@ Dependencies: variables
 
 // Round Corners
 
-.rounded-all {
+.rounded {
     @include rounded( $size-default );  
+}
+
+.rounded-medium {
+    @include rounded( $size-medium );  
+}
+
+.rounded-large {
+    @include rounded( $size-large );  
 }
 
 .rounded-top {
@@ -467,7 +502,23 @@ Dependencies: variables
 // Borders
 
 .border-default {
-    @include border-all( 1px, solid, $color-secondary );
+    @include border( $size-default, solid, $color-secondary );
+}
+
+.border-default-top {
+    @include border-top( $size-default, solid, $color-secondary );
+}
+
+.border-default-right {
+    @include border-right( $size-default, solid, $color-secondary );
+}
+
+.border-default-bottom {
+    @include border-bottom( $size-default, solid, $color-secondary );
+}
+
+.border-default-left {
+    @include border-left( $size-default, solid, $color-secondary );
 }
 
 // Gradients
@@ -528,6 +579,24 @@ Dependencies: variables
 
 .bkg-image-fixed {
     @include bkg-image-fixed;
+}
+
+// Default Texture
+
+.texture {
+    @extend %textures;
+}
+
+.texture-default {
+    background-image: url( $images-path + "texture-default.png" );
+}
+
+.pattern {
+    @extend %textures;
+}
+
+.pattern-default {
+    background-image: url( $images-path + "pattern-default.jpg" );
 }
 
 // Media Queries **************************************
