@@ -3,7 +3,7 @@
 Dependencies: variables, mixins
 ***********************************************************************/
 fieldset {
-    @include border-all( 1px, solid, $color-secondary );
+    @include border( 1px, solid, $color-secondary );
     
     & legend {        
         background-color:$color-secondary;

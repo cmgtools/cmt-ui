@@ -1,0 +1,19 @@
+// =================== CMGTools ======================= //
+
+// Core - Required
+
+@import "cmt/core/variables";
+@import "cmt/core/variables-ext";
+
+/*! CMGTools - The advanced css framework following component approach.
+ * Version - #{$version}
+ * License - GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ * Copyright © 2015 by VulpineCode Technologies Private Limited (http://www.vulpinecode.com) All rights reserved.
+ */
+
+@import "cmt/core/mixins";
+@import "cmt/components/blocks";
+// Theming Elements - Optional - need cmt-iconlib for custom elements
+
+@import "partials/basic"
+// CMGTools Components - Optional

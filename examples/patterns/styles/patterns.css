@@ -1,0 +1,563 @@
+@charset "UTF-8";
+/*! CMGTools - The advanced css framework following component approach.
+ * Version - 1.0.0-alpha1
+ * License - GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ * Copyright ┬⌐ 2015 by VulpineCode Technologies Private Limited (http://www.vulpinecode.com) All rights reserved.
+ */
+/**********************************************************************
+Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
+Dependencies: variables
+***********************************************************************/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.texture, .pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: repeat;
+}
+
+.opaque-25 {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = 25 )";
+  -moz-opacity: 0.25;
+  -khtml-opacity: 0.25;
+  filter: alpha(opacity=25);
+  opacity: 0.25;
+}
+
+.opaque-50 {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = 50 )";
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.opaque-75 {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = 75 )";
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+}
+
+.bkg-transparent-white {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.bkg-transparent-gray {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bkg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bkg-transparent-primary {
+  background-color: rgba(242, 242, 242, 0.6);
+}
+
+.bkg-transparent-secondary {
+  background-color: rgba(81, 81, 81, 0.6);
+}
+
+.bkg-transparent-tertiary {
+  background-color: rgba(205, 168, 40, 0.6);
+}
+
+.rounded {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -khtml-border-radius: 1px;
+}
+
+.rounded-medium {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -khtml-border-radius: 4px;
+}
+
+.rounded-large {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -khtml-border-radius: 8px;
+}
+
+.rounded-top {
+  -moz-border-radius-top-left: 1px;
+  -moz-border-radius-top-right: 1px;
+  -webkit-border-radius-top-left: 1px;
+  -webkit-border-radius-top-right: 1px;
+  border-radius: 1px 1px 0 0;
+  -khtml-border-radius-top-left: 1px;
+  -khtml-border-radius-top-right: 1px;
+}
+
+.rounded-right {
+  -moz-border-radius-top-right: 1px;
+  -moz-border-radius-bottom-right: 1px;
+  -webkit-border-radius-top-right: 1px;
+  -webkit-border-radius-bottom-right: 1px;
+  border-radius: 0 1px 1px 0;
+  -khtml-border-radius-top-right: 1px;
+  -khtml-border-radius-bottom-right: 1px;
+}
+
+.rounded-bottom {
+  -moz-border-radius-bottom-left: 1px;
+  -moz-border-radius-bottom-right: 1px;
+  -webkit-border-radius-bottom-left: 1px;
+  -webkit-border-radius-bottom-right: 1px;
+  border-radius: 0 0 1px 1px;
+  -khtml-border-radius-bottom-left: 1px;
+  -khtml-border-radius-bottom-right: 1px;
+}
+
+.rounded-left {
+  -moz-border-radius-top-left: 1px;
+  -moz-border-radius-bottom-left: 1px;
+  -webkit-border-radius-top-left: 1px;
+  -webkit-border-radius-bottom-left: 1px;
+  border-radius: 1px 0 0 1px;
+  -khtml-border-radius-top-left: 1px;
+  -khtml-border-radius-bottom-left: 1px;
+}
+
+.rounded-top-left {
+  -moz-border-radius-top-left: 1px;
+  -webkit-border-radius-top-left: 1px;
+  border-radius: 1px 0 0 0;
+  -khtml-border-radius-top-left: 1px;
+}
+
+.rounded-top-right {
+  -moz-border-radius-top-right: 1px;
+  -webkit-border-radius-top-right: 1px;
+  border-radius: 0 1px 0 0;
+  -khtml-border-radius-top-right: 1px;
+}
+
+.rounded-bottom-left {
+  -moz-border-radius-bottom-left: 1px;
+  -webkit-border-radius-bottom-left: 1px;
+  border-radius: 0 0 1px 0;
+  -khtml-border-radius-bottom-left: 1px;
+}
+
+.rounded-bottom-right {
+  -moz-border-radius-bottom-right: 1px;
+  -webkit-border-radius-bottom-right: 1px;
+  border-radius: 0 0 0 1px;
+  -khtml-border-radius-bottom-right: 1px;
+}
+
+.circled1 {
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #515151;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -khtml-border-radius: 100%;
+}
+
+.circled2 {
+  width: 250px;
+  height: 250px;
+  background: #515151;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.circled3 {
+  width: 50%;
+  height: 0;
+  background-color: #515151;
+  padding-bottom: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.shape-text {
+  width: 50%;
+}
+.shape-text:after {
+  width: 100%;
+  height: 0;
+  background-color: #515151;
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.shape-text span {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding-top: 50%;
+  line-height: 1em;
+  margin-top: -0.5em;
+  text-align: center;
+  color: #98a2ad;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-primary {
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+  box-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+}
+
+.shadow-secondary {
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+  box-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+}
+
+.shadow-tertiary {
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+  box-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+}
+
+.text-shadow {
+  -webkit-text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.text-shadow-primary {
+  -webkit-text-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+  -moz-text-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+  text-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+}
+
+.text-shadow-secondary {
+  -webkit-text-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+  -moz-text-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+  text-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+}
+
+.text-shadow-tertiary {
+  -webkit-text-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+  -moz-text-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+  text-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+}
+
+.border-default {
+  border: 1px solid #515151;
+}
+
+.border-default-top {
+  border-top: 1px solid #515151;
+}
+
+.border-default-right {
+  border-right: 1px solid #515151;
+}
+
+.border-default-bottom {
+  border-bottom: 1px solid #515151;
+}
+
+.border-default-left {
+  border-left: 1px solid #515151;
+}
+
+.gradient-linear {
+  background-color: #515151;
+  background-image: -moz-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: -o-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2f2f2), color-stop(1, #515151));
+  background-image: -webkit-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: -ms-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: linear-gradient(to "bottom", #f2f2f2, #515151);
+}
+
+.gradient-radial {
+  background-image: radial-gradient(circle at center top, #f2f2f2, #515151);
+}
+
+.valign-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.child-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.max-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.max-area-transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.max-area-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #363636;
+  z-index: 1000000;
+  display: none;
+}
+
+.bkg-tile {
+  background-repeat: repeat;
+}
+
+.bkg-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.bkg-image-fill {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+.bkg-auto {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+.bkg-image-scroll {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.bkg-image-fixed {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.texture.texture-bar-s {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC");
+}
+.texture.texture-bar-m {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAAHHBk5tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDIAAJIVDGz9cSP7AAAAAElFTkSuQmCC");
+}
+.texture.texture-bar-l {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAAHaA37VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMEEwMjQzNTdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMEEwMjQzNjdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwQTAyNDMzN0U0NzExRTU5MDY4RUFDMzhGMEREQzY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwQTAyNDM0N0U0NzExRTU5MDY4RUFDMzhGMEREQzY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mZqYcQAAADJJREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDJAUYUMAA2TD2qNBZ0eAAAAAElFTkSuQmCC");
+}
+.texture.texture-grid-w {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//vy9AADGACIAAYgSzgAAggOAMJgYoAAgguAgMMDGgAYAAIqyCsABAgIFdAcQ4aUwdBI0kVQEAViAs7e1rqlEAAAAASUVORK5CYII=");
+}
+.texture.texture-grid-b {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYGBX/P//HyeNqYOgkaQqAAAXoxjjLGdo/wAAAABJRU5ErkJggg==");
+}
+.texture.texture-grain-w {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi+P//fwxAADGACIAAYgSzgAAggMA8JhADIIAQQkAAEEAgDozNwMSABFA4AAGGogynKqIkAGovFsbm0NI0AAAAAElFTkSuQmCC");
+}
+.texture.texture-grain-w-l {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi+P//fwxAADGACIAAYgSzgAAggEAMEM3AxAAFAAEEF4EBJgY0ABBAYBNAqmA0Vi0xUHYMVkMBAgzuACBYgqwSxsfQgQ5gdsQgiaHwCZoAAAFwL9t1tvLGAAAAAElFTkSuQmCC");
+}
+.texture.texture-grain-b {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC");
+}
+.texture.texture-grain-b-l {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIMb///+DaAYmBigACCC4CAwwMaABgAACmwBSBaMxtBBWARBgcAccPXo4HURbW9ui8DHNRAOUmwAAwWk26e28KNgAAAAASUVORK5CYII=");
+}
+.texture.texture-diagonal-w {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpi+P//fwxAADEACQaAAGIEEUAQAxBAYB4TiAkQQGAWSAGIBgggFA5MMVxDDFSWASDAUJSh68cQRNaBoQAAHDFj9Tn4HhEAAAAASUVORK5CYII=");
+}
+.texture.texture-diagonal-w-r {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwNAADGACIAAYgSzGBhiAAIIxIsBCwEEEJgFYoAwQADB5OFq4LIoygACDEUGXRVWSayqQRgATKlm8CR0i1QAAAAASUVORK5CYII=");
+}
+.texture.texture-diagonal-b {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpi+P//PwNAADGACIAAYrCysikGMQACCMxgBLEAAggsDsIgEYAAQuXAFMOVwQQAAgxFBkMVuiDcYGy6AIpfVV7EbepaAAAAAElFTkSuQmCC");
+}
+.texture.texture-diagonal-b-r {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg==");
+}
+
+.blur {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+}
+
+.pattern-default {
+  background-image: url("../images/pattern-default.jpg");
+}
+
+/**********************************************************************
+Description: It defines the styles for the block components forming the page. We can devide the entire page in one or more blocks. 
+Each block can have background image with or without parallax effect, a content wrapper which wraps block header and content.
+Dependencies: variables, variables-ext, mixins
+Javascript: jquery, cmt-block
+***********************************************************************/
+.block {
+  position: relative;
+}
+.block .block-bkg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.block .block-bkg-fixed {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.block .block-bkg-scroll {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.block .block-bkg-parallax {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: 0;
+  z-index: 5;
+}
+.block .texture {
+  z-index: 10;
+}
+.block .block-wrap-content {
+  position: relative;
+  z-index: 15;
+}
+.block .block-splitter {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  z-index: 10000;
+}
+.block .block-splitter.top {
+  top: 0;
+  margin-top: -50px;
+}
+.block .block-splitter.bottom {
+  bottom: 0;
+  margin-bottom: -50px;
+}
+.block .block-splitter .icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.block-basic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img {
+  background-image: url("http://www.funmayo.com/wp-content/uploads/2015/09/Wallpaper-Nature.jpg");
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=patterns.css.map */
