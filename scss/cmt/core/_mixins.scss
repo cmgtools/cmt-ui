@@ -222,6 +222,17 @@ Dependencies: variables
     background-image: linear-gradient( to $direction, $start, $end );
 }
 
+@mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle ) {
+  
+    background: $start;
+    background: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
+    background: -webkit-linear-gradient($angle, $start $startPos, $end $endPos);
+    background: -o-linear-gradient($angle, $start $startPos, $end $endPos);
+    background: -ms-linear-gradient($angle, $start $startPos, $end $endPos);
+    
+    background: linear-gradient($linearAngle, $start $startPos, $end $endPos);
+}
+
 // Radial Gradient - Default - Top to Bottom
 @mixin radial-gradient( $start, $end, $direction: circle at center top ) {
     //background-image: -webkit-gradient( radial, center center, 0, center center, 141, from(black), to(white), color-stop(25%, blue), color-stop(40%, green), color-stop(60%, red), color-stop(80%, purple));

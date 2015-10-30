@@ -5,9 +5,9 @@ Dependencies: none
 
 @mixin transform-rotate( $degrees, $angle ) {
   filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=#{ $angle } );
-  -webkit-transform: rotate( $angle ); 
-      -ms-transform: rotate( $angle ); 
-          transform: rotate( $angle ); 
+  -webkit-transform: rotate( $degrees ); 
+      -ms-transform: rotate( $degrees ); 
+          transform: rotate( $degrees ); 
 }
 
 @mixin transform-flip( $horizontal, $vertical, $angle ) {
