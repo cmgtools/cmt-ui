@@ -144,11 +144,11 @@ Dependencies: variables, mixins, transitions, transformation
           }
           
           input[type=checkbox]+.label::before, input[type=checkbox]:disabled+.label::before {
-            content:"V";
+            content:"W";
           }
           
           input[type=checkbox]:checked+.label::before {
-            content:"g";
+            content:"Y";
           }        
     }        
 }
