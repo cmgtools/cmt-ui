@@ -1,0 +1,30 @@
+{
+  "name": "cmt-ui",
+  "title": "CMGTools UI",
+  "version": "1.0.0-alpha1",
+  "description": "CMGTools UI is CSS Framework which provide responsive grid, commonly used mixins, themeable color scheme and several re-usable components.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cmgtools/cmt-ui"
+  },
+  "keywords": [
+    "cmgtools",
+    "CSS Framework",
+    "cmsgears",
+    "responsive grid",
+    "components",
+    "themes"
+  ],
+  "author": "Bhagwat Singh Chouhan",
+  "license": "GPLv3",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/cmgtools/cmt-ui/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-sass": "~1.1.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-cssmin": "~0.14.0"
+  }
+}
