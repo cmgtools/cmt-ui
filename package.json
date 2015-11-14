@@ -25,6 +25,6 @@
     "grunt": "~0.4.5",
     "grunt-sass": "~1.1.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-cssmin": "~0.14.0"
+    "grunt-contrib-cssmin": "git://github.com/gruntjs/grunt-contrib-cssmin"
   }
 }

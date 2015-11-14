@@ -3,6 +3,40 @@ Description: It defines the styles for the menu components available in CMGTools
 Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
 
+// Basic Navs
+
+.nav {
+    display: block;
+
+    li {
+        display: inline-block;
+
+        a {
+            @include transit-all( $transit-eio, $transit-time-medium );
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+.vnav {
+    display: block;
+
+    li {
+        display: inline-block;
+        width: 100%;
+
+        a {
+            @include transit-all( $transit-eio, $transit-time-medium );
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+// Nav Components
+
 /* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
    It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
 .hnav-regular {

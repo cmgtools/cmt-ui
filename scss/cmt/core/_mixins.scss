@@ -353,6 +353,26 @@ Dependencies: variables
     background-attachment: fixed;
 }
 
+// background using img - use it inside a block having fixed height
+@mixin bkg-img {
+    position: relative;
+    top: -50%;
+    left: -50%;
+    width: 200%; 
+    height: 200%;
+
+    img {
+        position: absolute; 
+        top: 0;
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        margin: auto; 
+        min-width: 50%;
+        min-height: 50%;
+    }
+}
+
 // Textures
 
 %textures {
@@ -598,6 +618,10 @@ Dependencies: variables
 
 .bkg-image-fixed {
     @include bkg-image-fixed;
+}
+
+.bkg-img {
+    @include bkg-img;  
 }
 
 // Default Texture

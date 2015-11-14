@@ -26,6 +26,5 @@
   ],
   "main": "dist/styles/cmgtools.css",
   "dependencies": {
-    "jquery": "~2.1.4"
   }
 }

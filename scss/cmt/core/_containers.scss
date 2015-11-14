@@ -23,6 +23,13 @@ Dependencies: variables, mixins
     &.row-large {
         width: 80%;
     }
+
+    @include responsive-min( screen-tablet-large ) {
+
+        &.row-small, &.row-medium, &.row-large {
+          width: 90%;
+        }
+    }
 }
 
 // Responsive Columns

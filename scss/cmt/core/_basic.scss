@@ -339,10 +339,7 @@ body {
  */
 
 .filler-height {
-
-    &.filler-height-default {
-        height: 1em;
-    }
+    height: 1em;
 
     &.filler-height-small {
         height: 1.5em;
@@ -357,10 +354,19 @@ body {
     }
 }
 
+// Positioning
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
 // Visibility - Without own space
 
 .visible {
-    display:block;
+    display: block;
 }
 
 .hidden {

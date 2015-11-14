@@ -343,6 +343,22 @@ Dependencies: variables
   background-size: cover;
   background-attachment: fixed; }
 
+.bkg-img {
+  position: relative;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%; }
+  .bkg-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%; }
+
 .texture.texture-default {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC"); }
 
@@ -479,6 +495,15 @@ Dependencies: none
   -o-transition: width 250ms linear 0s, height 250ms linear 0s;
   -webkit-transition: width 250ms linear 0s, height 250ms linear 0s;
   transition: width 250ms linear 0s, height 250ms linear 0s; }
+
+.grow {
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s; }
+  .grow:hover {
+    transform: scale(1.5); }
 
 /**********************************************************************
 Description: The translation effects available in CMGTools.
@@ -978,17 +1003,20 @@ body {
 /** 
  * Height fillers to seperate boxes.
  */
-.filler-height.filler-height-default {
+.filler-height {
   height: 1em; }
+  .filler-height.filler-height-small {
+    height: 1.5em; }
+  .filler-height.filler-height-medium {
+    height: 2em; }
+  .filler-height.filler-height-large {
+    height: 2.5em; }
 
-.filler-height.filler-height-small {
-  height: 1.5em; }
+.absolute {
+  position: absolute; }
 
-.filler-height.filler-height-medium {
-  height: 2em; }
-
-.filler-height.filler-height-large {
-  height: 2.5em; }
+.relative {
+  position: relative; }
 
 .visible {
   display: block; }
@@ -1099,6 +1127,9 @@ Dependencies: variables, mixins
     width: 50%; }
   .row.row-large {
     width: 80%; }
+  @media only screen and (min-width: 1025px) {
+    .row.row-small, .row.row-medium, .row.row-large {
+      width: 90%; } }
 
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
@@ -1607,26 +1638,26 @@ form {
   @media only screen and (max-width: 1024px) {
     form.form-small, form.form-medium, form.form-large {
       width: 80%;
-      padding: 5%; } }
+      padding: 2em 5%; } }
 
 label {
   border: none;
   box-shadow: none;
   font-size: 1em;
-  line-height: 1.4;
-  margin: 0.5em 0;
+  line-height: 1.25em;
+  margin: 0.25em 0;
   width: 100%;
-  padding: 0.5em;
+  padding: 0.25em;
   display: inline-block;
   text-align: left; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
   vertical-align: middle;
   font-size: 1em;
-  line-height: 1.4;
-  margin: 0.5em 0;
+  line-height: 1.25em;
+  margin: 0.25em 0;
   width: 100%;
-  padding: 0.5em;
+  padding: 0.25em;
   outline: none;
   box-shadow: none;
   border: none; }
@@ -1652,29 +1683,12 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
     background-color: #e1e1e1;
     color: #464646; }
 
-/* input[placeholder]:before {
-    color:$color-placeholder;
-}
-
-input[placeholder] {
-    color:red;
-} 
-
-input:valid {
-  border: 1px solid $color-success;
-}
-
-input:invalid {
-  border: 1px solid $color-error;
-}
-
- */
 input[type="submit"], input[type="button"], button, .btn {
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  -webkit-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 350ms ease-in-out 0s;
+  -ms-transition: all 350ms ease-in-out 0s;
+  -o-transition: all 350ms ease-in-out 0s;
+  -webkit-transition: all 350ms ease-in-out 0s;
+  transition: all 350ms ease-in-out 0s;
   background-color: #e74343;
   color: #FFFFFF;
   text-align: center;
@@ -1704,16 +1718,17 @@ input[type="submit"], input[type="button"], button, .btn {
     width: 250px; }
 
 .frm-split-40-60 label, .element-40 {
+  clear: both;
   width: 40%;
   float: left; }
+
+.element-40 label {
+  width: 100%; }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
 .frm-split-40-60 textarea, .frm-split-40-60 select, .element-60 {
   width: 60%;
   float: left; }
-
-.element-40 label {
-  width: 100%; }
 
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
 .element-60 textarea, .element-60 select {
@@ -1771,42 +1786,17 @@ input[type="submit"], input[type="button"], button, .btn {
   -khtml-border-radius-top-left: 4px;
   -khtml-border-radius-bottom-left: 4px; }
 
+/** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
 .frm-icon-field {
-  display: inline-block;
-  width: 100%; }
-  .frm-icon-field .wrap-icon {
-    display: inline-block;
-    border: none;
-    margin: 0;
-    padding: 8px 1%;
-    width: 10%;
-    font-size: 1em;
-    line-height: 2em;
-    background-color: #e1e1e1;
-    color: #363636; }
-  .frm-icon-field input[type="text"], .frm-icon-field input[type="email"], .frm-icon-field input[type="password"], .frm-icon-field textarea, .frm-icon-field input[type="submit"], .frm-icon-field input[type="button"], .frm-icon-field button, .frm-icon-field .btn {
-    display: inline-block;
-    border: none;
-    margin: 0;
-    width: 90%;
-    line-height: 2em;
-    padding: 5px 10px; }
-  .frm-icon-field.rounded .wrap-icon {
-    -moz-border-radius-top-left: 4px;
-    -moz-border-radius-bottom-left: 4px;
-    -webkit-border-radius-top-left: 4px;
-    -webkit-border-radius-bottom-left: 4px;
-    border-radius: 4px 0 0 4px;
-    -khtml-border-radius-top-left: 4px;
-    -khtml-border-radius-bottom-left: 4px; }
-  .frm-icon-field.rounded input[type="text"], .frm-icon-field.rounded input[type="email"], .frm-icon-field.rounded input[type="password"], .frm-icon-field.rounded textarea, .frm-icon-field.rounded input[type="submit"], .frm-icon-field.rounded input[type="button"], .frm-icon-field.rounded button, .frm-icon-field.rounded .btn {
-    -moz-border-radius-top-right: 4px;
-    -moz-border-radius-bottom-right: 4px;
-    -webkit-border-radius-top-right: 4px;
-    -webkit-border-radius-bottom-right: 4px;
-    border-radius: 0 4px 4px 0;
-    -khtml-border-radius-top-right: 4px;
-    -khtml-border-radius-bottom-right: 4px; }
+  position: relative;
+  display: inline-block; }
+  .frm-icon-field input[type="text"], .frm-icon-field input[type="email"], .frm-icon-field input[type="password"], .frm-icon-field textarea, .frm-icon-field select, .frm-icon-field input[type="submit"], .frm-icon-field input[type="button"], .frm-icon-field button, .frm-icon-field .btn {
+    padding-left: 24px; }
+  .frm-icon-field .cmti {
+    position: absolute;
+    margin-top: 0.40em;
+    padding: 0.25em;
+    padding-left: 4px; }
 
 /**********************************************************************
 Description: It defines the default table style available in CMGTools.
@@ -2680,6 +2670,34 @@ Dependencies: variables, variables-ext, mixins
 Description: It defines the styles for the menu components available in CMGTools.
 Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
+.nav {
+  display: block; }
+  .nav li {
+    display: inline-block; }
+    .nav li a {
+      -moz-transition: all 350ms ease-in-out 0s;
+      -ms-transition: all 350ms ease-in-out 0s;
+      -o-transition: all 350ms ease-in-out 0s;
+      -webkit-transition: all 350ms ease-in-out 0s;
+      transition: all 350ms ease-in-out 0s;
+      display: inline-block;
+      width: 100%; }
+
+.vnav {
+  display: block; }
+  .vnav li {
+    display: inline-block;
+    width: 100%; }
+    .vnav li a {
+      -moz-transition: all 350ms ease-in-out 0s;
+      -ms-transition: all 350ms ease-in-out 0s;
+      -o-transition: all 350ms ease-in-out 0s;
+      -webkit-transition: all 350ms ease-in-out 0s;
+      transition: all 350ms ease-in-out 0s;
+      display: inline-block;
+      width: 100%;
+      text-align: center; }
+
 /* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
    It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
 .hnav-regular {

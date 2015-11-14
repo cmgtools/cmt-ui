@@ -15,7 +15,7 @@ $transit-eo: ease-out;
 // Transition period
 $transit-time-small: 250ms;
 $transit-time-medium: 350ms;
-$transit-time-big: 450ms; 
+$transit-time-large: 450ms; 
 
 // All transitions
 @mixin transit-all( $transit, $duration, $delay: 0s ) {
@@ -163,4 +163,13 @@ $transit-time-big: 450ms;
 
 .transit-width-height {
     @include transit-width-height( $transit-linear, $transit-time-small );
+}
+
+// Increase size on hover
+.grow {
+    @include transit-all( $transit-eio, 0.4s );
+
+    &:hover {
+        transform: scale(1.5);
+    }
 }
