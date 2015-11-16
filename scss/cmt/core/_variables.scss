@@ -12,7 +12,7 @@ $font-default: Arial, Helvetica, sans-serif; // Default Font - typography - body
 $font-heading: Verdana, Geneva, sans-serif; // Font for Headers - typography - h1, h2, h3, h4, h5, h6, .default-header
 $font-code: "Courier New", Courier, monospace; // Code Font - typography - pre
 
-// Font Sizing - 1 to 6 are for headers, 7 for (p, a, em), 8 for errors
+// Font Sizing - 1 to 6 are for headers, 7 for (p, a, em), 8 for errors, 9 for extra small text like copyright info
 $font-size-1: 2.5em;
 $font-size-2: 2.25em;
 $font-size-3: 2.00em;
@@ -25,17 +25,27 @@ $font-size-7: 1em;
 $font-size-8: 0.75em;
 $font-size-9: 0.65em;
 
-// Standard screen sizes - mobile to desktop
+// Standard screen sizes -
+//mobile
 $screen-mobile-small: 320px;
 $screen-mobile-large: 480px;
 
+// Tablets
 $screen-tablet-small: 768px;
 $screen-tablet-large: 1024px;
 
+//Desktop
 $screen-desktop-small: 1280px;
 $screen-desktop-medium: 1360px;
 $screen-desktop-large: 1600px;
 $screen-desktop-xlarge: 1920px;
+
+// Standard size for element's radius, border, shadow
+$size-default: 1px;
+$size-small: 3px;
+$size-medium: 5px;
+$size-large: 10px;
+$size-xlarge: 15px;
 
 // Color Factor - We can use it using lighten/darken methods - ex: $color-primary-l: lighten( $color-primary, $color-factor )
 $color-factor: 15;
@@ -75,11 +85,17 @@ $color-tertiary-text-d: lighten( $color-tertiary-l, $color-factor );
 
 // Standard Colors
 $color-white: #ffffff;
-$color-gray: #000000;
-$color-gray-l: #000000;
-$color-gray-d: #000000;
+$color-gray: #7F7F7F;
+$color-gray-l: #A5A5A5;
+$color-gray-d: #595959;
 $color-black: #000000;
-$color-blue: #298ccf;
+$color-blue: #4553A1;
+$color-yellow: #ffd800;
+$color-red: #B42A1A;
+$color-magenta: #9A2579;
+$color-orange: #F2651E;
+$color-green: #66A709;
+$color-green-d: #467200;
 
 // Highlighting Colors - errors, warnings and success
 $color-error: #e74343;
@@ -89,31 +105,34 @@ $color-success: #a5d75a;
 // Form Fields Color
 $color-field: #e1e1e1;
 $color-field-text: #363636;
-$color-field-h: #e9e9e9;
+$color-field-h: #e9e9e9;    // Field Hover
 $color-field-h-text: #363636;
-$color-field-f: #e74343;
+$color-field-f: #e74343;    // Focused Field
 $color-field-f-text: #363636;
-$color-field-d: #e1e1e1;
+$color-field-d: #e1e1e1;    // Disabled Field
 $color-field-d-text: #464646;
-$color-placeholder: #aaaaaa;
+$color-placeholder: #aaaaaa;  // Placeholder
 
 // Regular Buttons
 $color-btn: #e74343;
 $color-btn-text: #FFFFFF;
-$color-btn-h: #ff5555;
+$color-btn-h: #ff5555;    // Button Hover
 $color-btn-h-text: white;
-$color-btn-a: #b51717;
+$color-btn-a: #b51717;    // Active Button
 $color-btn-a-text: white;
-$color-btn-d: gray;
+$color-btn-d: gray;       // Disabled Button
 $color-btn-d-text: #363636;
 
 // Additional Colors
 $color-header: #363636;
-$color-social: #a5d75a;
+$color-header-text: #ffffff;
+$color-footer: #363636;
+$color-footer-text: #ffffff;
 
-// Standard size for radius, border, shadow
-$size-default: 1px;
-$size-small: 2px;
-$size-medium: 4px;
-$size-large: 8px;
-$size-xlarge: 10px;
+$color-link: #298ccf; // Default color for all the links
+$color-social: #a5d75a; // Common for all social buttons
+$color-facebook: #3b5998;
+$color-twitter: #00aced;
+$color-linkedin: #007bb5;
+$color-pintrest: #cb2027;
+$color-instagram: #125688;

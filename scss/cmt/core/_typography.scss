@@ -1,15 +1,16 @@
 /**********************************************************************
-Description: The default text elements styles for CMGTools.
+Description: The default text elements and font styles for CMGTools.
 Dependencies: variables, mixins
 ***********************************************************************/
 
+// Default font for entire html document
 html, body {
     font-family: $font-default;
     line-height: 1;
 }
 
 // Base Font Size following mobile first approach
-body {
+html, body {
     font-size: 12px;
     color: $color-primary-text;
 
@@ -22,7 +23,69 @@ body {
     }
 }
 
-// Headers Font Size
+/** 
+ * Fonts - The font classes default, heading and code can be used for global headers and code font.
+ */
+
+.font {
+
+    &.font-default {
+        font-family: $font-default;
+    }
+
+    &.font-heading {
+        font-family: $font-heading;
+    }
+
+    &.font-code {
+        font-family: $font-code;
+    }
+}
+
+/**
+ * Font Size - The font size for headers h1 to h6, default and small.
+ */
+
+.font-size {
+
+    &.font-size-large-1 {
+        font-size: $font-size-1;
+    }
+
+    &.font-size-large-2 {
+        font-size: $font-size-2;
+    }
+
+    &.font-size-large-3 {
+        font-size: $font-size-3;
+    }
+
+    &.font-size-large-4 {
+        font-size: $font-size-4;
+    }
+
+    &.font-size-large-5 {
+        font-size: $font-size-5;
+    }
+
+    &.font-size-large-6 {
+        font-size: $font-size-6;
+    }
+
+    &.font-size-default {
+        font-size: $font-size-7;
+    }
+
+    &.font-size-small {
+        font-size: $font-size-8;
+    }
+
+    &.font-size-tiny {
+        font-size: $font-size-9;
+    }
+}
+
+// Headers
 
 h1, .h1 {
     font-size: $font-size-1;
@@ -65,8 +128,11 @@ p, span, em, div, a {
     font-size: $font-size-7;  
 }
 
+// Coding
+
 pre {
     font-family: $font-code;
+    background-color: $color-secondary;
 }
 
 // Font Weight
@@ -77,4 +143,28 @@ pre {
 
 .normal {
     font-weight: normal;
+}
+
+// Text Style and Decoration
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+// Links
+
+.link {
+    color: $color-tertiary;
 }

@@ -97,7 +97,6 @@ input[type="submit"], input[type="button"], button, .btn {
     background-color: $color-btn;
     color: $color-btn-text;
     text-align: center;
-    margin: 10px 0;
     cursor: pointer;
 
     &:hover {
@@ -137,6 +136,31 @@ input[type="submit"], input[type="button"], button, .btn {
 
     &.btn-xlarge {
         width: 250px;
+    }
+
+    &.btn-white {
+        background-color: $color-white;
+        color: $color-black;
+
+        &:hover {
+            background-color: $color-gray-d;
+            color: $color-gray-l;
+        }
+    }
+
+    &.btn-black {
+        background-color: $color-black;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-gray-d;
+            color: $color-gray-l;
+        }
+    }
+
+    &.btn-gray {
+        background-color: $color-gray;
+        color: $color-white;
     }
 }
 
@@ -200,7 +224,7 @@ input[type="submit"], input[type="button"], button, .btn {
 .frm-icon-field {
     position: relative;
     display: inline-block;
-    
+
     input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
         padding-left: 24px;
     }

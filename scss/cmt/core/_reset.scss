@@ -72,13 +72,15 @@ pre {
 }
 
 hr {
-  	display: block; 
-  	border: 0;
-  	margin: 1em 0;
-  	padding: 0;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+  	display: block;
     height: 0;
+    padding: 0;
+  	margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0;
+    @include border-bottom( $size-default, solid, $color-secondary );
 }
 
 audio, canvas, video {
@@ -208,7 +210,7 @@ textarea {
 a {
     text-decoration: none;
     cursor: pointer;
-    color: $color-primary-text;
+    color: $color-link;
 }
 
 a:focus {

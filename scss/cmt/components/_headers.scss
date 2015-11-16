@@ -3,15 +3,28 @@ Description: It defines the styles for the header components available in CMGToo
 Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
 
-// Standard Header having logo, main menu and mobile menu button.
+.header {
+    position: relative;
+
+    &.header-fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10000; // topmost element, popup must override this index
+    }
+
+    &.header-absolute {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10000; // topmost element, popup must override this index
+    }
+}
+
+// Standard Header having logo, main menu and mobile menu icon. Logo is on left side and main menu, mobile menu icon on right side.
 .header-standard {
-    background-color: $color-primary;
-    color: $color-primary-text;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 55px;
-    z-index: 10;
+    background-color: $color-header;
+    color: $color-header-text;
 
     .logo {
         cursor: pointer;
@@ -40,19 +53,19 @@ Dependencies: variables, variables-ext, mixins
         span {
             width: 36px;
             height: 36px;
-            display: block;
+            display: inline-block;
         }
     }
 
     @include responsive-max( screen-tablet-large ) {
 
+        .logo {
+            width: 70px;
+        }
+
         #menu-main {
             margin-top: 55px;
             display: none;
-        }
-
-        #btn-mobile-menu {
-            display:inline-block;
         }
     }
 }

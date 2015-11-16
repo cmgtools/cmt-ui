@@ -54,7 +54,7 @@ Dependencies: variables
   background-color: rgba(255, 255, 255, 0.6); }
 
 .bkg-transparent-gray {
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(127, 127, 127, 0.6); }
 
 .bkg-transparent-black {
   background-color: rgba(0, 0, 0, 0.6); }
@@ -75,16 +75,16 @@ Dependencies: variables
   -khtml-border-radius: 1px; }
 
 .rounded-medium {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -khtml-border-radius: 4px; }
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px; }
 
 .rounded-large {
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  -khtml-border-radius: 8px; }
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -khtml-border-radius: 10px; }
 
 .rounded-top {
   -moz-border-radius-top-left: 1px;
@@ -196,44 +196,44 @@ Dependencies: variables
     color: #98a2ad; }
 
 .shadow {
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4); }
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4); }
 
 .shadow-primary {
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
-  box-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4); }
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4); }
 
 .shadow-secondary {
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
-  box-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4); }
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4); }
 
 .shadow-tertiary {
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
-  box-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4); }
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4); }
 
 .text-shadow {
-  -webkit-text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  -moz-text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4); }
+  -webkit-text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4); }
 
 .text-shadow-primary {
-  -webkit-text-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
-  -moz-text-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
-  text-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4); }
+  -webkit-text-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4);
+  -moz-text-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4);
+  text-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4); }
 
 .text-shadow-secondary {
-  -webkit-text-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
-  -moz-text-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
-  text-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4); }
+  -webkit-text-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4);
+  -moz-text-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4);
+  text-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4); }
 
 .text-shadow-tertiary {
-  -webkit-text-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
-  -moz-text-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
-  text-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4); }
+  -webkit-text-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4);
+  -moz-text-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4);
+  text-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4); }
 
 .border-default {
   border: 1px solid #515151; }
@@ -653,12 +653,14 @@ pre {
 
 hr {
   display: block;
-  border: 0;
-  margin: 1em 0;
+  height: 0;
   padding: 0;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0; }
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 0;
+  border-bottom: 1px solid #515151; }
 
 audio, canvas, video {
   display: inline-block;
@@ -756,7 +758,7 @@ textarea {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #363636; }
+  color: #298ccf; }
 
 a:focus {
   outline: none; }
@@ -768,48 +770,6 @@ a:active, a:hover {
 Description: The basic styles for CMGTools.
 Dependencies: variables
 ***********************************************************************/
-/** 
- * Fonts - The font classes default, heading and code can be used for global headers and code font.
- */
-.font.font-default {
-  font-family: Arial, Helvetica, sans-serif; }
-
-.font.font-heading {
-  font-family: Verdana, Geneva, sans-serif; }
-
-.font.font-code {
-  font-family: "Courier New", Courier, monospace; }
-
-/**
- * Font Size - The font size for headers h1 to h6, default and small.
- */
-.font-size.font-size-large-1 {
-  font-size: 2.5em; }
-
-.font-size.font-size-large-2 {
-  font-size: 2.25em; }
-
-.font-size.font-size-large-3 {
-  font-size: 2em; }
-
-.font-size.font-size-large-4 {
-  font-size: 1.75em; }
-
-.font-size.font-size-large-5 {
-  font-size: 1.5em; }
-
-.font-size.font-size-large-6 {
-  font-size: 1.25em; }
-
-.font-size.font-size-default {
-  font-size: 1em; }
-
-.font-size.font-size-small {
-  font-size: 0.75em; }
-
-.font-size.font-size-tiny {
-  font-size: 0.65em; }
-
 /**
  * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive. 
  * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
@@ -910,19 +870,19 @@ html {
 /** 
  * The primary color will be used as default color for document body and text.
  */
-body {
+html, body {
   background-color: #f2f2f2;
   color: #363636; }
 
 .margin-none {
-  margin: 0; }
+  margin: 0 !important; }
 
 .padding-none {
-  padding: 0; }
+  padding: 0 !important; }
 
 .mp-none {
-  margin: 0;
-  padding: 0; }
+  margin: 0 !important;
+  padding: 0 !important; }
 
 /** 
  * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
@@ -931,7 +891,7 @@ body {
   display: block; }
 
 /** 
- * Floating - These classes can be used to clear or float the elements.
+ * Floating Blocks - These classes can be used to clear or float the elements.
  */
 .clear {
   clear: both !important; }
@@ -1018,6 +978,9 @@ body {
 .relative {
   position: relative; }
 
+.fixed {
+  position: fixed; }
+
 .visible {
   display: block; }
 
@@ -1034,7 +997,7 @@ body {
   max-width: 100%;
   height: auto; }
 
-.warning, .error, .success {
+.warning, .error, .success, .help-block {
   display: inline-block;
   width: 100%;
   font-size: 0.75em; }
@@ -1042,7 +1005,7 @@ body {
 .error {
   color: #e74343; }
 
-.warning {
+.warning, .help-block {
   color: #800020; }
 
 .success {
@@ -1050,27 +1013,69 @@ body {
 
 .error-field {
   border: 1px solid #e74343;
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(231, 67, 67, 0.25);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(231, 67, 67, 0.25);
-  box-shadow: 1px 1px 4px 0px rgba(231, 67, 67, 0.25); }
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
+  box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25); }
 
 /**********************************************************************
-Description: The default text elements styles for CMGTools.
+Description: The default text elements and font styles for CMGTools.
 Dependencies: variables, mixins
 ***********************************************************************/
 html, body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1; }
 
-body {
+html, body {
   font-size: 12px;
   color: #363636; }
   @media only screen and (min-width: 481px) {
-    body {
+    html, body {
       font-size: 14px; } }
   @media only screen and (min-width: 1025px) {
-    body {
+    html, body {
       font-size: 16px; } }
+
+/** 
+ * Fonts - The font classes default, heading and code can be used for global headers and code font.
+ */
+.font.font-default {
+  font-family: Arial, Helvetica, sans-serif; }
+
+.font.font-heading {
+  font-family: Verdana, Geneva, sans-serif; }
+
+.font.font-code {
+  font-family: "Courier New", Courier, monospace; }
+
+/**
+ * Font Size - The font size for headers h1 to h6, default and small.
+ */
+.font-size.font-size-large-1 {
+  font-size: 2.5em; }
+
+.font-size.font-size-large-2 {
+  font-size: 2.25em; }
+
+.font-size.font-size-large-3 {
+  font-size: 2em; }
+
+.font-size.font-size-large-4 {
+  font-size: 1.75em; }
+
+.font-size.font-size-large-5 {
+  font-size: 1.5em; }
+
+.font-size.font-size-large-6 {
+  font-size: 1.25em; }
+
+.font-size.font-size-default {
+  font-size: 1em; }
+
+.font-size.font-size-small {
+  font-size: 0.75em; }
+
+.font-size.font-size-tiny {
+  font-size: 0.65em; }
 
 h1, .h1 {
   font-size: 2.5em; }
@@ -1103,13 +1108,29 @@ p, span, em, div, a {
   font-size: 1em; }
 
 pre {
-  font-family: "Courier New", Courier, monospace; }
+  font-family: "Courier New", Courier, monospace;
+  background-color: #515151; }
 
 .bold {
   font-weight: bold; }
 
 .normal {
   font-weight: normal; }
+
+.italic {
+  font-style: italic; }
+
+.underline {
+  text-decoration: underline; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.link {
+  color: #CDA828; }
 
 /**********************************************************************
 Description: It defines the grid system and basic containers for CMGTools.
@@ -1692,7 +1713,6 @@ input[type="submit"], input[type="button"], button, .btn {
   background-color: #e74343;
   color: #FFFFFF;
   text-align: center;
-  margin: 10px 0;
   cursor: pointer; }
   input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
     background-color: #ff5555;
@@ -1716,6 +1736,21 @@ input[type="submit"], input[type="button"], button, .btn {
     width: 180px; }
   .btn.btn-xlarge {
     width: 250px; }
+  .btn.btn-white {
+    background-color: #ffffff;
+    color: #000000; }
+    .btn.btn-white:hover {
+      background-color: #595959;
+      color: #A5A5A5; }
+  .btn.btn-black {
+    background-color: #000000;
+    color: #ffffff; }
+    .btn.btn-black:hover {
+      background-color: #595959;
+      color: #A5A5A5; }
+  .btn.btn-gray {
+    background-color: #7F7F7F;
+    color: #ffffff; }
 
 .frm-split-40-60 label, .element-40 {
   clear: both;
@@ -1737,54 +1772,54 @@ input[type="submit"], input[type="button"], button, .btn {
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
 .frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
 .frm-rounded-all button, .frm-rounded-all .btn {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -khtml-border-radius: 4px; }
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px; }
 
 .frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
 .frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"],
 .frm-rounded-top button, .frm-rounded-top .btn {
-  -moz-border-radius-top-left: 4px;
-  -moz-border-radius-top-right: 4px;
-  -webkit-border-radius-top-left: 4px;
-  -webkit-border-radius-top-right: 4px;
-  border-radius: 4px 4px 0 0;
-  -khtml-border-radius-top-left: 4px;
-  -khtml-border-radius-top-right: 4px; }
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-top-right: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-top-right: 5px;
+  border-radius: 5px 5px 0 0;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-top-right: 5px; }
 
 .frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
 .frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"],
 .frm-rounded-right button, .frm-rounded-right .btn {
-  -moz-border-radius-top-right: 4px;
-  -moz-border-radius-bottom-right: 4px;
-  -webkit-border-radius-top-right: 4px;
-  -webkit-border-radius-bottom-right: 4px;
-  border-radius: 0 4px 4px 0;
-  -khtml-border-radius-top-right: 4px;
-  -khtml-border-radius-bottom-right: 4px; }
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px; }
 
 .frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
 .frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"],
 .frm-rounded-bottom button, .frm-rounded-bottom .btn {
-  -moz-border-radius-bottom-left: 4px;
-  -moz-border-radius-bottom-right: 4px;
-  -webkit-border-radius-bottom-left: 4px;
-  -webkit-border-radius-bottom-right: 4px;
-  border-radius: 0 0 4px 4px;
-  -khtml-border-radius-bottom-left: 4px;
-  -khtml-border-radius-bottom-right: 4px; }
+  -moz-border-radius-bottom-left: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 0 5px 5px;
+  -khtml-border-radius-bottom-left: 5px;
+  -khtml-border-radius-bottom-right: 5px; }
 
 .frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
 .frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"],
 .frm-rounded-left button, .frm-rounded-left .btn {
-  -moz-border-radius-top-left: 4px;
-  -moz-border-radius-bottom-left: 4px;
-  -webkit-border-radius-top-left: 4px;
-  -webkit-border-radius-bottom-left: 4px;
-  border-radius: 4px 0 0 4px;
-  -khtml-border-radius-top-left: 4px;
-  -khtml-border-radius-bottom-left: 4px; }
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  border-radius: 5px 0 0 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px; }
 
 /** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
 .frm-icon-field {
@@ -2628,14 +2663,22 @@ Dependencies: variables, variables-ext, mixins
 Description: It defines the styles for the header components available in CMGTools.
 Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
+.header {
+  position: relative; }
+  .header.header-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000; }
+  .header.header-absolute {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10000; }
+
 .header-standard {
-  background-color: #f2f2f2;
-  color: #363636;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 55px;
-  z-index: 10; }
+  background-color: #363636;
+  color: #ffffff; }
   .header-standard .logo {
     cursor: pointer;
     margin: 5px;
@@ -2658,13 +2701,13 @@ Dependencies: variables, variables-ext, mixins
     .header-standard #btn-mobile-menu span {
       width: 36px;
       height: 36px;
-      display: block; }
+      display: inline-block; }
   @media only screen and (max-width: 1024px) {
+    .header-standard .logo {
+      width: 70px; }
     .header-standard #menu-main {
       margin-top: 55px;
-      display: none; }
-    .header-standard #btn-mobile-menu {
-      display: inline-block; } }
+      display: none; } }
 
 /**********************************************************************
 Description: It defines the styles for the menu components available in CMGTools.
@@ -2782,7 +2825,7 @@ Dependencies: variables, variables-ext, mixins
 
 /* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
 .vnav-regular {
-  border: 4px solid white;
+  border: 5px solid white;
   position: relative; }
   .vnav-regular li {
     text-align: left;
@@ -2820,7 +2863,7 @@ Dependencies: variables, variables-ext, mixins
     top: -2px;
     width: 250px;
     margin-left: 100%;
-    border: 4px solid white; }
+    border: 5px solid white; }
   @media only screen and (max-width: 1024px) {
     .vnav-regular .nav-sub {
       position: relative;
