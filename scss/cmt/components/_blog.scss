@@ -3,7 +3,205 @@ Description: It defines the styles for the Blog Widgets of cms module for CMSGea
 Dependencies: variables, mixins
 ***********************************************************************/
 
-// The default blog posts component.
+.blog-posts {
+
+    .post {
+        // post
+
+        .post-banner {
+            // banner
+        }
+
+        .post-author {
+
+            .post-author-avatar {
+                // author avatar
+            }
+
+            .post-author-info {
+                // author details like name, time
+            }
+        }
+
+        .wrap-post-content {
+
+            .post-title {
+                // post title
+            }
+
+            .post-info {
+                // post info like time          
+            }
+
+            .post-content {
+                // post content   
+            }
+        }
+    }
+}
+
+// It shows banner floated left and content flowing below banner. Author is next to banner with time details. Title is below author and than content flows.
+.blog-posts-basic {
+
+    .post {
+        margin-bottom: 1em;
+
+        // Banner with default padding. A default image can be used for banner with background fill. The fill helps for transparent logos.
+        .post-banner {
+            padding: 1em;
+
+            img {
+                width: 100%;
+
+                &.bkg-fill {
+                    background-color: $color-primary;
+                }
+            }
+        }
+
+        .post-author {
+            position: relative;
+
+            .post-author-avatar {
+                width: 80px;
+                height: 80px;
+
+                img {
+                    width: 100%;
+                }
+
+                &.circled1 {
+                    background-color: $color-primary;
+                }
+            }
+
+            .post-author-info {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: inline-block;
+            }
+        }
+
+        .post-content {
+            padding: 1em;
+
+            .post-title {
+                font-size: $font-size-5;
+            }
+        }
+
+        @include responsive-min( screen-tablet-small ) {
+    
+            .post-banner {
+                float: left;
+                width: 350px;
+            }
+
+            .post-author {
+                width: 100%;
+                padding-left: 350px;
+                position: relative;
+            }
+        }
+    }
+}
+
+// Single Post
+.post-single {
+    // post
+
+    .post-banner {
+        // banner
+    }
+
+    .post-author {
+
+        .post-author-avatar {
+            // author avatar
+        }
+
+        .post-author-info {
+            // author details like name, time
+        }
+    }
+
+    .wrap-post-content {
+
+        .post-title {
+            // post title
+        }
+
+        .post-info {
+            // post info like time          
+        }
+
+        .post-content {
+            // post content   
+        }
+    }
+}
+
+// Banner at top covering 100% widget followed by psot content. Author avatar, name and time below content.
+.post-single-basic {
+    padding: 1em;
+    background-color: $color-primary-l;
+
+    .post-banner {
+        height: 150px;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    .post-author {
+        position: relative;
+
+        .post-author-avatar {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+
+            img {
+                width: 100%;
+            }
+
+            &.circled1 {
+                background-color: $color-primary;
+            }
+        }
+
+        .post-author-info {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+        }
+    }
+    
+    .post-content {
+        margin-bottom: 1em;
+    }
+
+    @include responsive-min( screen-mobile-large ) {
+
+        .post-banner {
+            height: 250px;
+        }
+    }
+
+    @include responsive-min( screen-tablet-large ) {
+
+        .post-banner {
+            height: 350px;
+        }
+    }
+}
+
+
+
+// TODO: dump this after confirmation
 .blog-posts-regular {
 
     .post {

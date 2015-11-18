@@ -117,6 +117,16 @@ Dependencies: variables
         background-color: $color-tertiary-d;
         color: $color-tertiary-text-d;
     }
+
+    &.color-white {
+        background-color: $color-white;
+        color: $color-black;
+    }
+
+    &.color-black {
+        background-color: $color-black;
+        color: $color-white;
+    }
 }
 
 /**
@@ -305,6 +315,20 @@ html, body {
 
 .fixed {
     position: fixed;
+}
+
+// Display Type
+
+.block {
+    display: block;  
+}
+
+.inline-block {
+    display: inline-block;  
+}
+
+.inline {
+    display: inline;  
 }
 
 // Visibility - Without own space

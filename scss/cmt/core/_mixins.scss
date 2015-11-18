@@ -384,9 +384,9 @@ Dependencies: variables
     @include bkg-tile;
 }
 
-@mixin blur ($value) {
-      filter: blur($value);
-      -webkit-filter: blur($value);
+@mixin blur( $value ) {
+    filter: blur($value);
+    -webkit-filter: blur($value);
     -moz-filter: blur($value);
     -o-filter: blur($value);
     -ms-filter: blur($value);  
@@ -687,7 +687,23 @@ Dependencies: variables
 }
 
 .blur {
-    @include blur (10px);
+    @include blur( $size-default );
+    
+    &.blur-small {
+        @include blur( $size-small );
+    }
+
+    &.blur-medium {
+        @include blur( $size-medium );
+    }
+
+    &.blur-large {
+        @include blur( $size-large );
+    }
+
+    &.blur-xlarge {
+        @include blur( $size-xlarge );
+    }
 }
 
 .pattern {

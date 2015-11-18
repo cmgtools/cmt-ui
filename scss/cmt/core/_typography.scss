@@ -12,7 +12,6 @@ html, body {
 // Base Font Size following mobile first approach
 html, body {
     font-size: 12px;
-    color: $color-primary-text;
 
     @include responsive-min( screen-mobile-large ) {
         font-size: 14px;
@@ -126,6 +125,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .default-header {
 
 p, span, em, div, a {
     font-size: $font-size-7;  
+}
+
+p, span, em, a {
+    line-height: 1.25em;  
 }
 
 // Coding
