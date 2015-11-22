@@ -99,11 +99,12 @@ Dependencies: variables
 }
 
 // Circled - Style having border radius 100% and child elements aligned at center position
-@mixin circled1( $bkg-color ) {
+@mixin circled1( $bkg-color, $color ) {
     overflow: hidden;
     text-align: center;
     vertical-align: middle;
     background-color: $bkg-color;
+    color: $color;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
@@ -175,10 +176,10 @@ Dependencies: variables
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
 
-@mixin text-shadow( $x, $y, $blur, $color, $spread: 0px ) {
-    -webkit-text-shadow: $x $y $blur $spread $color;
-    -moz-text-shadow: $x $y $blur $spread $color;
-    text-shadow: $x $y $blur $spread $color;
+@mixin text-shadow( $x, $y, $blur, $color, $opacity: 1 ) {
+    -webkit-text-shadow: $x $y $blur rgba( $color, $opacity );
+    -moz-text-shadow: $x $y $blur rgba( $color, $opacity );
+    text-shadow: $x $y $blur rgba( $color, $opacity );
 }
 
 @mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
@@ -488,7 +489,7 @@ Dependencies: variables
 // Circled
 
 .circled1 {
-    @include circled1( $color-secondary );
+    @include circled1( $color-secondary, $color-secondary-text );
 }
 
 .circled2 {
@@ -523,19 +524,19 @@ Dependencies: variables
 }
 
 .text-shadow {
-    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-black, 0.4 ) );
+    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
 }
 
 .text-shadow-primary {
-    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, 0.4 ) );
+    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
 }
 
 .text-shadow-secondary {
-    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, 0.4 ) );
+    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
 }
 
 .text-shadow-tertiary {
-    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, 0.4 ) );
+    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
 }
 
 // Borders
