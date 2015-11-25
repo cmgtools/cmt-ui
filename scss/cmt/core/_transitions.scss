@@ -1,5 +1,6 @@
 /**********************************************************************
-Description: The transition effects available in CMGTools.
+Description: The transition effects available in CMGTools. These allow changes in allowed css properties smoothly over a 
+defined time interval. We can define the animation/transition effects and duration to change the property.
 Dependencies: none
 ***********************************************************************/
 /* transit-xxx
@@ -163,13 +164,4 @@ $transit-time-large: 450ms;
 
 .transit-width-height {
     @include transit-width-height( $transit-linear, $transit-time-small );
-}
-
-// Increase size on hover
-.grow {
-    @include transit-all( $transit-eio, 0.4s );
-
-    &:hover {
-        transform: scale(1.5);
-    }
 }

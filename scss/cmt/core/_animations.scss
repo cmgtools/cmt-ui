@@ -49,8 +49,8 @@ Dependencies: none
           animation: spin $duration infinite $velocity;
 }
 
-// Default Implementation
+// Animations default implementation *******************
 
 .spin {
-  @include spin( 2s, linear );
+    @include spin( 2s, linear );
 }

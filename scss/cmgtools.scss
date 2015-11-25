@@ -12,8 +12,8 @@
 
 @import "cmt/core/mixins";
 @import "cmt/core/transitions";
-@import "cmt/core/animations";
 @import "cmt/core/transformations";
+@import "cmt/core/animations";
 
 @import "cmt/core/reset";
 @import "cmt/core/basic";
@@ -29,18 +29,27 @@
 
 // CMGTools Components - Optional - Useful for CMSGears themes. These can also be used for any other platform or project.
 
-@import "cmt/components/avatar-uploader";
-@import "cmt/components/blocks";
-@import "cmt/components/blog";
-@import "cmt/components/breadcrumbs";
-@import "cmt/components/file-uploader";
-@import "cmt/components/flipper";
-@import "cmt/components/footers";
-@import "cmt/components/galleries";
-@import "cmt/components/grid-data";
-@import "cmt/components/headers";
 @import "cmt/components/menus";
-@import "cmt/components/pagination";
-@import "cmt/components/popups";
+
+@import "cmt/components/headers";
+@import "cmt/components/footers";
 @import "cmt/components/sidebars";
+@import "cmt/components/breadcrumbs";
+
+@import "cmt/components/popups";
+
+@import "cmt/components/blocks";
+
+@import "cmt/components/forms";
+
+@import "cmt/components/grid-data";
+@import "cmt/components/pagination";
 @import "cmt/components/sorting";
+
+@import "cmt/components/blog";
+
+@import "cmt/components/file-uploader";
+@import "cmt/components/avatar-uploader";
+
+@import "cmt/components/flipper";
+@import "cmt/components/galleries";

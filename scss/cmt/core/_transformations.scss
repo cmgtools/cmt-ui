@@ -1,5 +1,6 @@
 /**********************************************************************
-Description: The transformation effects available in CMGTools.
+Description: The transformation effects available in CMGTools. These change the physical look of an element - position, orientation and scale. 
+We can assist transformations with transition to create animation effects.
 Dependencies: none
 ***********************************************************************/
 
@@ -10,6 +11,14 @@ Dependencies: none
           transform: rotate( $degrees ); 
 }
 
+@mixin transform-scale( $value ) {
+  -webkit-transform:scale( $value );
+     -moz-transform:scale( $value );
+      -ms-transform:scale( $value );
+       -o-transform:scale( $value );
+          transform:scale( $value );
+}
+
 @mixin transform-flip( $horizontal, $vertical, $angle ) {
   filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=#{ $angle } );
   -webkit-transform: scale( $horizontal, $vertical );
@@ -17,7 +26,7 @@ Dependencies: none
           transform: scale( $horizontal, $vertical );
 }
 
-// Default Implementation
+// Transformations default implementation **************
 
 .rotate-45 {
     @include transform-rotate( 45deg, 0.5 );
@@ -53,4 +62,12 @@ Dependencies: none
 
 .flip-vertical {
     @include transform-flip( 1, -1, 2 );
+}
+
+.grow {
+    @include transit-all( $transit-eio, $transit-time-medium );
+
+    &:hover {
+        @include transform-scale( 1.2 );
+    }
 }

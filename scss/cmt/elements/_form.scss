@@ -7,25 +7,24 @@ Dependencies: variables, mixins
 
 form {
     margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: $size-large-rem;
+    margin-bottom: $size-large-rem;
 
     // Fixed width forms
     &.form-small {
         width: 230px;
-        padding: 10px;
+        padding: $size-small-rem;
         position: relative;
     }
 
     &.form-medium {
         width: 430px;
-        padding: 10px;
+        padding: $size-medium-rem;
         position: relative;
     }
 
     &.form-large {
         width: 630px;
-        padding: 10px;
         position: relative;
     }
 
@@ -33,7 +32,7 @@ form {
 
         &.form-small, &.form-medium, &.form-large {
             width: 80%;
-            padding: 2em 5%;
+            padding: $size-medium-rem 5%;
         }
     }
 }
@@ -118,8 +117,16 @@ input[type="submit"], input[type="button"], button, .btn {
 .btn {
     display: inline-block;
 
-    &.btn-half {
+    &.btn-25 {
+        width: 25%;
+    }
+
+    &.btn-50 {
         width: 50%;
+    }
+
+    &.btn-75 {
+        width: 75%;
     }
 
     &.btn-small {
@@ -137,7 +144,8 @@ input[type="submit"], input[type="button"], button, .btn {
     &.btn-xlarge {
         width: 250px;
     }
-
+    
+    // White button with dark gray hover
     &.btn-white {
         background-color: $color-white;
         color: $color-black;
@@ -147,7 +155,8 @@ input[type="submit"], input[type="button"], button, .btn {
             color: $color-gray-l;
         }
     }
-
+    
+    // Black button with dark gray hover
     &.btn-black {
         background-color: $color-black;
         color: $color-white;
@@ -157,15 +166,30 @@ input[type="submit"], input[type="button"], button, .btn {
             color: $color-gray-l;
         }
     }
-
+    
+    // Gray button with dark gray hover
     &.btn-gray {
         background-color: $color-gray;
         color: $color-white;
+
+        &:hover {
+            background-color: $color-gray-d;
+            color: $color-gray-l;
+        }
+    }
+
+    // Reversed hover of button color and text for white, black and gray buttons
+    &.btn-reverse {
+        
+        &:hover {
+            background-color: $color-btn !important;
+            color: $color-btn-text !important;
+        }
     }
 }
 
 // Splitted forms - label - 40% and element 60%
- 
+
 .frm-split-40-60 label, .element-40 {
     clear: both;
     width: 40%;
@@ -185,6 +209,12 @@ input[type="submit"], input[type="button"], button, .btn {
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"], 
 .element-60 textarea, .element-60 select  {
     width: 100%;
+}
+
+.frm-split-40-60 {
+    .frm-select-50 select {
+        width: 50%;
+    }
 }
 
 // Round cornered elements
@@ -226,13 +256,17 @@ input[type="submit"], input[type="button"], button, .btn {
     display: inline-block;
 
     input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
-        padding-left: 24px;
+        padding-left: 1.3em;
     }
 
     .cmti {
         position: absolute;
-        margin-top: 0.50em;
+        font-size: 1em;
+        line-height: 1.25em;
+        margin: 0.25em 0;
         padding: 0.25em;
-        padding-left: 4px;
+        outline: none;
+        box-shadow: none;    
+        border:none;
     }
 }

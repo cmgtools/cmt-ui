@@ -1,0 +1,114 @@
+/**********************************************************************
+Description: It defines the styles for the social network menu components available in CMGTools.
+Dependencies: variables, variables-ext, mixins, CMGTools IconLib
+***********************************************************************/
+
+.menu-social {
+
+    // Default
+    a {
+        color: $color-white;
+        margin: 0;
+        display: inline-block;
+        @include transit-all( $transit-eio, $transit-time-small );
+
+        &:hover {
+            color: $color-btn;
+        }
+    }
+
+    // Social Icons
+    .cmti {
+        padding: 0.25rem;
+        margin: 0.25rem;
+    }
+
+    // Social Icons with background color
+    .cmti-bkg {
+
+        &.cmti-social-facebook {
+            background-color: $color-facebook;
+        }
+
+        &.cmti-social-twitter {
+            background-color: $color-twitter;
+        }
+
+        &.cmti-social-google, &.cmti-social-google-plus {
+            background-color: $color-google;
+        }
+
+        &.cmti-social-linkedin {
+            background-color: $color-linkedin;
+        }
+
+        &.cmti-social-instagram {
+            background-color: $color-instagram;
+        }
+
+        &.cmti-social-pintrest {
+            background-color: $color-pintrest;
+        }
+    }
+
+    // Social Icons with text color
+    .cmti-text {
+
+        &.cmti-social-facebook {
+            color: $color-facebook;
+        }
+
+        &.cmti-social-twitter {
+            color: $color-twitter;
+        }
+
+        &.cmti-social-google, &.cmti-social-google-plus {
+            color: $color-google;
+        }
+
+        &.cmti-social-linkedin {
+            color: $color-linkedin;
+        }
+
+        &.cmti-social-instagram {
+            color: $color-instagram;
+        }
+
+        &.cmti-social-pintrest {
+            color: $color-pintrest;
+        }
+
+        &:hover {
+            color: $color-btn;
+        }
+    }
+    
+    // For Buttons
+    .btn {
+        color: $color-white !important;
+
+        &.facebook {
+            background-color: $color-facebook;
+        }
+
+        &.twitter {
+            background-color: $color-twitter;
+        }
+
+        &.google, &.google-plus {
+            background-color: $color-google;
+        }
+
+        &.linkedin {
+            background-color: $color-linkedin;
+        }
+
+        &.instagram {
+            background-color: $color-instagram;
+        }
+
+        &.pintrest {
+            background-color: $color-pintrest;
+        }
+    }
+}

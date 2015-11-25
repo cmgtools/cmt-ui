@@ -366,10 +366,17 @@ Dependencies: variables, mixins
 
 // Container Boxes to wrap content header and content
 .container h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container .content {
-    padding: 2.5%;
+    padding: $size-medium-rem;
 }
 
 // Restrict the content to x% width of parent having content in center. Works well with parents having background image, but content within a limited area.
+.content-90 {
+    position: relative;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    width: 100% !important;
+}
+
 .content-80 {
     position: relative;
     padding-left: 10% !important;

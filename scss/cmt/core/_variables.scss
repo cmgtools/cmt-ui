@@ -40,12 +40,18 @@ $screen-desktop-medium: 1360px;
 $screen-desktop-large: 1600px;
 $screen-desktop-xlarge: 1920px;
 
-// Standard size for element's radius, border, shadow
+// Standard size for element's radius, border, shadow, padding, margin
 $size-default: 1px;
 $size-small: 3px;
 $size-medium: 5px;
 $size-large: 10px;
-$size-xlarge: 15px;
+$size-xlarge: 14px;
+
+// Size is rem, mostly useful for padding
+$size-small-rem: 0.4rem;
+$size-medium-rem: 0.6rem;
+$size-large-rem: 0.8rem;
+$size-xlarge-rem: 1rem;
 
 // Color Factor - We can use it using lighten/darken methods - ex: $color-primary-l: lighten( $color-primary, $color-factor )
 $color-factor: 15;
@@ -89,6 +95,7 @@ $color-gray: #7F7F7F;
 $color-gray-l: #A5A5A5;
 $color-gray-d: #595959;
 $color-black: #000000;
+
 $color-blue: #4553A1;
 $color-yellow: #ffd800;
 $color-red: #B42A1A;

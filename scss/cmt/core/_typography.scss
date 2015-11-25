@@ -9,14 +9,17 @@ html, body {
     line-height: 1;
 }
 
-// Base Font Size following mobile first approach
+// Base Font Size following mobile first approach. We have kept 3 font size as standard based on device range.
 html, body {
+    // 12px on tablet devices. A little smaller than tablet. It can be overriden by project css if there is a need to follow the de-facto standard.
     font-size: 12px;
 
+    // 14px on tablet devices. A little smaller than desktop. It can be overriden by project css if there is a need to follow the de-facto standard.
     @include responsive-min( screen-mobile-large ) {
         font-size: 14px;
     }
 
+    // 16px on desktop devices. 16px is the de-facto standard
     @include responsive-min( screen-tablet-large ) {
         font-size: 16px;
     }
@@ -110,14 +113,14 @@ h6, .h6 {
     font-size: $font-size-6;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .default-header {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
     verticle-align: middle;
     padding: 0.25em 0;
     margin: 0.5em 0;
     font-family: $font-heading;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, .default-header {
+.h1, .h2, .h3, .h4, .h5, .h6, .header-default {
     font-weight: bold;
 }
 
@@ -127,15 +130,16 @@ p, span, em, div, a {
     font-size: $font-size-7;  
 }
 
+// Need some spacing on text elements for better readability.
 p, span, em, a {
-    line-height: 1.25em;  
+    line-height: 1.5em;
 }
 
-// Coding
-
+// Coding - Required to highlight code
 pre {
     font-family: $font-code;
-    background-color: $color-secondary;
+    color: $color-gray-d;
+    background-color: $color-gray-l;
 }
 
 // Font Weight
