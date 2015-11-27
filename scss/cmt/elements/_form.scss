@@ -62,7 +62,7 @@ label {
     padding: 0.25em;
     outline: none;
     box-shadow: none;    
-    border:none;
+    border: none;
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select {
@@ -254,6 +254,7 @@ input[type="submit"], input[type="button"], button, .btn {
 .frm-icon-element {
     position: relative;
     display: inline-block;
+    width: 100%;
 
     input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
         padding-left: 1.3em;
@@ -267,6 +268,6 @@ input[type="submit"], input[type="button"], button, .btn {
         padding: 0.25em;
         outline: none;
         box-shadow: none;    
-        border:none;
+        border: none;
     }
 }

@@ -175,3 +175,67 @@ pre {
 .link {
     color: $color-tertiary;
 }
+
+// Text Colors
+.text {
+    
+    .text-primary {
+        color: $color-primary-text;
+    }
+
+    .text-secondary {
+        color: $color-secondary-text;
+    }
+
+    .text-tertiary {
+        color: $color-tertiary-text;
+    }
+
+    .text-black {
+        color: $color-black;
+    }
+
+    .text-gray {
+        color: $color-gray;
+    }
+
+    .text-white {
+        color: $color-white;
+    }
+
+    .text-blue {
+        color: $color-blue;
+    }
+
+    .text-purple {
+        color: $color-purple;
+    }
+
+    .text-orange {
+        color: $color-orange;
+    }
+
+    .text-yellow {
+        color: $color-yellow;
+    }
+
+    .text-red {
+        color: $color-red;
+    }
+
+    .text-pink {
+        color: $color-pink;
+    }
+
+    .text-magenta {
+        color: $color-magenta;
+    }
+
+    .text-green {
+        color: $color-green;
+    }
+
+    .text-green-d {
+        color: $color-green-d;
+    }
+}

@@ -19,8 +19,7 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
 
     // Social Icons
     .cmti {
-        padding: 0.25rem;
-        margin: 0.25rem;
+        margin: 0.25rem 0.5rem;
     }
 
     // Social Icons with background color
@@ -34,8 +33,12 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
             background-color: $color-twitter;
         }
 
-        &.cmti-social-google, &.cmti-social-google-plus {
+        &.cmti-social-google {
             background-color: $color-google;
+        }
+
+        &.cmti-social-google-plus {
+            background-color: $color-google-plus;
         }
 
         &.cmti-social-linkedin {
@@ -62,10 +65,14 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
             color: $color-twitter;
         }
 
-        &.cmti-social-google, &.cmti-social-google-plus {
+        &.cmti-social-google {
             color: $color-google;
         }
 
+        &.cmti-social-google-plus {
+            color: $color-google-plus;
+        }
+     
         &.cmti-social-linkedin {
             color: $color-linkedin;
         }
@@ -95,8 +102,12 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
             background-color: $color-twitter;
         }
 
-        &.google, &.google-plus {
+        &.google {
             background-color: $color-google;
+        }
+
+        &.google-plus {
+            background-color: $color-google-plus;
         }
 
         &.linkedin {

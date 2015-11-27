@@ -129,6 +129,70 @@ Dependencies: variables
     }
 }
 
+// Background Colors
+.bkg {
+    
+    .bkg-primary {
+        background-color: $color-primary;
+    }
+
+    .bkg-secondary {
+        background-color: $color-secondary;
+    }
+
+    .bkg-tertiary {
+        background-color: $color-tertiary;
+    }
+
+    .bkg-black {
+        background-color: $color-black;
+    }
+
+    .bkg-gray {
+        background-color: $color-gray;
+    }
+
+    .bkg-white {
+        background-color: $color-white;
+    }
+
+    .bkg-blue {
+        background-color: $color-blue;
+    }
+
+    .bkg-purple {
+        background-color: $color-purple;
+    }
+
+    .bkg-orange {
+        background-color: $color-orange;
+    }
+
+    .bkg-yellow {
+        background-color: $color-yellow;
+    }
+
+    .bkg-red {
+        background-color: $color-red;
+    }
+
+    .bkg-pink {
+        background-color: $color-pink;
+    }
+
+    .bkg-magenta {
+        background-color: $color-magenta;
+    }
+
+    .bkg-green {
+        background-color: $color-green;
+    }
+
+    .bkg-green-d {
+        background-color: $color-green-d;
+    }
+}
+
 /**
  * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
  * padding. The remaining space deducting border and padding from given width will be used by element content.
