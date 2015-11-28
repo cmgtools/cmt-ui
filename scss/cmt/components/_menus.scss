@@ -35,6 +35,23 @@ Dependencies: variables, variables-ext, mixins
     }
 }
 
+.nav-table {
+    display: table;
+    border-spacing: $size-small-rem;
+    width: 100%;
+
+    li {
+        display: table-cell;
+        text-align: center;
+
+        a {
+            @include transit-all( $transit-eio, $transit-time-medium );
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
 // Nav Components
 
 /* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 

@@ -132,43 +132,43 @@ Dependencies: variables
 // Background Colors
 .bkg {
     
-    .bkg-primary {
+    &.bkg-primary {
         background-color: $color-primary;
     }
 
-    .bkg-secondary {
+    &.bkg-secondary {
         background-color: $color-secondary;
     }
 
-    .bkg-tertiary {
+    &.bkg-tertiary {
         background-color: $color-tertiary;
     }
 
-    .bkg-black {
+    &.bkg-black {
         background-color: $color-black;
     }
 
-    .bkg-gray {
+    &.bkg-gray {
         background-color: $color-gray;
     }
 
-    .bkg-white {
+    &.bkg-white {
         background-color: $color-white;
     }
 
-    .bkg-blue {
+    &.bkg-blue {
         background-color: $color-blue;
     }
 
-    .bkg-purple {
+    &.bkg-purple {
         background-color: $color-purple;
     }
 
-    .bkg-orange {
+    &.bkg-orange {
         background-color: $color-orange;
     }
 
-    .bkg-yellow {
+    &.bkg-yellow {
         background-color: $color-yellow;
     }
 
@@ -176,19 +176,19 @@ Dependencies: variables
         background-color: $color-red;
     }
 
-    .bkg-pink {
+    &.bkg-pink {
         background-color: $color-pink;
     }
 
-    .bkg-magenta {
+    &.bkg-magenta {
         background-color: $color-magenta;
     }
 
-    .bkg-green {
+    &.bkg-green {
         background-color: $color-green;
     }
 
-    .bkg-green-d {
+    &.bkg-green-d {
         background-color: $color-green-d;
     }
 }

@@ -179,63 +179,63 @@ pre {
 // Text Colors
 .text {
     
-    .text-primary {
+    &.text-primary {
         color: $color-primary-text;
     }
 
-    .text-secondary {
+    &.text-secondary {
         color: $color-secondary-text;
     }
 
-    .text-tertiary {
+    &.text-tertiary {
         color: $color-tertiary-text;
     }
 
-    .text-black {
+    &.text-black {
         color: $color-black;
     }
 
-    .text-gray {
+    &.text-gray {
         color: $color-gray;
     }
 
-    .text-white {
+    &.text-white {
         color: $color-white;
     }
 
-    .text-blue {
+    &.text-blue {
         color: $color-blue;
     }
 
-    .text-purple {
+    &.text-purple {
         color: $color-purple;
     }
 
-    .text-orange {
+    &.text-orange {
         color: $color-orange;
     }
 
-    .text-yellow {
+    &.text-yellow {
         color: $color-yellow;
     }
 
-    .text-red {
+    &.text-red {
         color: $color-red;
     }
 
-    .text-pink {
+    &.text-pink {
         color: $color-pink;
     }
 
-    .text-magenta {
+    &.text-magenta {
         color: $color-magenta;
     }
 
-    .text-green {
+    &.text-green {
         color: $color-green;
     }
 
-    .text-green-d {
+    &.text-green-d {
         color: $color-green-d;
     }
 }
