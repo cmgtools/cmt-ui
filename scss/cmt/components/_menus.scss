@@ -37,7 +37,8 @@ Dependencies: variables, variables-ext, mixins
 
 .nav-table {
     display: table;
-    border-spacing: $size-small-rem;
+    // use border spacing to seperate navs
+    //border-spacing: $size-small-rem;
     width: 100%;
 
     li {
@@ -213,6 +214,108 @@ Dependencies: variables, variables-ext, mixins
 
             a {
                 background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+/* Sliding Menu - It works together with Sliding Menu plugin shipped with CMGTools JS. */
+.vnav-slider-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $color-transparent-black;
+    display: none;
+    z-index: 10000000;
+
+    // Wraps slider header and content
+    .vnav-slider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 320px;
+        background-color: $color-primary-d;
+        color: $color-primary-text-d;
+
+        &.vnav-slider-left {
+            left: -320px;
+            
+            // Close button having icon on left and text on right
+            .btn-close {
+                padding-left: 2em;
+    
+                .btn-close-icon {
+                    margin-right: 0.5em;
+                }
+            }
+        }
+    
+        &.vnav-slider-right {
+            right: -320px;
+    
+            // Close button having icon on right and text on left
+            .btn-close {
+                padding-right: 2em;
+    
+                .btn-close-icon {
+                    margin-left: 0.5em;
+                }
+            }
+        }
+
+        @include responsive-max( screen-mobile-large ) {
+            
+            &.vnav-slider-left {
+                width: 100%;
+                left: -100%;
+            }
+
+            &.vnav-slider-right {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    }
+
+    // Header with close button and hr at bottom
+    .vnav-slider-header {
+
+        .btn-close {
+            cursor: pointer;
+            padding: 1em;
+
+            &:hover {
+                color: $color-gray;
+            }
+        }
+
+        hr {
+            @include border-bottom( $size-default, solid, $color-tertiary-d );
+        }
+    }
+
+    .vnav-slider-menu {
+        width: 100%;
+        height: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+
+        ul {
+
+            li {
+                padding: 0.5em 0;
+
+                a {
+                    color: $color-primary-text-d;
+                    text-align: left;
+
+                    &:hover {
+                        color: $color-link;
+                    }
+                }
             }
         }
     }

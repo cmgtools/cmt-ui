@@ -75,11 +75,12 @@ hr {
   	display: block;
     height: 0;
     padding: 0;
-  	margin-top: 0.5em;
-    margin-bottom: 0.5em;
+  	margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     margin-left: auto;
     margin-right: auto;
     height: 0;
+    border: none;
     @include border-bottom( $size-default, solid, $color-secondary );
 }
 

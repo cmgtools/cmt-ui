@@ -23,6 +23,10 @@ Dependencies: variables, mixins
     &.row-large {
         width: 80%;
     }
+
+    &.row-xlarge {
+        width: 90%;
+    }
 }
 
 // Responsive Columns
@@ -72,15 +76,7 @@ Dependencies: variables, mixins
 
     .row {
 
-        &.row-small {
-            width: 100%;
-        }
-
-        &.row-medium {
-            width: 100%;
-        }
-
-        &.row-large {
+        &.row-small, &.row-medium, &.row-large, &.row-xlarge {
             width: 100%;
         }
     }
@@ -89,10 +85,6 @@ Dependencies: variables, mixins
 
         & >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 { 
             width: 48%;
-
-            &:nth-child( odd ) {
-                clear: both;
-            }
         }
     }
 
@@ -409,6 +401,28 @@ Dependencies: variables, mixins
     padding-left: 37% !important;
     padding-right: 37% !important;
     width: 100% !important;
+}
+
+@include responsive-max( screen-tablet-large ) {
+
+    .max-content-50 {
+
+        & >.content-90, & >.content-80, & >.content-74, & >.content-50, & >.content-26 {
+            width: 50% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            margin: 0 auto;
+        }
+    }
+
+    .max-content-100 {
+
+        & >.content-90, & >.content-80, & >.content-74, & >.content-50, & >.content-26 { 
+            width: 100% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
 }
 
 // Restrict the content to 25% width of parent with left align - Works well with parents having background image, but content within a limited area.

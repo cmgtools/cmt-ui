@@ -120,10 +120,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
     font-family: $font-heading;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, .header-default {
-    font-weight: bold;
-}
-
 // Text Elements
 
 p, span, em, div, a {
@@ -237,5 +233,19 @@ pre {
 
     &.text-green-d {
         color: $color-green-d;
+    }
+}
+
+// Text at center with background line
+.text-with-line {
+    text-align: center; 
+    border-top: 1px solid $color-black;
+    margin: 1rem 0;
+
+    .text-content {
+        display: inline-block;
+        margin-top: -1.25em;
+        padding: 0 1rem;
+        background-color: $color-primary;
     }
 }

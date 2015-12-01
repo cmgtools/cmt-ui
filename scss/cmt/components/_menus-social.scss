@@ -13,7 +13,7 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
         @include transit-all( $transit-eio, $transit-time-small );
 
         &:hover {
-            color: $color-btn;
+            background-color: $color-btn !important;
         }
     }
 
@@ -52,6 +52,10 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
         &.cmti-social-pintrest {
             background-color: $color-pintrest;
         }
+
+        &.cmti-social-youtube {
+            background-color: $color-youtube;
+        }
     }
 
     // Social Icons with text color
@@ -83,6 +87,10 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
 
         &.cmti-social-pintrest {
             color: $color-pintrest;
+        }
+
+        &.cmti-social-youtube {
+            color: $color-youtube;
         }
 
         &:hover {
@@ -120,6 +128,10 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
 
         &.pintrest {
             background-color: $color-pintrest;
+        }
+
+        &.youtube {
+            background-color: $color-youtube;
         }
     }
 }

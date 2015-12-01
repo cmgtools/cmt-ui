@@ -689,7 +689,8 @@ Dependencies: variables
 
 .blur {
     @include blur( $size-default );
-    
+    transform: scale(1.1);
+
     &.blur-small {
         @include blur( $size-small );
     }
