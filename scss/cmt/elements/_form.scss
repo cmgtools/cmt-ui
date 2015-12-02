@@ -7,8 +7,6 @@ Dependencies: variables, mixins
 
 form {
     margin: 0 auto;
-    margin-top: $size-large-rem;
-    margin-bottom: $size-large-rem;
 
     // Fixed width forms
     &.form-small {

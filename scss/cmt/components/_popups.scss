@@ -27,25 +27,26 @@
         @include shadow( 1px, 1px, 5px, $color-primary-d ); 
         @include rounded( 5px );
 
-        &.small {
+        &.popup-data-small {
             height: 200px;
             width: 400px;  
         }
 
-        &.medium {
+        &.popup-data-medium {
             height: 300px;  
             width: 600px;  
         }
 
-        &.large {
+        &.popup-data-large {
             height: 400px;  
             width: 800px;  
         }
 
-        .popup-close { 
-            position:absolute;
-            top: 5px;
-            right: 5px;  
+        .popup-close {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            display: inline-block;
             color: $color-tertiary;
             cursor: pointer;
         }
@@ -55,7 +56,7 @@
             background-color: $color-secondary;
             color: $color-secondary-text;
             @include rounded-top( 5px );
-            padding: 1em;
+            padding: 1rem;
 
             .popup-title  {
                 font-size: 1.5em;
@@ -64,7 +65,7 @@
         }
 
         .popup-content {
-            padding: 1em;
+            padding: 1rem;
         }
     }
 }

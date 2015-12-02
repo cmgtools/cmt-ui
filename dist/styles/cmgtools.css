@@ -151,6 +151,7 @@ Dependencies: variables
   text-align: center;
   vertical-align: middle;
   background-color: #515151;
+  color: #98a2ad;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
@@ -216,24 +217,24 @@ Dependencies: variables
   box-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4); }
 
 .text-shadow {
-  -webkit-text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
-  -moz-text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
-  text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4); }
+  -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); }
 
 .text-shadow-primary {
-  -webkit-text-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4);
-  -moz-text-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4);
-  text-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4); }
+  -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); }
 
 .text-shadow-secondary {
-  -webkit-text-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4);
-  -moz-text-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4);
-  text-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4); }
+  -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); }
 
 .text-shadow-tertiary {
-  -webkit-text-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4);
-  -moz-text-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4);
-  text-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4); }
+  -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); }
 
 .border-default {
   border: 1px solid #515151; }
@@ -402,17 +403,43 @@ Dependencies: variables
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg=="); }
 
 .blur {
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px); }
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  transform: scale(1.1); }
+  .blur.blur-small {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px); }
+  .blur.blur-medium {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px); }
+  .blur.blur-large {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px); }
+  .blur.blur-xlarge {
+    filter: blur(14px);
+    -webkit-filter: blur(14px);
+    -moz-filter: blur(14px);
+    -o-filter: blur(14px);
+    -ms-filter: blur(14px); }
 
 .pattern .pattern-default {
   background-image: url("../images/pattern-default.jpg"); }
 
 /**********************************************************************
-Description: The transition effects available in CMGTools.
+Description: The transition effects available in CMGTools. These allow changes in allowed css properties smoothly over a 
+defined time interval. We can define the animation/transition effects and duration to change the property.
 Dependencies: none
 ***********************************************************************/
 /* transit-xxx
@@ -496,49 +523,9 @@ Dependencies: none
   -webkit-transition: width 250ms linear 0s, height 250ms linear 0s;
   transition: width 250ms linear 0s, height 250ms linear 0s; }
 
-.grow {
-  -moz-transition: all 0.4s ease-in-out 0s;
-  -ms-transition: all 0.4s ease-in-out 0s;
-  -o-transition: all 0.4s ease-in-out 0s;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s; }
-  .grow:hover {
-    transform: scale(1.5); }
-
 /**********************************************************************
-Description: The translation effects available in CMGTools.
-Dependencies: none
-***********************************************************************/
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -moz-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-.spin {
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear; }
-
-/**********************************************************************
-Description: The transformation effects available in CMGTools.
+Description: The transformation effects available in CMGTools. These change the physical look of an element - position, orientation and scale. 
+We can assist transformations with transition to create animation effects.
 Dependencies: none
 ***********************************************************************/
 .rotate-45 {
@@ -594,6 +581,51 @@ Dependencies: none
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
+
+.grow {
+  -moz-transition: all 350ms ease-in-out 0s;
+  -ms-transition: all 350ms ease-in-out 0s;
+  -o-transition: all 350ms ease-in-out 0s;
+  -webkit-transition: all 350ms ease-in-out 0s;
+  transition: all 350ms ease-in-out 0s; }
+  .grow:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+/**********************************************************************
+Description: The translation effects available in CMGTools.
+Dependencies: none
+***********************************************************************/
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+.spin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear; }
 
 /**********************************************************************
 Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com) 
@@ -655,11 +687,12 @@ hr {
   display: block;
   height: 0;
   padding: 0;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   margin-left: auto;
   margin-right: auto;
   height: 0;
+  border: none;
   border-bottom: 1px solid #515151; }
 
 audio, canvas, video {
@@ -852,6 +885,57 @@ Dependencies: variables
   .color.color-tertiary-d {
     background-color: #8d741c;
     color: #eddca1; }
+  .color.color-white {
+    background-color: #ffffff;
+    color: #000000; }
+  .color.color-black {
+    background-color: #000000;
+    color: #ffffff; }
+
+.bkg.bkg-primary {
+  background-color: #f2f2f2; }
+
+.bkg.bkg-secondary {
+  background-color: #515151; }
+
+.bkg.bkg-tertiary {
+  background-color: #CDA828; }
+
+.bkg.bkg-black {
+  background-color: #000000; }
+
+.bkg.bkg-gray {
+  background-color: #7F7F7F; }
+
+.bkg.bkg-white {
+  background-color: #ffffff; }
+
+.bkg.bkg-blue {
+  background-color: #4553A1; }
+
+.bkg.bkg-purple {
+  background-color: #4553A1; }
+
+.bkg.bkg-orange {
+  background-color: #F2651E; }
+
+.bkg.bkg-yellow {
+  background-color: #ffd800; }
+
+.bkg .bkg-red {
+  background-color: #B42A1A; }
+
+.bkg.bkg-pink {
+  background-color: #B42A1A; }
+
+.bkg.bkg-magenta {
+  background-color: #9A2579; }
+
+.bkg.bkg-green {
+  background-color: #66A709; }
+
+.bkg.bkg-green-d {
+  background-color: #467200; }
 
 /**
  * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
@@ -981,6 +1065,15 @@ html, body {
 .fixed {
   position: fixed; }
 
+.block {
+  display: block; }
+
+.inline-block {
+  display: inline-block; }
+
+.inline {
+  display: inline; }
+
 .visible {
   display: block; }
 
@@ -1026,8 +1119,7 @@ html, body {
   line-height: 1; }
 
 html, body {
-  font-size: 12px;
-  color: #363636; }
+  font-size: 12px; }
   @media only screen and (min-width: 481px) {
     html, body {
       font-size: 14px; } }
@@ -1095,21 +1187,22 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1.25em; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .default-header {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
   verticle-align: middle;
   padding: 0.25em 0;
   margin: 0.5em 0;
   font-family: Verdana, Geneva, sans-serif; }
 
-.h1, .h2, .h3, .h4, .h5, .h6, .default-header {
-  font-weight: bold; }
-
 p, span, em, div, a {
   font-size: 1em; }
 
+p, span, em, a {
+  line-height: 1.5em; }
+
 pre {
   font-family: "Courier New", Courier, monospace;
-  background-color: #515151; }
+  color: #595959;
+  background-color: #A5A5A5; }
 
 .bold {
   font-weight: bold; }
@@ -1132,6 +1225,61 @@ pre {
 .link {
   color: #CDA828; }
 
+.text.text-primary {
+  color: #363636; }
+
+.text.text-secondary {
+  color: #98a2ad; }
+
+.text.text-tertiary {
+  color: #ffffff; }
+
+.text.text-black {
+  color: #000000; }
+
+.text.text-gray {
+  color: #7F7F7F; }
+
+.text.text-white {
+  color: #ffffff; }
+
+.text.text-blue {
+  color: #4553A1; }
+
+.text.text-purple {
+  color: #4553A1; }
+
+.text.text-orange {
+  color: #F2651E; }
+
+.text.text-yellow {
+  color: #ffd800; }
+
+.text.text-red {
+  color: #B42A1A; }
+
+.text.text-pink {
+  color: #B42A1A; }
+
+.text.text-magenta {
+  color: #9A2579; }
+
+.text.text-green {
+  color: #66A709; }
+
+.text.text-green-d {
+  color: #467200; }
+
+.text-with-line {
+  text-align: center;
+  border-top: 1px solid #000000;
+  margin: 1rem 0; }
+  .text-with-line .text-content {
+    display: inline-block;
+    margin-top: -1.25em;
+    padding: 0 1rem;
+    background-color: #f2f2f2; }
+
 /**********************************************************************
 Description: It defines the grid system and basic containers for CMGTools.
 Dependencies: variables, mixins
@@ -1148,14 +1296,13 @@ Dependencies: variables, mixins
     width: 50%; }
   .row.row-large {
     width: 80%; }
-  @media only screen and (min-width: 1025px) {
-    .row.row-small, .row.row-medium, .row.row-large {
-      width: 90%; } }
+  .row.row-xlarge {
+    width: 90%; }
 
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
   float: left;
-  margin: 1% 1%;
+  margin: 1em 1%;
   word-wrap: break-word; }
 
 .col1 {
@@ -1197,7 +1344,7 @@ Dependencies: variables, mixins
 .col13, .col14, .col15, .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
   display: block;
   float: left;
-  margin: 0.5% 0.5%;
+  margin: 0.5em 0.5%;
   word-wrap: break-word; }
 
 .col13 {
@@ -1210,21 +1357,15 @@ Dependencies: variables, mixins
   width: 5.66666%; }
 
 @media only screen and (max-width: 1024px) {
-  .row.row-small {
+  .row.row-small, .row.row-medium, .row.row-large, .row.row-xlarge {
     width: 100%; }
-  .row.row-medium {
-    width: 100%; }
-  .row.row-large {
-    width: 100%; }
-  .max-cols .col1, .max-cols .col2, .max-cols .col3, .max-cols .col4, .max-cols .col5, .max-cols .col6, .max-cols .col7, .max-cols .col8, .max-cols .col9, .max-cols .col10, .max-cols .col11, .max-cols .col12, .max-cols .col13, .max-cols .col14, .max-cols .col15 {
+  .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15 {
     width: 48%; }
-    .max-cols .col1:nth-child(odd), .max-cols .col2:nth-child(odd), .max-cols .col3:nth-child(odd), .max-cols .col4:nth-child(odd), .max-cols .col5:nth-child(odd), .max-cols .col6:nth-child(odd), .max-cols .col7:nth-child(odd), .max-cols .col8:nth-child(odd), .max-cols .col9:nth-child(odd), .max-cols .col10:nth-child(odd), .max-cols .col11:nth-child(odd), .max-cols .col12:nth-child(odd), .max-cols .col13:nth-child(odd), .max-cols .col14:nth-child(odd), .max-cols .col15:nth-child(odd) {
-      clear: both; }
-  .max-cols-100 .col1, .max-cols-100 .col2, .max-cols-100 .col3, .max-cols-100 .col4, .max-cols-100 .col5, .max-cols-100 .col6, .max-cols-100 .col7, .max-cols-100 .col8, .max-cols-100 .col9, .max-cols-100 .col10, .max-cols-100 .col11, .max-cols-100 .col12, .max-cols-100 .col13, .max-cols-100 .col14, .max-cols-100 .col15 {
+  .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
     width: 98%; } }
 
 @media only screen and (max-width: 480px) {
-  .max-cols .col1, .max-cols .col2, .max-cols .col3, .max-cols .col4, .max-cols .col5, .max-cols .col6, .max-cols .col7, .max-cols .col8, .max-cols .col9, .max-cols .col10, .max-cols .col11, .max-cols .col12, .max-cols .col13, .max-cols .col14, .max-cols .col15, .max-cols-100 .col1, .max-cols-100 .col2, .max-cols-100 .col3, .max-cols-100 .col4, .max-cols-100 .col5, .max-cols-100 .col6, .max-cols-100 .col7, .max-cols-100 .col8, .max-cols-100 .col9, .max-cols-100 .col10, .max-cols-100 .col11, .max-cols-100 .col12, .max-cols-100 .col13, .max-cols-100 .col14, .max-cols-100 .col15 {
+  .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15, .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
     width: 98%; } }
 
 .col3x2 {
@@ -1328,9 +1469,9 @@ Dependencies: variables, mixins
 
 /* full width for mobile, tablet */
 @media only screen and (max-width: 1024px) {
-  .max-cols .col3x2, .max-cols .col4x2, .max-cols .col4x3, .max-cols .col5x2, .max-cols .col5x3, .max-cols .col5x4, .max-cols .col6x2, .max-cols .col6x3, .max-cols .col6x4, .max-cols .col6x5,
-  .max-cols .col12x2, .max-cols .col12x3, .max-cols .col12x4, .max-cols .col12x5, .max-cols .col12x6, .max-cols .col12x7, .max-cols .col12x8, .max-cols .col12x9, .max-cols .col12x10, .max-cols .col12x11,
-  .max-cols .col15x2, .max-cols .col15x3, .max-cols .col15x4, .max-cols .col15x5, .max-cols .col15x6, .max-cols .col15x7, .max-cols .col15x8, .max-cols .col15x9, .max-cols .col15x10, .max-cols .col15x11, .max-cols .col15x12, .max-cols .col15x13, .max-cols .col15x14 {
+  .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5,
+  .max-cols-50 > .col12x2, .max-cols-50 > .col12x3, .max-cols-50 > .col12x4, .max-cols-50 > .col12x5, .max-cols-50 > .col12x6, .max-cols-50 > .col12x7, .max-cols-50 > .col12x8, .max-cols-50 > .col12x9, .max-cols-50 > .col12x10, .max-cols-50 > .col12x11,
+  .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14 {
     width: 48%; }
   .max-cols-100 > .col3x2, .max-cols-100 > .col4x2, .max-cols-100 > .col4x3, .max-cols-100 > .col5x2, .max-cols-100 > .col5x3, .max-cols-100 > .col5x4, .max-cols-100 > .col6x2, .max-cols-100 > .col6x3, .max-cols-100 > .col6x4, .max-cols-100 > .col6x5,
   .max-cols-100 > .col12x2, .max-cols-100 > .col12x3, .max-cols-100 > .col12x4, .max-cols-100 > .col12x5, .max-cols-100 > .col12x6, .max-cols-100 > .col12x7, .max-cols-100 > .col12x8, .max-cols-100 > .col12x9, .max-cols-100 > .col12x10, .max-cols-100 > .col12x11,
@@ -1338,9 +1479,9 @@ Dependencies: variables, mixins
     width: 98%; } }
 
 @media only screen and (max-width: 480px) {
-  .max-cols > .col3x2, .max-cols > .col4x2, .max-cols > .col4x3, .max-cols > .col5x2, .max-cols > .col5x3, .max-cols > .col5x4, .max-cols > .col6x2, .max-cols > .col6x3, .max-cols > .col6x4, .max-cols > .col6x5,
-  .max-cols > .col12x2, .max-cols > .col12x3, .max-cols > .col12x4, .max-cols > .col12x5, .max-cols > .col12x6, .max-cols > .col12x7, .max-cols > .col12x8, .max-cols > .col12x9, .max-cols > .col12x10, .max-cols > .col12x11,
-  .max-cols > .col15x2, .max-cols > .col15x3, .max-cols > .col15x4, .max-cols > .col15x5, .max-cols > .col15x6, .max-cols > .col15x7, .max-cols > .col15x8, .max-cols > .col15x9, .max-cols > .col15x10, .max-cols > .col15x11, .max-cols > .col15x12, .max-cols > .col15x13, .max-cols > .col15x14, .max-cols-100 > .col3x2, .max-cols-100 > .col4x2, .max-cols-100 > .col4x3, .max-cols-100 > .col5x2, .max-cols-100 > .col5x3, .max-cols-100 > .col5x4, .max-cols-100 > .col6x2, .max-cols-100 > .col6x3, .max-cols-100 > .col6x4, .max-cols-100 > .col6x5,
+  .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5,
+  .max-cols-50 > .col12x2, .max-cols-50 > .col12x3, .max-cols-50 > .col12x4, .max-cols-50 > .col12x5, .max-cols-50 > .col12x6, .max-cols-50 > .col12x7, .max-cols-50 > .col12x8, .max-cols-50 > .col12x9, .max-cols-50 > .col12x10, .max-cols-50 > .col12x11,
+  .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14, .max-cols-100 > .col3x2, .max-cols-100 > .col4x2, .max-cols-100 > .col4x3, .max-cols-100 > .col5x2, .max-cols-100 > .col5x3, .max-cols-100 > .col5x4, .max-cols-100 > .col6x2, .max-cols-100 > .col6x3, .max-cols-100 > .col6x4, .max-cols-100 > .col6x5,
   .max-cols-100 > .col12x2, .max-cols-100 > .col12x3, .max-cols-100 > .col12x4, .max-cols-100 > .col12x5, .max-cols-100 > .col12x6, .max-cols-100 > .col12x7, .max-cols-100 > .col12x8, .max-cols-100 > .col12x9, .max-cols-100 > .col12x10, .max-cols-100 > .col12x11,
   .max-cols-100 > .col15x2, .max-cols-100 > .col15x3, .max-cols-100 > .col15x4, .max-cols-100 > .col15x5, .max-cols-100 > .col15x6, .max-cols-100 > .col15x7, .max-cols-100 > .col15x8, .max-cols-100 > .col15x9, .max-cols-100 > .col15x10, .max-cols-100 > .col15x11, .max-cols-100 > .col15x12, .max-cols-100 > .col15x13, .max-cols-100 > .col15x14 {
     width: 98%; } }
@@ -1397,15 +1538,13 @@ Dependencies: variables, mixins
   width: 6.66666%; }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols .colf1, .max-cols .colf2, .max-cols .colf3, .max-cols .colf4, .max-cols .colf5, .max-cols .colf6, .max-cols .colf7, .max-cols .colf8, .max-cols .colf9, .max-cols .colf10, .max-cols .colf11, .max-cols .colf12, .max-cols .colf13, .max-cols .colf14, .max-cols .colf15 {
+  .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15 {
     width: 50%; }
-    .max-cols .colf1:nth-child(odd), .max-cols .colf2:nth-child(odd), .max-cols .colf3:nth-child(odd), .max-cols .colf4:nth-child(odd), .max-cols .colf5:nth-child(odd), .max-cols .colf6:nth-child(odd), .max-cols .colf7:nth-child(odd), .max-cols .colf8:nth-child(odd), .max-cols .colf9:nth-child(odd), .max-cols .colf10:nth-child(odd), .max-cols .colf11:nth-child(odd), .max-cols .colf12:nth-child(odd), .max-cols .colf13:nth-child(odd), .max-cols .colf14:nth-child(odd), .max-cols .colf15:nth-child(odd) {
-      clear: both; }
-  .max-cols-100 .colf1, .max-cols-100 .colf2, .max-cols-100 .colf3, .max-cols-100 .colf4, .max-cols-100 .colf5, .max-cols-100 .colf6, .max-cols-100 .colf7, .max-cols-100 .colf8, .max-cols-100 .colf9, .max-cols-100 .colf10, .max-cols-100 .colf11, .max-cols-100 .colf12, .max-cols-100 .colf13, .max-cols-100 .colf14, .max-cols-100 .colf15 {
+  .max-cols-100 > .colf1, .max-cols-100 > .colf2, .max-cols-100 > .colf3, .max-cols-100 > .colf4, .max-cols-100 > .colf5, .max-cols-100 > .colf6, .max-cols-100 > .colf7, .max-cols-100 > .colf8, .max-cols-100 > .colf9, .max-cols-100 > .colf10, .max-cols-100 > .colf11, .max-cols-100 > .colf12, .max-cols-100 > .colf13, .max-cols-100 > .colf14, .max-cols-100 > .colf15 {
     width: 100%; } }
 
 @media only screen and (max-width: 480px) {
-  .max-cols .colf1, .max-cols .colf2, .max-cols .colf3, .max-cols .colf4, .max-cols .colf5, .max-cols .colf6, .max-cols .colf7, .max-cols .colf8, .max-cols .colf9, .max-cols .colf10, .max-cols .colf11, .max-cols .colf12, .max-cols .colf13, .max-cols .colf14, .max-cols .colf15, .max-cols-100 .colf1, .max-cols-100 .colf2, .max-cols-100 .colf3, .max-cols-100 .colf4, .max-cols-100 .colf5, .max-cols-100 .colf6, .max-cols-100 .colf7, .max-cols-100 .colf8, .max-cols-100 .colf9, .max-cols-100 .colf10, .max-cols-100 .colf11, .max-cols-100 .colf12, .max-cols-100 .colf13, .max-cols-100 .colf14, .max-cols-100 .colf15 {
+  .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15, .max-cols-100 > .colf1, .max-cols-100 > .colf2, .max-cols-100 > .colf3, .max-cols-100 > .colf4, .max-cols-100 > .colf5, .max-cols-100 > .colf6, .max-cols-100 > .colf7, .max-cols-100 > .colf8, .max-cols-100 > .colf9, .max-cols-100 > .colf10, .max-cols-100 > .colf11, .max-cols-100 > .colf12, .max-cols-100 > .colf13, .max-cols-100 > .colf14, .max-cols-100 > .colf15 {
     width: 100%; } }
 
 .colf3x2 {
@@ -1508,29 +1647,22 @@ Dependencies: variables, mixins
   width: 93.33324%; }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols .colf3x2, .max-cols .colf4x2, .max-cols .colf4x3, .max-cols .colf5x2, .max-cols .colf5x3, .max-cols .colf5x4, .max-cols .colf6x2, .max-cols .colf6x3, .max-cols .colf6x4, .max-cols .colf6x5,
-  .max-cols .colf12x2, .max-cols .colf12x3, .max-cols .colf12x4, .max-cols .colf12x5, .max-cols .colf12x6, .max-cols .colf12x7, .max-cols .colf12x8, .max-cols .colf12x9, .max-cols .colf12x10, .max-cols .colf12x11,
-  .max-cols .colf15x2, .max-cols .colf15x3, .max-cols .colf15x4, .max-cols .colf15x5, .max-cols .colf15x6, .max-cols .colf15x7, .max-cols .colf15x8, .max-cols .colf15x9, .max-cols .colf15x10, .max-cols .colf15x11, .max-cols .colf15x12, .max-cols .colf15x13, .max-cols .colf15x14 {
+  .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5,
+  .max-cols-50 > .colf12x2, .max-cols-50 > .colf12x3, .max-cols-50 > .colf12x4, .max-cols-50 > .colf12x5, .max-cols-50 > .colf12x6, .max-cols-50 > .colf12x7, .max-cols-50 > .colf12x8, .max-cols-50 > .colf12x9, .max-cols-50 > .colf12x10, .max-cols-50 > .colf12x11,
+  .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 > .colf15x14 {
     width: 50%; }
-    .max-cols .colf3x2:nth-child(odd), .max-cols .colf4x2:nth-child(odd), .max-cols .colf4x3:nth-child(odd), .max-cols .colf5x2:nth-child(odd), .max-cols .colf5x3:nth-child(odd), .max-cols .colf5x4:nth-child(odd), .max-cols .colf6x2:nth-child(odd), .max-cols .colf6x3:nth-child(odd), .max-cols .colf6x4:nth-child(odd), .max-cols .colf6x5:nth-child(odd),
-    .max-cols .colf12x2:nth-child(odd), .max-cols .colf12x3:nth-child(odd), .max-cols .colf12x4:nth-child(odd), .max-cols .colf12x5:nth-child(odd), .max-cols .colf12x6:nth-child(odd), .max-cols .colf12x7:nth-child(odd), .max-cols .colf12x8:nth-child(odd), .max-cols .colf12x9:nth-child(odd), .max-cols .colf12x10:nth-child(odd), .max-cols .colf12x11:nth-child(odd),
-    .max-cols .colf15x2:nth-child(odd), .max-cols .colf15x3:nth-child(odd), .max-cols .colf15x4:nth-child(odd), .max-cols .colf15x5:nth-child(odd), .max-cols .colf15x6:nth-child(odd), .max-cols .colf15x7:nth-child(odd), .max-cols .colf15x8:nth-child(odd), .max-cols .colf15x9:nth-child(odd), .max-cols .colf15x10:nth-child(odd), .max-cols .colf15x11:nth-child(odd), .max-cols .colf15x12:nth-child(odd), .max-cols .colf15x13:nth-child(odd), .max-cols .colf15x14:nth-child(odd) {
-      clear: both; }
   .max-cols-100 > .colf3x2, .max-cols-100 > .colf4x2, .max-cols-100 > .colf4x3, .max-cols-100 > .colf5x2, .max-cols-100 > .colf5x3, .max-cols-100 > .colf5x4, .max-cols-100 > .colf6x2, .max-cols-100 > .colf6x3, .max-cols-100 > .colf6x4, .max-cols-100 > .colf6x5,
   .max-cols-100 > .colf12x2, .max-cols-100 > .colf12x3, .max-cols-100 > .colf12x4, .max-cols-100 > .colf12x5, .max-cols-100 > .colf12x6, .max-cols-100 > .colf12x7, .max-cols-100 > .colf12x8, .max-cols-100 > .colf12x9, .max-cols-100 > .colf12x10, .max-cols-100 > .colf12x11,
   .max-cols-100 > .colf15x2, .max-cols-100 > .colf15x3, .max-cols-100 > .colf15x4, .max-cols-100 > .colf15x5, .max-cols-100 > .colf15x6, .max-cols-100 > .colf15x7, .max-cols-100 > .colf15x8, .max-cols-100 > .colf15x9, .max-cols-100 > .colf15x10, .max-cols-100 > .colf15x11, .max-cols-100 > .colf15x12, .max-cols-100 > .colf15x13, .max-cols-100 .colf15x14 {
     width: 100%; } }
 
 @media only screen and (max-width: 480px) {
-  .max-cols > .colf3x2, .max-cols > .colf4x2, .max-cols > .colf4x3, .max-cols > .colf5x2, .max-cols > .colf5x3, .max-cols > .colf5x4, .max-cols > .colf6x2, .max-cols > .colf6x3, .max-cols > .colf6x4, .max-cols > .colf6x5,
-  .max-cols > .colf12x2, .max-cols > .colf12x3, .max-cols > .colf12x4, .max-cols > .colf12x5, .max-cols > .colf12x6, .max-cols > .colf12x7, .max-cols > .colf12x8, .max-cols > .colf12x9, .max-cols > .colf12x10, .max-cols > .colf12x11,
-  .max-cols > .colf15x2, .max-cols > .colf15x3, .max-cols > .colf15x4, .max-cols > .colf15x5, .max-cols > .colf15x6, .max-cols > .colf15x7, .max-cols > .colf15x8, .max-cols > .colf15x9, .max-cols > .colf15x10, .max-cols > .colf15x11, .max-cols > .colf15x12, .max-cols > .colf15x13, .max-cols .colf15x14, .max-cols-100 > .colf3x2, .max-cols-100 > .colf4x2, .max-cols-100 > .colf4x3, .max-cols-100 > .colf5x2, .max-cols-100 > .colf5x3, .max-cols-100 > .colf5x4, .max-cols-100 > .colf6x2, .max-cols-100 > .colf6x3, .max-cols-100 > .colf6x4, .max-cols-100 > .colf6x5,
+  .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5,
+  .max-cols-50 > .colf12x2, .max-cols-50 > .colf12x3, .max-cols-50 > .colf12x4, .max-cols-50 > .colf12x5, .max-cols-50 > .colf12x6, .max-cols-50 > .colf12x7, .max-cols-50 > .colf12x8, .max-cols-50 > .colf12x9, .max-cols-50 > .colf12x10, .max-cols-50 > .colf12x11,
+  .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 .colf15x14, .max-cols-100 > .colf3x2, .max-cols-100 > .colf4x2, .max-cols-100 > .colf4x3, .max-cols-100 > .colf5x2, .max-cols-100 > .colf5x3, .max-cols-100 > .colf5x4, .max-cols-100 > .colf6x2, .max-cols-100 > .colf6x3, .max-cols-100 > .colf6x4, .max-cols-100 > .colf6x5,
   .max-cols-100 > .colf12x2, .max-cols-100 > .colf12x3, .max-cols-100 > .colf12x4, .max-cols-100 > .colf12x5, .max-cols-100 > .colf12x6, .max-cols-100 > .colf12x7, .max-cols-100 > .colf12x8, .max-cols-100 > .colf12x9, .max-cols-100 > .colf12x10, .max-cols-100 > .colf12x11,
   .max-cols-100 > .colf15x2, .max-cols-100 > .colf15x3, .max-cols-100 > .colf15x4, .max-cols-100 > .colf15x5, .max-cols-100 > .colf15x6, .max-cols-100 > .colf15x7, .max-cols-100 > .colf15x8, .max-cols-100 > .colf15x9, .max-cols-100 > .colf15x10, .max-cols-100 > .colf15x11, .max-cols-100 > .colf15x12, .max-cols-100 > .colf15x13, .max-cols-100 .colf15x14 {
     width: 100%; } }
-
-.full-height-cols {
-  position: relative; }
 
 .col-filler {
   position: absolute;
@@ -1541,19 +1673,25 @@ Dependencies: variables, mixins
 
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.
- * 2. The main container should also occupy full width and set min-height to 100%.
- * 3. The main container can have it's child elements as header, footer, sidebar, content wrapper.
- * 3. The header within main container can be either fixed or regular. We can also have header outside of main container.
- * 4. The footer within main container need to be positioned with bottom 0 to stick at bottom in case enough content is not there. Please refer footers section.
- * 5. The content wrapper block can have the page content in this setup. It will adjust it's height automatically.
- * 6. The sidebar within main container can have navigation links and ui widgets.
+ * 2. The main container should also occupy full width and set min-height to 100% to allow content grow vertically. The content will overflow html/body set to 100% height.
+ * 3. The main container can have it's child elements as header, footer, sidebar, content wrapper. Header and Footer can also be placed outside main container, though sidebar and content are expected within content wrapper.
+ * 4. The header within main container can be either fixed or regular. It need to add appropriate margin/padding to content wrapper in fixed header case. We can also have header outside of main container.
+ * 5. The footer within main container need to be positioned with bottom 0 to stick at bottom in case enough content is not there, but we need to add appropriate margin/padding to content wrapper. We can also have footer outside of main container.
+ * 6. The content wrapper can have the page content in this setup. It will adjust it's height automatically.
+ * 7. The sidebar within content wrapper can have navigation links and ui widgets. In presence of sidebar, appropriate columns can be used to divide content wrapper width among sidebar and content.
  */
-.container-main, .wrap-content-main {
+.container-main {
   position: relative;
   z-index: 1; }
+  .container-main .wrap-content-main {
+    position: relative;
+    z-index: 1; }
 
-.container h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container .content {
-  padding: 2.5%; }
+.content-90 {
+  position: relative;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+  width: 100% !important; }
 
 .content-80 {
   position: relative;
@@ -1578,6 +1716,17 @@ Dependencies: variables, mixins
   padding-left: 37% !important;
   padding-right: 37% !important;
   width: 100% !important; }
+
+@media only screen and (max-width: 1024px) {
+  .max-content-50 > .content-90, .max-content-50 > .content-80, .max-content-50 > .content-74, .max-content-50 > .content-50, .max-content-50 > .content-26 {
+    width: 50% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto; }
+  .max-content-100 > .content-90, .max-content-100 > .content-80, .max-content-100 > .content-74, .max-content-100 > .content-50, .max-content-100 > .content-26 {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
 
 .content-left-25 {
   position: relative;
@@ -1618,8 +1767,52 @@ Dependencies: variables, mixins
   bottom: 0;
   position: absolute; }
 
-/**********************************************************************
+.padding .padding-small-all {
+  padding: 0.5rem; }
 
+.padding .padding-small-v {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+
+.padding .padding-small-h {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+
+.padding .padding-medium-all {
+  padding: 1rem; }
+
+.padding .padding-medium-v {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.padding .padding-medium-h {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.padding .padding-large-all {
+  padding: 1.5rem; }
+
+.padding .padding-large-v {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+.padding .padding-large-h {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
+
+.padding .padding-xlarge-all {
+  padding: 2rem; }
+
+.padding .padding-xlarge-v {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+.padding .padding-xlarge-h {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+
+/**********************************************************************
+Description: It defines the html elements styles for CMGTools excluding form, form elements and table.
 Dependencies: variables, mixins
 ***********************************************************************/
 fieldset {
@@ -1627,11 +1820,11 @@ fieldset {
   fieldset legend {
     background-color: #515151;
     color: #ffffff;
-    padding: 0.5em;
-    -webkit-border-radius: 1em;
-    -moz-border-radius: 1em;
-    border-radius: 1em;
-    -khtml-border-radius: 1em; }
+    padding: 1rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px; }
 
 optgroup {
   font-style: italic; }
@@ -1641,25 +1834,22 @@ Description: It defines the form elements styles for CMGTools.
 Dependencies: variables, mixins
 ***********************************************************************/
 form {
-  margin: 0 auto;
-  margin-top: 1em;
-  margin-bottom: 1em; }
+  margin: 0 auto; }
   form.form-small {
     width: 230px;
-    padding: 10px;
+    padding: 0.5rem;
     position: relative; }
   form.form-medium {
     width: 430px;
-    padding: 10px;
+    padding: 1rem;
     position: relative; }
   form.form-large {
     width: 630px;
-    padding: 10px;
     position: relative; }
   @media only screen and (max-width: 1024px) {
     form.form-small, form.form-medium, form.form-large {
       width: 80%;
-      padding: 2em 5%; } }
+      padding: 1rem 5%; } }
 
 label {
   border: none;
@@ -1726,8 +1916,12 @@ input[type="submit"], input[type="button"], button, .btn {
 
 .btn {
   display: inline-block; }
-  .btn.btn-half {
+  .btn.btn-25 {
+    width: 25%; }
+  .btn.btn-50 {
     width: 50%; }
+  .btn.btn-75 {
+    width: 75%; }
   .btn.btn-small {
     width: 80px; }
   .btn.btn-medium {
@@ -1751,6 +1945,12 @@ input[type="submit"], input[type="button"], button, .btn {
   .btn.btn-gray {
     background-color: #7F7F7F;
     color: #ffffff; }
+    .btn.btn-gray:hover {
+      background-color: #595959;
+      color: #A5A5A5; }
+  .btn.btn-reverse:hover {
+    background-color: #e74343 !important;
+    color: #FFFFFF !important; }
 
 .frm-split-40-60 label, .element-40 {
   clear: both;
@@ -1768,6 +1968,9 @@ input[type="submit"], input[type="button"], button, .btn {
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
 .element-60 textarea, .element-60 select {
   width: 100%; }
+
+.frm-split-40-60 .frm-select-50 select {
+  width: 50%; }
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
 .frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
@@ -1822,16 +2025,21 @@ input[type="submit"], input[type="button"], button, .btn {
   -khtml-border-radius-bottom-left: 5px; }
 
 /** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
-.frm-icon-field {
+.frm-icon-element {
   position: relative;
-  display: inline-block; }
-  .frm-icon-field input[type="text"], .frm-icon-field input[type="email"], .frm-icon-field input[type="password"], .frm-icon-field textarea, .frm-icon-field select, .frm-icon-field input[type="submit"], .frm-icon-field input[type="button"], .frm-icon-field button, .frm-icon-field .btn {
-    padding-left: 24px; }
-  .frm-icon-field .cmti {
+  display: inline-block;
+  width: 100%; }
+  .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button, .frm-icon-element .btn {
+    padding-left: 1.3em; }
+  .frm-icon-element .icon, .frm-icon-element .cmti {
     position: absolute;
-    margin-top: 0.40em;
+    font-size: 1em;
+    line-height: 1.25em;
+    margin: 0.25em 0;
     padding: 0.25em;
-    padding-left: 4px; }
+    outline: none;
+    box-shadow: none;
+    border: none; }
 
 /**********************************************************************
 Description: It defines the default table style available in CMGTools.
@@ -1862,7 +2070,8 @@ Dependencies: variables, mixins, transitions, transformation
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #e1e1e1; }
+    background-color: #e1e1e1;
+    margin: 0.25em 0; }
     .cmt-select-wrap .cmt-select .cmt-selected {
       cursor: pointer;
       position: relative;
@@ -1891,118 +2100,551 @@ Dependencies: variables, mixins, transitions, transformation
       .cmt-select-wrap .cmt-select .cmt-select-list li {
         width: 100%;
         overflow: hidden;
-        cursor: pointer; }
+        cursor: pointer;
+        padding: 10px;
+        background-color: #ffffff; }
+      .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
+        color: white;
+        background-color: #e74343; }
 
-.cmt-select-wrap, .cmt-select, .cmt-selected, .s-text {
-  letter-spacing: 1px;
-  font-weight: 500 !important; }
-
-.cmt-select-list li {
-  padding: 10px;
-  background-color: #ffffff; }
-
-.cmt-select-list li:hover {
-  color: white;
-  background-color: #e74343; }
-
-.cmt-radios label {
+.cmt-choice input[type=checkbox], .cmt-choice input[type=radio] {
   cursor: pointer;
-  display: inline;
-  font-size: 1em;
-  line-height: 2.5;
-  margin-right: 2em; }
-  .cmt-radios label input[type=checkbox], .cmt-radios label input[type=radio] {
-    display: none; }
-  .cmt-radios label input[type=checkbox] + .label.pad-label::before, .cmt-radios label input[type=radio] + .label.pad-label::before {
-    margin-right: 8px; }
-  .cmt-radios label input[type=radio] + .label::before, .cmt-radios label input[type=checkbox] + .label::before {
-    font-family: "cmti-core";
-    font-weight: normal;
-    color: gray;
-    border-radius: 16px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -5px;
-    line-height: 13px; }
-  .cmt-radios label input[type=checkbox]:checked, .cmt-radios label input[type=radio]:checked, .cmt-radios label input[type=checkbox]:focus, .cmt-radios label input[type=radio]:focus {
-    outline: none !important; }
-  .cmt-radios label input[type=checkbox]:checked + .label::before, .cmt-radios label input[type=radio]:checked + .label::before {
-    display: inline-block;
-    content: '\e046';
-    background-color: #F5F8FC;
-    color: #e74343; }
-  .cmt-radios label input[type=checkbox]:checked + .label, .cmt-radios label input[type=radio]:checked + .label {
-    color: #b51717; }
-  .cmt-radios label input[type=checkbox]:hover + .label::before, .cmt-radios label input[type=radio]:hover + .label::before, .cmt-radios label input[type=checkbox] + .label:hover::before, .cmt-radios label input[type=radio] + .label:hover::before {
-    color: #ff5555; }
-  .cmt-radios label input[type=checkbox]:disabled + .label::before, .cmt-radios label input[type=radio]:disabled + .label::before {
-    background-color: #DDD !important;
-    color: #BBB; }
-  .cmt-radios label input[type=radio] + .label::before, .cmt-radios label input[type=radio]:disabled + .label::before {
-    content: "\e045"; }
-  .cmt-radios label input[type=radio]:checked + .label::before {
-    content: "\e046"; }
-  .cmt-radios label input[type=checkbox] + .label::before, .cmt-radios label input[type=checkbox]:disabled + .label::before {
-    content: "W"; }
-  .cmt-radios label input[type=checkbox]:checked + .label::before {
-    content: "Y"; }
+  display: none; }
 
-.box-avatar {
-  border: 1px solid white;
-  padding: 1em; }
-  .box-avatar .avatar img {
+.cmt-choice input[type=checkbox] + .label.pad-label::before, .cmt-choice input[type=radio] + .label.pad-label::before {
+  margin-right: 8px; }
+
+.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=checkbox] + .label::before {
+  font-family: "cmti-core";
+  font-weight: normal;
+  color: gray;
+  border-radius: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  line-height: 13px; }
+
+.cmt-choice input[type=checkbox]:checked, .cmt-choice input[type=radio]:checked, .cmt-choice input[type=checkbox]:focus, .cmt-choice input[type=radio]:focus {
+  outline: none !important; }
+
+.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-choice input[type=radio]:checked + .label::before {
+  display: inline-block;
+  content: '\e046';
+  background-color: #F5F8FC;
+  color: #e74343; }
+
+.cmt-choice input[type=checkbox]:checked + .label, .cmt-choice input[type=radio]:checked + .label {
+  color: #b51717; }
+
+.cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=radio] + .label:hover::before {
+  color: #ff5555; }
+
+.cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
+  background-color: #DDD !important;
+  color: #BBB; }
+
+.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
+  content: "\e045"; }
+
+.cmt-choice input[type=radio]:checked + .label::before {
+  content: "\e046"; }
+
+.cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before {
+  content: "W"; }
+
+.cmt-choice input[type=checkbox]:checked + .label::before {
+  content: "Y"; }
+
+/**********************************************************************
+Description: It defines the styles for the menu components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+.nav {
+  display: block; }
+  .nav li {
+    display: inline-block; }
+    .nav li a {
+      -moz-transition: all 350ms ease-in-out 0s;
+      -ms-transition: all 350ms ease-in-out 0s;
+      -o-transition: all 350ms ease-in-out 0s;
+      -webkit-transition: all 350ms ease-in-out 0s;
+      transition: all 350ms ease-in-out 0s;
+      display: inline-block;
+      width: 100%; }
+
+.vnav {
+  display: block; }
+  .vnav li {
+    display: inline-block;
     width: 100%; }
+    .vnav li a {
+      -moz-transition: all 350ms ease-in-out 0s;
+      -ms-transition: all 350ms ease-in-out 0s;
+      -o-transition: all 350ms ease-in-out 0s;
+      -webkit-transition: all 350ms ease-in-out 0s;
+      transition: all 350ms ease-in-out 0s;
+      display: inline-block;
+      width: 100%;
+      text-align: center; }
 
-#wrap-avatar-uploader {
-  display: none;
+.nav-table {
+  display: table;
+  width: 100%; }
+  .nav-table li {
+    display: table-cell;
+    text-align: center; }
+    .nav-table li a {
+      -moz-transition: all 350ms ease-in-out 0s;
+      -ms-transition: all 350ms ease-in-out 0s;
+      -o-transition: all 350ms ease-in-out 0s;
+      -webkit-transition: all 350ms ease-in-out 0s;
+      transition: all 350ms ease-in-out 0s;
+      display: inline-block;
+      width: 100%; }
+
+/* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
+   It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
+.hnav-regular {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid white;
+  position: relative; }
+  .hnav-regular > li {
+    display: inline-block;
+    text-align: left;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid white;
+    margin-bottom: -5px;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s; }
+    .hnav-regular > li > a {
+      color: #363636;
+      font-size: 1em;
+      line-height: 48px;
+      padding: 0 15px;
+      text-transform: uppercase; }
+    .hnav-regular > li:hover > a {
+      background-color: #CDA828;
+      color: #ffffff; }
+  .hnav-regular li a {
+    display: inline-block;
+    text-decoration: none;
+    -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+    -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+    -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+    -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+    transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s; }
+  .hnav-regular li.active > a {
+    background-color: #515151;
+    color: #98a2ad; }
+  .hnav-regular li:hover .nav-sub {
+    display: block; }
+  .hnav-regular .nav-sub {
+    display: none;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    padding: 10px 2%;
+    width: 96%;
+    background-color: #515151;
+    -webkit-box-shadow: 1px 1px 2px 0px #515151;
+    -moz-box-shadow: 1px 1px 2px 0px #515151;
+    box-shadow: 1px 1px 2px 0px #515151; }
+    .hnav-regular .nav-sub > li {
+      display: inline-block;
+      float: none;
+      padding: 10px 1%;
+      vertical-align: top;
+      width: 22%; }
+      .hnav-regular .nav-sub > li > a {
+        font-size: 1em;
+        margin-bottom: 10px;
+        text-transform: uppercase; }
+      .hnav-regular .nav-sub > li a {
+        line-height: 20px;
+        color: #c3c8cf; }
+      .hnav-regular .nav-sub > li li {
+        float: none;
+        padding-left: 5px;
+        -moz-transition: padding 250ms ease-out 0s;
+        -ms-transition: padding 250ms ease-out 0s;
+        -o-transition: padding 250ms ease-out 0s;
+        -webkit-transition: padding 250ms ease-out 0s;
+        transition: padding 250ms ease-out 0s; }
+      .hnav-regular .nav-sub > li li:hover {
+        padding-left: 10px; }
+  @media only screen and (max-width: 1024px) {
+    .hnav-regular li, .hnav-regular a {
+      width: 100%; }
+    .hnav-regular .nav-sub {
+      position: relative;
+      top: 0px; }
+      .hnav-regular .nav-sub li, .hnav-regular .nav-sub a {
+        width: 100%; } }
+
+/* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
+.vnav-regular {
+  border: 5px solid white;
+  position: relative; }
+  .vnav-regular li {
+    text-align: left;
+    border-bottom: border-default;
+    position: relative;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s; }
+    .vnav-regular li .last {
+      border: none; }
+  .vnav-regular a {
+    display: block;
+    background-color: #f2f2f2;
+    color: #363636;
+    font-size: 1em;
+    line-height: 35px;
+    width: 98%;
+    padding: 0 1%;
+    text-decoration: none;
+    -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+    -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+    -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+    -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+    transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s; }
+  .vnav-regular li:hover > a {
+    background-color: #CDA828;
+    color: #ffffff; }
+  .vnav-regular li:hover > .nav-sub {
+    display: block; }
+  .vnav-regular .nav-sub {
+    display: none;
+    position: absolute;
+    top: -2px;
+    width: 250px;
+    margin-left: 100%;
+    border: 5px solid white; }
+  @media only screen and (max-width: 1024px) {
+    .vnav-regular .nav-sub {
+      position: relative;
+      top: 0px;
+      margin-left: 0;
+      width: 100%;
+      border: none; }
+      .vnav-regular .nav-sub a {
+        background-color: #515151; } }
+
+/* Sliding Menu - It works together with Sliding Menu plugin shipped with CMGTools JS. */
+.vnav-slider-wrap {
   position: absolute;
   top: 0;
-  left: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000000; }
+  display: none;
+  z-index: 10000000; }
+  .vnav-slider-wrap .vnav-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    background-color: #cccccc;
+    color: #5c5c5c; }
+    .vnav-slider-wrap .vnav-slider.vnav-slider-left {
+      left: -320px; }
+      .vnav-slider-wrap .vnav-slider.vnav-slider-left .btn-close {
+        padding-left: 2em; }
+        .vnav-slider-wrap .vnav-slider.vnav-slider-left .btn-close .btn-close-icon {
+          margin-right: 0.5em; }
+    .vnav-slider-wrap .vnav-slider.vnav-slider-right {
+      right: -320px; }
+      .vnav-slider-wrap .vnav-slider.vnav-slider-right .btn-close {
+        padding-right: 2em; }
+        .vnav-slider-wrap .vnav-slider.vnav-slider-right .btn-close .btn-close-icon {
+          margin-left: 0.5em; }
+    @media only screen and (max-width: 480px) {
+      .vnav-slider-wrap .vnav-slider.vnav-slider-left {
+        width: 100%;
+        left: -100%; }
+      .vnav-slider-wrap .vnav-slider.vnav-slider-right {
+        width: 100%;
+        right: -100%; } }
+  .vnav-slider-wrap .vnav-slider-header .btn-close {
+    cursor: pointer;
+    padding: 1em; }
+    .vnav-slider-wrap .vnav-slider-header .btn-close:hover {
+      color: #7F7F7F; }
+  .vnav-slider-wrap .vnav-slider-header hr {
+    border-bottom: 1px solid #8d741c; }
+  .vnav-slider-wrap .vnav-slider-menu {
+    width: 100%;
+    height: 100%;
+    padding-left: 2em;
+    padding-right: 2em; }
+    .vnav-slider-wrap .vnav-slider-menu ul li {
+      padding: 0.5em 0; }
+      .vnav-slider-wrap .vnav-slider-menu ul li a {
+        color: #5c5c5c;
+        text-align: left; }
+        .vnav-slider-wrap .vnav-slider-menu ul li a:hover {
+          color: #298ccf; }
 
-#avatar-uploader {
-  width: 360px;
-  height: 512px;
-  background-color: white;
-  position: absolute; }
-  #avatar-uploader .header {
-    position: relative;
-    padding-left: 10px;
-    height: 56px;
-    line-height: 56px; }
-    #avatar-uploader .header span {
+/**********************************************************************
+Description: It defines the styles for the social network menu components available in CMGTools.
+Dependencies: variables, variables-ext, mixins, CMGTools IconLib
+***********************************************************************/
+.menu-social a {
+  color: #ffffff;
+  margin: 0;
+  display: inline-block;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s; }
+  .menu-social a:hover {
+    background-color: #e74343 !important; }
+
+.menu-social .cmti {
+  margin: 0.25rem 0.5rem; }
+
+.menu-social .cmti-bkg.cmti-social-facebook {
+  background-color: #3b5998; }
+
+.menu-social .cmti-bkg.cmti-social-twitter {
+  background-color: #00aced; }
+
+.menu-social .cmti-bkg.cmti-social-google {
+  background-color: #dd4b39; }
+
+.menu-social .cmti-bkg.cmti-social-google-plus {
+  background-color: #dd4b39; }
+
+.menu-social .cmti-bkg.cmti-social-linkedin {
+  background-color: #007bb5; }
+
+.menu-social .cmti-bkg.cmti-social-instagram {
+  background-color: #125688; }
+
+.menu-social .cmti-bkg.cmti-social-pintrest {
+  background-color: #cb2027; }
+
+.menu-social .cmti-bkg.cmti-social-youtube {
+  background-color: #bb0000; }
+
+.menu-social .cmti-text.cmti-social-facebook {
+  color: #3b5998; }
+
+.menu-social .cmti-text.cmti-social-twitter {
+  color: #00aced; }
+
+.menu-social .cmti-text.cmti-social-google {
+  color: #dd4b39; }
+
+.menu-social .cmti-text.cmti-social-google-plus {
+  color: #dd4b39; }
+
+.menu-social .cmti-text.cmti-social-linkedin {
+  color: #007bb5; }
+
+.menu-social .cmti-text.cmti-social-instagram {
+  color: #125688; }
+
+.menu-social .cmti-text.cmti-social-pintrest {
+  color: #cb2027; }
+
+.menu-social .cmti-text.cmti-social-youtube {
+  color: #bb0000; }
+
+.menu-social .cmti-text:hover {
+  color: #e74343; }
+
+.menu-social .btn {
+  color: #ffffff !important; }
+  .menu-social .btn.facebook {
+    background-color: #3b5998; }
+  .menu-social .btn.twitter {
+    background-color: #00aced; }
+  .menu-social .btn.google {
+    background-color: #dd4b39; }
+  .menu-social .btn.google-plus {
+    background-color: #dd4b39; }
+  .menu-social .btn.linkedin {
+    background-color: #007bb5; }
+  .menu-social .btn.instagram {
+    background-color: #125688; }
+  .menu-social .btn.pintrest {
+    background-color: #cb2027; }
+  .menu-social .btn.youtube {
+    background-color: #bb0000; }
+
+/**********************************************************************
+Description: It defines the styles for the header components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+.header {
+  position: relative; }
+  .header.header-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000; }
+  .header.header-absolute {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10000; }
+
+.header-standard {
+  background-color: #363636;
+  color: #ffffff; }
+  .header-standard .logo {
+    cursor: pointer;
+    margin: 5px;
+    width: 140px;
+    display: inline-block;
+    position: absolute;
+    z-index: 2; }
+  .header-standard #menu-main {
+    margin-top: 5px;
+    text-align: right;
+    display: block;
+    z-index: 1; }
+  .header-standard #btn-mobile-menu {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    margin: 10px;
+    display: none;
+    z-index: 2; }
+    .header-standard #btn-mobile-menu span {
+      width: 36px;
+      height: 36px;
+      display: inline-block; }
+  @media only screen and (max-width: 1024px) {
+    .header-standard .logo {
+      width: 70px; }
+    .header-standard #menu-main {
+      margin-top: 55px;
+      display: none; } }
+
+/**********************************************************************
+Description: It defines the styles for the footer components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+.footer-standard {
+  background-color: #f2f2f2;
+  color: #363636;
+  width: 100%;
+  min-height: 50px;
+  z-index: 10000;
+  position: relative; }
+  .footer-standard.sticky {
+    position: absolute;
+    left: 0px;
+    bottom: 0px; }
+  .footer-standard p {
+    color: #363636; }
+
+/**********************************************************************
+Description: It defines the styles for the sidebar components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+.sidebar-standard {
+  position: relative; }
+  .sidebar-standard .title {
+    display: none;
+    background-color: #CDA828;
+    line-height: 32px;
+    padding: 5px;
+    font-size: 16px; }
+    .sidebar-standard .title span {
+      float: right;
       display: inline-block;
+      cursor: pointer; }
+  .sidebar-standard .menu {
+    display: block; }
+  @media only screen and (max-width: 1024px) {
+    .sidebar-standard .title {
+      display: block; }
+    .sidebar-standard .menu {
+      display: none; } }
+
+/**********************************************************************
+Description: It defines the breadcrumbs available for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+.breadcrumb {
+  list-style: none; }
+  .breadcrumb li {
+    display: inline-block; }
+  .breadcrumb a {
+    display: inline-block; }
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .popup .popup-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .popup .popup-data {
+    position: relative;
+    z-index: 10;
+    background-color: #f2f2f2;
+    -webkit-box-shadow: 1px 1px 5px 0px #cccccc;
+    -moz-box-shadow: 1px 1px 5px 0px #cccccc;
+    box-shadow: 1px 1px 5px 0px #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px; }
+    .popup .popup-data.popup-data-small {
+      height: 200px;
+      width: 400px; }
+    .popup .popup-data.popup-data-medium {
+      height: 300px;
+      width: 600px; }
+    .popup .popup-data.popup-data-large {
+      height: 400px;
+      width: 800px; }
+    .popup .popup-data .popup-close {
       position: absolute;
-      top: 0;
-      right: 10px; }
-      #avatar-uploader .header span input[type="file"] {
-        cursor: pointer;
-        height: 100%;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; }
-  #avatar-uploader .content {
-    padding: 10px; }
-    #avatar-uploader .content .actions {
-      width: 40px;
-      height: 320px;
-      float: left; }
-      #avatar-uploader .content .actions .cmt-icon {
-        margin: 10px 0;
-        cursor: pointer; }
-        #avatar-uploader .content .actions .cmt-icon:hover {
-          background-color: #f2f2f2; }
-    #avatar-uploader .content .avatar-wrap {
-      margin-left: 20px;
-      width: 280px;
-      height: 320px;
-      float: left;
-      background-color: #f2f2f2; }
+      top: -5px;
+      right: -5px;
+      display: inline-block;
+      color: #CDA828;
+      cursor: pointer; }
+    .popup .popup-data .popup-wrap-title {
+      width: 100%;
+      background-color: #515151;
+      color: #98a2ad;
+      -moz-border-radius-top-left: 5px;
+      -moz-border-radius-top-right: 5px;
+      -webkit-border-radius-top-left: 5px;
+      -webkit-border-radius-top-right: 5px;
+      border-radius: 5px 5px 0 0;
+      -khtml-border-radius-top-left: 5px;
+      -khtml-border-radius-top-right: 5px;
+      padding: 1rem; }
+      .popup .popup-data .popup-wrap-title .popup-title {
+        font-size: 1.5em;
+        font-weight: bold; }
+    .popup .popup-data .popup-content {
+      padding: 1rem; }
 
 /**********************************************************************
 Description: It defines the styles for the block components forming the page. We can devide the entire page in one or more blocks. 
@@ -2094,10 +2736,249 @@ Javascript: jquery, cmt-block
   height: 100%;
   overflow: hidden; }
 
+.box-form {
+  position: relative; }
+  .box-form .btn-edit {
+    cursor: pointer; }
+  .box-form .wrap-info {
+    display: block; }
+  .box-form .wrap-form {
+    display: none; }
+
+.box-form-regular .btn-edit {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF; }
+  .box-form-regular .btn-edit:hover {
+    color: white; }
+
+.grid-data .grid-rows .grid-rows-header {
+  display: none;
+  font-weight: bold; }
+
+.grid-data .grid-rows .grid-row:nth-child(even) {
+  background-color: #f2f2f2; }
+
+.grid-data .grid-rows .grid-row .grid-row-data span {
+  display: inline-block;
+  width: 48%;
+  padding: 1%;
+  word-wrap: break-word; }
+
+.grid-data .grid-rows .grid-rows-footer {
+  display: none;
+  font-weight: bold; }
+
+@media only screen and (min-width: 1025px) {
+  .grid-data .grid-rows .grid-rows-header {
+    display: block; }
+  .grid-data .grid-rows .grid-row .grid-row-data .title {
+    display: none; }
+  .grid-data .grid-rows .grid-row .grid-row-data span {
+    width: 100%;
+    padding: 0; }
+  .grid-data .grid-rows .grid-rows-footer {
+    display: block; } }
+
+.grid-basic {
+  background-color: #cccccc;
+  padding: 10px; }
+  .grid-basic .grid-header {
+    background-color: #515151;
+    color: #98a2ad;
+    padding: 0.25em 10px;
+    text-align: right;
+    min-height: 2em; }
+    .grid-basic .grid-header .info {
+      display: inline-block;
+      float: left;
+      padding: 0.25em 0.5em; }
+  .grid-basic .grid-footer {
+    background-color: #515151;
+    color: #98a2ad;
+    padding: 0.25em 10px;
+    text-align: right;
+    min-height: 2em; }
+    .grid-basic .grid-footer .info {
+      display: inline-block;
+      float: left;
+      padding: 0.25em 0.5em; }
+  .grid-basic .grid-rows {
+    margin: 10px 0; }
+  .grid-basic .avatar {
+    width: 48px; }
+  .grid-basic .pagination, .grid-basic .pagination li {
+    display: inline-block;
+    list-style: none; }
+  .grid-basic .pagination li {
+    margin: 0 0.5em; }
+    .grid-basic .pagination li span, .grid-basic .pagination li a {
+      display: inline-block;
+      background-color: #CDA828;
+      color: white;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -khtml-border-radius: 5px;
+      font-size: 1em;
+      padding: 0.25em 0.5em;
+      -moz-transition: background-color 250ms ease-in-out 0s;
+      -ms-transition: background-color 250ms ease-in-out 0s;
+      -o-transition: background-color 250ms ease-in-out 0s;
+      -webkit-transition: background-color 250ms ease-in-out 0s;
+      transition: background-color 250ms ease-in-out 0s; }
+      .grid-basic .pagination li span:hover, .grid-basic .pagination li a:hover {
+        background-color: #e0c461;
+        color: #8d741c; }
+    .grid-basic .pagination li.disabled span, .grid-basic .pagination li.disabled a, .grid-basic .pagination li.disabled:hover span, .grid-basic .pagination li.disabled:hover a {
+      background-color: gray;
+      color: #f2f2f2; }
+
+.pagination-basic {
+  display: inline-block; }
+  .pagination-basic li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px; }
+  .pagination-basic a {
+    background-color: #CDA828;
+    color: #98a2ad;
+    padding: 3px 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    text-decoration: none; }
+  .pagination-basic .active a, .pagination-basic a:hover {
+    background-color: #f2f2f2;
+    color: #363636;
+    -moz-transition: 0.5s; }
+
+.pagination-detailed {
+  margin: 10px 0; }
+  .pagination-detailed .info {
+    float: left; }
+  .pagination-detailed .pagination {
+    float: right; }
+  .pagination-detailed .pagination, .pagination-detailed .pagination li {
+    display: inline-block;
+    list-style: none; }
+  .pagination-detailed .pagination li {
+    margin: 0 2px;
+    font-size: 1em;
+    line-heigh: 1em; }
+  .pagination-detailed .pagination .prev, .pagination-detailed .pagination .next, .pagination-detailed .pagination li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    height: 1.6em;
+    background-color: #2b2b2b;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s; }
+  .pagination-detailed .pagination li a {
+    padding: 2px 8px; }
+  .pagination-detailed .pagination .disabled span, .pagination-detailed .pagination .disabled span:hover {
+    background-color: #515151;
+    padding: 2px 8px;
+    height: 1.6em; }
+  .pagination-detailed .pagination .disabled span {
+    line-height: 1.6em; }
+  .pagination-detailed .pagination .active, .pagination-detailed .pagination .active a, .pagination-detailed .pagination li a:hover, .pagination-detailed .pagination .next:hover, .pagination-detailed .pagination .prev:hover {
+    background-color: #515151;
+    color: #f2f2f2;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s; }
+
+.sort {
+  cursor: pointer;
+  padding-left: 10px; }
+
+.sort-title {
+  padding-left: 10px; }
+
+.sort-asc {
+  color: #a5d75a; }
+
+.sort-desc {
+  color: #e74343; }
+
 /**********************************************************************
 Description: It defines the styles for the Blog Widgets of cms module for CMSGears following components approach.
 Dependencies: variables, mixins
 ***********************************************************************/
+.blog-posts-basic .post {
+  margin-bottom: 1em; }
+  .blog-posts-basic .post .post-banner {
+    padding: 1em; }
+    .blog-posts-basic .post .post-banner img {
+      width: 100%; }
+      .blog-posts-basic .post .post-banner img.bkg-fill {
+        background-color: #f2f2f2; }
+  .blog-posts-basic .post .post-author {
+    position: relative; }
+    .blog-posts-basic .post .post-author .post-author-avatar {
+      width: 80px;
+      height: 80px; }
+      .blog-posts-basic .post .post-author .post-author-avatar img {
+        width: 100%; }
+      .blog-posts-basic .post .post-author .post-author-avatar.circled1 {
+        background-color: #f2f2f2; }
+    .blog-posts-basic .post .post-author .post-author-info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block; }
+  .blog-posts-basic .post .post-content {
+    padding: 1em; }
+    .blog-posts-basic .post .post-content .post-title {
+      font-size: 1.5em; }
+  @media only screen and (min-width: 769px) {
+    .blog-posts-basic .post .post-banner {
+      float: left;
+      width: 350px; }
+    .blog-posts-basic .post .post-author {
+      width: 100%;
+      padding-left: 350px;
+      position: relative; } }
+
+.post-single-basic {
+  padding: 1em;
+  background-color: white; }
+  .post-single-basic .post-banner {
+    height: 150px; }
+    .post-single-basic .post-banner img {
+      width: 100%; }
+  .post-single-basic .post-author {
+    position: relative; }
+    .post-single-basic .post-author .post-author-avatar {
+      display: inline-block;
+      width: 80px;
+      height: 80px; }
+      .post-single-basic .post-author .post-author-avatar img {
+        width: 100%; }
+      .post-single-basic .post-author .post-author-avatar.circled1 {
+        background-color: #f2f2f2; }
+    .post-single-basic .post-author .post-author-info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block; }
+  .post-single-basic .post-content {
+    margin-bottom: 1em; }
+  @media only screen and (min-width: 481px) {
+    .post-single-basic .post-banner {
+      height: 250px; } }
+  @media only screen and (min-width: 1025px) {
+    .post-single-basic .post-banner {
+      height: 350px; } }
+
 .blog-posts-regular .post {
   margin: 10px 0;
   border: 1px solid #515151;
@@ -2180,17 +3061,6 @@ Dependencies: variables, mixins
     -webkit-transition: all 250ms ease-in-out 0s;
     transition: all 250ms ease-in-out 0s; }
 
-/**********************************************************************
-Description: It defines the breadcrumbs available for CMGTools.
-Dependencies: variables, mixins
-***********************************************************************/
-.breadcrumb {
-  list-style: none; }
-  .breadcrumb li {
-    display: inline-block; }
-  .breadcrumb a {
-    display: inline-block; }
-
 .file-uploader {
   position: relative; }
   .file-uploader .postview {
@@ -2267,6 +3137,63 @@ Dependencies: variables, mixins
   .file-uploader .fields {
     position: relative; }
 
+.box-avatar {
+  border: 1px solid white;
+  padding: 1em; }
+  .box-avatar .avatar img {
+    width: 100%; }
+
+#wrap-avatar-uploader {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000000; }
+
+#avatar-uploader {
+  width: 360px;
+  height: 512px;
+  background-color: white;
+  position: absolute; }
+  #avatar-uploader .header {
+    position: relative;
+    padding-left: 10px;
+    height: 56px;
+    line-height: 56px; }
+    #avatar-uploader .header span {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 10px; }
+      #avatar-uploader .header span input[type="file"] {
+        cursor: pointer;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; }
+  #avatar-uploader .content {
+    padding: 10px; }
+    #avatar-uploader .content .actions {
+      width: 40px;
+      height: 320px;
+      float: left; }
+      #avatar-uploader .content .actions .cmt-icon {
+        margin: 10px 0;
+        cursor: pointer; }
+        #avatar-uploader .content .actions .cmt-icon:hover {
+          background-color: #f2f2f2; }
+    #avatar-uploader .content .avatar-wrap {
+      margin-left: 20px;
+      width: 280px;
+      height: 320px;
+      float: left;
+      background-color: #f2f2f2; }
+
 .flipper {
   position: relative;
   z-index: 1;
@@ -2294,23 +3221,6 @@ Dependencies: variables, mixins
       position: absolute;
       top: 0;
       height: 100%; }
-
-/**********************************************************************
-Description: It defines the styles for the footer components available in CMGTools.
-Dependencies: variables, variables-ext, mixins
-***********************************************************************/
-.footer-standard {
-  background-color: #f2f2f2;
-  color: #363636;
-  width: 100%;
-  min-height: 50px;
-  z-index: 10000; }
-  .footer-standard.sticky {
-    position: absolute;
-    left: 0px;
-    bottom: 0px; }
-  .footer-standard p {
-    color: #363636; }
 
 /* The basic gallery to be used for the default gallery widget from CMSGears core module. We can also use it for any other platform. 
  * The preferred image size for gallery item is 360 x 270. We can maintain the same aspect ratio for larger images for expected results. */
@@ -2576,420 +3486,5 @@ Dependencies: variables, variables-ext, mixins
       width: 100%; }
       .gallery-basic .colf3 .flip-container {
         padding: 0 0 8px; } }
-
-.grid-data .grid-rows .grid-rows-header {
-  display: none;
-  font-weight: bold; }
-
-.grid-data .grid-rows .grid-row:nth-child(even) {
-  background-color: #f2f2f2; }
-
-.grid-data .grid-rows .grid-row .grid-row-data span {
-  display: inline-block;
-  width: 48%;
-  padding: 1%;
-  word-wrap: break-word; }
-
-.grid-data .grid-rows .grid-rows-footer {
-  display: none;
-  font-weight: bold; }
-
-@media only screen and (min-width: 1025px) {
-  .grid-data .grid-rows .grid-rows-header {
-    display: block; }
-  .grid-data .grid-rows .grid-row .grid-row-data .title {
-    display: none; }
-  .grid-data .grid-rows .grid-row .grid-row-data span {
-    width: 100%;
-    padding: 0; }
-  .grid-data .grid-rows .grid-rows-footer {
-    display: block; } }
-
-.grid-basic {
-  background-color: #cccccc;
-  padding: 10px; }
-  .grid-basic .grid-header {
-    background-color: #515151;
-    color: #98a2ad;
-    padding: 0.25em 10px;
-    text-align: right;
-    min-height: 2em; }
-    .grid-basic .grid-header .info {
-      display: inline-block;
-      float: left;
-      padding: 0.25em 0.5em; }
-  .grid-basic .grid-footer {
-    background-color: #515151;
-    color: #98a2ad;
-    padding: 0.25em 10px;
-    text-align: right;
-    min-height: 2em; }
-    .grid-basic .grid-footer .info {
-      display: inline-block;
-      float: left;
-      padding: 0.25em 0.5em; }
-  .grid-basic .grid-rows {
-    margin: 10px 0; }
-  .grid-basic .avatar {
-    width: 48px; }
-  .grid-basic .pagination, .grid-basic .pagination li {
-    display: inline-block;
-    list-style: none; }
-  .grid-basic .pagination li {
-    margin: 0 0.5em; }
-    .grid-basic .pagination li span, .grid-basic .pagination li a {
-      display: inline-block;
-      background-color: #CDA828;
-      color: white;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      -khtml-border-radius: 5px;
-      font-size: 1em;
-      padding: 0.25em 0.5em;
-      -moz-transition: background-color 250ms ease-in-out 0s;
-      -ms-transition: background-color 250ms ease-in-out 0s;
-      -o-transition: background-color 250ms ease-in-out 0s;
-      -webkit-transition: background-color 250ms ease-in-out 0s;
-      transition: background-color 250ms ease-in-out 0s; }
-      .grid-basic .pagination li span:hover, .grid-basic .pagination li a:hover {
-        background-color: #e0c461;
-        color: #8d741c; }
-    .grid-basic .pagination li.disabled span, .grid-basic .pagination li.disabled a, .grid-basic .pagination li.disabled:hover span, .grid-basic .pagination li.disabled:hover a {
-      background-color: gray;
-      color: #f2f2f2; }
-
-/**********************************************************************
-Description: It defines the styles for the header components available in CMGTools.
-Dependencies: variables, variables-ext, mixins
-***********************************************************************/
-.header {
-  position: relative; }
-  .header.header-fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10000; }
-  .header.header-absolute {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10000; }
-
-.header-standard {
-  background-color: #363636;
-  color: #ffffff; }
-  .header-standard .logo {
-    cursor: pointer;
-    margin: 5px;
-    width: 140px;
-    display: inline-block;
-    position: absolute;
-    z-index: 2; }
-  .header-standard #menu-main {
-    margin-top: 5px;
-    text-align: right;
-    display: block;
-    z-index: 1; }
-  .header-standard #btn-mobile-menu {
-    position: absolute;
-    right: 0px;
-    cursor: pointer;
-    margin: 10px;
-    display: none;
-    z-index: 2; }
-    .header-standard #btn-mobile-menu span {
-      width: 36px;
-      height: 36px;
-      display: inline-block; }
-  @media only screen and (max-width: 1024px) {
-    .header-standard .logo {
-      width: 70px; }
-    .header-standard #menu-main {
-      margin-top: 55px;
-      display: none; } }
-
-/**********************************************************************
-Description: It defines the styles for the menu components available in CMGTools.
-Dependencies: variables, variables-ext, mixins
-***********************************************************************/
-.nav {
-  display: block; }
-  .nav li {
-    display: inline-block; }
-    .nav li a {
-      -moz-transition: all 350ms ease-in-out 0s;
-      -ms-transition: all 350ms ease-in-out 0s;
-      -o-transition: all 350ms ease-in-out 0s;
-      -webkit-transition: all 350ms ease-in-out 0s;
-      transition: all 350ms ease-in-out 0s;
-      display: inline-block;
-      width: 100%; }
-
-.vnav {
-  display: block; }
-  .vnav li {
-    display: inline-block;
-    width: 100%; }
-    .vnav li a {
-      -moz-transition: all 350ms ease-in-out 0s;
-      -ms-transition: all 350ms ease-in-out 0s;
-      -o-transition: all 350ms ease-in-out 0s;
-      -webkit-transition: all 350ms ease-in-out 0s;
-      transition: all 350ms ease-in-out 0s;
-      display: inline-block;
-      width: 100%;
-      text-align: center; }
-
-/* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
-   It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
-.hnav-regular {
-  background-color: #f2f2f2;
-  border-bottom: 1px solid white;
-  position: relative; }
-  .hnav-regular > li {
-    display: inline-block;
-    text-align: left;
-    background-color: #f2f2f2;
-    border-bottom: 1px solid white;
-    margin-bottom: -5px;
-    -moz-transition: all 250ms ease-in-out 0s;
-    -ms-transition: all 250ms ease-in-out 0s;
-    -o-transition: all 250ms ease-in-out 0s;
-    -webkit-transition: all 250ms ease-in-out 0s;
-    transition: all 250ms ease-in-out 0s; }
-    .hnav-regular > li > a {
-      color: #363636;
-      font-size: 1em;
-      line-height: 48px;
-      padding: 0 15px;
-      text-transform: uppercase; }
-    .hnav-regular > li:hover > a {
-      background-color: #CDA828;
-      color: #ffffff; }
-  .hnav-regular li a {
-    display: inline-block;
-    text-decoration: none;
-    -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-    -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-    -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-    -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-    transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s; }
-  .hnav-regular li.active > a {
-    background-color: #515151;
-    color: #98a2ad; }
-  .hnav-regular li:hover .nav-sub {
-    display: block; }
-  .hnav-regular .nav-sub {
-    display: none;
-    position: absolute;
-    top: 53px;
-    left: 0;
-    padding: 10px 2%;
-    width: 96%;
-    background-color: #515151;
-    -webkit-box-shadow: 1px 1px 2px 0px #515151;
-    -moz-box-shadow: 1px 1px 2px 0px #515151;
-    box-shadow: 1px 1px 2px 0px #515151; }
-    .hnav-regular .nav-sub > li {
-      display: inline-block;
-      float: none;
-      padding: 10px 1%;
-      vertical-align: top;
-      width: 22%; }
-      .hnav-regular .nav-sub > li > a {
-        font-size: 1em;
-        margin-bottom: 10px;
-        text-transform: uppercase; }
-      .hnav-regular .nav-sub > li a {
-        line-height: 20px;
-        color: #c3c8cf; }
-      .hnav-regular .nav-sub > li li {
-        float: none;
-        padding-left: 5px;
-        -moz-transition: padding 250ms ease-out 0s;
-        -ms-transition: padding 250ms ease-out 0s;
-        -o-transition: padding 250ms ease-out 0s;
-        -webkit-transition: padding 250ms ease-out 0s;
-        transition: padding 250ms ease-out 0s; }
-      .hnav-regular .nav-sub > li li:hover {
-        padding-left: 10px; }
-  @media only screen and (max-width: 1024px) {
-    .hnav-regular li, .hnav-regular a {
-      width: 100%; }
-    .hnav-regular .nav-sub {
-      position: relative;
-      top: 0px; }
-      .hnav-regular .nav-sub li, .hnav-regular .nav-sub a {
-        width: 100%; } }
-
-/* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
-.vnav-regular {
-  border: 5px solid white;
-  position: relative; }
-  .vnav-regular li {
-    text-align: left;
-    border-bottom: border-default;
-    position: relative;
-    -moz-transition: all 250ms ease-in-out 0s;
-    -ms-transition: all 250ms ease-in-out 0s;
-    -o-transition: all 250ms ease-in-out 0s;
-    -webkit-transition: all 250ms ease-in-out 0s;
-    transition: all 250ms ease-in-out 0s; }
-    .vnav-regular li .last {
-      border: none; }
-  .vnav-regular a {
-    display: block;
-    background-color: #f2f2f2;
-    color: #363636;
-    font-size: 1em;
-    line-height: 35px;
-    width: 98%;
-    padding: 0 1%;
-    text-decoration: none;
-    -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-    -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-    -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-    -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-    transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s; }
-  .vnav-regular li:hover > a {
-    background-color: #CDA828;
-    color: #ffffff; }
-  .vnav-regular li:hover > .nav-sub {
-    display: block; }
-  .vnav-regular .nav-sub {
-    display: none;
-    position: absolute;
-    top: -2px;
-    width: 250px;
-    margin-left: 100%;
-    border: 5px solid white; }
-  @media only screen and (max-width: 1024px) {
-    .vnav-regular .nav-sub {
-      position: relative;
-      top: 0px;
-      margin-left: 0;
-      width: 100%;
-      border: none; }
-      .vnav-regular .nav-sub a {
-        background-color: #515151; } }
-
-.pagination-basic {
-  display: inline-block; }
-  .pagination-basic li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 5px; }
-  .pagination-basic a {
-    background-color: #CDA828;
-    color: #98a2ad;
-    padding: 3px 8px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -khtml-border-radius: 5px;
-    text-decoration: none; }
-  .pagination-basic .active a, .pagination-basic a:hover {
-    background-color: #f2f2f2;
-    color: #363636;
-    -moz-transition: 0.5s; }
-
-.popup {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 999999999;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.5); }
-  .popup .popup-background {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    background-color: rgba(0, 0, 0, 0.5); }
-  .popup .popup-data {
-    position: relative;
-    z-index: 10;
-    background-color: #f2f2f2;
-    -webkit-box-shadow: 1px 1px 5px 0px #cccccc;
-    -moz-box-shadow: 1px 1px 5px 0px #cccccc;
-    box-shadow: 1px 1px 5px 0px #cccccc;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -khtml-border-radius: 5px; }
-    .popup .popup-data.small {
-      height: 200px;
-      width: 400px; }
-    .popup .popup-data.medium {
-      height: 300px;
-      width: 600px; }
-    .popup .popup-data.large {
-      height: 400px;
-      width: 800px; }
-    .popup .popup-data .popup-close {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      color: #CDA828;
-      cursor: pointer; }
-    .popup .popup-data .popup-wrap-title {
-      width: 100%;
-      background-color: #515151;
-      color: #98a2ad;
-      -moz-border-radius-top-left: 5px;
-      -moz-border-radius-top-right: 5px;
-      -webkit-border-radius-top-left: 5px;
-      -webkit-border-radius-top-right: 5px;
-      border-radius: 5px 5px 0 0;
-      -khtml-border-radius-top-left: 5px;
-      -khtml-border-radius-top-right: 5px;
-      padding: 1em; }
-      .popup .popup-data .popup-wrap-title .popup-title {
-        font-size: 1.5em;
-        font-weight: bold; }
-    .popup .popup-data .popup-content {
-      padding: 1em; }
-
-/**********************************************************************
-Description: It defines the styles for the sidebar components available in CMGTools.
-Dependencies: variables, variables-ext, mixins
-***********************************************************************/
-.sidebar-standard {
-  position: relative; }
-  .sidebar-standard .title {
-    display: none;
-    background-color: #CDA828;
-    line-height: 32px;
-    padding: 5px;
-    font-size: 16px; }
-    .sidebar-standard .title span {
-      float: right;
-      display: inline-block;
-      cursor: pointer; }
-  .sidebar-standard .menu {
-    display: block; }
-  @media only screen and (max-width: 1024px) {
-    .sidebar-standard .title {
-      display: block; }
-    .sidebar-standard .menu {
-      display: none; } }
-
-.sort {
-  cursor: pointer;
-  padding-left: 10px; }
-
-.sort-title {
-  padding-left: 10px; }
-
-.sort-asc {
-  color: #a5d75a; }
-
-.sort-desc {
-  color: #e74343; }
 
 /*# sourceMappingURL=cmgtools.css.map */
