@@ -3,6 +3,53 @@ Description: It defines the styles for the FoxSlider Widget for CMSGears followi
 Dependencies: variables, mixins
 ***********************************************************************/
 
+.fx-slider {
+
+    .slides-wrap {
+        // Wrapper to wrap all the slides
+
+        .slide {
+            // Slide with/without background/texture
+    
+            .wrap-slide-content {
+                // Slide content with/without background/texture
+    
+                .slide-content {
+                    // Content wrapper with/without background/texture
+    
+                    .content {
+                        // Actual content
+                    }
+                }
+            }
+        }
+    }
+
+    .controls {
+        // controls wrapper
+
+        .control {
+            // control
+
+            &.control-left {
+                // left control
+            }
+
+            &.control-right {
+                // right control
+            }
+        }
+    }
+
+    .bullets {
+        // bullets wrapper
+
+        .bullet {
+            // bullet
+        }
+    }
+}
+
 // The default fox slider component.
 .fx-slider-basic {
     position: relative;
@@ -30,10 +77,10 @@ Dependencies: variables, mixins
     }
 
     /* Slide Background Image */
-    .slide-content {
+    .wrap-slide-content {
         @include bkg-image;
         
-        .wrap-content {
+        .slide-content {
             position: absolute;
             top: 0px;
             left: 0px;
@@ -148,7 +195,7 @@ Dependencies: variables, mixins
     }
 
     /* Slide Background Image */
-    .slide-content {
+    .wrap-slide-content {
         @include bkg-image;
 
         // Can be used if slides are textured
@@ -156,7 +203,7 @@ Dependencies: variables, mixins
             z-index: 5;
         }
 
-        .wrap-content {
+        .slide-content {
             position: absolute;
             top: 0px;
             left: 0px;
