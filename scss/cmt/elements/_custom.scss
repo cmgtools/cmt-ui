@@ -102,11 +102,10 @@ Dependencies: variables, mixins, transitions, transformation
     }
 
     input[type=checkbox]:checked+.label::before,input[type=radio]:checked+.label::before {
-        display:inline-block;
-        content:'\e046';
+        display:inline-block; 
         background-color:#F5F8FC;
         color:$color-btn; 
-    }
+    } 
 
     input[type=checkbox]:checked+.label,input[type=radio]:checked+.label {
         color:$color-btn-a;
@@ -122,18 +121,18 @@ Dependencies: variables, mixins, transitions, transformation
     }
 
     input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
-        content:"\e045";
+        content:"\e05a";
     }
 
     input[type=radio]:checked+.label::before {
-        content:"\e046";
+        content:"\e05b";
     }
 
     input[type=checkbox]+.label::before, input[type=checkbox]:disabled+.label::before {
-        content:"W";
+        content:"6";
     }
 
     input[type=checkbox]:checked+.label::before {
-        content:"Y";
+        content:"7";
     }
 }
