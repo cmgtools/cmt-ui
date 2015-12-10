@@ -89,31 +89,6 @@ $color-tertiary-text: #ffffff;
 $color-tertiary-text-l: darken( $color-tertiary, $color-factor );
 $color-tertiary-text-d: lighten( $color-tertiary-l, $color-factor );
 
-// Standard Colors
-$color-white: #ffffff;
-$color-gray: #7F7F7F;
-$color-gray-l: #A5A5A5;
-$color-gray-d: #595959;
-$color-black: #000000;
-
-$color-blue: #4553A1;
-$color-purple: #4553A1;
-
-$color-orange: #F2651E;
-$color-yellow: #ffd800;
-
-$color-red: #B42A1A;
-$color-pink: #B42A1A;
-$color-magenta: #9A2579;
-
-$color-green: #66A709;
-$color-green-d: #467200;
-
-// Highlighting Colors - errors, warnings and success
-$color-error: #e74343;
-$color-warning: #800020;
-$color-success: #a5d75a;
-
 // Form Fields Color
 $color-field: #e1e1e1;
 $color-field-text: #363636;
@@ -143,10 +118,36 @@ $color-footer-text: #ffffff;
 
 $color-link: #298ccf; // Default color for all the links
 
+// Standard Colors
+$color-white: #FFFFFF;
+$color-gray-l: #A5A5A5;
+$color-gray: #7F7F7F;
+$color-gray-d: #595959;
+$color-black: #000000;
+
+$color-blue: #3F62A0;
+$color-purple: #663096;
+
+$color-orange: #F3702E;
+$color-yellow: #FFD800;
+
+$color-red: #B42A1A;
+$color-pink: #FF9DAB;
+$color-magenta: #9A2579;
+
+$color-green: #87C442;
+$color-green-d: #56832A;
+
+// Highlighting Colors - errors, warnings and success
+$color-error: #e74343;
+$color-warning: #800020;
+$color-success: #a5d75a;
+
+
 // Social Network colors
 $color-social: #a5d75a; // Common for all social buttons
 
-$color-dropbox: #cb2027;
+$color-dropbox: #007ee5;
 $color-facebook: #3b5998;
 $color-flickr: #ff0084;
 $color-foursquare: #0072b1;
@@ -155,12 +156,12 @@ $color-google-plus: #dd4b39;
 $color-instagram: #125688;
 $color-linkedin: #007bb5;
 $color-pintrest: #cb2027;
-$color-quora: #cb2027;
-$color-snapchat: #cb2027;
+$color-quora: #a82400;
+$color-snapchat: #fffc00;
 $color-twitter: #00aced;
 $color-tumblr: #32506d;
 $color-vimeo: #aad450;
-$color-vine: #cb2027;
+$color-vine: #00bf8f;
 $color-vk: #45668e;
-$color-whatsapp: #125688;
+$color-whatsapp: #43D854;
 $color-youtube: #bb0000;
