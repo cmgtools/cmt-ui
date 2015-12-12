@@ -595,6 +595,13 @@ Dependencies: variables
     @include max-area-cover;
 }
 
+.max-area-relative {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 // Backgrounds
 
 .bkg-tile {
