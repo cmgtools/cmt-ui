@@ -302,6 +302,12 @@ Dependencies: variables
   z-index: 1000000;
   display: none; }
 
+.max-area-relative {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
 .bkg-tile {
   background-repeat: repeat; }
 
@@ -886,11 +892,11 @@ Dependencies: variables
     background-color: #8d741c;
     color: #eddca1; }
   .color.color-white {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     color: #000000; }
   .color.color-black {
     background-color: #000000;
-    color: #ffffff; }
+    color: #FFFFFF; }
 
 .bkg.bkg-primary {
   background-color: #f2f2f2; }
@@ -908,34 +914,34 @@ Dependencies: variables
   background-color: #7F7F7F; }
 
 .bkg.bkg-white {
-  background-color: #ffffff; }
+  background-color: #FFFFFF; }
 
 .bkg.bkg-blue {
-  background-color: #4553A1; }
+  background-color: #3F62A0; }
 
 .bkg.bkg-purple {
-  background-color: #4553A1; }
+  background-color: #663096; }
 
 .bkg.bkg-orange {
-  background-color: #F2651E; }
+  background-color: #F3702E; }
 
 .bkg.bkg-yellow {
-  background-color: #ffd800; }
+  background-color: #FFD800; }
 
 .bkg .bkg-red {
   background-color: #B42A1A; }
 
 .bkg.bkg-pink {
-  background-color: #B42A1A; }
+  background-color: #FF9DAB; }
 
 .bkg.bkg-magenta {
-  background-color: #9A2579; }
+  background-color: #B200B2; }
 
 .bkg.bkg-green {
-  background-color: #66A709; }
+  background-color: #87C442; }
 
 .bkg.bkg-green-d {
-  background-color: #467200; }
+  background-color: #56832A; }
 
 /**
  * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
@@ -1096,16 +1102,16 @@ html, body {
   font-size: 0.75em; }
 
 .error {
-  color: #e74343; }
+  color: #E74343; }
 
 .warning, .help-block {
-  color: #800020; }
+  color: #EF9300; }
 
 .success {
-  color: #a5d75a; }
+  color: #A5D75A; }
 
 .error-field {
-  border: 1px solid #e74343;
+  border: 1px solid #E74343;
   -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
   -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
   box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25); }
@@ -1241,34 +1247,34 @@ pre {
   color: #7F7F7F; }
 
 .text.text-white {
-  color: #ffffff; }
+  color: #FFFFFF; }
 
 .text.text-blue {
-  color: #4553A1; }
+  color: #3F62A0; }
 
 .text.text-purple {
-  color: #4553A1; }
+  color: #663096; }
 
 .text.text-orange {
-  color: #F2651E; }
+  color: #F3702E; }
 
 .text.text-yellow {
-  color: #ffd800; }
+  color: #FFD800; }
 
 .text.text-red {
   color: #B42A1A; }
 
 .text.text-pink {
-  color: #B42A1A; }
+  color: #FF9DAB; }
 
 .text.text-magenta {
-  color: #9A2579; }
+  color: #B200B2; }
 
 .text.text-green {
-  color: #66A709; }
+  color: #87C442; }
 
 .text.text-green-d {
-  color: #467200; }
+  color: #56832A; }
 
 .text-with-line {
   text-align: center;
@@ -1302,7 +1308,7 @@ Dependencies: variables, mixins
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
   float: left;
-  margin: 1em 1%;
+  margin: 1rem 1%;
   word-wrap: break-word; }
 
 .col1 {
@@ -1344,7 +1350,7 @@ Dependencies: variables, mixins
 .col13, .col14, .col15, .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
   display: block;
   float: left;
-  margin: 0.5em 0.5%;
+  margin: 0.5rem 0.5%;
   word-wrap: break-word; }
 
 .col13 {
@@ -1819,7 +1825,7 @@ fieldset {
   border: 1px solid #515151; }
   fieldset legend {
     background-color: #515151;
-    color: #ffffff;
+    color: #FFFFFF;
     padding: 1rem;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -1931,20 +1937,20 @@ input[type="submit"], input[type="button"], button, .btn {
   .btn.btn-xlarge {
     width: 250px; }
   .btn.btn-white {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     color: #000000; }
     .btn.btn-white:hover {
       background-color: #595959;
       color: #A5A5A5; }
   .btn.btn-black {
     background-color: #000000;
-    color: #ffffff; }
+    color: #FFFFFF; }
     .btn.btn-black:hover {
       background-color: #595959;
       color: #A5A5A5; }
   .btn.btn-gray {
     background-color: #7F7F7F;
-    color: #ffffff; }
+    color: #FFFFFF; }
     .btn.btn-gray:hover {
       background-color: #595959;
       color: #A5A5A5; }
@@ -2102,7 +2108,7 @@ Dependencies: variables, mixins, transitions, transformation
         overflow: hidden;
         cursor: pointer;
         padding: 10px;
-        background-color: #ffffff; }
+        background-color: #FFFFFF; }
       .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
         color: white;
         background-color: #e74343; }
@@ -2129,7 +2135,6 @@ Dependencies: variables, mixins, transitions, transformation
 
 .cmt-choice input[type=checkbox]:checked + .label::before, .cmt-choice input[type=radio]:checked + .label::before {
   display: inline-block;
-  content: '\e046';
   background-color: #F5F8FC;
   color: #e74343; }
 
@@ -2144,16 +2149,16 @@ Dependencies: variables, mixins, transitions, transformation
   color: #BBB; }
 
 .cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
-  content: "\e045"; }
+  content: "\e05a"; }
 
 .cmt-choice input[type=radio]:checked + .label::before {
-  content: "\e046"; }
+  content: "\e05b"; }
 
 .cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before {
-  content: "W"; }
+  content: "6"; }
 
 .cmt-choice input[type=checkbox]:checked + .label::before {
-  content: "Y"; }
+  content: "7"; }
 
 /**********************************************************************
 Description: It defines the styles for the menu components available in CMGTools.
@@ -2397,7 +2402,7 @@ Description: It defines the styles for the social network menu components availa
 Dependencies: variables, variables-ext, mixins, CMGTools IconLib
 ***********************************************************************/
 .menu-social a {
-  color: #ffffff;
+  color: #FFFFFF;
   margin: 0;
   display: inline-block;
   -moz-transition: all 250ms ease-in-out 0s;
@@ -2412,74 +2417,74 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
   margin: 0.25rem 0.5rem; }
 
 .menu-social .cmti-bkg.cmti-social-facebook {
-  background-color: #3b5998; }
+  background-color: #3B5998; }
 
 .menu-social .cmti-bkg.cmti-social-twitter {
-  background-color: #00aced; }
+  background-color: #00ACED; }
 
 .menu-social .cmti-bkg.cmti-social-google {
-  background-color: #dd4b39; }
+  background-color: #DD4B39; }
 
 .menu-social .cmti-bkg.cmti-social-google-plus {
-  background-color: #dd4b39; }
+  background-color: #DD4B39; }
 
 .menu-social .cmti-bkg.cmti-social-linkedin {
-  background-color: #007bb5; }
+  background-color: #007BB6; }
 
 .menu-social .cmti-bkg.cmti-social-instagram {
   background-color: #125688; }
 
 .menu-social .cmti-bkg.cmti-social-pintrest {
-  background-color: #cb2027; }
+  background-color: #CB2027; }
 
 .menu-social .cmti-bkg.cmti-social-youtube {
-  background-color: #bb0000; }
+  background-color: #BB0000; }
 
 .menu-social .cmti-text.cmti-social-facebook {
-  color: #3b5998; }
+  color: #3B5998; }
 
 .menu-social .cmti-text.cmti-social-twitter {
-  color: #00aced; }
+  color: #00ACED; }
 
 .menu-social .cmti-text.cmti-social-google {
-  color: #dd4b39; }
+  color: #DD4B39; }
 
 .menu-social .cmti-text.cmti-social-google-plus {
-  color: #dd4b39; }
+  color: #DD4B39; }
 
 .menu-social .cmti-text.cmti-social-linkedin {
-  color: #007bb5; }
+  color: #007BB6; }
 
 .menu-social .cmti-text.cmti-social-instagram {
   color: #125688; }
 
 .menu-social .cmti-text.cmti-social-pintrest {
-  color: #cb2027; }
+  color: #CB2027; }
 
 .menu-social .cmti-text.cmti-social-youtube {
-  color: #bb0000; }
+  color: #BB0000; }
 
 .menu-social .cmti-text:hover {
   color: #e74343; }
 
 .menu-social .btn {
-  color: #ffffff !important; }
+  color: #FFFFFF !important; }
   .menu-social .btn.facebook {
-    background-color: #3b5998; }
+    background-color: #3B5998; }
   .menu-social .btn.twitter {
-    background-color: #00aced; }
+    background-color: #00ACED; }
   .menu-social .btn.google {
-    background-color: #dd4b39; }
+    background-color: #DD4B39; }
   .menu-social .btn.google-plus {
-    background-color: #dd4b39; }
+    background-color: #DD4B39; }
   .menu-social .btn.linkedin {
-    background-color: #007bb5; }
+    background-color: #007BB6; }
   .menu-social .btn.instagram {
     background-color: #125688; }
   .menu-social .btn.pintrest {
-    background-color: #cb2027; }
+    background-color: #CB2027; }
   .menu-social .btn.youtube {
-    background-color: #bb0000; }
+    background-color: #BB0000; }
 
 /**********************************************************************
 Description: It defines the styles for the header components available in CMGTools.
@@ -2645,6 +2650,14 @@ Dependencies: variables, mixins
         font-weight: bold; }
     .popup .popup-data .popup-content {
       padding: 1rem; }
+
+.box-forgot-password, .box-signup {
+  display: none; }
+
+.btn-forgot-password, .btn-login, .btn-signup {
+  cursor: pointer; }
+  .btn-forgot-password:hover, .btn-login:hover, .btn-signup:hover {
+    color: #298ccf; }
 
 /**********************************************************************
 Description: It defines the styles for the block components forming the page. We can devide the entire page in one or more blocks. 
@@ -2904,10 +2917,10 @@ Javascript: jquery, cmt-block
   padding-left: 10px; }
 
 .sort-asc {
-  color: #a5d75a; }
+  color: #A5D75A; }
 
 .sort-desc {
-  color: #e74343; }
+  color: #E74343; }
 
 /**********************************************************************
 Description: It defines the styles for the Blog Widgets of cms module for CMSGears following components approach.
