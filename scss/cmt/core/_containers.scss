@@ -316,12 +316,19 @@ Dependencies: variables, mixins
 
 // The main usage of col filler is to fill background of an element in floated elements case. Ex: Sidebar need to show background color with same height as that of content. 
 // Place it for first column with lower z-index. We need to repeat first column so that the column with col-filler will be overlapped by column having content.
-.col-filler {
-    position: absolute;
-    z-index: -1;
-    top: 0px;
-    bottom: 0px;
-    float: none;
+
+.wrap-col-filler {
+  
+    position: relative;
+    z-index: 0;
+  
+    .col-filler {
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        bottom: 0px;
+        float: none;
+    }  
 }
  
 // Container and Content can be used to wrap several components together forming a single unit. 
