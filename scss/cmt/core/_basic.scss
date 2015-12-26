@@ -3,68 +3,6 @@ Description: The basic styles for CMGTools.
 Dependencies: variables
 ***********************************************************************/
 
-/** 
- * Fonts - The font classes default, heading and code can be used for global headers and code font.
- */
-
-.font {
-
-    &.font-default {
-        font-family: $font-default;
-    }
-
-    &.font-heading {
-        font-family: $font-heading;
-    }
-
-    &.font-code {
-        font-family: $font-code;
-    }
-}
-
-/**
- * Font Size - The font size for headers h1 to h6, default and small.
- */
-
-.font-size {
-
-    &.font-size-large-1 {
-        font-size: $font-size-1;
-    }
-
-    &.font-size-large-2 {
-        font-size: $font-size-2;
-    }
-
-    &.font-size-large-3 {
-        font-size: $font-size-3;
-    }
-
-    &.font-size-large-4 {
-        font-size: $font-size-4;
-    }
-
-    &.font-size-large-5 {
-        font-size: $font-size-5;
-    }
-
-    &.font-size-large-6 {
-        font-size: $font-size-6;
-    }
-
-    &.font-size-default {
-        font-size: $font-size-7;
-    }
-
-    &.font-size-small {
-        font-size: $font-size-8;
-    }
-
-    &.font-size-tiny {
-        font-size: $font-size-9;
-    }
-}
-
 /**
  * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive. 
  * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
@@ -179,6 +117,80 @@ Dependencies: variables
         background-color: $color-tertiary-d;
         color: $color-tertiary-text-d;
     }
+
+    &.color-white {
+        background-color: $color-white;
+        color: $color-black;
+    }
+
+    &.color-black {
+        background-color: $color-black;
+        color: $color-white;
+    }
+}
+
+// Background Colors
+.bkg {
+    
+    &.bkg-primary {
+        background-color: $color-primary;
+    }
+
+    &.bkg-secondary {
+        background-color: $color-secondary;
+    }
+
+    &.bkg-tertiary {
+        background-color: $color-tertiary;
+    }
+
+    &.bkg-black {
+        background-color: $color-black;
+    }
+
+    &.bkg-gray {
+        background-color: $color-gray;
+    }
+
+    &.bkg-white {
+        background-color: $color-white;
+    }
+
+    &.bkg-blue {
+        background-color: $color-blue;
+    }
+
+    &.bkg-purple {
+        background-color: $color-purple;
+    }
+
+    &.bkg-orange {
+        background-color: $color-orange;
+    }
+
+    &.bkg-yellow {
+        background-color: $color-yellow;
+    }
+
+    .bkg-red {
+        background-color: $color-red;
+    }
+
+    &.bkg-pink {
+        background-color: $color-pink;
+    }
+
+    &.bkg-magenta {
+        background-color: $color-magenta;
+    }
+
+    &.bkg-green {
+        background-color: $color-green;
+    }
+
+    &.bkg-green-d {
+        background-color: $color-green-d;
+    }
 }
 
 /**
@@ -202,22 +214,24 @@ html {
  * The primary color will be used as default color for document body and text.
  */
 
-body {
+html, body {
     background-color: $color-primary;
     color: $color-primary-text;
 }
 
+// margin and padding less
+
 .margin-none {
-    margin: 0;
+    margin: 0 !important;
 }
 
 .padding-none {    
-    padding: 0;
+    padding: 0 !important;
 }
 
 .mp-none {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /** 
@@ -229,7 +243,7 @@ body {
 }
 
 /** 
- * Floating - These classes can be used to clear or float the elements.
+ * Floating Blocks - These classes can be used to clear or float the elements.
  */
 
 .clear {
@@ -318,8 +332,7 @@ body {
 .align {
 
     &.align-center {
-        margin-left: 0 auto !important;
-        margin-right: 0 auto !important;
+        margin: 0 auto;
     }
 
     &.align-left {
@@ -340,10 +353,7 @@ body {
  */
 
 .filler-height {
-
-    &.filler-height-default {
-        height: 1em;
-    }
+    height: 1em;
 
     &.filler-height-small {
         height: 1.5em;
@@ -358,10 +368,37 @@ body {
     }
 }
 
+// Positioning
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+}
+
+// Display Type
+
+.block {
+    display: block;  
+}
+
+.inline-block {
+    display: inline-block;  
+}
+
+.inline {
+    display: inline;  
+}
+
 // Visibility - Without own space
 
 .visible {
-    display:block;
+    display: block;
 }
 
 .hidden {
@@ -387,8 +424,8 @@ body {
 
 // Messages - Most probably used for form and ajax processing
 
-.warning, .error, .success {
-    display: inline-block;
+.warning, .error, .success, .help-block {
+    //display: inline-block;
     width: 100%;
     font-size: $font-size-8;
 }
@@ -397,7 +434,7 @@ body {
     color: $color-error;
 }
 
-.warning {
+.warning, .help-block {
     color: $color-warning;
 }
 
@@ -407,6 +444,6 @@ body {
 
 // Required for Yii Forms
 .error-field {
-    @include border-all( $size-default, solid, $color-error );
+    @include border( $size-default, solid, $color-error );
     @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparency-low ) );
 }

@@ -1,3 +1,19 @@
+/**********************************************************************
+Description: It defines the html elements styles for CMGTools excluding form, form elements and table.
+Dependencies: variables, mixins
+***********************************************************************/
+
 fieldset {
-    @include border-all( 1px, solid, $color-secondary );
+    @include border( 1px, solid, $color-secondary );
+
+    legend {
+        background-color: $color-secondary;
+        color: $color-white;
+        padding: $size-medium-rem;
+        @include rounded( $size-medium );
+    }
+}
+
+optgroup {
+    font-style: italic;
 }

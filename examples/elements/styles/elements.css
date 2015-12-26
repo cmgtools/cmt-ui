@@ -1,0 +1,2247 @@
+@charset "UTF-8";
+/*! CMGTools - The advanced css framework following component approach.
+ * Version - 1.0.0-alpha1
+ * License - GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
+ * Copyright ┬⌐ 2015 by VulpineCode Technologies Private Limited (http://www.vulpinecode.com) All rights reserved.
+ */
+@font-face {
+  font-family: "cmti-core";
+  src: url("../fonts/cmgtools/cmti-core.eot");
+  src: url("../fonts/cmgtools/cmti-core.eot?#iefix") format("embedded-opentype"), url("../fonts/cmgtools/cmti-core.woff") format("woff"), url("../fonts/cmgtools/cmti-core.ttf") format("truetype"), url("../fonts/cmgtools/cmti-core.svg#cmti-core") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/**********************************************************************
+Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
+Dependencies: variables
+***********************************************************************/
+.clearfix, .ui-datepicker-header {
+  zoom: 1;
+}
+.clearfix:before, .ui-datepicker-header:before, .clearfix:after, .ui-datepicker-header:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after, .ui-datepicker-header:after {
+  clear: both;
+}
+
+.opaque-25 {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = 25 )";
+  -moz-opacity: 0.25;
+  -khtml-opacity: 0.25;
+  filter: alpha(opacity=25);
+  opacity: 0.25;
+}
+
+.opaque-50 {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = 50 )";
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.opaque-75 {
+  zoom: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = 75 )";
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+}
+
+.bkg-transparent-white {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.bkg-transparent-gray {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bkg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bkg-transparent-primary {
+  background-color: rgba(242, 242, 242, 0.6);
+}
+
+.bkg-transparent-secondary {
+  background-color: rgba(81, 81, 81, 0.6);
+}
+
+.bkg-transparent-tertiary {
+  background-color: rgba(205, 168, 40, 0.6);
+}
+
+.rounded-all {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -khtml-border-radius: 1px;
+}
+
+.rounded-top {
+  -moz-border-radius-top-left: 1px;
+  -moz-border-radius-top-right: 1px;
+  -webkit-border-radius-top-left: 1px;
+  -webkit-border-radius-top-right: 1px;
+  border-radius: 1px 1px 0 0;
+  -khtml-border-radius-top-left: 1px;
+  -khtml-border-radius-top-right: 1px;
+}
+
+.rounded-right {
+  -moz-border-radius-top-right: 1px;
+  -moz-border-radius-bottom-right: 1px;
+  -webkit-border-radius-top-right: 1px;
+  -webkit-border-radius-bottom-right: 1px;
+  border-radius: 0 1px 1px 0;
+  -khtml-border-radius-top-right: 1px;
+  -khtml-border-radius-bottom-right: 1px;
+}
+
+.rounded-bottom {
+  -moz-border-radius-bottom-left: 1px;
+  -moz-border-radius-bottom-right: 1px;
+  -webkit-border-radius-bottom-left: 1px;
+  -webkit-border-radius-bottom-right: 1px;
+  border-radius: 0 0 1px 1px;
+  -khtml-border-radius-bottom-left: 1px;
+  -khtml-border-radius-bottom-right: 1px;
+}
+
+.rounded-left {
+  -moz-border-radius-top-left: 1px;
+  -moz-border-radius-bottom-left: 1px;
+  -webkit-border-radius-top-left: 1px;
+  -webkit-border-radius-bottom-left: 1px;
+  border-radius: 1px 0 0 1px;
+  -khtml-border-radius-top-left: 1px;
+  -khtml-border-radius-bottom-left: 1px;
+}
+
+.rounded-top-left {
+  -moz-border-radius-top-left: 1px;
+  -webkit-border-radius-top-left: 1px;
+  border-radius: 1px 0 0 0;
+  -khtml-border-radius-top-left: 1px;
+}
+
+.rounded-top-right {
+  -moz-border-radius-top-right: 1px;
+  -webkit-border-radius-top-right: 1px;
+  border-radius: 0 1px 0 0;
+  -khtml-border-radius-top-right: 1px;
+}
+
+.rounded-bottom-left {
+  -moz-border-radius-bottom-left: 1px;
+  -webkit-border-radius-bottom-left: 1px;
+  border-radius: 0 0 1px 0;
+  -khtml-border-radius-bottom-left: 1px;
+}
+
+.rounded-bottom-right {
+  -moz-border-radius-bottom-right: 1px;
+  -webkit-border-radius-bottom-right: 1px;
+  border-radius: 0 0 0 1px;
+  -khtml-border-radius-bottom-right: 1px;
+}
+
+.circled1 {
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #515151;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -khtml-border-radius: 100%;
+}
+
+.circled2 {
+  width: 250px;
+  height: 250px;
+  background: #515151;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.circled3 {
+  width: 50%;
+  height: 0;
+  background-color: #515151;
+  padding-bottom: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.shape-text {
+  width: 50%;
+}
+.shape-text:after {
+  width: 100%;
+  height: 0;
+  background-color: #515151;
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.shape-text span {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  padding-top: 50%;
+  line-height: 1em;
+  margin-top: -0.5em;
+  text-align: center;
+  color: #98a2ad;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-primary {
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+  box-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+}
+
+.shadow-secondary {
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+  box-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+}
+
+.shadow-tertiary {
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+  box-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+}
+
+.text-shadow {
+  -webkit-text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.text-shadow-primary {
+  -webkit-text-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+  -moz-text-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+  text-shadow: 1px 1px 4px 0px rgba(242, 242, 242, 0.4);
+}
+
+.text-shadow-secondary {
+  -webkit-text-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+  -moz-text-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+  text-shadow: 1px 1px 4px 0px rgba(81, 81, 81, 0.4);
+}
+
+.text-shadow-tertiary {
+  -webkit-text-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+  -moz-text-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+  text-shadow: 1px 1px 4px 0px rgba(205, 168, 40, 0.4);
+}
+
+.border-default {
+  border: 1px solid #515151;
+}
+
+.gradient-linear {
+  background-color: #515151;
+  background-image: -moz-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: -o-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2f2f2), color-stop(1, #515151));
+  background-image: -webkit-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: -ms-linear-gradient("bottom", #f2f2f2, #515151);
+  background-image: linear-gradient(to "bottom", #f2f2f2, #515151);
+}
+
+.gradient-radial {
+  background-image: radial-gradient(circle at center top, #f2f2f2, #515151);
+}
+
+.valign-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.child-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.max-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.max-area-transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.max-area-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #363636;
+  z-index: 1000000;
+  display: none;
+}
+
+.bkg-tile {
+  background-repeat: repeat;
+}
+
+.bkg-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.bkg-image-fill {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+.bkg-auto {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+.bkg-image-scroll {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.bkg-image-fixed {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/**********************************************************************
+Description: The transition effects available in CMGTools.
+Dependencies: none
+***********************************************************************/
+/* transit-xxx
+ * 1. eio - ease-in-out
+ * 2. eo - ease-out
+ */
+.transit-all {
+  -moz-transition: all 250ms linear 0s;
+  -ms-transition: all 250ms linear 0s;
+  -o-transition: all 250ms linear 0s;
+  -webkit-transition: all 250ms linear 0s;
+  transition: all 250ms linear 0s;
+}
+
+.transit-visibility {
+  -moz-transition: opacity 250ms linear 0s;
+  -ms-transition: opacity 250ms linear 0s;
+  -o-transition: opacity 250ms linear 0s;
+  -webkit-transition: opacity 250ms linear 0s;
+  transition: opacity 250ms linear 0s;
+}
+
+.transit-opacity {
+  -moz-transition: opacity 250ms linear 0s;
+  -ms-transition: opacity 250ms linear 0s;
+  -o-transition: opacity 250ms linear 0s;
+  -webkit-transition: opacity 250ms linear 0s;
+  transition: opacity 250ms linear 0s;
+}
+
+.transit-visibility-opacity {
+  -moz-transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+  -ms-transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+  -o-transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+  -webkit-transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+  transition: visibility 250ms linear 0s, opacity 250ms linear 0s;
+}
+
+.transit-color {
+  -moz-transition: color 250ms linear 0s;
+  -ms-transition: color 250ms linear 0s;
+  -o-transition: color 250ms linear 0s;
+  -webkit-transition: color 250ms linear 0s;
+  transition: color 250ms linear 0s;
+}
+
+.transit-bkg-color {
+  -moz-transition: background-color 250ms linear 0s;
+  -ms-transition: background-color 250ms linear 0s;
+  -o-transition: background-color 250ms linear 0s;
+  -webkit-transition: background-color 250ms linear 0s;
+  transition: background-color 250ms linear 0s;
+}
+
+.transit-color-bkg-color {
+  -moz-transition: color 250ms linear 0s, background-color 250ms linear 0s;
+  -ms-transition: color 250ms linear 0s, background-color 250ms linear 0s;
+  -o-transition: color 250ms linear 0s, background-color 250ms linear 0s;
+  -webkit-transition: color 250ms linear 0s, background-color 250ms linear 0s;
+  transition: color 250ms linear 0s, background-color 250ms linear 0s;
+}
+
+.transit-padding {
+  -moz-transition: padding 250ms ease-out 0s;
+  -ms-transition: padding 250ms ease-out 0s;
+  -o-transition: padding 250ms ease-out 0s;
+  -webkit-transition: padding 250ms ease-out 0s;
+  transition: padding 250ms ease-out 0s;
+}
+
+.transit-width {
+  -moz-transition: width 250ms linear 0s;
+  -ms-transition: width 250ms linear 0s;
+  -o-transition: width 250ms linear 0s;
+  -webkit-transition: width 250ms linear 0s;
+  transition: width 250ms linear 0s;
+}
+
+.transit-height {
+  -moz-transition: height 250ms linear 0s;
+  -ms-transition: height 250ms linear 0s;
+  -o-transition: height 250ms linear 0s;
+  -webkit-transition: height 250ms linear 0s;
+  transition: height 250ms linear 0s;
+}
+
+.transit-width-height {
+  -moz-transition: width 250ms linear 0s, height 250ms linear 0s;
+  -ms-transition: width 250ms linear 0s, height 250ms linear 0s;
+  -o-transition: width 250ms linear 0s, height 250ms linear 0s;
+  -webkit-transition: width 250ms linear 0s, height 250ms linear 0s;
+  transition: width 250ms linear 0s, height 250ms linear 0s;
+}
+
+/**********************************************************************
+Description: The translation effects available in CMGTools.
+Dependencies: none
+***********************************************************************/
+.transform-rotate {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/**********************************************************************
+Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com) 
+and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css 
+for CMGTools.
+Dependencies: variables
+***********************************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr,
+address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
+th, td, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: middle;
+  background: transparent;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+code, kbd, pre, samp {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+  margin: 1em 40px;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  quotes: none;
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 2.1 and 3 */
+  word-wrap: break-word;
+  /* IE */
+}
+
+hr {
+  display: block;
+  border: 0;
+  margin: 1em 0;
+  padding: 0;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: middle;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+[hidden] {
+  display: none;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* Basic nav for ul and ol. */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+.clickable, button, input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  width: auto;
+  overflow: visible;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #363636;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+/**********************************************************************
+Description: The basic styles for CMGTools.
+Dependencies: variables
+***********************************************************************/
+/** 
+ * Fonts - The font classes default, heading and code can be used for global headers and code font.
+ */
+.font.font-default {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.font.font-heading {
+  font-family: Verdana, Geneva, sans-serif;
+}
+.font.font-code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/**
+ * Font Size - The font size for headers h1 to h6, default and small.
+ */
+.font-size.font-size-large-1 {
+  font-size: 2.5em;
+}
+.font-size.font-size-large-2 {
+  font-size: 2.25em;
+}
+.font-size.font-size-large-3 {
+  font-size: 2em;
+}
+.font-size.font-size-large-4 {
+  font-size: 1.75em;
+}
+.font-size.font-size-large-5 {
+  font-size: 1.5em;
+}
+.font-size.font-size-large-6 {
+  font-size: 1.25em;
+}
+.font-size.font-size-default {
+  font-size: 1em;
+}
+.font-size.font-size-small {
+  font-size: 0.75em;
+}
+.font-size.font-size-tiny {
+  font-size: 0.65em;
+}
+
+/**
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive. 
+ * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
+ */
+.screen.screen-mobile-small {
+  width: 320px;
+}
+.screen.screen-mobile-large {
+  width: 480px;
+}
+.screen.screen-tablet-small {
+  width: 768px;
+}
+.screen.screen-tablet-large {
+  width: 1024px;
+}
+.screen.screen-desktop-small {
+  width: 1280px;
+}
+.screen.screen-desktop-medium {
+  width: 1360px;
+}
+.screen.screen-desktop-large {
+  width: 1600px;
+}
+.screen.screen-desktop-xlarge {
+  width: 1920px;
+}
+
+/**
+ * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in 
+ * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating 
+ * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
+ */
+.color {
+  /**
+   * Color Palatte:
+   * 1. primary: #f2f2f2
+   * 2. primary text: #363636
+   * 3. primary light: white
+   * 4. primary text light: #101010
+   * 5. primary dark: #cccccc
+   * 6. primary text dark: #5c5c5c
+   * 7. secondary: #515151
+   * 8. secondary text: #98a2ad
+   * 9. secondary light: #777777
+   * 10. secondary text light: #6e7c8a
+   * 11. secondary dark: #2b2b2b
+   * 12. secondary text dark: #c3c8cf
+   * 13. tertiary: #CDA828
+   * 14. tertiary text: #ffffff
+   * 15. tertiary light: #e0c461
+   * 16. tertiary text light: #8d741c
+   * 17. tertiary dark: #8d741c
+   * 18. tertiary text dark: #eddca1
+   */
+}
+.color.color-primary {
+  background-color: #f2f2f2;
+  color: #363636;
+}
+.color.color-primary-l {
+  background-color: white;
+  color: #101010;
+}
+.color.color-primary-d {
+  background-color: #cccccc;
+  color: #5c5c5c;
+}
+.color.color-secondary {
+  background-color: #515151;
+  color: #98a2ad;
+}
+.color.color-secondary-l {
+  background-color: #777777;
+  color: #6e7c8a;
+}
+.color.color-secondary-d {
+  background-color: #2b2b2b;
+  color: #c3c8cf;
+}
+.color.color-tertiary {
+  background-color: #CDA828;
+  color: #ffffff;
+}
+.color.color-tertiary-l {
+  background-color: #e0c461;
+  color: #8d741c;
+}
+.color.color-tertiary-d {
+  background-color: #8d741c;
+  color: #eddca1;
+}
+
+/**
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
+ * padding. The remaining space deducting border and padding from given width will be used by element content.
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/** 
+ * The primary color will be used as default color for document body and text.
+ */
+body {
+  background-color: #f2f2f2;
+  color: #363636;
+}
+
+.margin-none {
+  margin: 0;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.mp-none {
+  margin: 0;
+  padding: 0;
+}
+
+/** 
+ * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
+ */
+#pre-loader-main {
+  display: block;
+}
+
+/** 
+ * Floating - These classes can be used to clear or float the elements.
+ */
+.clear {
+  clear: both !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.float-none-center {
+  float: none !important;
+  margin: 0 auto;
+}
+
+/** 
+ * Pre-defined width and height, handy at few places.
+ */
+.width.width-auto {
+  width: auto;
+}
+.width.width-25 {
+  width: 25%;
+}
+.width.width-50 {
+  width: 50%;
+}
+.width.width-75 {
+  width: 75%;
+}
+.width.width-80 {
+  width: 80%;
+}
+.width.width-100 {
+  width: 100%;
+}
+
+.height.height-auto {
+  height: auto;
+}
+.height.height-25 {
+  height: 25%;
+}
+.height.height-50 {
+  height: 50%;
+}
+.height.height-75 {
+  height: 75%;
+}
+.height.height-100 {
+  height: 100%;
+}
+
+/** 
+ * Alignments for centered box and text.
+ */
+.align.align-center {
+  margin-left: 0 auto !important;
+  margin-right: 0 auto !important;
+}
+.align.align-left {
+  text-align: left !important;
+}
+.align.align-middle {
+  text-align: center !important;
+}
+.align.align-right {
+  text-align: right !important;
+}
+
+/** 
+ * Height fillers to seperate boxes.
+ */
+.filler-height.filler-height-default {
+  height: 1em;
+}
+.filler-height.filler-height-small {
+  height: 1.5em;
+}
+.filler-height.filler-height-medium {
+  height: 2em;
+}
+.filler-height.filler-height-large {
+  height: 2.5em;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible-space {
+  visibility: visible;
+}
+
+.hidden-space {
+  visibility: hidden;
+}
+
+.fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.warning, .error, .success {
+  display: inline-block;
+  width: 100%;
+  font-size: 0.75em;
+}
+
+.error {
+  color: #e74343;
+}
+
+.warning {
+  color: #800020;
+}
+
+.success {
+  color: #a5d75a;
+}
+
+.error-field {
+  border: 1px solid #e74343;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(231, 67, 67, 0.25);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(231, 67, 67, 0.25);
+  box-shadow: 1px 1px 4px 0px rgba(231, 67, 67, 0.25);
+}
+
+/**********************************************************************
+Description: The default text elements styles for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+}
+
+body {
+  font-size: 12px;
+  color: #363636;
+}
+@media only screen and (min-width: 481px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1, .h1 {
+  font-size: 2.5em;
+}
+
+h2, .h2 {
+  font-size: 2.25em;
+}
+
+h3, .h3 {
+  font-size: 2em;
+}
+
+h4, .h4 {
+  font-size: 1.75em;
+}
+
+h5, .h5 {
+  font-size: 1.5em;
+}
+
+h6, .h6 {
+  font-size: 1.25em;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .default-header {
+  verticle-align: middle;
+  padding: 0.25em 0;
+  margin: 0.5em 0;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, .default-header {
+  font-weight: bold;
+}
+
+p, span, em, div, a {
+  font-size: 1em;
+}
+
+pre {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+/**********************************************************************
+Description: It defines the grid system and basic containers for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+/* Grid System ********************* */
+.row {
+  position: relative;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  width: 100%;
+}
+.row.row-small {
+  width: 25%;
+}
+.row.row-medium {
+  width: 50%;
+}
+.row.row-large {
+  width: 80%;
+}
+
+.col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
+  display: block;
+  float: left;
+  margin: 1% 1%;
+  word-wrap: break-word;
+}
+
+.col1 {
+  width: 98%;
+}
+
+.col2 {
+  width: 48%;
+}
+
+.col3 {
+  width: 31.33333%;
+}
+
+.col4 {
+  width: 23%;
+}
+
+.col5 {
+  width: 18%;
+}
+
+.col6 {
+  width: 14.66666%;
+}
+
+.col7 {
+  width: 12.28571%;
+}
+
+.col8 {
+  width: 10.5%;
+}
+
+.col9 {
+  width: 9.11111%;
+}
+
+.col10 {
+  width: 8%;
+}
+
+.col11 {
+  width: 7.09090%;
+}
+
+.col12 {
+  width: 6.33333%;
+}
+
+.col13, .col14, .col15, .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
+  display: block;
+  float: left;
+  margin: 0.5% 0.5%;
+  word-wrap: break-word;
+}
+
+.col13 {
+  width: 6.69230%;
+}
+
+.col14 {
+  width: 6.14285%;
+}
+
+.col15 {
+  width: 5.66666%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .row.row-small {
+    width: 100%;
+  }
+  .row.row-medium {
+    width: 100%;
+  }
+  .row.row-large {
+    width: 100%;
+  }
+
+  .max-cols .col1, .max-cols .col2, .max-cols .col3, .max-cols .col4, .max-cols .col5, .max-cols .col6, .max-cols .col7, .max-cols .col8, .max-cols .col9, .max-cols .col10, .max-cols .col11, .max-cols .col12, .max-cols .col13, .max-cols .col14, .max-cols .col15 {
+    width: 48%;
+  }
+  .max-cols .col1:nth-child(odd), .max-cols .col2:nth-child(odd), .max-cols .col3:nth-child(odd), .max-cols .col4:nth-child(odd), .max-cols .col5:nth-child(odd), .max-cols .col6:nth-child(odd), .max-cols .col7:nth-child(odd), .max-cols .col8:nth-child(odd), .max-cols .col9:nth-child(odd), .max-cols .col10:nth-child(odd), .max-cols .col11:nth-child(odd), .max-cols .col12:nth-child(odd), .max-cols .col13:nth-child(odd), .max-cols .col14:nth-child(odd), .max-cols .col15:nth-child(odd) {
+    clear: both;
+  }
+
+  .max-cols-100 .col1, .max-cols-100 .col2, .max-cols-100 .col3, .max-cols-100 .col4, .max-cols-100 .col5, .max-cols-100 .col6, .max-cols-100 .col7, .max-cols-100 .col8, .max-cols-100 .col9, .max-cols-100 .col10, .max-cols-100 .col11, .max-cols-100 .col12, .max-cols-100 .col13, .max-cols-100 .col14, .max-cols-100 .col15 {
+    width: 98%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .max-cols .col1, .max-cols .col2, .max-cols .col3, .max-cols .col4, .max-cols .col5, .max-cols .col6, .max-cols .col7, .max-cols .col8, .max-cols .col9, .max-cols .col10, .max-cols .col11, .max-cols .col12, .max-cols .col13, .max-cols .col14, .max-cols .col15, .max-cols-100 .col1, .max-cols-100 .col2, .max-cols-100 .col3, .max-cols-100 .col4, .max-cols-100 .col5, .max-cols-100 .col6, .max-cols-100 .col7, .max-cols-100 .col8, .max-cols-100 .col9, .max-cols-100 .col10, .max-cols-100 .col11, .max-cols-100 .col12, .max-cols-100 .col13, .max-cols-100 .col14, .max-cols-100 .col15 {
+    width: 98%;
+  }
+}
+.col3x2 {
+  width: 64.666666%;
+}
+
+.col4x2 {
+  width: 48%;
+}
+
+.col4x3 {
+  width: 73%;
+}
+
+.col5x2 {
+  width: 38%;
+}
+
+.col5x3 {
+  width: 58%;
+}
+
+.col5x4 {
+  width: 78%;
+}
+
+.col6x2 {
+  width: 31.33332%;
+}
+
+.col6x3 {
+  width: 47.99998%;
+}
+
+.col6x4 {
+  width: 64.66664%;
+}
+
+.col6x5 {
+  width: 81.33330%;
+}
+
+.col12x2 {
+  width: 14.66666%;
+}
+
+.col12x3 {
+  width: 22.99999%;
+}
+
+.col12x4 {
+  width: 31.33332%;
+}
+
+.col12x5 {
+  width: 39.66665%;
+}
+
+.col12x6 {
+  width: 47.99993%;
+}
+
+.col12x7 {
+  width: 56.33331%;
+}
+
+.col12x8 {
+  width: 64.66664%;
+}
+
+.col12x9 {
+  width: 72.99997%;
+}
+
+.col12x10 {
+  width: 81.33333%;
+}
+
+.col12x11 {
+  width: 89.66663%;
+}
+
+.col15x2 {
+  width: 12.33332%;
+}
+
+.col15x3 {
+  width: 18.99998%;
+}
+
+.col15x4 {
+  width: 25.66664%;
+}
+
+.col15x5 {
+  width: 32.33330%;
+}
+
+.col15x6 {
+  width: 38.99996%;
+}
+
+.col15x7 {
+  width: 45.66662%;
+}
+
+.col15x8 {
+  width: 52.33328%;
+}
+
+.col15x9 {
+  width: 58.99994%;
+}
+
+.col15x10 {
+  width: 65.66660%;
+}
+
+.col15x11 {
+  width: 72.33326%;
+}
+
+.col15x12 {
+  width: 78.99992%;
+}
+
+.col15x13 {
+  width: 85.66658%;
+}
+
+.col15x14 {
+  width: 92.33324%;
+}
+
+/* full width for mobile, tablet */
+@media only screen and (max-width: 1024px) {
+  .max-cols .col3x2, .max-cols .col4x2, .max-cols .col4x3, .max-cols .col5x2, .max-cols .col5x3, .max-cols .col5x4, .max-cols .col6x2, .max-cols .col6x3, .max-cols .col6x4, .max-cols .col6x5,
+  .max-cols .col12x2, .max-cols .col12x3, .max-cols .col12x4, .max-cols .col12x5, .max-cols .col12x6, .max-cols .col12x7, .max-cols .col12x8, .max-cols .col12x9, .max-cols .col12x10, .max-cols .col12x11,
+  .max-cols .col15x2, .max-cols .col15x3, .max-cols .col15x4, .max-cols .col15x5, .max-cols .col15x6, .max-cols .col15x7, .max-cols .col15x8, .max-cols .col15x9, .max-cols .col15x10, .max-cols .col15x11, .max-cols .col15x12, .max-cols .col15x13, .max-cols .col15x14 {
+    width: 48%;
+  }
+  .max-cols .col3x2:nth-child(odd), .max-cols .col4x2:nth-child(odd), .max-cols .col4x3:nth-child(odd), .max-cols .col5x2:nth-child(odd), .max-cols .col5x3:nth-child(odd), .max-cols .col5x4:nth-child(odd), .max-cols .col6x2:nth-child(odd), .max-cols .col6x3:nth-child(odd), .max-cols .col6x4:nth-child(odd), .max-cols .col6x5:nth-child(odd),
+  .max-cols .col12x2:nth-child(odd), .max-cols .col12x3:nth-child(odd), .max-cols .col12x4:nth-child(odd), .max-cols .col12x5:nth-child(odd), .max-cols .col12x6:nth-child(odd), .max-cols .col12x7:nth-child(odd), .max-cols .col12x8:nth-child(odd), .max-cols .col12x9:nth-child(odd), .max-cols .col12x10:nth-child(odd), .max-cols .col12x11:nth-child(odd),
+  .max-cols .col15x2:nth-child(odd), .max-cols .col15x3:nth-child(odd), .max-cols .col15x4:nth-child(odd), .max-cols .col15x5:nth-child(odd), .max-cols .col15x6:nth-child(odd), .max-cols .col15x7:nth-child(odd), .max-cols .col15x8:nth-child(odd), .max-cols .col15x9:nth-child(odd), .max-cols .col15x10:nth-child(odd), .max-cols .col15x11:nth-child(odd), .max-cols .col15x12:nth-child(odd), .max-cols .col15x13:nth-child(odd), .max-cols .col15x14:nth-child(odd) {
+    clear: both;
+  }
+
+  .max-cols-100 .col3x2, .max-cols-100 .col4x2, .max-cols-100 .col4x3, .max-cols-100 .col5x2, .max-cols-100 .col5x3, .max-cols-100 .col5x4, .max-cols-100 .col6x2, .max-cols-100 .col6x3, .max-cols-100 .col6x4, .max-cols-100 .col6x5,
+  .max-cols-100 .col12x2, .max-cols-100 .col12x3, .max-cols-100 .col12x4, .max-cols-100 .col12x5, .max-cols-100 .col12x6, .max-cols-100 .col12x7, .max-cols-100 .col12x8, .max-cols-100 .col12x9, .max-cols-100 .col12x10, .max-cols-100 .col12x11,
+  .max-cols-100 .col15x2, .max-cols-100 .col15x3, .max-cols-100 .col15x4, .max-cols-100 .col15x5, .max-cols-100 .col15x6, .max-cols-100 .col15x7, .max-cols-100 .col15x8, .max-cols-100 .col15x9, .max-cols-100 .col15x10, .max-cols-100 .col15x11, .max-cols-100 .col15x12, .max-cols-100 .col15x13, .max-cols-100 .col15x14 {
+    width: 98%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .max-cols .col3x2, .max-cols .col4x2, .max-cols .col4x3, .max-cols .col5x2, .max-cols .col5x3, .max-cols .col5x4, .max-cols .col6x2, .max-cols .col6x3, .max-cols .col6x4, .max-cols .col6x5,
+  .max-cols .col12x2, .max-cols .col12x3, .max-cols .col12x4, .max-cols .col12x5, .max-cols .col12x6, .max-cols .col12x7, .max-cols .col12x8, .max-cols .col12x9, .max-cols .col12x10, .max-cols .col12x11,
+  .max-cols .col15x2, .max-cols .col15x3, .max-cols .col15x4, .max-cols .col15x5, .max-cols .col15x6, .max-cols .col15x7, .max-cols .col15x8, .max-cols .col15x9, .max-cols .col15x10, .max-cols .col15x11, .max-cols .col15x12, .max-cols .col15x13, .max-cols .col15x14, .max-cols-100 .col3x2, .max-cols-100 .col4x2, .max-cols-100 .col4x3, .max-cols-100 .col5x2, .max-cols-100 .col5x3, .max-cols-100 .col5x4, .max-cols-100 .col6x2, .max-cols-100 .col6x3, .max-cols-100 .col6x4, .max-cols-100 .col6x5,
+  .max-cols-100 .col12x2, .max-cols-100 .col12x3, .max-cols-100 .col12x4, .max-cols-100 .col12x5, .max-cols-100 .col12x6, .max-cols-100 .col12x7, .max-cols-100 .col12x8, .max-cols-100 .col12x9, .max-cols-100 .col12x10, .max-cols-100 .col12x11,
+  .max-cols-100 .col15x2, .max-cols-100 .col15x3, .max-cols-100 .col15x4, .max-cols-100 .col15x5, .max-cols-100 .col15x6, .max-cols-100 .col15x7, .max-cols-100 .col15x8, .max-cols-100 .col15x9, .max-cols-100 .col15x10, .max-cols-100 .col15x11, .max-cols-100 .col15x12, .max-cols-100 .col15x13, .max-cols-100 .col15x14 {
+    width: 98%;
+  }
+}
+.colf, .colf1, .colf2, .colf3, .colf4, .colf5, .colf6, .colf7, .colf8, .colf9, .colf10, .colf11, .colf12, .colf13, .colf14, .colf15, .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5, .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11, .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 {
+  display: block;
+  float: left;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.colf1 {
+  width: 100%;
+}
+
+.colf2 {
+  width: 50%;
+}
+
+.colf3 {
+  width: 33.33333%;
+}
+
+.colf4 {
+  width: 25%;
+}
+
+.colf5 {
+  width: 20%;
+}
+
+.colf6 {
+  width: 16.66666%;
+}
+
+.colf7 {
+  width: 14.28571%;
+}
+
+.colf8 {
+  width: 12.5%;
+}
+
+.colf9 {
+  width: 11.11111%;
+}
+
+.colf10 {
+  width: 10%;
+}
+
+.colf11 {
+  width: 9.09090%;
+}
+
+.colf12 {
+  width: 8.33333%;
+}
+
+.colf13 {
+  width: 7.69230%;
+}
+
+.colf14 {
+  width: 7.14285%;
+}
+
+.colf15 {
+  width: 6.66666%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .max-cols .colf1, .max-cols .colf2, .max-cols .colf3, .max-cols .colf4, .max-cols .colf5, .max-cols .colf6, .max-cols .colf7, .max-cols .colf8, .max-cols .colf9, .max-cols .colf10, .max-cols .colf11, .max-cols .colf12, .max-cols .colf13, .max-cols .colf14, .max-cols .colf15 {
+    width: 50%;
+  }
+  .max-cols .colf1:nth-child(odd), .max-cols .colf2:nth-child(odd), .max-cols .colf3:nth-child(odd), .max-cols .colf4:nth-child(odd), .max-cols .colf5:nth-child(odd), .max-cols .colf6:nth-child(odd), .max-cols .colf7:nth-child(odd), .max-cols .colf8:nth-child(odd), .max-cols .colf9:nth-child(odd), .max-cols .colf10:nth-child(odd), .max-cols .colf11:nth-child(odd), .max-cols .colf12:nth-child(odd), .max-cols .colf13:nth-child(odd), .max-cols .colf14:nth-child(odd), .max-cols .colf15:nth-child(odd) {
+    clear: both;
+  }
+
+  .max-cols-100 .colf1, .max-cols-100 .colf2, .max-cols-100 .colf3, .max-cols-100 .colf4, .max-cols-100 .colf5, .max-cols-100 .colf6, .max-cols-100 .colf7, .max-cols-100 .colf8, .max-cols-100 .colf9, .max-cols-100 .colf10, .max-cols-100 .colf11, .max-cols-100 .colf12, .max-cols-100 .colf13, .max-cols-100 .colf14, .max-cols-100 .colf15 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .max-cols .colf1, .max-cols .colf2, .max-cols .colf3, .max-cols .colf4, .max-cols .colf5, .max-cols .colf6, .max-cols .colf7, .max-cols .colf8, .max-cols .colf9, .max-cols .colf10, .max-cols .colf11, .max-cols .colf12, .max-cols .colf13, .max-cols .colf14, .max-cols .colf15, .max-cols-100 .colf1, .max-cols-100 .colf2, .max-cols-100 .colf3, .max-cols-100 .colf4, .max-cols-100 .colf5, .max-cols-100 .colf6, .max-cols-100 .colf7, .max-cols-100 .colf8, .max-cols-100 .colf9, .max-cols-100 .colf10, .max-cols-100 .colf11, .max-cols-100 .colf12, .max-cols-100 .colf13, .max-cols-100 .colf14, .max-cols-100 .colf15 {
+    width: 100%;
+  }
+}
+.colf3x2 {
+  width: 66.666666%;
+}
+
+.colf4x2 {
+  width: 50%;
+}
+
+.colf4x3 {
+  width: 75%;
+}
+
+.colf5x2 {
+  width: 40%;
+}
+
+.colf5x3 {
+  width: 60%;
+}
+
+.colf5x4 {
+  width: 80%;
+}
+
+.colf6x2 {
+  width: 33.33332%;
+}
+
+.colf6x3 {
+  width: 49.99998%;
+}
+
+.colf6x4 {
+  width: 66.66664%;
+}
+
+.colf6x5 {
+  width: 83.33330%;
+}
+
+.colf12x2 {
+  width: 16.66666%;
+}
+
+.colf12x3 {
+  width: 24.99999%;
+}
+
+.colf12x4 {
+  width: 33.33332%;
+}
+
+.colf12x5 {
+  width: 41.66665%;
+}
+
+.colf12x6 {
+  width: 49.99993%;
+}
+
+.colf12x7 {
+  width: 58.33331%;
+}
+
+.colf12x8 {
+  width: 66.66664%;
+}
+
+.colf12x9 {
+  width: 74.99997%;
+}
+
+.colf12x10 {
+  width: 83.33333%;
+}
+
+.colf12x11 {
+  width: 91.66663%;
+}
+
+.colf15x2 {
+  width: 13.33332%;
+}
+
+.colf15x3 {
+  width: 19.99998%;
+}
+
+.colf15x4 {
+  width: 26.66664%;
+}
+
+.colf15x5 {
+  width: 33.33330%;
+}
+
+.colf15x6 {
+  width: 39.99996%;
+}
+
+.colf15x7 {
+  width: 46.66662%;
+}
+
+.colf15x8 {
+  width: 53.33328%;
+}
+
+.colf15x9 {
+  width: 59.99994%;
+}
+
+.colf15x10 {
+  width: 66.66660%;
+}
+
+.colf15x11 {
+  width: 73.33326%;
+}
+
+.colf15x12 {
+  width: 79.99992%;
+}
+
+.colf15x13 {
+  width: 86.66658%;
+}
+
+.colf15x14 {
+  width: 93.33324%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .max-cols .colf3x2, .max-cols .colf4x2, .max-cols .colf4x3, .max-cols .colf5x2, .max-cols .colf5x3, .max-cols .colf5x4, .max-cols .colf6x2, .max-cols .colf6x3, .max-cols .colf6x4, .max-cols .colf6x5,
+  .max-cols .colf12x2, .max-cols .colf12x3, .max-cols .colf12x4, .max-cols .colf12x5, .max-cols .colf12x6, .max-cols .colf12x7, .max-cols .colf12x8, .max-cols .colf12x9, .max-cols .colf12x10, .max-cols .colf12x11,
+  .max-cols .colf15x2, .max-cols .colf15x3, .max-cols .colf15x4, .max-cols .colf15x5, .max-cols .colf15x6, .max-cols .colf15x7, .max-cols .colf15x8, .max-cols .colf15x9, .max-cols .colf15x10, .max-cols .colf15x11, .max-cols .colf15x12, .max-cols .colf15x13, .max-cols .colf15x14 {
+    width: 50%;
+  }
+  .max-cols .colf3x2:nth-child(odd), .max-cols .colf4x2:nth-child(odd), .max-cols .colf4x3:nth-child(odd), .max-cols .colf5x2:nth-child(odd), .max-cols .colf5x3:nth-child(odd), .max-cols .colf5x4:nth-child(odd), .max-cols .colf6x2:nth-child(odd), .max-cols .colf6x3:nth-child(odd), .max-cols .colf6x4:nth-child(odd), .max-cols .colf6x5:nth-child(odd),
+  .max-cols .colf12x2:nth-child(odd), .max-cols .colf12x3:nth-child(odd), .max-cols .colf12x4:nth-child(odd), .max-cols .colf12x5:nth-child(odd), .max-cols .colf12x6:nth-child(odd), .max-cols .colf12x7:nth-child(odd), .max-cols .colf12x8:nth-child(odd), .max-cols .colf12x9:nth-child(odd), .max-cols .colf12x10:nth-child(odd), .max-cols .colf12x11:nth-child(odd),
+  .max-cols .colf15x2:nth-child(odd), .max-cols .colf15x3:nth-child(odd), .max-cols .colf15x4:nth-child(odd), .max-cols .colf15x5:nth-child(odd), .max-cols .colf15x6:nth-child(odd), .max-cols .colf15x7:nth-child(odd), .max-cols .colf15x8:nth-child(odd), .max-cols .colf15x9:nth-child(odd), .max-cols .colf15x10:nth-child(odd), .max-cols .colf15x11:nth-child(odd), .max-cols .colf15x12:nth-child(odd), .max-cols .colf15x13:nth-child(odd), .max-cols .colf15x14:nth-child(odd) {
+    clear: both;
+  }
+
+  .max-cols-100 .colf3x2, .max-cols-100 .colf4x2, .max-cols-100 .colf4x3, .max-cols-100 .colf5x2, .max-cols-100 .colf5x3, .max-cols-100 .colf5x4, .max-cols-100 .colf6x2, .max-cols-100 .colf6x3, .max-cols-100 .colf6x4, .max-cols-100 .colf6x5,
+  .max-cols-100 .colf12x2, .max-cols-100 .colf12x3, .max-cols-100 .colf12x4, .max-cols-100 .colf12x5, .max-cols-100 .colf12x6, .max-cols-100 .colf12x7, .max-cols-100 .colf12x8, .max-cols-100 .colf12x9, .max-cols-100 .colf12x10, .max-cols-100 .colf12x11,
+  .max-cols-100 .colf15x2, .max-cols-100 .colf15x3, .max-cols-100 .colf15x4, .max-cols-100 .colf15x5, .max-cols-100 .colf15x6, .max-cols-100 .colf15x7, .max-cols-100 .colf15x8, .max-cols-100 .colf15x9, .max-cols-100 .colf15x10, .max-cols-100 .colf15x11, .max-cols-100 .colf15x12, .max-cols-100 .colf15x13, .max-cols-100 .colf15x14 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .max-cols .colf3x2, .max-cols .colf4x2, .max-cols .colf4x3, .max-cols .colf5x2, .max-cols .colf5x3, .max-cols .colf5x4, .max-cols .colf6x2, .max-cols .colf6x3, .max-cols .colf6x4, .max-cols .colf6x5,
+  .max-cols .colf12x2, .max-cols .colf12x3, .max-cols .colf12x4, .max-cols .colf12x5, .max-cols .colf12x6, .max-cols .colf12x7, .max-cols .colf12x8, .max-cols .colf12x9, .max-cols .colf12x10, .max-cols .colf12x11,
+  .max-cols .colf15x2, .max-cols .colf15x3, .max-cols .colf15x4, .max-cols .colf15x5, .max-cols .colf15x6, .max-cols .colf15x7, .max-cols .colf15x8, .max-cols .colf15x9, .max-cols .colf15x10, .max-cols .colf15x11, .max-cols .colf15x12, .max-cols .colf15x13, .max-cols .colf15x14, .max-cols-100 .colf3x2, .max-cols-100 .colf4x2, .max-cols-100 .colf4x3, .max-cols-100 .colf5x2, .max-cols-100 .colf5x3, .max-cols-100 .colf5x4, .max-cols-100 .colf6x2, .max-cols-100 .colf6x3, .max-cols-100 .colf6x4, .max-cols-100 .colf6x5,
+  .max-cols-100 .colf12x2, .max-cols-100 .colf12x3, .max-cols-100 .colf12x4, .max-cols-100 .colf12x5, .max-cols-100 .colf12x6, .max-cols-100 .colf12x7, .max-cols-100 .colf12x8, .max-cols-100 .colf12x9, .max-cols-100 .colf12x10, .max-cols-100 .colf12x11,
+  .max-cols-100 .colf15x2, .max-cols-100 .colf15x3, .max-cols-100 .colf15x4, .max-cols-100 .colf15x5, .max-cols-100 .colf15x6, .max-cols-100 .colf15x7, .max-cols-100 .colf15x8, .max-cols-100 .colf15x9, .max-cols-100 .colf15x10, .max-cols-100 .colf15x11, .max-cols-100 .colf15x12, .max-cols-100 .colf15x13, .max-cols-100 .colf15x14 {
+    width: 100%;
+  }
+}
+.full-height-cols {
+  position: relative;
+}
+
+.col-filler {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  bottom: 0px;
+  float: none;
+}
+
+/* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
+ * 1. keep body and html to 100% width and height to occupy full screen.
+ * 2. The main container should also occupy full width and set min-height to 100%.
+ * 3. The main container can have it's child elements as header, footer, sidebar, content wrapper.
+ * 3. The header within main container can be either fixed or regular. We can also have header outside of main container.
+ * 4. The footer within main container need to be positioned with bottom 0 to stick at bottom in case enough content is not there. Please refer footers section.
+ * 5. The content wrapper block can have the page content in this setup. It will adjust it's height automatically.
+ * 6. The sidebar within main container can have navigation links and ui widgets.
+ */
+.container-main, .wrap-content-main {
+  position: relative;
+  z-index: 1;
+}
+
+.container h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container .content {
+  padding: 2.5%;
+}
+
+.content-80 {
+  position: relative;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+  width: 100% !important;
+}
+
+.content-74 {
+  position: relative;
+  padding-left: 13% !important;
+  padding-right: 13% !important;
+  width: 100% !important;
+}
+
+.content-50 {
+  position: relative;
+  padding-left: 25% !important;
+  padding-right: 25% !important;
+  width: 100% !important;
+}
+
+.content-26 {
+  position: relative;
+  padding-left: 37% !important;
+  padding-right: 37% !important;
+  width: 100% !important;
+}
+
+.content-left-25 {
+  position: relative;
+  padding-right: 75% !important;
+  width: 100% !important;
+}
+
+.content-left-50 {
+  position: relative;
+  padding-right: 50% !important;
+  width: 100% !important;
+}
+
+.content-right-25 {
+  position: relative;
+  padding-left: 75% !important;
+  width: 100% !important;
+}
+
+.content-right-50 {
+  position: relative;
+  padding-left: 50% !important;
+  width: 100% !important;
+}
+
+.max-height {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.max-block {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.stick-top {
+  top: 0;
+  position: absolute;
+}
+
+.stick-bottom {
+  bottom: 0;
+  position: absolute;
+}
+
+.row.row-large {
+  margin: 0 auto;
+  padding: 0.5em 0;
+}
+.row.row-large .colf12x6 {
+  padding: 1em 2em;
+}
+
+.header {
+  background-color: #515151;
+  color: #98a2ad;
+  padding: 1em 2em;
+}
+.header img {
+  margin: auto;
+  width: 140px;
+  display: block;
+}
+
+/**********************************************************************
+
+Dependencies: variables, mixins
+***********************************************************************/
+fieldset {
+  border: 1px solid #515151;
+}
+fieldset legend {
+  background-color: #515151;
+  color: #ffffff;
+  padding: 0.5em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  -khtml-border-radius: 1em;
+}
+
+optgroup {
+  font-style: italic;
+}
+
+/**********************************************************************
+Description: It defines the form elements styles for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+form {
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+form.small {
+  width: 230px;
+  padding: 10px;
+  position: relative;
+}
+form.medium {
+  width: 430px;
+  padding: 10px;
+  position: relative;
+}
+form.large {
+  width: 630px;
+  padding: 10px;
+  position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  form.small, form.medium, form.large {
+    width: 80%;
+    padding: 5%;
+  }
+}
+
+label {
+  border: none;
+  box-shadow: none;
+  font-size: 1em;
+  margin: 5px 0;
+  width: 100%;
+  padding: 5px;
+  display: inline-block;
+  text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
+  vertical-align: middle;
+  font-size: normal;
+  line-height: 2em;
+  margin: 5px 0;
+  width: 100%;
+  padding: 10px 10px;
+  outline: none;
+  box-shadow: none;
+  font-size: 1em;
+  border: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+  background-color: #e1e1e1;
+  color: #363636;
+  text-align: left;
+}
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover {
+  background-color: #e9e9e9;
+  color: #363636;
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+  color: #363636;
+  -webkit-box-shadow: inset 0 0 0 1px #e74343;
+  -moz-box-shadow: inset 0 0 0 1px #e74343;
+  box-shadow: inset 0 0 0 1px #e74343;
+}
+input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled {
+  background-color: #e1e1e1;
+  color: #464646;
+}
+
+/* input[placeholder]:before {
+    color:$color-placeholder;
+}
+
+input[placeholder] {
+    color:red;
+} 
+
+input:valid {
+  border: 1px solid $color-success;
+}
+
+input:invalid {
+  border: 1px solid $color-error;
+}
+
+ */
+input[type="submit"], input[type="button"], button, .btn {
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+  background-color: #e74343;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
+  background-color: #ff5555;
+  color: white;
+}
+input[type="submit"]:active, input[type="button"]:active, button:active, .btn:active {
+  background-color: #b51717;
+  color: white;
+}
+input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .btn:disabled {
+  background-color: gray;
+  color: #363636;
+}
+
+.btn {
+  display: inline-block;
+}
+
+input[type="text"].half, input[type="email"].half, input[type="password"].half, textarea.half, input[type="submit"].half, input[type="button"].half, button.half, select.half, .btn.half {
+  width: 50%;
+}
+input[type="text"].small, input[type="email"].small, input[type="password"].small, textarea.small, input[type="submit"].small, input[type="button"].small, button.small, select.small, .btn.small {
+  width: 80px;
+}
+input[type="text"].medium, input[type="email"].medium, input[type="password"].medium, textarea.medium, input[type="submit"].medium, input[type="button"].medium, button.medium, select.medium, .btn.medium {
+  width: 120px;
+}
+input[type="text"].large, input[type="email"].large, input[type="password"].large, textarea.large, input[type="submit"].large, input[type="button"].large, button.large, select.large, .btn.large {
+  width: 180px;
+}
+input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xlarge, textarea.xlarge, input[type="submit"].xlarge, input[type="button"].xlarge, button.xlarge, select.xlarge, .btn.xlarge {
+  width: 250px;
+}
+
+.frm-split-40-60 label {
+  width: 40%;
+  float: left;
+}
+
+.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+.frm-split-40-60 textarea, .frm-split-40-60 select {
+  width: 60%;
+  float: left;
+}
+
+.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
+.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
+.frm-rounded-all button, .frm-rounded-all .btn {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -khtml-border-radius: 4px;
+}
+
+.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
+.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"],
+.frm-rounded-top button, .frm-rounded-top .btn {
+  -moz-border-radius-top-left: 4px;
+  -moz-border-radius-top-right: 4px;
+  -webkit-border-radius-top-left: 4px;
+  -webkit-border-radius-top-right: 4px;
+  border-radius: 4px 4px 0 0;
+  -khtml-border-radius-top-left: 4px;
+  -khtml-border-radius-top-right: 4px;
+}
+
+.frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
+.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"],
+.frm-rounded-right button, .frm-rounded-right .btn {
+  -moz-border-radius-top-right: 4px;
+  -moz-border-radius-bottom-right: 4px;
+  -webkit-border-radius-top-right: 4px;
+  -webkit-border-radius-bottom-right: 4px;
+  border-radius: 0 4px 4px 0;
+  -khtml-border-radius-top-right: 4px;
+  -khtml-border-radius-bottom-right: 4px;
+}
+
+.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
+.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"],
+.frm-rounded-bottom button, .frm-rounded-bottom .btn {
+  -moz-border-radius-bottom-left: 4px;
+  -moz-border-radius-bottom-right: 4px;
+  -webkit-border-radius-bottom-left: 4px;
+  -webkit-border-radius-bottom-right: 4px;
+  border-radius: 0 0 4px 4px;
+  -khtml-border-radius-bottom-left: 4px;
+  -khtml-border-radius-bottom-right: 4px;
+}
+
+.frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
+.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"],
+.frm-rounded-left button, .frm-rounded-left .btn {
+  -moz-border-radius-top-left: 4px;
+  -moz-border-radius-bottom-left: 4px;
+  -webkit-border-radius-top-left: 4px;
+  -webkit-border-radius-bottom-left: 4px;
+  border-radius: 4px 0 0 4px;
+  -khtml-border-radius-top-left: 4px;
+  -khtml-border-radius-bottom-left: 4px;
+}
+
+.frm-icon-field {
+  display: inline-block;
+  width: 100%;
+}
+.frm-icon-field .wrap-icon {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 8px 1%;
+  width: 10%;
+  font-size: 1em;
+  line-height: 2em;
+  background-color: #e1e1e1;
+  color: #363636;
+}
+.frm-icon-field input[type="text"], .frm-icon-field input[type="email"], .frm-icon-field input[type="password"], .frm-icon-field textarea, .frm-icon-field input[type="submit"], .frm-icon-field input[type="button"], .frm-icon-field button, .frm-icon-field .btn {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  width: 90%;
+  line-height: 2em;
+  padding: 5px 10px;
+}
+.frm-icon-field.rounded .wrap-icon {
+  -moz-border-radius-top-left: 4px;
+  -moz-border-radius-bottom-left: 4px;
+  -webkit-border-radius-top-left: 4px;
+  -webkit-border-radius-bottom-left: 4px;
+  border-radius: 4px 0 0 4px;
+  -khtml-border-radius-top-left: 4px;
+  -khtml-border-radius-bottom-left: 4px;
+}
+.frm-icon-field.rounded input[type="text"], .frm-icon-field.rounded input[type="email"], .frm-icon-field.rounded input[type="password"], .frm-icon-field.rounded textarea, .frm-icon-field.rounded input[type="submit"], .frm-icon-field.rounded input[type="button"], .frm-icon-field.rounded button, .frm-icon-field.rounded .btn {
+  -moz-border-radius-top-right: 4px;
+  -moz-border-radius-bottom-right: 4px;
+  -webkit-border-radius-top-right: 4px;
+  -webkit-border-radius-bottom-right: 4px;
+  border-radius: 0 4px 4px 0;
+  -khtml-border-radius-top-right: 4px;
+  -khtml-border-radius-bottom-right: 4px;
+}
+
+/**********************************************************************
+Description: It defines the default table style available in CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/**********************************************************************
+Description: The custom elements for CMGTools.
+Dependencies: variables, mixins, transitions, transformation
+***********************************************************************/
+.cmt-select-wrap {
+  position: relative;
+}
+.cmt-select-wrap select {
+  display: none;
+}
+.cmt-select-wrap .cmt-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #e1e1e1;
+}
+.cmt-select-wrap .cmt-select .cmt-selected {
+  cursor: pointer;
+  position: relative;
+  z-index: 100000;
+  padding-right: 32px;
+}
+.cmt-select-wrap .cmt-select .cmt-selected .s-text {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  padding: 12px;
+  color: #363636;
+}
+.cmt-select-wrap .cmt-select .cmt-selected .s-icon {
+  display: inline-block;
+  width: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cmt-select-wrap .cmt-select .cmt-selected.disabled {
+  cursor: default;
+}
+.cmt-select-wrap .cmt-select .cmt-select-list {
+  position: relative;
+  z-index: 100001;
+  max-height: 180px;
+  overflow-y: auto;
+}
+.cmt-select-wrap .cmt-select .cmt-select-list li {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cmt-select-wrap, .cmt-select, .cmt-selected, .s-text {
+  letter-spacing: 1px;
+  font-weight: 500 !important;
+}
+
+.cmt-select-list li {
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.cmt-select-list li:hover {
+  color: white;
+  background-color: #e74343;
+}
+
+.cmt-radios label {
+  cursor: pointer;
+  display: inline;
+  font-size: 1em;
+  line-height: 2.5;
+  margin-right: 2em;
+}
+.cmt-radios label input[type=checkbox], .cmt-radios label input[type=radio] {
+  display: none;
+}
+.cmt-radios label input[type=checkbox] + .label.pad-label::before, .cmt-radios label input[type=radio] + .label.pad-label::before {
+  margin-right: 8px;
+}
+.cmt-radios label input[type=radio] + .label::before, .cmt-radios label input[type=checkbox] + .label::before {
+  font-family: "cmti-core";
+  font-weight: normal;
+  color: gray;
+  border-radius: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  line-height: 13px;
+}
+.cmt-radios label input[type=checkbox]:checked, .cmt-radios label input[type=radio]:checked, .cmt-radios label input[type=checkbox]:focus, .cmt-radios label input[type=radio]:focus {
+  outline: none !important;
+}
+.cmt-radios label input[type=checkbox]:checked + .label::before, .cmt-radios label input[type=radio]:checked + .label::before {
+  display: inline-block;
+  content: '\e046';
+  background-color: #F5F8FC;
+  color: #e74343;
+}
+.cmt-radios label input[type=checkbox]:checked + .label, .cmt-radios label input[type=radio]:checked + .label {
+  color: #b51717;
+}
+.cmt-radios label input[type=checkbox]:hover + .label::before, .cmt-radios label input[type=radio]:hover + .label::before, .cmt-radios label input[type=checkbox] + .label:hover::before, .cmt-radios label input[type=radio] + .label:hover::before {
+  color: #ff5555;
+}
+.cmt-radios label input[type=checkbox]:disabled + .label::before, .cmt-radios label input[type=radio]:disabled + .label::before {
+  background-color: #DDD !important;
+  color: #BBB;
+}
+.cmt-radios label input[type=radio] + .label::before, .cmt-radios label input[type=radio]:disabled + .label::before {
+  content: "\e045";
+}
+.cmt-radios label input[type=radio]:checked + .label::before {
+  content: "\e046";
+}
+.cmt-radios label input[type=checkbox] + .label::before, .cmt-radios label input[type=checkbox]:disabled + .label::before {
+  content: "V";
+}
+.cmt-radios label input[type=checkbox]:checked + .label::before {
+  content: "g";
+}
+
+/**********************************************************************
+Description: It defines the theme for JQuery UI Components from CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+.ui-datepicker {
+  position: relative;
+  width: 300px;
+  background-color: #ffffff;
+  padding: 5px;
+  display: none;
+  -webkit-box-shadow: inset 0 0 0 1px #e0c461;
+  -moz-box-shadow: inset 0 0 0 1px #e0c461;
+  box-shadow: inset 0 0 0 1px #e0c461;
+}
+
+.ui-datepicker-header {
+  background-color: #CDA828;
+  text-align: center;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-title {
+  display: inline-block;
+  padding: 1em;
+  color: #ffffff;
+}
+
+.ui-datepicker-prev {
+  float: left;
+}
+
+.ui-datepicker-next {
+  float: right;
+}
+
+.ui-datepicker-prev-hover, .ui-datepicker-next-hover {
+  background-color: #8d741c;
+}
+
+.ui-datepicker-title {
+  font-weight: bold;
+}
+
+.ui-datepicker-calendar {
+  background: #ffffff;
+  color: #515151;
+  width: 100%;
+}
+.ui-datepicker-calendar th {
+  padding: 1em 0.25em;
+  color: #8d741c;
+}
+.ui-datepicker-calendar td {
+  width: 12.28571%;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+}
+.ui-datepicker-calendar td span, .ui-datepicker-calendar td a {
+  display: inline-block;
+  width: 90%;
+  margin: 5%;
+}
+.ui-datepicker-calendar td a {
+  color: #8d741c;
+}
+.ui-datepicker-calendar td a:hover {
+  background-color: #CDA828;
+  color: #ffffff;
+}
+.ui-datepicker-calendar td a.ui-state-active {
+  background-color: #8d741c;
+  color: #ffffff;
+}
+.ui-datepicker-calendar .ui-state-disabled span {
+  background: #CDA828;
+  color: #515151;
+}
+
+/*
+input[type="text"]:focus::-webkit-input-placeholder {
+  color: red;
+  line-height:0.5em;
+  font-size:0.75em;
+}
+input[type="text"]:focus::-moz-placeholder {
+  color: red;
+  line-height:0em;
+  font-size:0.75em;
+}
+input[type="text"]:-moz-placeholder {    
+  color: red;
+  line-height:0.5em;
+  font-size:0.75em;
+}
+input[type="text"]:-ms-input-placeholder { 
+  color: red;
+  line-height:0.5em;
+  font-size:0.75em;
+}  */
+
+/*# sourceMappingURL=elements.css.map */

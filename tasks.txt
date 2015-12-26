@@ -1,2 +1,0 @@
-1. All the elements and components must show an example html elements layout.
-2. follow the naming convention like -> filter -> filter-header by prefixing the childs with header to avoid clash with high level elements like .header.

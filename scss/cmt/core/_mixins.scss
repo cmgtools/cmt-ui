@@ -99,11 +99,12 @@ Dependencies: variables
 }
 
 // Circled - Style having border radius 100% and child elements aligned at center position
-@mixin circled1( $bkg-color ) {
+@mixin circled1( $bkg-color, $color ) {
     overflow: hidden;
     text-align: center;
     vertical-align: middle;
     background-color: $bkg-color;
+    color: $color;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
@@ -175,10 +176,10 @@ Dependencies: variables
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
 
-@mixin text-shadow( $x, $y, $blur, $color, $spread: 0px ) {
-    -webkit-text-shadow: $x $y $blur $spread $color;
-    -moz-text-shadow: $x $y $blur $spread $color;
-    text-shadow: $x $y $blur $spread $color;
+@mixin text-shadow( $x, $y, $blur, $color, $opacity: 1 ) {
+    -webkit-text-shadow: $x $y $blur rgba( $color, $opacity );
+    -moz-text-shadow: $x $y $blur rgba( $color, $opacity );
+    text-shadow: $x $y $blur rgba( $color, $opacity );
 }
 
 @mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
@@ -189,8 +190,24 @@ Dependencies: variables
 
 // Borders
 
-@mixin border-all( $width, $style, $color ) {
+@mixin border( $width, $style, $color ) {
     border: $width $style $color;
+}
+
+@mixin border-top( $width, $style, $color ) {
+    border-top: $width $style $color;
+}
+
+@mixin border-right( $width, $style, $color ) {
+    border-right: $width $style $color;
+}
+
+@mixin border-bottom( $width, $style, $color ) {
+    border-bottom: $width $style $color;
+}
+
+@mixin border-left( $width, $style, $color ) {
+    border-left: $width $style $color;
 }
 
 // TODO: Add missing gradient mixins
@@ -204,6 +221,17 @@ Dependencies: variables
     background-image: -webkit-linear-gradient( $direction, $start, $end );
     background-image: -ms-linear-gradient( $direction, $start, $end );
     background-image: linear-gradient( to $direction, $start, $end );
+}
+
+@mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle ) {
+  
+    background: $start;
+    background: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
+    background: -webkit-linear-gradient($angle, $start $startPos, $end $endPos);
+    background: -o-linear-gradient($angle, $start $startPos, $end $endPos);
+    background: -ms-linear-gradient($angle, $start $startPos, $end $endPos);
+    
+    background: linear-gradient($linearAngle, $start $startPos, $end $endPos);
 }
 
 // Radial Gradient - Default - Top to Bottom
@@ -326,6 +354,45 @@ Dependencies: variables
     background-attachment: fixed;
 }
 
+// background using img - use it inside a block having fixed height
+@mixin bkg-img {
+    position: relative;
+    top: -50%;
+    left: -50%;
+    width: 200%; 
+    height: 200%;
+
+    img {
+        position: absolute; 
+        top: 0;
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        margin: auto; 
+        min-width: 50%;
+        min-height: 50%;
+    }
+}
+
+// Textures
+
+%textures {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include bkg-tile;
+}
+
+@mixin blur( $value ) {
+    filter: blur($value);
+    -webkit-filter: blur($value);
+    -moz-filter: blur($value);
+    -o-filter: blur($value);
+    -ms-filter: blur($value);  
+}
+
 // Mixins Default implementation ***********************
 
 // Clearfix
@@ -375,8 +442,16 @@ Dependencies: variables
 
 // Round Corners
 
-.rounded-all {
+.rounded {
     @include rounded( $size-default );  
+}
+
+.rounded-medium {
+    @include rounded( $size-medium );  
+}
+
+.rounded-large {
+    @include rounded( $size-large );  
 }
 
 .rounded-top {
@@ -414,7 +489,7 @@ Dependencies: variables
 // Circled
 
 .circled1 {
-    @include circled1( $color-secondary );
+    @include circled1( $color-secondary, $color-secondary-text );
 }
 
 .circled2 {
@@ -449,25 +524,41 @@ Dependencies: variables
 }
 
 .text-shadow {
-    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-black, 0.4 ) );
+    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
 }
 
 .text-shadow-primary {
-    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, 0.4 ) );
+    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
 }
 
 .text-shadow-secondary {
-    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, 0.4 ) );
+    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
 }
 
 .text-shadow-tertiary {
-    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, 0.4 ) );
+    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
 }
 
 // Borders
 
 .border-default {
-    @include border-all( 1px, solid, $color-secondary );
+    @include border( $size-default, solid, $color-secondary );
+}
+
+.border-default-top {
+    @include border-top( $size-default, solid, $color-secondary );
+}
+
+.border-default-right {
+    @include border-right( $size-default, solid, $color-secondary );
+}
+
+.border-default-bottom {
+    @include border-bottom( $size-default, solid, $color-secondary );
+}
+
+.border-default-left {
+    @include border-left( $size-default, solid, $color-secondary );
 }
 
 // Gradients
@@ -504,6 +595,13 @@ Dependencies: variables
     @include max-area-cover;
 }
 
+.max-area-relative {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 // Backgrounds
 
 .bkg-tile {
@@ -528,6 +626,101 @@ Dependencies: variables
 
 .bkg-image-fixed {
     @include bkg-image-fixed;
+}
+
+.bkg-img {
+    @include bkg-img;  
+}
+
+// Default Texture
+
+.texture {
+    @extend %textures;
+
+    &.texture-default {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
+    }
+
+    &.texture-bar-s {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC');
+    }
+    
+    &.texture-bar-m {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAAHHBk5tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDIAAJIVDGz9cSP7AAAAAElFTkSuQmCC');
+    }
+    
+    &.texture-bar-l {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAAHaA37VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMEEwMjQzNTdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMEEwMjQzNjdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwQTAyNDMzN0U0NzExRTU5MDY4RUFDMzhGMEREQzY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwQTAyNDM0N0U0NzExRTU5MDY4RUFDMzhGMEREQzY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mZqYcQAAADJJREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDJAUYUMAA2TD2qNBZ0eAAAAAElFTkSuQmCC');
+    }  
+        
+    &.texture-grid-w {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//vy9AADGACIAAYgSzgAAggOAMJgYoAAgguAgMMDGgAYAAIqyCsABAgIFdAcQ4aUwdBI0kVQEAViAs7e1rqlEAAAAASUVORK5CYII=');
+    }
+    
+    &.texture-grid-b {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYGBX/P//HyeNqYOgkaQqAAAXoxjjLGdo/wAAAABJRU5ErkJggg==');
+    }
+       
+    &.texture-grain-w {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi+P//fwxAADGACIAAYgSzgAAggMA8JhADIIAQQkAAEEAgDozNwMSABFA4AAGGogynKqIkAGovFsbm0NI0AAAAAElFTkSuQmCC');
+    }
+    
+    &.texture-grain-w-l {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi+P//fwxAADGACIAAYgSzgAAggEAMEM3AxAAFAAEEF4EBJgY0ABBAYBNAqmA0Vi0xUHYMVkMBAgzuACBYgqwSxsfQgQ5gdsQgiaHwCZoAAAFwL9t1tvLGAAAAAElFTkSuQmCC');
+    }
+    
+    &.texture-grain-b {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
+    }
+    
+    &.texture-grain-b-l {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIMb///+DaAYmBigACCC4CAwwMaABgAACmwBSBaMxtBBWARBgcAccPXo4HURbW9ui8DHNRAOUmwAAwWk26e28KNgAAAAASUVORK5CYII=');
+    }
+    
+    &.texture-diagonal-w {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpi+P//fwxAADEACQaAAGIEEUAQAxBAYB4TiAkQQGAWSAGIBgggFA5MMVxDDFSWASDAUJSh68cQRNaBoQAAHDFj9Tn4HhEAAAAASUVORK5CYII=');
+    }
+    
+    &.texture-diagonal-w-r {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwNAADGACIAAYgSzGBhiAAIIxIsBCwEEEJgFYoAwQADB5OFq4LIoygACDEUGXRVWSayqQRgATKlm8CR0i1QAAAAASUVORK5CYII=');
+    }
+    
+    &.texture-diagonal-b {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpi+P//PwNAADGACIAAYrCysikGMQACCMxgBLEAAggsDsIgEYAAQuXAFMOVwQQAAgxFBkMVuiDcYGy6AIpfVV7EbepaAAAAAElFTkSuQmCC');
+    }
+    
+    &.texture-diagonal-b-r {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg==');
+    }
+}
+
+.blur {
+    @include blur( $size-default );
+    transform: scale(1.1);
+
+    &.blur-small {
+        @include blur( $size-small );
+    }
+
+    &.blur-medium {
+        @include blur( $size-medium );
+    }
+
+    &.blur-large {
+        @include blur( $size-large );
+    }
+
+    &.blur-xlarge {
+        @include blur( $size-xlarge );
+    }
+}
+
+.pattern {
+    @extend %textures;
+
+    .pattern-default {
+        background-image: url( $images-path + "pattern-default.jpg" );
+    }
 }
 
 // Media Queries **************************************

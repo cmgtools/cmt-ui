@@ -21,3 +21,54 @@
         -moz-transition: 0.5s;
     }
 }
+
+.pagination-detailed {
+    margin: 10px 0;
+
+    .info {
+        float: left;          
+    }
+
+    .pagination {
+        float: right;
+    }
+
+    .pagination, .pagination li {
+        display: inline-block;
+        list-style: none;
+    }
+
+    .pagination li {
+        margin: 0 2px;
+        font-size: 1em;
+        line-heigh: 1em;
+    }
+
+    .pagination .prev, .pagination .next, .pagination li a {
+        color: $color-primary;
+        text-decoration: none;
+        height: 1.6em;
+        background-color: $color-secondary-d;
+        @include transit-all( $transit-eio, $transit-time-small );
+    }
+
+    .pagination li a {
+        padding: 2px 8px;
+    }
+
+    .pagination .disabled span, .pagination .disabled span:hover {
+        background-color: $color-secondary;
+        padding: 2px 8px;
+        height: 1.6em;  
+    }
+
+    .pagination .disabled span {
+        line-height:1.6em;
+    }
+
+    .pagination .active, .pagination .active a, .pagination li a:hover, .pagination .next:hover, .pagination .prev:hover {
+        background-color: $color-secondary;
+        color: $color-primary;
+        @include transit-all( $transit-eio, $transit-time-small );
+    }
+}

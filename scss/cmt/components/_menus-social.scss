@@ -1,0 +1,137 @@
+/**********************************************************************
+Description: It defines the styles for the social network menu components available in CMGTools.
+Dependencies: variables, variables-ext, mixins, CMGTools IconLib
+***********************************************************************/
+
+.menu-social {
+
+    // Default
+    a {
+        color: $color-white;
+        margin: 0;
+        display: inline-block;
+        @include transit-all( $transit-eio, $transit-time-small );
+
+        &:hover {
+            background-color: $color-btn !important;
+        }
+    }
+
+    // Social Icons
+    .cmti {
+        margin: 0.25rem 0.5rem;
+    }
+
+    // Social Icons with background color
+    .cmti-bkg {
+
+        &.cmti-social-facebook {
+            background-color: $color-facebook;
+        }
+
+        &.cmti-social-twitter {
+            background-color: $color-twitter;
+        }
+
+        &.cmti-social-google {
+            background-color: $color-google;
+        }
+
+        &.cmti-social-google-plus {
+            background-color: $color-google-plus;
+        }
+
+        &.cmti-social-linkedin {
+            background-color: $color-linkedin;
+        }
+
+        &.cmti-social-instagram {
+            background-color: $color-instagram;
+        }
+
+        &.cmti-social-pintrest {
+            background-color: $color-pintrest;
+        }
+
+        &.cmti-social-youtube {
+            background-color: $color-youtube;
+        }
+    }
+
+    // Social Icons with text color
+    .cmti-text {
+
+        &.cmti-social-facebook {
+            color: $color-facebook;
+        }
+
+        &.cmti-social-twitter {
+            color: $color-twitter;
+        }
+
+        &.cmti-social-google {
+            color: $color-google;
+        }
+
+        &.cmti-social-google-plus {
+            color: $color-google-plus;
+        }
+     
+        &.cmti-social-linkedin {
+            color: $color-linkedin;
+        }
+
+        &.cmti-social-instagram {
+            color: $color-instagram;
+        }
+
+        &.cmti-social-pintrest {
+            color: $color-pintrest;
+        }
+
+        &.cmti-social-youtube {
+            color: $color-youtube;
+        }
+
+        &:hover {
+            color: $color-btn;
+        }
+    }
+    
+    // For Buttons
+    .btn {
+        color: $color-white !important;
+
+        &.facebook {
+            background-color: $color-facebook;
+        }
+
+        &.twitter {
+            background-color: $color-twitter;
+        }
+
+        &.google {
+            background-color: $color-google;
+        }
+
+        &.google-plus {
+            background-color: $color-google-plus;
+        }
+
+        &.linkedin {
+            background-color: $color-linkedin;
+        }
+
+        &.instagram {
+            background-color: $color-instagram;
+        }
+
+        &.pintrest {
+            background-color: $color-pintrest;
+        }
+
+        &.youtube {
+            background-color: $color-youtube;
+        }
+    }
+}

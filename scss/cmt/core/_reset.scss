@@ -59,6 +59,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width:100%;
 }
 
 // == Collected from other sources ==
@@ -71,13 +72,16 @@ pre {
 }
 
 hr {
-  	display: block; 
-  	border: 0;
-  	margin: 1em 0;
-  	padding: 0;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+  	display: block;
     height: 0;
+    padding: 0;
+  	margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0;
+    border: none;
+    @include border-bottom( $size-default, solid, $color-secondary );
 }
 
 audio, canvas, video {
@@ -207,7 +211,7 @@ textarea {
 a {
     text-decoration: none;
     cursor: pointer;
-    color: $color-primary-text;
+    color: $color-link;
 }
 
 a:focus {

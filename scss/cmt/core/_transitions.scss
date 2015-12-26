@@ -1,5 +1,6 @@
 /**********************************************************************
-Description: The transition effects available in CMGTools.
+Description: The transition effects available in CMGTools. These allow changes in allowed css properties smoothly over a 
+defined time interval. We can define the animation/transition effects and duration to change the property.
 Dependencies: none
 ***********************************************************************/
 /* transit-xxx
@@ -15,7 +16,7 @@ $transit-eo: ease-out;
 // Transition period
 $transit-time-small: 250ms;
 $transit-time-medium: 350ms;
-$transit-time-big: 450ms;
+$transit-time-large: 450ms; 
 
 // All transitions
 @mixin transit-all( $transit, $duration, $delay: 0s ) {

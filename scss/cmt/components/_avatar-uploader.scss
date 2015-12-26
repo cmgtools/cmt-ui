@@ -1,5 +1,5 @@
 .box-avatar {
-    border: $border-l;
+    @include border(1px, solid, $color-primary-l );
     padding: 1em;
 
     .avatar {

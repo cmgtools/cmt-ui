@@ -3,18 +3,70 @@ Description: It defines the styles for the menu components available in CMGTools
 Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
 
+// Basic Navs
+
+.nav {
+    display: block;
+
+    li {
+        display: inline-block;
+
+        a {
+            @include transit-all( $transit-eio, $transit-time-medium );
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+.vnav {
+    display: block;
+
+    li {
+        display: inline-block;
+        width: 100%;
+
+        a {
+            @include transit-all( $transit-eio, $transit-time-medium );
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.nav-table {
+    display: table;
+    // use border spacing to seperate navs
+    //border-spacing: $size-small-rem;
+    width: 100%;
+
+    li {
+        display: table-cell;
+        text-align: center;
+
+        a {
+            @include transit-all( $transit-eio, $transit-time-medium );
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+// Nav Components
+
 /* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
    It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
 .hnav-regular {
     background-color: $color-primary;
-    border-bottom: $border-fat;
+    @include border-bottom( $size-default, solid, $color-primary-l );
     position: relative;
 
     & > li {
         display: inline-block;
         text-align: left;
         background-color: $color-primary;
-        border-bottom: $border-fat;
+        @include border-bottom( $size-default, solid, $color-primary-l );
         margin-bottom: -5px;
         @include transit-all( $transit-eio, $transit-time-small );
 
@@ -56,7 +108,7 @@ Dependencies: variables, variables-ext, mixins
         padding: 10px 2%;
         width: 96%;
         background-color: $color-secondary;
-        @include shadow( 1px, 1px, 2px, $color-shadow-default );
+        @include shadow( 1px, 1px, 2px, $color-secondary );
 
         & > li {
             display: inline-block;
@@ -107,7 +159,7 @@ Dependencies: variables, variables-ext, mixins
 
 /* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
 .vnav-regular {
-    border: $border-medium;
+    @include border( $size-medium, solid, $color-primary-l );
     position: relative;
 
     li {
@@ -148,7 +200,7 @@ Dependencies: variables, variables-ext, mixins
         top: -2px;
         width: 250px;
         margin-left: 100%;
-        border: $border-medium;
+        @include border( $size-medium, solid, $color-primary-l );
     }
 
     @include responsive-max( screen-tablet-large ) {
@@ -162,6 +214,108 @@ Dependencies: variables, variables-ext, mixins
 
             a {
                 background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+/* Sliding Menu - It works together with Sliding Menu plugin shipped with CMGTools JS. */
+.vnav-slider-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $color-transparent-black;
+    display: none;
+    z-index: 10000000;
+
+    // Wraps slider header and content
+    .vnav-slider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 320px;
+        background-color: $color-primary-d;
+        color: $color-primary-text-d;
+
+        &.vnav-slider-left {
+            left: -320px;
+            
+            // Close button having icon on left and text on right
+            .btn-close {
+                padding-left: 2em;
+    
+                .btn-close-icon {
+                    margin-right: 0.5em;
+                }
+            }
+        }
+    
+        &.vnav-slider-right {
+            right: -320px;
+    
+            // Close button having icon on right and text on left
+            .btn-close {
+                padding-right: 2em;
+    
+                .btn-close-icon {
+                    margin-left: 0.5em;
+                }
+            }
+        }
+
+        @include responsive-max( screen-mobile-large ) {
+            
+            &.vnav-slider-left {
+                width: 100%;
+                left: -100%;
+            }
+
+            &.vnav-slider-right {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    }
+
+    // Header with close button and hr at bottom
+    .vnav-slider-header {
+
+        .btn-close {
+            cursor: pointer;
+            padding: 1em;
+
+            &:hover {
+                color: $color-gray;
+            }
+        }
+
+        hr {
+            @include border-bottom( $size-default, solid, $color-tertiary-d );
+        }
+    }
+
+    .vnav-slider-menu {
+        width: 100%;
+        height: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+
+        ul {
+
+            li {
+                padding: 0.5em 0;
+
+                a {
+                    color: $color-primary-text-d;
+                    text-align: left;
+
+                    &:hover {
+                        color: $color-link;
+                    }
+                }
             }
         }
     }

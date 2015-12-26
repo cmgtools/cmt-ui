@@ -1,15 +1,73 @@
 /**********************************************************************
-Description: The translation effects available in CMGTools.
+Description: The transformation effects available in CMGTools. These change the physical look of an element - position, orientation and scale. 
+We can assist transformations with transition to create animation effects.
 Dependencies: none
 ***********************************************************************/
 
-@mixin transform-rotate( $angle ) {
-  -webkit-transform: rotate( $angle ); 
-      -ms-transform: rotate( $angle ); 
-          transform: rotate( $angle ); 
+@mixin transform-rotate( $degrees, $angle ) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=#{ $angle } );
+  -webkit-transform: rotate( $degrees ); 
+      -ms-transform: rotate( $degrees ); 
+          transform: rotate( $degrees ); 
 }
 
-// transformation - rotate
-.transform-rotate {
-    @include transform-rotate( 180deg );
+@mixin transform-scale( $value ) {
+  -webkit-transform:scale( $value );
+     -moz-transform:scale( $value );
+      -ms-transform:scale( $value );
+       -o-transform:scale( $value );
+          transform:scale( $value );
+}
+
+@mixin transform-flip( $horizontal, $vertical, $angle ) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=#{ $angle } );
+  -webkit-transform: scale( $horizontal, $vertical );
+      -ms-transform: scale( $horizontal, $vertical );
+          transform: scale( $horizontal, $vertical );
+}
+
+// Transformations default implementation **************
+
+.rotate-45 {
+    @include transform-rotate( 45deg, 0.5 );
+}
+
+.rotate-90 {
+    @include transform-rotate( 90deg, 1 );
+}
+
+.rotate-135 {
+    @include transform-rotate( 135deg, 1.5 );
+}
+
+.rotate-180 {
+    @include transform-rotate( 180deg, 2 );
+}
+
+.rotate-225 {
+    @include transform-rotate( 225deg, 2.5 );
+}
+
+.rotate-270 {
+    @include transform-rotate( 270deg, 3 );
+}
+
+.rotate-315 {
+    @include transform-rotate( 315deg, 3.5 );
+}
+
+.flip-horizontal {
+     @include transform-flip( -1, 1, 0 );
+}
+
+.flip-vertical {
+    @include transform-flip( 1, -1, 2 );
+}
+
+.grow {
+    @include transit-all( $transit-eio, $transit-time-medium );
+
+    &:hover {
+        @include transform-scale( 1.2 );
+    }
 }

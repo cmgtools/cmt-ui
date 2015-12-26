@@ -1,0 +1,38 @@
+.flipper {
+    position: relative;  
+    z-index: 1;
+    width: 100%;
+    padding: 0 4px 8px;               
+    perspective: 1000;
+
+    &:hover .flipper-content {
+        transform: rotateY(180deg);
+    }
+
+    .flipper-content {
+        width: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.5s linear;
+
+        .flipper-face {
+            width: 100%;
+            backface-visibility: hidden;
+        }
+    
+        .flipper-face.flipper-back {
+            display: block;
+            transform: rotateY(180deg);
+            box-sizing: border-box;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            background-color: $color-secondary;
+        }
+    
+        .flipper-back {
+            position:absolute;
+            top:0;
+            height:100%;
+        }
+    }
+}
