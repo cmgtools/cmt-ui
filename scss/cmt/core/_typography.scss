@@ -168,8 +168,12 @@ pre {
 
 // Links
 
-.link {
-    color: $color-tertiary;
+a, .link {
+    color: $color-link;
+    
+    &:hover {
+        color: $color-link-h;
+    }
 }
 
 // Text Colors

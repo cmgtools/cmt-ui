@@ -1,0 +1,43 @@
+// The parent for all the box elements. It define several type of boxes like collapsible, draggable etc.
+
+.box {
+
+    .box-wrap-header {
+        // Header having collapsible action
+        position: relative;
+    }
+
+    .box-wrap-content {
+        // Collapsible content
+        position: relative;
+    }
+}
+
+// Collapsible boxes - content can collapse on clicking header / collapse button on header.
+.box-collapsible {
+
+    .box-wrap-header {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+        padding: 0.5rem;
+
+        .btn-collapse {
+            position: absolute;
+            display: inline-block;
+            top: 10px;
+            right: 10px;
+            color: $color-btn-text;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-btn-h-text;
+            }
+        }
+    }
+
+    .box-wrap-content {
+        background-color: $color-primary-l;
+        color: $color-primary-text-l;
+        padding: 0.5rem;
+    }
+}

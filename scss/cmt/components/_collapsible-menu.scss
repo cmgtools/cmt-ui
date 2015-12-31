@@ -1,0 +1,71 @@
+.collapsible-menu {
+
+    .collapsible-tab {
+        width: 100%;
+        border-bottom: 1px solid #d3d3d3;
+        border-top: 1px solid #ffffff;
+    }
+  
+    .collapsible-tab.active {
+        width: 98%; 
+        border-right: 4px solid #2b3d51;
+    }
+
+    .collapsible-tab.active .collapsible-tab-header, .collapsible-tab.pactive .collapsible-tab-header {
+        background-color: #d9dce0;
+        font-family: $font-heading;
+    }
+
+    .collapsible-tab.active .active {
+        font-family: $font-heading;
+        font-size:1.2em;
+    }
+
+    .collapsible-tab-header {
+        cursor: pointer;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .collapsible-tab-header:hover {
+        background-color: #d9dce0;
+    }
+
+    .collapsible-tab-header a {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        cursor: pointer;
+        color: #2b3d51;
+    }
+
+    .collapsible-tab-header .colf4 {
+        text-align: center;
+    }
+
+    .collapsible-tab-content {
+        padding-left: 35%;
+        display: none;
+        -moz-box-shadow:inset 0px 0px 2px #909090;
+        -webkit-box-shadow:inset 0px 0px 2px #909090;
+        box-shadow:inset 0px 0px 2px #909090;
+    }
+
+    .collapsible-tab-content ul li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .collapsible-tab-content ul li a {
+        color: #4f5e7f;
+        font-size: 0.8em;
+        line-height: 25px;
+        width:95%;
+        display:block;
+        padding-left:5%;
+    }
+
+    .collapsible-tab-content ul li a:hover {
+        background-color:#d9dce0;
+    }
+}
