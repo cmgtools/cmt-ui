@@ -13,6 +13,29 @@
     }
 }
 
+// Simple box having icon and header within header wrapper and content within content box. The content is aligned center by default.
+.box-regular {
+    padding: 1rem;
+    background-color: $color-secondary;
+    color: $color-secondary-text;
+
+    // Icon, text at center
+    .box-wrap-header {
+
+        .box-wrap-icon {
+            text-align: center;
+        }
+        
+        .box-header {
+            text-align: center;
+        }
+     }
+     
+     .box-wrap-content {
+        text-align: center;
+     }
+}
+
 // Collapsible boxes - content can collapse on clicking header / collapse button on header.
 .box-collapsible {
 
