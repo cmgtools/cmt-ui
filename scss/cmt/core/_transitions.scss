@@ -88,6 +88,15 @@ $transit-time-large: 450ms;
     transition: padding $duration $transit-eo $delay;
 }
 
+// Margin transition
+@mixin transit-margin( $transit, $duration, $delay: 0s ) {
+    -moz-transition: margin $duration $transit-eo $delay;
+    -ms-transition: margin $duration $transit-eo $delay;
+    -o-transition: margin $duration $transit-eo $delay;
+    -webkit-transition: margin $duration $transit-eo $delay;
+    transition: margin $duration $transit-eo $delay;
+}
+
 // Width and Height transitions
 @mixin transit-width( $transit, $duration, $delay: 0s ) {
     -moz-transition: width $duration $transit $delay;

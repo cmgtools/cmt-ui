@@ -63,7 +63,7 @@ label {
     border: none;
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
     @extend %input-style;
     @include transit-all( $transit-eio, $transit-time-small );
     background-color: $color-field;
@@ -83,6 +83,15 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
     &:disabled {
         background-color: $color-field-d;
         color: $color-field-d-text;
+    }
+}
+
+.cmt-checkbox, .cmt-switch {
+    background: none;
+
+    &:hover {
+        background: none;
+        color: $color-field-h-text;
     }
 }
 
@@ -198,15 +207,10 @@ input[type="submit"], input[type="button"], button, .btn {
     width: 100%;
 }
 
-.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"], 
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60 {
+.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+.frm-split-40-60 textarea, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-split-40-60 select, .element-60 {
     width: 60%;
     float: left;
-}
-
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"], 
-.element-60 textarea, .element-60 select  {
-    width: 100%;
 }
 
 .frm-split-40-60 {
@@ -215,9 +219,14 @@ input[type="submit"], input[type="button"], button, .btn {
     }
 }
 
+.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
+.element-60 textarea, .element-60 .cmt-checkbox, .element-60 .cmt-switch, .element-60 select  {
+    width: 100%;
+}
+
 // Round cornered elements
 
-.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"], 
+.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
 .frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
 .frm-rounded-all button, .frm-rounded-all .btn {
       @include rounded( $size-medium );

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! CMGTools - CMGTools UI is CSS Framework which provide responsive grid, commonly used mixins, themeable color scheme and several re-usable components.
- * Version - 1.0.0-alpha1
+ * Version - 1.0.0-alpha4
  * License - GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
  * Copyright © 2015 by VulpineCode Technologies Private Limited (http://www.vulpinecode.com) All rights reserved.
  */
@@ -63,10 +63,10 @@ Dependencies: variables
   background-color: rgba(242, 242, 242, 0.6); }
 
 .bkg-transparent-secondary {
-  background-color: rgba(81, 81, 81, 0.6); }
+  background-color: rgba(60, 70, 85, 0.6); }
 
 .bkg-transparent-tertiary {
-  background-color: rgba(205, 168, 40, 0.6); }
+  background-color: rgba(135, 186, 69, 0.6); }
 
 .rounded {
   -webkit-border-radius: 1px;
@@ -150,8 +150,8 @@ Dependencies: variables
   overflow: hidden;
   text-align: center;
   vertical-align: middle;
-  background-color: #515151;
-  color: #98a2ad;
+  background-color: #3C4655;
+  color: #96B0D6;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
@@ -160,7 +160,7 @@ Dependencies: variables
 .circled2 {
   width: 250px;
   height: 250px;
-  background: #515151;
+  background: #3C4655;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%; }
@@ -168,7 +168,7 @@ Dependencies: variables
 .circled3 {
   width: 50%;
   height: 0;
-  background-color: #515151;
+  background-color: #3C4655;
   padding-bottom: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -179,7 +179,7 @@ Dependencies: variables
   .shape-text:after {
     width: 100%;
     height: 0;
-    background-color: #515151;
+    background-color: #3C4655;
     content: "";
     display: block;
     padding-bottom: 100%;
@@ -194,7 +194,7 @@ Dependencies: variables
     line-height: 1em;
     margin-top: -0.5em;
     text-align: center;
-    color: #98a2ad; }
+    color: #96B0D6; }
 
 .shadow {
   -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
@@ -207,14 +207,14 @@ Dependencies: variables
   box-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.4); }
 
 .shadow-secondary {
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4);
-  box-shadow: 1px 1px 5px 0px rgba(81, 81, 81, 0.4); }
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.4); }
 
 .shadow-tertiary {
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4);
-  box-shadow: 1px 1px 5px 0px rgba(205, 168, 40, 0.4); }
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(135, 186, 69, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(135, 186, 69, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(135, 186, 69, 0.4); }
 
 .text-shadow {
   -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
@@ -237,31 +237,31 @@ Dependencies: variables
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); }
 
 .border-default {
-  border: 1px solid #515151; }
+  border: 1px solid #3C4655; }
 
 .border-default-top {
-  border-top: 1px solid #515151; }
+  border-top: 1px solid #3C4655; }
 
 .border-default-right {
-  border-right: 1px solid #515151; }
+  border-right: 1px solid #3C4655; }
 
 .border-default-bottom {
-  border-bottom: 1px solid #515151; }
+  border-bottom: 1px solid #3C4655; }
 
 .border-default-left {
-  border-left: 1px solid #515151; }
+  border-left: 1px solid #3C4655; }
 
 .gradient-linear {
-  background-color: #515151;
-  background-image: -moz-linear-gradient("bottom", #f2f2f2, #515151);
-  background-image: -o-linear-gradient("bottom", #f2f2f2, #515151);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f2f2f2), color-stop(1, #515151));
-  background-image: -webkit-linear-gradient("bottom", #f2f2f2, #515151);
-  background-image: -ms-linear-gradient("bottom", #f2f2f2, #515151);
-  background-image: linear-gradient(to "bottom", #f2f2f2, #515151); }
+  background-color: #3C4655;
+  background-image: -moz-linear-gradient("bottom", #F2F2F2, #3C4655);
+  background-image: -o-linear-gradient("bottom", #F2F2F2, #3C4655);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F2F2F2), color-stop(1, #3C4655));
+  background-image: -webkit-linear-gradient("bottom", #F2F2F2, #3C4655);
+  background-image: -ms-linear-gradient("bottom", #F2F2F2, #3C4655);
+  background-image: linear-gradient(to "bottom", #F2F2F2, #3C4655); }
 
 .gradient-radial {
-  background-image: radial-gradient(circle at center top, #f2f2f2, #515151); }
+  background-image: radial-gradient(circle at center top, #F2F2F2, #3C4655); }
 
 .valign-center {
   position: relative;
@@ -699,7 +699,7 @@ hr {
   margin-right: auto;
   height: 0;
   border: none;
-  border-bottom: 1px solid #515151; }
+  border-bottom: 1px solid #3C4655; }
 
 audio, canvas, video {
   display: inline-block;
@@ -845,27 +845,27 @@ Dependencies: variables
 .color {
   /**
  * Color Palatte:
- * 1. primary: #f2f2f2
+ * 1. primary: #F2F2F2
  * 2. primary text: #363636
  * 3. primary light: white
  * 4. primary text light: #101010
  * 5. primary dark: #cccccc
  * 6. primary text dark: #5c5c5c
- * 7. secondary: #515151
- * 8. secondary text: #98a2ad
- * 9. secondary light: #777777
- * 10. secondary text light: #6e7c8a
- * 11. secondary dark: #2b2b2b
- * 12. secondary text dark: #c3c8cf
- * 13. tertiary: #CDA828
- * 14. tertiary text: #ffffff
- * 15. tertiary light: #e0c461
- * 16. tertiary text light: #8d741c
- * 17. tertiary dark: #8d741c
- * 18. tertiary text dark: #eddca1
+ * 7. secondary: #3C4655
+ * 8. secondary text: #96B0D6
+ * 9. secondary light: #5c6b82
+ * 10. secondary text light: #5f87c1
+ * 11. secondary dark: #1c2128
+ * 12. secondary text dark: #cdd9eb
+ * 13. tertiary: #87BA45
+ * 14. tertiary text: #E6E6E6
+ * 15. tertiary light: #abcf7d
+ * 16. tertiary text light: #5f8230
+ * 17. tertiary dark: #5f8230
+ * 18. tertiary text dark: #cfe3b5
  */ }
   .color.color-primary {
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
     color: #363636; }
   .color.color-primary-l {
     background-color: white;
@@ -874,23 +874,23 @@ Dependencies: variables
     background-color: #cccccc;
     color: #5c5c5c; }
   .color.color-secondary {
-    background-color: #515151;
-    color: #98a2ad; }
+    background-color: #3C4655;
+    color: #96B0D6; }
   .color.color-secondary-l {
-    background-color: #777777;
-    color: #6e7c8a; }
+    background-color: #5c6b82;
+    color: #5f87c1; }
   .color.color-secondary-d {
-    background-color: #2b2b2b;
-    color: #c3c8cf; }
+    background-color: #1c2128;
+    color: #cdd9eb; }
   .color.color-tertiary {
-    background-color: #CDA828;
-    color: #ffffff; }
+    background-color: #87BA45;
+    color: #E6E6E6; }
   .color.color-tertiary-l {
-    background-color: #e0c461;
-    color: #8d741c; }
+    background-color: #abcf7d;
+    color: #5f8230; }
   .color.color-tertiary-d {
-    background-color: #8d741c;
-    color: #eddca1; }
+    background-color: #5f8230;
+    color: #cfe3b5; }
   .color.color-white {
     background-color: #FFFFFF;
     color: #000000; }
@@ -899,13 +899,13 @@ Dependencies: variables
     color: #FFFFFF; }
 
 .bkg.bkg-primary {
-  background-color: #f2f2f2; }
+  background-color: #F2F2F2; }
 
 .bkg.bkg-secondary {
-  background-color: #515151; }
+  background-color: #3C4655; }
 
 .bkg.bkg-tertiary {
-  background-color: #CDA828; }
+  background-color: #87BA45; }
 
 .bkg.bkg-black {
   background-color: #000000; }
@@ -961,7 +961,7 @@ html {
  * The primary color will be used as default color for document body and text.
  */
 html, body {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   color: #363636; }
 
 .margin-none {
@@ -1097,7 +1097,6 @@ html, body {
   height: auto; }
 
 .warning, .error, .success, .help-block {
-  display: inline-block;
   width: 100%;
   font-size: 0.75em; }
 
@@ -1228,17 +1227,19 @@ pre {
 .lowercase {
   text-transform: lowercase; }
 
-.link {
-  color: #CDA828; }
+a, .link {
+  color: #298ccf; }
+  a:hover, .link:hover {
+    color: #E74343; }
 
 .text.text-primary {
   color: #363636; }
 
 .text.text-secondary {
-  color: #98a2ad; }
+  color: #96B0D6; }
 
 .text.text-tertiary {
-  color: #ffffff; }
+  color: #E6E6E6; }
 
 .text.text-black {
   color: #000000; }
@@ -1284,7 +1285,7 @@ pre {
     display: inline-block;
     margin-top: -1.25em;
     padding: 0 1rem;
-    background-color: #f2f2f2; }
+    background-color: #F2F2F2; }
 
 /**********************************************************************
 Description: It defines the grid system and basic containers for CMGTools.
@@ -1670,12 +1671,15 @@ Dependencies: variables, mixins
   .max-cols-100 > .colf15x2, .max-cols-100 > .colf15x3, .max-cols-100 > .colf15x4, .max-cols-100 > .colf15x5, .max-cols-100 > .colf15x6, .max-cols-100 > .colf15x7, .max-cols-100 > .colf15x8, .max-cols-100 > .colf15x9, .max-cols-100 > .colf15x10, .max-cols-100 > .colf15x11, .max-cols-100 > .colf15x12, .max-cols-100 > .colf15x13, .max-cols-100 .colf15x14 {
     width: 100%; } }
 
-.col-filler {
-  position: absolute;
-  z-index: -1;
-  top: 0px;
-  bottom: 0px;
-  float: none; }
+.wrap-col-filler {
+  position: relative;
+  z-index: 0; }
+  .wrap-col-filler .col-filler {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    bottom: 0px;
+    float: none; }
 
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.
@@ -1773,47 +1777,47 @@ Dependencies: variables, mixins
   bottom: 0;
   position: absolute; }
 
-.padding .padding-small-all {
+.padding.padding-small-all {
   padding: 0.5rem; }
 
-.padding .padding-small-v {
+.padding.padding-small-v {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
 
-.padding .padding-small-h {
+.padding.padding-small-h {
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
 
-.padding .padding-medium-all {
+.padding.padding-medium-all {
   padding: 1rem; }
 
-.padding .padding-medium-v {
+.padding.padding-medium-v {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
-.padding .padding-medium-h {
+.padding.padding-medium-h {
   padding-left: 1rem;
   padding-right: 1rem; }
 
-.padding .padding-large-all {
+.padding.padding-large-all {
   padding: 1.5rem; }
 
-.padding .padding-large-v {
+.padding.padding-large-v {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
 
-.padding .padding-large-h {
+.padding.padding-large-h {
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 
-.padding .padding-xlarge-all {
+.padding.padding-xlarge-all {
   padding: 2rem; }
 
-.padding .padding-xlarge-v {
+.padding.padding-xlarge-v {
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
-.padding .padding-xlarge-h {
+.padding.padding-xlarge-h {
   padding-left: 2rem;
   padding-right: 2rem; }
 
@@ -1822,9 +1826,9 @@ Description: It defines the html elements styles for CMGTools excluding form, fo
 Dependencies: variables, mixins
 ***********************************************************************/
 fieldset {
-  border: 1px solid #515151; }
+  border: 1px solid #3C4655; }
   fieldset legend {
-    background-color: #515151;
+    background-color: #3C4655;
     color: #FFFFFF;
     padding: 1rem;
     -webkit-border-radius: 5px;
@@ -1868,7 +1872,7 @@ label {
   display: inline-block;
   text-align: left; }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch, input[type="submit"], input[type="button"], button, .btn {
   vertical-align: middle;
   font-size: 1em;
   line-height: 1.25em;
@@ -1879,26 +1883,32 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   box-shadow: none;
   border: none; }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
-  background-color: #e1e1e1;
+  background-color: #F2F2F2;
   color: #363636;
   text-align: left; }
-  input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover {
-    background-color: #e9e9e9;
+  input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
+    background-color: #E9E9E9;
     color: #363636; }
-  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
-    color: #363636;
-    -webkit-box-shadow: inset 0 0 0 1px #e74343;
-    -moz-box-shadow: inset 0 0 0 1px #e74343;
-    box-shadow: inset 0 0 0 1px #e74343; }
-  input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled {
-    background-color: #e1e1e1;
-    color: #464646; }
+  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
+    color: #4F688E;
+    -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
+    -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
+    box-shadow: inset 0 0 0 1px #E1E1E1; }
+  input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
+    background-color: #CCCCCC;
+    color: #909090; }
+
+.cmt-checkbox, .cmt-switch {
+  background: none; }
+  .cmt-checkbox:hover, .cmt-switch:hover {
+    background: none;
+    color: #363636; }
 
 input[type="submit"], input[type="button"], button, .btn {
   -moz-transition: all 350ms ease-in-out 0s;
@@ -1906,16 +1916,16 @@ input[type="submit"], input[type="button"], button, .btn {
   -o-transition: all 350ms ease-in-out 0s;
   -webkit-transition: all 350ms ease-in-out 0s;
   transition: all 350ms ease-in-out 0s;
-  background-color: #e74343;
+  background-color: #E74343;
   color: #FFFFFF;
   text-align: center;
   cursor: pointer; }
   input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
-    background-color: #ff5555;
-    color: white; }
+    background-color: #FF3636;
+    color: #FFFFFF; }
   input[type="submit"]:active, input[type="button"]:active, button:active, .btn:active {
     background-color: #b51717;
-    color: white; }
+    color: #FFFFFF; }
   input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .btn:disabled {
     background-color: gray;
     color: #363636; }
@@ -1955,7 +1965,7 @@ input[type="submit"], input[type="button"], button, .btn {
       background-color: #595959;
       color: #A5A5A5; }
   .btn.btn-reverse:hover {
-    background-color: #e74343 !important;
+    background-color: #E74343 !important;
     color: #FFFFFF !important; }
 
 .frm-split-40-60 label, .element-40 {
@@ -1967,16 +1977,16 @@ input[type="submit"], input[type="button"], button, .btn {
   width: 100%; }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60 {
+.frm-split-40-60 textarea, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-split-40-60 select, .element-60 {
   width: 60%;
   float: left; }
 
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 select {
-  width: 100%; }
-
 .frm-split-40-60 .frm-select-50 select {
   width: 50%; }
+
+.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
+.element-60 textarea, .element-60 .cmt-checkbox, .element-60 .cmt-switch, .element-60 select {
+  width: 100%; }
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
 .frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
@@ -2076,7 +2086,7 @@ Dependencies: variables, mixins, transitions, transformation
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #e1e1e1;
+    background-color: #F2F2F2;
     margin: 0.25em 0; }
     .cmt-select-wrap .cmt-select .cmt-selected {
       cursor: pointer;
@@ -2110,8 +2120,8 @@ Dependencies: variables, mixins, transitions, transformation
         padding: 10px;
         background-color: #FFFFFF; }
       .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
-        color: white;
-        background-color: #e74343; }
+        color: #FFFFFF;
+        background-color: #E74343; }
 
 .cmt-choice input[type=checkbox], .cmt-choice input[type=radio] {
   cursor: pointer;
@@ -2136,13 +2146,13 @@ Dependencies: variables, mixins, transitions, transformation
 .cmt-choice input[type=checkbox]:checked + .label::before, .cmt-choice input[type=radio]:checked + .label::before {
   display: inline-block;
   background-color: #F5F8FC;
-  color: #e74343; }
+  color: #E74343; }
 
 .cmt-choice input[type=checkbox]:checked + .label, .cmt-choice input[type=radio]:checked + .label {
   color: #b51717; }
 
 .cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=radio] + .label:hover::before {
-  color: #ff5555; }
+  color: #FF3636; }
 
 .cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
   background-color: #DDD !important;
@@ -2158,7 +2168,58 @@ Dependencies: variables, mixins, transitions, transformation
   content: "6"; }
 
 .cmt-choice input[type=checkbox]:checked + .label::before {
-  content: "7"; }
+  content: "8"; }
+
+.cmt-switch {
+  position: relative;
+  display: inline-block; }
+  .cmt-switch .cmt-toggle {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden; }
+  .cmt-switch .cmt-toggle + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none; }
+  .cmt-switch .cmt-toggle-round + label {
+    width: 5em !important;
+    height: 1.5em;
+    padding: 0.5em;
+    background-color: #cccccc;
+    border-radius: 0.5em; }
+  .cmt-switch .cmt-toggle-round + label:before,
+  .cmt-switch .cmt-toggle-round + label:after {
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: ""; }
+  .cmt-switch .cmt-toggle-round + label:before {
+    right: 1px;
+    background-color: #FFFFFF;
+    border-radius: 0.5em;
+    -moz-transition: background-color 350ms ease-in-out 0s;
+    -ms-transition: background-color 350ms ease-in-out 0s;
+    -o-transition: background-color 350ms ease-in-out 0s;
+    -webkit-transition: background-color 350ms ease-in-out 0s;
+    transition: background-color 350ms ease-in-out 0s; }
+  .cmt-switch .cmt-toggle-round + label:after {
+    width: 1.5em;
+    background-color: #3F62A0;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-transition: margin 350ms ease-out 0s;
+    -ms-transition: margin 350ms ease-out 0s;
+    -o-transition: margin 350ms ease-out 0s;
+    -webkit-transition: margin 350ms ease-out 0s;
+    transition: margin 350ms ease-out 0s; }
+  .cmt-switch .cmt-toggle-round:checked + label:before {
+    background-color: #87C442; }
+  .cmt-switch .cmt-toggle-round:checked + label:after {
+    margin-left: 3.5em; }
 
 /**********************************************************************
 Description: It defines the styles for the menu components available in CMGTools.
@@ -2210,13 +2271,13 @@ Dependencies: variables, variables-ext, mixins
 /* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
    It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
 .hnav-regular {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   border-bottom: 1px solid white;
   position: relative; }
   .hnav-regular > li {
     display: inline-block;
     text-align: left;
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
     border-bottom: 1px solid white;
     margin-bottom: -5px;
     -moz-transition: all 250ms ease-in-out 0s;
@@ -2231,8 +2292,8 @@ Dependencies: variables, variables-ext, mixins
       padding: 0 15px;
       text-transform: uppercase; }
     .hnav-regular > li:hover > a {
-      background-color: #CDA828;
-      color: #ffffff; }
+      background-color: #87BA45;
+      color: #E6E6E6; }
   .hnav-regular li a {
     display: inline-block;
     text-decoration: none;
@@ -2242,8 +2303,8 @@ Dependencies: variables, variables-ext, mixins
     -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
     transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s; }
   .hnav-regular li.active > a {
-    background-color: #515151;
-    color: #98a2ad; }
+    background-color: #3C4655;
+    color: #96B0D6; }
   .hnav-regular li:hover .nav-sub {
     display: block; }
   .hnav-regular .nav-sub {
@@ -2253,10 +2314,10 @@ Dependencies: variables, variables-ext, mixins
     left: 0;
     padding: 10px 2%;
     width: 96%;
-    background-color: #515151;
-    -webkit-box-shadow: 1px 1px 2px 0px #515151;
-    -moz-box-shadow: 1px 1px 2px 0px #515151;
-    box-shadow: 1px 1px 2px 0px #515151; }
+    background-color: #3C4655;
+    -webkit-box-shadow: 1px 1px 2px 0px #3C4655;
+    -moz-box-shadow: 1px 1px 2px 0px #3C4655;
+    box-shadow: 1px 1px 2px 0px #3C4655; }
     .hnav-regular .nav-sub > li {
       display: inline-block;
       float: none;
@@ -2269,7 +2330,7 @@ Dependencies: variables, variables-ext, mixins
         text-transform: uppercase; }
       .hnav-regular .nav-sub > li a {
         line-height: 20px;
-        color: #c3c8cf; }
+        color: #cdd9eb; }
       .hnav-regular .nav-sub > li li {
         float: none;
         padding-left: 5px;
@@ -2306,7 +2367,7 @@ Dependencies: variables, variables-ext, mixins
       border: none; }
   .vnav-regular a {
     display: block;
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
     color: #363636;
     font-size: 1em;
     line-height: 35px;
@@ -2319,8 +2380,8 @@ Dependencies: variables, variables-ext, mixins
     -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
     transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s; }
   .vnav-regular li:hover > a {
-    background-color: #CDA828;
-    color: #ffffff; }
+    background-color: #87BA45;
+    color: #E6E6E6; }
   .vnav-regular li:hover > .nav-sub {
     display: block; }
   .vnav-regular .nav-sub {
@@ -2338,7 +2399,7 @@ Dependencies: variables, variables-ext, mixins
       width: 100%;
       border: none; }
       .vnav-regular .nav-sub a {
-        background-color: #515151; } }
+        background-color: #3C4655; } }
 
 /* Sliding Menu - It works together with Sliding Menu plugin shipped with CMGTools JS. */
 .vnav-slider-wrap {
@@ -2383,7 +2444,7 @@ Dependencies: variables, variables-ext, mixins
     .vnav-slider-wrap .vnav-slider-header .btn-close:hover {
       color: #7F7F7F; }
   .vnav-slider-wrap .vnav-slider-header hr {
-    border-bottom: 1px solid #8d741c; }
+    border-bottom: 1px solid #5f8230; }
   .vnav-slider-wrap .vnav-slider-menu {
     width: 100%;
     height: 100%;
@@ -2411,7 +2472,7 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s; }
   .menu-social a:hover {
-    background-color: #e74343 !important; }
+    background-color: #E74343 !important; }
 
 .menu-social .cmti {
   margin: 0.25rem 0.5rem; }
@@ -2465,7 +2526,7 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
   color: #BB0000; }
 
 .menu-social .cmti-text:hover {
-  color: #e74343; }
+  color: #E74343; }
 
 .menu-social .btn {
   color: #FFFFFF !important; }
@@ -2485,6 +2546,63 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
     background-color: #CB2027; }
   .menu-social .btn.youtube {
     background-color: #BB0000; }
+
+.collapsible-menu .collapsible-tab {
+  width: 100%;
+  border-bottom: 1px solid #d3d3d3;
+  border-top: 1px solid #ffffff; }
+
+.collapsible-menu .collapsible-tab.active {
+  width: 98%;
+  border-right: 4px solid #2b3d51; }
+
+.collapsible-menu .collapsible-tab.active .collapsible-tab-header, .collapsible-menu .collapsible-tab.pactive .collapsible-tab-header {
+  background-color: #d9dce0;
+  font-family: Verdana, Geneva, sans-serif; }
+
+.collapsible-menu .collapsible-tab.active .active {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.2em; }
+
+.collapsible-menu .collapsible-tab-header {
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px; }
+
+.collapsible-menu .collapsible-tab-header:hover {
+  background-color: #d9dce0; }
+
+.collapsible-menu .collapsible-tab-header a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  color: #2b3d51; }
+
+.collapsible-menu .collapsible-tab-header .colf4 {
+  text-align: center; }
+
+.collapsible-menu .collapsible-tab-content {
+  padding-left: 35%;
+  display: none;
+  -moz-box-shadow: inset 0px 0px 2px #909090;
+  -webkit-box-shadow: inset 0px 0px 2px #909090;
+  box-shadow: inset 0px 0px 2px #909090; }
+
+.collapsible-menu .collapsible-tab-content ul li {
+  width: 100%;
+  text-align: left; }
+
+.collapsible-menu .collapsible-tab-content ul li a {
+  color: #4f5e7f;
+  font-size: 0.8em;
+  line-height: 25px;
+  width: 95%;
+  display: block;
+  padding-left: 5%; }
+
+.collapsible-menu .collapsible-tab-content ul li a:hover {
+  background-color: #d9dce0; }
 
 /**********************************************************************
 Description: It defines the styles for the header components available in CMGTools.
@@ -2541,7 +2659,7 @@ Description: It defines the styles for the footer components available in CMGToo
 Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
 .footer-standard {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   color: #363636;
   width: 100%;
   min-height: 50px;
@@ -2562,7 +2680,7 @@ Dependencies: variables, variables-ext, mixins
   position: relative; }
   .sidebar-standard .title {
     display: none;
-    background-color: #CDA828;
+    background-color: #87BA45;
     line-height: 32px;
     padding: 5px;
     font-size: 16px; }
@@ -2598,7 +2716,7 @@ Dependencies: variables, mixins
   z-index: 999999999;
   display: none;
   background-color: rgba(0, 0, 0, 0.5); }
-  .popup .popup-background {
+  .popup .popup-bkg {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -2606,10 +2724,17 @@ Dependencies: variables, mixins
     height: 100%;
     z-index: 5;
     background-color: rgba(0, 0, 0, 0.5); }
+  .popup .popup-bkg-filler {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10; }
   .popup .popup-data {
     position: relative;
-    z-index: 10;
-    background-color: #f2f2f2;
+    z-index: 50;
+    background-color: #F2F2F2;
     -webkit-box-shadow: 1px 1px 5px 0px #cccccc;
     -moz-box-shadow: 1px 1px 5px 0px #cccccc;
     box-shadow: 1px 1px 5px 0px #cccccc;
@@ -2631,12 +2756,12 @@ Dependencies: variables, mixins
       top: -5px;
       right: -5px;
       display: inline-block;
-      color: #CDA828;
+      color: #87BA45;
       cursor: pointer; }
     .popup .popup-data .popup-wrap-title {
       width: 100%;
-      background-color: #515151;
-      color: #98a2ad;
+      background-color: #3C4655;
+      color: #96B0D6;
       -moz-border-radius-top-left: 5px;
       -moz-border-radius-top-right: 5px;
       -webkit-border-radius-top-left: 5px;
@@ -2749,6 +2874,42 @@ Javascript: jquery, cmt-block
   height: 100%;
   overflow: hidden; }
 
+.box .box-wrap-header {
+  position: relative; }
+
+.box .box-wrap-content {
+  position: relative; }
+
+.box-regular {
+  padding: 1rem;
+  background-color: #3C4655;
+  color: #96B0D6; }
+  .box-regular .box-wrap-header .box-wrap-icon {
+    text-align: center; }
+  .box-regular .box-wrap-header .box-header {
+    text-align: center; }
+  .box-regular .box-wrap-content {
+    text-align: center; }
+
+.box-collapsible .box-wrap-header {
+  background-color: #3C4655;
+  color: #96B0D6;
+  padding: 0.5rem; }
+  .box-collapsible .box-wrap-header .btn-collapse {
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    right: 10px;
+    color: #FFFFFF;
+    cursor: pointer; }
+    .box-collapsible .box-wrap-header .btn-collapse:hover {
+      color: #FFFFFF; }
+
+.box-collapsible .box-wrap-content {
+  background-color: white;
+  color: #101010;
+  padding: 0.5rem; }
+
 .box-form {
   position: relative; }
   .box-form .btn-edit {
@@ -2763,16 +2924,27 @@ Javascript: jquery, cmt-block
   display: inline-block;
   top: 10px;
   right: 10px;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  cursor: pointer; }
   .box-form-regular .btn-edit:hover {
-    color: white; }
+    color: #FFFFFF; }
+
+.box-form-collapsible .box-wrap-content .btn-edit {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF;
+  cursor: pointer; }
+  .box-form-collapsible .box-wrap-content .btn-edit:hover {
+    color: #FFFFFF; }
 
 .grid-data .grid-rows .grid-rows-header {
   display: none;
   font-weight: bold; }
 
 .grid-data .grid-rows .grid-row:nth-child(even) {
-  background-color: #f2f2f2; }
+  background-color: #F2F2F2; }
 
 .grid-data .grid-rows .grid-row .grid-row-data span {
   display: inline-block;
@@ -2799,8 +2971,8 @@ Javascript: jquery, cmt-block
   background-color: #cccccc;
   padding: 10px; }
   .grid-basic .grid-header {
-    background-color: #515151;
-    color: #98a2ad;
+    background-color: #3C4655;
+    color: #96B0D6;
     padding: 0.25em 10px;
     text-align: right;
     min-height: 2em; }
@@ -2809,8 +2981,8 @@ Javascript: jquery, cmt-block
       float: left;
       padding: 0.25em 0.5em; }
   .grid-basic .grid-footer {
-    background-color: #515151;
-    color: #98a2ad;
+    background-color: #3C4655;
+    color: #96B0D6;
     padding: 0.25em 10px;
     text-align: right;
     min-height: 2em; }
@@ -2829,7 +3001,7 @@ Javascript: jquery, cmt-block
     margin: 0 0.5em; }
     .grid-basic .pagination li span, .grid-basic .pagination li a {
       display: inline-block;
-      background-color: #CDA828;
+      background-color: #87BA45;
       color: white;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
@@ -2843,11 +3015,11 @@ Javascript: jquery, cmt-block
       -webkit-transition: background-color 250ms ease-in-out 0s;
       transition: background-color 250ms ease-in-out 0s; }
       .grid-basic .pagination li span:hover, .grid-basic .pagination li a:hover {
-        background-color: #e0c461;
-        color: #8d741c; }
+        background-color: #abcf7d;
+        color: #5f8230; }
     .grid-basic .pagination li.disabled span, .grid-basic .pagination li.disabled a, .grid-basic .pagination li.disabled:hover span, .grid-basic .pagination li.disabled:hover a {
       background-color: gray;
-      color: #f2f2f2; }
+      color: #F2F2F2; }
 
 .pagination-basic {
   display: inline-block; }
@@ -2856,8 +3028,8 @@ Javascript: jquery, cmt-block
     list-style: none;
     margin: 0 5px; }
   .pagination-basic a {
-    background-color: #CDA828;
-    color: #98a2ad;
+    background-color: #87BA45;
+    color: #96B0D6;
     padding: 3px 8px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -2865,7 +3037,7 @@ Javascript: jquery, cmt-block
     -khtml-border-radius: 5px;
     text-decoration: none; }
   .pagination-basic .active a, .pagination-basic a:hover {
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
     color: #363636;
     -moz-transition: 0.5s; }
 
@@ -2883,10 +3055,10 @@ Javascript: jquery, cmt-block
     font-size: 1em;
     line-heigh: 1em; }
   .pagination-detailed .pagination .prev, .pagination-detailed .pagination .next, .pagination-detailed .pagination li a {
-    color: #f2f2f2;
+    color: #F2F2F2;
     text-decoration: none;
     height: 1.6em;
-    background-color: #2b2b2b;
+    background-color: #1c2128;
     -moz-transition: all 250ms ease-in-out 0s;
     -ms-transition: all 250ms ease-in-out 0s;
     -o-transition: all 250ms ease-in-out 0s;
@@ -2895,14 +3067,14 @@ Javascript: jquery, cmt-block
   .pagination-detailed .pagination li a {
     padding: 2px 8px; }
   .pagination-detailed .pagination .disabled span, .pagination-detailed .pagination .disabled span:hover {
-    background-color: #515151;
+    background-color: #3C4655;
     padding: 2px 8px;
     height: 1.6em; }
   .pagination-detailed .pagination .disabled span {
     line-height: 1.6em; }
   .pagination-detailed .pagination .active, .pagination-detailed .pagination .active a, .pagination-detailed .pagination li a:hover, .pagination-detailed .pagination .next:hover, .pagination-detailed .pagination .prev:hover {
-    background-color: #515151;
-    color: #f2f2f2;
+    background-color: #3C4655;
+    color: #F2F2F2;
     -moz-transition: all 250ms ease-in-out 0s;
     -ms-transition: all 250ms ease-in-out 0s;
     -o-transition: all 250ms ease-in-out 0s;
@@ -2933,7 +3105,7 @@ Dependencies: variables, mixins
     .blog-posts-basic .post .post-banner img {
       width: 100%; }
       .blog-posts-basic .post .post-banner img.bkg-fill {
-        background-color: #f2f2f2; }
+        background-color: #F2F2F2; }
   .blog-posts-basic .post .post-author {
     position: relative; }
     .blog-posts-basic .post .post-author .post-author-avatar {
@@ -2942,7 +3114,7 @@ Dependencies: variables, mixins
       .blog-posts-basic .post .post-author .post-author-avatar img {
         width: 100%; }
       .blog-posts-basic .post .post-author .post-author-avatar.circled1 {
-        background-color: #f2f2f2; }
+        background-color: #F2F2F2; }
     .blog-posts-basic .post .post-author .post-author-info {
       position: absolute;
       top: 0;
@@ -2977,7 +3149,7 @@ Dependencies: variables, mixins
       .post-single-basic .post-author .post-author-avatar img {
         width: 100%; }
       .post-single-basic .post-author .post-author-avatar.circled1 {
-        background-color: #f2f2f2; }
+        background-color: #F2F2F2; }
     .post-single-basic .post-author .post-author-info {
       position: absolute;
       top: 0;
@@ -2994,8 +3166,8 @@ Dependencies: variables, mixins
 
 .blog-posts-regular .post {
   margin: 10px 0;
-  border: 1px solid #515151;
-  background-color: #f2f2f2; }
+  border: 1px solid #3C4655;
+  background-color: #F2F2F2; }
 
 .blog-posts-regular .banner {
   width: 20%;
@@ -3008,16 +3180,16 @@ Dependencies: variables, mixins
   .blog-posts-regular .post-content.full {
     width: 100%; }
   .blog-posts-regular .post-content .post-header {
-    background-color: #2b2b2b;
+    background-color: #1c2128;
     padding: 0.25em; }
     .blog-posts-regular .post-content .post-header a {
-      color: #f2f2f2; }
+      color: #F2F2F2; }
     .blog-posts-regular .post-content .post-header a:hover {
-      color: #515151; }
+      color: #3C4655; }
   .blog-posts-regular .post-content .summary {
     padding: 1em; }
   .blog-posts-regular .post-content .info {
-    background-color: #515151;
+    background-color: #3C4655;
     padding: 5px; }
     .blog-posts-regular .post-content .info .author, .blog-posts-regular .post-content .info .time {
       display: inline-block; }
@@ -3025,7 +3197,7 @@ Dependencies: variables, mixins
       float: left; }
       .blog-posts-regular .post-content .info .author img {
         width: 40px;
-        border: 5px solid #f2f2f2;
+        border: 5px solid #F2F2F2;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
@@ -3048,10 +3220,10 @@ Dependencies: variables, mixins
     font-size: 1em;
     line-heigh: 1em; }
   .blog-posts-regular .wrap-pagination .pagination .prev, .blog-posts-regular .wrap-pagination .pagination .next, .blog-posts-regular .wrap-pagination .pagination li a {
-    color: #f2f2f2;
+    color: #F2F2F2;
     text-decoration: none;
     height: 1.6em;
-    background-color: #2b2b2b;
+    background-color: #1c2128;
     -moz-transition: all 250ms ease-in-out 0s;
     -ms-transition: all 250ms ease-in-out 0s;
     -o-transition: all 250ms ease-in-out 0s;
@@ -3060,14 +3232,14 @@ Dependencies: variables, mixins
   .blog-posts-regular .wrap-pagination .pagination li a {
     padding: 2px 8px; }
   .blog-posts-regular .wrap-pagination .pagination .disabled span, .blog-posts-regular .wrap-pagination .pagination .disabled span:hover {
-    background-color: #515151;
+    background-color: #3C4655;
     padding: 2px 8px;
     height: 1.6em; }
   .blog-posts-regular .wrap-pagination .pagination .disabled span {
     line-height: 1.6em; }
   .blog-posts-regular .wrap-pagination .pagination .active, .blog-posts-regular .wrap-pagination .pagination .active a, .blog-posts-regular .wrap-pagination .pagination li a:hover, .blog-posts-regular .wrap-pagination .pagination .next:hover, .blog-posts-regular .wrap-pagination .pagination .prev:hover {
-    background-color: #515151;
-    color: #f2f2f2;
+    background-color: #3C4655;
+    color: #F2F2F2;
     -moz-transition: all 250ms ease-in-out 0s;
     -ms-transition: all 250ms ease-in-out 0s;
     -o-transition: all 250ms ease-in-out 0s;
@@ -3118,7 +3290,7 @@ Dependencies: variables, mixins
       width: 120px;
       height: 120px; }
       .file-uploader .preview .wrap-drag .drag {
-        background-color: #f2f2f2;
+        background-color: #F2F2F2;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -3128,8 +3300,8 @@ Dependencies: variables, mixins
         text-align: center;
         line-height: 120px; }
         .file-uploader .preview .wrap-drag .drag.hover {
-          background-color: #CDA828;
-          color: #ffffff; }
+          background-color: #87BA45;
+          color: #E6E6E6; }
       .file-uploader .preview .wrap-drag canvas {
         position: absolute;
         top: 0px;
@@ -3141,7 +3313,7 @@ Dependencies: variables, mixins
   .file-uploader .preloader {
     padding-top: 10px; }
     .file-uploader .preloader .preloader-bar {
-      background-color: #CDA828;
+      background-color: #87BA45;
       width: 0%;
       height: 10px; }
   .file-uploader .post-action {
@@ -3199,13 +3371,13 @@ Dependencies: variables, mixins
         margin: 10px 0;
         cursor: pointer; }
         #avatar-uploader .content .actions .cmt-icon:hover {
-          background-color: #f2f2f2; }
+          background-color: #F2F2F2; }
     #avatar-uploader .content .avatar-wrap {
       margin-left: 20px;
       width: 280px;
       height: 320px;
       float: left;
-      background-color: #f2f2f2; }
+      background-color: #F2F2F2; }
 
 .flipper {
   position: relative;
@@ -3229,7 +3401,7 @@ Dependencies: variables, mixins
       padding: 10px;
       color: white;
       text-align: center;
-      background-color: #515151; }
+      background-color: #3C4655; }
     .flipper .flipper-content .flipper-back {
       position: absolute;
       top: 0;
