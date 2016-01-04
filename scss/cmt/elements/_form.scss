@@ -84,6 +84,22 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
         background-color: $color-field-d;
         color: $color-field-d-text;
     }
+
+    &.field-small {
+        width: 80px;
+    }
+
+    &.field-medium {
+        width: 120px;
+    }
+
+    &.field-large {
+        width: 180px;
+    }
+
+    &.field-xlarge {
+        width: 250px;
+    }
 }
 
 .cmt-checkbox, .cmt-switch {
@@ -277,5 +293,21 @@ input[type="submit"], input[type="button"], button, .btn {
         outline: none;
         box-shadow: none;    
         border: none;
+    }
+
+    &.field-small {
+        width: 80px;
+    }
+
+    &.field-medium {
+        width: 120px;
+    }
+
+    &.field-large {
+        width: 180px;
+    }
+
+    &.field-xlarge {
+        width: 250px;
     }
 }

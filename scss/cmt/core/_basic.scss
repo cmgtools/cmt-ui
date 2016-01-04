@@ -370,49 +370,49 @@ html, body {
 
 // Positioning
 .absolute {
-    position: absolute;
+    position: absolute !important;
 }
 
 .relative {
-    position: relative;
+    position: relative !important;
 }
 
 .fixed {
-    position: fixed;
+    position: fixed !important;
 }
 
 // Display Type
 
 .block {
-    display: block;  
+    display: block !important;  
 }
 
 .inline-block {
-    display: inline-block;  
+    display: inline-block !important;
 }
 
 .inline {
-    display: inline;  
+    display: inline !important;
 }
 
 // Visibility - Without own space
 
 .visible {
-    display: block;
+    display: block !important;
 }
 
 .hidden {
-    display:none;
+    display: none !important;
 }
 
 // Visibility - Hidden/Displayed occupying space on screen
 
 .visible-space {
-    visibility: visible;
+    visibility: visible !important;
 }
 
 .hidden-space {
-    visibility: hidden;
+    visibility: hidden !important;
 }
 
 // Fluid Elements (blocks, images)

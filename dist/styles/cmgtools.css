@@ -1063,34 +1063,34 @@ html, body {
     height: 2.5em; }
 
 .absolute {
-  position: absolute; }
+  position: absolute !important; }
 
 .relative {
-  position: relative; }
+  position: relative !important; }
 
 .fixed {
-  position: fixed; }
+  position: fixed !important; }
 
 .block {
-  display: block; }
+  display: block !important; }
 
 .inline-block {
-  display: inline-block; }
+  display: inline-block !important; }
 
 .inline {
-  display: inline; }
+  display: inline !important; }
 
 .visible {
-  display: block; }
+  display: block !important; }
 
 .hidden {
-  display: none; }
+  display: none !important; }
 
 .visible-space {
-  visibility: visible; }
+  visibility: visible !important; }
 
 .hidden-space {
-  visibility: hidden; }
+  visibility: hidden !important; }
 
 .fluid {
   max-width: 100%;
@@ -1233,49 +1233,49 @@ a, .link {
     color: #E74343; }
 
 .text.text-primary {
-  color: #363636; }
+  color: #363636 !important; }
 
 .text.text-secondary {
-  color: #96B0D6; }
+  color: #96B0D6 !important; }
 
 .text.text-tertiary {
-  color: #E6E6E6; }
+  color: #E6E6E6 !important; }
 
 .text.text-black {
-  color: #000000; }
+  color: #000000 !important; }
 
 .text.text-gray {
-  color: #7F7F7F; }
+  color: #7F7F7F !important; }
 
 .text.text-white {
-  color: #FFFFFF; }
+  color: #FFFFFF !important; }
 
 .text.text-blue {
-  color: #3F62A0; }
+  color: #3F62A0 !important; }
 
 .text.text-purple {
-  color: #663096; }
+  color: #663096 !important; }
 
 .text.text-orange {
-  color: #F3702E; }
+  color: #F3702E !important; }
 
 .text.text-yellow {
-  color: #FFD800; }
+  color: #FFD800 !important; }
 
 .text.text-red {
-  color: #B42A1A; }
+  color: #B42A1A !important; }
 
 .text.text-pink {
-  color: #FF9DAB; }
+  color: #FF9DAB !important; }
 
 .text.text-magenta {
-  color: #B200B2; }
+  color: #B200B2 !important; }
 
 .text.text-green {
-  color: #87C442; }
+  color: #87C442 !important; }
 
 .text.text-green-d {
-  color: #56832A; }
+  color: #56832A !important; }
 
 .text-with-line {
   text-align: center;
@@ -1903,6 +1903,14 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
     background-color: #CCCCCC;
     color: #909090; }
+  input[type="text"].field-small, input[type="email"].field-small, input[type="password"].field-small, textarea.field-small, select.field-small, .cmt-checkbox.field-small, .cmt-switch.field-small {
+    width: 80px; }
+  input[type="text"].field-medium, input[type="email"].field-medium, input[type="password"].field-medium, textarea.field-medium, select.field-medium, .cmt-checkbox.field-medium, .cmt-switch.field-medium {
+    width: 120px; }
+  input[type="text"].field-large, input[type="email"].field-large, input[type="password"].field-large, textarea.field-large, select.field-large, .cmt-checkbox.field-large, .cmt-switch.field-large {
+    width: 180px; }
+  input[type="text"].field-xlarge, input[type="email"].field-xlarge, input[type="password"].field-xlarge, textarea.field-xlarge, select.field-xlarge, .cmt-checkbox.field-xlarge, .cmt-switch.field-xlarge {
+    width: 250px; }
 
 .cmt-checkbox, .cmt-switch {
   background: none; }
@@ -2056,6 +2064,14 @@ input[type="submit"], input[type="button"], button, .btn {
     outline: none;
     box-shadow: none;
     border: none; }
+  .frm-icon-element.field-small {
+    width: 80px; }
+  .frm-icon-element.field-medium {
+    width: 120px; }
+  .frm-icon-element.field-large {
+    width: 180px; }
+  .frm-icon-element.field-xlarge {
+    width: 250px; }
 
 /**********************************************************************
 Description: It defines the default table style available in CMGTools.
@@ -2579,11 +2595,11 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
   cursor: pointer;
   color: #2b3d51; }
 
-.collapsible-menu .collapsible-tab-header .colf4 {
+.collapsible-menu .collapsible-tab-header .wrap-icon {
   text-align: center; }
 
 .collapsible-menu .collapsible-tab-content {
-  padding-left: 35%;
+  padding-left: 25%;
   display: none;
   -moz-box-shadow: inset 0px 0px 2px #909090;
   -webkit-box-shadow: inset 0px 0px 2px #909090;
