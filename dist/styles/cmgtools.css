@@ -1985,7 +1985,7 @@ input[type="submit"], input[type="button"], button, .btn {
   width: 100%; }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-split-40-60 select, .element-60 {
+.frm-split-40-60 textarea, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 select, .element-60, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
   width: 60%;
   float: left; }
 
@@ -1993,7 +1993,7 @@ input[type="submit"], input[type="button"], button, .btn {
   width: 50%; }
 
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 .cmt-checkbox, .element-60 .cmt-switch, .element-60 select {
+.element-60 textarea, .element-60 .cmt-checkbox, .element-60 select, .element-60 .cmt-select-wrap {
   width: 100%; }
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
@@ -2236,6 +2236,21 @@ Dependencies: variables, mixins, transitions, transformation
     background-color: #87C442; }
   .cmt-switch .cmt-toggle-round:checked + label:after {
     margin-left: 3.5em; }
+
+.btn-delete {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  font-size: 1.25em;
+  color: #E74343;
+  cursor: pointer;
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s; }
+  .btn-delete:hover {
+    color: #363636; }
 
 /**********************************************************************
 Description: It defines the styles for the menu components available in CMGTools.

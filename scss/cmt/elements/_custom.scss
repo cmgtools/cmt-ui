@@ -198,3 +198,18 @@ Dependencies: variables, mixins, transitions, transformation
         margin-left: 3.5em;
     }
 }
+
+// parents having the delete button must use positioning
+.btn-delete {
+    position: absolute;
+    top: -0.5em;
+    right: -0.5em;
+    font-size: 1.25em;
+    color: $color-btn;
+    cursor: pointer;
+    @include transit-color( $transit-eio, $transit-time-small );
+
+    &:hover {
+        color: $color-primary-text;
+    }
+}
