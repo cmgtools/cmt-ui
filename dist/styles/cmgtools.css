@@ -1976,6 +1976,9 @@ input[type="submit"], input[type="button"], button, .btn {
     background-color: #E74343 !important;
     color: #FFFFFF !important; }
 
+.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch {
+  width: auto; }
+
 .frm-split-40-60 label, .element-40 {
   clear: both;
   width: 40%;
@@ -3282,10 +3285,10 @@ Dependencies: variables, mixins
   .file-uploader .postview {
     position: relative;
     margin: 0 auto; }
-    .file-uploader .postview .wrap-image {
+    .file-uploader .postview .wrap-file {
       text-align: center;
       padding: 1em; }
-      .file-uploader .postview .wrap-image .cmt-icon {
+      .file-uploader .postview .wrap-file .cmt-icon {
         font-size: 10em; }
     .file-uploader .postview .message-upload {
       margin: 1em 0;
@@ -3352,63 +3355,6 @@ Dependencies: variables, mixins
     text-align: center; }
   .file-uploader .fields {
     position: relative; }
-
-.box-avatar {
-  border: 1px solid white;
-  padding: 1em; }
-  .box-avatar .avatar img {
-    width: 100%; }
-
-#wrap-avatar-uploader {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000000; }
-
-#avatar-uploader {
-  width: 360px;
-  height: 512px;
-  background-color: white;
-  position: absolute; }
-  #avatar-uploader .header {
-    position: relative;
-    padding-left: 10px;
-    height: 56px;
-    line-height: 56px; }
-    #avatar-uploader .header span {
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      right: 10px; }
-      #avatar-uploader .header span input[type="file"] {
-        cursor: pointer;
-        height: 100%;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; }
-  #avatar-uploader .content {
-    padding: 10px; }
-    #avatar-uploader .content .actions {
-      width: 40px;
-      height: 320px;
-      float: left; }
-      #avatar-uploader .content .actions .cmt-icon {
-        margin: 10px 0;
-        cursor: pointer; }
-        #avatar-uploader .content .actions .cmt-icon:hover {
-          background-color: #F2F2F2; }
-    #avatar-uploader .content .avatar-wrap {
-      margin-left: 20px;
-      width: 280px;
-      height: 320px;
-      float: left;
-      background-color: #F2F2F2; }
 
 .flipper {
   position: relative;

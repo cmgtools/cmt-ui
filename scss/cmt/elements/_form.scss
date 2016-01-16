@@ -211,6 +211,15 @@ input[type="submit"], input[type="button"], button, .btn {
     }
 }
 
+// Ignore 100% width behavior for form elements
+
+.frm-ignore-100 {
+
+    label, input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
+        width: auto;
+    }
+}
+
 // Splitted forms - label - 40% and element 60%
 
 .frm-split-40-60 label, .element-40 {

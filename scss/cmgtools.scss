@@ -17,14 +17,19 @@
 
 @import "cmt/core/reset";
 @import "cmt/core/basic";
+
 @import "cmt/core/typography";
+
 @import "cmt/core/containers";
 
 // Theming Elements - Optional - need cmt-iconlib for custom elements.
 
 @import "cmt/elements/common";
+
 @import "cmt/elements/form";
+
 @import "cmt/elements/table";
+
 @import "cmt/elements/custom";
 
 // CMGTools Components - Optional - Useful for CMSGears themes. These can also be used for any other platform or project.
@@ -57,7 +62,6 @@
 @import "cmt/components/blog";
 
 @import "cmt/components/file-uploader";
-@import "cmt/components/avatar-uploader";
 
 @import "cmt/components/flipper";
 @import "cmt/components/galleries";
