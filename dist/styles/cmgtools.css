@@ -1064,6 +1064,12 @@ html, body {
 
 .absolute {
   position: absolute !important; }
+  .absolute.absolute-top-left {
+    top: 0px;
+    left: 0px; }
+  .absolute.absolute-top-right {
+    top: 0px;
+    right: 0px; }
 
 .relative {
   position: relative !important; }
@@ -1309,7 +1315,7 @@ Dependencies: variables, mixins
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
   float: left;
-  margin: 1rem 1%;
+  margin: 0.5rem 1%;
   word-wrap: break-word; }
 
 .col1 {
@@ -3167,6 +3173,108 @@ Dependencies: variables, mixins
       padding-left: 350px;
       position: relative; } }
 
+.blog-posts-regular .post {
+  margin-bottom: 1em; }
+  .blog-posts-regular .post .post-banner {
+    padding: 1em; }
+    .blog-posts-regular .post .post-banner img {
+      width: 100%; }
+      .blog-posts-regular .post .post-banner img.bkg-fill {
+        background-color: #F2F2F2; }
+  .blog-posts-regular .post .post-author {
+    position: relative; }
+    .blog-posts-regular .post .post-author .post-author-avatar {
+      width: 80px;
+      height: 80px; }
+      .blog-posts-regular .post .post-author .post-author-avatar img {
+        width: 100%; }
+      .blog-posts-regular .post .post-author .post-author-avatar.circled1 {
+        background-color: #F2F2F2; }
+    .blog-posts-regular .post .post-author .post-author-info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block; }
+  .blog-posts-regular .post .post-content {
+    padding: 1em; }
+    .blog-posts-regular .post .post-content .post-title {
+      font-size: 1.5em; }
+  @media only screen and (min-width: 769px) {
+    .blog-posts-regular .post .post-banner {
+      float: left;
+      width: 350px; }
+    .blog-posts-regular .post .post-author {
+      width: 100%;
+      padding-left: 350px;
+      position: relative; } }
+
+.blog-posts-banner .post {
+  margin-bottom: 1em;
+  background-color: #F2F2F2;
+  color: #363636; }
+  .blog-posts-banner .post .post-banner {
+    position: relative;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+    .blog-posts-banner .post .post-banner .texture {
+      z-index: 5; }
+    .blog-posts-banner .post .post-banner .post-view {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 50;
+      visibility: hidden;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      -moz-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
+      -ms-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
+      -o-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
+      -webkit-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
+      transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s; }
+    .blog-posts-banner .post .post-banner .post-view-content {
+      text-align: center; }
+      .blog-posts-banner .post .post-banner .post-view-content .icon {
+        color: #FFFFFF; }
+    .blog-posts-banner .post .post-banner:hover .post-view {
+      visibility: visible;
+      opacity: 1; }
+  .blog-posts-banner .post .post-author {
+    position: relative; }
+    .blog-posts-banner .post .post-author span {
+      display: inline-block; }
+    .blog-posts-banner .post .post-author .post-author-avatar {
+      width: 40px;
+      height: 40px; }
+      .blog-posts-banner .post .post-author .post-author-avatar img {
+        width: 100%; }
+      .blog-posts-banner .post .post-author .post-author-avatar.circled1 {
+        background-color: #F2F2F2; }
+  .blog-posts-banner .post .wrap-post-content {
+    padding: 1rem;
+    line-height: 1.5em; }
+    .blog-posts-banner .post .wrap-post-content .post-title {
+      margin: 0; }
+      .blog-posts-banner .post .wrap-post-content .post-title a {
+        display: inline-block;
+        width: 100%; }
+    .blog-posts-banner .post .wrap-post-content .post-info .publish-time {
+      text-align: center; }
+    .blog-posts-banner .post .wrap-post-content .post-content {
+      padding: 1rem 0; }
+  @media only screen and (min-width: 769px) {
+    .blog-posts-banner .post .post-banner {
+      height: 180px; }
+    .blog-posts-banner .post .wrap-post-content .post-info .publish-time {
+      text-align: right; } }
+  @media only screen and (min-width: 1025px) {
+    .blog-posts-banner .post .post-banner {
+      height: 250px; } }
+
 .post-single-basic {
   padding: 1em;
   background-color: white; }
@@ -3197,88 +3305,6 @@ Dependencies: variables, mixins
   @media only screen and (min-width: 1025px) {
     .post-single-basic .post-banner {
       height: 350px; } }
-
-.blog-posts-regular .post {
-  margin: 10px 0;
-  border: 1px solid #3C4655;
-  background-color: #F2F2F2; }
-
-.blog-posts-regular .banner {
-  width: 20%;
-  display: inline-block;
-  text-align: center; }
-
-.blog-posts-regular .post-content {
-  width: 80%;
-  display: inline-block; }
-  .blog-posts-regular .post-content.full {
-    width: 100%; }
-  .blog-posts-regular .post-content .post-header {
-    background-color: #1c2128;
-    padding: 0.25em; }
-    .blog-posts-regular .post-content .post-header a {
-      color: #F2F2F2; }
-    .blog-posts-regular .post-content .post-header a:hover {
-      color: #3C4655; }
-  .blog-posts-regular .post-content .summary {
-    padding: 1em; }
-  .blog-posts-regular .post-content .info {
-    background-color: #3C4655;
-    padding: 5px; }
-    .blog-posts-regular .post-content .info .author, .blog-posts-regular .post-content .info .time {
-      display: inline-block; }
-    .blog-posts-regular .post-content .info .author {
-      float: left; }
-      .blog-posts-regular .post-content .info .author img {
-        width: 40px;
-        border: 5px solid #F2F2F2;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -khtml-border-radius: 5px; }
-    .blog-posts-regular .post-content .info .time {
-      float: right;
-      margin-top: 15px; }
-
-.blog-posts-regular .wrap-pagination {
-  margin: 10px 0; }
-  .blog-posts-regular .wrap-pagination .info {
-    float: left; }
-  .blog-posts-regular .wrap-pagination .pagination {
-    float: right; }
-  .blog-posts-regular .wrap-pagination .pagination, .blog-posts-regular .wrap-pagination .pagination li {
-    display: inline-block;
-    list-style: none; }
-  .blog-posts-regular .wrap-pagination .pagination li {
-    margin: 0 2px;
-    font-size: 1em;
-    line-heigh: 1em; }
-  .blog-posts-regular .wrap-pagination .pagination .prev, .blog-posts-regular .wrap-pagination .pagination .next, .blog-posts-regular .wrap-pagination .pagination li a {
-    color: #F2F2F2;
-    text-decoration: none;
-    height: 1.6em;
-    background-color: #1c2128;
-    -moz-transition: all 250ms ease-in-out 0s;
-    -ms-transition: all 250ms ease-in-out 0s;
-    -o-transition: all 250ms ease-in-out 0s;
-    -webkit-transition: all 250ms ease-in-out 0s;
-    transition: all 250ms ease-in-out 0s; }
-  .blog-posts-regular .wrap-pagination .pagination li a {
-    padding: 2px 8px; }
-  .blog-posts-regular .wrap-pagination .pagination .disabled span, .blog-posts-regular .wrap-pagination .pagination .disabled span:hover {
-    background-color: #3C4655;
-    padding: 2px 8px;
-    height: 1.6em; }
-  .blog-posts-regular .wrap-pagination .pagination .disabled span {
-    line-height: 1.6em; }
-  .blog-posts-regular .wrap-pagination .pagination .active, .blog-posts-regular .wrap-pagination .pagination .active a, .blog-posts-regular .wrap-pagination .pagination li a:hover, .blog-posts-regular .wrap-pagination .pagination .next:hover, .blog-posts-regular .wrap-pagination .pagination .prev:hover {
-    background-color: #3C4655;
-    color: #F2F2F2;
-    -moz-transition: all 250ms ease-in-out 0s;
-    -ms-transition: all 250ms ease-in-out 0s;
-    -o-transition: all 250ms ease-in-out 0s;
-    -webkit-transition: all 250ms ease-in-out 0s;
-    transition: all 250ms ease-in-out 0s; }
 
 .file-uploader {
   position: relative; }

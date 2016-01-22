@@ -371,6 +371,16 @@ html, body {
 // Positioning
 .absolute {
     position: absolute !important;
+    
+    &.absolute-top-left {
+        top: 0px;
+        left: 0px;
+    }
+
+    &.absolute-top-right {
+        top: 0px;
+        right: 0px;
+    }
 }
 
 .relative {
