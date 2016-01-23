@@ -75,7 +75,7 @@ Dependencies: variables, mixins, transitions, transformation
 }
 
 //Choices - radio and checkbox
-.cmt-choice {
+.cmt-choice, .cmt-rating {
 
     input[type=checkbox],input[type=radio] {
         cursor: pointer;
@@ -85,7 +85,7 @@ Dependencies: variables, mixins, transitions, transformation
     input[type=checkbox]+.label.pad-label::before,input[type=radio]+.label.pad-label::before {
         margin-right: 8px;
     }
-
+ 
     input[type=radio]+.label::before, input[type=checkbox]+.label::before { 
         font-family:"cmti-core";
         font-weight:normal;
@@ -134,6 +134,21 @@ Dependencies: variables, mixins, transitions, transformation
 
     input[type=checkbox]:checked+.label::before {
         content:"8";
+    }
+}
+
+.cmt-rating {
+  
+    input[type=checkbox]+.label.label-rating::before,input[type=radio]+.label.label-rating::before {
+        margin-right: 8px;
+    }
+    
+    input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
+        content:"\e0f3";
+    }
+
+    input[type=radio]:checked+.label::before {
+        content:"\e0f3";
     }
 }
 
