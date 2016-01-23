@@ -126,11 +126,6 @@ p, span, em, div, a {
     font-size: $font-size-7;  
 }
 
-// Need some spacing on text elements for better readability.
-p, span, em, a {
-    line-height: 1.5em;
-}
-
 // Coding - Required to highlight code
 pre {
     font-family: $font-code;
