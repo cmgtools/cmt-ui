@@ -1106,10 +1106,10 @@ html, body {
   width: 100%;
   font-size: 0.75em; }
 
-.error {
+.error, .help-block {
   color: #E74343; }
 
-.warning, .help-block {
+.warning {
   color: #EF9300; }
 
 .success {
@@ -1201,13 +1201,14 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
   verticle-align: middle;
   padding: 0.25em 0;
-  margin: 0.5em 0;
+  margin: 0.25em 0;
   font-family: Verdana, Geneva, sans-serif; }
 
 p, span, em, div, a {
   font-size: 1em; }
 
-p, span, em, a {
+.reader {
+  font-size: 1em;
   line-height: 1.5em; }
 
 pre {
@@ -1861,35 +1862,46 @@ form {
     position: relative; }
   form.form-large {
     width: 630px;
+    padding: 1rem;
     position: relative; }
   @media only screen and (max-width: 1024px) {
     form.form-small, form.form-medium, form.form-large {
       width: 80%;
       padding: 1rem 5%; } }
 
-label {
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn, .cmt-checkbox, .cmt-switch {
   border: none;
   box-shadow: none;
+  outline: none;
   font-size: 1em;
-  line-height: 1.25em;
+  line-height: 1.25;
   margin: 0.25em 0;
-  width: 100%;
   padding: 0.25em;
   display: inline-block;
-  text-align: left; }
+  width: 100%; }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch, input[type="submit"], input[type="button"], button, .btn {
-  vertical-align: middle;
-  font-size: 1em;
-  line-height: 1.25em;
-  margin: 0.25em 0;
-  width: 100%;
-  padding: 0.25em;
-  outline: none;
-  box-shadow: none;
-  border: none; }
+label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.frm-icon-element {
+  width: 25% !important; }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
+label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.frm-icon-element {
+  width: 50% !important; }
+
+label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.frm-icon-element {
+  width: 75% !important; }
+
+label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.frm-icon-element {
+  width: 80px !important; }
+
+label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.frm-icon-element {
+  width: 120px !important; }
+
+label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.frm-icon-element {
+  width: 180px !important; }
+
+label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.frm-icon-element {
+  width: 250px !important; }
+
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
@@ -1898,31 +1910,17 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   background-color: #F2F2F2;
   color: #363636;
   text-align: left; }
-  input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
+  label:hover, input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
     background-color: #E9E9E9;
     color: #363636; }
-  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
+  label:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
     color: #4F688E;
     -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
     -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
     box-shadow: inset 0 0 0 1px #E1E1E1; }
-  input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
+  label:disabled, input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
     background-color: #CCCCCC;
     color: #909090; }
-  input[type="text"].field-small, input[type="email"].field-small, input[type="password"].field-small, textarea.field-small, select.field-small, .cmt-checkbox.field-small, .cmt-switch.field-small {
-    width: 80px; }
-  input[type="text"].field-medium, input[type="email"].field-medium, input[type="password"].field-medium, textarea.field-medium, select.field-medium, .cmt-checkbox.field-medium, .cmt-switch.field-medium {
-    width: 120px; }
-  input[type="text"].field-large, input[type="email"].field-large, input[type="password"].field-large, textarea.field-large, select.field-large, .cmt-checkbox.field-large, .cmt-switch.field-large {
-    width: 180px; }
-  input[type="text"].field-xlarge, input[type="email"].field-xlarge, input[type="password"].field-xlarge, textarea.field-xlarge, select.field-xlarge, .cmt-checkbox.field-xlarge, .cmt-switch.field-xlarge {
-    width: 250px; }
-
-.cmt-checkbox, .cmt-switch {
-  background: none; }
-  .cmt-checkbox:hover, .cmt-switch:hover {
-    background: none;
-    color: #363636; }
 
 input[type="submit"], input[type="button"], button, .btn {
   -moz-transition: all 350ms ease-in-out 0s;
@@ -1944,45 +1942,11 @@ input[type="submit"], input[type="button"], button, .btn {
     background-color: gray;
     color: #363636; }
 
-.btn {
-  display: inline-block; }
-  .btn.btn-25 {
-    width: 25%; }
-  .btn.btn-50 {
-    width: 50%; }
-  .btn.btn-75 {
-    width: 75%; }
-  .btn.btn-small {
-    width: 80px; }
-  .btn.btn-medium {
-    width: 120px; }
-  .btn.btn-large {
-    width: 180px; }
-  .btn.btn-xlarge {
-    width: 250px; }
-  .btn.btn-white {
-    background-color: #FFFFFF;
-    color: #000000; }
-    .btn.btn-white:hover {
-      background-color: #595959;
-      color: #A5A5A5; }
-  .btn.btn-black {
-    background-color: #000000;
-    color: #FFFFFF; }
-    .btn.btn-black:hover {
-      background-color: #595959;
-      color: #A5A5A5; }
-  .btn.btn-gray {
-    background-color: #7F7F7F;
-    color: #FFFFFF; }
-    .btn.btn-gray:hover {
-      background-color: #595959;
-      color: #A5A5A5; }
-  .btn.btn-reverse:hover {
-    background-color: #E74343 !important;
-    color: #FFFFFF !important; }
+label {
+  text-align: left;
+  background: none; }
 
-.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch {
+.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button {
   width: auto; }
 
 .frm-split-40-60 label, .element-40 {
@@ -1994,28 +1958,23 @@ input[type="submit"], input[type="button"], button, .btn {
   width: 100%; }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 select, .element-60, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60 {
   width: 60%;
   float: left; }
 
-.frm-split-40-60 .frm-select-50 select {
-  width: 50%; }
-
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 .cmt-checkbox, .element-60 select, .element-60 .cmt-select-wrap {
+.element-60 textarea, .element-60 select {
   width: 100%; }
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
-.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
-.frm-rounded-all button, .frm-rounded-all .btn {
+.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   -khtml-border-radius: 5px; }
 
 .frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
-.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"],
-.frm-rounded-top button, .frm-rounded-top .btn {
+.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button {
   -moz-border-radius-top-left: 5px;
   -moz-border-radius-top-right: 5px;
   -webkit-border-radius-top-left: 5px;
@@ -2025,8 +1984,7 @@ input[type="submit"], input[type="button"], button, .btn {
   -khtml-border-radius-top-right: 5px; }
 
 .frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
-.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"],
-.frm-rounded-right button, .frm-rounded-right .btn {
+.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button {
   -moz-border-radius-top-right: 5px;
   -moz-border-radius-bottom-right: 5px;
   -webkit-border-radius-top-right: 5px;
@@ -2036,8 +1994,7 @@ input[type="submit"], input[type="button"], button, .btn {
   -khtml-border-radius-bottom-right: 5px; }
 
 .frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
-.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"],
-.frm-rounded-bottom button, .frm-rounded-bottom .btn {
+.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button {
   -moz-border-radius-bottom-left: 5px;
   -moz-border-radius-bottom-right: 5px;
   -webkit-border-radius-bottom-left: 5px;
@@ -2047,8 +2004,7 @@ input[type="submit"], input[type="button"], button, .btn {
   -khtml-border-radius-bottom-right: 5px; }
 
 .frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
-.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"],
-.frm-rounded-left button, .frm-rounded-left .btn {
+.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button {
   -moz-border-radius-top-left: 5px;
   -moz-border-radius-bottom-left: 5px;
   -webkit-border-radius-top-left: 5px;
@@ -2063,24 +2019,16 @@ input[type="submit"], input[type="button"], button, .btn {
   display: inline-block;
   width: 100%; }
   .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button, .frm-icon-element .btn {
-    padding-left: 1.3em; }
+    padding-left: 1.75em; }
   .frm-icon-element .icon, .frm-icon-element .cmti {
     position: absolute;
-    font-size: 1em;
-    line-height: 1.25em;
-    margin: 0.25em 0;
-    padding: 0.25em;
-    outline: none;
+    border: none;
     box-shadow: none;
-    border: none; }
-  .frm-icon-element.field-small {
-    width: 80px; }
-  .frm-icon-element.field-medium {
-    width: 120px; }
-  .frm-icon-element.field-large {
-    width: 180px; }
-  .frm-icon-element.field-xlarge {
-    width: 250px; }
+    outline: none;
+    font-size: 1em;
+    line-height: 1.25;
+    margin: 0.25em 0;
+    padding: 0.25em; }
 
 /**********************************************************************
 Description: It defines the default table style available in CMGTools.
@@ -2103,38 +2051,37 @@ Description: The custom elements for CMGTools.
 Dependencies: variables, mixins, transitions, transformation
 ***********************************************************************/
 .cmt-select-wrap {
-  position: relative; }
+  margin: 0.25em 0;
+  width: 100%; }
   .cmt-select-wrap select {
     display: none; }
   .cmt-select-wrap .cmt-select {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #F2F2F2;
-    margin: 0.25em 0; }
+    position: relative;
+    background-color: #F2F2F2; }
     .cmt-select-wrap .cmt-select .cmt-selected {
       cursor: pointer;
       position: relative;
       z-index: 100000;
-      padding-right: 32px; }
+      padding-right: 1.5em; }
       .cmt-select-wrap .cmt-select .cmt-selected .s-text {
         display: inline-block;
         width: 100%;
         overflow: hidden;
         text-align: left;
-        padding: 12px;
+        padding: 0.25em;
         color: #363636; }
       .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
-        display: inline-block;
-        width: 32px;
         position: absolute;
         top: 0;
-        right: 0; }
+        right: 0;
+        display: inline-block;
+        padding: 0.25em; }
       .cmt-select-wrap .cmt-select .cmt-selected.disabled {
         cursor: default; }
     .cmt-select-wrap .cmt-select .cmt-select-list {
-      position: relative;
+      position: absolute;
+      width: 100%;
+      background-color: #F2F2F2;
       z-index: 100001;
       max-height: 180px;
       overflow-y: auto; }
@@ -2148,14 +2095,14 @@ Dependencies: variables, mixins, transitions, transformation
         color: #FFFFFF;
         background-color: #E74343; }
 
-.cmt-choice input[type=checkbox], .cmt-choice input[type=radio] {
+.cmt-choice input[type=checkbox], .cmt-choice input[type=radio], .cmt-rating input[type=checkbox], .cmt-rating input[type=radio] {
   cursor: pointer;
   display: none; }
 
-.cmt-choice input[type=checkbox] + .label.pad-label::before, .cmt-choice input[type=radio] + .label.pad-label::before {
+.cmt-choice input[type=checkbox] + .label.pad-label::before, .cmt-choice input[type=radio] + .label.pad-label::before, .cmt-rating input[type=checkbox] + .label.pad-label::before, .cmt-rating input[type=radio] + .label.pad-label::before {
   margin-right: 8px; }
 
-.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=checkbox] + .label::before {
+.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=checkbox] + .label::before, .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=checkbox] + .label::before {
   font-family: "cmti-core";
   font-weight: normal;
   color: gray;
@@ -2165,35 +2112,44 @@ Dependencies: variables, mixins, transitions, transformation
   margin-top: -5px;
   line-height: 13px; }
 
-.cmt-choice input[type=checkbox]:checked, .cmt-choice input[type=radio]:checked, .cmt-choice input[type=checkbox]:focus, .cmt-choice input[type=radio]:focus {
+.cmt-choice input[type=checkbox]:checked, .cmt-choice input[type=radio]:checked, .cmt-choice input[type=checkbox]:focus, .cmt-choice input[type=radio]:focus, .cmt-rating input[type=checkbox]:checked, .cmt-rating input[type=radio]:checked, .cmt-rating input[type=checkbox]:focus, .cmt-rating input[type=radio]:focus {
   outline: none !important; }
 
-.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-choice input[type=radio]:checked + .label::before {
+.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-choice input[type=radio]:checked + .label::before, .cmt-rating input[type=checkbox]:checked + .label::before, .cmt-rating input[type=radio]:checked + .label::before {
   display: inline-block;
   background-color: #F5F8FC;
   color: #E74343; }
 
-.cmt-choice input[type=checkbox]:checked + .label, .cmt-choice input[type=radio]:checked + .label {
+.cmt-choice input[type=checkbox]:checked + .label, .cmt-choice input[type=radio]:checked + .label, .cmt-rating input[type=checkbox]:checked + .label, .cmt-rating input[type=radio]:checked + .label {
   color: #b51717; }
 
-.cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=radio] + .label:hover::before {
+.cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=radio] + .label:hover::before, .cmt-rating input[type=checkbox]:hover + .label::before, .cmt-rating input[type=radio]:hover + .label::before, .cmt-rating input[type=checkbox] + .label:hover::before, .cmt-rating input[type=radio] + .label:hover::before {
   color: #FF3636; }
 
-.cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
+.cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-choice input[type=radio]:disabled + .label::before, .cmt-rating input[type=checkbox]:disabled + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
   background-color: #DDD !important;
   color: #BBB; }
 
-.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
+.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before, .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
   content: "\e05a"; }
 
-.cmt-choice input[type=radio]:checked + .label::before {
+.cmt-choice input[type=radio]:checked + .label::before, .cmt-rating input[type=radio]:checked + .label::before {
   content: "\e05b"; }
 
-.cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before {
+.cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-rating input[type=checkbox] + .label::before, .cmt-rating input[type=checkbox]:disabled + .label::before {
   content: "6"; }
 
-.cmt-choice input[type=checkbox]:checked + .label::before {
+.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-rating input[type=checkbox]:checked + .label::before {
   content: "8"; }
+
+.cmt-rating input[type=checkbox] + .label.label-rating::before, .cmt-rating input[type=radio] + .label.label-rating::before {
+  margin-right: 8px; }
+
+.cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
+  content: "\e0f3"; }
+
+.cmt-rating input[type=radio]:checked + .label::before {
+  content: "\e0f3"; }
 
 .cmt-switch {
   position: relative;
@@ -2246,6 +2202,52 @@ Dependencies: variables, mixins, transitions, transformation
   .cmt-switch .cmt-toggle-round:checked + label:after {
     margin-left: 3.5em; }
 
+.btn.btn-25 {
+  width: 25% !important; }
+
+.btn.btn-50 {
+  width: 50% !important; }
+
+.btn.btn-75 {
+  width: 75% !important; }
+
+.btn.btn-small {
+  width: 80px !important; }
+
+.btn.btn-medium {
+  width: 120px !important; }
+
+.btn.btn-large {
+  width: 180px !important; }
+
+.btn.btn-xlarge {
+  width: 250px !important; }
+
+.btn.btn-white {
+  background-color: #FFFFFF;
+  color: #000000; }
+  .btn.btn-white:hover {
+    background-color: #595959;
+    color: #A5A5A5; }
+
+.btn.btn-black {
+  background-color: #000000;
+  color: #FFFFFF; }
+  .btn.btn-black:hover {
+    background-color: #595959;
+    color: #A5A5A5; }
+
+.btn.btn-gray {
+  background-color: #7F7F7F;
+  color: #FFFFFF; }
+  .btn.btn-gray:hover {
+    background-color: #595959;
+    color: #A5A5A5; }
+
+.btn.btn-reverse:hover {
+  background-color: #E74343 !important;
+  color: #FFFFFF !important; }
+
 .btn-delete {
   position: absolute;
   top: -0.5em;
@@ -2260,6 +2262,72 @@ Dependencies: variables, mixins, transitions, transformation
   transition: color 250ms ease-in-out 0s; }
   .btn-delete:hover {
     color: #363636; }
+
+.list-radio label {
+  width: auto;
+  clear: none; }
+
+.cmt-checkbox, .cmt-switch {
+  background: none; }
+  .cmt-checkbox:hover, .cmt-switch:hover {
+    background: none;
+    color: #363636; }
+
+.frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch {
+  width: auto; }
+
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
+  width: 60%;
+  float: left; }
+
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap {
+  width: 100%; }
+
+.frm-rounded-all .btn {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px; }
+
+.frm-rounded-top .btn {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-top-right: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-top-right: 5px;
+  border-radius: 5px 5px 0 0;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-top-right: 5px; }
+
+.frm-rounded-right .btn {
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px; }
+
+.frm-rounded-bottom .btn {
+  -moz-border-radius-bottom-left: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 0 5px 5px;
+  -khtml-border-radius-bottom-left: 5px;
+  -khtml-border-radius-bottom-right: 5px; }
+
+.frm-rounded-left .btn {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  border-radius: 5px 0 0 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px; }
+
+/** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
+.frm-icon-element .btn {
+  padding-left: 1.3em; }
 
 /**********************************************************************
 Description: It defines the styles for the menu components available in CMGTools.
