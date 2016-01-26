@@ -27,6 +27,15 @@ Dependencies: variables, mixins
     &.row-xlarge {
         width: 90%;
     }
+    
+    &.row-inline {
+        text-align: center;
+        
+        .col, .colf {
+            display: inline-block !important;
+            float: none !important;
+        }
+    }
 }
 
 // Responsive Columns

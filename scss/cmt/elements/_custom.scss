@@ -120,19 +120,19 @@ Dependencies: variables, mixins, transitions, transformation
     }
 
     input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
-        content: "\e05a";
+        content: "\e0a2";
     }
 
     input[type=radio]:checked+.label::before {
-        content: "\e05b";
+        content: "\e0a3";
     }
 
     input[type=checkbox]+.label::before, input[type=checkbox]:disabled+.label::before {
-        content: "6";
+        content: "\3b";
     }
 
     input[type=checkbox]:checked+.label::before {
-        content: "8";
+        content: "\3a";
     }
 }
 
