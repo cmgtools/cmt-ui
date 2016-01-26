@@ -440,11 +440,11 @@ html, body {
     font-size: $font-size-8;
 }
 
-.error {
+.error, .help-block {
     color: $color-error;
 }
 
-.warning, .help-block {
+.warning {
     color: $color-warning;
 }
 

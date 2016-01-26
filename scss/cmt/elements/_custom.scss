@@ -5,26 +5,23 @@ Dependencies: variables, mixins, transitions, transformation
 
 // Custom Select
 .cmt-select-wrap {
-    position: relative;
+    margin: 0.25em 0;
+    width: 100%;
 
     select {
         display: none;
     }
 
     .cmt-select {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+        position: relative;
         background-color: $color-field;
-        margin: 0.25em 0;
 
         // Select Value - default icon having width 32px. It can be changed based on icon dimensions.
         .cmt-selected {
             cursor: pointer;
             position: relative;
             z-index: 100000;
-            padding-right: 32px;
+            padding-right: 1.5em;
 
             // text for selected value
             .s-text {
@@ -32,17 +29,17 @@ Dependencies: variables, mixins, transitions, transformation
                 width: 100%;
                 overflow: hidden;
                 text-align: left;
-                padding: 12px;
-                color:$color-field-text;
+                padding: 0.25em;
+                color: $color-field-text;
             }
 
             // icon for select box
             .s-icon {
-                display: inline-block;
-                width: 32px;
                 position: absolute;
                 top: 0;
                 right: 0;
+                display: inline-block;
+                padding: 0.25em;
             }
 
             // disabled
@@ -53,7 +50,9 @@ Dependencies: variables, mixins, transitions, transformation
 
         // Select options
         .cmt-select-list {
-            position: relative;
+            position: absolute;
+            width: 100%;
+            background-color: $color-field;
             z-index: 100001;
             max-height: 180px;
             overflow-y: auto;            
@@ -62,12 +61,12 @@ Dependencies: variables, mixins, transitions, transformation
                 width: 100%;
                 overflow: hidden;
                 cursor: pointer;
-                padding:10px;
+                padding: 10px;
                 background-color: $color-white;
             }
 
             li:hover {
-                color:$color-btn-a-text;
+                color: $color-btn-a-text;
                 background-color: $color-btn;
             }
         }
@@ -77,78 +76,78 @@ Dependencies: variables, mixins, transitions, transformation
 //Choices - radio and checkbox
 .cmt-choice, .cmt-rating {
 
-    input[type=checkbox],input[type=radio] {
+    input[type=checkbox], input[type=radio] {
         cursor: pointer;
-        display:none;         
+        display: none;         
     }
 
-    input[type=checkbox]+.label.pad-label::before,input[type=radio]+.label.pad-label::before {
+    input[type=checkbox]+.label.pad-label::before, input[type=radio]+.label.pad-label::before {
         margin-right: 8px;
     }
  
     input[type=radio]+.label::before, input[type=checkbox]+.label::before { 
-        font-family:"cmti-core";
-        font-weight:normal;
-        color:gray; 
-        border-radius:16px;
-        display:inline-block;
-        vertical-align:middle;
+        font-family: "cmti-core";
+        font-weight: normal;
+        color: gray; 
+        border-radius: 16px;
+        display: inline-block;
+        vertical-align: middle;
         margin-top: -5px;
-        line-height:13px;
+        line-height: 13px;
     }
 
-    input[type=checkbox]:checked,input[type=radio]:checked,input[type=checkbox]:focus,input[type=radio]:focus {
+    input[type=checkbox]:checked,input[type=radio]:checked, input[type=checkbox]:focus,input[type=radio]:focus {
         outline:none !important;
     }
 
-    input[type=checkbox]:checked+.label::before,input[type=radio]:checked+.label::before {
-        display:inline-block; 
-        background-color:#F5F8FC;
-        color:$color-btn; 
-    } 
-
-    input[type=checkbox]:checked+.label,input[type=radio]:checked+.label {
-        color:$color-btn-a;
-    }  
-
-    input[type=checkbox]:hover+.label::before,input[type=radio]:hover+.label::before,input[type=checkbox]+.label:hover::before,input[type=radio]+.label:hover::before {
-        color:$color-btn-h;
+    input[type=checkbox]:checked+.label::before, input[type=radio]:checked+.label::before {
+        display: inline-block; 
+        background-color: #F5F8FC;
+        color: $color-btn; 
     }
 
-    input[type=checkbox]:disabled+.label::before,input[type=radio]:disabled+.label::before {
-        background-color:#DDD !important;  
-        color:#BBB;  
+    input[type=checkbox]:checked+.label, input[type=radio]:checked+.label {
+        color: $color-btn-a;
+    }
+
+    input[type=checkbox]:hover+.label::before, input[type=radio]:hover+.label::before, input[type=checkbox]+.label:hover::before, input[type=radio]+.label:hover::before {
+        color: $color-btn-h;
+    }
+
+    input[type=checkbox]:disabled+.label::before, input[type=radio]:disabled+.label::before {
+        background-color: #DDD !important;
+        color: #BBB;
     }
 
     input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
-        content:"\e05a";
+        content: "\e05a";
     }
 
     input[type=radio]:checked+.label::before {
-        content:"\e05b";
+        content: "\e05b";
     }
 
     input[type=checkbox]+.label::before, input[type=checkbox]:disabled+.label::before {
-        content:"6";
+        content: "6";
     }
 
     input[type=checkbox]:checked+.label::before {
-        content:"8";
+        content: "8";
     }
 }
 
 .cmt-rating {
-  
-    input[type=checkbox]+.label.label-rating::before,input[type=radio]+.label.label-rating::before {
+
+    input[type=checkbox]+.label.label-rating::before, input[type=radio]+.label.label-rating::before {
         margin-right: 8px;
     }
-    
+
     input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
-        content:"\e0f3";
+        content: "\e0f3";
     }
 
     input[type=radio]:checked+.label::before {
-        content:"\e0f3";
+        content: "\e0f3";
     }
 }
 
@@ -214,6 +213,83 @@ Dependencies: variables, mixins, transitions, transformation
     }
 }
 
+// Generic button
+
+.btn {
+    @extend %element-style;
+    @extend %element-style-action;
+
+    &.btn-25 {
+        width: 25% !important;
+    }
+
+    &.btn-50 {
+        width: 50% !important;
+    }
+
+    &.btn-75 {
+        width: 75% !important;
+    }
+
+    &.btn-small {
+        width: 80px !important;
+    }
+
+    &.btn-medium {
+        width: 120px !important;
+    }
+
+    &.btn-large {
+        width: 180px !important;
+    }
+
+    &.btn-xlarge {
+        width: 250px !important;
+    }
+
+    // White button with dark gray hover
+    &.btn-white {
+        background-color: $color-white;
+        color: $color-black;
+
+        &:hover {
+            background-color: $color-gray-d;
+            color: $color-gray-l;
+        }
+    }
+    
+    // Black button with dark gray hover
+    &.btn-black {
+        background-color: $color-black;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-gray-d;
+            color: $color-gray-l;
+        }
+    }
+    
+    // Gray button with dark gray hover
+    &.btn-gray {
+        background-color: $color-gray;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-gray-d;
+            color: $color-gray-l;
+        }
+    }
+
+    // Reversed hover of button color and text for white, black and gray buttons
+    &.btn-reverse {
+
+        &:hover {
+            background-color: $color-btn !important;
+            color: $color-btn-text !important;
+        }
+    }
+}
+
 // parents having the delete button must use positioning
 .btn-delete {
     position: absolute;
@@ -226,5 +302,78 @@ Dependencies: variables, mixins, transitions, transformation
 
     &:hover {
         color: $color-primary-text;
+    }
+}
+
+.list-radio {
+
+    label {
+        width: auto;
+        clear: none;
+    }
+}
+
+// Customisation for forms --------------------------
+
+.cmt-checkbox, .cmt-switch {
+    @extend %element-style;
+    @extend %element-style-field;
+}
+
+.cmt-checkbox, .cmt-switch {
+    background: none;
+
+    &:hover {
+        background: none;
+        color: $color-field-h-text;
+    }
+}
+
+// Ignore 100% width behavior for form elements
+
+.frm-ignore-100 {
+
+    .cmt-checkbox, .cmt-switch {
+        width: auto;
+    }
+}
+
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
+    width: 60%;
+    float: left;
+}
+
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap  {
+    width: 100%;
+}
+
+// Round cornered elements
+
+.frm-rounded-all .btn {
+      @include rounded( $size-medium );
+}
+
+.frm-rounded-top .btn {
+      @include rounded-top( $size-medium );
+}
+
+.frm-rounded-right .btn {
+      @include rounded-right( $size-medium );
+}
+
+.frm-rounded-bottom .btn {
+      @include rounded-bottom( $size-medium );
+}
+
+.frm-rounded-left .btn {
+      @include rounded-left( $size-medium );
+}
+
+/** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
+
+.frm-icon-element {
+
+    .btn {
+        padding-left: 1.3em;
     }
 }

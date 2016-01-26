@@ -116,7 +116,7 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
     verticle-align: middle;
     padding: 0.25em 0;
-    margin: 0.5em 0;
+    margin: 0.25em 0;
     font-family: $font-heading;
 }
 
@@ -124,6 +124,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
 
 p, span, em, div, a {
     font-size: $font-size-7;  
+}
+
+// Content for reading purpose
+
+.reader {
+    font-size: $font-size-7;
+    line-height: 1.5em;
 }
 
 // Coding - Required to highlight code
