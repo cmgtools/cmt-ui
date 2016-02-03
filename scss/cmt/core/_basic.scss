@@ -9,6 +9,7 @@ Dependencies: variables
  */
 
 .screen {
+    // TODO: add default screen styles
 
     &.screen-mobile-small {
         width: $screen-mobile-small;
@@ -50,7 +51,9 @@ Dependencies: variables
  */ 
 
 .color {
-
+    // default to primary
+    background-color: $color-primary;
+    color: $color-primary-text;
 /**
  * Color Palatte:
  * 1. primary: #{$color-primary}
@@ -72,11 +75,6 @@ Dependencies: variables
  * 17. tertiary dark: #{$color-tertiary-d}
  * 18. tertiary text dark: #{$color-tertiary-text-d}
  */
-
-    &.color-primary {
-        background-color: $color-primary;
-        color: $color-primary-text;
-    }
 
     &.color-primary-l {
         background-color: $color-primary-l;
@@ -131,10 +129,8 @@ Dependencies: variables
 
 // Background Colors
 .bkg {
-    
-    &.bkg-primary {
-        background-color: $color-primary;
-    }
+    // default to primary
+    background-color: $color-primary;
 
     &.bkg-secondary {
         background-color: $color-secondary;
@@ -274,6 +270,7 @@ html, body {
 // Width
 
 .width {
+    width: 100%;
 
     &.width-auto {
         width: auto;
@@ -294,15 +291,12 @@ html, body {
     &.width-80 {
         width: 80%;
     }
-
-    &.width-100 {
-        width: 100%;
-    }
 }
 
 // Height
 
 .height {
+    height: 100%;
 
     &.height-auto {
         height: auto;
@@ -319,27 +313,20 @@ html, body {
     &.height-75 {
         height: 75%;
     }
-    
-    &.height-100 {
-        height: 100%;
-    }
 }
 
 /** 
  * Alignments for centered box and text.
  */
 
+.center {
+    margin: 0 auto;
+}
+
 .align {
+    text-align: left !important;
 
     &.align-center {
-        margin: 0 auto;
-    }
-
-    &.align-left {
-        text-align: left !important;
-    }
-
-    &.align-middle {
         text-align: center !important;
     }
 
@@ -379,6 +366,16 @@ html, body {
 
     &.absolute-top-right {
         top: 0px;
+        right: 0px;
+    }
+
+    &.absolute-bottom-left {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    &.absolute-bottom-right {
+        bottom: 0px;
         right: 0px;
     }
 }

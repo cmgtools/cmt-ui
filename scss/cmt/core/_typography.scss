@@ -168,6 +168,10 @@ pre {
     text-transform: lowercase;
 }
 
+.strikethrough {
+    text-decoration: line-through;
+}
+
 // Links
 
 a, .link {
@@ -180,10 +184,8 @@ a, .link {
 
 // Text Colors
 .text {
-    
-    &.text-primary {
-        color: $color-primary-text !important;
-    }
+    // default to primary text
+    color: $color-primary-text !important;
 
     &.text-secondary {
         color: $color-secondary-text !important;

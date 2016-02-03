@@ -843,6 +843,8 @@ Dependencies: variables
  * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
  */
 .color {
+  background-color: #F2F2F2;
+  color: #363636;
   /**
  * Color Palatte:
  * 1. primary: #F2F2F2
@@ -864,9 +866,6 @@ Dependencies: variables
  * 17. tertiary dark: #5f8230
  * 18. tertiary text dark: #cfe3b5
  */ }
-  .color.color-primary {
-    background-color: #F2F2F2;
-    color: #363636; }
   .color.color-primary-l {
     background-color: white;
     color: #101010; }
@@ -898,50 +897,36 @@ Dependencies: variables
     background-color: #000000;
     color: #FFFFFF; }
 
-.bkg.bkg-primary {
+.bkg {
   background-color: #F2F2F2; }
-
-.bkg.bkg-secondary {
-  background-color: #3C4655; }
-
-.bkg.bkg-tertiary {
-  background-color: #87BA45; }
-
-.bkg.bkg-black {
-  background-color: #000000; }
-
-.bkg.bkg-gray {
-  background-color: #7F7F7F; }
-
-.bkg.bkg-white {
-  background-color: #FFFFFF; }
-
-.bkg.bkg-blue {
-  background-color: #3F62A0; }
-
-.bkg.bkg-purple {
-  background-color: #663096; }
-
-.bkg.bkg-orange {
-  background-color: #F3702E; }
-
-.bkg.bkg-yellow {
-  background-color: #FFD800; }
-
-.bkg .bkg-red {
-  background-color: #B42A1A; }
-
-.bkg.bkg-pink {
-  background-color: #FF9DAB; }
-
-.bkg.bkg-magenta {
-  background-color: #B200B2; }
-
-.bkg.bkg-green {
-  background-color: #87C442; }
-
-.bkg.bkg-green-d {
-  background-color: #56832A; }
+  .bkg.bkg-secondary {
+    background-color: #3C4655; }
+  .bkg.bkg-tertiary {
+    background-color: #87BA45; }
+  .bkg.bkg-black {
+    background-color: #000000; }
+  .bkg.bkg-gray {
+    background-color: #7F7F7F; }
+  .bkg.bkg-white {
+    background-color: #FFFFFF; }
+  .bkg.bkg-blue {
+    background-color: #3F62A0; }
+  .bkg.bkg-purple {
+    background-color: #663096; }
+  .bkg.bkg-orange {
+    background-color: #F3702E; }
+  .bkg.bkg-yellow {
+    background-color: #FFD800; }
+  .bkg .bkg-red {
+    background-color: #B42A1A; }
+  .bkg.bkg-pink {
+    background-color: #FF9DAB; }
+  .bkg.bkg-magenta {
+    background-color: #B200B2; }
+  .bkg.bkg-green {
+    background-color: #87C442; }
+  .bkg.bkg-green-d {
+    background-color: #56832A; }
 
 /**
  * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
@@ -1002,53 +987,42 @@ html, body {
 /** 
  * Pre-defined width and height, handy at few places.
  */
-.width.width-auto {
-  width: auto; }
-
-.width.width-25 {
-  width: 25%; }
-
-.width.width-50 {
-  width: 50%; }
-
-.width.width-75 {
-  width: 75%; }
-
-.width.width-80 {
-  width: 80%; }
-
-.width.width-100 {
+.width {
   width: 100%; }
+  .width.width-auto {
+    width: auto; }
+  .width.width-25 {
+    width: 25%; }
+  .width.width-50 {
+    width: 50%; }
+  .width.width-75 {
+    width: 75%; }
+  .width.width-80 {
+    width: 80%; }
 
-.height.height-auto {
-  height: auto; }
-
-.height.height-25 {
-  height: 25%; }
-
-.height.height-50 {
-  height: 50%; }
-
-.height.height-75 {
-  height: 75%; }
-
-.height.height-100 {
+.height {
   height: 100%; }
+  .height.height-auto {
+    height: auto; }
+  .height.height-25 {
+    height: 25%; }
+  .height.height-50 {
+    height: 50%; }
+  .height.height-75 {
+    height: 75%; }
 
 /** 
  * Alignments for centered box and text.
  */
-.align.align-center {
+.center {
   margin: 0 auto; }
 
-.align.align-left {
+.align {
   text-align: left !important; }
-
-.align.align-middle {
-  text-align: center !important; }
-
-.align.align-right {
-  text-align: right !important; }
+  .align.align-center {
+    text-align: center !important; }
+  .align.align-right {
+    text-align: right !important; }
 
 /** 
  * Height fillers to seperate boxes.
@@ -1069,6 +1043,12 @@ html, body {
     left: 0px; }
   .absolute.absolute-top-right {
     top: 0px;
+    right: 0px; }
+  .absolute.absolute-bottom-left {
+    bottom: 0px;
+    left: 0px; }
+  .absolute.absolute-bottom-right {
+    bottom: 0px;
     right: 0px; }
 
 .relative {
@@ -1234,55 +1214,44 @@ pre {
 .lowercase {
   text-transform: lowercase; }
 
+.strikethrough {
+  text-decoration: line-through; }
+
 a, .link {
   color: #298ccf; }
   a:hover, .link:hover {
     color: #E74343; }
 
-.text.text-primary {
+.text {
   color: #363636 !important; }
-
-.text.text-secondary {
-  color: #96B0D6 !important; }
-
-.text.text-tertiary {
-  color: #E6E6E6 !important; }
-
-.text.text-black {
-  color: #000000 !important; }
-
-.text.text-gray {
-  color: #7F7F7F !important; }
-
-.text.text-white {
-  color: #FFFFFF !important; }
-
-.text.text-blue {
-  color: #3F62A0 !important; }
-
-.text.text-purple {
-  color: #663096 !important; }
-
-.text.text-orange {
-  color: #F3702E !important; }
-
-.text.text-yellow {
-  color: #FFD800 !important; }
-
-.text.text-red {
-  color: #B42A1A !important; }
-
-.text.text-pink {
-  color: #FF9DAB !important; }
-
-.text.text-magenta {
-  color: #B200B2 !important; }
-
-.text.text-green {
-  color: #87C442 !important; }
-
-.text.text-green-d {
-  color: #56832A !important; }
+  .text.text-secondary {
+    color: #96B0D6 !important; }
+  .text.text-tertiary {
+    color: #E6E6E6 !important; }
+  .text.text-black {
+    color: #000000 !important; }
+  .text.text-gray {
+    color: #7F7F7F !important; }
+  .text.text-white {
+    color: #FFFFFF !important; }
+  .text.text-blue {
+    color: #3F62A0 !important; }
+  .text.text-purple {
+    color: #663096 !important; }
+  .text.text-orange {
+    color: #F3702E !important; }
+  .text.text-yellow {
+    color: #FFD800 !important; }
+  .text.text-red {
+    color: #B42A1A !important; }
+  .text.text-pink {
+    color: #FF9DAB !important; }
+  .text.text-magenta {
+    color: #B200B2 !important; }
+  .text.text-green {
+    color: #87C442 !important; }
+  .text.text-green-d {
+    color: #56832A !important; }
 
 .text-with-line {
   text-align: center;
@@ -1312,6 +1281,11 @@ Dependencies: variables, mixins
     width: 80%; }
   .row.row-xlarge {
     width: 90%; }
+  .row.row-inline {
+    text-align: center; }
+    .row.row-inline .col, .row.row-inline .colf {
+      display: inline-block !important;
+      float: none !important; }
 
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
@@ -1880,25 +1854,25 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   display: inline-block;
   width: 100%; }
 
-label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.frm-icon-element {
+label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25 {
   width: 25% !important; }
 
-label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.frm-icon-element {
+label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50 {
   width: 50% !important; }
 
-label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.frm-icon-element {
+label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75 {
   width: 75% !important; }
 
-label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.frm-icon-element {
+label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small {
   width: 80px !important; }
 
-label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.frm-icon-element {
+label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium {
   width: 120px !important; }
 
-label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.frm-icon-element {
+label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large {
   width: 180px !important; }
 
-label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.frm-icon-element {
+label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge {
   width: 250px !important; }
 
 label, input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
@@ -2018,8 +1992,23 @@ label {
   position: relative;
   display: inline-block;
   width: 100%; }
-  .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button, .frm-icon-element .btn {
-    padding-left: 1.75em; }
+  .frm-icon-element.element-25 {
+    width: 25% !important; }
+  .frm-icon-element.element-50 {
+    width: 50% !important; }
+  .frm-icon-element.element-75 {
+    width: 75% !important; }
+  .frm-icon-element.element-small {
+    width: 80px !important; }
+  .frm-icon-element.element-medium {
+    width: 120px !important; }
+  .frm-icon-element.element-large {
+    width: 180px !important; }
+  .frm-icon-element.element-xlarge {
+    width: 250px !important; }
+  .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button {
+    padding-left: 1.75em;
+    width: 100%; }
   .frm-icon-element .icon, .frm-icon-element .cmti {
     position: absolute;
     border: none;
@@ -2029,6 +2018,12 @@ label {
     line-height: 1.25;
     margin: 0.25em 0;
     padding: 0.25em; }
+
+.frm-split-40-60 .frm-icon-element {
+  width: 60%;
+  float: left; }
+  .frm-split-40-60 .frm-icon-element input[type="text"], .frm-split-40-60 .frm-icon-element input[type="email"], .frm-split-40-60 .frm-icon-element input[type="password"], .frm-split-40-60 .frm-icon-element textarea, .frm-split-40-60 .frm-icon-element select, .frm-split-40-60 .frm-icon-element input[type="submit"], .frm-split-40-60 .frm-icon-element input[type="button"], .frm-split-40-60 .frm-icon-element button {
+    float: none; }
 
 /**********************************************************************
 Description: It defines the default table style available in CMGTools.
@@ -2131,16 +2126,16 @@ Dependencies: variables, mixins, transitions, transformation
   color: #BBB; }
 
 .cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before, .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
-  content: "\e05a"; }
+  content: "\e0a2"; }
 
 .cmt-choice input[type=radio]:checked + .label::before, .cmt-rating input[type=radio]:checked + .label::before {
-  content: "\e05b"; }
+  content: "\e0a3"; }
 
 .cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-rating input[type=checkbox] + .label::before, .cmt-rating input[type=checkbox]:disabled + .label::before {
-  content: "6"; }
+  content: "\3b"; }
 
 .cmt-choice input[type=checkbox]:checked + .label::before, .cmt-rating input[type=checkbox]:checked + .label::before {
-  content: "8"; }
+  content: "\3a"; }
 
 .cmt-rating input[type=checkbox] + .label.label-rating::before, .cmt-rating input[type=radio] + .label.label-rating::before {
   margin-right: 8px; }
@@ -2327,7 +2322,10 @@ Dependencies: variables, mixins, transitions, transformation
 
 /** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
 .frm-icon-element .btn {
-  padding-left: 1.3em; }
+  padding-left: 1.75em; }
+
+.frm-split-40-60 .frm-icon-element .btn {
+  float: none; }
 
 /**********************************************************************
 Description: It defines the styles for the menu components available in CMGTools.

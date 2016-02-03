@@ -216,10 +216,38 @@ input[type="submit"], input[type="button"], button {
     position: relative;
     display: inline-block;
     width: 100%;
-    @extend %element-size;
 
-    input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
+    &.element-25 {
+        width: 25% !important;
+    }
+
+    &.element-50 {
+        width: 50% !important;
+    }
+
+    &.element-75 {
+        width: 75% !important;
+    }
+
+    &.element-small {
+        width: 80px !important;
+    }
+
+    &.element-medium {
+        width: 120px !important;
+    }
+
+    &.element-large {
+        width: 180px !important;
+    }
+
+    &.element-xlarge {
+        width: 250px !important;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
         padding-left: 1.75em;
+        width: 100%;
     }
 
     // compatible with CMGTools UI and other frameworks
@@ -232,5 +260,14 @@ input[type="submit"], input[type="button"], button {
         line-height: 1.25;
         margin: 0.25em 0;
         padding: 0.25em;
+    }
+}
+
+.frm-split-40-60 .frm-icon-element {
+    width: 60%;
+    float: left;
+
+    input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
+        float: none;
     }
 }

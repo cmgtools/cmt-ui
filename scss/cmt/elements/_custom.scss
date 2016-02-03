@@ -374,6 +374,13 @@ Dependencies: variables, mixins, transitions, transformation
 .frm-icon-element {
 
     .btn {
-        padding-left: 1.3em;
+        padding-left: 1.75em;
+    }
+}
+
+.frm-split-40-60 .frm-icon-element {
+
+    .btn {
+        float: none;
     }
 }
