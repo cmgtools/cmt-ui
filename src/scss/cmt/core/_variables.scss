@@ -1,0 +1,167 @@
+// Description: The variables used by CMGTools.
+// Dependency: none
+
+// Current Version
+$version: '1.0.0-alpha4';
+
+// Images Path
+$images-path: '../images/';
+
+// Default Fonts
+$font-default: Arial, Helvetica, sans-serif; // Default Font - typography - body
+$font-heading: Verdana, Geneva, sans-serif; // Font for Headers - typography - h1, h2, h3, h4, h5, h6, .default-header
+$font-code: "Courier New", Courier, monospace; // Code Font - typography - pre
+
+// Font Sizing - 1 to 6 are for headers, 7 for (p, a, em), 8 for errors, 9 for extra small text like copyright info
+$font-size-1: 2.5em;
+$font-size-2: 2.25em;
+$font-size-3: 2.00em;
+$font-size-4: 1.75em;
+$font-size-5: 1.50em;
+$font-size-6: 1.25em;
+
+$font-size-7: 1em;
+
+$font-size-8: 0.75em;
+$font-size-9: 0.65em;
+
+// Standard screen sizes -
+//mobile
+$screen-mobile-small: 320px;
+$screen-mobile-large: 480px;
+
+// Tablets
+$screen-tablet-small: 768px;
+$screen-tablet-large: 1024px;
+
+//Desktop
+$screen-desktop-small: 1280px;
+$screen-desktop-medium: 1360px;
+$screen-desktop-large: 1600px;
+$screen-desktop-xlarge: 1920px;
+
+// Standard size for element's radius, border, shadow, padding, margin
+$size-default: 1px;
+$size-small: 3px;
+$size-medium: 5px;
+$size-large: 10px;
+$size-xlarge: 14px;
+
+// Size in rem, mostly useful for padding
+$size-small-rem: 0.5rem;
+$size-medium-rem: 1rem;
+$size-large-rem: 1.5rem;
+$size-xlarge-rem: 2rem;
+
+// Color Factor - We can use it using lighten/darken methods - ex: $color-primary-l: lighten( $color-primary, $color-factor )
+$color-factor: 15%;
+$color-transparency-low: 0.25;
+$color-transparency-medium: 0.50;
+$color-transparency-high: 0.75;
+
+// Primary Color:
+$color-primary: #F2F2F2;
+$color-primary-l: lighten( $color-primary, $color-factor );
+$color-primary-d: darken( $color-primary, $color-factor );
+
+// Primary Text Color:
+$color-primary-text: #363636;
+$color-primary-text-l: darken( $color-primary-text, $color-factor );
+$color-primary-text-d: lighten( $color-primary-text, $color-factor );
+
+// Secondary Color:
+$color-secondary: #3C4655;
+$color-secondary-l: lighten( $color-secondary, $color-factor );
+$color-secondary-d: darken( $color-secondary, $color-factor );
+
+// Secondary Text Color:
+$color-secondary-text: #96B0D6;
+$color-secondary-text-l: darken( $color-secondary-text, $color-factor );
+$color-secondary-text-d: lighten( $color-secondary-text, $color-factor );
+
+// Tertiary Color:
+$color-tertiary: #87BA45;
+$color-tertiary-l: lighten( $color-tertiary, $color-factor );
+$color-tertiary-d: darken( $color-tertiary, $color-factor );
+
+// Tertiary Text Color:
+$color-tertiary-text: #E6E6E6;
+$color-tertiary-text-l: darken( $color-tertiary, $color-factor );
+$color-tertiary-text-d: lighten( $color-tertiary-l, $color-factor );
+
+// Form Fields Color
+$color-field: #F2F2F2;
+$color-field-text: #363636;
+$color-field-h: #E9E9E9;      // Field Hover
+$color-field-h-text: #363636;
+$color-field-f: #E1E1E1;      // Focused Field
+$color-field-f-text: #4F688E;
+$color-field-d: #CCCCCC;      // Disabled Field
+$color-field-d-text: #909090;
+$color-placeholder: #aaaaaa;  // Placeholder
+
+// Regular Buttons
+$color-btn: #E74343;
+$color-btn-text: #FFFFFF;
+$color-btn-h: #FF3636;    // Button Hover
+$color-btn-h-text: #FFFFFF;
+$color-btn-a: #b51717;    // Active Button
+$color-btn-a-text: #FFFFFF;
+$color-btn-d: gray;       // Disabled Button
+$color-btn-d-text: #363636;
+
+// Additional Colors
+$color-header: #363636;
+$color-header-text: #ffffff;
+$color-footer: #363636;
+$color-footer-text: #ffffff;
+
+$color-link: #298ccf; // Default color for all the links
+$color-link-h: #E74343; // Hover color for links
+
+// Standard Colors
+$color-white: #FFFFFF;
+$color-gray-l: #A5A5A5;
+$color-gray: #7F7F7F;
+$color-gray-d: #595959;
+$color-black: #000000;
+
+$color-blue: #3F62A0;
+$color-purple: #663096;
+
+$color-orange: #F3702E;
+$color-yellow: #FFD800;
+
+$color-red: #B42A1A;
+$color-pink: #FF9DAB;
+$color-magenta: #B200B2;
+
+$color-green: #87C442;
+$color-green-d: #56832A;
+
+// Highlighting Colors - errors, warnings and success
+$color-error: #E74343;
+$color-warning: #EF9300;
+$color-success: #A5D75A;
+
+// Social Network colors
+$color-social: #a5d75a; // Common for all social buttons
+
+$color-dropbox: #007EE5;
+$color-facebook: #3B5998;
+$color-flickr: #FF0084;
+$color-foursquare: #0072B1;
+$color-google: #DD4B39;
+$color-google-plus: #DD4B39;
+$color-instagram: #125688;
+$color-linkedin: #007BB6;
+$color-pintrest: #CB2027;
+$color-quora: #A82400;
+$color-snapchat: #FFFC00;
+$color-twitter: #00ACED;
+$color-tumblr: #32506D;
+$color-vimeo: #AAD450;
+$color-vine: #00BF8F;
+$color-vk: #45668E;
+$color-whatsapp: #43D854;
+$color-youtube: #BB0000;

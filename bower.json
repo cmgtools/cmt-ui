@@ -17,14 +17,12 @@
   ],
   "license": "GPLv3",
   "ignore": [
-    "**/.*",
     ".gitignore",
     "gruntfile.js",
     "package.json",
-    "README.md",
-    "test"
+    "examples"
   ],
-  "main": "dist/styles/cmgtools.css",
+  "main": "dist/css/cmgtools.css",
   "dependencies": {
   }
 }

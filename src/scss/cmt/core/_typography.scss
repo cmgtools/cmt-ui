@@ -1,0 +1,259 @@
+/**********************************************************************
+Description: The default text elements and font styles for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+
+// Default font for entire html document
+html, body {
+    font-family: $font-default;
+    line-height: 1;
+}
+
+// Base Font Size following mobile first approach. We have kept 3 font size as standard based on device range.
+html, body {
+    // 12px on tablet devices. A little smaller than tablet. It can be overriden by project css if there is a need to follow the de-facto standard.
+    font-size: 12px;
+
+    // 14px on tablet devices. A little smaller than desktop. It can be overriden by project css if there is a need to follow the de-facto standard.
+    @include responsive-min( screen-mobile-large ) {
+        font-size: 14px;
+    }
+
+    // 16px on desktop devices. 16px is the de-facto standard
+    @include responsive-min( screen-tablet-large ) {
+        font-size: 16px;
+    }
+}
+
+/** 
+ * Fonts - The font classes default, heading and code can be used for global headers and code font.
+ */
+
+.font {
+
+    &.font-default {
+        font-family: $font-default;
+    }
+
+    &.font-heading {
+        font-family: $font-heading;
+    }
+
+    &.font-code {
+        font-family: $font-code;
+    }
+}
+
+/**
+ * Font Size - The font size for headers h1 to h6, default and small.
+ */
+
+.font-size {
+
+    &.font-size-large-1 {
+        font-size: $font-size-1;
+    }
+
+    &.font-size-large-2 {
+        font-size: $font-size-2;
+    }
+
+    &.font-size-large-3 {
+        font-size: $font-size-3;
+    }
+
+    &.font-size-large-4 {
+        font-size: $font-size-4;
+    }
+
+    &.font-size-large-5 {
+        font-size: $font-size-5;
+    }
+
+    &.font-size-large-6 {
+        font-size: $font-size-6;
+    }
+
+    &.font-size-default {
+        font-size: $font-size-7;
+    }
+
+    &.font-size-small {
+        font-size: $font-size-8;
+    }
+
+    &.font-size-tiny {
+        font-size: $font-size-9;
+    }
+}
+
+// Headers
+
+h1, .h1 {
+    font-size: $font-size-1;
+}
+
+h2, .h2 {
+    font-size: $font-size-2;
+}
+
+h3, .h3 {
+    font-size: $font-size-3;
+}
+
+h4, .h4 {
+    font-size: $font-size-4;
+}
+
+h5, .h5 {
+    font-size: $font-size-5;
+}
+
+h6, .h6 {
+    font-size: $font-size-6;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
+    verticle-align: middle;
+    padding: 0.25em 0;
+    margin: 0.25em 0;
+    font-family: $font-heading;
+}
+
+// Text Elements
+
+p, span, em, div, a {
+    font-size: $font-size-7;  
+}
+
+// Content for reading purpose
+
+.reader {
+    font-size: $font-size-7;
+    line-height: 1.5em;
+}
+
+// Coding - Required to highlight code
+pre {
+    font-family: $font-code;
+    color: $color-gray-d;
+    background-color: $color-gray-l;
+}
+
+// Font Weight
+
+.bold {
+    font-weight: bold;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+// Text Style and Decoration
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+// Links
+
+a, .link {
+    color: $color-link;
+    
+    &:hover {
+        color: $color-link-h;
+    }
+}
+
+// Text Colors
+.text {
+    // default to primary text
+    color: $color-primary-text !important;
+
+    &.text-secondary {
+        color: $color-secondary-text !important;
+    }
+
+    &.text-tertiary {
+        color: $color-tertiary-text !important;
+    }
+
+    &.text-black {
+        color: $color-black !important;
+    }
+
+    &.text-gray {
+        color: $color-gray !important;
+    }
+
+    &.text-white {
+        color: $color-white !important;
+    }
+
+    &.text-blue {
+        color: $color-blue !important;
+    }
+
+    &.text-purple {
+        color: $color-purple !important;
+    }
+
+    &.text-orange {
+        color: $color-orange !important;
+    }
+
+    &.text-yellow {
+        color: $color-yellow !important;
+    }
+
+    &.text-red {
+        color: $color-red !important;
+    }
+
+    &.text-pink {
+        color: $color-pink !important;
+    }
+
+    &.text-magenta {
+        color: $color-magenta !important;
+    }
+
+    &.text-green {
+        color: $color-green !important;
+    }
+
+    &.text-green-d {
+        color: $color-green-d !important;
+    }
+}
+
+// Text at center with background line
+.text-with-line {
+    text-align: center; 
+    border-top: 1px solid $color-black;
+    margin: 1rem 0;
+
+    .text-content {
+        display: inline-block;
+        margin-top: -1.25em;
+        padding: 0 1rem;
+        background-color: $color-primary;
+    }
+}

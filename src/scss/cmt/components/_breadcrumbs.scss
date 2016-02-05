@@ -1,0 +1,16 @@
+/**********************************************************************
+Description: It defines the breadcrumbs available for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+
+.breadcrumb {
+    list-style: none;
+
+    li {
+        display: inline-block; 
+    }
+
+    a {
+        display: inline-block;      
+    }
+}

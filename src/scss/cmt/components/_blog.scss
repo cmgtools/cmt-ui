@@ -1,0 +1,395 @@
+/**********************************************************************
+Description: It defines the styles for the Blog Widgets of cms module for CMSGears following components approach.
+Dependencies: variables, mixins
+***********************************************************************/
+
+.blog-posts {
+
+    .post {
+        // single post used to show post details including banner, author and content
+
+        .post-banner {
+            // banner - it can be either background image or img
+
+            .post-title {
+                // post title - sometimes title goes with post banner
+            }
+        }
+
+        .post-title {
+            // post title - it can be independent from post content in several cases
+        }
+
+        .post-author {
+
+            .post-author-avatar {
+                // author avatar
+            }
+
+            .post-author-info {
+                // author details like name, publish time
+            }
+        }
+
+        .wrap-post-content {
+            // wrapper for post title, content and info
+
+            .post-title {
+                // post title
+            }
+
+            .post-info {
+                // post info like author name, publish time
+                // Sometimes post-author can be included within post-info at end of post content          
+            }
+
+            .post-content {
+                // post content
+            }
+        }
+    }
+}
+
+// It shows banner floated left and content flowing below banner. Author is next to banner with time details. Title is below author and than content flows.
+.blog-posts-basic {
+
+    .post {
+        margin-bottom: 1em;
+
+        // Banner with default padding. A default image can be used for banner with background fill. The fill helps for transparent logos.
+        .post-banner {
+            padding: 1em;
+
+            img {
+                width: 100%;
+
+                &.bkg-fill {
+                    background-color: $color-primary;
+                }
+            }
+        }
+
+        .post-author {
+            position: relative;
+
+            .post-author-avatar {
+                width: 80px;
+                height: 80px;
+
+                img {
+                    width: 100%;
+                }
+
+                &.circled1 {
+                    background-color: $color-primary;
+                }
+            }
+
+            .post-author-info {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: inline-block;
+            }
+        }
+
+        .post-content {
+            padding: 1em;
+
+            .post-title {
+                font-size: $font-size-5;
+            }
+        }
+
+        @include responsive-min( screen-tablet-small ) {
+    
+            .post-banner {
+                float: left;
+                width: 350px;
+            }
+
+            .post-author {
+                width: 100%;
+                padding-left: 350px;
+                position: relative;
+            }
+        }
+    }
+}
+
+// It shows banner, author avatar, and info in single row. Title in second row. Content in 3rd row and post info in 4th row.
+.blog-posts-regular {
+
+    .post {
+        margin-bottom: 1em;
+
+        // Banner with default padding. A default image can be used for banner with background fill. The fill helps for transparent logos.
+        .post-banner {
+            padding: 1em;
+
+            img {
+                width: 100%;
+
+                &.bkg-fill {
+                    background-color: $color-primary;
+                }
+            }
+        }
+
+        .post-author {
+            position: relative;
+
+            .post-author-avatar {
+                width: 80px;
+                height: 80px;
+
+                img {
+                    width: 100%;
+                }
+
+                &.circled1 {
+                    background-color: $color-primary;
+                }
+            }
+
+            .post-author-info {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: inline-block;
+            }
+        }
+
+        .post-content {
+            padding: 1em;
+
+            .post-title {
+                font-size: $font-size-5;
+            }
+        }
+
+        @include responsive-min( screen-tablet-small ) {
+    
+            .post-banner {
+                float: left;
+                width: 350px;
+            }
+
+            .post-author {
+                width: 100%;
+                padding-left: 350px;
+                position: relative;
+            }
+        }
+    }
+}
+
+// It shows banner in first row. An icon will be displayed if user hover on banner. Title in second row. Content in 3rd row and post info in 4th row.
+.blog-posts-banner {
+
+    .post {
+        margin-bottom: 1em;
+        background-color: $color-primary;
+        color: $color-primary-text;
+
+        // Banner with background image. A tecture can also be applied to it.
+        .post-banner {
+            position: relative;
+            height: 120px;
+            @include bkg-image;
+
+            .texture {
+                z-index: 5;
+            }
+
+            .post-view {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                z-index: 50;
+                visibility: hidden;
+                opacity: 0;
+                background-color: $color-transparent-black;
+                @include transit-visibility-opacity( $transit-eio, $transit-time-medium );
+            }
+
+            .post-view-content {
+                text-align: center;
+
+                .icon {
+                    color: $color-white;
+                }
+            }
+
+            &:hover {
+
+                .post-view {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .post-author {
+            position: relative;
+
+            span {
+                display: inline-block;
+            }
+
+            .post-author-avatar {
+                width: 40px;
+                height: 40px;
+
+                img {
+                    width: 100%;
+                }
+
+                &.circled1 {
+                    background-color: $color-primary;
+                }
+            }
+        }
+
+        .wrap-post-content {
+            padding: 1rem;
+            line-height: 1.5em;
+
+            .post-title {
+                margin: 0;
+
+                a {
+                    display: inline-block;
+                    width: 100%;
+                }
+            }
+
+            .post-info {
+                
+                .publish-time {
+                    text-align: center;
+                }
+            }
+
+            .post-content {
+                padding: 1rem 0;
+            }
+        }
+
+        @include responsive-min( screen-tablet-small ) {
+
+            .post-banner {
+                height: 180px;
+            }
+
+            .wrap-post-content {
+
+                .post-info {
+
+                    .publish-time {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        @include responsive-min( screen-tablet-large ) {
+
+            .post-banner {
+                height: 250px;
+            }
+        }
+    }
+}
+
+// Single Post
+.post-single {
+    // post
+
+    .post-banner {
+        // banner
+    }
+
+    .post-author {
+
+        .post-author-avatar {
+            // author avatar
+        }
+
+        .post-author-info {
+            // author details like name, time
+        }
+    }
+
+    .wrap-post-content {
+
+        .post-title {
+            // post title
+        }
+
+        .post-info {
+            // post info like time          
+        }
+
+        .post-content {
+            // post content   
+        }
+    }
+}
+
+// Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
+.post-single-basic {
+    padding: 1em;
+    background-color: $color-primary-l;
+
+    .post-banner {
+        height: 150px;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    .post-author {
+        position: relative;
+
+        .post-author-avatar {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+
+            img {
+                width: 100%;
+            }
+
+            &.circled1 {
+                background-color: $color-primary;
+            }
+        }
+
+        .post-author-info {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+        }
+    }
+    
+    .post-content {
+        margin-bottom: 1em;
+    }
+
+    @include responsive-min( screen-mobile-large ) {
+
+        .post-banner {
+            height: 250px;
+        }
+    }
+
+    @include responsive-min( screen-tablet-large ) {
+
+        .post-banner {
+            height: 350px;
+        }
+    }
+}

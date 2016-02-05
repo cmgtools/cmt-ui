@@ -1,0 +1,223 @@
+/**********************************************************************
+Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com) 
+and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css 
+for CMGTools.
+Dependencies: variables
+***********************************************************************/
+
+// == From Eric Meyer == 
+
+// Normalising the margin, padding, border, font-size
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, 
+address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, 
+th, td, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
+  	margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+    background: transparent;
+}
+
+// Default font
+html {
+    overflow-y: scroll;
+}
+
+code, kbd, pre, samp {
+    font-family: $font-code;
+    font-size: 1em;
+}
+
+// Display fix
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+// List Style - we can specify list style where required.
+ol, ul {
+    list-style: none;
+}
+
+// Quotes fix
+
+blockquote, q {
+    quotes: none;
+    margin: 1em 40px;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    quotes: none;
+    content: '';
+    content: none;
+}
+
+// Table Border
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width:100%;
+}
+
+// == Collected from other sources ==
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 2.1 and 3 */
+    word-wrap: break-word; /* IE */
+}
+
+hr {
+  	display: block;
+    height: 0;
+    padding: 0;
+  	margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0;
+    border: none;
+    @include border-bottom( $size-default, solid, $color-secondary );
+}
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not( [controls] ) {
+    display: none;
+    height: 0;
+}
+
+svg:not( :root ) {
+    overflow: hidden;
+}
+
+fieldset {
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+small {
+    font-size: 85%;
+}
+
+strong {
+    font-weight: bold;
+}
+
+// sub and sup fixes
+
+sub, sup {
+  	font-size: 75%; 
+  	line-height: 0; 
+  	position: relative;
+  	vertical-align: middle;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+// fix space issue
+
+abbr[ title ], dfn[ title ] {
+    border-bottom: 1px dotted #000; 
+    cursor: help;
+}
+
+[ hidden ] {
+    display: none;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/* Basic nav for ul and ol. */
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+// Form Reset
+
+.clickable, button, input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    width: auto; 
+    overflow: visible;
+}
+
+button[disabled], input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+// Anchor Fix
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $color-link;
+}
+
+a:focus {
+    outline: none;
+}
+
+a:active, a:hover {
+    outline: 0;
+}

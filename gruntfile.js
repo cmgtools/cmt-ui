@@ -2,6 +2,7 @@ module.exports = function( grunt ) {
 
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
+	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 
     grunt.initConfig({
         pkg: grunt.file.readJSON( 'package.json' ),
@@ -12,7 +13,7 @@ module.exports = function( grunt ) {
 	        },
 	        dist: {
 	            files: {
-	                'dist/styles/cmgtools.css': 'scss/cmgtools.scss'
+	                'dist/css/cmgtools.css': 'src/scss/cmgtools.scss'
 	            }
 	        }
 	   },
@@ -22,11 +23,19 @@ module.exports = function( grunt ) {
 			},
       		target: {
 	        	files: {
-	          		'dist/styles/cmgtools.min.css': [ 'dist/styles/cmgtools.css' ]
+	          		'dist/css/cmgtools.min.css': [ 'dist/css/cmgtools.css' ]
 	        	}
       		}
-    	}
+    	},
+		copy: {
+			main: {
+				files: [
+					{ expand: true, cwd: 'src/scss/cmt/', src: ['**'], dest: 'dist/scss/', filter: 'isFile' },
+					{ expand: true, cwd: 'dist/css/', src: ['*.css'], dest: 'examples/styles/', filter: 'isFile' }
+				]
+			}
+		}
     });
 
-    grunt.registerTask( 'default', [ 'sass', 'cssmin' ] );
+    grunt.registerTask( 'default', [ 'sass', 'cssmin', 'copy' ] );
 };
