@@ -162,6 +162,14 @@ input[type="submit"], input[type="button"], button {
 // We have two options to use the 40-60 concept i.e. either using frm-split-40-60 or using element-40 and element-60.
 // For both the options, the left side element clears the floating and parent must use clearfix to derive it's height from form elements.
 
+.frm-split-40-60 {
+
+    // fix for yii forms
+    .form-group {
+        @extend %clearfix;
+    }
+}
+
 .frm-split-40-60 label, .element-40 {
     clear: both;
     width: 40%;

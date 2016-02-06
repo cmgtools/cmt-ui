@@ -402,6 +402,17 @@ html, body {
     display: inline !important;
 }
 
+.disabled {
+    background-color: $color-gray !important;
+    color: $color-white !important;
+    cursor: default !important;
+
+    &:hover {
+        background-color: $color-gray !important;
+        color: $color-white !important;
+    }
+}
+
 // Visibility - Without own space
 
 .visible {

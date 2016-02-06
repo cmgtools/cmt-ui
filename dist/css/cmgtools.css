@@ -8,14 +8,14 @@
 Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
 Dependencies: variables
 ***********************************************************************/
-.clearfix, .sidebar-standard .title {
+.clearfix, .frm-split-40-60 .form-group, .sidebar-standard .title {
   zoom: 1; }
-  .clearfix:before, .sidebar-standard .title:before, .clearfix:after, .sidebar-standard .title:after {
+  .clearfix:before, .frm-split-40-60 .form-group:before, .sidebar-standard .title:before, .clearfix:after, .frm-split-40-60 .form-group:after, .sidebar-standard .title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .sidebar-standard .title:after {
+  .clearfix:after, .frm-split-40-60 .form-group:after, .sidebar-standard .title:after {
     clear: both; }
 
 .texture, .pattern {
@@ -1066,6 +1066,14 @@ html, body {
 .inline {
   display: inline !important; }
 
+.disabled {
+  background-color: #7F7F7F !important;
+  color: #FFFFFF !important;
+  cursor: default !important; }
+  .disabled:hover {
+    background-color: #7F7F7F !important;
+    color: #FFFFFF !important; }
+
 .visible {
   display: block !important; }
 
@@ -2045,6 +2053,46 @@ td {
 Description: The custom elements for CMGTools.
 Dependencies: variables, mixins, transitions, transformation
 ***********************************************************************/
+.wrap-icon-picker {
+  width: 100%; }
+  .wrap-icon-picker .icon-picker {
+    position: relative;
+    display: inline-block; }
+    .wrap-icon-picker .icon-picker .wrap-icon {
+      display: inline-block;
+      position: relative;
+      width: 64px;
+      height: 64px;
+      text-align: center;
+      cursor: pointer;
+      background-color: #3C4655;
+      color: #96B0D6;
+      -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+      -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+      -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+      -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+      transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+      .wrap-icon-picker .icon-picker .wrap-icon:hover {
+        background-color: #E74343;
+        color: #FFFFFF; }
+      .wrap-icon-picker .icon-picker .wrap-icon .picker-icon {
+        display: inline-block;
+        height: 64px;
+        line-height: 64px;
+        font-size: 48px; }
+    .wrap-icon-picker .icon-picker .icon-sets {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 64px;
+      width: 254px;
+      padding: 5px;
+      height: 216px;
+      background-color: #cccccc;
+      z-index: 1000000; }
+      .wrap-icon-picker .icon-picker .icon-sets .wrap-icon {
+        margin: 2px; }
+
 .cmt-select-wrap {
   margin: 0.25em 0;
   width: 100%; }

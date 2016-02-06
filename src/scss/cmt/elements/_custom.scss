@@ -3,6 +3,56 @@ Description: The custom elements for CMGTools.
 Dependencies: variables, mixins, transitions, transformation
 ***********************************************************************/
 
+// Icon Picker
+.wrap-icon-picker {
+    width: 100%;
+
+    .icon-picker {
+        position: relative;
+        display: inline-block;
+
+        .wrap-icon {
+            display: inline-block;
+            position: relative;
+            width: 64px;
+            height: 64px;
+            text-align: center;
+            cursor: pointer;
+            background-color: $color-secondary;
+            color: $color-secondary-text;
+            @include transit-color-bkg-color( $transit-eio, $transit-time-small );
+    
+            &:hover {
+                background-color: $color-btn;
+                color: $color-btn-text;
+            }
+
+            .picker-icon {
+                display: inline-block;
+                height: 64px;
+                line-height: 64px;
+                font-size: 48px;
+            }
+        }
+
+        .icon-sets {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 64px;
+            width: 254px;
+            padding: 5px;
+            height: 216px;
+            background-color: $color-primary-d;
+            z-index: 1000000;
+    
+            .wrap-icon {
+                margin: 2px;
+            }
+        }
+    }
+}
+
 // Custom Select
 .cmt-select-wrap {
     margin: 0.25em 0;
