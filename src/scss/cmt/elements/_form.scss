@@ -176,6 +176,11 @@ input[type="submit"], input[type="button"], button {
     float: left;
 }
 
+.required .control-label:after {
+    content: " *";
+    color: $color-red;
+}
+
 .element-40 label {
     width: 100%;
 }
