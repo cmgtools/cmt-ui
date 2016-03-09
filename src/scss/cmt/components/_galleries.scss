@@ -234,53 +234,53 @@
 */
 
 .gallery-basic {
-    width:80%;
-    margin:0 10%;
-            
+    width: 80%;
+    margin: 0 10%;
+
     .header {
         background-color: #1E2328;
         color: #E6E6E6;
-        float:left;
-        width:30%;
-        padding:2em;
-        overflow:hidden;
+        float: left;
+        width: 30%;
+        padding: 2em;
+        overflow: hidden;
     }
-    
+
     .items {
         float: left;
         width: 70%;
-    } // items   
+    } // items  
 
     @include responsive-max( screen-tablet-large ) {
 
-          width:90%;
-          margin:0 5%;
-            
+          width: 90%;
+          margin: 0 5%;
+
           .header, .items {
-              width:100%;
-              margin-bottom:1em;
+              width: 100%;
+              margin-bottom: 1em;
           }
-          
+
           .colf3 {
-              width:33.3333%;
-          }                     
+              width: 33.3333%;
+          }
     }
 
     @include responsive-max( screen-tablet-small ) {
-                                   
+
         .colf3 {
-            width:50%;
+            width: 50%;
         }
     }
 
     @include responsive-max( screen-mobile-large ) {
  
         .colf3 {
-            width:100%;
-            
+            width: 100%;
+
             .flip-container {
-                padding:0 0 8px;
+                padding: 0 0 8px;
             }
-        }          
+        }
     }
 }
