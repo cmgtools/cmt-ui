@@ -47,7 +47,8 @@ $size-medium: 5px;
 $size-large: 10px;
 $size-xlarge: 14px;
 
-// Size in rem, mostly useful for padding
+// Size in rem, mostly useful for standard padding, margin
+$size-default-rem: 0.25rem;
 $size-small-rem: 0.5rem;
 $size-medium-rem: 1rem;
 $size-large-rem: 1.5rem;
@@ -55,7 +56,8 @@ $size-xlarge-rem: 2rem;
 
 // Color Factor - We can use it using lighten/darken methods - ex: $color-primary-l: lighten( $color-primary, $color-factor )
 $color-factor: 15%;
-$color-transparency-low: 0.25;
+$color-transparency-default: 0.15;
+$color-transparency-low: 0.20;
 $color-transparency-medium: 0.50;
 $color-transparency-high: 0.75;
 

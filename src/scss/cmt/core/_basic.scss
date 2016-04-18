@@ -4,7 +4,7 @@ Dependencies: variables
 ***********************************************************************/
 
 /**
- * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive. 
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive.
  * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
  */
 
@@ -45,10 +45,10 @@ Dependencies: variables
 }
 
 /**
- * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in 
- * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating 
+ * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
+ * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
  * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
- */ 
+ */
 
 .color {
     // default to primary
@@ -190,7 +190,7 @@ Dependencies: variables
 }
 
 /**
- * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and
  * padding. The remaining space deducting border and padding from given width will be used by element content.
  */
 
@@ -206,7 +206,7 @@ html {
           box-sizing: inherit;
 }
 
-/** 
+/**
  * The primary color will be used as default color for document body and text.
  */
 
@@ -221,7 +221,7 @@ html, body {
     margin: 0 !important;
 }
 
-.padding-none {    
+.padding-none {
     padding: 0 !important;
 }
 
@@ -230,15 +230,15 @@ html, body {
     padding: 0 !important;
 }
 
-/** 
+/**
  * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
  */
 
 #pre-loader-main {
-    display: block;  
+    display: block;
 }
 
-/** 
+/**
  * Floating Blocks - These classes can be used to clear or float the elements.
  */
 
@@ -263,7 +263,7 @@ html, body {
     margin: 0 auto;
 }
 
-/** 
+/**
  * Pre-defined width and height, handy at few places.
  */
 
@@ -275,15 +275,15 @@ html, body {
     &.width-auto {
         width: auto;
     }
-    
+
     &.width-25 {
         width: 25%;
     }
-    
+
     &.width-50 {
         width: 50%;
     }
-    
+
     &.width-75 {
         width: 75%;
     }
@@ -301,21 +301,21 @@ html, body {
     &.height-auto {
         height: auto;
     }
-    
+
     &.height-25 {
         height: 25%;
     }
-    
+
     &.height-50 {
         height: 50%;
     }
-    
+
     &.height-75 {
         height: 75%;
     }
 }
 
-/** 
+/**
  * Alignments for centered box and text.
  */
 
@@ -335,7 +335,7 @@ html, body {
     }
 }
 
-/** 
+/**
  * Height fillers to seperate boxes.
  */
 
@@ -353,12 +353,23 @@ html, body {
     &.filler-height-large {
         height: 2.5em;
     }
+
+    &.filler-height-xlarge {
+        height: 3em;
+    }
 }
 
 // Positioning
 .absolute {
     position: absolute !important;
-    
+
+    &.absolute-center {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     &.absolute-top-left {
         top: 0px;
         left: 0px;
@@ -391,7 +402,7 @@ html, body {
 // Display Type
 
 .block {
-    display: block !important;  
+    display: block !important;
 }
 
 .inline-block {
@@ -411,6 +422,11 @@ html, body {
         background-color: $color-gray !important;
         color: $color-white !important;
     }
+}
+
+// Cursors
+.pointer {
+    cursor: pointer;
 }
 
 // Visibility - Without own space

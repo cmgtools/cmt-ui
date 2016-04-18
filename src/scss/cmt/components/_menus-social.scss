@@ -20,6 +20,7 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
     // Social Icons
     .cmti {
         margin: 0.25rem 0.5rem;
+        padding: 0.25rem;
     }
 
     // Social Icons with background color
@@ -76,7 +77,7 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
         &.cmti-social-google-plus {
             color: $color-google-plus;
         }
-     
+
         &.cmti-social-linkedin {
             color: $color-linkedin;
         }
@@ -97,7 +98,7 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
             color: $color-btn;
         }
     }
-    
+
     // For Buttons
     .btn {
         color: $color-white !important;

@@ -25,8 +25,8 @@ html, body {
     }
 }
 
-/** 
- * Fonts - The font classes default, heading and code can be used for global headers and code font.
+/**
+ * Standard Fonts - The font classes default, heading and code can be used for global headers and code font.
  */
 
 .font {
@@ -45,7 +45,7 @@ html, body {
 }
 
 /**
- * Font Size - The font size for headers h1 to h6, default and small.
+ * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
 
 .font-size {
@@ -87,6 +87,27 @@ html, body {
     }
 }
 
+// Standard Line Height
+.line-height {
+    line-height: 1em;
+
+    &.line-height-small {
+        line-height: 1.5em;
+    }
+
+    &.line-height-medium {
+        line-height: 2em;
+    }
+
+    &.line-height-large {
+        line-height: 2.5em;
+    }
+
+    &.line-height-xlarge {
+        line-height: 3em;
+    }
+}
+
 // Headers
 
 h1, .h1 {
@@ -123,7 +144,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
 // Text Elements
 
 p, span, em, div, a {
-    font-size: $font-size-7;  
+    font-size: $font-size-7;
 }
 
 // Content for reading purpose
@@ -176,7 +197,7 @@ pre {
 
 a, .link {
     color: $color-link;
-    
+
     &:hover {
         color: $color-link-h;
     }
@@ -246,7 +267,7 @@ a, .link {
 
 // Text at center with background line
 .text-with-line {
-    text-align: center; 
+    text-align: center;
     border-top: 1px solid $color-black;
     margin: 1rem 0;
 

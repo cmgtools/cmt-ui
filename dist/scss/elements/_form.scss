@@ -113,17 +113,17 @@ form {
 
     &:hover {
         background-color: $color-btn-h;
-        color: $color-btn-h-text;        
+        color: $color-btn-h-text;
     }
 
     &:active {
         background-color: $color-btn-a;
-        color: $color-btn-a-text;     
+        color: $color-btn-a-text;
     }
 
     &:disabled {
         background-color: $color-btn-d;
-        color: $color-btn-d-text;     
+        color: $color-btn-d-text;
     }
 }
 
@@ -203,22 +203,22 @@ input[type="submit"], input[type="button"], button {
       @include rounded( $size-medium );
 }
 
-.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"], 
+.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
 .frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button {
       @include rounded-top( $size-medium );
 }
 
-.frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"], 
+.frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
 .frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button {
       @include rounded-right( $size-medium );
 }
 
-.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"], 
+.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
 .frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button {
       @include rounded-bottom( $size-medium );
 }
 
-.frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"], 
+.frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
 .frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button {
       @include rounded-left( $size-medium );
 }
@@ -273,6 +273,18 @@ input[type="submit"], input[type="button"], button {
         line-height: 1.25;
         margin: 0.25em 0;
         padding: 0.25em;
+    }
+
+    &.reverse {
+
+        input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
+            padding-left: 0.25em;
+            padding-right: 1.75em;
+        }
+
+        .icon, .cmti {
+            right: 0;
+        }
     }
 }
 

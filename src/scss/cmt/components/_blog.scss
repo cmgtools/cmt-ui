@@ -40,7 +40,7 @@ Dependencies: variables, mixins
 
             .post-info {
                 // post info like author name, publish time
-                // Sometimes post-author can be included within post-info at end of post content          
+                // Sometimes post-author can be included within post-info at end of post content
             }
 
             .post-content {
@@ -102,7 +102,7 @@ Dependencies: variables, mixins
         }
 
         @include responsive-min( screen-tablet-small ) {
-    
+
             .post-banner {
                 float: left;
                 width: 350px;
@@ -169,7 +169,7 @@ Dependencies: variables, mixins
         }
 
         @include responsive-min( screen-tablet-small ) {
-    
+
             .post-banner {
                 float: left;
                 width: 350px;
@@ -265,7 +265,7 @@ Dependencies: variables, mixins
             }
 
             .post-info {
-                
+
                 .publish-time {
                     text-align: center;
                 }
@@ -328,11 +328,11 @@ Dependencies: variables, mixins
         }
 
         .post-info {
-            // post info like time          
+            // post info like time
         }
 
         .post-content {
-            // post content   
+            // post content
         }
     }
 }
@@ -344,7 +344,7 @@ Dependencies: variables, mixins
 
     .post-banner {
         height: 150px;
-        
+
         img {
             width: 100%;
         }
@@ -374,7 +374,7 @@ Dependencies: variables, mixins
             display: inline-block;
         }
     }
-    
+
     .post-content {
         margin-bottom: 1em;
     }
@@ -382,14 +382,14 @@ Dependencies: variables, mixins
     @include responsive-min( screen-mobile-large ) {
 
         .post-banner {
-            height: 250px;
+            height: 200px;
         }
     }
 
     @include responsive-min( screen-tablet-large ) {
 
         .post-banner {
-            height: 350px;
+            height: 250px;
         }
     }
 }

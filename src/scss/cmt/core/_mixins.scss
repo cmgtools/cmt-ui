@@ -8,9 +8,9 @@ Dependencies: variables
     zoom: 1;
 
     &:before, &:after {
-        content: "\0020"; 
-        display: block; 
-        height: 0; 
+        content: "\0020";
+        display: block;
+        height: 0;
         overflow: hidden;
     }
 
@@ -116,8 +116,8 @@ Dependencies: variables
     width: $width;
     height: $height;
     background: $bkg-color;
-    -moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 
@@ -127,8 +127,8 @@ Dependencies: variables
     height:0;
     background-color: $bkg-color;
     padding-bottom: $pad;
-    -moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 
@@ -143,8 +143,8 @@ Dependencies: variables
         content: "";
         display: block;
         padding-bottom: $pad1;
-        -moz-border-radius: $radius; 
-        -webkit-border-radius: $radius; 
+        -moz-border-radius: $radius;
+        -webkit-border-radius: $radius;
         border-radius: $radius;
     }
 
@@ -224,13 +224,13 @@ Dependencies: variables
 }
 
 @mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle ) {
-  
+
     background: $start;
     background: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
     background: -webkit-linear-gradient($angle, $start $startPos, $end $endPos);
     background: -o-linear-gradient($angle, $start $startPos, $end $endPos);
     background: -ms-linear-gradient($angle, $start $startPos, $end $endPos);
-    
+
     background: linear-gradient($linearAngle, $start $startPos, $end $endPos);
 }
 
@@ -285,9 +285,9 @@ Dependencies: variables
       background-color: rgba( $r, $g, $b, $alpha );
 }
 
-// Max Area Cover - The element overlays(cover) all other child elements of it's parent unless the other child got greater z-index. 
+// Max Area Cover - The element overlays(cover) all other child elements of it's parent unless the other child got greater z-index.
 // Initially it's set to hidden and can be made visible when required. most useful example is
-// having a full cover pre-loader with spinner on top of all other elements. 
+// having a full cover pre-loader with spinner on top of all other elements.
 @mixin max-area-cover {
     @include max-area-transparent;
     text-align: center;
@@ -359,16 +359,16 @@ Dependencies: variables
     position: relative;
     top: -50%;
     left: -50%;
-    width: 200%; 
+    width: 200%;
     height: 200%;
 
     img {
-        position: absolute; 
+        position: absolute;
         top: 0;
-        left: 0; 
-        right: 0; 
-        bottom: 0; 
-        margin: auto; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
         min-width: 50%;
         min-height: 50%;
     }
@@ -390,7 +390,7 @@ Dependencies: variables
     -webkit-filter: blur($value);
     -moz-filter: blur($value);
     -o-filter: blur($value);
-    -ms-filter: blur($value);  
+    -ms-filter: blur($value);
 }
 
 // Mixins Default implementation ***********************
@@ -443,47 +443,47 @@ Dependencies: variables
 // Round Corners
 
 .rounded {
-    @include rounded( $size-default );  
+    @include rounded( $size-default );
 }
 
 .rounded-medium {
-    @include rounded( $size-medium );  
+    @include rounded( $size-medium );
 }
 
 .rounded-large {
-    @include rounded( $size-large );  
+    @include rounded( $size-large );
 }
 
 .rounded-top {
-    @include rounded-top( $size-default );  
+    @include rounded-top( $size-default );
 }
 
 .rounded-right {
-    @include rounded-right( $size-default );  
+    @include rounded-right( $size-default );
 }
 
 .rounded-bottom {
-    @include rounded-bottom( $size-default );  
+    @include rounded-bottom( $size-default );
 }
 
 .rounded-left {
-    @include rounded-left( $size-default );  
+    @include rounded-left( $size-default );
 }
 
 .rounded-top-left {
-    @include rounded-top-left( $size-default );  
+    @include rounded-top-left( $size-default );
 }
 
 .rounded-top-right {
-    @include rounded-top-right( $size-default );  
+    @include rounded-top-right( $size-default );
 }
 
 .rounded-bottom-left {
-    @include rounded-bottom-left( $size-default );  
+    @include rounded-bottom-left( $size-default );
 }
 
 .rounded-bottom-right {
-    @include rounded-bottom-right( $size-default );  
+    @include rounded-bottom-right( $size-default );
 }
 
 // Circled
@@ -578,13 +578,13 @@ Dependencies: variables
 }
 
 .child-center {
-    @include vh-align-child-center;  
+    @include vh-align-child-center;
 }
 
 // Max Area
 
 .max-area {
-    @include max-area;  
+    @include max-area;
 }
 
 .max-area-transparent {
@@ -605,7 +605,7 @@ Dependencies: variables
 // Backgrounds
 
 .bkg-tile {
-    @include bkg-tile;  
+    @include bkg-tile;
 }
 
 .bkg-image {
@@ -629,74 +629,71 @@ Dependencies: variables
 }
 
 .bkg-img {
-    @include bkg-img;  
+    @include bkg-img;
 }
 
 // Default Texture
 
 .texture {
     @extend %textures;
-
-    &.texture-default {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
-    }
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
 
     &.texture-bar-s {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC');
     }
-    
+
     &.texture-bar-m {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAAHHBk5tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDIAAJIVDGz9cSP7AAAAAElFTkSuQmCC');
     }
-    
+
     &.texture-bar-l {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAAHaA37VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMEEwMjQzNTdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMEEwMjQzNjdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwQTAyNDMzN0U0NzExRTU5MDY4RUFDMzhGMEREQzY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwQTAyNDM0N0U0NzExRTU5MDY4RUFDMzhGMEREQzY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mZqYcQAAADJJREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDJAUYUMAA2TD2qNBZ0eAAAAAElFTkSuQmCC');
-    }  
-        
+    }
+
     &.texture-grid-w {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//vy9AADGACIAAYgSzgAAggOAMJgYoAAgguAgMMDGgAYAAIqyCsABAgIFdAcQ4aUwdBI0kVQEAViAs7e1rqlEAAAAASUVORK5CYII=');
     }
-    
+
     &.texture-grid-b {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYGBX/P//HyeNqYOgkaQqAAAXoxjjLGdo/wAAAABJRU5ErkJggg==');
     }
-       
+
     &.texture-grain-w {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi+P//fwxAADGACIAAYgSzgAAggMA8JhADIIAQQkAAEEAgDozNwMSABFA4AAGGogynKqIkAGovFsbm0NI0AAAAAElFTkSuQmCC');
     }
-    
+
     &.texture-grain-w-l {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi+P//fwxAADGACIAAYgSzgAAggEAMEM3AxAAFAAEEF4EBJgY0ABBAYBNAqmA0Vi0xUHYMVkMBAgzuACBYgqwSxsfQgQ5gdsQgiaHwCZoAAAFwL9t1tvLGAAAAAElFTkSuQmCC');
     }
-    
+
     &.texture-grain-b {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
     }
-    
+
     &.texture-grain-b-l {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIMb///+DaAYmBigACCC4CAwwMaABgAACmwBSBaMxtBBWARBgcAccPXo4HURbW9ui8DHNRAOUmwAAwWk26e28KNgAAAAASUVORK5CYII=');
     }
-    
+
     &.texture-diagonal-w {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpi+P//fwxAADEACQaAAGIEEUAQAxBAYB4TiAkQQGAWSAGIBgggFA5MMVxDDFSWASDAUJSh68cQRNaBoQAAHDFj9Tn4HhEAAAAASUVORK5CYII=');
     }
-    
+
     &.texture-diagonal-w-r {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwNAADGACIAAYgSzGBhiAAIIxIsBCwEEEJgFYoAwQADB5OFq4LIoygACDEUGXRVWSayqQRgATKlm8CR0i1QAAAAASUVORK5CYII=');
     }
-    
+
     &.texture-diagonal-b {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpi+P//PwNAADGACIAAYrCysikGMQACCMxgBLEAAggsDsIgEYAAQuXAFMOVwQQAAgxFBkMVuiDcYGy6AIpfVV7EbepaAAAAAElFTkSuQmCC');
     }
-    
+
     &.texture-diagonal-b-r {
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg==');
     }
 }
 
 .blur {
-    @include blur( $size-default );
     transform: scale(1.1);
+    @include blur( $size-default );
 
     &.blur-small {
         @include blur( $size-small );
@@ -717,10 +714,7 @@ Dependencies: variables
 
 .pattern {
     @extend %textures;
-
-    .pattern-default {
-        background-image: url( $images-path + "pattern-default.jpg" );
-    }
+    background-image: url( $images-path + "pattern-default.jpg" );
 }
 
 // Media Queries **************************************
@@ -728,58 +722,58 @@ Dependencies: variables
 // Current and Lower
 
 @mixin responsive( $width ) {
-  
+
     @if $width == screen-mobile-small {
-  
+
         @media only screen and ( min-width: $screen-mobile-small ) {
             @content;
         }
     }
-  
+
     @else if $width == screen-mobile-large {
-  
+
         @media only screen and ( min-width: $screen-mobile-small + 1 ) and ( max-width: $screen-mobile-large ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-tablet-small {
-  
+
         @media only screen and ( min-width: $screen-mobile-large + 1 ) and ( max-width: $screen-tablet-small ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-tablet-large {
-  
+
         @media only screen and ( min-width: $screen-tablet-small + 1 ) and ( max-width: $screen-tablet-large ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-small {
-  
+
         @media only screen and ( min-width: $screen-tablet-large + 1 ) and ( max-width: $screen-desktop-small ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-medium {
-  
+
         @media only screen and ( min-width: $screen-desktop-small + 1 ) and ( max-width: $screen-desktop-medium ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-large {
-  
+
         @media only screen and ( min-width: $screen-desktop-medium + 1 ) and ( max-width: $screen-desktop-large ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-xlarge {
-  
+
         @media only screen and ( min-width: $screen-desktop-large + 1 ) and ( max-width: $screen-desktop-xlarge ) {
             @content;
         }
@@ -789,58 +783,58 @@ Dependencies: variables
 // Desktop First
 
 @mixin responsive-max( $width ) {
-  
+
     @if $width == screen-mobile-small {
-  
+
         @media only screen and ( max-width: $screen-mobile-small ) {
             @content;
         }
     }
-  
+
     @else if $width == screen-mobile-large {
-  
+
         @media only screen and ( max-width: $screen-mobile-large ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-tablet-small {
-  
+
         @media only screen and ( max-width: $screen-tablet-small ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-tablet-large {
-  
+
         @media only screen and ( max-width: $screen-tablet-large ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-small {
-  
+
         @media only screen and ( max-width: $screen-desktop-small ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-medium {
-  
+
         @media only screen and ( max-width: $screen-desktop-medium ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-large {
-  
+
         @media only screen and ( max-width: $screen-desktop-large ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-xlarge {
-  
+
         @media only screen and ( max-width: $screen-desktop-xlarge ) {
             @content;
         }
@@ -850,58 +844,58 @@ Dependencies: variables
 // Mobile First
 
 @mixin responsive-min( $width ) {
-  
+
     @if $width == screen-mobile-small {
-  
+
         @media only screen and ( min-width: $screen-mobile-small + 1 ) {
             @content;
         }
     }
-  
+
     @else if $width == screen-mobile-large {
-  
+
         @media only screen and ( min-width: $screen-mobile-large + 1 ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-tablet-small {
-  
+
         @media only screen and ( min-width: $screen-tablet-small + 1 ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-tablet-large {
-  
+
         @media only screen and ( min-width: $screen-tablet-large + 1 ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-small {
-  
+
         @media only screen and ( min-width: $screen-desktop-small + 1 ) {
            @content;
         }
     }
-    
+
     @else if $width == screen-desktop-medium {
-  
+
         @media only screen and ( min-width: $screen-desktop-medium + 1 ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-large {
-  
+
         @media only screen and ( min-width: $screen-desktop-large + 1 ) {
             @content;
         }
     }
-    
+
     @else if $width == screen-desktop-xlarge {
-  
+
         @media only screen and ( min-width: $screen-desktop-xlarge + 1 ) {
             @content;
         }

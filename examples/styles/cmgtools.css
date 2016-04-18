@@ -366,55 +366,42 @@ Dependencies: variables
     min-width: 50%;
     min-height: 50%; }
 
-.texture.texture-default {
+.texture {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC"); }
-
-.texture.texture-bar-s {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC"); }
-
-.texture.texture-bar-m {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAAHHBk5tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDIAAJIVDGz9cSP7AAAAAElFTkSuQmCC"); }
-
-.texture.texture-bar-l {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAAHaA37VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMEEwMjQzNTdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMEEwMjQzNjdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwQTAyNDMzN0U0NzExRTU5MDY4RUFDMzhGMEREQzY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwQTAyNDM0N0U0NzExRTU5MDY4RUFDMzhGMEREQzY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mZqYcQAAADJJREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDJAUYUMAA2TD2qNBZ0eAAAAAElFTkSuQmCC"); }
-
-.texture.texture-grid-w {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//vy9AADGACIAAYgSzgAAggOAMJgYoAAgguAgMMDGgAYAAIqyCsABAgIFdAcQ4aUwdBI0kVQEAViAs7e1rqlEAAAAASUVORK5CYII="); }
-
-.texture.texture-grid-b {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYGBX/P//HyeNqYOgkaQqAAAXoxjjLGdo/wAAAABJRU5ErkJggg=="); }
-
-.texture.texture-grain-w {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi+P//fwxAADGACIAAYgSzgAAggMA8JhADIIAQQkAAEEAgDozNwMSABFA4AAGGogynKqIkAGovFsbm0NI0AAAAAElFTkSuQmCC"); }
-
-.texture.texture-grain-w-l {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi+P//fwxAADGACIAAYgSzgAAggEAMEM3AxAAFAAEEF4EBJgY0ABBAYBNAqmA0Vi0xUHYMVkMBAgzuACBYgqwSxsfQgQ5gdsQgiaHwCZoAAAFwL9t1tvLGAAAAAElFTkSuQmCC"); }
-
-.texture.texture-grain-b {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC"); }
-
-.texture.texture-grain-b-l {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIMb///+DaAYmBigACCC4CAwwMaABgAACmwBSBaMxtBBWARBgcAccPXo4HURbW9ui8DHNRAOUmwAAwWk26e28KNgAAAAASUVORK5CYII="); }
-
-.texture.texture-diagonal-w {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpi+P//fwxAADEACQaAAGIEEUAQAxBAYB4TiAkQQGAWSAGIBgggFA5MMVxDDFSWASDAUJSh68cQRNaBoQAAHDFj9Tn4HhEAAAAASUVORK5CYII="); }
-
-.texture.texture-diagonal-w-r {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwNAADGACIAAYgSzGBhiAAIIxIsBCwEEEJgFYoAwQADB5OFq4LIoygACDEUGXRVWSayqQRgATKlm8CR0i1QAAAAASUVORK5CYII="); }
-
-.texture.texture-diagonal-b {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpi+P//PwNAADGACIAAYrCysikGMQACCMxgBLEAAggsDsIgEYAAQuXAFMOVwQQAAgxFBkMVuiDcYGy6AIpfVV7EbepaAAAAAElFTkSuQmCC"); }
-
-.texture.texture-diagonal-b-r {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg=="); }
+  .texture.texture-bar-s {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC"); }
+  .texture.texture-bar-m {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAAHHBk5tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDIAAJIVDGz9cSP7AAAAAElFTkSuQmCC"); }
+  .texture.texture-bar-l {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAAHaA37VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMEEwMjQzNTdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMEEwMjQzNjdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwQTAyNDMzN0U0NzExRTU5MDY4RUFDMzhGMEREQzY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwQTAyNDM0N0U0NzExRTU5MDY4RUFDMzhGMEREQzY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mZqYcQAAADJJREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDJAUYUMAA2TD2qNBZ0eAAAAAElFTkSuQmCC"); }
+  .texture.texture-grid-w {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//vy9AADGACIAAYgSzgAAggOAMJgYoAAgguAgMMDGgAYAAIqyCsABAgIFdAcQ4aUwdBI0kVQEAViAs7e1rqlEAAAAASUVORK5CYII="); }
+  .texture.texture-grid-b {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYGBX/P//HyeNqYOgkaQqAAAXoxjjLGdo/wAAAABJRU5ErkJggg=="); }
+  .texture.texture-grain-w {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi+P//fwxAADGACIAAYgSzgAAggMA8JhADIIAQQkAAEEAgDozNwMSABFA4AAGGogynKqIkAGovFsbm0NI0AAAAAElFTkSuQmCC"); }
+  .texture.texture-grain-w-l {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi+P//fwxAADGACIAAYgSzgAAggEAMEM3AxAAFAAEEF4EBJgY0ABBAYBNAqmA0Vi0xUHYMVkMBAgzuACBYgqwSxsfQgQ5gdsQgiaHwCZoAAAFwL9t1tvLGAAAAAElFTkSuQmCC"); }
+  .texture.texture-grain-b {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC"); }
+  .texture.texture-grain-b-l {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIMb///+DaAYmBigACCC4CAwwMaABgAACmwBSBaMxtBBWARBgcAccPXo4HURbW9ui8DHNRAOUmwAAwWk26e28KNgAAAAASUVORK5CYII="); }
+  .texture.texture-diagonal-w {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpi+P//fwxAADEACQaAAGIEEUAQAxBAYB4TiAkQQGAWSAGIBgggFA5MMVxDDFSWASDAUJSh68cQRNaBoQAAHDFj9Tn4HhEAAAAASUVORK5CYII="); }
+  .texture.texture-diagonal-w-r {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwNAADGACIAAYgSzGBhiAAIIxIsBCwEEEJgFYoAwQADB5OFq4LIoygACDEUGXRVWSayqQRgATKlm8CR0i1QAAAAASUVORK5CYII="); }
+  .texture.texture-diagonal-b {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpi+P//PwNAADGACIAAYrCysikGMQACCMxgBLEAAggsDsIgEYAAQuXAFMOVwQQAAgxFBkMVuiDcYGy6AIpfVV7EbepaAAAAAElFTkSuQmCC"); }
+  .texture.texture-diagonal-b-r {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg=="); }
 
 .blur {
+  transform: scale(1.1);
   filter: blur(1px);
   -webkit-filter: blur(1px);
   -moz-filter: blur(1px);
   -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  transform: scale(1.1); }
+  -ms-filter: blur(1px); }
   .blur.blur-small {
     filter: blur(3px);
     -webkit-filter: blur(3px);
@@ -440,7 +427,7 @@ Dependencies: variables
     -o-filter: blur(14px);
     -ms-filter: blur(14px); }
 
-.pattern .pattern-default {
+.pattern {
   background-image: url("../images/pattern-default.jpg"); }
 
 /**********************************************************************
@@ -634,8 +621,8 @@ Dependencies: none
   animation: spin 2s infinite linear; }
 
 /**********************************************************************
-Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com) 
-and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css 
+Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com)
+and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css
 for CMGTools.
 Dependencies: variables
 ***********************************************************************/
@@ -797,20 +784,26 @@ textarea {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #298ccf; }
+  color: #298ccf;
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s; }
 
 a:focus {
   outline: none; }
 
 a:active, a:hover {
-  outline: 0; }
+  outline: 0;
+  color: #E74343; }
 
 /**********************************************************************
 Description: The basic styles for CMGTools.
 Dependencies: variables
 ***********************************************************************/
 /**
- * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive. 
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive.
  * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
  */
 .screen.screen-mobile-small {
@@ -838,8 +831,8 @@ Dependencies: variables
   width: 1920px; }
 
 /**
- * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in 
- * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating 
+ * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
+ * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
  * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
  */
 .color {
@@ -929,7 +922,7 @@ Dependencies: variables
     background-color: #56832A; }
 
 /**
- * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and
  * padding. The remaining space deducting border and padding from given width will be used by element content.
  */
 html {
@@ -942,7 +935,7 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-/** 
+/**
  * The primary color will be used as default color for document body and text.
  */
 html, body {
@@ -959,13 +952,13 @@ html, body {
   margin: 0 !important;
   padding: 0 !important; }
 
-/** 
+/**
  * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
  */
 #pre-loader-main {
   display: block; }
 
-/** 
+/**
  * Floating Blocks - These classes can be used to clear or float the elements.
  */
 .clear {
@@ -984,7 +977,7 @@ html, body {
   float: none !important;
   margin: 0 auto; }
 
-/** 
+/**
  * Pre-defined width and height, handy at few places.
  */
 .width {
@@ -1011,7 +1004,7 @@ html, body {
   .height.height-75 {
     height: 75%; }
 
-/** 
+/**
  * Alignments for centered box and text.
  */
 .center {
@@ -1024,7 +1017,7 @@ html, body {
   .align.align-right {
     text-align: right !important; }
 
-/** 
+/**
  * Height fillers to seperate boxes.
  */
 .filler-height {
@@ -1035,9 +1028,16 @@ html, body {
     height: 2em; }
   .filler-height.filler-height-large {
     height: 2.5em; }
+  .filler-height.filler-height-xlarge {
+    height: 3em; }
 
 .absolute {
   position: absolute !important; }
+  .absolute.absolute-center {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
   .absolute.absolute-top-left {
     top: 0px;
     left: 0px; }
@@ -1074,6 +1074,9 @@ html, body {
     background-color: #7F7F7F !important;
     color: #FFFFFF !important; }
 
+.pointer {
+  cursor: pointer; }
+
 .visible {
   display: block !important; }
 
@@ -1105,9 +1108,9 @@ html, body {
 
 .error-field {
   border: 1px solid #E74343;
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
-  box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25); }
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.2);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.2);
+  box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.2); }
 
 /**********************************************************************
 Description: The default text elements and font styles for CMGTools.
@@ -1126,8 +1129,8 @@ html, body {
     html, body {
       font-size: 16px; } }
 
-/** 
- * Fonts - The font classes default, heading and code can be used for global headers and code font.
+/**
+ * Standard Fonts - The font classes default, heading and code can be used for global headers and code font.
  */
 .font.font-default {
   font-family: Arial, Helvetica, sans-serif; }
@@ -1139,7 +1142,7 @@ html, body {
   font-family: "Courier New", Courier, monospace; }
 
 /**
- * Font Size - The font size for headers h1 to h6, default and small.
+ * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
 .font-size.font-size-large-1 {
   font-size: 2.5em; }
@@ -1167,6 +1170,17 @@ html, body {
 
 .font-size.font-size-tiny {
   font-size: 0.65em; }
+
+.line-height {
+  line-height: 1em; }
+  .line-height.line-height-small {
+    line-height: 1.5em; }
+  .line-height.line-height-medium {
+    line-height: 2em; }
+  .line-height.line-height-large {
+    line-height: 2.5em; }
+  .line-height.line-height-xlarge {
+    line-height: 3em; }
 
 h1, .h1 {
   font-size: 2.5em; }
@@ -1357,6 +1371,8 @@ Dependencies: variables, mixins
     width: 100%; }
   .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15 {
     width: 48%; }
+  .max-cols-50 > .col:nth-child(odd) {
+    clear: both; }
   .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
     width: 98%; } }
 
@@ -1536,6 +1552,8 @@ Dependencies: variables, mixins
 @media only screen and (max-width: 1024px) {
   .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15 {
     width: 50%; }
+  .max-cols-50 > .colf:nth-child(odd) {
+    clear: both; }
   .max-cols-100 > .colf1, .max-cols-100 > .colf2, .max-cols-100 > .colf3, .max-cols-100 > .colf4, .max-cols-100 > .colf5, .max-cols-100 > .colf6, .max-cols-100 > .colf7, .max-cols-100 > .colf8, .max-cols-100 > .colf9, .max-cols-100 > .colf10, .max-cols-100 > .colf11, .max-cols-100 > .colf12, .max-cols-100 > .colf13, .max-cols-100 > .colf14, .max-cols-100 > .colf15 {
     width: 100%; } }
 
@@ -1766,6 +1784,17 @@ Dependencies: variables, mixins
   bottom: 0;
   position: absolute; }
 
+.padding.padding-default {
+  padding: 0.25rem; }
+
+.padding.padding-default-v {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem; }
+
+.padding.padding-default-h {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem; }
+
 .padding.padding-small {
   padding: 0.5rem; }
 
@@ -1809,6 +1838,17 @@ Dependencies: variables, mixins
 .padding.padding-xlarge-h {
   padding-left: 2rem;
   padding-right: 2rem; }
+
+.margin.margin-default {
+  margin: 0.25rem; }
+
+.margin.margin-default-v {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem; }
+
+.margin.margin-default-h {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem; }
 
 .margin.margin-small {
   margin: 0.5rem; }
@@ -2074,6 +2114,11 @@ label {
     line-height: 1.25;
     margin: 0.25em 0;
     padding: 0.25em; }
+  .frm-icon-element.reverse input[type="text"], .frm-icon-element.reverse input[type="email"], .frm-icon-element.reverse input[type="password"], .frm-icon-element.reverse textarea, .frm-icon-element.reverse select, .frm-icon-element.reverse input[type="submit"], .frm-icon-element.reverse input[type="button"], .frm-icon-element.reverse button {
+    padding-left: 0.25em;
+    padding-right: 1.75em; }
+  .frm-icon-element.reverse .icon, .frm-icon-element.reverse .cmti {
+    right: 0; }
 
 .frm-split-40-60 .frm-icon-element {
   width: 60%;
@@ -2677,7 +2722,8 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
     background-color: #E74343 !important; }
 
 .menu-social .cmti {
-  margin: 0.25rem 0.5rem; }
+  margin: 0.25rem 0.5rem;
+  padding: 0.25rem; }
 
 .menu-social .cmti-bkg.cmti-social-facebook {
   background-color: #3B5998; }
@@ -2860,17 +2906,19 @@ Dependencies: variables, variables-ext, mixins
 Description: It defines the styles for the footer components available in CMGTools.
 Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
+.footer {
+  position: relative; }
+  .footer.sticky {
+    position: absolute;
+    left: 0px;
+    bottom: 0px; }
+
 .footer-standard {
   background-color: #F2F2F2;
   color: #363636;
   width: 100%;
   min-height: 50px;
-  z-index: 10000;
-  position: relative; }
-  .footer-standard.sticky {
-    position: absolute;
-    left: 0px;
-    bottom: 0px; }
+  z-index: 10000; }
   .footer-standard p {
     color: #363636; }
 
@@ -3463,10 +3511,10 @@ Dependencies: variables, mixins
     margin-bottom: 1em; }
   @media only screen and (min-width: 481px) {
     .post-single-basic .post-banner {
-      height: 250px; } }
+      height: 200px; } }
   @media only screen and (min-width: 1025px) {
     .post-single-basic .post-banner {
-      height: 350px; } }
+      height: 250px; } }
 
 .file-uploader {
   position: relative; }

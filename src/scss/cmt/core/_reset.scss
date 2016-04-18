@@ -1,16 +1,16 @@
 /**********************************************************************
-Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com) 
-and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css 
+Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com)
+and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css
 for CMGTools.
 Dependencies: variables
 ***********************************************************************/
 
-// == From Eric Meyer == 
+// == From Eric Meyer ==
 
 // Normalising the margin, padding, border, font-size
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, 
-address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, 
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr,
+address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
 th, td, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
   	margin: 0;
     padding: 0;
@@ -59,7 +59,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width:100%;
+  width: 100%;
 }
 
 // == Collected from other sources ==
@@ -121,8 +121,8 @@ strong {
 // sub and sup fixes
 
 sub, sup {
-  	font-size: 75%; 
-  	line-height: 0; 
+  	font-size: 75%;
+  	line-height: 0;
   	position: relative;
   	vertical-align: middle;
 }
@@ -138,7 +138,7 @@ sub {
 // fix space issue
 
 abbr[ title ], dfn[ title ] {
-    border-bottom: 1px dotted #000; 
+    border-bottom: 1px dotted #000;
     cursor: help;
 }
 
@@ -170,7 +170,7 @@ nav ul, nav ol {
 .clickable, button, input[type="button"], input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
-    width: auto; 
+    width: auto;
     overflow: visible;
 }
 
@@ -212,6 +212,7 @@ a {
     text-decoration: none;
     cursor: pointer;
     color: $color-link;
+    @include transit-color( $transit-eio, $transit-time-small );
 }
 
 a:focus {
@@ -220,4 +221,5 @@ a:focus {
 
 a:active, a:hover {
     outline: 0;
+    color: $color-link-h;
 }

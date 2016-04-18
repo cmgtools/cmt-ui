@@ -4,12 +4,7 @@ Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
 
 // Standard footer
-.footer-standard {
-    background-color: $color-primary;
-    color: $color-primary-text;
-    width: 100%;
-    min-height: 50px;
-    z-index: 10000;
+.footer {
     position: relative;
 
     &.sticky {
@@ -17,6 +12,15 @@ Dependencies: variables, variables-ext, mixins
         left: 0px;
         bottom: 0px;
     }
+}
+
+// Standard footer
+.footer-standard {
+    background-color: $color-primary;
+    color: $color-primary-text;
+    width: 100%;
+    min-height: 50px;
+    z-index: 10000;
 
     p {
         color: $color-primary-text;
