@@ -35,6 +35,38 @@ Dependencies: variables, mixins
             display: inline-block !important;
             float: none !important;
         }
+
+        // fix for width issue
+        .col3 {
+            width: 30%;
+        }
+
+        @include responsive-max( screen-tablet-large ) {
+
+            &.max-cols-50 {
+
+                & >.col3 {
+                    width: 47%;
+                }
+            }
+
+            &.max-cols-100 {
+
+                & >.col3 {
+                    width: 98%;
+                }
+            }
+        }
+
+        @include responsive-max( screen-mobile-large ) {
+
+            &.max-cols-50, &.max-cols-100 {
+
+                & >.col3 {
+                    width: 98%;
+                }
+            }
+        }
     }
 }
 
