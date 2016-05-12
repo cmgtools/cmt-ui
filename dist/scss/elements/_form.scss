@@ -130,7 +130,7 @@ form {
 label {
     @extend %element-style;
     @extend %element-size;
-    @extend %element-style-field;
+    //@extend %element-style-field;
     text-align: left;
     background: none;
 }

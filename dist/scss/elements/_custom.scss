@@ -21,7 +21,7 @@ Dependencies: variables, mixins, transitions, transformation
             background-color: $color-secondary;
             color: $color-secondary-text;
             @include transit-color-bkg-color( $transit-eio, $transit-time-small );
-    
+
             &:hover {
                 background-color: $color-btn;
                 color: $color-btn-text;
@@ -45,7 +45,7 @@ Dependencies: variables, mixins, transitions, transformation
             height: 216px;
             background-color: $color-primary-d;
             z-index: 1000000;
-    
+
             .wrap-icon {
                 margin: 2px;
             }
@@ -105,7 +105,7 @@ Dependencies: variables, mixins, transitions, transformation
             background-color: $color-field;
             z-index: 100001;
             max-height: 180px;
-            overflow-y: auto;            
+            overflow-y: auto;
 
             li {
                 width: 100%;
@@ -128,17 +128,17 @@ Dependencies: variables, mixins, transitions, transformation
 
     input[type=checkbox], input[type=radio] {
         cursor: pointer;
-        display: none;         
+        display: none;
     }
 
     input[type=checkbox]+.label.pad-label::before, input[type=radio]+.label.pad-label::before {
         margin-right: 8px;
     }
- 
-    input[type=radio]+.label::before, input[type=checkbox]+.label::before { 
+
+    input[type=radio]+.label::before, input[type=checkbox]+.label::before {
         font-family: "cmti-core";
         font-weight: normal;
-        color: gray; 
+        color: gray;
         border-radius: 16px;
         display: inline-block;
         vertical-align: middle;
@@ -151,9 +151,9 @@ Dependencies: variables, mixins, transitions, transformation
     }
 
     input[type=checkbox]:checked+.label::before, input[type=radio]:checked+.label::before {
-        display: inline-block; 
+        display: inline-block;
         background-color: #F5F8FC;
-        color: $color-btn; 
+        color: $color-btn;
     }
 
     input[type=checkbox]:checked+.label, input[type=radio]:checked+.label {
@@ -307,7 +307,7 @@ Dependencies: variables, mixins, transitions, transformation
             color: $color-gray-l;
         }
     }
-    
+
     // Black button with dark gray hover
     &.btn-black {
         background-color: $color-black;
@@ -318,7 +318,7 @@ Dependencies: variables, mixins, transitions, transformation
             color: $color-gray-l;
         }
     }
-    
+
     // Gray button with dark gray hover
     &.btn-gray {
         background-color: $color-gray;
@@ -432,5 +432,13 @@ Dependencies: variables, mixins, transitions, transformation
 
     .btn {
         float: none;
+    }
+}
+
+.cmt-click {
+    cursor: pointer;
+
+    &.disabled {
+        cursor: default;
     }
 }

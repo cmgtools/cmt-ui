@@ -1308,6 +1308,16 @@ Dependencies: variables, mixins
     .row.row-inline .col, .row.row-inline .colf {
       display: inline-block !important;
       float: none !important; }
+    .row.row-inline .col3 {
+      width: 30%; }
+    @media only screen and (max-width: 1024px) {
+      .row.row-inline.max-cols-50 > .col3 {
+        width: 47%; }
+      .row.row-inline.max-cols-100 > .col3 {
+        width: 98%; } }
+    @media only screen and (max-width: 480px) {
+      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-100 > .col3 {
+        width: 98%; } }
 
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
@@ -1967,7 +1977,7 @@ label.element-large, input.element-large[type="text"], input.element-large[type=
 label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge {
   width: 250px !important; }
 
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
@@ -1976,15 +1986,15 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   background-color: #F2F2F2;
   color: #363636;
   text-align: left; }
-  label:hover, input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
+  input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
     background-color: #E9E9E9;
     color: #363636; }
-  label:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
+  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
     color: #4F688E;
     -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
     -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
     box-shadow: inset 0 0 0 1px #E1E1E1; }
-  label:disabled, input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
+  input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
     background-color: #CCCCCC;
     color: #909090; }
 
@@ -2467,6 +2477,11 @@ Dependencies: variables, mixins, transitions, transformation
 
 .frm-split-40-60 .frm-icon-element .btn {
   float: none; }
+
+.cmt-click {
+  cursor: pointer; }
+  .cmt-click.disabled {
+    cursor: default; }
 
 /**********************************************************************
 Description: It defines the styles for the menu components available in CMGTools.
@@ -3277,19 +3292,22 @@ Javascript: jquery, cmt-block
     display: inline-block;
     list-style: none;
     margin: 0 5px; }
-  .pagination-basic a {
-    background-color: #87BA45;
-    color: #96B0D6;
-    padding: 3px 8px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -khtml-border-radius: 5px;
-    text-decoration: none; }
+    .pagination-basic li span, .pagination-basic li a {
+      background-color: #87BA45;
+      color: #96B0D6;
+      padding: 3px 8px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -khtml-border-radius: 5px;
+      text-decoration: none; }
   .pagination-basic .active a, .pagination-basic a:hover {
     background-color: #F2F2F2;
     color: #363636;
     -moz-transition: 0.5s; }
+  .pagination-basic .disabled span {
+    background-color: #7F7F7F;
+    color: #FFFFFF; }
 
 .pagination-detailed {
   margin: 10px 0; }
