@@ -970,6 +970,9 @@ html, body {
 .right {
   float: right !important; }
 
+.clear-none {
+  clear: none !important; }
+
 .float-none {
   float: none !important; }
 
@@ -2348,6 +2351,28 @@ Dependencies: variables, mixins, transitions, transformation
   .cmt-switch .cmt-toggle-round:checked + label:after {
     margin-left: 3.5em; }
 
+.auto-suggest {
+  position: relative; }
+  .auto-suggest .wrap-auto-list {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    display: none;
+    width: 100%;
+    z-index: 1000000;
+    background-color: #cccccc;
+    color: #5c5c5c; }
+    .auto-suggest .wrap-auto-list .list-item, .auto-suggest .wrap-auto-list li {
+      background-color: #cccccc;
+      color: #5c5c5c;
+      cursor: pointer; }
+      .auto-suggest .wrap-auto-list .list-item:nth-child(even), .auto-suggest .wrap-auto-list li:nth-child(even) {
+        background-color: white;
+        color: #101010; }
+      .auto-suggest .wrap-auto-list .list-item:hover, .auto-suggest .wrap-auto-list li:hover {
+        background-color: #3C4655;
+        color: #96B0D6; }
+
 .btn.btn-25 {
   width: 25% !important; }
 
@@ -3106,9 +3131,9 @@ Javascript: jquery, cmt-block
     -moz-background-size: cover;
     background-size: cover;
     width: 100%;
-    height: 110%;
+    height: 150%;
     position: absolute;
-    top: -5%;
+    top: -50%;
     left: 0;
     z-index: 5; }
   .block .texture {
