@@ -263,6 +263,37 @@ Dependencies: variables, mixins, transitions, transformation
     }
 }
 
+.auto-suggest {
+    position: relative;
+
+    .wrap-auto-list {
+        position: absolute;
+        top: 2em;
+        left: 0;
+        display: none;
+        width: 100%;
+        z-index: 1000000;
+        background-color: $color-primary-d;
+        color: $color-primary-text-d;
+
+        .list-item, li {
+            background-color: $color-primary-d;
+            color: $color-primary-text-d;
+            cursor: pointer;
+
+            &:nth-child(even) {
+                background-color: $color-primary-l;
+                color: $color-primary-text-l;
+            }
+
+            &:hover {
+                background-color: $color-secondary;
+                color: $color-secondary-text;
+            }
+        }
+    }
+}
+
 // Generic button
 
 .btn {
