@@ -3,6 +3,7 @@
 .box-category-mapper {
     width: 100%;
     margin: 0 auto;
+    position: relative;
 
     .wrap-categories {
         height: 250px;
@@ -32,6 +33,7 @@
 .box-tag-mapper {
     width: 100%;
     margin: 0 auto;
+    position: relative;
 
     .wrap-tags {
         background-color: $color-primary;
@@ -48,6 +50,7 @@
 
 // Auto Suggest with mapper
 .box-mapper-auto {
+    position: relative;
 
     // Search field wrapper
     .auto-search {

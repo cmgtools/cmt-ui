@@ -6,16 +6,17 @@ Dependencies: variables, mixins
 // Tables Default Style
 
 table {
-    border-collapse: collapse; 
+    border-collapse: collapse;
     border-spacing: 0;
 }
 
 th {
-    font-weight: bold; 
+    font-weight: bold;
     vertical-align: middle;
 }
 
 td {
-    font-weight: normal; 
+    font-weight: normal;
     vertical-align: middle;
+    padding: 0.25em 0;
 }
