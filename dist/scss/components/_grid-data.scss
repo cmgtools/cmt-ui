@@ -1,4 +1,4 @@
-// The Grid Data acts as wrapper to the data
+// The Grid Data acts as wrapper to the data. It follows mobile first approach.
 .grid-data {
 
     // Grid Filters
@@ -26,52 +26,56 @@
     // Grid Content Wrapper
     .grid-content {
         // Grid content like grid rows or blocks goes here
-    }
 
-    // Grid Rows
-    .grid-rows {
-        
-        // rows header hidden for mobile
-        .grid-rows-header {
-            display: none;
-            font-weight: bold;
-        }
+        // Grid Rows
+        .grid-rows {
 
-        .grid-row {
-
-            &:nth-child( even ) {
-                background-color: $color-primary;
+            // rows header hidden for mobile
+            .grid-rows-header {
+                display: none;
+                font-weight: bold;
             }
 
-            .grid-row-header {
-                // row title         
-            }
+            .grid-row {
 
-            .grid-row-data {
-                // row data - it can be anything ex: content box
-                span {
-                    display: inline-block;
-                    width: 48%;
-                    padding: 1%;
-                    word-wrap: break-word;
+                &:nth-child( even ) {
+                    background-color: $color-primary;
+                }
+
+                .grid-row-header {
+                    // row title
+                }
+
+                .grid-row-data {
+                    // row data - it can be anything ex: content box
+                    .data {
+                        display: inline-block;
+                        width: 68%;
+                        padding: 1%;
+                        word-wrap: break-word;
+
+                        &.title {
+                            width: 28%;
+                        }
+                    }
+                }
+
+                .grid-row-footer {
+                    // row title
                 }
             }
 
-            .grid-row-footer {
-                // row title         
+            // rows footer hidden for mobile
+            .grid-rows-footer {
+                display: none;
+                font-weight: bold;
             }
         }
-        
-        // rows footer hidden for mobile
-        .grid-rows-footer {
-            display: none;
-            font-weight: bold;
-        }
-    }
 
-    // Grid Blocks
-    .grid-blocks {
-        // block - it can be anything ex: content box
+        // Grid Blocks
+        .grid-blocks {
+            // block - it can be anything ex: content box
+        }
     }
 
     // Grid Footer
@@ -81,30 +85,38 @@
 
     @include responsive-min( screen-tablet-large ) {
 
-        // Grid Rows
-        .grid-rows {
+        // Grid Content Wrapper
+        .grid-content {
 
-            .grid-rows-header {
-                display: block;
-            }
+            // Grid Rows
+            .grid-rows {
 
-            .grid-row {
+                .grid-rows-header {
+                    display: block;
+                }
 
-                .grid-row-data {
+                .grid-row {
 
-                    .title {
+                    .grid-row-header {
                         display: none;
                     }
 
-                    span {
-                        width: 100%;
-                        padding: 0;
+                    .grid-row-data {
+
+                        .data {
+                            width: 100%;
+                            padding: 0;
+
+                            &.title {
+                                display: none;
+                            }
+                        }
                     }
                 }
-            }
 
-            .grid-rows-footer {
-                display: block;
+                .grid-rows-footer {
+                    display: block;
+                }
             }
         }
     }
@@ -174,7 +186,7 @@
                 font-size: 1em;
                 padding: 0.25em 0.5em;
                 @include transit-bkg-color( $transit-eio, $transit-time-small );
-                
+
                 &:hover {
                     background-color: $color-tertiary-l;
                     color: $color-tertiary-text-l;
@@ -182,7 +194,7 @@
             }
 
             &.disabled, &.disabled:hover {
-                
+
                 span, a {
                     background-color: gray;
                     color: $color-primary;

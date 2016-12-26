@@ -132,12 +132,36 @@ Dependencies: variables
     // default to primary
     background-color: $color-primary;
 
+    &.bkg-primary-l {
+        background-color: $color-primary-l;
+    }
+
+    &.bkg-primary-d {
+        background-color: $color-primary-d;
+    }
+
     &.bkg-secondary {
         background-color: $color-secondary;
     }
 
+    &.bkg-secondary-l {
+        background-color: $color-secondary-l;
+    }
+
+    &.bkg-secondary-d {
+        background-color: $color-secondary-d;
+    }
+
     &.bkg-tertiary {
         background-color: $color-tertiary;
+    }
+
+    &.bkg-tertiary-l {
+        background-color: $color-tertiary-l;
+    }
+
+    &.bkg-tertiary-d {
+        background-color: $color-tertiary-d;
     }
 
     &.bkg-black {
@@ -360,6 +384,30 @@ html, body {
 
     &.filler-height-xlarge {
         height: 3em;
+    }
+}
+
+/**
+ * Tab fillers to seperate elements.
+ */
+.filler-tab {
+    width: 2em;
+    display: inline-block;
+
+    &.filler-tab-small {
+        width: 4em;
+    }
+
+    &.filler-tab-medium {
+        width: 6em;
+    }
+
+    &.filler-tab-large {
+        width: 8em;
+    }
+
+    &.filler-tab-xlarge {
+        width: 10em;
     }
 }
 
