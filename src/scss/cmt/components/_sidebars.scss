@@ -1,0 +1,40 @@
+/**********************************************************************
+Description: It defines the styles for the sidebar components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
+***********************************************************************/
+
+// Standard sidebar having title with button to show/hide menu for mobile devices and the menu items.
+// The title will be displayed for small screens and can be used to toggle the menu items.
+.sidebar-standard {
+    position: relative;
+
+    .title {
+        display: none;
+        background-color: $color-tertiary;
+        @extend %clearfix;
+        line-height: 32px;
+        padding: 5px;
+        font-size: 16px;
+
+        span {
+            float: right;
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+
+    .menu {
+        display: block;
+    }
+
+    @include responsive-max( screen-tablet-large ) {
+
+        .title {
+            display: block;
+        }
+
+        .menu {
+            display: none;
+        }
+    }
+}

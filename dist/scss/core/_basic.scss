@@ -1,0 +1,535 @@
+/**********************************************************************
+Description: The basic styles for CMGTools.
+Dependencies: variables
+***********************************************************************/
+
+/**
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive.
+ * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
+ */
+
+.screen {
+    // TODO: add default screen styles
+
+    &.screen-mobile-small {
+        width: $screen-mobile-small;
+    }
+
+    &.screen-mobile-large {
+        width: $screen-mobile-large;
+    }
+
+    &.screen-tablet-small {
+        width: $screen-tablet-small;
+    }
+
+    &.screen-tablet-large {
+        width: $screen-tablet-large;
+    }
+
+    &.screen-desktop-small {
+        width: $screen-desktop-small;
+    }
+
+    &.screen-desktop-medium {
+        width: $screen-desktop-medium;
+    }
+
+    &.screen-desktop-large {
+        width: $screen-desktop-large;
+    }
+
+    &.screen-desktop-xlarge {
+        width: $screen-desktop-xlarge;
+    }
+}
+
+/**
+ * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
+ * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
+ * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
+ */
+
+.color {
+    // default to primary
+    background-color: $color-primary;
+    color: $color-primary-text;
+/**
+ * Color Palatte:
+ * 1. primary: #{$color-primary}
+ * 2. primary text: #{$color-primary-text}
+ * 3. primary light: #{$color-primary-l}
+ * 4. primary text light: #{$color-primary-text-l}
+ * 5. primary dark: #{$color-primary-d}
+ * 6. primary text dark: #{$color-primary-text-d}
+ * 7. secondary: #{$color-secondary}
+ * 8. secondary text: #{$color-secondary-text}
+ * 9. secondary light: #{$color-secondary-l}
+ * 10. secondary text light: #{$color-secondary-text-l}
+ * 11. secondary dark: #{$color-secondary-d}
+ * 12. secondary text dark: #{$color-secondary-text-d}
+ * 13. tertiary: #{$color-tertiary}
+ * 14. tertiary text: #{$color-tertiary-text}
+ * 15. tertiary light: #{$color-tertiary-l}
+ * 16. tertiary text light: #{$color-tertiary-text-l}
+ * 17. tertiary dark: #{$color-tertiary-d}
+ * 18. tertiary text dark: #{$color-tertiary-text-d}
+ */
+
+    &.color-primary-l {
+        background-color: $color-primary-l;
+        color: $color-primary-text-l;
+    }
+
+    &.color-primary-d {
+        background-color: $color-primary-d;
+        color: $color-primary-text-d;
+    }
+
+    &.color-secondary {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+    }
+
+    &.color-secondary-l {
+        background-color: $color-secondary-l;
+        color: $color-secondary-text-l;
+    }
+
+    &.color-secondary-d {
+        background-color: $color-secondary-d;
+        color: $color-secondary-text-d;
+    }
+
+    &.color-tertiary {
+        background-color: $color-tertiary;
+        color: $color-tertiary-text;
+    }
+
+    &.color-tertiary-l {
+        background-color: $color-tertiary-l;
+        color: $color-tertiary-text-l;
+    }
+
+    &.color-tertiary-d {
+        background-color: $color-tertiary-d;
+        color: $color-tertiary-text-d;
+    }
+
+    &.color-white {
+        background-color: $color-white;
+        color: $color-black;
+    }
+
+    &.color-black {
+        background-color: $color-black;
+        color: $color-white;
+    }
+}
+
+// Background Colors
+.bkg {
+    // default to primary
+    background-color: $color-primary;
+
+    &.bkg-primary-l {
+        background-color: $color-primary-l;
+    }
+
+    &.bkg-primary-d {
+        background-color: $color-primary-d;
+    }
+
+    &.bkg-secondary {
+        background-color: $color-secondary;
+    }
+
+    &.bkg-secondary-l {
+        background-color: $color-secondary-l;
+    }
+
+    &.bkg-secondary-d {
+        background-color: $color-secondary-d;
+    }
+
+    &.bkg-tertiary {
+        background-color: $color-tertiary;
+    }
+
+    &.bkg-tertiary-l {
+        background-color: $color-tertiary-l;
+    }
+
+    &.bkg-tertiary-d {
+        background-color: $color-tertiary-d;
+    }
+
+    &.bkg-black {
+        background-color: $color-black;
+    }
+
+    &.bkg-gray {
+        background-color: $color-gray;
+    }
+
+    &.bkg-white {
+        background-color: $color-white;
+    }
+
+    &.bkg-blue {
+        background-color: $color-blue;
+    }
+
+    &.bkg-purple {
+        background-color: $color-purple;
+    }
+
+    &.bkg-orange {
+        background-color: $color-orange;
+    }
+
+    &.bkg-yellow {
+        background-color: $color-yellow;
+    }
+
+    .bkg-red {
+        background-color: $color-red;
+    }
+
+    &.bkg-pink {
+        background-color: $color-pink;
+    }
+
+    &.bkg-magenta {
+        background-color: $color-magenta;
+    }
+
+    &.bkg-green {
+        background-color: $color-green;
+    }
+
+    &.bkg-green-d {
+        background-color: $color-green-d;
+    }
+}
+
+/**
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and
+ * padding. The remaining space deducting border and padding from given width will be used by element content.
+ */
+
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/**
+ * The primary color will be used as default color for document body and text.
+ */
+
+html, body {
+    background-color: $color-primary;
+    color: $color-primary-text;
+}
+
+// margin and padding less
+
+.margin-none {
+    margin: 0 !important;
+}
+
+.padding-none {
+    padding: 0 !important;
+}
+
+.mp-none {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/**
+ * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
+ */
+
+#pre-loader-main {
+    display: block;
+}
+
+/**
+ * Floating Blocks - These classes can be used to clear or float the elements.
+ */
+
+.clear {
+    clear: both !important;
+}
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.clear-none {
+    clear: none !important;
+}
+
+.float-none {
+    float: none !important;
+}
+
+.float-none-center {
+    float: none !important;
+    margin: 0 auto;
+}
+
+/**
+ * Pre-defined width and height, handy at few places.
+ */
+
+// Width
+
+.width {
+    width: 100%;
+
+    &.width-auto {
+        width: auto;
+    }
+
+    &.width-25 {
+        width: 25%;
+    }
+
+    &.width-50 {
+        width: 50%;
+    }
+
+    &.width-75 {
+        width: 75%;
+    }
+
+    &.width-80 {
+        width: 80%;
+    }
+}
+
+// Height
+
+.height {
+    height: 100%;
+
+    &.height-auto {
+        height: auto;
+    }
+
+    &.height-25 {
+        height: 25%;
+    }
+
+    &.height-50 {
+        height: 50%;
+    }
+
+    &.height-75 {
+        height: 75%;
+    }
+}
+
+/**
+ * Alignments for centered box and text.
+ */
+
+.center {
+    margin: 0 auto;
+}
+
+.align {
+    text-align: left !important;
+
+    &.align-center {
+        text-align: center !important;
+    }
+
+    &.align-right {
+        text-align: right !important;
+    }
+}
+
+/**
+ * Height fillers to seperate boxes.
+ */
+
+.filler-height {
+    height: 1em;
+
+    &.filler-height-small {
+        height: 1.5em;
+    }
+
+    &.filler-height-medium {
+        height: 2em;
+    }
+
+    &.filler-height-large {
+        height: 2.5em;
+    }
+
+    &.filler-height-xlarge {
+        height: 3em;
+    }
+}
+
+/**
+ * Tab fillers to seperate elements.
+ */
+.filler-tab {
+    width: 2em;
+    display: inline-block;
+
+    &.filler-tab-small {
+        width: 4em;
+    }
+
+    &.filler-tab-medium {
+        width: 6em;
+    }
+
+    &.filler-tab-large {
+        width: 8em;
+    }
+
+    &.filler-tab-xlarge {
+        width: 10em;
+    }
+}
+
+// Positioning
+.absolute {
+    position: absolute !important;
+
+    &.absolute-center {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.absolute-top-left {
+        top: 0px;
+        left: 0px;
+    }
+
+    &.absolute-top-right {
+        top: 0px;
+        right: 0px;
+    }
+
+    &.absolute-bottom-left {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    &.absolute-bottom-right {
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
+.relative {
+    position: relative !important;
+}
+
+.fixed {
+    position: fixed !important;
+}
+
+// Display Type
+
+.block {
+    display: block !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.inline {
+    display: inline !important;
+}
+
+.disabled {
+    background-color: $color-gray !important;
+    color: $color-white !important;
+    cursor: default !important;
+
+    &:hover {
+        background-color: $color-gray !important;
+        color: $color-white !important;
+    }
+}
+
+// Cursors
+.pointer {
+    cursor: pointer;
+}
+
+// Visibility - Without own space
+
+.visible {
+    display: block !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+// Visibility - Hidden/Displayed occupying space on screen
+
+.visible-space {
+    visibility: visible !important;
+}
+
+.hidden-space {
+    visibility: hidden !important;
+}
+
+// Fluid Elements (blocks, images)
+
+.fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+// Messages - Most probably used for form and ajax processing
+
+.warning, .error, .success, .help-block {
+    //display: inline-block;
+    width: 100%;
+    font-size: $font-size-8;
+}
+
+.error, .help-block {
+    color: $color-error;
+}
+
+.warning {
+    color: $color-warning;
+}
+
+.success {
+    color: $color-success;
+}
+
+// Required for Yii Forms
+.error-field {
+    @include border( $size-default, solid, $color-error );
+    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparency-low ) );
+}
