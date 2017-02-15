@@ -859,12 +859,12 @@ html, body {
     color: $color-success;
 }
 
-.help {
-    color: $color-help;
+.info {
+    color: $color-info;
 }
 
 // Required for Yii Forms
 .error-field {
     @include border( $size-default, solid, $color-error );
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparency-low ) );
+    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );
 }

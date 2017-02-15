@@ -450,17 +450,33 @@ Details: It defines the grid system and basic containers as listed below:
     position: relative;
     z-index: 1;
 
+    & >.header {
+        // Header within container.
+    }
+
     .wrap-content-main {
         position: relative;
         z-index: 1;
 
-        .sidebar {
-            // Sidebar within content wrapper. It's optional.
+        & >.header {
+            // Header within content wrapper.
+        }
+
+        & >.sidebar {
+            // Sidebar within content wrapper.
         }
 
         .content {
             // Content within content wrapper
         }
+
+        & >.footer {
+            // Footer within content wrapper.
+        }
+    }
+
+    & >.footer {
+        // Footer within container.
     }
 }
 

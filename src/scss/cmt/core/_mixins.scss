@@ -224,7 +224,7 @@ Details: It define the mixins and their default implementation as listed below:
     background-image: linear-gradient( to $direction, $start, $end );
 }
 
-@mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle ) {
+@mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle: 0deg ) {
 
     background: $start;
     background: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
@@ -345,7 +345,7 @@ Details: It define the mixins and their default implementation as listed below:
 
 @mixin max-area-rgb( $r: 0, $g: 0, $b: 0 ) {
       @include max-area;
-      background-color: rgba( $r, $g, $b );
+      background-color: rgba( $r, $g, $b, 0 );
 }
 
 @mixin max-area-transparent( $color: $color-black, $alpha: $color-transparent-medium ) {
@@ -370,22 +370,22 @@ Details: It define the mixins and their default implementation as listed below:
     color: $color-primary-text;
 }
 
-@mixin max-area-cover-color( $display: none, $color ) {
+@mixin max-area-cover-color( $color: $color-black, $display: none ) {
       @include max-area-cover( $display );
       background-color: $color;
 }
 
-@mixin max-area-cover-rgb( $display: none, $r: 0, $g: 0, $b: 0 ) {
+@mixin max-area-cover-rgb( $r: 0, $g: 0, $b: 0, $display: none ) {
       @include max-area-cover( $display );
-      background-color: rgba( $r, $g, $b );
+      background-color: rgba( $r, $g, $b, 0 );
 }
 
-@mixin max-area-cover-transparent( $display: none, $color: $color-black, $alpha: $color-transparent-medium ) {
+@mixin max-area-cover-transparent( $color: $color-black, $alpha: $color-transparent-medium, $display: none ) {
       @include max-area-cover( $display );
       background-color: rgba( $color, $alpha );
 }
 
-@mixin max-area-cover-transparent-rgb( $display: none, $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium ) {
+@mixin max-area-cover-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium, $display: none ) {
       @include max-area-cover( $display );
       background-color: rgba( $r, $g, $b, $alpha );
 }
@@ -1249,7 +1249,7 @@ Details: It define the mixins and their default implementation as listed below:
 }
 
 .max-area-cover-color {
-    @include max-area-cover-color( none, $color-secondary );
+    @include max-area-cover-color;
 }
 
 .max-area-cover-rgb {

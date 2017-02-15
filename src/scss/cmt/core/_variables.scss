@@ -202,12 +202,6 @@ $color-tertiary-text: #E6E6E6;
 $color-tertiary-text-l: darken( $color-tertiary, $color-factor );
 $color-tertiary-text-d: lighten( $color-tertiary-l, $color-factor );
 
-// Border, Gradient
-$color-border: $color-secondary;
-$color-hr: $color-secondary;
-$color-gradient-1: $color-primary;
-$color-gradient-2: $color-secondary;
-
 // Color Transparency
 $color-transparent-default: 0.15;
 $color-transparent-low: 0.25;
