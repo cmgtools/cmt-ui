@@ -1,6 +1,11 @@
 /**********************************************************************
-Description: The translation effects available in CMGTools.
+Description: This file define the animation effects available in CMT-UI css framework. These animations give
+             smooth and nice visual effects to an element.
+
 Dependencies: none
+
+Details: It defines the animation mixins and default implementation as listed below:
+* Spin      - The spin animation spins an element infinitely.
 ***********************************************************************/
 
 @-moz-keyframes spin {

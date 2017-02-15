@@ -1,6 +1,59 @@
 /**********************************************************************
-Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
+Description: This file define the mixins available in CMT-UI css framework. It also define the default classes
+             for all the mixins.
+
 Dependencies: variables
+
+Details: It define the mixins and their default implementation as listed below:
+* Clearfix          - It allows parent element to fix zero height issue in case it consist of floating children by
+*                     forcing itself to self-clear floating children.
+*
+* Opacity           - The opacity mixin is cross-browser solution to make elements opaque. The passed value must be
+*                     between 0 to 1. Higher value means higher opacity and less transparency and vice versa.
+* Transparency      - The transparency mixin is cross-browser solution to make elements transparent. The passed value must be
+*                     between 0 to 1. Higher value means higher transparency and less opacity and vice versa.
+*
+* Background        - Transparent background mixin allows to add transparency effect to background color.
+*
+* Round corners     - These mixins provide different ways to achieve round corner effects including all, top, right,
+*                     bottom, left, top left, top right, bottom left and bottom right.
+* Shadow            - The shadow mixins add shadow effects to elements including outer and inner.
+* Text shadow       - The text shadow mixins add shadow effects to text including outer and inner.
+* Border            - The border mixins provide options to add border including all, top, right, bottom and left.
+* Gradients         - These mixins provide options to apply gradient effects. These include linear, linear with angle
+*                     and radial.
+*
+* Circle effect 1   - It make the parent round cornered and child aligned at center. The parent must be either square
+*                     or rectangular in order to work with this effect.
+* Circle effect 2   - It make the element circular having fixed width and height. It does not consider child alignment.
+* Circle effect 3   - It make the element circular by applying padding at bottom. It does not consider child alignment.
+* Text Shape        - It make shape behind text having elliptical or circular effect.
+*
+* Vertical Center   - It provide mixin to vertically align a child at center of parent.
+* Child Center      - It provide mixin to align child at center both horizontally and vertically.
+*
+* Max area          - These mixins allows child to 100% cover parent. The childs can be either opaque or transparent.
+* Max area cover    - It adds option to have text aligned at center to max area mixins. Initially these elements will be
+*                     hidden and displayed when required.
+*
+* Background        - The background mixins provide options to have below listed backgrounds:
+*                     Tiled              - The background will repeat image both horizontally and vertically.
+*                     Background Image   - The background will be filled with image aligned at center. The image will adjust
+*                                          it's position to fully cover the element.
+*                     Background Fill    - The background will be filled at center with image having specified width and height.
+*                     Background Auto    - The background will be filled with image covering 100% width and auto height.
+*                     Background Scroll  - The background will scroll at low speed as compared to user scroll giving parallax effect.
+*                     Background Fixed   - The background will be filled 100% with fixed image and allows user to scroll content.
+*                     Background Element - The element will adjust itself to allow img tag to fill it completely. The element
+*                                          must be child of parent having fixed height.
+*
+* Textures          - Textures are special tiles having a pattern occupying few pixels. These will give special effects to underlying
+*                     content and images.
+*
+* Blur              - Blus is another mixin adding lens effect to blur underlying content and images.
+*
+* Media Queries     - These mixins are pre-defined media queries using the screen sizes declared in variables file. This section
+*                     includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
 
 // Clearfix
@@ -29,8 +82,18 @@ Dependencies: variables
     opacity: $value;
 }
 
+// Transparency
+@mixin transparent( $value ) {
+    zoom: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = " + ( 100 - $value*100 ) + " )";
+    -moz-opacity: ( 1 - $value );
+    -khtml-opacity: ( 1 - $value );
+    filter: alpha( opacity = ( 100 - $value*100 ) );
+    opacity: ( 1 - $value );
+}
+
 // Transparent Background
-@mixin transparentBkg( $color, $alpha: 0.6 ) {
+@mixin transparentBkg( $color, $alpha: $color-transparent-medium ) {
     background-color: rgba( $color, $alpha );
 }
 
@@ -98,6 +161,87 @@ Dependencies: variables
     -khtml-border-radius-bottom-right: $radius;
 }
 
+// Box Shadow with x and y distance having blur ratio and color of shadow
+
+@mixin shadow( $x, $y, $blur, $color, $spread: 0px ) {
+    -webkit-box-shadow: $x $y $blur $spread $color;
+    -moz-box-shadow: $x $y $blur $spread $color;
+    box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
+    -webkit-box-shadow: inset $x $y $blur $spread $color;
+    -moz-box-shadow: inset $x $y $blur $spread $color;
+    box-shadow: inset $x $y $blur $spread $color;
+}
+
+// Box Shadow with x and y distance having blur ratio and color of shadow
+
+@mixin text-shadow( $x, $y, $blur, $color, $spread: 0px ) {
+    -webkit-text-shadow: $x $y $blur $spread $color;
+    -moz-text-shadow: $x $y $blur $spread $color;
+    text-shadow: $x $y $blur $spread $color;
+}
+
+@mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
+    -webkit-text-shadow: inset $x $y $blur $spread $color;
+    -moz-text-shadow: inset $x $y $blur $spread $color;
+    text-shadow: inset $x $y $blur $spread $color;
+}
+
+// Borders
+
+@mixin border( $width, $style, $color ) {
+    border: $width $style $color;
+}
+
+@mixin border-top( $width, $style, $color ) {
+    border-top: $width $style $color;
+}
+
+@mixin border-right( $width, $style, $color ) {
+    border-right: $width $style $color;
+}
+
+@mixin border-bottom( $width, $style, $color ) {
+    border-bottom: $width $style $color;
+}
+
+@mixin border-left( $width, $style, $color ) {
+    border-left: $width $style $color;
+}
+
+// TODO: Add missing gradient mixins
+
+// Linear Gradient - Default - Top to Bottom
+@mixin linear-gradient( $start, $end, $direction: 'bottom' ) {
+    background-color: $end;
+    background-image: -moz-linear-gradient( $direction, $start, $end );
+    background-image: -o-linear-gradient( $direction, $start, $end );
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop( 0, $start ), color-stop( 1, $end ) );
+    background-image: -webkit-linear-gradient( $direction, $start, $end );
+    background-image: -ms-linear-gradient( $direction, $start, $end );
+    background-image: linear-gradient( to $direction, $start, $end );
+}
+
+@mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle ) {
+
+    background: $start;
+    background: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
+    background: -webkit-linear-gradient($angle, $start $startPos, $end $endPos);
+    background: -o-linear-gradient($angle, $start $startPos, $end $endPos);
+    background: -ms-linear-gradient($angle, $start $startPos, $end $endPos);
+
+    background: linear-gradient($linearAngle, $start $startPos, $end $endPos);
+}
+
+// Radial Gradient - Default - Top to Bottom
+@mixin radial-gradient( $start, $end, $direction: circle at center top ) {
+    //background-image: -webkit-gradient( radial, center center, 0, center center, 141, from(black), to(white), color-stop(25%, blue), color-stop(40%, green), color-stop(60%, red), color-stop(80%, purple));
+    //background-image: -webkit-radial-gradient( 45px 45px, farthest-corner, #F00 0%, #00F 100% ) repeat scroll 0% 0% rgba( 0, 0, 0, 0 );
+    background-image: radial-gradient( $direction, $start, $end );
+}
+
 // Circled - Style having border radius 100% and child elements aligned at center position
 @mixin circled1( $bkg-color, $color ) {
     overflow: hidden;
@@ -160,87 +304,6 @@ Dependencies: variables
     }
 }
 
-// Box Shadow with x and y distance having blur ratio and color of shadow
-
-@mixin shadow( $x, $y, $blur, $color, $spread: 0px ) {
-    -webkit-box-shadow: $x $y $blur $spread $color;
-    -moz-box-shadow: $x $y $blur $spread $color;
-    box-shadow: $x $y $blur $spread $color;
-}
-
-@mixin shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
-    -webkit-box-shadow: inset $x $y $blur $spread $color;
-    -moz-box-shadow: inset $x $y $blur $spread $color;
-    box-shadow: inset $x $y $blur $spread $color;
-}
-
-// Box Shadow with x and y distance having blur ratio and color of shadow
-
-@mixin text-shadow( $x, $y, $blur, $color, $opacity: 1 ) {
-    -webkit-text-shadow: $x $y $blur rgba( $color, $opacity );
-    -moz-text-shadow: $x $y $blur rgba( $color, $opacity );
-    text-shadow: $x $y $blur rgba( $color, $opacity );
-}
-
-@mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
-    -webkit-text-shadow: inset $x $y $blur $spread $color;
-    -moz-text-shadow: inset $x $y $blur $spread $color;
-    text-shadow: inset $x $y $blur $spread $color;
-}
-
-// Borders
-
-@mixin border( $width, $style, $color ) {
-    border: $width $style $color;
-}
-
-@mixin border-top( $width, $style, $color ) {
-    border-top: $width $style $color;
-}
-
-@mixin border-right( $width, $style, $color ) {
-    border-right: $width $style $color;
-}
-
-@mixin border-bottom( $width, $style, $color ) {
-    border-bottom: $width $style $color;
-}
-
-@mixin border-left( $width, $style, $color ) {
-    border-left: $width $style $color;
-}
-
-// TODO: Add missing gradient mixins
-
-// Linear Gradient - Default - Top to Bottom
-@mixin linear-gradient( $start, $end, $direction: 'bottom' ) {
-    background-color: $end;
-    background-image: -moz-linear-gradient( $direction, $start, $end );
-    background-image: -o-linear-gradient( $direction, $start, $end );
-    background-image: -webkit-gradient( linear, left top, left bottom, color-stop( 0, $start ), color-stop( 1, $end ) );
-    background-image: -webkit-linear-gradient( $direction, $start, $end );
-    background-image: -ms-linear-gradient( $direction, $start, $end );
-    background-image: linear-gradient( to $direction, $start, $end );
-}
-
-@mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle ) {
-
-    background: $start;
-    background: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
-    background: -webkit-linear-gradient($angle, $start $startPos, $end $endPos);
-    background: -o-linear-gradient($angle, $start $startPos, $end $endPos);
-    background: -ms-linear-gradient($angle, $start $startPos, $end $endPos);
-
-    background: linear-gradient($linearAngle, $start $startPos, $end $endPos);
-}
-
-// Radial Gradient - Default - Top to Bottom
-@mixin radial-gradient( $start, $end, $direction: circle at center top ) {
-    //background-image: -webkit-gradient( radial, center center, 0, center center, 141, from(black), to(white), color-stop(25%, blue), color-stop(40%, green), color-stop(60%, red), color-stop(80%, purple));
-    //background-image: -webkit-radial-gradient( 45px 45px, farthest-corner, #F00 0%, #00F 100% ) repeat scroll 0% 0% rgba( 0, 0, 0, 0 );
-    background-image: radial-gradient( $direction, $start, $end );
-}
-
 // Vertically Align Center - It works for containers or elements having parent without min-height.
 @mixin valign-center {
     position: relative;
@@ -275,12 +338,22 @@ Dependencies: variables
       height: 100%;
 }
 
-@mixin max-area-transparent( $color: $color-black, $alpha: 0.6 ) {
+@mixin max-area-color( $color ) {
+      @include max-area;
+      background-color: $color;
+}
+
+@mixin max-area-rgb( $r: 0, $g: 0, $b: 0 ) {
+      @include max-area;
+      background-color: rgba( $r, $g, $b );
+}
+
+@mixin max-area-transparent( $color: $color-black, $alpha: $color-transparent-medium ) {
       @include max-area;
       background-color: rgba( $color, $alpha );
 }
 
-@mixin max-area-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: 0.6 ) {
+@mixin max-area-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium ) {
       @include max-area;
       background-color: rgba( $r, $g, $b, $alpha );
 }
@@ -288,12 +361,33 @@ Dependencies: variables
 // Max Area Cover - The element overlays(cover) all other child elements of it's parent unless the other child got greater z-index.
 // Initially it's set to hidden and can be made visible when required. most useful example is
 // having a full cover pre-loader with spinner on top of all other elements.
-@mixin max-area-cover {
-    @include max-area-transparent;
+@mixin max-area-cover( $display: none ) {
+    @include max-area;
+    z-index: 1000000;
+    display: $display;
+    // Text alignment and color
     text-align: center;
     color: $color-primary-text;
-    z-index: 1000000;
-    display: none;
+}
+
+@mixin max-area-cover-color( $display: none, $color ) {
+      @include max-area-cover( $display );
+      background-color: $color;
+}
+
+@mixin max-area-cover-rgb( $display: none, $r: 0, $g: 0, $b: 0 ) {
+      @include max-area-cover( $display );
+      background-color: rgba( $r, $g, $b );
+}
+
+@mixin max-area-cover-transparent( $display: none, $color: $color-black, $alpha: $color-transparent-medium ) {
+      @include max-area-cover( $display );
+      background-color: rgba( $color, $alpha );
+}
+
+@mixin max-area-cover-transparent-rgb( $display: none, $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium ) {
+      @include max-area-cover( $display );
+      background-color: rgba( $r, $g, $b, $alpha );
 }
 
 // Backgrounds
@@ -301,7 +395,7 @@ Dependencies: variables
     background-repeat: repeat;
 }
 
-// Cover the background keeping perspective in mind
+// Cover the background
 @mixin bkg-image {
     background-repeat: no-repeat;
     background-position: center center;
@@ -328,7 +422,7 @@ Dependencies: variables
     background-size: 100% auto;
 }
 
-// Cover the background keeping perspective in mind. It need little javascript/jquery code.
+// Cover the background keeping parallax in mind. It need little javascript/jquery code.
 //  jQuery( window ).scroll(function() {
 //    var scrolledY = jQuery( window ).scrollTop();
 //    jQuery( <selector> ).css( 'background-position', 'center ' + ( ( scrolledY ) ) + 'px' );
@@ -354,8 +448,8 @@ Dependencies: variables
     background-attachment: fixed;
 }
 
-// background using img - use it inside a block having fixed height
-@mixin bkg-img {
+// background filled with img - use it inside a block having fixed height
+@mixin bkg-element {
     position: relative;
     top: -50%;
     left: -50%;
@@ -401,199 +495,745 @@ Dependencies: variables
 }
 
 // Opacity
+.opaque {
+    @include opaque( $color-opaque-default );
 
-.opaque-25 {
-    @include opaque( 0.25 );
+    &.opaque-low {
+        @include opaque( $color-opaque-low );
+    }
+
+    &.opaque-medium {
+        @include opaque( $color-opaque-medium );
+    }
+
+    &.opaque-high {
+        @include opaque( $color-opaque-high );
+    }
+
+    &.opaque-25 {
+        @include opaque( 0.25 );
+    }
+
+    &.opaque-50 {
+        @include opaque( 0.50 );
+    }
+
+    &.opaque-75 {
+        @include opaque( 0.75 );
+    }
 }
 
-.opaque-50 {
-    @include opaque( 0.50 );
-}
+// Transparency
+.transparent {
+    @include transparent( $color-transparent-default );
 
-.opaque-75 {
-    @include opaque( 0.75 );
+    &.transparent-low {
+        @include transparent( $color-transparent-low );
+    }
+
+    &.transparent-medium {
+        @include transparent( $color-transparent-medium );
+    }
+
+    &.transparent-high {
+        @include transparent( $color-transparent-high );
+    }
+
+    &.transparent-25 {
+        @include transparent( 0.25 );
+    }
+
+    &.transparent-50 {
+        @include transparent( 0.50 );
+    }
+
+    &.transparent-75 {
+        @include transparent( 0.75 );
+    }
 }
 
 // Transparent backgrounds
-
-.bkg-transparent-white {
+.transparent-bkg {
     @include transparentBkg( $color-transparent-white );
-}
 
-.bkg-transparent-gray {
-    @include transparentBkg( $color-transparent-gray );
-}
+    // Transparent backgrounds - 3 Color Scheme
 
-.bkg-transparent-black {
-    @include transparentBkg( $color-transparent-black );
-}
+    &.transparent-bkg-primary {
+        @include transparentBkg( $color-transparent-primary );
+    }
 
-.bkg-transparent-primary {
-    @include transparentBkg( $color-transparent-primary );
-}
+    &.transparent-bkg-secondary {
+        @include transparentBkg( $color-transparent-secondary );
+    }
 
-.bkg-transparent-secondary {
-    @include transparentBkg( $color-transparent-secondary );
-}
+    &.transparent-bkg-tertiary {
+        @include transparentBkg( $color-transparent-tertiary );
+    }
 
-.bkg-transparent-tertiary {
-    @include transparentBkg( $color-transparent-tertiary );
+    // Standard Colors
+
+    &.transparent-bkg-gray {
+        @include transparentBkg( $color-transparent-gray );
+    }
+
+    &.transparent-bkg-black {
+        @include transparentBkg( $color-transparent-black );
+    }
+
+    &.transparent-bkg-blue {
+        @include transparentBkg( $color-transparent-blue );
+    }
+
+    &.transparent-bkg-purple {
+        @include transparentBkg( $color-transparent-purple );
+    }
+
+    &.transparent-bkg-orange {
+        @include transparentBkg( $color-transparent-orange );
+    }
+
+    &.transparent-bkg-yellow {
+        @include transparentBkg( $color-transparent-yellow );
+    }
+
+    &.transparent-bkg-red {
+        @include transparentBkg( $color-transparent-red );
+    }
+
+    &.transparent-bkg-pink {
+        @include transparentBkg( $color-transparent-pink );
+    }
+
+    &.transparent-bkg-magenta {
+        @include transparentBkg( $color-transparent-magenta );
+    }
+
+    &.transparent-bkg-green {
+        @include transparentBkg( $color-transparent-green );
+    }
+
+    &.transparent-bkg-green-d {
+        @include transparentBkg( $color-transparent-green-d );
+    }
 }
 
 // Round Corners
 
 .rounded {
     @include rounded( $size-default );
-}
 
-.rounded-medium {
-    @include rounded( $size-medium );
-}
+    &.rounded-small {
+        @include rounded( $size-small );
+    }
 
-.rounded-large {
-    @include rounded( $size-large );
+    &.rounded-medium {
+        @include rounded( $size-medium );
+    }
+
+    &.rounded-large {
+        @include rounded( $size-large );
+    }
+
+    &.rounded-xlarge {
+        @include rounded( $size-xlarge );
+    }
 }
 
 .rounded-top {
     @include rounded-top( $size-default );
+
+    &.rounded-top-small {
+        @include rounded-top( $size-small );
+    }
+
+    &.rounded-top-medium {
+        @include rounded-top( $size-medium );
+    }
+
+    &.rounded-top-large {
+        @include rounded-top( $size-large );
+    }
+
+    &.rounded-top-xlarge {
+        @include rounded-top( $size-xlarge );
+    }
 }
 
 .rounded-right {
     @include rounded-right( $size-default );
+
+    &.rounded-right-small {
+        @include rounded-right( $size-small );
+    }
+
+    &.rounded-right-medium {
+        @include rounded-right( $size-medium );
+    }
+
+    &.rounded-right-large {
+        @include rounded-right( $size-large );
+    }
+
+    &.rounded-right-xlarge {
+        @include rounded-right( $size-xlarge );
+    }
 }
 
 .rounded-bottom {
     @include rounded-bottom( $size-default );
+
+    &.rounded-bottom-small {
+        @include rounded-bottom( $size-small );
+    }
+
+    &.rounded-bottom-medium {
+        @include rounded-bottom( $size-medium );
+    }
+
+    &.rounded-bottom-large {
+        @include rounded-bottom( $size-large );
+    }
+
+    &.rounded-bottom-xlarge {
+        @include rounded-bottom( $size-xlarge );
+    }
 }
 
 .rounded-left {
     @include rounded-left( $size-default );
+
+    &.rounded-left-small {
+        @include rounded-left( $size-small );
+    }
+
+    &.rounded-left-medium {
+        @include rounded-left( $size-medium );
+    }
+
+    &.rounded-left-large {
+        @include rounded-left( $size-large );
+    }
+
+    &.rounded-left-xlarge {
+        @include rounded-left( $size-xlarge );
+    }
 }
 
 .rounded-top-left {
     @include rounded-top-left( $size-default );
+
+    &.rounded-top-left-small {
+        @include rounded-top-left( $size-small );
+    }
+
+    &.rounded-top-left-medium {
+        @include rounded-top-left( $size-medium );
+    }
+
+    &.rounded-top-left-large {
+        @include rounded-top-left( $size-large );
+    }
+
+    &.rounded-top-left-xlarge {
+        @include rounded-top-left( $size-xlarge );
+    }
 }
 
 .rounded-top-right {
     @include rounded-top-right( $size-default );
+
+    &.rounded-top-right-small {
+        @include rounded-top-right( $size-small );
+    }
+
+    &.rounded-top-right-medium {
+        @include rounded-top-right( $size-medium );
+    }
+
+    &.rounded-top-right-large {
+        @include rounded-top-right( $size-large );
+    }
+
+    &.rounded-top-right-xlarge {
+        @include rounded-top-right( $size-xlarge );
+    }
 }
 
 .rounded-bottom-left {
     @include rounded-bottom-left( $size-default );
+
+    &.rounded-bottom-left-small {
+        @include rounded-bottom-left( $size-small );
+    }
+
+    &.rounded-bottom-left-medium {
+        @include rounded-bottom-left( $size-medium );
+    }
+
+    &.rounded-bottom-left-large {
+        @include rounded-bottom-left( $size-large );
+    }
+
+    &.rounded-bottom-left-xlarge {
+        @include rounded-bottom-left( $size-xlarge );
+    }
 }
 
 .rounded-bottom-right {
     @include rounded-bottom-right( $size-default );
+
+    &.rounded-bottom-right-small {
+        @include rounded-bottom-right( $size-small );
+    }
+
+    &.rounded-bottom-right-medium {
+        @include rounded-bottom-right( $size-medium );
+    }
+
+    &.rounded-bottom-right-large {
+        @include rounded-bottom-right( $size-large );
+    }
+
+    &.rounded-bottom-right-xlarge {
+        @include rounded-bottom-right( $size-xlarge );
+    }
+}
+
+// Shadow
+.shadow {
+    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
+
+    // 3 Color Scheme
+
+    &.shadow-primary {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
+    }
+
+    &.shadow-secondary {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparent-medium ) );
+    }
+
+    &.shadow-tertiary {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
+    }
+
+    // Standard Colors
+
+    &.shadow-gray {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
+    }
+
+    &.shadow-black {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-black, $color-transparent-medium ) );
+    }
+
+    &.shadow-blue {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-blue, $color-transparent-medium ) );
+    }
+
+    &.shadow-purple {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-purple, $color-transparent-medium ) );
+    }
+
+    &.shadow-orange {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-orange, $color-transparent-medium ) );
+    }
+
+    &.shadow-yellow {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-yellow, $color-transparent-medium ) );
+    }
+
+    &.shadow-red {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-red, $color-transparent-medium ) );
+    }
+
+    &.shadow-pink {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-pink, $color-transparent-medium ) );
+    }
+
+    &.shadow-magenta {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-magenta, $color-transparent-medium ) );
+    }
+
+    &.shadow-green {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
+    }
+
+    &.shadow-green-d {
+        @include shadow( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+    }
+}
+
+// Shadow Inset
+.shadow-inset {
+    @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
+
+    // 3 Color Scheme
+
+    &.shadow-inset-primary {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-secondary {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-tertiary {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
+    }
+
+    // Standard Colors
+
+    &.shadow-inset-gray {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-black {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-black, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-blue {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-blue, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-purple {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-purple, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-orange {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-orange, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-yellow {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-yellow, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-red {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-red, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-pink {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-pink, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-magenta {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-magenta, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-green {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
+    }
+
+    &.shadow-inset-green-d {
+        @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+    }
+}
+
+// Text Shadow
+.text-shadow {
+    @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
+
+    // 3 Color Scheme
+
+    &.text-shadow-primary {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-secondary {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-tertiary {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
+    }
+
+    // Standard Colors
+
+    &.text-shadow-gray {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-black {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-black, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-blue {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-blue, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-purple {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-purple, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-orange {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-orange, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-yellow {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-yellow, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-red {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-red, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-pink {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-pink, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-magenta {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-magenta, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-green {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-green-d {
+        @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+    }
+}
+
+// Text Shadow Inset
+.text-shadow-inset {
+    @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
+
+    // 3 Color Scheme
+
+    &.text-shadow-inset-primary {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-secondary {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-tertiary {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
+    }
+
+    // Standard Colors
+
+    &.text-shadow-inset-gray {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-black {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-black, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-blue {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-blue, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-purple {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-purple, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-orange {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-orange, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-yellow {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-yellow, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-red {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-red, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-pink {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-pink, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-magenta {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-magenta, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-green {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
+    }
+
+    &.text-shadow-inset-green-d {
+        @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+    }
+}
+
+// Borders
+
+.border {
+    @include border( $size-default, solid, $color-border );
+
+    &.border-small {
+        @include border( $size-small, solid, $color-border );
+    }
+
+    &.border-medium {
+        @include border( $size-medium, solid, $color-border );
+    }
+
+    &.border-large {
+        @include border( $size-large, solid, $color-border );
+    }
+
+    &.border-xlarge {
+        @include border( $size-xlarge, solid, $color-border );
+    }
+}
+
+.border-top {
+    @include border-top( $size-default, solid, $color-border );
+
+    &.border-top-small {
+        @include border-top( $size-small, solid, $color-border );
+    }
+
+    &.border-top-medium {
+        @include border-top( $size-medium, solid, $color-border );
+    }
+
+    &.border-top-large {
+        @include border-top( $size-large, solid, $color-border );
+    }
+
+    &.border-top-xlarge {
+        @include border-top( $size-xlarge, solid, $color-border );
+    }
+}
+
+.border-right {
+    @include border-right( $size-default, solid, $color-border );
+
+    &.border-right-small {
+        @include border-right( $size-small, solid, $color-border );
+    }
+
+    &.border-right-medium {
+        @include border-right( $size-medium, solid, $color-border );
+    }
+
+    &.border-right-large {
+        @include border-right( $size-large, solid, $color-border );
+    }
+
+    &.border-right-xlarge {
+        @include border-right( $size-xlarge, solid, $color-border );
+    }
+}
+
+.border-bottom {
+    @include border-bottom( $size-default, solid, $color-border );
+
+    &.border-bottom-small {
+        @include border-bottom( $size-small, solid, $color-border );
+    }
+
+    &.border-bottom-medium {
+        @include border-bottom( $size-medium, solid, $color-border );
+    }
+
+    &.border-bottom-large {
+        @include border-bottom( $size-large, solid, $color-border );
+    }
+
+    &.border-bottom-xlarge {
+        @include border-bottom( $size-xlarge, solid, $color-border );
+    }
+}
+
+.border-left {
+    @include border-left( $size-default, solid, $color-border );
+
+    &.border-left-small {
+        @include border-left( $size-small, solid, $color-border );
+    }
+
+    &.border-left-medium {
+        @include border-left( $size-medium, solid, $color-border );
+    }
+
+    &.border-left-large {
+        @include border-left( $size-large, solid, $color-border );
+    }
+
+    &.border-left-xlarge {
+        @include border-left( $size-xlarge, solid, $color-border );
+    }
+}
+
+// Gradients
+.gradient {
+    // No defaults
+
+    &.gradient-linear {
+        @include linear-gradient( $color-gradient-1, $color-gradient-2 );
+    }
+
+    &.gradient-linear-angle {
+        @include linear-angle-gradient( 135deg, $color-gradient-1, 25%, $color-gradient-2, 75% );
+    }
+
+    &.gradient-radial {
+        @include radial-gradient( $color-gradient-1, $color-gradient-2 );
+    }
 }
 
 // Circled
+.circled {
+    // No Defaults
 
-.circled1 {
-    @include circled1( $color-secondary, $color-secondary-text );
-}
+    &.circled1 {
+        @include circled1( $color-secondary, $color-secondary-text );
+    }
 
-.circled2 {
-    @include circled2( 250px, 250px, $color-secondary );
-}
+    &.circled2 {
+        @include circled2( 250px, 250px, $color-secondary );
+    }
 
-.circled3 {
-    @include circled3( $color-secondary );
+    &.circled3 {
+        @include circled3( $color-secondary );
+    }
 }
 
 .shape-text {
     @include shape-text( $color-secondary, $color-secondary-text );
 }
 
-// TODO: Add inset shadows
-
-// Shadow
-.shadow {
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-black, 0.4 ) );
-}
-
-.shadow-primary {
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, 0.4 ) );
-}
-
-.shadow-secondary {
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, 0.4 ) );
-}
-
-.shadow-tertiary {
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, 0.4 ) );
-}
-
-.text-shadow {
-    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
-}
-
-.text-shadow-primary {
-    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
-}
-
-.text-shadow-secondary {
-    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
-}
-
-.text-shadow-tertiary {
-    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
-}
-
-// Borders
-
-.border-default {
-    @include border( $size-default, solid, $color-secondary );
-}
-
-.border-default-top {
-    @include border-top( $size-default, solid, $color-secondary );
-}
-
-.border-default-right {
-    @include border-right( $size-default, solid, $color-secondary );
-}
-
-.border-default-bottom {
-    @include border-bottom( $size-default, solid, $color-secondary );
-}
-
-.border-default-left {
-    @include border-left( $size-default, solid, $color-secondary );
-}
-
-// Gradients
-
-.gradient-linear {
-    @include linear-gradient( $color-primary, $color-secondary );
-}
-
-.gradient-radial {
-    @include radial-gradient( $color-primary, $color-secondary );
-}
-
 // Alignments
 
+// Align Element
 .valign-center {
     @include valign-center;
 }
 
-.child-center {
+// Align Element Children
+.vhalign-center {
     @include vh-align-child-center;
 }
 
-// Max Area
+// Max Area - No clubbing
 
 .max-area {
     @include max-area;
+}
+
+.max-area-color {
+    @include max-area-color( $color-secondary );
+}
+
+.max-area-rgb {
+    @include max-area-rgb;
 }
 
 .max-area-transparent {
     @include max-area-transparent;
 }
 
-.max-area-cover {
-    @include max-area-cover;
+.max-area-transparent-rgb {
+    @include max-area-transparent-rgb;
 }
+
+// Max Area - relative position
 
 .max-area-relative {
     display: block;
@@ -602,7 +1242,35 @@ Dependencies: variables
     height: 100%;
 }
 
-// Backgrounds
+// Max Area Cover - No clubbing
+
+.max-area-cover {
+    @include max-area-cover;
+}
+
+.max-area-cover-color {
+    @include max-area-cover-color( none, $color-secondary );
+}
+
+.max-area-cover-rgb {
+    @include max-area-cover-rgb;
+}
+
+.max-area-cover-transparent {
+    @include max-area-cover-transparent;
+}
+
+.max-area-cover-transparent-rgb {
+    @include max-area-cover-transparent-rgb;
+}
+
+// Max Area Cover - Show pre-loaders. Little JS is required to hide pre-loader on loading the page.
+
+.pre-loader {
+    display: block;
+}
+
+// Backgrounds - No clubbing
 
 .bkg-tile {
     @include bkg-tile;
@@ -628,8 +1296,8 @@ Dependencies: variables
     @include bkg-image-fixed;
 }
 
-.bkg-img {
-    @include bkg-img;
+.bkg-element {
+    @include bkg-element;
 }
 
 // Default Texture
@@ -712,6 +1380,7 @@ Dependencies: variables
     }
 }
 
+// Add default image
 .pattern {
     @extend %textures;
     background-image: url( $images-path + "pattern-default.jpg" );
@@ -719,7 +1388,7 @@ Dependencies: variables
 
 // Media Queries **************************************
 
-// Current and Lower
+// In Between - Current and Lower
 
 @mixin responsive( $width ) {
 

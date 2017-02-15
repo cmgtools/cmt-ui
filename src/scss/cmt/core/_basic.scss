@@ -1,15 +1,61 @@
 /**********************************************************************
-Description: The basic styles for CMGTools.
-Dependencies: variables
+Description: This file define the basic and common styling used by CMT-UI css framework.
+
+Dependencies: variables, mixins
+
+Details: It defines the basic styles as listed below:
+* Box border        - It's applied to html and all elements in order to calculate width including border and padding.
+* Default Color     - The default background and text color is set to primary from the 3 Color Scheme.
+* Screen            - The default classes having screen sizes using variables defined in variable file.
+* Colors            - This section define the classes having appropriate background and text color following 3 Color
+*                     Scheme and the standard colors.
+* Margin & Padding  - These classes remove margin or padding or both. There are also classes to have pre-defined
+*                     margin and padding.
+* Floats            - The floating classes either clear the float, no float or add left/right float.
+* Width & Height    - This section define width and height classes having predefined values in percentage.
+* Alignments        - The alignment classes allows to align either the element itself or it's children.
+* Height Filler     - These classes can be used to add vertical spacing.
+* Tab Filler        - These classes can be used to add horizontal spacing between inline boxes.
+* Positioning       - This section define the positioning classes.
+* Display           - The display classes control the display property i.e. inline, block or inline block.
+* Visibility        - These classes control the display property i.e. block or none. The visibility property specific
+*                     classes can be used to show or hide an element keeping it's space on screen.
+* Cursor            - The cursor classes.
+* Disabled          - It disable an element by changing color to gray and cursor to default.
+* Fluid             - The fluid class makes children occupying 100% width with auto height. Useful for responsive images.
+* Message           - These classes can be used to show message according to failure, warning or success.
 ***********************************************************************/
 
 /**
- * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive.
- * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including
+ * border and padding. The remaining space deducting border and padding from given width will be used by element content.
+ */
+
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+// The primary color will be used as default color for document body and text.
+
+html, body {
+    background-color: $color-primary;
+    color: $color-primary-text;
+}
+
+/**
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is
+ * a tedius task without going responsive. CMGTools have used the most commonly used standard resolutions to cover maximum screens.
  */
 
 .screen {
-    // TODO: add default screen styles
 
     &.screen-mobile-small {
         width: $screen-mobile-small;
@@ -130,116 +176,192 @@ Dependencies: variables
 // Background Colors
 .bkg {
     // default to primary
-    background-color: $color-primary;
+    background-color: $color-primary !important;
 
     &.bkg-primary-l {
-        background-color: $color-primary-l;
+        background-color: $color-primary-l !important;
     }
 
     &.bkg-primary-d {
-        background-color: $color-primary-d;
+        background-color: $color-primary-d !important;
     }
 
     &.bkg-secondary {
-        background-color: $color-secondary;
+        background-color: $color-secondary !important;
     }
 
     &.bkg-secondary-l {
-        background-color: $color-secondary-l;
+        background-color: $color-secondary-l !important;
     }
 
     &.bkg-secondary-d {
-        background-color: $color-secondary-d;
+        background-color: $color-secondary-d !important;
     }
 
     &.bkg-tertiary {
-        background-color: $color-tertiary;
+        background-color: $color-tertiary !important;
     }
 
     &.bkg-tertiary-l {
-        background-color: $color-tertiary-l;
+        background-color: $color-tertiary-l !important;
     }
 
     &.bkg-tertiary-d {
-        background-color: $color-tertiary-d;
+        background-color: $color-tertiary-d !important;
     }
 
     &.bkg-black {
-        background-color: $color-black;
+        background-color: $color-black !important;
     }
 
     &.bkg-gray {
-        background-color: $color-gray;
+        background-color: $color-gray !important;
+    }
+
+    &.bkg-gray-l {
+        background-color: $color-gray-l !important;
+    }
+
+    &.bkg-gray-d {
+        background-color: $color-gray-d !important;
     }
 
     &.bkg-white {
-        background-color: $color-white;
+        background-color: $color-white !important;
     }
 
     &.bkg-blue {
-        background-color: $color-blue;
+        background-color: $color-blue !important;
     }
 
     &.bkg-purple {
-        background-color: $color-purple;
+        background-color: $color-purple !important;
     }
 
     &.bkg-orange {
-        background-color: $color-orange;
+        background-color: $color-orange !important;
     }
 
     &.bkg-yellow {
-        background-color: $color-yellow;
+        background-color: $color-yellow !important;
     }
 
     .bkg-red {
-        background-color: $color-red;
+        background-color: $color-red !important;
     }
 
     &.bkg-pink {
-        background-color: $color-pink;
+        background-color: $color-pink !important;
     }
 
     &.bkg-magenta {
-        background-color: $color-magenta;
+        background-color: $color-magenta !important;
     }
 
     &.bkg-green {
-        background-color: $color-green;
+        background-color: $color-green !important;
     }
 
     &.bkg-green-d {
-        background-color: $color-green-d;
+        background-color: $color-green-d !important;
     }
 }
 
-/**
- * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and
- * padding. The remaining space deducting border and padding from given width will be used by element content.
- */
+// Text Colors
+.text {
+    // default to primary text
+    color: $color-primary-text !important;
 
-html {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+    &.text-primary-l {
+        color: $color-primary-text-l !important;
+    }
+
+    &.text-primary-d {
+        color: $color-primary-text-d !important;
+    }
+
+    &.text-secondary {
+        color: $color-secondary-text !important;
+    }
+
+    &.text-secondary-l {
+        color: $color-secondary-text-l !important;
+    }
+
+    &.text-secondary-d {
+        color: $color-secondary-text-d !important;
+    }
+
+    &.text-tertiary {
+        color: $color-tertiary-text !important;
+    }
+
+    &.text-tertiary-l {
+        color: $color-tertiary-text-l !important;
+    }
+
+    &.text-tertiary-d {
+        color: $color-tertiary-text-d !important;
+    }
+
+    &.text-black {
+        color: $color-black !important;
+    }
+
+    &.text-gray {
+        color: $color-gray !important;
+    }
+
+    &.text-gray-l {
+        color: $color-gray-l !important;
+    }
+
+    &.text-gray-d {
+        color: $color-gray-d !important;
+    }
+
+    &.text-white {
+        color: $color-white !important;
+    }
+
+    &.text-blue {
+        color: $color-blue !important;
+    }
+
+    &.text-purple {
+        color: $color-purple !important;
+    }
+
+    &.text-orange {
+        color: $color-orange !important;
+    }
+
+    &.text-yellow {
+        color: $color-yellow !important;
+    }
+
+    &.text-red {
+        color: $color-red !important;
+    }
+
+    &.text-pink {
+        color: $color-pink !important;
+    }
+
+    &.text-magenta {
+        color: $color-magenta !important;
+    }
+
+    &.text-green {
+        color: $color-green !important;
+    }
+
+    &.text-green-d {
+        color: $color-green-d !important;
+    }
 }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-     -moz-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-/**
- * The primary color will be used as default color for document body and text.
- */
-
-html, body {
-    background-color: $color-primary;
-    color: $color-primary-text;
-}
-
-// margin and padding less
+// without margin and padding
 
 .margin-none {
     margin: 0 !important;
@@ -254,12 +376,154 @@ html, body {
     padding: 0 !important;
 }
 
-/**
- * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
- */
+// Padding
 
-#pre-loader-main {
-    display: block;
+.padding {
+
+    &.padding-default {
+        padding: $size-default-rem;
+    }
+
+    &.padding-default-v {
+        padding-top: $size-default-rem;
+        padding-bottom: $size-default-rem;
+    }
+
+    &.padding-default-h {
+        padding-left: $size-default-rem;
+        padding-right: $size-default-rem;
+    }
+
+    &.padding-small {
+        padding: $size-small-rem;
+    }
+
+    &.padding-small-v {
+        padding-top: $size-small-rem;
+        padding-bottom: $size-small-rem;
+    }
+
+    &.padding-small-h {
+        padding-left: $size-small-rem;
+        padding-right: $size-small-rem;
+    }
+
+    &.padding-medium {
+        padding: $size-medium-rem;
+    }
+
+    &.padding-medium-v {
+        padding-top: $size-medium-rem;
+        padding-bottom: $size-medium-rem;
+    }
+
+    &.padding-medium-h {
+        padding-left: $size-medium-rem;
+        padding-right: $size-medium-rem;
+    }
+
+    &.padding-large {
+        padding: $size-large-rem;
+    }
+
+    &.padding-large-v {
+        padding-top: $size-large-rem;
+        padding-bottom: $size-large-rem;
+    }
+
+    &.padding-large-h {
+        padding-left: $size-large-rem;
+        padding-right: $size-large-rem;
+    }
+
+    &.padding-xlarge {
+        padding: $size-xlarge-rem;
+    }
+
+    &.padding-xlarge-v {
+        padding-top: $size-xlarge-rem;
+        padding-bottom: $size-xlarge-rem;
+    }
+
+    &.padding-xlarge-h {
+        padding-left: $size-xlarge-rem;
+        padding-right: $size-xlarge-rem;
+    }
+}
+
+// Margin
+
+.margin {
+
+    &.margin-default {
+        margin: $size-default-rem;
+    }
+
+    &.margin-default-v {
+        margin-top: $size-default-rem;
+        margin-bottom: $size-default-rem;
+    }
+
+    &.margin-default-h {
+        margin-left: $size-default-rem;
+        margin-right: $size-default-rem;
+    }
+
+    &.margin-small {
+        margin: $size-small-rem;
+    }
+
+    &.margin-small-v {
+        margin-top: $size-small-rem;
+        margin-bottom: $size-small-rem;
+    }
+
+    &.margin-small-h {
+        margin-left: $size-small-rem;
+        margin-right: $size-small-rem;
+    }
+
+    &.margin-medium {
+        margin: $size-medium-rem;
+    }
+
+    &.margin-medium-v {
+        margin-top: $size-medium-rem;
+        margin-bottom: $size-medium-rem;
+    }
+
+    &.margin-medium-h {
+        margin-left: $size-medium-rem;
+        margin-right: $size-medium-rem;
+    }
+
+    &.margin-large {
+        margin: $size-large-rem;
+    }
+
+    &.margin-large-v {
+        margin-top: $size-large-rem;
+        margin-bottom: $size-large-rem;
+    }
+
+    &.margin-large-h {
+        margin-left: $size-large-rem;
+        margin-right: $size-large-rem;
+    }
+
+    &.margin-xlarge {
+        margin: $size-xlarge-rem;
+    }
+
+    &.margin-xlarge-v {
+        margin-top: $size-xlarge-rem;
+        margin-bottom: $size-xlarge-rem;
+    }
+
+    &.margin-xlarge-h {
+        margin-left: $size-xlarge-rem;
+        margin-right: $size-xlarge-rem;
+    }
 }
 
 /**
@@ -347,10 +611,12 @@ html, body {
  * Alignments for centered box and text.
  */
 
+// Horizontally center align the element
 .center {
     margin: 0 auto;
 }
 
+// Align the children of an element - left, horizontally center and right
 .align {
     text-align: left !important;
 
@@ -368,22 +634,22 @@ html, body {
  */
 
 .filler-height {
-    height: 1em;
+    height: 1rem;
 
     &.filler-height-small {
-        height: 1.5em;
+        height: 1.5rem;
     }
 
     &.filler-height-medium {
-        height: 2em;
+        height: 2rem;
     }
 
     &.filler-height-large {
-        height: 2.5em;
+        height: 2.5rem;
     }
 
     &.filler-height-xlarge {
-        height: 3em;
+        height: 3rem;
     }
 }
 
@@ -392,6 +658,7 @@ html, body {
  */
 .filler-tab {
     width: 2em;
+    height: 1px;
     display: inline-block;
 
     &.filler-tab-small {
@@ -412,10 +679,22 @@ html, body {
 }
 
 // Positioning
+
 .absolute {
     position: absolute !important;
 
+    // Horizontally center
     &.absolute-center {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // Vertically center - both parent and child needs fixed width and height
+    &.absolute-middle {
+        top: 0;
+        bottom: 0;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -427,6 +706,13 @@ html, body {
         left: 0px;
     }
 
+    // Horizontally center at top - child needs fixed width smaller than parent
+    &.absolute-top-center {
+        top: 0px;
+        left: 0px;
+        right: 0px;
+    }
+
     &.absolute-top-right {
         top: 0px;
         right: 0px;
@@ -435,6 +721,13 @@ html, body {
     &.absolute-bottom-left {
         bottom: 0px;
         left: 0px;
+    }
+
+    // Horizontally center at bottom - child needs fixed width smaller than parent
+    &.absolute-bottom-center {
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
     }
 
     &.absolute-bottom-right {
@@ -465,22 +758,6 @@ html, body {
     display: inline !important;
 }
 
-.disabled {
-    background-color: $color-gray !important;
-    color: $color-white !important;
-    cursor: default !important;
-
-    &:hover {
-        background-color: $color-gray !important;
-        color: $color-white !important;
-    }
-}
-
-// Cursors
-.pointer {
-    cursor: pointer;
-}
-
 // Visibility - Without own space
 
 .visible {
@@ -501,6 +778,56 @@ html, body {
     visibility: hidden !important;
 }
 
+// Cursors
+
+.pointer {
+    cursor: pointer;
+}
+
+.crosshair {
+    cursor: crosshair;
+}
+
+.help {
+    cursor: help;
+}
+
+.wait {
+    cursor: wait;
+}
+
+.cursor {
+    cursor: default;
+
+    &.cursor-pointer {
+        cursor: pointer;
+    }
+
+    &.cursor-crosshair {
+        cursor: crosshair;
+    }
+
+    &.cursor-help {
+        cursor: help;
+    }
+
+    &.cursor-wait {
+        cursor: wait;
+    }
+}
+
+// Disabled
+.disabled {
+    background-color: $color-gray !important;
+    color: $color-white !important;
+    cursor: default !important;
+
+    &:hover {
+        background-color: $color-gray !important;
+        color: $color-white !important;
+    }
+}
+
 // Fluid Elements (blocks, images)
 
 .fluid {
@@ -508,15 +835,19 @@ html, body {
     height: auto;
 }
 
-// Messages - Most probably used for form and ajax processing
+// Messages
 
-.warning, .error, .success, .help-block {
+.warning, .error, .success, .help, .help-block {
     //display: inline-block;
     width: 100%;
     font-size: $font-size-8;
+
+    &.highlight {
+        background-color: $color-secondary;
+    }
 }
 
-.error, .help-block {
+.error {
     color: $color-error;
 }
 
@@ -526,6 +857,10 @@ html, body {
 
 .success {
     color: $color-success;
+}
+
+.help {
+    color: $color-help;
 }
 
 // Required for Yii Forms
