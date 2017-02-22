@@ -1,17 +1,18 @@
 /**********************************************************************
-Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com)
-and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css
-for CMGTools.
+Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com),
+HTML5 Doctor(http://html5doctor.com) and HTML5 Boilerplate aims to make a
+custom reset css for CMT-UI.
 Dependencies: variables
 ***********************************************************************/
 
 // == From Eric Meyer ==
 
 // Normalising the margin, padding, border, font-size
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr,
-address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i,
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, acronym,
+address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-th, td, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
+th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
   	margin: 0;
     padding: 0;
     border: 0;
@@ -22,47 +23,138 @@ th, td, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, s
     background: transparent;
 }
 
-// Default font
+// Display fix
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+
+// Overflow
 html {
     overflow-y: scroll;
 }
 
+// Line height
+body {
+    line-height: 1;
+}
+
+// Code snippets
 code, kbd, pre, samp {
     font-family: $font-code;
-    font-size: 1em;
+    font-size: $font-size-7;
 }
 
-// Display fix
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-    display: block;
-}
-
-// List Style - we can specify list style where required.
-ol, ul {
+// Default list style to none
+ol, ul, nav {
     list-style: none;
 }
 
-// Quotes fix
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
 
+// Quotes fix
 blockquote, q {
     quotes: none;
-    margin: 1em 40px;
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
-    quotes: none;
     content: '';
     content: none;
 }
 
-// Table Border
+// Table border and width
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
 }
 
-// == Collected from other sources ==
+th {
+    font-weight: bold;
+    vertical-align: top;
+}
+
+td {
+    font-weight: normal;
+    vertical-align: top;
+}
+
+// == Enhanced HTML5 Doctor =========
+
+// Ins, mark and del
+ins {
+    background-color: $color-secondary;
+    color: $color-secondary-text;
+    text-decoration: none;
+}
+
+mark {
+    background-color: $color-secondary;
+    color: $color-secondary-text;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[ title ], dfn[ title ] {
+    border-bottom: 1px dotted $color-secondary;
+    cursor: help;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;    // required for fixed width hr
+    margin-right: auto;   // required for fixed width hr
+    border: none;
+    @include border-top( 1px, solid, $color-hr );
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+// == Enhanced HTML5 Boilerplate ====
+
+// Selection text shadow
+
+::selection {
+    background: $color-secondary;
+    text-shadow: none;
+}
+
+// Removes gap between element and bottom of parent
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+// Reset fieldset
+fieldset {
+    margin-bottom: 1rem;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+// Resize vertically and text positioning
+textarea {
+    resize: vertical;
+    overflow: auto;
+    vertical-align: top;
+}
+
+// == murtaugh ======================
 
 pre {
     white-space: pre; /* CSS2 */
@@ -71,18 +163,45 @@ pre {
     word-wrap: break-word; /* IE */
 }
 
-hr {
-  	display: block;
-    height: 0;
-    padding: 0;
-  	margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    height: 0;
-    border: none;
-    @include border-bottom( $size-default, solid, $color-secondary );
+td img {
+    vertical-align: top;
 }
+
+// sub and sup fixes
+
+sub, sup {
+    font-size: $font-size-9;
+    line-height: 0;
+    position: relative;
+    vertical-align: middle;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+// == Others & self =================
+
+// Anchor Fix
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:focus {
+    outline: 0;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+// Display - audio, canvas, video
 
 audio, canvas, video {
     display: inline-block;
@@ -99,51 +218,10 @@ svg:not( :root ) {
     overflow: hidden;
 }
 
-fieldset {
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-    border: 0;
-    padding: 0;
-    white-space: normal;
-}
+// Typography
 
 small {
-    font-size: 85%;
-}
-
-strong {
-    font-weight: bold;
-}
-
-// sub and sup fixes
-
-sub, sup {
-  	font-size: 75%;
-  	line-height: 0;
-  	position: relative;
-  	vertical-align: middle;
-}
-
-sup {
-    top: -0.5em;
-}
-
-sub {
-    bottom: -0.25em;
-}
-
-// fix space issue
-
-abbr[ title ], dfn[ title ] {
-    border-bottom: 1px dotted #000;
-    cursor: help;
-}
-
-[ hidden ] {
-    display: none;
+    font-size: $font-size-8;
 }
 
 b, strong {
@@ -154,34 +232,38 @@ dfn {
     font-style: italic;
 }
 
-mark {
-    background: #ff0;
-    color: #000;
-}
+// fix space issue
 
-/* Basic nav for ul and ol. */
-nav ul, nav ol {
-    list-style: none;
-    list-style-image: none;
+[ hidden ] {
+    display: none;
 }
 
 // Form Reset
 
-.clickable, button, input[type="button"], input[type="reset"], input[type="submit"] {
+button, input, select, textarea {
+    margin: 0;
+}
+
+// Buttons
+
+.clickable, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="file"] {
     -webkit-appearance: button;
     cursor: pointer;
     width: auto;
-    overflow: visible;
+    overflow: hidden;
 }
 
 button[disabled], input[disabled] {
     cursor: default;
 }
 
-input[type="checkbox"], input[type="radio"] {
-    box-sizing: border-box;
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
     padding: 0;
 }
+
+// Search
 
 input[type="search"] {
     -webkit-appearance: textfield;
@@ -195,31 +277,16 @@ input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    border: 0;
+// Radio & Checkbox
+
+input[type="checkbox"], input[type="radio"] {
     padding: 0;
 }
 
-textarea {
-    overflow: auto;
-    vertical-align: top;
+input[type="radio"] {
+    vertical-align: text-bottom;
 }
 
-// Anchor Fix
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-    color: $color-link;
-    @include transit-color( $transit-eio, $transit-time-small );
-}
-
-a:focus {
-    outline: none;
-}
-
-a:active, a:hover {
-    outline: 0;
-    color: $color-link-h;
+input[type="checkbox"] {
+    vertical-align: bottom;
 }

@@ -1,7 +1,14 @@
 /**********************************************************************
-Description: It defines the styles for the header components available in CMGTools.
-Dependencies: variables, variables-ext, mixins
+Description: It defines the styles for header components available in CMT-UI css framework.
+
+Dependencies: none
+
+Details: It defines the styles for header components as listed below:
+* Header      - The barebone header class with minimum styles. The header can be made fixed or absolute.
+* Standard    - The standard header define the styles for primary header having logo and menus.
 ***********************************************************************/
+
+// == Structure - Header ============
 
 .header {
     position: relative;
@@ -10,21 +17,30 @@ Dependencies: variables, variables-ext, mixins
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 10000; // topmost element, popup must override this index
+        z-index: 10000; // modal popups must override this index
     }
 
     &.header-absolute {
         position: absolute;
         top: 0;
         width: 100%;
-        z-index: 10000; // topmost element, popup must override this index
+        z-index: 10000; // modal popups must override this index
     }
 }
 
-// Standard Header having logo, main menu and mobile menu icon. Logo is on left side and main menu, mobile menu icon on right side.
+// == Standard Header ===============
+
+/* Standard Header having logo, main menu and mobile menu icon.
+ * Responsive approach - Desktop first
+ * Logo - Placed on left side
+ * Main Menu - Placed on right side, hidden for tablet and mobile
+ * Mobile Menu - Placed on right side, hidden for desktop
+ */
 .header-standard {
     background-color: $color-header;
     color: $color-header-text;
+    position: relative;
+    z-index: 10000;
 
     .logo {
         cursor: pointer;

@@ -76,8 +76,11 @@
 // Custom elements need cmt-iconlib
 // ---------------------------------------//
 
-@import "cmt/elements/common";
-// project - common
+@import "cmt/elements/basic";
+// project - basic
+
+@import "cmt/elements/custom";
+// project - custom
 
 @import "cmt/elements/form";
 // project - form
@@ -85,17 +88,14 @@
 @import "cmt/elements/table";
 // project - table
 
-@import "cmt/elements/custom";
-// project - custom
-
 // ---------------------------------------//
 // Components Division - Optional
 // Re-usable components having barebone structure and default implementations.
 // ---------------------------------------//
 
-@import "cmt/components/menus";
-@import "cmt/components/menus-collapsible";
-@import "cmt/components/menus-social";
+@import "cmt/components/menus/basic";
+@import "cmt/components/menus/collapsible";
+@import "cmt/components/menus/social";
 // project - menus
 
 @import "cmt/components/headers";
@@ -115,19 +115,19 @@
 @import "cmt/components/blocks";
 // project - blocks
 
-@import "cmt/components/box";
-@import "cmt/components/box-form";
+@import "cmt/components/boxes/basic";
+@import "cmt/components/boxes/form";
 // project - boxes
 
-@import "cmt/components/grid-data";
-@import "cmt/components/pagination";
-@import "cmt/components/sorting";
+@import "cmt/components/grid/data";
+@import "cmt/components/grid/pagination";
+@import "cmt/components/grid/sorting";
 // project - data grids
 
 @import "cmt/components/blog";
 // project - blog grid
 
-@import "cmt/components/file-uploaders";
+@import "cmt/components/file-uploader";
 // project - file uploaders
 
 @import "cmt/components/flipper";

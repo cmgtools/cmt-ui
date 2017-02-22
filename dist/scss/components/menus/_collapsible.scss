@@ -1,3 +1,15 @@
+/**********************************************************************
+Description: It defines the styles for collapsible menu components available in CMT-UI css framework.
+
+Dependencies: none
+
+Details: It defines the collapsible menu components as listed below:
+* Collapsible Menu  - It's a 2 level vertical navigation and works together with cmtCollapsibleMenu jQuery plugin
+*                     available in CMT-JS framework. The primary and inactive items having children will remain in
+*                     collapsed state. The primary item in active state will remain expanded showing the children.
+*                     It's most appropriate for vertical sidebar menus having parent child arrangement.
+***********************************************************************/
+
 .collapsible-menu {
 
     .collapsible-tab {
@@ -5,9 +17,9 @@
         border-bottom: 1px solid #d3d3d3;
         border-top: 1px solid #ffffff;
     }
-  
+
     .collapsible-tab.active {
-        width: 98%; 
+        width: 98%;
         border-right: 4px solid #2b3d51;
     }
 

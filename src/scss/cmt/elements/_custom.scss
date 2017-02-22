@@ -1,9 +1,30 @@
 /**********************************************************************
-Description: The custom elements for CMGTools.
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+             elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+             for other standard libraries.
+
 Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+* Icon picker     - The icon picker element allows users to pick an item. It depends on cmtIconPicker jQuery
+*                   plugin available in CMT-JS framework.
+* Select          - The custom select allows user to select an item. It override the default select ui dependent
+*                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
+* Choice          - The choice allows user to select single or multiple options from available options. It include
+*                   radio and checkbox html components and change their default behaviour by showing good looking
+*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
+* Rating          - The rating element can be used to provide ratings.
+* Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
+* Auto Suggest    - The auto suggest class turns an input field to auto-suggest field. It depends on cmtAutoSuggest
+*                   jQuery plugin available in CMT-JS framework.
+* Button          - This class turns an element into button and does not need any JS to work.
+* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
+*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
+*                   appropriate postion.
 ***********************************************************************/
 
-// Icon Picker
+// == Icon Picker ===================
+
 .wrap-icon-picker {
     width: 100%;
 
@@ -53,7 +74,8 @@ Dependencies: variables, mixins, transitions, transformation
     }
 }
 
-// Custom Select
+// == Select ========================
+
 .cmt-select-wrap {
     margin: 0.25em 0;
     width: 100%;
@@ -123,8 +145,11 @@ Dependencies: variables, mixins, transitions, transformation
     }
 }
 
-//Choices - radio and checkbox
-.cmt-choice, .cmt-rating {
+// == Choice ========================
+
+// Choices using radio or checkbox
+
+.cmt-choice {
 
     input[type=checkbox], input[type=radio] {
         cursor: pointer;
@@ -186,7 +211,20 @@ Dependencies: variables, mixins, transitions, transformation
     }
 }
 
+// == Rating ========================
+
 .cmt-rating {
+    text-align: left;
+
+    // Span
+    .star {
+        display: inline-block;
+        padding: 0.30em;
+        margin-bottom: 0.75rem;
+        cursor: pointer;
+    }
+
+    // Radio or Checkbox
 
     input[type=checkbox]+.label.label-rating::before, input[type=radio]+.label.label-rating::before {
         margin-right: 8px;
@@ -201,7 +239,8 @@ Dependencies: variables, mixins, transitions, transformation
     }
 }
 
-// Toggle Buttons / Switches
+// == Switch ========================
+
 // Reference: http://callmenick.com/post/css-toggle-switch-examples
 .cmt-switch {
     position: relative;
@@ -263,6 +302,8 @@ Dependencies: variables, mixins, transitions, transformation
     }
 }
 
+// == Auto Suggest ==================
+
 .auto-suggest {
     position: relative;
 
@@ -294,7 +335,7 @@ Dependencies: variables, mixins, transitions, transformation
     }
 }
 
-// Generic button
+// == Button ========================
 
 .btn {
     @extend %element-style;
@@ -371,18 +412,58 @@ Dependencies: variables, mixins, transitions, transformation
     }
 }
 
-// parents having the delete button must use positioning
-.btn-delete {
-    position: absolute;
-    top: -0.5em;
-    right: -0.5em;
-    font-size: 1.25em;
-    color: $color-btn;
-    cursor: pointer;
-    @include transit-color( $transit-eio, $transit-time-small );
+// == Button Group ==================
 
-    &:hover {
-        color: $color-primary-text;
+// parents using button group must use positioning.
+
+.btn-group {
+
+    &.btn-group-top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+    }
+
+    &.btn-group-top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+
+    &.btn-group-bottom-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+    }
+
+    &.btn-group-bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+    }
+
+    & >.edit, & >.save, & >.delete {
+        color: $color-btn;
+        cursor: pointer;
+        @include transit-color( $transit-eio, $transit-time-small );
+
+        &:hover {
+            color: $color-btn-h;
+        }
+    }
+}
+
+// == Additionals ===================
+
+.cmt-click {
+    cursor: pointer;
+
+    &.disabled {
+        cursor: default;
     }
 }
 
@@ -391,85 +472,5 @@ Dependencies: variables, mixins, transitions, transformation
     label {
         width: auto;
         clear: none;
-    }
-}
-
-// Customisation for forms --------------------------
-
-.cmt-checkbox, .cmt-switch {
-    @extend %element-style;
-    @extend %element-style-field;
-}
-
-.cmt-checkbox, .cmt-switch {
-    background: none;
-
-    &:hover {
-        background: none;
-        color: $color-field-h-text;
-    }
-}
-
-// Ignore 100% width behavior for form elements
-
-.frm-ignore-100 {
-
-    .cmt-checkbox, .cmt-switch {
-        width: auto;
-    }
-}
-
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
-    width: 60%;
-    float: left;
-}
-
-.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap  {
-    width: 100%;
-}
-
-// Round cornered elements
-
-.frm-rounded-all .btn {
-      @include rounded( $size-medium );
-}
-
-.frm-rounded-top .btn {
-      @include rounded-top( $size-medium );
-}
-
-.frm-rounded-right .btn {
-      @include rounded-right( $size-medium );
-}
-
-.frm-rounded-bottom .btn {
-      @include rounded-bottom( $size-medium );
-}
-
-.frm-rounded-left .btn {
-      @include rounded-left( $size-medium );
-}
-
-/** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
-
-.frm-icon-element {
-
-    .btn {
-        padding-left: 1.75em;
-    }
-}
-
-.frm-split-40-60 .frm-icon-element {
-
-    .btn {
-        float: none;
-    }
-}
-
-.cmt-click {
-    cursor: pointer;
-
-    &.disabled {
-        cursor: default;
     }
 }

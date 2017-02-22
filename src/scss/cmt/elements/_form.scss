@@ -1,57 +1,102 @@
 /**********************************************************************
-Description: It defines the form elements styles for CMGTools.
+Description: It defines the styles of form elements for CMT-UI css framework.
+
 Dependencies: variables, mixins
+
+Details: It defines the styles of form elements as listed below:
+* Form              - The form occupy 100% width by default. This section adds classes so that we can make
+*                     fixed width responsive forms using these classes.
+* Extended classes  - This section define the extended classes required to style the form elements.
+* Label             - This section adds default styles for label.
+* Text              - This section adds default styles for text, email, password, textarea and select elements.
+* Button            - This section adds default styles for submit and button elements.
+* Ignore 100%       - This class allows form to ignore 100% width of elements.
+* Mandatory         - This class adds * to field lables marked as required.
+* Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
+*                     fields on right side.
+* Round corner      - This section define classes to make form elements round cornered.
+* Icon elements     - This class adds options to specify icon for an element. The icon will be added to left by
+*                     default, but it can also be displayed on right side.
+* Placeholder       - This section make placeholder color same for all the browsers.
 ***********************************************************************/
 
-// Forms
+// Notes: Refer reset for basic reset done for form elements.
+
+// == Forms =========================
 
 form {
     // make forms center aligned by default
     margin: 0 auto;
+    position: relative;
 
     // Fixed width forms
+    &.form-25 {
+        width: 25%;
+    }
+
+    &.form-50 {
+        width: 50%;
+    }
+
+    &.form-75 {
+        width: 75%;
+    }
+
     &.form-small {
-        width: 230px;
-        padding: $size-small-rem;
-        position: relative;
+        width: 300px;
     }
 
     &.form-medium {
-        width: 430px;
-        padding: $size-medium-rem;
-        position: relative;
+        width: 450px;
     }
 
     &.form-large {
-        width: 630px;
-        padding: $size-medium-rem;
-        position: relative;
+        width: 600px;
     }
 
     @include responsive-max( screen-tablet-large ) {
 
-        &.form-small, &.form-medium, &.form-large {
+        &.form-25, &.form-50, &.form-75, &.form-small, &.form-medium, &.form-large {
             width: 80%;
-            padding: $size-medium-rem 5%;
+            padding: $size-medium-rem 2%;
         }
     }
 }
 
-// Form Elements
+// == Form Elements =================
+
+// Messages
+.warning, .error, .success, .info {
+    margin-bottom: 0.75rem; // To match with form elements
+}
+
+.message {
+
+    &.warning, &.error, &.success, &.info {
+        margin-top: 0.75rem; // To match with form elements
+    }
+}
+
+// Required for Yii Forms
+.form-group .help-block {
+    margin-bottom: 0.75rem; // To match with form elements
+}
+
+// Extended classes
 
 %element-style {
     border: none;
     box-shadow: none;
     outline: none;
     font-size: 1em;
-    line-height: 1.25;
-    margin: 0.25em 0;
-    padding: 0.25em;
+    line-height: 1.30;
+    padding: 0.30em;
+    margin: 0;
     display: inline-block;
-    width: 100%;
 }
 
 %element-size {
+    width: 100%; // By default all elements will occupy 100% width
 
     &.element-25 {
         width: 25% !important;
@@ -87,6 +132,7 @@ form {
     background-color: $color-field;
     color: $color-field-text;
     text-align: left;
+    margin-bottom: 0.75rem;
 
     &:hover {
         background-color: $color-field-h;
@@ -94,8 +140,9 @@ form {
     }
 
     &:focus {
+        background-color: $color-field-f;
         color: $color-field-f-text;
-        @include shadow-inset( 0, 0, 0, $color-field-f, 1px );
+        @include shadow-inset( 0, 0, 0, $color-border-f, 1px );
     }
 
     &:disabled {
@@ -127,14 +174,17 @@ form {
     }
 }
 
+// Label
 label {
     @extend %element-style;
     @extend %element-size;
     //@extend %element-style-field;
     text-align: left;
     background: none;
+    margin-bottom: 0.75rem;
 }
 
+// Text
 input[type="text"], input[type="email"], input[type="password"], textarea, select {
     @extend %element-style;
     @extend %element-size;
@@ -142,7 +192,6 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
 }
 
 // Buttons
-
 input[type="submit"], input[type="button"], button {
     @extend %element-style;
     @extend %element-size;
@@ -156,6 +205,12 @@ input[type="submit"], input[type="button"], button {
     label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
         width: auto;
     }
+}
+
+// Mandatory fields
+.required .control-label:after {
+    content: " *";
+    color: $color-red;
 }
 
 // Splitted forms having label on left consuming 40% width and field on right side having remaining 60% width
@@ -174,11 +229,6 @@ input[type="submit"], input[type="button"], button {
     clear: both;
     width: 40%;
     float: left;
-}
-
-.required .control-label:after {
-    content: " *";
-    color: $color-red;
 }
 
 .element-40 label {
@@ -223,7 +273,7 @@ input[type="submit"], input[type="button"], button {
       @include rounded-left( $size-medium );
 }
 
-/** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
+/** Iconified Elements - Works in presence of CMT-Icons and Font Awsome. It can be overriden to use any preferred icon font library. */
 
 .frm-icon-element {
     position: relative;
@@ -263,26 +313,28 @@ input[type="submit"], input[type="button"], button {
         width: 100%;
     }
 
-    // compatible with CMGTools UI and other frameworks
-    .icon, .cmti {
+    // Compatible with CMT-Icons and other frameworks
+    .icon, .cmti, .fa {
         position: absolute;
         border: none;
         box-shadow: none;
         outline: none;
         font-size: 1em;
-        line-height: 1.25;
-        margin: 0.25em 0;
-        padding: 0.25em;
+        line-height: 1.30;
+        padding: 0.30em;
+        margin: 0;
+        margin-bottom: 0.5rem;
     }
 
-    &.reverse {
+    // Show icon on right side
+    &.icon-right {
 
         input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
-            padding-left: 0.25em;
+            padding-left: 0.30em;
             padding-right: 1.75em;
         }
 
-        .icon, .cmti {
+        .icon, .cmti, .fa {
             right: 0;
         }
     }
@@ -293,6 +345,121 @@ input[type="submit"], input[type="button"], button {
     float: left;
 
     input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
+        float: none;
+    }
+}
+
+// Placeholder
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: $color-placeholder;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: $color-placeholder;
+   opacity:  1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: $color-placeholder;
+   opacity:  1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: $color-placeholder;
+}
+
+// == Custom Elements ===============
+
+.cmt-checkbox, .cmt-switch {
+    @extend %element-style;
+    @extend %element-style-field;
+}
+
+.cmt-checkbox, .cmt-switch {
+    background: none;
+
+    &:hover {
+        background: none;
+        color: $color-field-h-text;
+    }
+}
+
+// Ignore 100% width behavior for form elements
+
+.frm-ignore-100 {
+
+    .cmt-checkbox, .cmt-switch {
+        width: auto;
+    }
+}
+
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
+    width: 60%;
+    float: left;
+}
+
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap  {
+    width: 100%;
+}
+
+// Round cornered elements
+
+.frm-rounded-all {
+
+      .btn {
+          @include rounded( $size-medium );
+      }
+}
+
+.frm-rounded-top {
+
+      .btn {
+          @include rounded-top( $size-medium );
+      }
+}
+
+.frm-rounded-right {
+
+      .btn {
+          @include rounded-right( $size-medium );
+      }
+}
+
+.frm-rounded-bottom {
+
+      .btn {
+          @include rounded-bottom( $size-medium );
+      }
+}
+
+.frm-rounded-left {
+
+      .btn {
+          @include rounded-left( $size-medium );
+      }
+}
+
+// Iconified Elements
+
+.frm-icon-element {
+
+    .btn {
+        padding-left: 1.75em;
+    }
+
+    &.icon-right {
+
+        .btn {
+            padding-left: 0.30em;
+            padding-right: 1.75em;
+        }
+    }
+}
+
+.frm-split-40-60 .frm-icon-element {
+
+    .btn {
         float: none;
     }
 }

@@ -1,0 +1,347 @@
+/**********************************************************************
+Description: It defines the styles for menu components available in CMT-UI css framework.
+
+Dependencies: none
+
+Details: It defines the menu components as listed below:
+* Nav             - The nav class can be applied to navigation menus. The anchors within the list item
+*                   will occupy 100% width in order work properly. The list items will be displayed in line
+*                   by default.
+* V Nav           - The vnav class is similar to nav except the items alignment. The list items will occupy
+*                   100% width to form vertical stack.
+* Table Nav       - The table nav uses display property to form the menu.
+* H Nav Regular   - It's a multi-level horizontal navigation and works without JS. We might need little JS to
+*                   make it fully responsive.
+* V Nav Regular   - It's a multi-level vertical navigation and works without JS.
+* V Nav Slider    - It's a vertical navigation and works together with cmtSlidingMenu jQuery plugin
+*                   available in CMT-JS framework. It's hidden by default and the plugin toggle the menu
+*                   visibility when user click on respective menu icon.
+***********************************************************************/
+
+// == Nav ===========================
+
+.nav {
+    display: block;
+
+    li {
+        display: inline-block;
+
+        a {
+            @include transit-all( $transit-eio, $transit-time-medium );
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+// == V Nav =========================
+
+.vnav {
+    display: block;
+
+    li {
+        display: inline-block;
+        width: 100%;
+
+        a {
+            @include transit-all( $transit-eio, $transit-time-medium );
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+// == Table Nav =====================
+
+.nav-table {
+    display: table;
+    // use border spacing to seperate navs
+    //border-spacing: $size-small-rem;
+    width: 100%;
+
+    li {
+        display: table-cell;
+        text-align: center;
+
+        a {
+            @include transit-all( $transit-eio, $transit-time-medium );
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}
+
+// == H Nav - Regular ===============
+
+/* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all
+ * modern web browsers. It need little javascript or jquery for mobile screens to expand or contract
+ * the immediate child menus for touch screens. It's best suited for main menu.
+ */
+.hnav-regular {
+    background-color: $color-primary;
+    @include border-bottom( $size-default, solid, $color-primary-l );
+    position: relative;
+
+    & > li {
+        display: inline-block;
+        text-align: left;
+        background-color: $color-primary;
+        @include border-bottom( $size-default, solid, $color-primary-l );
+        margin-bottom: -5px;
+        @include transit-all( $transit-eio, $transit-time-small );
+
+        & > a {
+            color: $color-primary-text;
+            font-size: $font-size-7;
+            line-height: 48px;
+            padding: 0 15px;
+            text-transform: uppercase;
+        }
+
+        &:hover > a {
+            background-color: $color-tertiary;
+            color: $color-tertiary-text;
+        }
+    }
+
+    li a {
+        display: inline-block;
+        text-decoration: none;
+        @include transit-color-bkg-color( $transit-eio, $transit-time-medium );
+    }
+
+    li.active > a {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+    }
+
+    li:hover .nav-sub {
+        display: block;
+    }
+
+    // Sub Menu
+    .nav-sub {
+        display: none;
+        position: absolute;
+        top: 53px;
+        left: 0;
+        padding: 10px 2%;
+        width: 96%;
+        background-color: $color-secondary;
+        @include shadow( 1px, 1px, 2px, $color-secondary );
+
+        & > li {
+            display: inline-block;
+            float: none;
+            padding: 10px 1%;
+            vertical-align: top;
+            width: 22%;
+
+            & > a {
+                font-size: $font-size-7;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+
+            a {
+                line-height: 20px;
+                color: $color-secondary-text-d;
+            }
+
+            li {
+                float: none;
+                padding-left: 5px;
+                @include transit-padding( $transit-eo, $transit-time-small );
+            }
+
+            li:hover {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    @include responsive-max( screen-tablet-large ) {
+
+        li, a {
+            width: 100%;
+        }
+
+        .nav-sub {
+            position: relative;
+            top: 0px;
+
+            li, a {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// == V Nav - Regular ===============
+
+/* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
+.vnav-regular {
+    @include border( $size-medium, solid, $color-primary-l );
+    position: relative;
+
+    li {
+        text-align: left;
+        border-bottom: border-default;
+        position: relative;
+        @include transit-all( $transit-eio, $transit-time-small );
+
+        .last {
+            border: none;
+        }
+    }
+
+    a {
+        display: block;
+        background-color: $color-primary;
+        color: $color-primary-text;
+        font-size: $font-size-7;
+        line-height: 35px;
+        width: 98%;
+        padding: 0 1%;
+        text-decoration: none;
+        @include transit-color-bkg-color( $transit-eio, $transit-time-medium );
+    }
+
+    li:hover > a {
+        background-color: $color-tertiary;
+        color: $color-tertiary-text;
+    }
+
+    li:hover > .nav-sub {
+        display: block;
+    }
+
+    .nav-sub {
+        display: none;
+        position: absolute;
+        top: -2px;
+        width: 250px;
+        margin-left: 100%;
+        @include border( $size-medium, solid, $color-primary-l );
+    }
+
+    @include responsive-max( screen-tablet-large ) {
+
+        .nav-sub {
+            position: relative;
+            top: 0px;
+            margin-left: 0;
+            width: 100%;
+            border: none;
+
+            a {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+// == V Nav - Slider ================
+
+/* Sliding Menu - It works together with Sliding Menu plugin shipped with CMGTools JS. */
+.vnav-slider-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $color-transparent-black;
+    display: none;
+    z-index: 10000000;
+
+    // Wraps slider header and content
+    .vnav-slider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 320px;
+        background-color: $color-primary-d;
+        color: $color-primary-text-d;
+
+        &.vnav-slider-left {
+            left: -320px;
+
+            // Close button having icon on left and text on right
+            .btn-close {
+                padding-left: 2em;
+
+                .btn-close-icon {
+                    margin-right: 0.5em;
+                }
+            }
+        }
+
+        &.vnav-slider-right {
+            right: -320px;
+
+            // Close button having icon on right and text on left
+            .btn-close {
+                padding-right: 2em;
+
+                .btn-close-icon {
+                    margin-left: 0.5em;
+                }
+            }
+        }
+
+        @include responsive-max( screen-mobile-large ) {
+
+            &.vnav-slider-left {
+                width: 100%;
+                left: -100%;
+            }
+
+            &.vnav-slider-right {
+                width: 100%;
+                right: -100%;
+            }
+        }
+    }
+
+    // Header with close button and hr at bottom
+    .vnav-slider-header {
+
+        .btn-close {
+            cursor: pointer;
+            padding: 1em;
+
+            &:hover {
+                color: $color-gray;
+            }
+        }
+
+        hr {
+            @include border-bottom( $size-default, solid, $color-tertiary-d );
+        }
+    }
+
+    .vnav-slider-menu {
+        width: 100%;
+        height: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+
+        ul {
+
+            li {
+                padding: 0.5em 0;
+
+                a {
+                    color: $color-primary-text-d;
+                    text-align: left;
+
+                    &:hover {
+                        color: $color-link;
+                    }
+                }
+            }
+        }
+    }
+}

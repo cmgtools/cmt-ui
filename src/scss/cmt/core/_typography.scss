@@ -73,6 +73,18 @@ html, body {
 .font-size {
     font-size: $font-size-7;
 
+    &.font-size-xxlarge {
+        font-size: $font-size-xxlarge;
+    }
+
+    &.font-size-xlarge {
+        font-size: $font-size-xlarge;
+    }
+
+    &.font-size-large {
+        font-size: $font-size-large;
+    }
+
     &.font-size-large-1 {
         font-size: $font-size-1;
     }
@@ -286,6 +298,10 @@ pre {
 a, .link {
     color: $color-link;
     @include transit-color( $transit-eio, $transit-time-small );
+
+    &:link, &:visited {
+        color: $color-link;
+    }
 
     &:active, &:hover {
         color: $color-link-h;

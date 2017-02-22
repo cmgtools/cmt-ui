@@ -163,14 +163,6 @@ pre {
     word-wrap: break-word; /* IE */
 }
 
-input[type="radio"] {
-    vertical-align: text-bottom;
-}
-
-input[type="checkbox"] {
-    vertical-align: bottom;
-}
-
 td img {
     vertical-align: top;
 }
@@ -252,20 +244,26 @@ button, input, select, textarea {
     margin: 0;
 }
 
+// Buttons
+
 .clickable, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="file"] {
     -webkit-appearance: button;
     cursor: pointer;
     width: auto;
-    overflow: visible;
+    overflow: hidden;
 }
 
 button[disabled], input[disabled] {
     cursor: default;
 }
 
-input[type="checkbox"], input[type="radio"] {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
     padding: 0;
 }
+
+// Search
 
 input[type="search"] {
     -webkit-appearance: textfield;
@@ -279,8 +277,16 @@ input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    border: 0;
+// Radio & Checkbox
+
+input[type="checkbox"], input[type="radio"] {
     padding: 0;
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+    vertical-align: bottom;
 }

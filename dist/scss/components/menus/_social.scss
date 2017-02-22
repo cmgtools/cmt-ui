@@ -1,6 +1,12 @@
 /**********************************************************************
-Description: It defines the styles for the social network menu components available in CMGTools.
-Dependencies: variables, variables-ext, mixins, CMGTools IconLib
+Description: It defines the styles for social network menu components available in CMT-UI css framework.
+
+Dependencies: none
+
+Details: It defines the social network menu components as listed below:
+* Social Menu     - The social menu class is special menu class used for social icons. It supports the social
+*                   icons available in CMT-Icons library. It can be further extended to support other icon
+*                   libraries.
 ***********************************************************************/
 
 .menu-social {
@@ -19,7 +25,9 @@ Dependencies: variables, variables-ext, mixins, CMGTools IconLib
 
     // Social Icons
     .cmti {
-        margin: 0.25rem 0.5rem;
+        margin: 0;
+        margin-bottom: 0.25rem;
+        margin-right: 0.5rem;
         padding: 0.25rem;
     }
 

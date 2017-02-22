@@ -1,22 +1,11 @@
 /**********************************************************************
-Description: It defines the default table style available in CMGTools.
+Description: It defines the table styles for CMT-UI css framework.
+
 Dependencies: variables, mixins
+
+Details: It defines the table styles as listed below:
+
 ***********************************************************************/
 
-// Tables Default Style
+// Notes: Refer reset for basic reset done for table, th and td.
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-th {
-    font-weight: bold;
-    vertical-align: middle;
-}
-
-td {
-    font-weight: normal;
-    vertical-align: middle;
-    padding: 0.25em 0;
-}

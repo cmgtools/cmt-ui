@@ -1,20 +1,26 @@
 /**********************************************************************
-Description: It defines the theme for JQuery UI Components from CMGTools.
+Description: It defines the themes for jQuery UI datepicker component to match with CMT-UI themes.
+
 Dependencies: variables, mixins
+
+Details: It defines the themes for jQuery UI datepicker component as listed below:
+* Datepicker        - The datepicker component can be used to pick date from calendar.
 ***********************************************************************/
+
+// == Datepicker ====================
 
 .ui-datepicker {
     position: relative;
     width:300px;
     background-color:$color-white;
     padding:5px;
-    display:none; 
-    @include shadow-inset( 0, 0, 0, $color-tertiary-l, $spread: 1px );   
+    display:none;
+    @include shadow-inset( 0, 0, 0, $color-tertiary-l, $spread: 1px );
 }
 
 .ui-datepicker-header {
     @extend %clearfix;
-    background-color: $color-tertiary;    
+    background-color: $color-tertiary;
     text-align: center;
 }
 
@@ -24,13 +30,11 @@ Dependencies: variables, mixins
     color: $color-tertiary-text;
 }
 
-
-
 .ui-datepicker-prev {
     float: left;
 }
 
-.ui-datepicker-next { 
+.ui-datepicker-next {
     float: right;
 }
 
@@ -64,17 +68,17 @@ Dependencies: variables, mixins
             margin: 5%;
         }
 
-        a {               
+        a {
             color: $color-tertiary-text-l;
-                       
+
             &:hover {
                 background-color: $color-tertiary;
-                color: $color-tertiary-text;                
+                color: $color-tertiary-text;
             }
 
             &.ui-state-active {
                 background-color: $color-tertiary-d;
-                color: $color-tertiary-text;                
+                color: $color-tertiary-text;
             }
         }
     }

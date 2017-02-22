@@ -1,9 +1,24 @@
 /**********************************************************************
-Description: It defines the styles for the menu components available in CMGTools.
-Dependencies: variables, variables-ext, mixins
+Description: It defines the styles for menu components available in CMT-UI css framework.
+
+Dependencies: none
+
+Details: It defines the menu components as listed below:
+* Nav             - The nav class can be applied to navigation menus. The anchors within the list item
+*                   will occupy 100% width in order work properly. The list items will be displayed in line
+*                   by default.
+* V Nav           - The vnav class is similar to nav except the items alignment. The list items will occupy
+*                   100% width to form vertical stack.
+* Table Nav       - The table nav uses display property to form the menu.
+* H Nav Regular   - It's a multi-level horizontal navigation and works without JS. We might need little JS to
+*                   make it fully responsive.
+* V Nav Regular   - It's a multi-level vertical navigation and works without JS.
+* V Nav Slider    - It's a vertical navigation and works together with cmtSlidingMenu jQuery plugin
+*                   available in CMT-JS framework. It's hidden by default and the plugin toggle the menu
+*                   visibility when user click on respective menu icon.
 ***********************************************************************/
 
-// Basic Navs
+// == Nav ===========================
 
 .nav {
     display: block;
@@ -18,6 +33,8 @@ Dependencies: variables, variables-ext, mixins
         }
     }
 }
+
+// == V Nav =========================
 
 .vnav {
     display: block;
@@ -34,6 +51,8 @@ Dependencies: variables, variables-ext, mixins
         }
     }
 }
+
+// == Table Nav =====================
 
 .nav-table {
     display: table;
@@ -53,10 +72,12 @@ Dependencies: variables, variables-ext, mixins
     }
 }
 
-// Nav Components
+// == H Nav - Regular ===============
 
-/* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
-   It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
+/* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all
+ * modern web browsers. It need little javascript or jquery for mobile screens to expand or contract
+ * the immediate child menus for touch screens. It's best suited for main menu.
+ */
 .hnav-regular {
     background-color: $color-primary;
     @include border-bottom( $size-default, solid, $color-primary-l );
@@ -157,6 +178,8 @@ Dependencies: variables, variables-ext, mixins
     }
 }
 
+// == V Nav - Regular ===============
+
 /* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
 .vnav-regular {
     @include border( $size-medium, solid, $color-primary-l );
@@ -219,6 +242,8 @@ Dependencies: variables, variables-ext, mixins
     }
 }
 
+// == V Nav - Slider ================
+
 /* Sliding Menu - It works together with Sliding Menu plugin shipped with CMGTools JS. */
 .vnav-slider-wrap {
     position: absolute;
@@ -242,24 +267,24 @@ Dependencies: variables, variables-ext, mixins
 
         &.vnav-slider-left {
             left: -320px;
-            
+
             // Close button having icon on left and text on right
             .btn-close {
                 padding-left: 2em;
-    
+
                 .btn-close-icon {
                     margin-right: 0.5em;
                 }
             }
         }
-    
+
         &.vnav-slider-right {
             right: -320px;
-    
+
             // Close button having icon on right and text on left
             .btn-close {
                 padding-right: 2em;
-    
+
                 .btn-close-icon {
                     margin-left: 0.5em;
                 }
@@ -267,7 +292,7 @@ Dependencies: variables, variables-ext, mixins
         }
 
         @include responsive-max( screen-mobile-large ) {
-            
+
             &.vnav-slider-left {
                 width: 100%;
                 left: -100%;

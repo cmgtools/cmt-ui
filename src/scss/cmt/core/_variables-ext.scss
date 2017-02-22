@@ -13,7 +13,8 @@ Details: It defines the extended variables derived from primary variables as lis
 ***********************************************************************/
 
 // Border, Gradient
-$color-border: $color-secondary;
+$color-border: $color-secondary; // Default border color
+$color-border-f: $color-tertiary; // Border color for focus
 $color-hr: $color-secondary;
 $color-gradient-1: $color-primary;
 $color-gradient-2: $color-secondary;

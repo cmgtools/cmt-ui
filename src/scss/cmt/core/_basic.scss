@@ -362,23 +362,57 @@ html, body {
 }
 
 // without margin and padding
+.mp {
 
-.margin-none {
-    margin: 0 !important;
-}
+    .mp-none {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 
-.padding-none {
-    padding: 0 !important;
-}
+    .mp-none-top {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
 
-.mp-none {
-    margin: 0 !important;
-    padding: 0 !important;
+    .mp-none-right {
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .mp-none-bottom {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .mp-none-left {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
 }
 
 // Padding
 
 .padding {
+
+    .padding-none {
+        padding: 0 !important;
+    }
+
+    .padding-none-top {
+        padding-top: 0 !important;
+    }
+
+    .padding-none-right {
+        padding-right: 0 !important;
+    }
+
+    .padding-none-bottom {
+        padding-bottom: 0 !important;
+    }
+
+    .padding-none-left {
+        padding-left: 0 !important;
+    }
 
     &.padding-default {
         padding: $size-default-rem;
@@ -454,6 +488,26 @@ html, body {
 // Margin
 
 .margin {
+
+    .margin-none {
+        margin: 0 !important;
+    }
+
+    .margin-none-top {
+        margin-top: 0 !important;
+    }
+
+    .margin-none-right {
+        margin-right: 0 !important;
+    }
+
+    .margin-none-bottom {
+        margin-bottom: 0 !important;
+    }
+
+    .margin-none-left {
+        margin-left: 0 !important;
+    }
 
     &.margin-default {
         margin: $size-default-rem;
@@ -837,17 +891,16 @@ html, body {
 
 // Messages
 
-.warning, .error, .success, .help, .help-block {
-    //display: inline-block;
-    width: 100%;
+.warning, .error, .success, .info, .help-block {
     font-size: $font-size-8;
+    width: 100%;
 
     &.highlight {
         background-color: $color-secondary;
     }
 }
 
-.error {
+.error{
     color: $color-error;
 }
 
@@ -864,6 +917,10 @@ html, body {
 }
 
 // Required for Yii Forms
+.form-group .help-block {
+    color: $color-error;
+}
+
 .error-field {
     @include border( $size-default, solid, $color-error );
     @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );

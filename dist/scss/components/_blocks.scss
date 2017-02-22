@@ -1,14 +1,24 @@
 /**********************************************************************
-Description: It defines the styles for the block components forming the page. We can devide the entire page in one or more blocks. 
-Each block can have background image with or without parallax effect, a content wrapper which wraps block header and content.
+Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
+             more blocks. Each block can have background image with or without parallax effect, a content wrapper which
+             wraps block header and content.
+
 Dependencies: variables, variables-ext, mixins
-Javascript: jquery, cmt-block
+
+Details: It defines the styles for header components as listed below:
+* Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
+*               listed options:
+*                   - It can have background image with or without parallax effects.
+*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
+*                     background and even content wrapper background in the form of image or texture.
+*                   - Height of block must not be set using min-height to get background with parallax working.
+* Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
+*               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
+*               by CMT-JS framework.
 ***********************************************************************/
 
-// Common for all the blocks
-// 1. The block can have background image with or without parallax effects.
-// 2. The content wrapper wraps the block header and block content. This gives opportunity to set block background and even content wrapper background in the form of image or texture.
-// 3. block height must not be set using min-height to get background with parallax working.
+// == Structure - Block =============
+
 .block {
     position: relative;
 
@@ -23,7 +33,7 @@ Javascript: jquery, cmt-block
         z-index: 1;
     }
 
-    // responsive background - full height blocks
+    // fixed background
     .block-bkg-fixed {
         @include bkg-image-fixed;
         width: 100%;
@@ -34,7 +44,7 @@ Javascript: jquery, cmt-block
         z-index: 1;
     }
 
-    // responsive background - fixed height blocks
+    // scrollable background
     .block-bkg-scroll {
         @include bkg-image-scroll;
         width: 100%;
@@ -45,7 +55,7 @@ Javascript: jquery, cmt-block
         z-index: 1;
     }
 
-    // responsive background with parallax 
+    // parallax background
     .block-bkg-parallax {
         @include bkg-image;
         width: 100%;
@@ -88,6 +98,7 @@ Javascript: jquery, cmt-block
         }
     }
 
+    // The splitter seperate a block from it's immediate successor
     .block-splitter {
         position: absolute;
         width: 100%;
@@ -113,8 +124,8 @@ Javascript: jquery, cmt-block
     }
 }
 
-// The Basic Block Component
-// 1. Basic Block takes 100 % width and height of it's parent. The height in % won't work in case parent's min-height property is set.
+// == Basic Block ===================
+
 .block-basic {
     position: relative;
     width: 100%;

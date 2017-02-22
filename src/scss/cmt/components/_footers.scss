@@ -1,9 +1,15 @@
 /**********************************************************************
-Description: It defines the styles for the footer components available in CMGTools.
-Dependencies: variables, variables-ext, mixins
+Description: It defines the styles for footer components available in CMT-UI css framework.
+
+Dependencies: none
+
+Details: It defines the styles for footer components as listed below:
+* Header      - The barebone footer class with minimum styles. The footer can be made sticky to stick at bottom.
+* Standard    - The standard footer define the styles for primary footer.
 ***********************************************************************/
 
-// Standard footer
+// == Structure - Footer ============
+
 .footer {
     position: relative;
 
@@ -12,14 +18,20 @@ Dependencies: variables, variables-ext, mixins
         left: 0px;
         bottom: 0px;
     }
+
+    @include responsive-max( screen-tablet-large ) {
+        padding: 1rem;
+    }
 }
 
-// Standard footer
+// == Standard - Footer =============
+
 .footer-standard {
-    background-color: $color-primary;
-    color: $color-primary-text;
+    background-color: $color-footer;
+    color: $color-footer-text;
     width: 100%;
     min-height: 50px;
+    position: relative;
     z-index: 10000;
 
     p {

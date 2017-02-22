@@ -1,15 +1,35 @@
 /**********************************************************************
-Description: The default text elements and font styles for CMGTools.
+Description: This file define the styles specific to typography available in CMT-UI css framework.
+
 Dependencies: variables, mixins
+
+Details: It defines the typography specific styles as listed below:
+* Default Font      - The default font and line height is set at document level.
+* Responsive font   - The fonts are made responsive by changing the size for most common screen sizes.
+* Font              - The font classes can be used to change element font.
+* Font size         - These classes use the font size variables defined in variables file.
+* Line height       - These classes define the line height to allow line spacing for better readability.
+* Headers           - The header classes define the line height, font and font size for headers.
+* Text              - It define the line height, font and font size for text elements.
+* Code              - Pre element with default text and background color.
+* Font weight       - The font weight classes can be used to change font weight of selected elements.
+* Font style        - These classes can be used to change the font styles including italic, underline,
+*                     uppercase, lowercose, text striking.
+* Text alignment    - The alignment classes to align text.
+* Word spacing      - This section includes classes to add space between words.
+* Link              - The link element using link colors in default, active and hover states.
+* Text with line    - This class can be used to decorate text having background line at center.
 ***********************************************************************/
+
+// TODO: Add support for viewport width.
 
 // Default font for entire html document
 html, body {
     font-family: $font-default;
-    line-height: 1;
+    line-height: $line-height-text;
 }
 
-// Base Font Size following mobile first approach. We have kept 3 font size as standard based on device range.
+// Base Font Size following mobile first approach. We have kept 4 font size(ranging 12px to 18px) as standard based on device range.
 html, body {
     // 12px on tablet devices. A little smaller than tablet. It can be overriden by project css if there is a need to follow the de-facto standard.
     font-size: 12px;
@@ -23,17 +43,19 @@ html, body {
     @include responsive-min( screen-tablet-large ) {
         font-size: 16px;
     }
+
+    // 18px on large desktop devices.
+    @include responsive-min( screen-desktop-large ) {
+        font-size: 18px;
+    }
 }
 
 /**
- * Standard Fonts - The font classes default, heading and code can be used for global headers and code font.
+ * Standard Fonts - The font classes default, heading and code based on font families defined in variables file.
  */
 
 .font {
-
-    &.font-default {
-        font-family: $font-default;
-    }
+    font-family: $font-default;
 
     &.font-heading {
         font-family: $font-heading;
@@ -49,6 +71,19 @@ html, body {
  */
 
 .font-size {
+    font-size: $font-size-7;
+
+    &.font-size-xxlarge {
+        font-size: $font-size-xxlarge;
+    }
+
+    &.font-size-xlarge {
+        font-size: $font-size-xlarge;
+    }
+
+    &.font-size-large {
+        font-size: $font-size-large;
+    }
 
     &.font-size-large-1 {
         font-size: $font-size-1;
@@ -74,10 +109,6 @@ html, body {
         font-size: $font-size-6;
     }
 
-    &.font-size-default {
-        font-size: $font-size-7;
-    }
-
     &.font-size-small {
         font-size: $font-size-8;
     }
@@ -92,19 +123,27 @@ html, body {
     line-height: 1em;
 
     &.line-height-small {
-        line-height: 1.5em;
+        line-height: 1.2em;
     }
 
     &.line-height-medium {
-        line-height: 2em;
+        line-height: 1.4em;
     }
 
     &.line-height-large {
-        line-height: 2.5em;
+        line-height: 2em;
     }
 
     &.line-height-xlarge {
-        line-height: 3em;
+        line-height: 2.6em;
+    }
+
+    &.line-height-header {
+        line-height: $line-height-header;
+    }
+
+    &.line-height-text {
+        line-height: $line-height-text;
     }
 }
 
@@ -136,25 +175,24 @@ h6, .h6 {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
     verticle-align: middle;
-    padding: 0.25em 0;
-    margin: 0.25em 0;
+    line-height: $line-height-header;
+    margin-bottom: 1rem;
     font-family: $font-heading;
 }
 
 // Text Elements
-
 p, span, em, div, a {
     font-size: $font-size-7;
+    line-height: $line-height-text;
 }
 
 // Content for reading purpose
-
 .reader {
     font-size: $font-size-7;
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
-// Coding - Required to highlight code
+// Coding - Required to highlight code snippets
 pre {
     font-family: $font-code;
     color: $color-gray-d;
@@ -162,13 +200,20 @@ pre {
 }
 
 // Font Weight
+.normal {
+    font-weight: normal;
+}
 
 .bold {
     font-weight: bold;
 }
 
-.normal {
-    font-weight: normal;
+.bolder {
+    font-weight: bolder;
+}
+
+.lighter {
+    font-weight: lighter;
 }
 
 // Text Style and Decoration
@@ -193,75 +238,73 @@ pre {
     text-decoration: line-through;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+.break-word {
+    word-wrap: break-word;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+}
+
+// Text Alignment
+
+.text-align {
+    text-align: left !important;
+
+    &.text-align-center {
+        text-align: center !important;
+    }
+
+    &.text-align-right {
+        text-align: right !important;
+    }
+
+    &.text-align-justify {
+        text-align: justify !important;
+    }
+}
+
+// Word Spacing
+.word-spacing {
+    word-spacing: 5px;
+
+    .word-spacing-small {
+        word-spacing: 10px;
+    }
+
+    .word-spacing-medium {
+        word-spacing: 15px;
+    }
+
+    .word-spacing-large {
+        word-spacing: 20px;
+    }
+
+    .word-spacing-xlarge {
+        word-spacing: 25px;
+    }
+}
+
 // Links
 
 a, .link {
     color: $color-link;
+    @include transit-color( $transit-eio, $transit-time-small );
 
-    &:hover {
+    &:link, &:visited {
+        color: $color-link;
+    }
+
+    &:active, &:hover {
         color: $color-link-h;
-    }
-}
-
-// Text Colors
-.text {
-    // default to primary text
-    color: $color-primary-text !important;
-
-    &.text-secondary {
-        color: $color-secondary-text !important;
-    }
-
-    &.text-tertiary {
-        color: $color-tertiary-text !important;
-    }
-
-    &.text-black {
-        color: $color-black !important;
-    }
-
-    &.text-gray {
-        color: $color-gray !important;
-    }
-
-    &.text-white {
-        color: $color-white !important;
-    }
-
-    &.text-blue {
-        color: $color-blue !important;
-    }
-
-    &.text-purple {
-        color: $color-purple !important;
-    }
-
-    &.text-orange {
-        color: $color-orange !important;
-    }
-
-    &.text-yellow {
-        color: $color-yellow !important;
-    }
-
-    &.text-red {
-        color: $color-red !important;
-    }
-
-    &.text-pink {
-        color: $color-pink !important;
-    }
-
-    &.text-magenta {
-        color: $color-magenta !important;
-    }
-
-    &.text-green {
-        color: $color-green !important;
-    }
-
-    &.text-green-d {
-        color: $color-green-d !important;
     }
 }
 
@@ -275,6 +318,6 @@ a, .link {
         display: inline-block;
         margin-top: -1.25em;
         padding: 0 1rem;
-        background-color: $color-primary;
+        background-color: $color-hr;
     }
 }

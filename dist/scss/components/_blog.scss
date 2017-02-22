@@ -1,9 +1,30 @@
 /**********************************************************************
-Description: It defines the styles for the Blog Widgets of cms module for CMSGears following components approach.
-Dependencies: variables, mixins
+Description: It defines the styles of the blog components used to show blog posts on recent, popular, similar and
+             related widget. The blog posts will also be displayed on blog, category, tag, author and archive pages.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of blog components as listed below:
+* Blog          - The barebone blog class with minimum styles common for all the blog components. The base class can
+*                 have below listed options:
+*                     - It wraps multiple posts having banner, title, summary, author and publish info.
+*                     - It might also show pagination to navigate through pages.
+*                     - It might support ajax based pagination following either traditional page links or scroll
+*                       based pagination.
+* Basic         - It shows banner floated left and content flowing below banner. Author is next to banner with time
+*                 details. Title is below author and than content flows.
+* Regular       - It shows banner, author avatar, and info in single row. Title in second row. Content in 3rd row and
+*                 post info in 4th row.
+* Banner        - It shows banner in first row. An icon will be displayed if user hover on banner. Title in second row.
+*                 Content in 3rd row and post info in 4th row.
+* Single Post   - The barebone class for single post. The post will be displayed on it's page showing full content, banner
+*                 and author details.
+* Basic Single  - Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
 ***********************************************************************/
 
-.blog-posts {
+// == Structure - Blog ==============
+
+.blog {
 
     .post {
         // single post used to show post details including banner, author and content
@@ -11,8 +32,14 @@ Dependencies: variables, mixins
         .post-banner {
             // banner - it can be either background image or img
 
+            .texture {
+                // texture on top of banner
+                z-index: 10;
+            }
+
             .post-title {
                 // post title - sometimes title goes with post banner
+                z-index: 20;
             }
         }
 
@@ -50,8 +77,9 @@ Dependencies: variables, mixins
     }
 }
 
-// It shows banner floated left and content flowing below banner. Author is next to banner with time details. Title is below author and than content flows.
-.blog-posts-basic {
+// == Basic Blog ====================
+
+.blog-basic {
 
     .post {
         margin-bottom: 1em;
@@ -117,8 +145,9 @@ Dependencies: variables, mixins
     }
 }
 
-// It shows banner, author avatar, and info in single row. Title in second row. Content in 3rd row and post info in 4th row.
-.blog-posts-regular {
+// == Regular Blog ==================
+
+.blog-regular {
 
     .post {
         margin-bottom: 1em;
@@ -184,8 +213,9 @@ Dependencies: variables, mixins
     }
 }
 
-// It shows banner in first row. An icon will be displayed if user hover on banner. Title in second row. Content in 3rd row and post info in 4th row.
-.blog-posts-banner {
+// == Banner Blog ===================
+
+.blog-banner {
 
     .post {
         margin-bottom: 1em;
@@ -302,12 +332,23 @@ Dependencies: variables, mixins
     }
 }
 
-// Single Post
+// == Single Post - Structure =======
+
 .post-single {
     // post
 
     .post-banner {
         // banner
+
+        .texture {
+            // texture on top of banner
+            z-index: 10;
+        }
+
+        .post-title {
+            // post title - sometimes title goes with post banner
+            z-index: 20;
+        }
     }
 
     .post-author {
@@ -337,7 +378,8 @@ Dependencies: variables, mixins
     }
 }
 
-// Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
+// == Basic Single Post =============
+
 .post-single-basic {
     padding: 1em;
     background-color: $color-primary-l;
