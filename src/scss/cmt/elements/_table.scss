@@ -9,3 +9,40 @@ Details: It defines the table styles as listed below:
 
 // Notes: Refer reset for basic reset done for table, th and td.
 
+table {
+
+    th {
+        text-align: left;
+        padding: 0.25rem;
+    }
+
+    td {
+        padding: 0.25rem;
+    }
+}
+
+.table {
+
+    &.table-zebra {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+
+        tbody {
+
+            tr {
+                background-color: $color-primary;
+                color: $color-primary-text;
+            }
+
+            tr:nth-child(odd) {
+                background-color: $color-primary-d;
+                color: $color-primary-text-d;
+            }
+
+            tr:hover {
+                background-color: $color-primary-l;
+                color: $color-primary-text-l;
+            }
+        }
+    }
+}

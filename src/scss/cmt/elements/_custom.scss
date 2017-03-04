@@ -77,7 +77,6 @@ Details: It defines the custom element styles as listed below:
 // == Select ========================
 
 .cmt-select-wrap {
-    margin: 0.25em 0;
     width: 100%;
 
     select {
@@ -100,6 +99,7 @@ Details: It defines the custom element styles as listed below:
                 display: inline-block;
                 width: 100%;
                 overflow: hidden;
+                white-space: nowrap;
                 text-align: left;
                 padding: 0.25em;
                 color: $color-field-text;

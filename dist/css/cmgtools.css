@@ -2419,6 +2419,7 @@ pre {
 
 a, .link {
   color: #298ccf;
+  cursor: pointer;
   -moz-transition: color 250ms ease-in-out 0s;
   -ms-transition: color 250ms ease-in-out 0s;
   -o-transition: color 250ms ease-in-out 0s;
@@ -2430,13 +2431,13 @@ a, .link {
     color: #E74343; }
 
 .text-with-line {
-  text-align: center;
-  border-top: 1px solid #000000;
-  margin: 1rem 0; }
+  width: 100%;
+  height: 0.75em;
+  border-bottom: 1px solid #3C4655;
+  text-align: center; }
   .text-with-line .text-content {
     display: inline-block;
-    margin-top: -1.25em;
-    padding: 0 1rem;
+    padding: 0 1em;
     background-color: #3C4655; }
 
 /**********************************************************************
@@ -2485,13 +2486,15 @@ Details: It defines the grid system and basic containers as listed below:
       float: none !important; }
     .row.row-inline > .col3 {
       width: 30%; }
+    .row.row-inline > .col4 {
+      width: 22.5%; }
     @media only screen and (max-width: 1024px) {
-      .row.row-inline.max-cols-50 > .col3 {
+      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4 {
         width: 47%; }
-      .row.row-inline.max-cols-100 > .col3 {
+      .row.row-inline.max-cols-100 > .col3, .row.row-inline.max-cols-100 > .col4 {
         width: 98%; } }
     @media only screen and (max-width: 480px) {
-      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-100 > .col3 {
+      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4, .row.row-inline.max-cols-100 > .col3, .row.row-inline.max-cols-100 > .col4 {
         width: 98%; } }
 
 .col {
@@ -3058,7 +3061,6 @@ Details: It defines the custom element styles as listed below:
         margin: 2px; }
 
 .cmt-select-wrap {
-  margin: 0.25em 0;
   width: 100%; }
   .cmt-select-wrap select {
     display: none; }
@@ -3074,6 +3076,7 @@ Details: It defines the custom element styles as listed below:
         display: inline-block;
         width: 100%;
         overflow: hidden;
+        white-space: nowrap;
         text-align: left;
         padding: 0.25em;
         color: #363636; }
@@ -3368,13 +3371,13 @@ form {
       padding: 1rem 2%; } }
 
 .warning, .error, .success, .info {
-  margin-bottom: 0.75rem; }
+  margin-bottom: 0.25rem; }
 
 .message.warning, .message.error, .message.success, .message.info {
-  margin-top: 0.75rem; }
+  margin-top: 0.25rem; }
 
 .form-group .help-block {
-  margin-bottom: 0.75rem; }
+  margin-bottom: 0.25rem; }
 
 .btn, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
   border: none;
@@ -3412,7 +3415,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   background-color: #F2F2F2;
   color: #363636;
   text-align: left;
-  margin-bottom: 0.75rem; }
+  margin-bottom: 0.25rem; }
   input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
     background-color: #E9E9E9;
     color: #363636; }
@@ -3449,7 +3452,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
 label {
   text-align: left;
   background: none;
-  margin-bottom: 0.75rem; }
+  margin-bottom: 0.25rem; }
 
 .frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button {
   width: auto; }
@@ -3457,6 +3460,9 @@ label {
 .required .control-label:after {
   content: " *";
   color: #B42A1A; }
+
+.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
+  width: 100%; }
 
 .frm-split-40-60 label, .element-40 {
   clear: both;
@@ -3566,6 +3572,9 @@ label {
   .frm-split-40-60 .frm-icon-element input[type="text"], .frm-split-40-60 .frm-icon-element input[type="email"], .frm-split-40-60 .frm-icon-element input[type="password"], .frm-split-40-60 .frm-icon-element textarea, .frm-split-40-60 .frm-icon-element select, .frm-split-40-60 .frm-icon-element input[type="submit"], .frm-split-40-60 .frm-icon-element input[type="button"], .frm-split-40-60 .frm-icon-element button {
     float: none; }
 
+.frm-split-40-60 .ignore-40-60 .frm-icon-element {
+  width: 100%; }
+
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #aaaaaa; }
@@ -3660,6 +3669,26 @@ Dependencies: variables, mixins
 Details: It defines the table styles as listed below:
 
 ***********************************************************************/
+table th {
+  text-align: left;
+  padding: 0.25rem; }
+
+table td {
+  padding: 0.25rem; }
+
+.table.table-zebra {
+  background-color: #3C4655;
+  color: #96B0D6; }
+  .table.table-zebra tbody tr {
+    background-color: #F2F2F2;
+    color: #363636; }
+  .table.table-zebra tbody tr:nth-child(odd) {
+    background-color: lightgray;
+    color: #555555; }
+  .table.table-zebra tbody tr:hover {
+    background-color: white;
+    color: #171717; }
+
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.
 
@@ -4208,15 +4237,9 @@ Dependencies: variables, mixins
     display: inline-block; }
 
 .popup {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 999999999;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.6); }
-  .popup .popup-bkg {
+  position: relative;
+  display: none; }
+  .popup .popup-screen {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -4224,24 +4247,32 @@ Dependencies: variables, mixins
     height: 100%;
     z-index: 5;
     background-color: rgba(0, 0, 0, 0.6); }
-  .popup .popup-bkg-filler {
+  .popup .popup-bkg {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
     z-index: 10; }
+  .popup .popup-screen-listener {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 15; }
   .popup .popup-data {
     position: relative;
     z-index: 50;
-    background-color: #F2F2F2;
-    -webkit-box-shadow: 1px 1px 5px 0px lightgray;
-    -moz-box-shadow: 1px 1px 5px 0px lightgray;
-    box-shadow: 1px 1px 5px 0px lightgray;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -khtml-border-radius: 5px; }
+    background-color: #3C4655;
+    color: #96B0D6; }
+    .popup .popup-data .popup-data-bkg {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 100; }
     .popup .popup-data.popup-data-small {
       height: 200px;
       width: 400px; }
@@ -4251,30 +4282,39 @@ Dependencies: variables, mixins
     .popup .popup-data.popup-data-large {
       height: 400px;
       width: 800px; }
-    .popup .popup-data .popup-close {
-      position: absolute;
-      top: -5px;
-      right: -5px;
-      display: inline-block;
-      color: #87BA45;
-      cursor: pointer; }
     .popup .popup-data .popup-wrap-title {
+      position: relative;
+      z-index: 150;
       width: 100%;
-      background-color: #3C4655;
-      color: #96B0D6;
-      -moz-border-radius-top-left: 5px;
-      -moz-border-radius-top-right: 5px;
-      -webkit-border-radius-top-left: 5px;
-      -webkit-border-radius-top-right: 5px;
-      border-radius: 5px 5px 0 0;
-      -khtml-border-radius-top-left: 5px;
-      -khtml-border-radius-top-right: 5px;
+      background-color: #87BA45;
+      color: #E6E6E6;
       padding: 1rem; }
       .popup .popup-data .popup-wrap-title .popup-title {
         font-size: 1.5em;
         font-weight: bold; }
     .popup .popup-data .popup-content {
+      position: relative;
+      z-index: 150;
       padding: 1rem; }
+    .popup .popup-data .popup-close {
+      position: absolute;
+      z-index: 200;
+      top: -5px;
+      right: -5px;
+      display: inline-block;
+      color: #298ccf;
+      cursor: pointer; }
+  @media only screen and (max-width: 768px) {
+    .popup .popup-data-small, .popup .popup-data-medium, .popup .popup-data-large {
+      width: 90% !important; } }
+
+.popup-modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999; }
 
 /**********************************************************************
 Description: It defines the styles for login components available in CMT-UI css framework.

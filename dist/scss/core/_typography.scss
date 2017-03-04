@@ -297,6 +297,7 @@ pre {
 
 a, .link {
     color: $color-link;
+    cursor: pointer;
     @include transit-color( $transit-eio, $transit-time-small );
 
     &:link, &:visited {
@@ -310,14 +311,14 @@ a, .link {
 
 // Text at center with background line
 .text-with-line {
+    width: 100%;
+    height: 0.75em;
+    border-bottom: 1px solid $color-hr;
     text-align: center;
-    border-top: 1px solid $color-black;
-    margin: 1rem 0;
 
     .text-content {
         display: inline-block;
-        margin-top: -1.25em;
-        padding: 0 1rem;
+        padding: 0 1em;
         background-color: $color-hr;
     }
 }
