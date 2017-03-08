@@ -2876,6 +2876,10 @@ Details: It defines the grid system and basic containers as listed below:
     top: 0px;
     bottom: 0px;
     float: none; }
+    .wrap-col-filler .col-filler.col-filler-left {
+      left: 0; }
+    .wrap-col-filler .col-filler.col-filler-right {
+      right: 0; }
 
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.
@@ -3955,61 +3959,56 @@ Details: It defines the collapsible menu components as listed below:
 *                     It's most appropriate for vertical sidebar menus having parent child arrangement.
 ***********************************************************************/
 .collapsible-menu .collapsible-tab {
+  width: 100%; }
+
+.collapsible-menu-basic .collapsible-tab {
   width: 100%;
   border-bottom: 1px solid #d3d3d3;
   border-top: 1px solid #ffffff; }
-
-.collapsible-menu .collapsible-tab.active {
-  width: 98%;
-  border-right: 4px solid #2b3d51; }
-
-.collapsible-menu .collapsible-tab.active .collapsible-tab-header, .collapsible-menu .collapsible-tab.pactive .collapsible-tab-header {
-  background-color: #d9dce0;
-  font-family: Verdana, Geneva, sans-serif; }
-
-.collapsible-menu .collapsible-tab.active .active {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 1.2em; }
-
-.collapsible-menu .collapsible-tab-header {
-  cursor: pointer;
-  height: 50px;
-  line-height: 50px; }
-
-.collapsible-menu .collapsible-tab-header:hover {
-  background-color: #d9dce0; }
-
-.collapsible-menu .collapsible-tab-header a {
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  cursor: pointer;
-  color: #2b3d51; }
-
-.collapsible-menu .collapsible-tab-header .wrap-icon {
-  text-align: center; }
-
-.collapsible-menu .collapsible-tab-content {
-  padding-left: 25%;
-  display: none;
-  -moz-box-shadow: inset 0px 0px 2px #909090;
-  -webkit-box-shadow: inset 0px 0px 2px #909090;
-  box-shadow: inset 0px 0px 2px #909090; }
-
-.collapsible-menu .collapsible-tab-content ul li {
-  width: 100%;
-  text-align: left; }
-
-.collapsible-menu .collapsible-tab-content ul li a {
-  color: #4f5e7f;
-  font-size: 0.8em;
-  line-height: 25px;
-  width: 95%;
-  display: block;
-  padding-left: 5%; }
-
-.collapsible-menu .collapsible-tab-content ul li a:hover {
-  background-color: #d9dce0; }
+  .collapsible-menu-basic .collapsible-tab .tab-header {
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px; }
+    .collapsible-menu-basic .collapsible-tab .tab-header:hover {
+      background-color: #d9dce0; }
+    .collapsible-menu-basic .collapsible-tab .tab-header a {
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      cursor: pointer;
+      color: #2b3d51; }
+    .collapsible-menu-basic .collapsible-tab .tab-header .wrap-icon {
+      text-align: center; }
+  .collapsible-menu-basic .collapsible-tab .tab-content {
+    padding-left: 25%;
+    display: none;
+    -moz-box-shadow: inset 0px 0px 2px #909090;
+    -webkit-box-shadow: inset 0px 0px 2px #909090;
+    box-shadow: inset 0px 0px 2px #909090; }
+    .collapsible-menu-basic .collapsible-tab .tab-content ul li {
+      width: 100%;
+      text-align: left; }
+      .collapsible-menu-basic .collapsible-tab .tab-content ul li a {
+        color: #4f5e7f;
+        font-size: 0.8em;
+        line-height: 25px;
+        width: 95%;
+        display: block;
+        padding-left: 5%; }
+        .collapsible-menu-basic .collapsible-tab .tab-content ul li a:hover {
+          background-color: #d9dce0; }
+  .collapsible-menu-basic .collapsible-tab.active {
+    width: 98%;
+    border-right: 4px solid #2b3d51; }
+    .collapsible-menu-basic .collapsible-tab.active .tab-header {
+      background-color: #d9dce0;
+      font-family: Verdana, Geneva, sans-serif; }
+    .collapsible-menu-basic .collapsible-tab.active .tab-content .tab-child.active {
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 1.2em; }
+  .collapsible-menu-basic .collapsible-tab.expanded .tab-header {
+    background-color: #d9dce0;
+    font-family: Verdana, Geneva, sans-serif; }
 
 /**********************************************************************
 Description: It defines the styles for social network menu components available in CMT-UI css framework.

@@ -14,70 +14,156 @@ Details: It defines the collapsible menu components as listed below:
 
     .collapsible-tab {
         width: 100%;
+
+        .marker {
+            // marker to distinguish active or expanded tab. Normally it could be a vertical line either on left or right side.
+        }
+
+        .tab-header {
+            // tab header - default state
+
+            .tab-title {
+                // tab header title
+            }
+
+            .tab-arrow {
+                // arrow to show whether children are there
+            }
+        }
+
+        .tab-content {
+            // tab content - at most one
+
+            .tab-child {
+                // tab child - at least one
+
+                .child-title {
+                    // tab header title
+                }
+            }
+        }
+
+        &.active {
+            // active tab - pre-activated on page load
+
+            .tab-header {
+                // tab header - active state
+            }
+
+            .tab-content {
+                // tab content - active state
+
+                .tab-child {
+                    // tab child - active state
+
+                    &.active {
+                        // tab child - active child
+                    }
+                }
+            }
+        }
+
+        &.expanded {
+            // active tab - expanded on user action
+
+            .tab-header {
+                // tab header - expanded state
+            }
+
+            .tab-content {
+                // tab content - expanded state
+
+                .tab-child {
+                    // tab child - expanded state
+                }
+            }
+        }
+    }
+}
+
+// The basic implementation of collapsible menu
+.collapsible-menu-basic {
+
+    .collapsible-tab {
+        width: 100%;
         border-bottom: 1px solid #d3d3d3;
         border-top: 1px solid #ffffff;
-    }
 
-    .collapsible-tab.active {
-        width: 98%;
-        border-right: 4px solid #2b3d51;
-    }
+        .tab-header {
+            cursor: pointer;
+            height: 50px;
+            line-height: 50px;
 
-    .collapsible-tab.active .collapsible-tab-header, .collapsible-tab.pactive .collapsible-tab-header {
-        background-color: #d9dce0;
-        font-family: $font-heading;
-    }
+            &:hover {
+                background-color: #d9dce0;
+            }
 
-    .collapsible-tab.active .active {
-        font-family: $font-heading;
-        font-size:1.2em;
-    }
+            a {
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                cursor: pointer;
+                color: #2b3d51;
+            }
 
-    .collapsible-tab-header {
-        cursor: pointer;
-        height: 50px;
-        line-height: 50px;
-    }
+            .wrap-icon {
+                text-align: center;
+            }
+        }
 
-    .collapsible-tab-header:hover {
-        background-color: #d9dce0;
-    }
+        .tab-content {
+            padding-left: 25%;
+            display: none;
+            -moz-box-shadow:inset 0px 0px 2px #909090;
+            -webkit-box-shadow:inset 0px 0px 2px #909090;
+            box-shadow:inset 0px 0px 2px #909090;
 
-    .collapsible-tab-header a {
-        display: block;
-        height: 50px;
-        line-height: 50px;
-        cursor: pointer;
-        color: #2b3d51;
-    }
+            ul li {
+                width: 100%;
+                text-align: left;
 
-    .collapsible-tab-header .wrap-icon {
-        text-align: center;
-    }
+                a {
+                    color: #4f5e7f;
+                    font-size: 0.8em;
+                    line-height: 25px;
+                    width: 95%;
+                    display: block;
+                    padding-left: 5%;
 
-    .collapsible-tab-content {
-        padding-left: 25%;
-        display: none;
-        -moz-box-shadow:inset 0px 0px 2px #909090;
-        -webkit-box-shadow:inset 0px 0px 2px #909090;
-        box-shadow:inset 0px 0px 2px #909090;
-    }
+                    &:hover {
+                        background-color:#d9dce0;
+                    }
+                }
+            }
+        }
 
-    .collapsible-tab-content ul li {
-        width: 100%;
-        text-align: left;
-    }
+        &.active {
+            width: 98%;
+            border-right: 4px solid #2b3d51;
 
-    .collapsible-tab-content ul li a {
-        color: #4f5e7f;
-        font-size: 0.8em;
-        line-height: 25px;
-        width:95%;
-        display:block;
-        padding-left:5%;
-    }
+            .tab-header {
+                background-color: #d9dce0;
+                font-family: $font-heading;
+            }
 
-    .collapsible-tab-content ul li a:hover {
-        background-color:#d9dce0;
+            .tab-content {
+
+                .tab-child {
+
+                    &.active {
+                        font-family: $font-heading;
+                        font-size:1.2em;
+                    }
+                }
+            }
+        }
+
+        &.expanded {
+
+            .tab-header {
+                background-color: #d9dce0;
+                font-family: $font-heading;
+            }
+        }
     }
 }

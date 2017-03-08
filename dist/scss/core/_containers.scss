@@ -421,6 +421,14 @@ Details: It defines the grid system and basic containers as listed below:
         top: 0px;
         bottom: 0px;
         float: none;
+
+        &.col-filler-left {
+            left: 0;
+        }
+
+        &.col-filler-right {
+            right: 0;
+        }
     }
 }
 
