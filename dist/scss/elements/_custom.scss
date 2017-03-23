@@ -6,18 +6,26 @@ Description: It defines the styles of custom elements available in CMT-UI css fr
 Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
+
 * Icon picker     - The icon picker element allows users to pick an item. It depends on cmtIconPicker jQuery
 *                   plugin available in CMT-JS framework.
+*
 * Select          - The custom select allows user to select an item. It override the default select ui dependent
 *                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
+*
 * Choice          - The choice allows user to select single or multiple options from available options. It include
 *                   radio and checkbox html components and change their default behaviour by showing good looking
 *                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
+*
 * Rating          - The rating element can be used to provide ratings.
+*
 * Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
+*
 * Auto Suggest    - The auto suggest class turns an input field to auto-suggest field. It depends on cmtAutoSuggest
 *                   jQuery plugin available in CMT-JS framework.
+*
 * Button          - This class turns an element into button and does not need any JS to work.
+*
 * Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
 *                   parent element must use positioning i.e. absolute, relative etc in order to place group at
 *                   appropriate postion.
@@ -101,8 +109,10 @@ Details: It defines the custom element styles as listed below:
                 overflow: hidden;
                 white-space: nowrap;
                 text-align: left;
-                padding: 0.25em;
                 color: $color-field-text;
+                font-size: 1em;
+                line-height: 1.30;
+                padding: 0.30em 0.25em;
             }
 
             // icon for select box
@@ -410,6 +420,13 @@ Details: It defines the custom element styles as listed below:
             color: $color-btn-text !important;
         }
     }
+}
+
+// == Icon Button ===================
+
+.btn-icon {
+    @extend %element-style;
+    @extend %element-style-action;
 }
 
 // == Button Group ==================

@@ -4,19 +4,30 @@ Description: It defines the styles of form elements for CMT-UI css framework.
 Dependencies: variables, mixins
 
 Details: It defines the styles of form elements as listed below:
+
 * Form              - The form occupy 100% width by default. This section adds classes so that we can make
 *                     fixed width responsive forms using these classes.
+*
 * Extended classes  - This section define the extended classes required to style the form elements.
+*
 * Label             - This section adds default styles for label.
+*
 * Text              - This section adds default styles for text, email, password, textarea and select elements.
+*
 * Button            - This section adds default styles for submit and button elements.
+*
 * Ignore 100%       - This class allows form to ignore 100% width of elements.
+*
 * Mandatory         - This class adds * to field lables marked as required.
+*
 * Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
 *                     fields on right side.
+*
 * Round corner      - This section define classes to make form elements round cornered.
+*
 * Icon elements     - This class adds options to specify icon for an element. The icon will be added to left by
 *                     default, but it can also be displayed on right side.
+*
 * Placeholder       - This section make placeholder color same for all the browsers.
 ***********************************************************************/
 
@@ -67,19 +78,19 @@ form {
 
 // Messages
 .warning, .error, .success, .info {
-    margin-bottom: 0.25rem; // To match with form elements
+    margin-bottom: 0.5rem; // To match with form elements
 }
 
 .message {
 
     &.warning, &.error, &.success, &.info {
-        margin-top: 0.25rem; // To match with form elements
+        margin-top: 0.5rem; // To match with form elements
     }
 }
 
 // Required for Yii Forms
 .form-group .help-block {
-    margin-bottom: 0.25rem; // To match with form elements
+    margin-bottom: 0.5rem; // To match with form elements
 }
 
 // Extended classes
@@ -132,7 +143,7 @@ form {
     background-color: $color-field;
     color: $color-field-text;
     text-align: left;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 
     &:hover {
         background-color: $color-field-h;
@@ -181,7 +192,7 @@ label {
     //@extend %element-style-field;
     text-align: left;
     background: none;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 // Text
@@ -401,6 +412,10 @@ input[type="submit"], input[type="button"], button {
         background: none;
         color: $color-field-h-text;
     }
+}
+
+.cmt-select-wrap {
+    margin-bottom: 0.5rem; // To match with form elements
 }
 
 // Ignore 100% width behavior for form elements

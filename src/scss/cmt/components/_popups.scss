@@ -83,6 +83,7 @@
             position: relative;
             z-index: 150;
             padding: 1rem;
+            overflow-y: scroll;
         }
 
         .popup-close {
@@ -93,6 +94,10 @@
             display: inline-block;
             color: $color-link;
             cursor: pointer;
+
+            .icon {
+                vertical-align: middle;
+            }
         }
     }
 

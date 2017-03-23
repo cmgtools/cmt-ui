@@ -15,8 +15,8 @@
  *    that can be easily adapted by all the mobile, tablet and desktop screens.
  *
  *    It's divided on high level into core, elements, components and extension where each division consist of SASS files having specific
- *    features according to file name. All the divisions are arranged in such a way that these can be overriden by the project SASS either
- *    following the same divisions or it's own directory and file arrangements.
+ *    features and components according to file name. All the divisions are arranged in such a way that these can be overriden by the project SASS
+ *    either following the same divisions or it's own directory and file arrangements.
  *
  *    Core        - The core division is most important and foundation of CMT-UI. It consist of variables, reset, typography, effects(animations,
  *                  transitions and transformations), mixins, basic elements and containers(rows and columns). Every project must include all the
@@ -26,12 +26,13 @@
  *
  *    Components  - The components are either self dependent or associated with CMT-JS(CMGTools Javascript) framework in order to be fully
  *                  functional. The JS part of these components can also be implemented either using plain JS or widely used frameworks and
- *                  libraries. The components available with CMT-UI are menus, collapsible menus, social menus, headers, footers, pagination,
- *                  sorting, sidebars, popups, login & register, sliders, galleries, flippers, file uploaders, data grids, boxes, blogs, blocks.
+ *                  libraries. The components available with CMT-UI are menus, breadcrumbs, headers, footers, sidebars, popups, blocks, boxes, grid,
+ *                  cards, sliders, galleries, flippers, file uploaders and blogs.
+ *
  *                  It provides layout and basic arrangement of these components and also provide few commonly used implementation of the barebone
  *                  components.
  *
- *    Extensions  - It defines the styling and themes of 3rd party components like jQuery UI etc.
+ *    Extensions  - This division defines the styling and themes of 3rd party components like jQuery UI etc.
  *
  * Support - CMT-UI supports wide range of browsers as listed below:
  *
@@ -41,6 +42,10 @@
  *    Chrome            - <min>
  *    Safari            - <min>
  *    Opera             - <min>
+ *    Maxthon           - <min>
+ *    Torch             - <min>
+ *    UC Browser        - <min>
+ *    Avant             - <min>
  *    Internet Exporer  - 10+
  *    Edge              - <min>
  *    Baidu             - <min>
@@ -98,25 +103,24 @@
 @import "cmt/components/menus/social";
 // project - menus
 
+@import "cmt/components/breadcrumbs";
+// project - breadcrumbs
+
 @import "cmt/components/headers";
 @import "cmt/components/footers";
 @import "cmt/components/sidebars";
 // project - headers, footers & sidebars
 
-@import "cmt/components/breadcrumbs";
-// project - breadcrumbs
-
 @import "cmt/components/popups";
 // project - popups
-
-@import "cmt/components/login-register";
-// project - login & register dialogs
 
 @import "cmt/components/blocks";
 // project - blocks
 
 @import "cmt/components/boxes/basic";
+@import "cmt/components/boxes/login";
 @import "cmt/components/boxes/form";
+@import "cmt/components/boxes/mapper";
 // project - boxes
 
 @import "cmt/components/grid/data";
@@ -124,15 +128,19 @@
 @import "cmt/components/grid/sorting";
 // project - data grids
 
-@import "cmt/components/blog";
-// project - blog grid
+@import "cmt/components/cards/basic";
+// project - data cards
+
+@import "cmt/components/sliders";
+@import "cmt/components/galleries";
+@import "cmt/components/flipper";
+// project - sliders, galleries & flippers
 
 @import "cmt/components/file-uploader";
 // project - file uploaders
 
-@import "cmt/components/flipper";
-@import "cmt/components/galleries";
-// project - flippers & galleries
+@import "cmt/components/blog";
+// project - blog grid
 
 // ---------------------------------------//
 // Extensions Division - Optional

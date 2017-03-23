@@ -4,7 +4,9 @@ Description: It defines the styles for html elements except form and table for C
 Dependencies: none
 
 Details: It defines the styles for html elements as listed below:
+
 * Fieldset    - The fieldset can be used to group elements with appropriate title using legend.
+*
 * Optgroup    - The optgroup used in select box will be bold by default.
 ***********************************************************************/
 
@@ -14,7 +16,8 @@ fieldset {
     legend {
         background-color: $color-secondary;
         color: $color-secondary-text;
-        padding: $size-medium-rem;
+        padding: $size-small-rem;
+        margin-left: 1rem;
         @include rounded( $size-medium );
     }
 }

@@ -4,26 +4,58 @@
     li {
         display: inline-block;
         list-style: none;
-        margin: 0 5px;
+        margin: 0 0.5em;
 
         span, a {
-            background-color: $color-tertiary;
-            color: $color-secondary-text;
-            padding: 3px 8px;
-            @include rounded( 5px );
+            background-color: $color-btn;
+            color: $color-btn-text;
             text-decoration: none;
+            padding: 0.3em 0.5em;
+            font-size: 1em;
+            line-height: 1.4;
+
+            &:hover {
+                background-color: $color-btn-h;
+                color: $color-btn-h-text;
+            }
+
+            .icon {
+                font-size: 1em;
+                margin-top: -0.2em;
+            }
         }
-    }
 
-    .active a, a:hover {
-        background-color: $color-primary;
-        color: $color-primary-text;
-        -moz-transition: 0.5s;
-    }
+        &.prev, &.next {
 
-    .disabled span {
-        background-color: $color-gray;
-        color: $color-white;
+            &.disabled {
+
+                span {
+                    background-color: $color-btn-d;
+                    color: $color-btn-d-text;
+
+                    &:hover {
+                        background-color: $color-btn-d;
+                        color: $color-btn-d-text;
+                    }
+
+                    .icon {
+                        color: $color-btn-d-text;
+
+                        &:hover {
+                            color: $color-btn-d-text;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.active {
+
+            a {
+                background-color: $color-btn-a;
+                color: $color-btn-a-text;
+            }
+        }
     }
 }
 

@@ -246,7 +246,7 @@ html, body {
         background-color: $color-yellow !important;
     }
 
-    .bkg-red {
+    &.bkg-red {
         background-color: $color-red !important;
     }
 
@@ -900,7 +900,7 @@ html, body {
     }
 }
 
-.error{
+.error {
     color: $color-error;
 }
 
@@ -924,4 +924,9 @@ html, body {
 .error-field {
     @include border( $size-default, solid, $color-error );
     @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );
+}
+
+// icons alignment
+.cmti, .fa {
+    vertical-align: middle;
 }

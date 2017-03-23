@@ -5,11 +5,13 @@ Description: This file define the mixins available in CMT-UI css framework. It a
 Dependencies: variables
 
 Details: It define the mixins and their default implementation as listed below:
+
 * Clearfix          - It allows parent element to fix zero height issue in case it consist of floating children by
 *                     forcing itself to self-clear floating children.
 *
 * Opacity           - The opacity mixin is cross-browser solution to make elements opaque. The passed value must be
 *                     between 0 to 1. Higher value means higher opacity and less transparency and vice versa.
+*
 * Transparency      - The transparency mixin is cross-browser solution to make elements transparent. The passed value must be
 *                     between 0 to 1. Higher value means higher transparency and less opacity and vice versa.
 *
@@ -17,22 +19,31 @@ Details: It define the mixins and their default implementation as listed below:
 *
 * Round corners     - These mixins provide different ways to achieve round corner effects including all, top, right,
 *                     bottom, left, top left, top right, bottom left and bottom right.
+*
 * Shadow            - The shadow mixins add shadow effects to elements including outer and inner.
+*
 * Text shadow       - The text shadow mixins add shadow effects to text including outer and inner.
+*
 * Border            - The border mixins provide options to add border including all, top, right, bottom and left.
+*
 * Gradients         - These mixins provide options to apply gradient effects. These include linear, linear with angle
 *                     and radial.
 *
 * Circle effect 1   - It make the parent round cornered and child aligned at center. The parent must be either square
 *                     or rectangular in order to work with this effect.
+*
 * Circle effect 2   - It make the element circular having fixed width and height. It does not consider child alignment.
+*
 * Circle effect 3   - It make the element circular by applying padding at bottom. It does not consider child alignment.
+*
 * Text Shape        - It make shape behind text having elliptical or circular effect.
 *
 * Vertical Center   - It provide mixin to vertically align a child at center of parent.
+*
 * Child Center      - It provide mixin to align child at center both horizontally and vertically.
 *
 * Max area          - These mixins allows child to 100% cover parent. The childs can be either opaque or transparent.
+*
 * Max area cover    - It adds option to have text aligned at center to max area mixins. Initially these elements will be
 *                     hidden and displayed when required.
 *

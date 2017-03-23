@@ -1,18 +1,19 @@
 // Sorting
+.wrap-sort {
 
-.sort {
-    cursor: pointer;
-    padding-left: 10px;
-}
+    .sort {
+        cursor: pointer;
 
-.sort-title {
-    padding-left: 10px;  
-}
+        &.sort-inline {
+            padding-right: 0.5rem;
+        }
 
-.sort-asc {
-    color: $color-success;
-}
+        &.sort-asc {
+            color: $color-success !important;
+        }
 
-.sort-desc {
-    color: $color-error;
+        &.sort-desc {
+            color: $color-error !important;
+        }
+    }
 }

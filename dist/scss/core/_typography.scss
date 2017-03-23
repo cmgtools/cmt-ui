@@ -4,20 +4,34 @@ Description: This file define the styles specific to typography available in CMT
 Dependencies: variables, mixins
 
 Details: It defines the typography specific styles as listed below:
+
 * Default Font      - The default font and line height is set at document level.
+*
 * Responsive font   - The fonts are made responsive by changing the size for most common screen sizes.
+*
 * Font              - The font classes can be used to change element font.
+*
 * Font size         - These classes use the font size variables defined in variables file.
+*
 * Line height       - These classes define the line height to allow line spacing for better readability.
+*
 * Headers           - The header classes define the line height, font and font size for headers.
+*
 * Text              - It define the line height, font and font size for text elements.
+*
 * Code              - Pre element with default text and background color.
+*
 * Font weight       - The font weight classes can be used to change font weight of selected elements.
+*
 * Font style        - These classes can be used to change the font styles including italic, underline,
 *                     uppercase, lowercose, text striking.
+*
 * Text alignment    - The alignment classes to align text.
+*
 * Word spacing      - This section includes classes to add space between words.
+*
 * Link              - The link element using link colors in default, active and hover states.
+*
 * Text with line    - This class can be used to decorate text having background line at center.
 ***********************************************************************/
 
@@ -116,6 +130,10 @@ html, body {
     &.font-size-tiny {
         font-size: $font-size-9;
     }
+
+    &.font-size-micro {
+        font-size: $font-size-10;
+    }
 }
 
 // Standard Line Height
@@ -174,22 +192,17 @@ h6, .h6 {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
-    verticle-align: middle;
+    vertical-align: middle;
     line-height: $line-height-header;
     margin-bottom: 1rem;
     font-family: $font-heading;
+    padding: 0.25em;
 }
 
 // Text Elements
-p, span, em, div, a {
+p, span, em, div, a, .reader {
     font-size: $font-size-7;
     line-height: $line-height-text;
-}
-
-// Content for reading purpose
-.reader {
-    font-size: $font-size-7;
-    line-height: 1.4em;
 }
 
 // Coding - Required to highlight code snippets
@@ -274,22 +287,22 @@ pre {
 
 // Word Spacing
 .word-spacing {
-    word-spacing: 5px;
+    word-spacing: $size-default;
 
     .word-spacing-small {
-        word-spacing: 10px;
+        word-spacing: $size-small;
     }
 
     .word-spacing-medium {
-        word-spacing: 15px;
+        word-spacing: $size-medium;
     }
 
     .word-spacing-large {
-        word-spacing: 20px;
+        word-spacing: $size-large;
     }
 
     .word-spacing-xlarge {
-        word-spacing: 25px;
+        word-spacing: $size-xlarge;
     }
 }
 

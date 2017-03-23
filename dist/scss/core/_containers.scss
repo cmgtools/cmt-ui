@@ -106,8 +106,9 @@ Details: It defines the grid system and basic containers as listed below:
 %col {
     display: block;
     float:left;
-    margin: 0 1% 1rem 1%;
+    margin: 0 1%;
     word-wrap: break-word;
+    min-height: 1px;
 }
 
 // generic column
@@ -133,8 +134,9 @@ Details: It defines the grid system and basic containers as listed below:
 %col-small {
     display: block;
     float:left;
-    margin: 0 0.5% 1rem 0.5%;
+    margin: 0 0.5%;
     word-wrap: break-word;
+    min-height: 1px;
 }
 
 .col-small { @extend %col-small; }
@@ -261,14 +263,122 @@ Details: It defines the grid system and basic containers as listed below:
     }
 }
 
+// Col system having margin set to 0 to left most and right most. The cols must form a row and must not mix up i.e. only one type of columns allowed at a time.
+
+%colc {
+    display: block;
+    float:left;
+    margin: 0;
+    word-wrap: break-word;
+    min-height: 1px;
+}
+
+%colc-f-l {
+    margin: 0 1%;
+
+    &:first-child {
+        margin-left: 0;
+        margin-right: 1%;
+    }
+
+    &:last-child {
+        margin-left: 1%;
+        margin-right: 0;
+    }
+}
+
+// generic column
+.colc { @extend %colc; }
+
+// 12 col system
+
+.colc1 { width: 100%; }
+.colc2 { width: 49%; @extend %colc-f-l; }
+.colc3 { width: 32%; @extend %colc-f-l; }
+.colc4 { width: 23.5%; @extend %colc-f-l; }
+.colc5 { width: 18.4%; @extend %colc-f-l; }
+.colc6 { width: 15%; @extend %colc-f-l; }
+.colc7 { width: 12.57143%; @extend %colc-f-l; }
+.colc8 { width: 10.75%; @extend %colc-f-l; }
+.colc9 { width: 9.33333%; @extend %colc-f-l; }
+.colc10 { width: 8.2%; @extend %colc-f-l; }
+.colc11 { width: 7.27273%; @extend %colc-f-l; }
+.colc12 { width: 6.5%; @extend %colc-f-l; }
+
+@include responsive-max( screen-tablet-large ) {
+
+    .max-cols-50 {
+
+        & >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+            width: 48%;
+        }
+
+        & >.colc:nth-child( odd ) {
+            clear: both;
+        }
+    }
+
+    .max-cols-100 {
+
+        & >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+            width: 98%;
+        }
+    }
+}
+
+@include responsive-max( screen-mobile-large ) {
+
+    .max-cols-50, .max-cols-100 {
+
+        & >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+            width: 98%;
+        }
+    }
+}
+
+.colc3x2 { width: 65.33333%; }
+
+.colc4x2 { width: 49%; }
+.colc4x3 { width: 73.5%; }
+
+@include responsive-max( screen-tablet-large ) {
+
+    .max-cols-50 {
+
+        & >.colc3x2, & >.colc4x2, & >.colc4x3,
+        & >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
+            width: 48%;
+        }
+    }
+
+    .max-cols-100 {
+
+        & >.colc3x2, & >.colc4x2, & >.colc4x3,
+        & >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
+            width: 98%;
+        }
+    }
+}
+
+@include responsive-max( screen-mobile-large ) {
+
+    .max-cols-50, .max-cols-100 {
+
+        & >.colc3x2, & >.colc4x2, & >.colc4x3,
+        & >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
+            width: 98%;
+        }
+    }
+}
+
 // Full Width Columns
 
 %colf {
     display: block;
     float:left;
     margin: 0;
-    margin-bottom: 1rem;
     word-wrap: break-word;
+    min-height: 1px;
 }
 
 // generic column - it does not relate with col width
@@ -280,11 +390,11 @@ Details: It defines the grid system and basic containers as listed below:
 
 .colf1 { width: 100%; }
 .colf2 { width: 50%; }
-.colf3 { width: 33.33333%; }
+.colf3 { width: 33.333333%; }
 .colf4 { width: 25%; }
 .colf5 { width: 20%; }
-.colf6 { width: 16.66666%; }
-.colf7 { width: 14.28571%; }
+.colf6 { width: 16.666667%; }
+.colf7 { width: 14.285714%; }
 .colf8 { width: 12.5%; }
 .colf9 { width:  11.11111%; }
 .colf10 { width: 10%; }
@@ -467,6 +577,10 @@ Details: It defines the grid system and basic containers as listed below:
         // Header within container.
     }
 
+    & >.sidebar {
+        // Sidebar within container.
+    }
+
     .wrap-content-main {
         position: relative;
         z-index: 1;
@@ -479,7 +593,7 @@ Details: It defines the grid system and basic containers as listed below:
             // Sidebar within content wrapper.
         }
 
-        .content {
+        & >.content {
             // Content within content wrapper
         }
 
@@ -598,10 +712,12 @@ Details: It defines the grid system and basic containers as listed below:
 .stick-top {
     top: 0;
     position: absolute;
+    width: 100%;
 }
 
 // Sticky content to stick at bottom of container
 .stick-bottom {
     bottom: 0;
     position: absolute;
+    width: 100%;
 }

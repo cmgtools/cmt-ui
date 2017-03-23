@@ -1,34 +1,78 @@
 // The Grid Data acts as wrapper to the data. It follows mobile first approach.
 .grid-data {
 
-    // Grid Filters
+    // Grid Title
     .grid-title {
 
         .title {
             // grid title
         }
 
-        .info {
-            // grid info
+        .options {
+            // grid options in header
+        }
+    }
+
+    // Grid Sort
+    .grid-sort {
+        // The grid sort columns
+
+        .wrap-sort {
+            // Sort wrapper
         }
     }
 
     // Grid Filters
     .grid-filters {
         // The grid filters
+
+        .wrap-filters {
+            // Filter wrapper
+        }
+    }
+
+    // Grid Report
+    .grid-report {
+        // The grid report having options to generate custom reports
+
+        .grid-report-fields {
+            // Wrapper for fields
+        }
+
+        .grid-report-actions {
+            // Wrapper for actions
+        }
+    }
+
+    // Grid Options
+    .grid-options {
+        // Grid Options having bulk and search options
+
+        .wrap-bulk {
+            // Bulk wrapper
+        }
+
+        .wrap-search {
+            // Quick Search wrapper
+        }
     }
 
     // Grid Header
     .grid-header {
-        // Grid Header having grid columns, pagination
+        // Grid Header having pagination and import/export options
     }
 
-    // Grid Content Wrapper
+    // Grid Content
     .grid-content {
         // Grid content like grid rows or blocks goes here
 
         // Grid Rows
         .grid-rows {
+            display: none;
+
+            &.active {
+                display: block;
+            }
 
             // rows header hidden for mobile
             .grid-rows-header {
@@ -38,8 +82,11 @@
 
             .grid-row {
 
-                &:nth-child( even ) {
-                    background-color: $color-primary;
+                &.grid-row-zebra {
+
+                    &:nth-child( even ) {
+                        background-color: $color-primary;
+                    }
                 }
 
                 .grid-row-header {
@@ -48,6 +95,7 @@
 
                 .grid-row-data {
                     // row data - it can be anything ex: content box
+
                     .data {
                         display: inline-block;
                         width: 68%;
@@ -61,7 +109,7 @@
                 }
 
                 .grid-row-footer {
-                    // row title
+                    // row footer
                 }
             }
 
@@ -72,15 +120,34 @@
             }
         }
 
-        // Grid Blocks
-        .grid-blocks {
-            // block - it can be anything ex: content box
+        // Grid Cards
+        .grid-cards {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            .grid-card {
+
+                .grid-card-header {
+                    // card title
+                }
+
+                .grid-card-data {
+                    // card data - it can be anything ex: content box
+                }
+
+                .grid-card-footer {
+                    // card footer
+                }
+            }
         }
     }
 
     // Grid Footer
     .grid-footer {
-        // Grid Footer having grid columns, pagination
+        // Grid Footer having pagination and import/export options. It's similar to Grid Header
     }
 
     @include responsive-min( screen-tablet-large ) {
@@ -160,11 +227,11 @@
     // Grid Rows
     .grid-rows {
         margin: 10px 0;
-    }
 
-    // Avatar in Grid
-    .avatar {
-        width: 48px;
+        // Avatar in grid rows
+        .avatar {
+            width: 48px;
+        }
     }
 
     // Grid Pagination
