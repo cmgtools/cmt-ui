@@ -581,7 +581,7 @@ Details: It define the mixins and their default implementation as listed below:
         @include transparentBkg( $color-transparent-tertiary );
     }
 
-    // Standard Colors
+    // Standard Background Colors
 
     &.transparent-bkg-gray {
         @include transparentBkg( $color-transparent-gray );
@@ -828,7 +828,7 @@ Details: It define the mixins and their default implementation as listed below:
         @include shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
     }
 
-    // Standard Colors
+    // Standard Shadows
 
     &.shadow-gray {
         @include shadow( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
@@ -893,7 +893,7 @@ Details: It define the mixins and their default implementation as listed below:
         @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
     }
 
-    // Standard Colors
+    // Standard Inset Shadows
 
     &.shadow-inset-gray {
         @include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
@@ -958,7 +958,7 @@ Details: It define the mixins and their default implementation as listed below:
         @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
     }
 
-    // Standard Colors
+    // Standard Text Shadows
 
     &.text-shadow-gray {
         @include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
@@ -1023,7 +1023,7 @@ Details: It define the mixins and their default implementation as listed below:
         @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
     }
 
-    // Standard Colors
+    // Standard Inset Text Shadows
 
     &.text-shadow-inset-gray {
         @include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );

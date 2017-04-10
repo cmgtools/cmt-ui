@@ -1,3 +1,19 @@
+/**********************************************************************
+Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
+             more blocks. Each block can have background image with or without parallax effect, a content wrapper which
+             wraps block header and content.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for header components as listed below:
+
+* Block       - The barebone grid class with minimum styles common for all the data grids.
+*
+* Basic       - The basic data grid having coloring.
+***********************************************************************/
+
+// == Structure - Data Grid =========
+
 // The Grid Data acts as wrapper to the data. It follows mobile first approach.
 .grid-data {
 
@@ -74,6 +90,13 @@
                 display: block;
             }
 
+            &.grid-rows-zebra {
+
+                .grid-row:nth-child( even ) {
+                    background-color: $color-primary;
+                }
+            }
+
             // rows header hidden for mobile
             .grid-rows-header {
                 display: none;
@@ -81,13 +104,6 @@
             }
 
             .grid-row {
-
-                &.grid-row-zebra {
-
-                    &:nth-child( even ) {
-                        background-color: $color-primary;
-                    }
-                }
 
                 .grid-row-header {
                     // row title
@@ -188,6 +204,8 @@
         }
     }
 }
+
+// Basic Data Grid ==================
 
 // Basic Grid
 .grid-basic {

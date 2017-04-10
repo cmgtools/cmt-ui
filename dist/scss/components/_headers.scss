@@ -1,11 +1,13 @@
 /**********************************************************************
 Description: It defines the styles for header components available in CMT-UI css framework.
 
-Dependencies: none
+Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for header components as listed below:
+
 * Header      - The barebone header class with minimum styles. The header can be made fixed or absolute.
-* Standard    - The standard header define the styles for primary header having logo and menus.
+*
+* Basic       - The basic header define the styles for primary header having logo and menus.
 ***********************************************************************/
 
 // == Structure - Header ============
@@ -28,15 +30,15 @@ Details: It defines the styles for header components as listed below:
     }
 }
 
-// == Standard Header ===============
+// == Basic Header ==================
 
-/* Standard Header having logo, main menu and mobile menu icon.
+/* Basic Header having logo, main menu and mobile menu icon.
  * Responsive approach - Desktop first
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
  * Mobile Menu - Placed on right side, hidden for desktop
  */
-.header-standard {
+.header-basic {
     background-color: $color-header;
     color: $color-header-text;
     position: relative;

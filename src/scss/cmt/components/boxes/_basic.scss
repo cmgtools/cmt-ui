@@ -1,54 +1,105 @@
-// The parent for all the box elements. It define several type of boxes like collapsible, draggable etc.
+/**********************************************************************
+Description: It defines the styles of box components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of box components as listed below:
+
+* Footer      - The barebone box class with minimum styles.
+*
+* Basic       - The basic box define the styles of simple box having icon and header within header wrapper and
+*               content within content box. The content is aligned center by default.
+*
+* Collapsible - The collapsible boxes are similar to basic, but these can also be collapsed hiding content keeping
+*               header and footer visible. The content collapse on clicking header / collapse button on header.
+***********************************************************************/
+
+// == Structure - Box ===============
 
 .box {
 
-    .box-wrap-header {
+    .box-header {
         // Header having collapsible action
         position: relative;
+
+        .header-icon {
+            // Header Icon
+        }
+
+        .header-title {
+            // Header Title
+        }
     }
 
-    .box-wrap-content {
+    .box-content {
         // Collapsible content
         position: relative;
     }
+
+    .box-footer {
+        // Footer having box info
+        position: relative;
+
+        .footer-info {
+            // Footer Info
+        }
+    }
 }
 
-// Simple box having icon and header within header wrapper and content within content box. The content is aligned center by default.
-.box-regular {
+// == Basic Box =====================
+
+.box-basic {
     padding: 1rem;
-    background-color: $color-secondary;
-    color: $color-secondary-text;
 
-    // Icon, text at center
-    .box-wrap-header {
-
-        .box-wrap-icon {
-            text-align: center;
-        }
-        
-        .box-header {
-            text-align: center;
-        }
-     }
-     
-     .box-wrap-content {
-        text-align: center;
-     }
-}
-
-// Collapsible boxes - content can collapse on clicking header / collapse button on header.
-.box-collapsible {
-
-    .box-wrap-header {
+    .box-header {
         background-color: $color-secondary;
         color: $color-secondary-text;
         padding: 0.5rem;
+     }
+
+     .box-content {
+        background-color: $color-primary;
+        color: $color-primary-text;
+        padding: 0.5rem;
+     }
+
+    .box-footer {
+        // Footer having box info
+        background-color: $color-secondary-l;
+        color: $color-secondary-text-l;
+    }
+}
+
+.box-basic-icon {
+    padding: 1rem;
+
+    // Icon, text at center
+    .box-header {
+
+        .header-icon {
+            position: absolute;
+            display: inline-block;
+            top: 0.5rem;
+            left: 0.5rem;
+        }
+
+        .header-title {
+            padding-left: 1.5rem;
+        }
+     }
+}
+
+// == Collapsible Box ===============
+
+.box-collapsible {
+
+    .box-header {
 
         .btn-collapse {
             position: absolute;
             display: inline-block;
-            top: 10px;
-            right: 10px;
+            top: 0.5em;
+            right: 0.5em;
             color: $color-btn-text;
             cursor: pointer;
 
@@ -56,11 +107,5 @@
                 color: $color-btn-h-text;
             }
         }
-    }
-
-    .box-wrap-content {
-        background-color: $color-primary-l;
-        color: $color-primary-text-l;
-        padding: 0.5rem;
     }
 }

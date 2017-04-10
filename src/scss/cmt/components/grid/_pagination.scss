@@ -1,18 +1,98 @@
-.pagination-basic {
+/**********************************************************************
+Description: It defines the styles of the pagination components having links to navigate pages.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for pagination components as listed below:
+
+* Pagination  - The barebone pagination class with minimum styles common for all the data grids.
+*
+* Basic       - The basic pagination. It uses button colors to decorate pagination states.
+*
+* Full        - Full pagination having both info and pagination links.
+***********************************************************************/
+
+// == Structure - Pagination ========
+
+.pagination {
     display: inline-block;
 
-    li {
+    li, .page-link {
+        // List Item having Links, Prev and Next
         display: inline-block;
         list-style: none;
-        margin: 0 0.5em;
 
         span, a {
+            // Links, Prev and Next - Normal state
+            text-decoration: none;
+
+            &:hover {
+                // Links, Prev and Next - Hover state
+            }
+
+            .icon {
+                // Icons for Prev - Next
+            }
+        }
+
+        &.first, &.prev, &.next, &.last {
+
+            &.disabled {
+
+                span {
+                    // Prev - Next in disabled state
+
+                    &:hover {
+                        // Prev - Next in disabled state
+                    }
+
+                    .icon {
+                        // Icon used for Prev and Next
+
+                        &:hover {
+                            // Icon state on hover in disabled state
+                        }
+                    }
+                }
+            }
+        }
+
+        &.active {
+
+            a {
+                // Link in active state
+            }
+        }
+
+        &.first {
+            // First link
+        }
+
+        &.prev {
+            // Previous link
+        }
+
+        &.next {
+            // Next link
+        }
+
+        &.last {
+           // Last link
+        }
+    }
+}
+
+// == Basic Pagination ==============
+
+.pagination-basic {
+
+    li, .page-link {
+        padding: 0 0.25em;
+
+        span, a {
+            padding: 0.3em 0.5em;
             background-color: $color-btn;
             color: $color-btn-text;
-            text-decoration: none;
-            padding: 0.3em 0.5em;
-            font-size: 1em;
-            line-height: 1.4;
 
             &:hover {
                 background-color: $color-btn-h;
@@ -20,12 +100,11 @@
             }
 
             .icon {
-                font-size: 1em;
                 margin-top: -0.2em;
             }
         }
 
-        &.prev, &.next {
+        &.first, &.prev, &.next, &.last {
 
             &.disabled {
 
@@ -59,7 +138,9 @@
     }
 }
 
-.pagination-detailed {
+// == Full Pagination ===============
+
+.pagination-full {
     margin: 10px 0;
 
     .info {

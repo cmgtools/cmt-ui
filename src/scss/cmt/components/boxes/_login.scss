@@ -4,6 +4,7 @@ Description: It defines the styles for login components available in CMT-UI css 
 Dependencies: none
 
 Details: It defines the styles for login components as listed below:
+
 * Login box wrapper - It's wrapper for login, register and forgot password forms. It depends on cmtLoginRegister
 *                     jQuery plugin available in CMT-JS framework.
 ***********************************************************************/
@@ -25,6 +26,10 @@ Details: It defines the styles for login components as listed below:
 
         .btn-signup {
             // signup button
+        }
+
+        .btn-forgot-password {
+            // forgot password button
         }
     }
 

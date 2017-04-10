@@ -9,6 +9,8 @@ Details: It defines the table styles as listed below:
 
 // Notes: Refer reset for basic reset done for table, th and td.
 
+// == HTML Tables =====================
+
 table {
 
     th {
@@ -22,26 +24,61 @@ table {
 }
 
 .table {
+    width: 100%;
 
     &.table-zebra {
-        background-color: $color-secondary;
-        color: $color-secondary-text;
 
         tbody {
 
-            tr {
-                background-color: $color-primary;
-                color: $color-primary-text;
-            }
-
-            tr:nth-child(odd) {
+            tr:nth-child( even ) {
                 background-color: $color-primary-d;
                 color: $color-primary-text-d;
             }
 
             tr:hover {
-                background-color: $color-primary-l;
-                color: $color-primary-text-l;
+                background-color: $color-secondary;
+                color: $color-secondary-text;
+            }
+        }
+    }
+
+    &.table-border {
+
+        th, td {
+            border: 1px solid $color-secondary;
+        }
+    }
+
+    &.table-fixed {
+        table-layout: fixed;
+    }
+
+    &.table-responsive {
+
+        th {
+            display: none;
+        }
+
+        td {
+            display: block;
+
+            &:before {
+                content: attr(data-th);
+                font-weight: bold;
+                width: 30%;
+                display: inline-block;
+
+                @include responsive-min( screen-tablet-large ) {
+                    display: none;
+                }
+            }
+        }
+
+        th, td {
+            text-align: left;
+
+            @include responsive-min( screen-tablet-large ) {
+                display: table-cell;
             }
         }
     }

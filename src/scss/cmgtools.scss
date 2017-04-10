@@ -51,6 +51,8 @@
  *    Baidu             - <min>
  */
 
+// project - fonts
+
 // project - variables
 
 @import "cmt/core/variables-ext";
@@ -114,30 +116,31 @@
 @import "cmt/components/popups";
 // project - popups
 
-@import "cmt/components/blocks";
+@import "cmt/components/sliders";
+@import "cmt/components/galleries";
+@import "cmt/components/flipper";
+@import "cmt/components/mappers";
+@import "cmt/components/auto-fill";
+// project - sliders, galleries, flippers, mappers and auto fills
+
+@import "cmt/components/file-uploader";
+// project - file uploaders
+
+@import "cmt/components/cards/basic";
+// project - data cards
+
+@import "cmt/components/blocks/basic";
 // project - blocks
 
 @import "cmt/components/boxes/basic";
 @import "cmt/components/boxes/login";
 @import "cmt/components/boxes/form";
-@import "cmt/components/boxes/mapper";
 // project - boxes
 
 @import "cmt/components/grid/data";
 @import "cmt/components/grid/pagination";
 @import "cmt/components/grid/sorting";
 // project - data grids
-
-@import "cmt/components/cards/basic";
-// project - data cards
-
-@import "cmt/components/sliders";
-@import "cmt/components/galleries";
-@import "cmt/components/flipper";
-// project - sliders, galleries & flippers
-
-@import "cmt/components/file-uploader";
-// project - file uploaders
 
 @import "cmt/components/blog";
 // project - blog grid

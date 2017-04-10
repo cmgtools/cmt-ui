@@ -4,11 +4,16 @@ Description: It defines the styles for collapsible menu components available in 
 Dependencies: none
 
 Details: It defines the collapsible menu components as listed below:
+
 * Collapsible Menu  - It's a 2 level vertical navigation and works together with cmtCollapsibleMenu jQuery plugin
 *                     available in CMT-JS framework. The primary and inactive items having children will remain in
 *                     collapsed state. The primary item in active state will remain expanded showing the children.
 *                     It's most appropriate for vertical sidebar menus having parent child arrangement.
+*
+* Collapsible Basic - The basic implementation of collapsible menu.
 ***********************************************************************/
+
+// == Structure - Collapsible Menu ==
 
 .collapsible-menu {
 
@@ -38,7 +43,7 @@ Details: It defines the collapsible menu components as listed below:
                 // tab child - at least one
 
                 .child-title {
-                    // tab header title
+                    // tab child title
                 }
             }
         }
@@ -80,6 +85,8 @@ Details: It defines the collapsible menu components as listed below:
         }
     }
 }
+
+// == Basic Collapsible Menu ========
 
 // The basic implementation of collapsible menu
 .collapsible-menu-basic {

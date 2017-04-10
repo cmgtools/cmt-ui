@@ -179,14 +179,14 @@ Details: It define the mixins and their default implementation as listed below:
 * Media Queries     - These mixins are pre-defined media queries using the screen sizes declared in variables file. This section
 *                     includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .frm-split-40-60 .form-group, .sidebar-standard .title {
+.clearfix, .row, .frm-split-40-60 .form-group, .sidebar-basic .title {
   zoom: 1; }
-  .clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .sidebar-standard .title:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-standard .title:after {
+  .clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .sidebar-basic .title:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-basic .title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-standard .title:after {
+  .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-basic .title:after {
     clear: both; }
 
 .texture, .pattern {
@@ -3153,6 +3153,49 @@ fieldset {
 optgroup {
   font-weight: bold; }
 
+blockquote {
+  position: relative;
+  margin: 0.5em;
+  padding: 0.5em 2em 0.5em 3em; }
+
+blockquote:before {
+  position: absolute;
+  font-size: 6em;
+  line-height: 1;
+  top: 0;
+  left: 0;
+  content: "\201C"; }
+
+blockquote:after {
+  position: absolute;
+  float: right;
+  font-size: 6em;
+  line-height: 1;
+  right: 0;
+  bottom: -0.5em;
+  content: "\201D"; }
+
+.list.list-radio label {
+  width: auto; }
+
+.list.style-circle {
+  list-style-type: circle; }
+
+.list.style-square {
+  list-style-type: square; }
+
+.list.style-decimal {
+  list-style-type: decimal; }
+
+.list.style-image-default {
+  list-style-image: url("../images/list-default.jpg"); }
+
+.list.position-inside {
+  list-style-position: inside; }
+
+.list.position-outside {
+  list-style-position: outside; }
+
 /**********************************************************************
 Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
              elements are also dependent on CMT-JS library. Though the JS implementation can also be done
@@ -3857,18 +3900,35 @@ table th {
 table td {
   padding: 0.25rem; }
 
-.table.table-zebra {
-  background-color: #3C4655;
-  color: #96B0D6; }
-  .table.table-zebra tbody tr {
-    background-color: #F2F2F2;
-    color: #363636; }
-  .table.table-zebra tbody tr:nth-child(odd) {
+.table {
+  width: 100%; }
+  .table.table-zebra tbody tr:nth-child(even) {
     background-color: lightgray;
     color: #555555; }
   .table.table-zebra tbody tr:hover {
-    background-color: white;
-    color: #171717; }
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .table.table-border th, .table.table-border td {
+    border: 1px solid #3C4655; }
+  .table.table-fixed {
+    table-layout: fixed; }
+  .table.table-responsive th {
+    display: none; }
+  .table.table-responsive td {
+    display: block; }
+    .table.table-responsive td:before {
+      content: attr(data-th);
+      font-weight: bold;
+      width: 30%;
+      display: inline-block; }
+      @media only screen and (min-width: 1025px) {
+        .table.table-responsive td:before {
+          display: none; } }
+  .table.table-responsive th, .table.table-responsive td {
+    text-align: left; }
+    @media only screen and (min-width: 1025px) {
+      .table.table-responsive th, .table.table-responsive td {
+        display: table-cell; } }
 
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.
@@ -3876,15 +3936,21 @@ Description: It defines the styles for menu components available in CMT-UI css f
 Dependencies: none
 
 Details: It defines the menu components as listed below:
+
 * Nav             - The nav class can be applied to navigation menus. The anchors within the list item
-*                   will occupy 100% width in order work properly. The list items will be displayed in line
+*                   will occupy 100% width in order to work properly. The list items will be displayed in line
 *                   by default.
+*
 * V Nav           - The vnav class is similar to nav except the items alignment. The list items will occupy
 *                   100% width to form vertical stack.
+*
 * Table Nav       - The table nav uses display property to form the menu.
-* H Nav Regular   - It's a multi-level horizontal navigation and works without JS. We might need little JS to
+*
+* H Nav Basic     - It's a multi-level horizontal navigation and works without JS. We might need little JS to
 *                   make it fully responsive.
-* V Nav Regular   - It's a multi-level vertical navigation and works without JS.
+*
+* V Nav Basic     - It's a multi-level vertical navigation and works without JS.
+*
 * V Nav Slider    - It's a vertical navigation and works together with cmtSlidingMenu jQuery plugin
 *                   available in CMT-JS framework. It's hidden by default and the plugin toggle the menu
 *                   visibility when user click on respective menu icon.
@@ -3894,11 +3960,11 @@ Details: It defines the menu components as listed below:
   .nav li {
     display: inline-block; }
     .nav li a {
-      -moz-transition: all 350ms ease-in-out 0s;
-      -ms-transition: all 350ms ease-in-out 0s;
-      -o-transition: all 350ms ease-in-out 0s;
-      -webkit-transition: all 350ms ease-in-out 0s;
-      transition: all 350ms ease-in-out 0s;
+      -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
       display: inline-block;
       width: 100%; }
 
@@ -3908,11 +3974,11 @@ Details: It defines the menu components as listed below:
     display: inline-block;
     width: 100%; }
     .vnav li a {
-      -moz-transition: all 350ms ease-in-out 0s;
-      -ms-transition: all 350ms ease-in-out 0s;
-      -o-transition: all 350ms ease-in-out 0s;
-      -webkit-transition: all 350ms ease-in-out 0s;
-      transition: all 350ms ease-in-out 0s;
+      -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
       display: inline-block;
       width: 100%;
       text-align: center; }
@@ -3924,23 +3990,23 @@ Details: It defines the menu components as listed below:
     display: table-cell;
     text-align: center; }
     .nav-table li a {
-      -moz-transition: all 350ms ease-in-out 0s;
-      -ms-transition: all 350ms ease-in-out 0s;
-      -o-transition: all 350ms ease-in-out 0s;
-      -webkit-transition: all 350ms ease-in-out 0s;
-      transition: all 350ms ease-in-out 0s;
+      -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+      transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
       display: inline-block;
       width: 100%; }
 
-/* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all
+/* hnav-basic is 3 level horizontal responsive menu for ul, li and a tags and works well for all
  * modern web browsers. It need little javascript or jquery for mobile screens to expand or contract
  * the immediate child menus for touch screens. It's best suited for main menu.
  */
-.hnav-regular {
+.hnav-basic {
   background-color: #F2F2F2;
   border-bottom: 1px solid white;
   position: relative; }
-  .hnav-regular > li {
+  .hnav-basic > li {
     display: inline-block;
     text-align: left;
     background-color: #F2F2F2;
@@ -3951,16 +4017,16 @@ Details: It defines the menu components as listed below:
     -o-transition: all 250ms ease-in-out 0s;
     -webkit-transition: all 250ms ease-in-out 0s;
     transition: all 250ms ease-in-out 0s; }
-    .hnav-regular > li > a {
+    .hnav-basic > li > a {
       color: #363636;
       font-size: 1em;
       line-height: 48px;
       padding: 0 15px;
       text-transform: uppercase; }
-    .hnav-regular > li:hover > a {
+    .hnav-basic > li:hover > a {
       background-color: #87BA45;
       color: #E6E6E6; }
-  .hnav-regular li a {
+  .hnav-basic li a {
     display: inline-block;
     text-decoration: none;
     -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
@@ -3968,12 +4034,12 @@ Details: It defines the menu components as listed below:
     -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
     -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
     transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s; }
-  .hnav-regular li.active > a {
+  .hnav-basic li.active > a {
     background-color: #3C4655;
     color: #96B0D6; }
-  .hnav-regular li:hover .nav-sub {
+  .hnav-basic li:hover .nav-sub {
     display: block; }
-  .hnav-regular .nav-sub {
+  .hnav-basic .nav-sub {
     display: none;
     position: absolute;
     top: 53px;
@@ -3984,20 +4050,20 @@ Details: It defines the menu components as listed below:
     -webkit-box-shadow: 1px 1px 2px 0px #3C4655;
     -moz-box-shadow: 1px 1px 2px 0px #3C4655;
     box-shadow: 1px 1px 2px 0px #3C4655; }
-    .hnav-regular .nav-sub > li {
+    .hnav-basic .nav-sub > li {
       display: inline-block;
       float: none;
       padding: 10px 1%;
       vertical-align: top;
       width: 22%; }
-      .hnav-regular .nav-sub > li > a {
+      .hnav-basic .nav-sub > li > a {
         font-size: 1em;
         margin-bottom: 10px;
         text-transform: uppercase; }
-      .hnav-regular .nav-sub > li a {
+      .hnav-basic .nav-sub > li a {
         line-height: 20px;
         color: #c2d1e7; }
-      .hnav-regular .nav-sub > li li {
+      .hnav-basic .nav-sub > li li {
         float: none;
         padding-left: 5px;
         -moz-transition: padding 250ms ease-out 0s;
@@ -4005,22 +4071,22 @@ Details: It defines the menu components as listed below:
         -o-transition: padding 250ms ease-out 0s;
         -webkit-transition: padding 250ms ease-out 0s;
         transition: padding 250ms ease-out 0s; }
-      .hnav-regular .nav-sub > li li:hover {
+      .hnav-basic .nav-sub > li li:hover {
         padding-left: 10px; }
   @media only screen and (max-width: 1024px) {
-    .hnav-regular li, .hnav-regular a {
+    .hnav-basic li, .hnav-basic a {
       width: 100%; }
-    .hnav-regular .nav-sub {
+    .hnav-basic .nav-sub {
       position: relative;
       top: 0px; }
-      .hnav-regular .nav-sub li, .hnav-regular .nav-sub a {
+      .hnav-basic .nav-sub li, .hnav-basic .nav-sub a {
         width: 100%; } }
 
-/* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
-.vnav-regular {
+/* vnav-basic is n level vertical responsive menu and best suited for sidebar menu. */
+.vnav-basic {
   border: 5px solid white;
   position: relative; }
-  .vnav-regular li {
+  .vnav-basic li {
     text-align: left;
     border-bottom: border-default;
     position: relative;
@@ -4029,9 +4095,9 @@ Details: It defines the menu components as listed below:
     -o-transition: all 250ms ease-in-out 0s;
     -webkit-transition: all 250ms ease-in-out 0s;
     transition: all 250ms ease-in-out 0s; }
-    .vnav-regular li .last {
+    .vnav-basic li .last {
       border: none; }
-  .vnav-regular a {
+  .vnav-basic a {
     display: block;
     background-color: #F2F2F2;
     color: #363636;
@@ -4045,12 +4111,12 @@ Details: It defines the menu components as listed below:
     -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
     -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
     transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s; }
-  .vnav-regular li:hover > a {
+  .vnav-basic li:hover > a {
     background-color: #87BA45;
     color: #E6E6E6; }
-  .vnav-regular li:hover > .nav-sub {
+  .vnav-basic li:hover > .nav-sub {
     display: block; }
-  .vnav-regular .nav-sub {
+  .vnav-basic .nav-sub {
     display: none;
     position: absolute;
     top: -2px;
@@ -4058,13 +4124,13 @@ Details: It defines the menu components as listed below:
     margin-left: 100%;
     border: 5px solid white; }
   @media only screen and (max-width: 1024px) {
-    .vnav-regular .nav-sub {
+    .vnav-basic .nav-sub {
       position: relative;
       top: 0px;
       margin-left: 0;
       width: 100%;
       border: none; }
-      .vnav-regular .nav-sub a {
+      .vnav-basic .nav-sub a {
         background-color: #3C4655; } }
 
 /* Sliding Menu - It works together with Sliding Menu plugin shipped with CMGTools JS. */
@@ -4111,17 +4177,17 @@ Details: It defines the menu components as listed below:
       color: #7F7F7F; }
   .vnav-slider-wrap .vnav-slider-header hr {
     border-bottom: 1px solid #678d34; }
-  .vnav-slider-wrap .vnav-slider-menu {
+  .vnav-slider-wrap .vnav-slider-content {
     width: 100%;
     height: 100%;
     padding-left: 2em;
     padding-right: 2em; }
-    .vnav-slider-wrap .vnav-slider-menu ul li {
+    .vnav-slider-wrap .vnav-slider-content ul li {
       padding: 0.5em 0; }
-      .vnav-slider-wrap .vnav-slider-menu ul li a {
+      .vnav-slider-wrap .vnav-slider-content ul li a {
         color: #555555;
         text-align: left; }
-        .vnav-slider-wrap .vnav-slider-menu ul li a:hover {
+        .vnav-slider-wrap .vnav-slider-content ul li a:hover {
           color: #298ccf; }
 
 /**********************************************************************
@@ -4130,10 +4196,13 @@ Description: It defines the styles for collapsible menu components available in 
 Dependencies: none
 
 Details: It defines the collapsible menu components as listed below:
+
 * Collapsible Menu  - It's a 2 level vertical navigation and works together with cmtCollapsibleMenu jQuery plugin
 *                     available in CMT-JS framework. The primary and inactive items having children will remain in
 *                     collapsed state. The primary item in active state will remain expanded showing the children.
 *                     It's most appropriate for vertical sidebar menus having parent child arrangement.
+*
+* Collapsible Basic - The basic implementation of collapsible menu.
 ***********************************************************************/
 .collapsible-menu .collapsible-tab {
   width: 100%; }
@@ -4193,6 +4262,7 @@ Description: It defines the styles for social network menu components available 
 Dependencies: none
 
 Details: It defines the social network menu components as listed below:
+
 * Social Menu     - The social menu class is special menu class used for social icons. It supports the social
 *                   icons available in CMT-Icons library. It can be further extended to support other icon
 *                   libraries.
@@ -4209,61 +4279,61 @@ Details: It defines the social network menu components as listed below:
   .menu-social a:hover {
     background-color: #E74343 !important; }
 
-.menu-social .cmti {
+.menu-social .icon, .menu-social .cmti {
   margin: 0;
   margin-bottom: 0.25rem;
   margin-right: 0.5rem;
   padding: 0.25rem; }
 
-.menu-social .cmti-bkg.cmti-social-facebook {
+.menu-social .icon-bkg.icon-facebook, .menu-social .icon-bkg.cmti-social-facebook, .menu-social .cmti-bkg.icon-facebook, .menu-social .cmti-bkg.cmti-social-facebook {
   background-color: #3B5998; }
 
-.menu-social .cmti-bkg.cmti-social-twitter {
+.menu-social .icon-bkg.icon-twitter, .menu-social .icon-bkg.cmti-social-twitter, .menu-social .cmti-bkg.icon-twitter, .menu-social .cmti-bkg.cmti-social-twitter {
   background-color: #00ACED; }
 
-.menu-social .cmti-bkg.cmti-social-google {
+.menu-social .icon-bkg.icon-google, .menu-social .icon-bkg.cmti-social-google, .menu-social .cmti-bkg.icon-google, .menu-social .cmti-bkg.cmti-social-google {
   background-color: #DD4B39; }
 
-.menu-social .cmti-bkg.cmti-social-google-plus {
+.menu-social .icon-bkg.icon-google-plus, .menu-social .icon-bkg.cmti-social-google-plus, .menu-social .cmti-bkg.icon-google-plus, .menu-social .cmti-bkg.cmti-social-google-plus {
   background-color: #DD4B39; }
 
-.menu-social .cmti-bkg.cmti-social-linkedin {
+.menu-social .icon-bkg.icon-linkedin, .menu-social .icon-bkg.cmti-social-linkedin, .menu-social .cmti-bkg.icon-linkedin, .menu-social .cmti-bkg.cmti-social-linkedin {
   background-color: #007BB6; }
 
-.menu-social .cmti-bkg.cmti-social-instagram {
+.menu-social .icon-bkg.icon-instagram, .menu-social .icon-bkg.cmti-social-instagram, .menu-social .cmti-bkg.icon-instagram, .menu-social .cmti-bkg.cmti-social-instagram {
   background-color: #125688; }
 
-.menu-social .cmti-bkg.cmti-social-pintrest {
+.menu-social .icon-bkg.icon-pintrest, .menu-social .icon-bkg.cmti-social-pintrest, .menu-social .cmti-bkg.icon-pintrest, .menu-social .cmti-bkg.cmti-social-pintrest {
   background-color: #CB2027; }
 
-.menu-social .cmti-bkg.cmti-social-youtube {
+.menu-social .icon-bkg.icon-youtube, .menu-social .icon-bkg.cmti-social-youtube, .menu-social .cmti-bkg.icon-youtube, .menu-social .cmti-bkg.cmti-social-youtube {
   background-color: #BB0000; }
 
-.menu-social .cmti-text.cmti-social-facebook {
+.menu-social .icon-text.icon-facebook, .menu-social .icon-text.cmti-social-facebook, .menu-social .cmti-text.icon-facebook, .menu-social .cmti-text.cmti-social-facebook {
   color: #3B5998; }
 
-.menu-social .cmti-text.cmti-social-twitter {
+.menu-social .icon-text.icon-twitter, .menu-social .icon-text.cmti-social-twitter, .menu-social .cmti-text.icon-twitter, .menu-social .cmti-text.cmti-social-twitter {
   color: #00ACED; }
 
-.menu-social .cmti-text.cmti-social-google {
+.menu-social .icon-text.icon-google, .menu-social .icon-text.cmti-social-google, .menu-social .cmti-text.icon-google, .menu-social .cmti-text.cmti-social-google {
   color: #DD4B39; }
 
-.menu-social .cmti-text.cmti-social-google-plus {
+.menu-social .icon-text.icon-google-plus, .menu-social .icon-text.cmti-social-google-plus, .menu-social .cmti-text.icon-google-plus, .menu-social .cmti-text.cmti-social-google-plus {
   color: #DD4B39; }
 
-.menu-social .cmti-text.cmti-social-linkedin {
+.menu-social .icon-text.icon-linkedin, .menu-social .icon-text.cmti-social-linkedin, .menu-social .cmti-text.icon-linkedin, .menu-social .cmti-text.cmti-social-linkedin {
   color: #007BB6; }
 
-.menu-social .cmti-text.cmti-social-instagram {
+.menu-social .icon-text.icon-instagram, .menu-social .icon-text.cmti-social-instagram, .menu-social .cmti-text.icon-instagram, .menu-social .cmti-text.cmti-social-instagram {
   color: #125688; }
 
-.menu-social .cmti-text.cmti-social-pintrest {
+.menu-social .icon-text.icon-pintrest, .menu-social .icon-text.cmti-social-pintrest, .menu-social .cmti-text.icon-pintrest, .menu-social .cmti-text.cmti-social-pintrest {
   color: #CB2027; }
 
-.menu-social .cmti-text.cmti-social-youtube {
+.menu-social .icon-text.icon-youtube, .menu-social .icon-text.cmti-social-youtube, .menu-social .cmti-text.icon-youtube, .menu-social .cmti-text.cmti-social-youtube {
   color: #BB0000; }
 
-.menu-social .cmti-text:hover {
+.menu-social .icon-text:hover, .menu-social .cmti-text:hover {
   color: #E74343; }
 
 .menu-social .btn {
@@ -4286,8 +4356,11 @@ Details: It defines the social network menu components as listed below:
     background-color: #BB0000; }
 
 /**********************************************************************
-Description: It defines the breadcrumbs available for CMGTools.
-Dependencies: variables, mixins
+Description: It defines the styles for breadcrumbs available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for breadcrumbs.
 ***********************************************************************/
 .breadcrumb {
   list-style: none; }
@@ -4301,11 +4374,13 @@ Dependencies: variables, mixins
 /**********************************************************************
 Description: It defines the styles for header components available in CMT-UI css framework.
 
-Dependencies: none
+Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for header components as listed below:
+
 * Header      - The barebone header class with minimum styles. The header can be made fixed or absolute.
-* Standard    - The standard header define the styles for primary header having logo and menus.
+*
+* Basic       - The basic header define the styles for primary header having logo and menus.
 ***********************************************************************/
 .header {
   position: relative; }
@@ -4320,55 +4395,57 @@ Details: It defines the styles for header components as listed below:
     width: 100%;
     z-index: 10000; }
 
-/* Standard Header having logo, main menu and mobile menu icon.
+/* Basic Header having logo, main menu and mobile menu icon.
  * Responsive approach - Desktop first
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
  * Mobile Menu - Placed on right side, hidden for desktop
  */
-.header-standard {
+.header-basic {
   background-color: #363636;
   color: #ffffff;
   position: relative;
   z-index: 10000; }
-  .header-standard .logo {
+  .header-basic .logo {
     cursor: pointer;
     margin: 5px;
     width: 140px;
     display: inline-block;
     position: absolute;
     z-index: 2; }
-  .header-standard #menu-main {
+  .header-basic #menu-main {
     margin-top: 5px;
     text-align: right;
     display: block;
     z-index: 1; }
-  .header-standard #btn-mobile-menu {
+  .header-basic #btn-mobile-menu {
     position: absolute;
     right: 0px;
     cursor: pointer;
     margin: 10px;
     display: none;
     z-index: 2; }
-    .header-standard #btn-mobile-menu span {
+    .header-basic #btn-mobile-menu span {
       width: 36px;
       height: 36px;
       display: inline-block; }
   @media only screen and (max-width: 1024px) {
-    .header-standard .logo {
+    .header-basic .logo {
       width: 70px; }
-    .header-standard #menu-main {
+    .header-basic #menu-main {
       margin-top: 55px;
       display: none; } }
 
 /**********************************************************************
 Description: It defines the styles for footer components available in CMT-UI css framework.
 
-Dependencies: none
+Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for footer components as listed below:
-* Header      - The barebone footer class with minimum styles. The footer can be made sticky to stick at bottom.
-* Standard    - The standard footer define the styles for primary footer.
+
+* Footer      - The barebone footer class with minimum styles. The footer can be made sticky to stick at bottom.
+*
+* Basic       - The basic footer define the styles for primary footer.
 ***********************************************************************/
 .footer {
   position: relative; }
@@ -4380,40 +4457,60 @@ Details: It defines the styles for footer components as listed below:
     .footer {
       padding: 1rem; } }
 
-.footer-standard {
+.footer-basic {
   background-color: #363636;
   color: #ffffff;
   width: 100%;
   min-height: 50px;
   position: relative;
   z-index: 10000; }
-  .footer-standard p {
+  .footer-basic .text {
     color: #363636; }
 
 /**********************************************************************
-Description: It defines the styles for the sidebar components available in CMGTools.
+Description: It defines the styles for sidebar components available in CMT-UI css framework.
+
 Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for sidebar components as listed below:
+
+* Sidebar      - The barebone sidebar class with minimum styles.
+*
+* Basic        - The basic footer define the styles for easy to use sidebar.
 ***********************************************************************/
-.sidebar-standard {
+.sidebar-basic {
   position: relative; }
-  .sidebar-standard .title {
+  .sidebar-basic .title {
     display: none;
     background-color: #87BA45;
     line-height: 32px;
     padding: 5px;
     font-size: 16px; }
-    .sidebar-standard .title span {
+    .sidebar-basic .title span {
       float: right;
       display: inline-block;
       cursor: pointer; }
-  .sidebar-standard .menu {
+  .sidebar-basic .menu {
     display: block; }
   @media only screen and (max-width: 1024px) {
-    .sidebar-standard .title {
+    .sidebar-basic .title {
       display: block; }
-    .sidebar-standard .menu {
+    .sidebar-basic .menu {
       display: none; } }
 
+/**********************************************************************
+Description: It defines the styles for popup components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for popup components as listed below:
+
+* Popup       - The barebone popup class with minimum styles to position it's elements.
+*
+* Basic       - The basic popup define the default coloring and spacing for popup data.
+*
+* Modal       - The modal popup will be fixed and positioned on top of all other elements.
+***********************************************************************/
 .popup {
   position: relative;
   display: none; }
@@ -4432,18 +4529,18 @@ Dependencies: variables, variables-ext, mixins
     width: 100%;
     height: 100%;
     z-index: 10; }
+  .popup > .texture {
+    z-index: 15; }
   .popup .popup-screen-listener {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    z-index: 15; }
+    z-index: 20; }
   .popup .popup-data {
     position: relative;
-    z-index: 50;
-    background-color: #3C4655;
-    color: #96B0D6; }
+    z-index: 50; }
     .popup .popup-data .popup-data-bkg {
       position: absolute;
       top: 0px;
@@ -4457,37 +4554,47 @@ Dependencies: variables, variables-ext, mixins
     .popup .popup-data.popup-data-medium {
       height: 300px;
       width: 600px; }
+      .popup .popup-data.popup-data-medium .popup-content {
+        height: 230px; }
     .popup .popup-data.popup-data-large {
       height: 400px;
       width: 800px; }
     .popup .popup-data .popup-wrap-title {
       position: relative;
       z-index: 150;
-      width: 100%;
-      background-color: #87BA45;
-      color: #E6E6E6;
-      padding: 1rem; }
-      .popup .popup-data .popup-wrap-title .popup-title {
-        font-size: 1.5em;
-        font-weight: bold; }
+      width: 100%; }
     .popup .popup-data .popup-content {
       position: relative;
-      z-index: 150;
-      padding: 1rem;
-      overflow-y: scroll; }
+      z-index: 150; }
     .popup .popup-data .popup-close {
       position: absolute;
       z-index: 200;
-      top: -5px;
-      right: -5px;
       display: inline-block;
-      color: #298ccf;
       cursor: pointer; }
-      .popup .popup-data .popup-close .icon {
-        vertical-align: middle; }
   @media only screen and (max-width: 768px) {
     .popup .popup-data-small, .popup .popup-data-medium, .popup .popup-data-large {
       width: 90% !important; } }
+
+.popup-basic .popup-screen {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.popup-basic .popup-data {
+  background-color: #3C4655;
+  color: #96B0D6; }
+  .popup-basic .popup-data .popup-wrap-title {
+    background-color: #87BA45;
+    color: #E6E6E6;
+    padding: 1rem; }
+    .popup-basic .popup-data .popup-wrap-title .popup-title {
+      font-size: 1.5em;
+      font-weight: bold; }
+  .popup-basic .popup-data .popup-content {
+    padding: 1rem;
+    overflow-y: scroll; }
+  .popup-basic .popup-data .popup-close {
+    top: -0.5em;
+    right: -0.5em;
+    color: #298ccf; }
 
 .popup-modal {
   position: fixed;
@@ -4496,417 +4603,6 @@ Dependencies: variables, variables-ext, mixins
   width: 100%;
   height: 100%;
   z-index: 999999999; }
-
-/**********************************************************************
-Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-             more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-             wraps block header and content.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for header components as listed below:
-* Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
-*               listed options:
-*                   - It can have background image with or without parallax effects.
-*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
-*                     background and even content wrapper background in the form of image or texture.
-*                   - Height of block must not be set using min-height to get background with parallax working.
-* Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
-*               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
-*               by CMT-JS framework.
-***********************************************************************/
-.block {
-  position: relative; }
-  .block .block-bkg {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-  .block .block-bkg-fixed {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-  .block .block-bkg-scroll {
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    background-attachment: scroll;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-  .block .block-bkg-parallax {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    height: 150%;
-    position: absolute;
-    top: -50%;
-    left: 0;
-    z-index: 5; }
-  .block .texture {
-    z-index: 10; }
-  .block .block-wrap-content {
-    position: relative;
-    z-index: 15; }
-  .block .block-splitter {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    z-index: 10000; }
-    .block .block-splitter.top {
-      top: 0;
-      margin-top: -50px; }
-    .block .block-splitter.bottom {
-      bottom: 0;
-      margin-bottom: -50px; }
-    .block .block-splitter .icon {
-      display: inline-block;
-      width: 100px;
-      height: 100px; }
-
-.block-basic {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-
-.box .box-wrap-header {
-  position: relative; }
-
-.box .box-wrap-content {
-  position: relative; }
-
-.box-regular {
-  padding: 1rem;
-  background-color: #3C4655;
-  color: #96B0D6; }
-  .box-regular .box-wrap-header .box-wrap-icon {
-    text-align: center; }
-  .box-regular .box-wrap-header .box-header {
-    text-align: center; }
-  .box-regular .box-wrap-content {
-    text-align: center; }
-
-.box-collapsible .box-wrap-header {
-  background-color: #3C4655;
-  color: #96B0D6;
-  padding: 0.5rem; }
-  .box-collapsible .box-wrap-header .btn-collapse {
-    position: absolute;
-    display: inline-block;
-    top: 10px;
-    right: 10px;
-    color: #FFFFFF;
-    cursor: pointer; }
-    .box-collapsible .box-wrap-header .btn-collapse:hover {
-      color: #FFFFFF; }
-
-.box-collapsible .box-wrap-content {
-  background-color: white;
-  color: #171717;
-  padding: 0.5rem; }
-
-/**********************************************************************
-Description: It defines the styles for login components available in CMT-UI css framework.
-
-Dependencies: none
-
-Details: It defines the styles for login components as listed below:
-* Login box wrapper - It's wrapper for login, register and forgot password forms. It depends on cmtLoginRegister
-*                     jQuery plugin available in CMT-JS framework.
-***********************************************************************/
-.wrap-login-box .btn-login, .wrap-login-box .btn-signup, .wrap-login-box .btn-forgot-password {
-  cursor: pointer; }
-
-.wrap-login-box .box-forgot-password {
-  display: none; }
-
-.wrap-login-box .box-signup {
-  display: none; }
-
-.box-form {
-  position: relative; }
-  .box-form .btn-edit {
-    cursor: pointer; }
-  .box-form .wrap-info {
-    display: block; }
-  .box-form .wrap-form {
-    display: none; }
-
-.box-form-regular .btn-edit {
-  position: absolute;
-  display: inline-block;
-  top: 10px;
-  right: 10px;
-  color: #FFFFFF;
-  cursor: pointer; }
-  .box-form-regular .btn-edit:hover {
-    color: #FFFFFF; }
-
-.box-form-collapsible .box-wrap-content .btn-edit {
-  position: absolute;
-  display: inline-block;
-  top: 10px;
-  right: 10px;
-  color: #FFFFFF;
-  cursor: pointer; }
-  .box-form-collapsible .box-wrap-content .btn-edit:hover {
-    color: #FFFFFF; }
-
-.box-category-mapper {
-  width: 100%;
-  margin: 0 auto;
-  position: relative; }
-  .box-category-mapper .wrap-categories {
-    height: 250px;
-    background-color: #F2F2F2; }
-    .box-category-mapper .wrap-categories .category {
-      display: inline-block;
-      width: 100%;
-      margin: 10px;
-      background-color: #FFFFFF; }
-      .box-category-mapper .wrap-categories .category.depth-1 {
-        padding-left: 15px; }
-      .box-category-mapper .wrap-categories .category.depth-2 {
-        padding-left: 30px; }
-      .box-category-mapper .wrap-categories .category.depth-3 {
-        padding-left: 45px; }
-
-.box-tag-mapper {
-  width: 100%;
-  margin: 0 auto;
-  position: relative; }
-  .box-tag-mapper .wrap-tags {
-    background-color: #F2F2F2; }
-    .box-tag-mapper .wrap-tags .tag {
-      position: relative;
-      background-color: #FFFFFF;
-      display: inline-block;
-      margin: 1em;
-      padding: 0.5em 1.5em; }
-
-.box-mapper-auto {
-  position: relative; }
-  .box-mapper-auto .auto-map {
-    position: relative; }
-    .box-mapper-auto .auto-map .item-list {
-      display: none;
-      position: absolute;
-      width: 100%; }
-      .box-mapper-auto .auto-map .item-list li {
-        background-color: lightgray;
-        color: #555555; }
-  .box-mapper-auto .auto-mapped .item-list li {
-    background-color: lightgray;
-    color: #555555;
-    display: inline-block;
-    padding: 0.5em;
-    margin: 0.25em; }
-    .box-mapper-auto .auto-mapped .item-list li .close {
-      margin-left: 0.5em; }
-
-.grid-data .grid-content .grid-rows {
-  display: none; }
-  .grid-data .grid-content .grid-rows.active {
-    display: block; }
-  .grid-data .grid-content .grid-rows .grid-rows-header {
-    display: none;
-    font-weight: bold; }
-  .grid-data .grid-content .grid-rows .grid-row.grid-row-zebra:nth-child(even) {
-    background-color: #F2F2F2; }
-  .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data {
-    display: inline-block;
-    width: 68%;
-    padding: 1%;
-    word-wrap: break-word; }
-    .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data.title {
-      width: 28%; }
-  .grid-data .grid-content .grid-rows .grid-rows-footer {
-    display: none;
-    font-weight: bold; }
-
-.grid-data .grid-content .grid-cards {
-  display: none; }
-  .grid-data .grid-content .grid-cards.active {
-    display: block; }
-
-@media only screen and (min-width: 1025px) {
-  .grid-data .grid-content .grid-rows .grid-rows-header {
-    display: block; }
-  .grid-data .grid-content .grid-rows .grid-row .grid-row-header {
-    display: none; }
-  .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data {
-    width: 100%;
-    padding: 0; }
-    .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data.title {
-      display: none; }
-  .grid-data .grid-content .grid-rows .grid-rows-footer {
-    display: block; } }
-
-.grid-basic {
-  background-color: lightgray;
-  padding: 10px; }
-  .grid-basic .grid-header {
-    background-color: #3C4655;
-    color: #96B0D6;
-    padding: 0.25em 10px;
-    text-align: right;
-    min-height: 2em; }
-    .grid-basic .grid-header .info {
-      display: inline-block;
-      float: left;
-      padding: 0.25em 0.5em; }
-  .grid-basic .grid-footer {
-    background-color: #3C4655;
-    color: #96B0D6;
-    padding: 0.25em 10px;
-    text-align: right;
-    min-height: 2em; }
-    .grid-basic .grid-footer .info {
-      display: inline-block;
-      float: left;
-      padding: 0.25em 0.5em; }
-  .grid-basic .grid-rows {
-    margin: 10px 0; }
-    .grid-basic .grid-rows .avatar {
-      width: 48px; }
-  .grid-basic .pagination, .grid-basic .pagination li {
-    display: inline-block;
-    list-style: none; }
-  .grid-basic .pagination li {
-    margin: 0 0.5em; }
-    .grid-basic .pagination li span, .grid-basic .pagination li a {
-      display: inline-block;
-      background-color: #87BA45;
-      color: white;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      -khtml-border-radius: 5px;
-      font-size: 1em;
-      padding: 0.25em 0.5em;
-      -moz-transition: background-color 250ms ease-in-out 0s;
-      -ms-transition: background-color 250ms ease-in-out 0s;
-      -o-transition: background-color 250ms ease-in-out 0s;
-      -webkit-transition: background-color 250ms ease-in-out 0s;
-      transition: background-color 250ms ease-in-out 0s; }
-      .grid-basic .pagination li span:hover, .grid-basic .pagination li a:hover {
-        background-color: #a4cb72;
-        color: #678d34; }
-    .grid-basic .pagination li.disabled span, .grid-basic .pagination li.disabled a, .grid-basic .pagination li.disabled:hover span, .grid-basic .pagination li.disabled:hover a {
-      background-color: gray;
-      color: #F2F2F2; }
-
-.pagination-basic {
-  display: inline-block; }
-  .pagination-basic li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 0.5em; }
-    .pagination-basic li span, .pagination-basic li a {
-      background-color: #E74343;
-      color: #FFFFFF;
-      text-decoration: none;
-      padding: 0.3em 0.5em;
-      font-size: 1em;
-      line-height: 1.4; }
-      .pagination-basic li span:hover, .pagination-basic li a:hover {
-        background-color: #FF3636;
-        color: #FFFFFF; }
-      .pagination-basic li span .icon, .pagination-basic li a .icon {
-        font-size: 1em;
-        margin-top: -0.2em; }
-    .pagination-basic li.prev.disabled span, .pagination-basic li.next.disabled span {
-      background-color: gray;
-      color: #363636; }
-      .pagination-basic li.prev.disabled span:hover, .pagination-basic li.next.disabled span:hover {
-        background-color: gray;
-        color: #363636; }
-      .pagination-basic li.prev.disabled span .icon, .pagination-basic li.next.disabled span .icon {
-        color: #363636; }
-        .pagination-basic li.prev.disabled span .icon:hover, .pagination-basic li.next.disabled span .icon:hover {
-          color: #363636; }
-    .pagination-basic li.active a {
-      background-color: #b51717;
-      color: #FFFFFF; }
-
-.pagination-detailed {
-  margin: 10px 0; }
-  .pagination-detailed .info {
-    float: left; }
-  .pagination-detailed .pagination {
-    float: right; }
-  .pagination-detailed .pagination, .pagination-detailed .pagination li {
-    display: inline-block;
-    list-style: none; }
-  .pagination-detailed .pagination li {
-    margin: 0 2px;
-    font-size: 1em;
-    line-heigh: 1em; }
-  .pagination-detailed .pagination .prev, .pagination-detailed .pagination .next, .pagination-detailed .pagination li a {
-    color: #F2F2F2;
-    text-decoration: none;
-    height: 1.6em;
-    background-color: #232831;
-    -moz-transition: all 250ms ease-in-out 0s;
-    -ms-transition: all 250ms ease-in-out 0s;
-    -o-transition: all 250ms ease-in-out 0s;
-    -webkit-transition: all 250ms ease-in-out 0s;
-    transition: all 250ms ease-in-out 0s; }
-  .pagination-detailed .pagination li a {
-    padding: 2px 8px; }
-  .pagination-detailed .pagination .disabled span, .pagination-detailed .pagination .disabled span:hover {
-    background-color: #3C4655;
-    padding: 2px 8px;
-    height: 1.6em; }
-  .pagination-detailed .pagination .disabled span {
-    line-height: 1.6em; }
-  .pagination-detailed .pagination .active, .pagination-detailed .pagination .active a, .pagination-detailed .pagination li a:hover, .pagination-detailed .pagination .next:hover, .pagination-detailed .pagination .prev:hover {
-    background-color: #3C4655;
-    color: #F2F2F2;
-    -moz-transition: all 250ms ease-in-out 0s;
-    -ms-transition: all 250ms ease-in-out 0s;
-    -o-transition: all 250ms ease-in-out 0s;
-    -webkit-transition: all 250ms ease-in-out 0s;
-    transition: all 250ms ease-in-out 0s; }
-
-.wrap-sort .sort {
-  cursor: pointer; }
-  .wrap-sort .sort.sort-inline {
-    padding-right: 0.5rem; }
-  .wrap-sort .sort.sort-asc {
-    color: #A5D75A !important; }
-  .wrap-sort .sort.sort-desc {
-    color: #E74343 !important; }
 
 .cmt-slider {
   position: relative;
@@ -4926,7 +4622,6 @@ Details: It defines the styles for login components as listed below:
     width: 150px;
     height: 150px;
     overflow: hidden;
-    background-color: white;
     color: black;
     text-align: center; }
   .cmt-slider .control {
@@ -5269,6 +4964,64 @@ Details: It defines the styles for login components as listed below:
       top: 0;
       height: 100%; }
 
+.mapper-category {
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+  .mapper-category .wrap-categories {
+    height: 250px;
+    background-color: #F2F2F2; }
+    .mapper-category .wrap-categories .category {
+      display: inline-block;
+      width: 100%;
+      margin: 10px;
+      background-color: #FFFFFF; }
+      .mapper-category .wrap-categories .category.depth-1 {
+        padding-left: 15px; }
+      .mapper-category .wrap-categories .category.depth-2 {
+        padding-left: 30px; }
+      .mapper-category .wrap-categories .category.depth-3 {
+        padding-left: 45px; }
+
+.mapper-category-auto .auto-mapped .item-list li {
+  background-color: #3C4655;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 0.5rem; }
+  .mapper-category-auto .auto-mapped .item-list li .close {
+    padding-left: 0.5rem; }
+
+.mapper-tag {
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+  .mapper-tag .wrap-tags .tag {
+    background-color: #3C4655;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem; }
+
+.auto-fill {
+  position: relative; }
+  .auto-fill .auto-map {
+    position: relative; }
+    .auto-fill .auto-map .item-list {
+      display: none;
+      position: absolute;
+      width: 100%; }
+      .auto-fill .auto-map .item-list li {
+        background-color: lightgray;
+        color: #555555; }
+  .auto-fill .auto-mapped .item-list li {
+    background-color: lightgray;
+    color: #555555;
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0.25em; }
+    .auto-fill .auto-mapped .item-list li .close {
+      margin-left: 0.5em; }
+
 .file-uploader {
   position: relative; }
   .file-uploader .postview {
@@ -5344,6 +5097,447 @@ Details: It defines the styles for login components as listed below:
     text-align: center; }
   .file-uploader .fields {
     position: relative; }
+
+/**********************************************************************
+Description: It defines the styles of data card components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of card components as listed below:
+
+* Card        - The barebone card class with minimum styles.
+*
+* Element     - The element cards will be used by blocks to show content having header icon and text.
+***********************************************************************/
+.card-element .card-header {
+  text-align: center; }
+
+.card-element .card-data {
+  text-align: center; }
+
+/**********************************************************************
+Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
+             more blocks. Each block can have background image with or without parallax effect, a content wrapper which
+             wraps block header and content.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for header components as listed below:
+
+* Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
+*               listed options:
+*                   - It can have background image with or without parallax effects.
+*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
+*                     background and even content wrapper background in the form of image or texture.
+*                   - Height of block must not be set using min-height to get background with parallax working.
+*
+* Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
+*               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
+*               by CMT-JS framework.
+***********************************************************************/
+.block {
+  position: relative; }
+  .block .block-bkg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .block .block-bkg-fixed {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .block .block-bkg-scroll {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .block .block-bkg-parallax {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    z-index: 5; }
+  .block > .texture {
+    z-index: 10; }
+  .block .block-wrap-content {
+    position: relative;
+    z-index: 15; }
+  .block .block-splitter {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    z-index: 10000; }
+    .block .block-splitter.top {
+      top: 0;
+      margin-top: -50px; }
+    .block .block-splitter.bottom {
+      bottom: 0;
+      margin-bottom: -50px; }
+    .block .block-splitter .icon {
+      display: inline-block;
+      width: 100px;
+      height: 100px; }
+
+.block-basic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/**********************************************************************
+Description: It defines the styles of box components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of box components as listed below:
+
+* Footer      - The barebone box class with minimum styles.
+*
+* Basic       - The basic box define the styles of simple box having icon and header within header wrapper and
+*               content within content box. The content is aligned center by default.
+*
+* Collapsible - The collapsible boxes are similar to basic, but these can also be collapsed hiding content keeping
+*               header and footer visible. The content collapse on clicking header / collapse button on header.
+***********************************************************************/
+.box .box-header {
+  position: relative; }
+
+.box .box-content {
+  position: relative; }
+
+.box .box-footer {
+  position: relative; }
+
+.box-basic {
+  padding: 1rem; }
+  .box-basic .box-header {
+    background-color: #3C4655;
+    color: #96B0D6;
+    padding: 0.5rem; }
+  .box-basic .box-content {
+    background-color: #F2F2F2;
+    color: #363636;
+    padding: 0.5rem; }
+  .box-basic .box-footer {
+    background-color: #556479;
+    color: #6a8fc5; }
+
+.box-basic-icon {
+  padding: 1rem; }
+  .box-basic-icon .box-header .header-icon {
+    position: absolute;
+    display: inline-block;
+    top: 0.5rem;
+    left: 0.5rem; }
+  .box-basic-icon .box-header .header-title {
+    padding-left: 1.5rem; }
+
+.box-collapsible .box-header .btn-collapse {
+  position: absolute;
+  display: inline-block;
+  top: 0.5em;
+  right: 0.5em;
+  color: #FFFFFF;
+  cursor: pointer; }
+  .box-collapsible .box-header .btn-collapse:hover {
+    color: #FFFFFF; }
+
+/**********************************************************************
+Description: It defines the styles for login components available in CMT-UI css framework.
+
+Dependencies: none
+
+Details: It defines the styles for login components as listed below:
+
+* Login box wrapper - It's wrapper for login, register and forgot password forms. It depends on cmtLoginRegister
+*                     jQuery plugin available in CMT-JS framework.
+***********************************************************************/
+.wrap-login-box .btn-login, .wrap-login-box .btn-signup, .wrap-login-box .btn-forgot-password {
+  cursor: pointer; }
+
+.wrap-login-box .box-forgot-password {
+  display: none; }
+
+.wrap-login-box .box-signup {
+  display: none; }
+
+/**********************************************************************
+Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info for display purpose and
+             the real form can be displayed when user click the edit button.
+
+Dependencies: variables, variables-ext, mixins, boxes/basic
+
+Details: It defines the styles of form box components as listed below:
+
+* Form        - The barebone form box class having edot button and wrappers for info and form.
+*
+* Basic       - The basic form define styles to position the edit icon.
+*
+* Collapsible - The collapsible form boxes are similar to basic, but these can also be collapsed hiding content keeping
+*               header and footer visible. The content collapse on clicking header / collapse button on header.
+***********************************************************************/
+.box-form {
+  position: relative; }
+  .box-form .btn-edit {
+    cursor: pointer; }
+  .box-form .wrap-info {
+    display: block; }
+  .box-form .wrap-form {
+    display: none; }
+
+.box-form-basic .btn-edit {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF;
+  cursor: pointer; }
+  .box-form-basic .btn-edit:hover {
+    color: #FFFFFF; }
+
+/**********************************************************************
+Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
+             more blocks. Each block can have background image with or without parallax effect, a content wrapper which
+             wraps block header and content.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for header components as listed below:
+
+* Block       - The barebone grid class with minimum styles common for all the data grids.
+*
+* Basic       - The basic data grid having coloring.
+***********************************************************************/
+.grid-data .grid-content .grid-rows {
+  display: none; }
+  .grid-data .grid-content .grid-rows.active {
+    display: block; }
+  .grid-data .grid-content .grid-rows.grid-rows-zebra .grid-row:nth-child(even) {
+    background-color: #F2F2F2; }
+  .grid-data .grid-content .grid-rows .grid-rows-header {
+    display: none;
+    font-weight: bold; }
+  .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data {
+    display: inline-block;
+    width: 68%;
+    padding: 1%;
+    word-wrap: break-word; }
+    .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data.title {
+      width: 28%; }
+  .grid-data .grid-content .grid-rows .grid-rows-footer {
+    display: none;
+    font-weight: bold; }
+
+.grid-data .grid-content .grid-cards {
+  display: none; }
+  .grid-data .grid-content .grid-cards.active {
+    display: block; }
+
+@media only screen and (min-width: 1025px) {
+  .grid-data .grid-content .grid-rows .grid-rows-header {
+    display: block; }
+  .grid-data .grid-content .grid-rows .grid-row .grid-row-header {
+    display: none; }
+  .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data {
+    width: 100%;
+    padding: 0; }
+    .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data.title {
+      display: none; }
+  .grid-data .grid-content .grid-rows .grid-rows-footer {
+    display: block; } }
+
+.grid-basic {
+  background-color: lightgray;
+  padding: 10px; }
+  .grid-basic .grid-header {
+    background-color: #3C4655;
+    color: #96B0D6;
+    padding: 0.25em 10px;
+    text-align: right;
+    min-height: 2em; }
+    .grid-basic .grid-header .info {
+      display: inline-block;
+      float: left;
+      padding: 0.25em 0.5em; }
+  .grid-basic .grid-footer {
+    background-color: #3C4655;
+    color: #96B0D6;
+    padding: 0.25em 10px;
+    text-align: right;
+    min-height: 2em; }
+    .grid-basic .grid-footer .info {
+      display: inline-block;
+      float: left;
+      padding: 0.25em 0.5em; }
+  .grid-basic .grid-rows {
+    margin: 10px 0; }
+    .grid-basic .grid-rows .avatar {
+      width: 48px; }
+  .grid-basic .pagination, .grid-basic .pagination li {
+    display: inline-block;
+    list-style: none; }
+  .grid-basic .pagination li {
+    margin: 0 0.5em; }
+    .grid-basic .pagination li span, .grid-basic .pagination li a {
+      display: inline-block;
+      background-color: #87BA45;
+      color: white;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -khtml-border-radius: 5px;
+      font-size: 1em;
+      padding: 0.25em 0.5em;
+      -moz-transition: background-color 250ms ease-in-out 0s;
+      -ms-transition: background-color 250ms ease-in-out 0s;
+      -o-transition: background-color 250ms ease-in-out 0s;
+      -webkit-transition: background-color 250ms ease-in-out 0s;
+      transition: background-color 250ms ease-in-out 0s; }
+      .grid-basic .pagination li span:hover, .grid-basic .pagination li a:hover {
+        background-color: #a4cb72;
+        color: #678d34; }
+    .grid-basic .pagination li.disabled span, .grid-basic .pagination li.disabled a, .grid-basic .pagination li.disabled:hover span, .grid-basic .pagination li.disabled:hover a {
+      background-color: gray;
+      color: #F2F2F2; }
+
+/**********************************************************************
+Description: It defines the styles of the pagination components having links to navigate pages.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for pagination components as listed below:
+
+* Pagination  - The barebone pagination class with minimum styles common for all the data grids.
+*
+* Basic       - The basic pagination. It uses button colors to decorate pagination states.
+*
+* Full        - Full pagination having both info and pagination links.
+***********************************************************************/
+.pagination {
+  display: inline-block; }
+  .pagination li, .pagination .page-link {
+    display: inline-block;
+    list-style: none; }
+    .pagination li span, .pagination li a, .pagination .page-link span, .pagination .page-link a {
+      text-decoration: none; }
+
+.pagination-basic li, .pagination-basic .page-link {
+  padding: 0 0.25em; }
+  .pagination-basic li span, .pagination-basic li a, .pagination-basic .page-link span, .pagination-basic .page-link a {
+    padding: 0.3em 0.5em;
+    background-color: #E74343;
+    color: #FFFFFF; }
+    .pagination-basic li span:hover, .pagination-basic li a:hover, .pagination-basic .page-link span:hover, .pagination-basic .page-link a:hover {
+      background-color: #FF3636;
+      color: #FFFFFF; }
+    .pagination-basic li span .icon, .pagination-basic li a .icon, .pagination-basic .page-link span .icon, .pagination-basic .page-link a .icon {
+      margin-top: -0.2em; }
+  .pagination-basic li.first.disabled span, .pagination-basic li.prev.disabled span, .pagination-basic li.next.disabled span, .pagination-basic li.last.disabled span, .pagination-basic .page-link.first.disabled span, .pagination-basic .page-link.prev.disabled span, .pagination-basic .page-link.next.disabled span, .pagination-basic .page-link.last.disabled span {
+    background-color: gray;
+    color: #363636; }
+    .pagination-basic li.first.disabled span:hover, .pagination-basic li.prev.disabled span:hover, .pagination-basic li.next.disabled span:hover, .pagination-basic li.last.disabled span:hover, .pagination-basic .page-link.first.disabled span:hover, .pagination-basic .page-link.prev.disabled span:hover, .pagination-basic .page-link.next.disabled span:hover, .pagination-basic .page-link.last.disabled span:hover {
+      background-color: gray;
+      color: #363636; }
+    .pagination-basic li.first.disabled span .icon, .pagination-basic li.prev.disabled span .icon, .pagination-basic li.next.disabled span .icon, .pagination-basic li.last.disabled span .icon, .pagination-basic .page-link.first.disabled span .icon, .pagination-basic .page-link.prev.disabled span .icon, .pagination-basic .page-link.next.disabled span .icon, .pagination-basic .page-link.last.disabled span .icon {
+      color: #363636; }
+      .pagination-basic li.first.disabled span .icon:hover, .pagination-basic li.prev.disabled span .icon:hover, .pagination-basic li.next.disabled span .icon:hover, .pagination-basic li.last.disabled span .icon:hover, .pagination-basic .page-link.first.disabled span .icon:hover, .pagination-basic .page-link.prev.disabled span .icon:hover, .pagination-basic .page-link.next.disabled span .icon:hover, .pagination-basic .page-link.last.disabled span .icon:hover {
+        color: #363636; }
+  .pagination-basic li.active a, .pagination-basic .page-link.active a {
+    background-color: #b51717;
+    color: #FFFFFF; }
+
+.pagination-full {
+  margin: 10px 0; }
+  .pagination-full .info {
+    float: left; }
+  .pagination-full .pagination {
+    float: right; }
+  .pagination-full .pagination, .pagination-full .pagination li {
+    display: inline-block;
+    list-style: none; }
+  .pagination-full .pagination li {
+    margin: 0 2px;
+    font-size: 1em;
+    line-heigh: 1em; }
+  .pagination-full .pagination .prev, .pagination-full .pagination .next, .pagination-full .pagination li a {
+    color: #F2F2F2;
+    text-decoration: none;
+    height: 1.6em;
+    background-color: #232831;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s; }
+  .pagination-full .pagination li a {
+    padding: 2px 8px; }
+  .pagination-full .pagination .disabled span, .pagination-full .pagination .disabled span:hover {
+    background-color: #3C4655;
+    padding: 2px 8px;
+    height: 1.6em; }
+  .pagination-full .pagination .disabled span {
+    line-height: 1.6em; }
+  .pagination-full .pagination .active, .pagination-full .pagination .active a, .pagination-full .pagination li a:hover, .pagination-full .pagination .next:hover, .pagination-full .pagination .prev:hover {
+    background-color: #3C4655;
+    color: #F2F2F2;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s; }
+
+/**********************************************************************
+Description: It defines the styles of the sorting components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of sorting components as listed below:
+
+* Sort        - The barebone sort class with minimum styles common for all the sorting.
+***********************************************************************/
+.wrap-sort .sort {
+  cursor: pointer; }
+  .wrap-sort .sort.sort-inline {
+    padding-right: 0.5rem; }
+  .wrap-sort .sort.sort-asc {
+    color: #A5D75A !important; }
+  .wrap-sort .sort.sort-desc {
+    color: #E74343 !important; }
 
 /**********************************************************************
 Description: It defines the styles of the blog components used to show blog posts on recent, popular, similar and

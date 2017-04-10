@@ -19,7 +19,7 @@
         width: 150px;
         height: 150px;
         overflow: hidden;
-        background-color: white;
+        //background-color: white;
         color: black;
         text-align: center;
     }
@@ -36,45 +36,45 @@
         background-repeat: none;
         background-position: 0px 0px;
     }
-    
+
     .control-left {
         float: left;
         left: 20px;
         background-position: 0px 80px;
-        
+
         &:hover {
             background-position: 0px 0px;
         }
     }
-     
+
     .control-right {
         float: right;
         right: 20px;
         background-position: -48px 80px;
-        
+
         &:hover {
             background-position: -48px 0px;
         }
     }
-    
+
     &.slider-item-image {
-        
+
         .slide {
-            cursor: pointer; 
+            cursor: pointer;
             @include shadow-inset( 1px, 1px, 100px, $color-black, $spread: 0px );
-            
+
             &:hover {
                 @include transit-all( $transit-eio, $transit-time-small );
                 @include shadow-inset( 0px, 0px, 0px, $color-black, $spread: 0px );
             }
         }
-        
+
         .control-left {
             background: none;
             color: $color-white;
             left: 0;
         }
-        
+
         .control-right {
             background: none;
             color: $color-white;

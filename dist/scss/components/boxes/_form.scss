@@ -1,4 +1,21 @@
-// The Form Box can be used to show form info for display purpose and the real form can be displayed when user click the edit button.
+/**********************************************************************
+Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info for display purpose and
+             the real form can be displayed when user click the edit button.
+
+Dependencies: variables, variables-ext, mixins, boxes/basic
+
+Details: It defines the styles of form box components as listed below:
+
+* Form        - The barebone form box class having edot button and wrappers for info and form.
+*
+* Basic       - The basic form define styles to position the edit icon.
+*
+* Collapsible - The collapsible form boxes are similar to basic, but these can also be collapsed hiding content keeping
+*               header and footer visible. The content collapse on clicking header / collapse button on header.
+***********************************************************************/
+
+// == Structure - Form Box ==========
+
 .box-form {
     position: relative;
 
@@ -15,7 +32,9 @@
     }
 }
 
-.box-form-regular {
+// == Basic Form Box ================
+
+.box-form-basic {
 
     .btn-edit {
         position: absolute;
@@ -31,22 +50,8 @@
     }
 }
 
-// The collapsible form derived from collapsible box. The edit button is wrapped by content wrapper for collapsible box.
+// == Collapsible Form Box ==========
+
 .box-form-collapsible {
 
-    .box-wrap-content {
-
-        .btn-edit {
-            position: absolute;
-            display: inline-block;
-            top: 10px;
-            right: 10px;
-            color: $color-btn-text;
-            cursor: pointer;
-            
-            &:hover {
-                color: $color-btn-h-text;
-            }
-        }
-    }
 }

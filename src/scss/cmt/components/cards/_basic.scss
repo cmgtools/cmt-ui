@@ -1,3 +1,17 @@
+/**********************************************************************
+Description: It defines the styles of data card components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of card components as listed below:
+
+* Card        - The barebone card class with minimum styles.
+*
+* Element     - The element cards will be used by blocks to show content having header icon and text.
+***********************************************************************/
+
+// == Structure - Card ==============
+
 .card {
 
     .card-header {
@@ -11,4 +25,17 @@
     .card-footer {
 
     }
+}
+
+// == Element Card ==================
+
+.card-element {
+
+    .card-header {
+        text-align: center;
+     }
+
+     .card-data {
+        text-align: center;
+     }
 }

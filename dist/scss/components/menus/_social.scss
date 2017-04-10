@@ -4,6 +4,7 @@ Description: It defines the styles for social network menu components available 
 Dependencies: none
 
 Details: It defines the social network menu components as listed below:
+
 * Social Menu     - The social menu class is special menu class used for social icons. It supports the social
 *                   icons available in CMT-Icons library. It can be further extended to support other icon
 *                   libraries.
@@ -24,7 +25,7 @@ Details: It defines the social network menu components as listed below:
     }
 
     // Social Icons
-    .cmti {
+    .icon, .cmti {
         margin: 0;
         margin-bottom: 0.25rem;
         margin-right: 0.5rem;
@@ -32,73 +33,73 @@ Details: It defines the social network menu components as listed below:
     }
 
     // Social Icons with background color
-    .cmti-bkg {
+    .icon-bkg, .cmti-bkg {
 
-        &.cmti-social-facebook {
+        &.icon-facebook, &.cmti-social-facebook {
             background-color: $color-facebook;
         }
 
-        &.cmti-social-twitter {
+        &.icon-twitter, &.cmti-social-twitter {
             background-color: $color-twitter;
         }
 
-        &.cmti-social-google {
+        &.icon-google, &.cmti-social-google {
             background-color: $color-google;
         }
 
-        &.cmti-social-google-plus {
+        &.icon-google-plus, &.cmti-social-google-plus {
             background-color: $color-google-plus;
         }
 
-        &.cmti-social-linkedin {
+        &.icon-linkedin, &.cmti-social-linkedin {
             background-color: $color-linkedin;
         }
 
-        &.cmti-social-instagram {
+        &.icon-instagram, &.cmti-social-instagram {
             background-color: $color-instagram;
         }
 
-        &.cmti-social-pintrest {
+        &.icon-pintrest, &.cmti-social-pintrest {
             background-color: $color-pintrest;
         }
 
-        &.cmti-social-youtube {
+        &.icon-youtube, &.cmti-social-youtube {
             background-color: $color-youtube;
         }
     }
 
     // Social Icons with text color
-    .cmti-text {
+    .icon-text, .cmti-text {
 
-        &.cmti-social-facebook {
+        &.icon-facebook, &.cmti-social-facebook {
             color: $color-facebook;
         }
 
-        &.cmti-social-twitter {
+        &.icon-twitter, &.cmti-social-twitter {
             color: $color-twitter;
         }
 
-        &.cmti-social-google {
+        &.icon-google, &.cmti-social-google {
             color: $color-google;
         }
 
-        &.cmti-social-google-plus {
+        &.icon-google-plus, &.cmti-social-google-plus {
             color: $color-google-plus;
         }
 
-        &.cmti-social-linkedin {
+        &.icon-linkedin, &.cmti-social-linkedin {
             color: $color-linkedin;
         }
 
-        &.cmti-social-instagram {
+        &.icon-instagram, &.cmti-social-instagram {
             color: $color-instagram;
         }
 
-        &.cmti-social-pintrest {
+        &.icon-pintrest, &.cmti-social-pintrest {
             color: $color-pintrest;
         }
 
-        &.cmti-social-youtube {
+        &.icon-youtube, &.cmti-social-youtube {
             color: $color-youtube;
         }
 
