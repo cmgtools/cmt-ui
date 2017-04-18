@@ -28,12 +28,18 @@ table {
 
     &.table-zebra {
 
-        tbody {
+        > tbody {
 
             tr:nth-child( even ) {
                 background-color: $color-primary-d;
                 color: $color-primary-text-d;
             }
+        }
+    }
+
+    &.table-hover {
+
+        > tbody {
 
             tr:hover {
                 background-color: $color-secondary;
@@ -44,8 +50,18 @@ table {
 
     &.table-border {
 
-        th, td {
-            border: 1px solid $color-secondary;
+        > thead {
+
+            th {
+                border: 1px solid $color-secondary;
+            }
+        }
+
+        > tbody {
+
+            td {
+                border: 1px solid $color-secondary;
+            }
         }
     }
 
@@ -55,30 +71,52 @@ table {
 
     &.table-responsive {
 
-        th {
-            display: none;
-        }
+        > thead {
 
-        td {
-            display: block;
+            > tr {
 
-            &:before {
-                content: attr(data-th);
-                font-weight: bold;
-                width: 30%;
-                display: inline-block;
-
-                @include responsive-min( screen-tablet-large ) {
+                > th {
                     display: none;
+                    text-align: left;
+
+                    @include responsive-min( screen-tablet-large ) {
+                        display: table-cell;
+                    }
                 }
             }
         }
 
-        th, td {
-            text-align: left;
+        > tbody {
+
+            > tr {
+
+                > td {
+                    display: block;
+                    text-align: left;
+
+                    &:before {
+                        content: attr(data-th);
+                        font-weight: bold;
+                        width: 30%;
+                        display: inline-block;
+
+                        @include responsive-min( screen-tablet-large ) {
+                            display: none;
+                        }
+                    }
+
+                    @include responsive-min( screen-tablet-large ) {
+                        display: table-cell;
+                    }
+                }
+            }
+        }
+
+        .wrap-table {
+            width: 68%;
 
             @include responsive-min( screen-tablet-large ) {
-                display: table-cell;
+                width: 100%;
             }
         }
     }

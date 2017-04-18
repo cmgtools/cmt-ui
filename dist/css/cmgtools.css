@@ -3015,6 +3015,26 @@ Details: It defines the grid system and basic containers as listed below:
   .max-cols-100 > .colf15x2, .max-cols-100 > .colf15x3, .max-cols-100 > .colf15x4, .max-cols-100 > .colf15x5, .max-cols-100 > .colf15x6, .max-cols-100 > .colf15x7, .max-cols-100 > .colf15x8, .max-cols-100 > .colf15x9, .max-cols-100 > .colf15x10, .max-cols-100 > .colf15x11, .max-cols-100 > .colf15x12, .max-cols-100 > .colf15x13, .max-cols-100 .colf15x14 {
     width: 100%; } }
 
+.col-fixed {
+  display: block;
+  float: left;
+  margin: 0;
+  word-wrap: break-word;
+  min-height: 1px; }
+
+.col-fixed.col-fixed-inline {
+  display: inline-block;
+  float: none; }
+
+.col-fixed.col-fixed-small {
+  width: 10rem; }
+
+.col-fixed.col-fixed-medium {
+  width: 16rem; }
+
+.col-fixed.col-fixed-large {
+  width: 20rem; }
+
 .wrap-col-filler {
   position: relative;
   z-index: 0; }
@@ -3288,7 +3308,6 @@ Details: It defines the custom element styles as listed below:
         text-align: left;
         color: #363636;
         font-size: 1em;
-        line-height: 1.30;
         padding: 0.30em 0.25em; }
       .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
         position: absolute;
@@ -3591,40 +3610,30 @@ form {
       width: 80%;
       padding: 1rem 2%; } }
 
-.warning, .error, .success, .info {
-  margin-bottom: 0.5rem; }
-
-.message.warning, .message.error, .message.success, .message.info {
-  margin-top: 0.5rem; }
-
-.form-group .help-block {
-  margin-bottom: 0.5rem; }
-
 .btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
   border: none;
   box-shadow: none;
   outline: none;
   font-size: 1em;
-  line-height: 1.30;
   padding: 0.30em;
   margin: 0;
   display: inline-block; }
 
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-select-wrap {
   width: 100%; }
-  label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25 {
+  label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.cmt-select-wrap {
     width: 25% !important; }
-  label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50 {
+  label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.cmt-select-wrap {
     width: 50% !important; }
-  label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75 {
+  label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.cmt-select-wrap {
     width: 75% !important; }
-  label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small {
+  label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.cmt-select-wrap {
     width: 80px !important; }
-  label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium {
+  label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.cmt-select-wrap {
     width: 120px !important; }
-  label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large {
+  label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.cmt-select-wrap {
     width: 180px !important; }
-  label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge {
+  label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.cmt-select-wrap {
     width: 250px !important; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
@@ -3635,8 +3644,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   transition: all 250ms ease-in-out 0s;
   background-color: #F2F2F2;
   color: #363636;
-  text-align: left;
-  margin-bottom: 0.5rem; }
+  text-align: left; }
   input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
     background-color: #E9E9E9;
     color: #363636; }
@@ -3672,11 +3680,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
 
 label {
   text-align: left;
-  background: none;
-  margin-bottom: 0.5rem; }
-
-.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button {
-  width: auto; }
+  background: none; }
 
 .required .control-label:after {
   content: " *";
@@ -3777,10 +3781,8 @@ label {
     box-shadow: none;
     outline: none;
     font-size: 1em;
-    line-height: 1.30;
     padding: 0.30em;
-    margin: 0;
-    margin-bottom: 0.5rem; }
+    margin: 0; }
   .frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select, .frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button {
     padding-left: 0.30em;
     padding-right: 1.75em; }
@@ -3819,12 +3821,6 @@ label {
   .cmt-checkbox:hover, .cmt-switch:hover {
     background: none;
     color: #363636; }
-
-.cmt-select-wrap {
-  margin-bottom: 0.5rem; }
-
-.frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch {
-  width: auto; }
 
 .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
   width: 60%;
@@ -3885,6 +3881,34 @@ label {
 .frm-split-40-60 .frm-icon-element .btn {
   float: none; }
 
+.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
+.frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
+  float: none;
+  width: auto; }
+
+.cmt-form input[type="submit"], .cmt-form input[type="button"], .cmt-form button, .cmt-form .btn, .cmt-form .btn-icon, .cmt-form .cmt-select .cmt-selected .s-text {
+  line-height: 1.30; }
+
+.cmt-form label, .cmt-form input[type="text"], .cmt-form input[type="email"], .cmt-form input[type="password"], .cmt-form textarea, .cmt-form select {
+  margin-bottom: 0.5rem;
+  line-height: 1.30; }
+
+.cmt-form .frm-icon-element .cmti, .cmt-form .frm-icon-element .icon, .cmt-form .frm-icon-element .fa {
+  margin-bottom: 0.5rem;
+  line-height: 1.30; }
+
+.cmt-form .cmt-checkbox, .cmt-form .cmt-switch, .cmt-form .cmt-select-wrap {
+  margin-bottom: 0.5rem; }
+
+.cmt-form .warning, .cmt-form .error, .cmt-form .success, .cmt-form .info {
+  margin-bottom: 0.5rem; }
+
+.cmt-form .message.warning, .cmt-form .message.error, .cmt-form .message.success, .cmt-form .message.info {
+  margin-top: 0.5rem; }
+
+.cmt-form .form-group .help-block {
+  margin-bottom: 0.5rem; }
+
 /**********************************************************************
 Description: It defines the table styles for CMT-UI css framework.
 
@@ -3902,33 +3926,43 @@ table td {
 
 .table {
   width: 100%; }
-  .table.table-zebra tbody tr:nth-child(even) {
+  .table.table-zebra > tbody tr:nth-child(even) {
     background-color: lightgray;
     color: #555555; }
-  .table.table-zebra tbody tr:hover {
+  .table.table-hover > tbody tr:hover {
     background-color: #3C4655;
     color: #96B0D6; }
-  .table.table-border th, .table.table-border td {
+  .table.table-border > thead th {
+    border: 1px solid #3C4655; }
+  .table.table-border > tbody td {
     border: 1px solid #3C4655; }
   .table.table-fixed {
     table-layout: fixed; }
-  .table.table-responsive th {
-    display: none; }
-  .table.table-responsive td {
-    display: block; }
-    .table.table-responsive td:before {
+  .table.table-responsive > thead > tr > th {
+    display: none;
+    text-align: left; }
+    @media only screen and (min-width: 1025px) {
+      .table.table-responsive > thead > tr > th {
+        display: table-cell; } }
+  .table.table-responsive > tbody > tr > td {
+    display: block;
+    text-align: left; }
+    .table.table-responsive > tbody > tr > td:before {
       content: attr(data-th);
       font-weight: bold;
       width: 30%;
       display: inline-block; }
       @media only screen and (min-width: 1025px) {
-        .table.table-responsive td:before {
+        .table.table-responsive > tbody > tr > td:before {
           display: none; } }
-  .table.table-responsive th, .table.table-responsive td {
-    text-align: left; }
     @media only screen and (min-width: 1025px) {
-      .table.table-responsive th, .table.table-responsive td {
+      .table.table-responsive > tbody > tr > td {
         display: table-cell; } }
+  .table.table-responsive .wrap-table {
+    width: 68%; }
+    @media only screen and (min-width: 1025px) {
+      .table.table-responsive .wrap-table {
+        width: 100%; } }
 
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.

@@ -516,6 +516,36 @@ Details: It defines the grid system and basic containers as listed below:
     }
 }
 
+// Fixed width columns
+%col-fixed {
+    display: block;
+    float:left;
+    margin: 0;
+    word-wrap: break-word;
+    min-height: 1px;
+}
+
+.col-fixed {
+    @extend %col-fixed;
+
+    &.col-fixed-inline {
+        display: inline-block;
+        float: none;
+    }
+
+    &.col-fixed-small {
+        width: 10rem;
+    }
+
+    &.col-fixed-medium {
+        width: 16rem;
+    }
+
+    &.col-fixed-large {
+        width: 20rem;
+    }
+}
+
 // full height first column
 
 // The main usage of col filler is to fill background of an element in floated elements case. Ex: Sidebar need to show background color with same height as that of content.

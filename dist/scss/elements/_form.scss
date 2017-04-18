@@ -76,23 +76,6 @@ form {
 
 // == Form Elements =================
 
-// Messages
-.warning, .error, .success, .info {
-    margin-bottom: 0.5rem; // To match with form elements
-}
-
-.message {
-
-    &.warning, &.error, &.success, &.info {
-        margin-top: 0.5rem; // To match with form elements
-    }
-}
-
-// Required for Yii Forms
-.form-group .help-block {
-    margin-bottom: 0.5rem; // To match with form elements
-}
-
 // Extended classes
 
 %element-style {
@@ -100,7 +83,6 @@ form {
     box-shadow: none;
     outline: none;
     font-size: 1em;
-    line-height: 1.30;
     padding: 0.30em;
     margin: 0;
     display: inline-block;
@@ -143,7 +125,6 @@ form {
     background-color: $color-field;
     color: $color-field-text;
     text-align: left;
-    margin-bottom: 0.5rem;
 
     &:hover {
         background-color: $color-field-h;
@@ -192,7 +173,6 @@ label {
     //@extend %element-style-field;
     text-align: left;
     background: none;
-    margin-bottom: 0.5rem;
 }
 
 // Text
@@ -207,15 +187,6 @@ input[type="submit"], input[type="button"], button {
     @extend %element-style;
     @extend %element-size;
     @extend %element-style-action;
-}
-
-// Ignore 100% width behavior for form elements
-
-.frm-ignore-100 {
-
-    label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
-        width: auto;
-    }
 }
 
 // Mandatory fields
@@ -338,10 +309,8 @@ input[type="submit"], input[type="button"], button {
         box-shadow: none;
         outline: none;
         font-size: 1em;
-        line-height: 1.30;
         padding: 0.30em;
         margin: 0;
-        margin-bottom: 0.5rem;
     }
 
     // Show icon on right side
@@ -415,16 +384,7 @@ input[type="submit"], input[type="button"], button {
 }
 
 .cmt-select-wrap {
-    margin-bottom: 0.5rem; // To match with form elements
-}
-
-// Ignore 100% width behavior for form elements
-
-.frm-ignore-100 {
-
-    .cmt-checkbox, .cmt-switch {
-        width: auto;
-    }
+    @extend %element-size;
 }
 
 .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
@@ -494,5 +454,58 @@ input[type="submit"], input[type="button"], button {
 
     .btn {
         float: none;
+    }
+}
+
+// Ignore 100% width behavior for form elements
+
+.frm-ignore-100 {
+
+    label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
+    .cmt-checkbox, .cmt-switch, .cmt-choice {
+        float: none;
+        width: auto;
+    }
+}
+
+// Generic Form to wrap form elements
+.cmt-form {
+
+    input[type="submit"], input[type="button"], button, .btn, .btn-icon, .cmt-select .cmt-selected .s-text {
+        line-height: 1.30;
+    }
+
+    label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
+        margin-bottom: 0.5rem;
+        line-height: 1.30;
+    }
+
+    .frm-icon-element {
+
+        .cmti, .icon, .fa {
+            margin-bottom: 0.5rem;
+            line-height: 1.30;
+        }
+    }
+
+    .cmt-checkbox, .cmt-switch, .cmt-select-wrap {
+        margin-bottom: 0.5rem;
+    }
+
+    // Messages
+    .warning, .error, .success, .info {
+        margin-bottom: 0.5rem; // To match with form elements
+    }
+
+    .message {
+
+        &.warning, &.error, &.success, &.info {
+            margin-top: 0.5rem; // To match with form elements
+        }
+    }
+
+    // Required for Yii Forms
+    .form-group .help-block {
+        margin-bottom: 0.5rem; // To match with form elements
     }
 }
