@@ -2408,7 +2408,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
   font-family: Verdana, Geneva, sans-serif;
   padding: 0.25em; }
 
-p, span, em, div, a, .reader {
+p, span, em, div, a {
+  font-size: 1em; }
+
+.reader {
   font-size: 1em;
   line-height: 1.4; }
 
