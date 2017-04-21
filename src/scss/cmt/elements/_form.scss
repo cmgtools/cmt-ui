@@ -468,23 +468,37 @@ input[type="submit"], input[type="button"], button {
     }
 }
 
+.btn-icon {
+    padding: 0.30em 0.5em;
+    line-height: 1.4;
+}
+
+input[type="submit"], input[type="button"], button, .btn, .cmt-select .cmt-selected {
+    line-height: 1.4;
+}
+
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    line-height: 1.4;
+}
+
+.frm-icon-element {
+
+    .cmti, .icon, .fa {
+        line-height: 1.4;
+    }
+}
+
 // Generic Form to wrap form elements
 .cmt-form {
 
-    input[type="submit"], input[type="button"], button, .btn, .btn-icon, .cmt-select .cmt-selected .s-text {
-        line-height: 1.30;
-    }
-
     label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
         margin-bottom: 0.5rem;
-        line-height: 1.30;
     }
 
     .frm-icon-element {
 
         .cmti, .icon, .fa {
             margin-bottom: 0.5rem;
-            line-height: 1.30;
         }
     }
 

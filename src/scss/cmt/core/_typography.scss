@@ -40,7 +40,6 @@ Details: It defines the typography specific styles as listed below:
 // Default font for entire html document
 html, body {
     font-family: $font-default;
-    line-height: $line-height-text;
 }
 
 // Base Font Size following mobile first approach. We have kept 4 font size(ranging 12px to 18px) as standard based on device range.
@@ -194,7 +193,6 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
     vertical-align: middle;
     line-height: $line-height-header;
-    margin-bottom: 1rem;
     font-family: $font-heading;
     padding: 0.25em;
 }

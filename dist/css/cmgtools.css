@@ -2313,8 +2313,7 @@ Details: It defines the typography specific styles as listed below:
 * Text with line    - This class can be used to decorate text having background line at center.
 ***********************************************************************/
 html, body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 html, body {
   font-size: 12px; }
@@ -2404,7 +2403,6 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
   vertical-align: middle;
   line-height: 1.2;
-  margin-bottom: 1rem;
   font-family: Verdana, Geneva, sans-serif;
   padding: 0.25em; }
 
@@ -3889,16 +3887,24 @@ label {
   float: none;
   width: auto; }
 
-.cmt-form input[type="submit"], .cmt-form input[type="button"], .cmt-form button, .cmt-form .btn, .cmt-form .btn-icon, .cmt-form .cmt-select .cmt-selected .s-text {
-  line-height: 1.30; }
+.btn-icon {
+  padding: 0.30em 0.5em;
+  line-height: 1.4; }
+
+input[type="submit"], input[type="button"], button, .btn, .cmt-select .cmt-selected {
+  line-height: 1.4; }
+
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
+  line-height: 1.4; }
+
+.frm-icon-element .cmti, .frm-icon-element .icon, .frm-icon-element .fa {
+  line-height: 1.4; }
 
 .cmt-form label, .cmt-form input[type="text"], .cmt-form input[type="email"], .cmt-form input[type="password"], .cmt-form textarea, .cmt-form select {
-  margin-bottom: 0.5rem;
-  line-height: 1.30; }
+  margin-bottom: 0.5rem; }
 
 .cmt-form .frm-icon-element .cmti, .cmt-form .frm-icon-element .icon, .cmt-form .frm-icon-element .fa {
-  margin-bottom: 0.5rem;
-  line-height: 1.30; }
+  margin-bottom: 0.5rem; }
 
 .cmt-form .cmt-checkbox, .cmt-form .cmt-switch, .cmt-form .cmt-select-wrap {
   margin-bottom: 0.5rem; }
