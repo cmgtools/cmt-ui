@@ -711,16 +711,16 @@ html, body {
  * Tab fillers to seperate elements.
  */
 .filler-tab {
-    width: 2em;
+    width: 1em;
     height: 1px;
     display: inline-block;
 
     &.filler-tab-small {
-        width: 4em;
+        width: 2em;
     }
 
     &.filler-tab-medium {
-        width: 6em;
+        width: 4em;
     }
 
     &.filler-tab-large {
