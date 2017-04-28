@@ -103,29 +103,32 @@ Details: It defines the styles for header components as listed below:
                 font-weight: bold;
             }
 
-            .grid-row {
+            .wrap-grid-rows {
 
-                .grid-row-header {
-                    // row title
-                }
+                .grid-row {
 
-                .grid-row-data {
-                    // row data - it can be anything ex: content box
+                    .grid-row-header {
+                        // row title
+                    }
 
-                    .data {
-                        display: inline-block;
-                        width: 68%;
-                        padding: 1%;
-                        word-wrap: break-word;
+                    .grid-row-data {
+                        // row data - it can be anything ex: content box
 
-                        &.title {
-                            width: 28%;
+                        .data {
+                            display: inline-block;
+                            width: 68%;
+                            padding: 1%;
+                            word-wrap: break-word;
+
+                            &.title {
+                                width: 28%;
+                            }
                         }
                     }
-                }
 
-                .grid-row-footer {
-                    // row footer
+                    .grid-row-footer {
+                        // row footer
+                    }
                 }
             }
 
@@ -178,20 +181,23 @@ Details: It defines the styles for header components as listed below:
                     display: block;
                 }
 
-                .grid-row {
+                .wrap-grid-rows {
 
-                    .grid-row-header {
-                        display: none;
-                    }
+                    .grid-row {
 
-                    .grid-row-data {
+                        .grid-row-header {
+                            display: none;
+                        }
 
-                        .data {
-                            width: 100%;
-                            padding: 0;
+                        .grid-row-data {
 
-                            &.title {
-                                display: none;
+                            .data {
+                                width: 100%;
+                                padding: 0;
+
+                                &.title {
+                                    display: none;
+                                }
                             }
                         }
                     }

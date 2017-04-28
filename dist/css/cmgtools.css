@@ -5395,12 +5395,12 @@ Details: It defines the styles for header components as listed below:
   .grid-data .grid-content .grid-rows .grid-rows-header {
     display: none;
     font-weight: bold; }
-  .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data {
+  .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data {
     display: inline-block;
     width: 68%;
     padding: 1%;
     word-wrap: break-word; }
-    .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data.title {
+    .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data.title {
       width: 28%; }
   .grid-data .grid-content .grid-rows .grid-rows-footer {
     display: none;
@@ -5414,12 +5414,12 @@ Details: It defines the styles for header components as listed below:
 @media only screen and (min-width: 1025px) {
   .grid-data .grid-content .grid-rows .grid-rows-header {
     display: block; }
-  .grid-data .grid-content .grid-rows .grid-row .grid-row-header {
+  .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-header {
     display: none; }
-  .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data {
+  .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data {
     width: 100%;
     padding: 0; }
-    .grid-data .grid-content .grid-rows .grid-row .grid-row-data .data.title {
+    .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data.title {
       display: none; }
   .grid-data .grid-content .grid-rows .grid-rows-footer {
     display: block; } }
