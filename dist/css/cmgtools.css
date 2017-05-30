@@ -3620,21 +3620,21 @@ form {
   margin: 0;
   display: inline-block; }
 
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-select-wrap {
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-select-wrap, .element {
   width: 100%; }
-  label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.cmt-select-wrap {
+  label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.cmt-select-wrap, .element-25.element {
     width: 25% !important; }
-  label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.cmt-select-wrap {
+  label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.cmt-select-wrap, .element-50.element {
     width: 50% !important; }
-  label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.cmt-select-wrap {
+  label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.cmt-select-wrap, .element-75.element {
     width: 75% !important; }
-  label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.cmt-select-wrap {
+  label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.cmt-select-wrap, .element-small.element {
     width: 80px !important; }
-  label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.cmt-select-wrap {
+  label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.cmt-select-wrap, .element-medium.element {
     width: 120px !important; }
-  label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.cmt-select-wrap {
+  label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.cmt-select-wrap, .element-large.element {
     width: 180px !important; }
-  label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.cmt-select-wrap {
+  label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.cmt-select-wrap, .element-xlarge.element {
     width: 250px !important; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
@@ -3829,6 +3829,9 @@ label {
 
 .element-60 .cmt-checkbox, .element-60 .cmt-select-wrap {
   width: 100%; }
+
+.element {
+  display: inline-block; }
 
 .frm-rounded-all .btn {
   -webkit-border-radius: 5px;

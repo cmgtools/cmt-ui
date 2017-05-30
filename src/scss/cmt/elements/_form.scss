@@ -396,6 +396,11 @@ input[type="submit"], input[type="button"], button {
     width: 100%;
 }
 
+.element {
+    @extend %element-size;
+    display: inline-block;
+}
+
 // Round cornered elements
 
 .frm-rounded-all {
