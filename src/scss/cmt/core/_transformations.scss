@@ -1,6 +1,6 @@
 /**********************************************************************
 Description: This file define the transformation effects available in CMT-UI css framework. These effects change the physical
-             look of an element i.e. position, orientation and scale.
+			 look of an element i.e. position, orientation and scale.
 
 Dependencies: none
 
@@ -16,69 +16,69 @@ Details: It defines the transformation mixins and default implementation as list
 @mixin transform-rotate( $degrees, $angle ) {
   filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=#{ $angle } );
   -webkit-transform: rotate( $degrees );
-      -ms-transform: rotate( $degrees );
-          transform: rotate( $degrees );
+	  -ms-transform: rotate( $degrees );
+		  transform: rotate( $degrees );
 }
 
 @mixin transform-scale( $value ) {
   -webkit-transform:scale( $value );
-     -moz-transform:scale( $value );
-      -ms-transform:scale( $value );
-       -o-transform:scale( $value );
-          transform:scale( $value );
+	 -moz-transform:scale( $value );
+	  -ms-transform:scale( $value );
+	   -o-transform:scale( $value );
+		  transform:scale( $value );
 }
 
 @mixin transform-flip( $horizontal, $vertical, $angle ) {
   filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=#{ $angle } );
   -webkit-transform: scale( $horizontal, $vertical );
-      -ms-transform: scale( $horizontal, $vertical );
-          transform: scale( $horizontal, $vertical );
+	  -ms-transform: scale( $horizontal, $vertical );
+		  transform: scale( $horizontal, $vertical );
 }
 
 // Transformations default implementation **************
 
 .rotate-45 {
-    @include transform-rotate( 45deg, 0.5 );
+	@include transform-rotate( 45deg, 0.5 );
 }
 
 .rotate-90 {
-    @include transform-rotate( 90deg, 1 );
+	@include transform-rotate( 90deg, 1 );
 }
 
 .rotate-135 {
-    @include transform-rotate( 135deg, 1.5 );
+	@include transform-rotate( 135deg, 1.5 );
 }
 
 .rotate-180 {
-    @include transform-rotate( 180deg, 2 );
+	@include transform-rotate( 180deg, 2 );
 }
 
 .rotate-225 {
-    @include transform-rotate( 225deg, 2.5 );
+	@include transform-rotate( 225deg, 2.5 );
 }
 
 .rotate-270 {
-    @include transform-rotate( 270deg, 3 );
+	@include transform-rotate( 270deg, 3 );
 }
 
 .rotate-315 {
-    @include transform-rotate( 315deg, 3.5 );
+	@include transform-rotate( 315deg, 3.5 );
 }
 
 .flip-horizontal {
-     @include transform-flip( -1, 1, 0 );
+	 @include transform-flip( -1, 1, 0 );
 }
 
 .flip-vertical {
-    @include transform-flip( 1, -1, 2 );
+	@include transform-flip( 1, -1, 2 );
 }
 
 // Transitions & Transformations ***********************
 
 .grow {
-    @include transit-width-height( $transit-eio, $transit-time-medium );
+	@include transit-width-height( $transit-eio, $transit-time-medium );
 
-    &:hover {
-        @include transform-scale( 1.2 );
-    }
+	&:hover {
+		@include transform-scale( 1.2 );
+	}
 }

@@ -13,113 +13,113 @@ address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
 th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
 summary, time, mark, audio, video {
-  	margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: top;
-    background: transparent;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+	background: transparent;
 }
 
 // Display fix
 main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-    display: block;
+	display: block;
 }
 
 // Overflow
 html {
-    overflow-y: scroll;
+	overflow-y: scroll;
 }
 
 // Line height
 body {
-    line-height: 1;
+	line-height: 1;
 }
 
 // Code snippets
 code, kbd, pre, samp {
-    font-family: $font-code;
-    font-size: $font-size-7;
+	font-family: $font-code;
+	font-size: $font-size-7;
 }
 
 // Default list style to none
 ol, ul, nav {
-    list-style: none;
+	list-style: none;
 }
 
 nav ul, nav ol {
-    list-style: none;
-    list-style-image: none;
+	list-style: none;
+	list-style-image: none;
 }
 
 // Quotes fix
 blockquote, q {
-    quotes: none;
+	quotes: none;
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
+	content: '';
+	content: none;
 }
 
 // Table border and width
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
 }
 
 th {
-    font-weight: bold;
-    vertical-align: top;
+	font-weight: bold;
+	vertical-align: top;
 }
 
 td {
-    font-weight: normal;
-    vertical-align: top;
+	font-weight: normal;
+	vertical-align: top;
 }
 
 // == Enhanced HTML5 Doctor =========
 
 // Ins, mark and del
 ins {
-    background-color: $color-secondary;
-    color: $color-secondary-text;
-    text-decoration: none;
+	background-color: $color-secondary;
+	color: $color-secondary-text;
+	text-decoration: none;
 }
 
 mark {
-    background-color: $color-secondary;
-    color: $color-secondary-text;
-    font-style: italic;
-    font-weight: bold;
+	background-color: $color-secondary;
+	color: $color-secondary-text;
+	font-style: italic;
+	font-weight: bold;
 }
 
 del {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 abbr[ title ], dfn[ title ] {
-    border-bottom: 1px dotted $color-secondary;
-    cursor: help;
+	border-bottom: 1px dotted $color-secondary;
+	cursor: help;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    padding: 0;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: auto;    // required for fixed width hr
-    margin-right: auto;   // required for fixed width hr
-    border: none;
-    @include border-top( 1px, solid, $color-hr );
+	display: block;
+	height: 1px;
+	padding: 0;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	margin-left: auto;    // required for fixed width hr
+	margin-right: auto;   // required for fixed width hr
+	border: none;
+	@include border-top( 1px, solid, $color-hr );
 }
 
 input, select {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 // == Enhanced HTML5 Boilerplate ====
@@ -127,61 +127,61 @@ input, select {
 // Selection text shadow
 
 ::selection {
-    background: $color-secondary;
-    text-shadow: none;
+	background: $color-secondary;
+	text-shadow: none;
 }
 
 // Removes gap between element and bottom of parent
 audio, canvas, iframe, img, svg, video {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 // Reset fieldset
 fieldset {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 legend {
-    border: 0;
-    padding: 0;
-    white-space: normal;
+	border: 0;
+	padding: 0;
+	white-space: normal;
 }
 
 // Resize vertically and text positioning
 textarea {
-    resize: vertical;
-    overflow: auto;
-    vertical-align: top;
+	resize: vertical;
+	overflow: auto;
+	vertical-align: top;
 }
 
 // == murtaugh ======================
 
 pre {
-    white-space: pre; /* CSS2 */
-    white-space: pre-wrap; /* CSS 2.1 */
-    white-space: pre-line; /* CSS 2.1 and 3 */
-    word-wrap: break-word; /* IE */
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 2.1 and 3 */
+	word-wrap: break-word; /* IE */
 }
 
 td img {
-    vertical-align: top;
+	vertical-align: top;
 }
 
 // sub and sup fixes
 
 sub, sup {
-    font-size: $font-size-9;
-    line-height: 0;
-    position: relative;
-    vertical-align: middle;
+	font-size: $font-size-9;
+	line-height: 0;
+	position: relative;
+	vertical-align: middle;
 }
 
 sup {
-    top: -0.5em;
+	top: -0.5em;
 }
 
 sub {
-    bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 // == Others & self =================
@@ -189,104 +189,104 @@ sub {
 // Anchor Fix
 
 a {
-    text-decoration: none;
-    cursor: pointer;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 a:focus {
-    outline: 0;
+	outline: 0;
 }
 
 a:active, a:hover {
-    outline: 0;
+	outline: 0;
 }
 
 // Display - audio, canvas, video
 
 audio, canvas, video {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
 }
 
 audio:not( [controls] ) {
-    display: none;
-    height: 0;
+	display: none;
+	height: 0;
 }
 
 svg:not( :root ) {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 // Typography
 
 small {
-    font-size: $font-size-8;
+	font-size: $font-size-8;
 }
 
 b, strong {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 dfn {
-    font-style: italic;
+	font-style: italic;
 }
 
 // fix space issue
 
 [ hidden ] {
-    display: none;
+	display: none;
 }
 
 // Form Reset
 
 button, input, select, textarea {
-    margin: 0;
+	margin: 0;
 }
 
 // Buttons
 
 .clickable, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="file"] {
-    -webkit-appearance: button;
-    cursor: pointer;
-    width: auto;
-    overflow: hidden;
+	-webkit-appearance: button;
+	cursor: pointer;
+	width: auto;
+	overflow: hidden;
 }
 
 button[disabled], input[disabled] {
-    cursor: default;
+	cursor: default;
 }
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+	border: 0;
+	padding: 0;
 }
 
 // Search
 
 input[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 // Radio & Checkbox
 
 input[type="checkbox"], input[type="radio"] {
-    padding: 0;
+	padding: 0;
 }
 
 input[type="radio"] {
-    vertical-align: text-bottom;
+	vertical-align: text-bottom;
 }
 
 input[type="checkbox"] {
-    vertical-align: bottom;
+	vertical-align: bottom;
 }

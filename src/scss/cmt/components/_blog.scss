@@ -1,6 +1,6 @@
 /**********************************************************************
 Description: It defines the styles of the blog components used to show blog posts on recent, popular, similar and
-             related widget. The blog posts will also be displayed on blog, category, tag, author and archive pages.
+			 related widget. The blog posts will also be displayed on blog, category, tag, author and archive pages.
 
 Dependencies: variables, variables-ext, mixins
 
@@ -26,412 +26,412 @@ Details: It defines the styles of blog components as listed below:
 
 .blog {
 
-    .post {
-        // single post used to show post details including banner, author and content
+	.post {
+		// single post used to show post details including banner, author and content
 
-        .post-banner {
-            // banner - it can be either background image or img
+		.post-banner {
+			// banner - it can be either background image or img
 
-            .texture {
-                // texture on top of banner
-                z-index: 10;
-            }
+			.texture {
+				// texture on top of banner
+				z-index: 10;
+			}
 
-            .post-title {
-                // post title - sometimes title goes with post banner
-                z-index: 20;
-            }
-        }
+			.post-title {
+				// post title - sometimes title goes with post banner
+				z-index: 20;
+			}
+		}
 
-        .post-title {
-            // post title - it can be independent from post content in several cases
-        }
+		.post-title {
+			// post title - it can be independent from post content in several cases
+		}
 
-        .post-author {
+		.post-author {
 
-            .post-author-avatar {
-                // author avatar
-            }
+			.post-author-avatar {
+				// author avatar
+			}
 
-            .post-author-info {
-                // author details like name, publish time
-            }
-        }
+			.post-author-info {
+				// author details like name, publish time
+			}
+		}
 
-        .wrap-post-content {
-            // wrapper for post title, content and info
+		.wrap-post-content {
+			// wrapper for post title, content and info
 
-            .post-title {
-                // post title
-            }
+			.post-title {
+				// post title
+			}
 
-            .post-info {
-                // post info like author name, publish time
-                // Sometimes post-author can be included within post-info at end of post content
-            }
+			.post-info {
+				// post info like author name, publish time
+				// Sometimes post-author can be included within post-info at end of post content
+			}
 
-            .post-content {
-                // post content
-            }
-        }
-    }
+			.post-content {
+				// post content
+			}
+		}
+	}
 }
 
 // == Basic Blog ====================
 
 .blog-basic {
 
-    .post {
-        margin-bottom: 1em;
+	.post {
+		margin-bottom: 1em;
 
-        // Banner with default padding. A default image can be used for banner with background fill. The fill helps for transparent logos.
-        .post-banner {
-            padding: 1em;
+		// Banner with default padding. A default image can be used for banner with background fill. The fill helps for transparent logos.
+		.post-banner {
+			padding: 1em;
 
-            img {
-                width: 100%;
+			img {
+				width: 100%;
 
-                &.bkg-fill {
-                    background-color: $color-primary;
-                }
-            }
-        }
+				&.bkg-fill {
+					background-color: $color-primary;
+				}
+			}
+		}
 
-        .post-author {
-            position: relative;
+		.post-author {
+			position: relative;
 
-            .post-author-avatar {
-                width: 80px;
-                height: 80px;
+			.post-author-avatar {
+				width: 80px;
+				height: 80px;
 
-                img {
-                    width: 100%;
-                }
+				img {
+					width: 100%;
+				}
 
-                &.circled1 {
-                    background-color: $color-primary;
-                }
-            }
+				&.circled1 {
+					background-color: $color-primary;
+				}
+			}
 
-            .post-author-info {
-                position: absolute;
-                top: 0;
-                right: 0;
-                display: inline-block;
-            }
-        }
+			.post-author-info {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: inline-block;
+			}
+		}
 
-        .post-content {
-            padding: 1em;
+		.post-content {
+			padding: 1em;
 
-            .post-title {
-                font-size: $font-size-5;
-            }
-        }
+			.post-title {
+				font-size: $font-size-5;
+			}
+		}
 
-        @include responsive-min( screen-tablet-small ) {
+		@include responsive-min( screen-tablet-small ) {
 
-            .post-banner {
-                float: left;
-                width: 350px;
-            }
+			.post-banner {
+				float: left;
+				width: 350px;
+			}
 
-            .post-author {
-                width: 100%;
-                padding-left: 350px;
-                position: relative;
-            }
-        }
-    }
+			.post-author {
+				width: 100%;
+				padding-left: 350px;
+				position: relative;
+			}
+		}
+	}
 }
 
 // == Regular Blog ==================
 
 .blog-regular {
 
-    .post {
-        margin-bottom: 1em;
+	.post {
+		margin-bottom: 1em;
 
-        // Banner with default padding. A default image can be used for banner with background fill. The fill helps for transparent logos.
-        .post-banner {
-            padding: 1em;
+		// Banner with default padding. A default image can be used for banner with background fill. The fill helps for transparent logos.
+		.post-banner {
+			padding: 1em;
 
-            img {
-                width: 100%;
+			img {
+				width: 100%;
 
-                &.bkg-fill {
-                    background-color: $color-primary;
-                }
-            }
-        }
+				&.bkg-fill {
+					background-color: $color-primary;
+				}
+			}
+		}
 
-        .post-author {
-            position: relative;
+		.post-author {
+			position: relative;
 
-            .post-author-avatar {
-                width: 80px;
-                height: 80px;
+			.post-author-avatar {
+				width: 80px;
+				height: 80px;
 
-                img {
-                    width: 100%;
-                }
+				img {
+					width: 100%;
+				}
 
-                &.circled1 {
-                    background-color: $color-primary;
-                }
-            }
+				&.circled1 {
+					background-color: $color-primary;
+				}
+			}
 
-            .post-author-info {
-                position: absolute;
-                top: 0;
-                right: 0;
-                display: inline-block;
-            }
-        }
+			.post-author-info {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: inline-block;
+			}
+		}
 
-        .post-content {
-            padding: 1em;
+		.post-content {
+			padding: 1em;
 
-            .post-title {
-                font-size: $font-size-5;
-            }
-        }
+			.post-title {
+				font-size: $font-size-5;
+			}
+		}
 
-        @include responsive-min( screen-tablet-small ) {
+		@include responsive-min( screen-tablet-small ) {
 
-            .post-banner {
-                float: left;
-                width: 350px;
-            }
+			.post-banner {
+				float: left;
+				width: 350px;
+			}
 
-            .post-author {
-                width: 100%;
-                padding-left: 350px;
-                position: relative;
-            }
-        }
-    }
+			.post-author {
+				width: 100%;
+				padding-left: 350px;
+				position: relative;
+			}
+		}
+	}
 }
 
 // == Banner Blog ===================
 
 .blog-banner {
 
-    .post {
-        margin-bottom: 1em;
-        background-color: $color-primary;
-        color: $color-primary-text;
+	.post {
+		margin-bottom: 1em;
+		background-color: $color-primary;
+		color: $color-primary-text;
 
-        // Banner with background image. A tecture can also be applied to it.
-        .post-banner {
-            position: relative;
-            height: 120px;
-            @include bkg-image;
+		// Banner with background image. A tecture can also be applied to it.
+		.post-banner {
+			position: relative;
+			height: 120px;
+			@include bkg-image;
 
-            .texture {
-                z-index: 5;
-            }
+			.texture {
+				z-index: 5;
+			}
 
-            .post-view {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                z-index: 50;
-                visibility: hidden;
-                opacity: 0;
-                background-color: $color-transparent-black;
-                @include transit-visibility-opacity( $transit-eio, $transit-time-medium );
-            }
+			.post-view {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				z-index: 50;
+				visibility: hidden;
+				opacity: 0;
+				background-color: $color-transparent-black;
+				@include transit-visibility-opacity( $transit-eio, $transit-time-medium );
+			}
 
-            .post-view-content {
-                text-align: center;
+			.post-view-content {
+				text-align: center;
 
-                .icon {
-                    color: $color-white;
-                }
-            }
+				.icon {
+					color: $color-white;
+				}
+			}
 
-            &:hover {
+			&:hover {
 
-                .post-view {
-                    visibility: visible;
-                    opacity: 1;
-                }
-            }
-        }
+				.post-view {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
 
-        .post-author {
-            position: relative;
+		.post-author {
+			position: relative;
 
-            span {
-                display: inline-block;
-            }
+			span {
+				display: inline-block;
+			}
 
-            .post-author-avatar {
-                width: 40px;
-                height: 40px;
+			.post-author-avatar {
+				width: 40px;
+				height: 40px;
 
-                img {
-                    width: 100%;
-                }
+				img {
+					width: 100%;
+				}
 
-                &.circled1 {
-                    background-color: $color-primary;
-                }
-            }
-        }
+				&.circled1 {
+					background-color: $color-primary;
+				}
+			}
+		}
 
-        .wrap-post-content {
-            padding: 1rem;
-            line-height: 1.5em;
+		.wrap-post-content {
+			padding: 1rem;
+			line-height: 1.5em;
 
-            .post-title {
-                margin: 0;
+			.post-title {
+				margin: 0;
 
-                a {
-                    display: inline-block;
-                    width: 100%;
-                }
-            }
+				a {
+					display: inline-block;
+					width: 100%;
+				}
+			}
 
-            .post-info {
+			.post-info {
 
-                .publish-time {
-                    text-align: center;
-                }
-            }
+				.publish-time {
+					text-align: center;
+				}
+			}
 
-            .post-content {
-                padding: 1rem 0;
-            }
-        }
+			.post-content {
+				padding: 1rem 0;
+			}
+		}
 
-        @include responsive-min( screen-tablet-small ) {
+		@include responsive-min( screen-tablet-small ) {
 
-            .post-banner {
-                height: 180px;
-            }
+			.post-banner {
+				height: 180px;
+			}
 
-            .wrap-post-content {
+			.wrap-post-content {
 
-                .post-info {
+				.post-info {
 
-                    .publish-time {
-                        text-align: right;
-                    }
-                }
-            }
-        }
+					.publish-time {
+						text-align: right;
+					}
+				}
+			}
+		}
 
-        @include responsive-min( screen-tablet-large ) {
+		@include responsive-min( screen-tablet-large ) {
 
-            .post-banner {
-                height: 250px;
-            }
-        }
-    }
+			.post-banner {
+				height: 250px;
+			}
+		}
+	}
 }
 
 // == Single Post - Structure =======
 
 .post-single {
-    // post
+	// post
 
-    .post-banner {
-        // banner
+	.post-banner {
+		// banner
 
-        .texture {
-            // texture on top of banner
-            z-index: 10;
-        }
+		.texture {
+			// texture on top of banner
+			z-index: 10;
+		}
 
-        .post-title {
-            // post title - sometimes title goes with post banner
-            z-index: 20;
-        }
-    }
+		.post-title {
+			// post title - sometimes title goes with post banner
+			z-index: 20;
+		}
+	}
 
-    .post-author {
+	.post-author {
 
-        .post-author-avatar {
-            // author avatar
-        }
+		.post-author-avatar {
+			// author avatar
+		}
 
-        .post-author-info {
-            // author details like name, time
-        }
-    }
+		.post-author-info {
+			// author details like name, time
+		}
+	}
 
-    .wrap-post-content {
+	.wrap-post-content {
 
-        .post-title {
-            // post title
-        }
+		.post-title {
+			// post title
+		}
 
-        .post-info {
-            // post info like time
-        }
+		.post-info {
+			// post info like time
+		}
 
-        .post-content {
-            // post content
-        }
-    }
+		.post-content {
+			// post content
+		}
+	}
 }
 
 // == Basic Single Post =============
 
 .post-single-basic {
-    padding: 1em;
-    background-color: $color-primary-l;
+	padding: 1em;
+	background-color: $color-primary-l;
 
-    .post-banner {
-        height: 150px;
+	.post-banner {
+		height: 150px;
 
-        img {
-            width: 100%;
-        }
-    }
+		img {
+			width: 100%;
+		}
+	}
 
-    .post-author {
-        position: relative;
+	.post-author {
+		position: relative;
 
-        .post-author-avatar {
-            display: inline-block;
-            width: 80px;
-            height: 80px;
+		.post-author-avatar {
+			display: inline-block;
+			width: 80px;
+			height: 80px;
 
-            img {
-                width: 100%;
-            }
+			img {
+				width: 100%;
+			}
 
-            &.circled1 {
-                background-color: $color-primary;
-            }
-        }
+			&.circled1 {
+				background-color: $color-primary;
+			}
+		}
 
-        .post-author-info {
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: inline-block;
-        }
-    }
+		.post-author-info {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+		}
+	}
 
-    .post-content {
-        margin-bottom: 1em;
-    }
+	.post-content {
+		margin-bottom: 1em;
+	}
 
-    @include responsive-min( screen-mobile-large ) {
+	@include responsive-min( screen-mobile-large ) {
 
-        .post-banner {
-            height: 200px;
-        }
-    }
+		.post-banner {
+			height: 200px;
+		}
+	}
 
-    @include responsive-min( screen-tablet-large ) {
+	@include responsive-min( screen-tablet-large ) {
 
-        .post-banner {
-            height: 250px;
-        }
-    }
+		.post-banner {
+			height: 250px;
+		}
+	}
 }

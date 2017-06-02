@@ -39,28 +39,28 @@ Details: It defines the typography specific styles as listed below:
 
 // Default font for entire html document
 html, body {
-    font-family: $font-default;
+	font-family: $font-default;
 }
 
 // Base Font Size following mobile first approach. We have kept 4 font size(ranging 12px to 18px) as standard based on device range.
 html, body {
-    // 12px on tablet devices. A little smaller than tablet. It can be overriden by project css if there is a need to follow the de-facto standard.
-    font-size: 12px;
+	// 12px on tablet devices. A little smaller than tablet. It can be overriden by project css if there is a need to follow the de-facto standard.
+	font-size: 12px;
 
-    // 14px on tablet devices. A little smaller than desktop. It can be overriden by project css if there is a need to follow the de-facto standard.
-    @include responsive-min( screen-mobile-large ) {
-        font-size: 14px;
-    }
+	// 14px on tablet devices. A little smaller than desktop. It can be overriden by project css if there is a need to follow the de-facto standard.
+	@include responsive-min( screen-mobile-large ) {
+		font-size: 14px;
+	}
 
-    // 16px on desktop devices. 16px is the de-facto standard
-    @include responsive-min( screen-tablet-large ) {
-        font-size: 16px;
-    }
+	// 16px on desktop devices. 16px is the de-facto standard
+	@include responsive-min( screen-tablet-large ) {
+		font-size: 16px;
+	}
 
-    // 18px on large desktop devices.
-    @include responsive-min( screen-desktop-large ) {
-        font-size: 18px;
-    }
+	// 18px on large desktop devices.
+	@include responsive-min( screen-desktop-large ) {
+		font-size: 18px;
+	}
 }
 
 /**
@@ -68,15 +68,15 @@ html, body {
  */
 
 .font {
-    font-family: $font-default;
+	font-family: $font-default;
 
-    &.font-heading {
-        font-family: $font-heading;
-    }
+	&.font-heading {
+		font-family: $font-heading;
+	}
 
-    &.font-code {
-        font-family: $font-code;
-    }
+	&.font-code {
+		font-family: $font-code;
+	}
 }
 
 /**
@@ -84,256 +84,256 @@ html, body {
  */
 
 .font-size {
-    font-size: $font-size-7;
+	font-size: $font-size-7;
 
-    &.font-size-xxlarge {
-        font-size: $font-size-xxlarge;
-    }
+	&.font-size-xxlarge {
+		font-size: $font-size-xxlarge;
+	}
 
-    &.font-size-xlarge {
-        font-size: $font-size-xlarge;
-    }
+	&.font-size-xlarge {
+		font-size: $font-size-xlarge;
+	}
 
-    &.font-size-large {
-        font-size: $font-size-large;
-    }
+	&.font-size-large {
+		font-size: $font-size-large;
+	}
 
-    &.font-size-large-1 {
-        font-size: $font-size-1;
-    }
+	&.font-size-large-1 {
+		font-size: $font-size-1;
+	}
 
-    &.font-size-large-2 {
-        font-size: $font-size-2;
-    }
+	&.font-size-large-2 {
+		font-size: $font-size-2;
+	}
 
-    &.font-size-large-3 {
-        font-size: $font-size-3;
-    }
+	&.font-size-large-3 {
+		font-size: $font-size-3;
+	}
 
-    &.font-size-large-4 {
-        font-size: $font-size-4;
-    }
+	&.font-size-large-4 {
+		font-size: $font-size-4;
+	}
 
-    &.font-size-large-5 {
-        font-size: $font-size-5;
-    }
+	&.font-size-large-5 {
+		font-size: $font-size-5;
+	}
 
-    &.font-size-large-6 {
-        font-size: $font-size-6;
-    }
+	&.font-size-large-6 {
+		font-size: $font-size-6;
+	}
 
-    &.font-size-small {
-        font-size: $font-size-8;
-    }
+	&.font-size-small {
+		font-size: $font-size-8;
+	}
 
-    &.font-size-tiny {
-        font-size: $font-size-9;
-    }
+	&.font-size-tiny {
+		font-size: $font-size-9;
+	}
 
-    &.font-size-micro {
-        font-size: $font-size-10;
-    }
+	&.font-size-micro {
+		font-size: $font-size-10;
+	}
 }
 
 // Standard Line Height
 .line-height {
-    line-height: 1em;
+	line-height: 1em;
 
-    &.line-height-small {
-        line-height: 1.2em;
-    }
+	&.line-height-small {
+		line-height: 1.2em;
+	}
 
-    &.line-height-medium {
-        line-height: 1.4em;
-    }
+	&.line-height-medium {
+		line-height: 1.4em;
+	}
 
-    &.line-height-large {
-        line-height: 2em;
-    }
+	&.line-height-large {
+		line-height: 2em;
+	}
 
-    &.line-height-xlarge {
-        line-height: 2.6em;
-    }
+	&.line-height-xlarge {
+		line-height: 2.6em;
+	}
 
-    &.line-height-header {
-        line-height: $line-height-header;
-    }
+	&.line-height-header {
+		line-height: $line-height-header;
+	}
 
-    &.line-height-text {
-        line-height: $line-height-text;
-    }
+	&.line-height-text {
+		line-height: $line-height-text;
+	}
 }
 
 // Headers
 
 h1, .h1 {
-    font-size: $font-size-1;
+	font-size: $font-size-1;
 }
 
 h2, .h2 {
-    font-size: $font-size-2;
+	font-size: $font-size-2;
 }
 
 h3, .h3 {
-    font-size: $font-size-3;
+	font-size: $font-size-3;
 }
 
 h4, .h4 {
-    font-size: $font-size-4;
+	font-size: $font-size-4;
 }
 
 h5, .h5 {
-    font-size: $font-size-5;
+	font-size: $font-size-5;
 }
 
 h6, .h6 {
-    font-size: $font-size-6;
+	font-size: $font-size-6;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
-    vertical-align: middle;
-    line-height: $line-height-header;
-    font-family: $font-heading;
-    padding: 0.25em;
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
+	vertical-align: middle;
+	line-height: $line-height-header;
+	font-family: $font-heading;
+	padding: 0.25em;
 }
 
 // Text Elements
 p, span, em, div, a {
-    font-size: $font-size-7;
+	font-size: $font-size-7;
 }
 
 .reader {
-    font-size: $font-size-7;
-    line-height: $line-height-text;
+	font-size: $font-size-7;
+	line-height: $line-height-text;
 }
 
 // Coding - Required to highlight code snippets
 pre {
-    font-family: $font-code;
-    color: $color-gray-d;
-    background-color: $color-gray-l;
+	font-family: $font-code;
+	color: $color-gray-d;
+	background-color: $color-gray-l;
 }
 
 // Font Weight
 .normal {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 .bold {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .bolder {
-    font-weight: bolder;
+	font-weight: bolder;
 }
 
 .lighter {
-    font-weight: lighter;
+	font-weight: lighter;
 }
 
 // Text Style and Decoration
 
 .italic {
-    font-style: italic;
+	font-style: italic;
 }
 
 .underline {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .uppercase {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .lowercase {
-    text-transform: lowercase;
+	text-transform: lowercase;
 }
 
 .strikethrough {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .nowrap {
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 .break-all {
-    word-break: break-all;
+	word-break: break-all;
 }
 
 .break-word {
-    word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 .ellipsis {
-    text-overflow: ellipsis;
+	text-overflow: ellipsis;
 }
 
 // Text Alignment
 
 .text-align {
-    text-align: left !important;
+	text-align: left !important;
 
-    &.text-align-center {
-        text-align: center !important;
-    }
+	&.text-align-center {
+		text-align: center !important;
+	}
 
-    &.text-align-right {
-        text-align: right !important;
-    }
+	&.text-align-right {
+		text-align: right !important;
+	}
 
-    &.text-align-justify {
-        text-align: justify !important;
-    }
+	&.text-align-justify {
+		text-align: justify !important;
+	}
 }
 
 // Word Spacing
 .word-spacing {
-    word-spacing: $size-default;
+	word-spacing: $size-default;
 
-    .word-spacing-small {
-        word-spacing: $size-small;
-    }
+	.word-spacing-small {
+		word-spacing: $size-small;
+	}
 
-    .word-spacing-medium {
-        word-spacing: $size-medium;
-    }
+	.word-spacing-medium {
+		word-spacing: $size-medium;
+	}
 
-    .word-spacing-large {
-        word-spacing: $size-large;
-    }
+	.word-spacing-large {
+		word-spacing: $size-large;
+	}
 
-    .word-spacing-xlarge {
-        word-spacing: $size-xlarge;
-    }
+	.word-spacing-xlarge {
+		word-spacing: $size-xlarge;
+	}
 }
 
 // Links
 
 a, .link {
-    color: $color-link;
-    cursor: pointer;
-    @include transit-color( $transit-eio, $transit-time-small );
+	color: $color-link;
+	cursor: pointer;
+	@include transit-color( $transit-eio, $transit-time-small );
 
-    &:link, &:visited {
-        color: $color-link;
-    }
+	&:link, &:visited {
+		color: $color-link;
+	}
 
-    &:active, &:hover {
-        color: $color-link-h;
-    }
+	&:active, &:hover {
+		color: $color-link-h;
+	}
 }
 
 // Text at center with background line
 .text-with-line {
-    width: 100%;
-    height: 0.75em;
-    border-bottom: 1px solid $color-hr;
-    text-align: center;
+	width: 100%;
+	height: 0.75em;
+	border-bottom: 1px solid $color-hr;
+	text-align: center;
 
-    .text-content {
-        display: inline-block;
-        padding: 0 1em;
-        background-color: $color-hr;
-    }
+	.text-content {
+		display: inline-block;
+		padding: 0 1em;
+		background-color: $color-primary;
+	}
 }

@@ -1,6 +1,6 @@
 /**********************************************************************
 Description: This file define the extended variables used by CMT-UI css framework. These are derived using
-             primary variables.
+			 primary variables.
 
 Dependencies: variables
 
@@ -11,40 +11,80 @@ Details: It defines the extended variables derived from primary variables as lis
 * Transparency      - This section define the variables for transparency.
 *                     3 Color Scheme    - Medium transparency applied to primary theme colors.
 *                     Gray shades       - Transparency effect applied to shades of gray.
-*                     Standard colors   - Medium transparency applied to primary theme colors.
+*                     Standard colors   - High, medium and low transparency applied to theme colors.
 ***********************************************************************/
 
-// Border, HR, Gradient
+// Border & HR Colors
 $color-border: $color-secondary; // Default border color
 $color-border-f: $color-tertiary; // Border color for focus
 
 $color-hr: $color-secondary; // Header Rule color
 
+// Inset Color
+$color-inset: $color-tertiary;
+
+// Gradient Colors
 $color-gradient-1: $color-primary; // First color for gradients
 $color-gradient-2: $color-secondary; // Second color for gradients
 
+// Shadow Colors
+$color-shadow: rgba( $color-black, $color-transparent-low );
+
 // Transparent Colors
+$color-transparent-primary-l: rgba( $color-primary, $color-transparent-low );
 $color-transparent-primary: rgba( $color-primary, $color-transparent-medium );
+$color-transparent-primary-h: rgba( $color-primary, $color-transparent-high );
+
+$color-transparent-secondary-l: rgba( $color-secondary, $color-transparent-low );
 $color-transparent-secondary: rgba( $color-secondary, $color-transparent-medium );
+$color-transparent-secondary-h: rgba( $color-secondary, $color-transparent-high );
+
+$color-transparent-tertiary-l: rgba( $color-tertiary, $color-transparent-low );
 $color-transparent-tertiary: rgba( $color-tertiary, $color-transparent-medium );
+$color-transparent-tertiary-h: rgba( $color-tertiary, $color-transparent-high );
 
 $color-transparent-white-l: rgba( $color-white, $color-transparent-low );
 $color-transparent-white: rgba( $color-white, $color-transparent-medium );
 $color-transparent-white-h: rgba( $color-white, $color-transparent-high );
+
 $color-transparent-gray: rgba( $color-gray, $color-transparent-medium );
+
 $color-transparent-black-l: rgba( $color-black, $color-transparent-low );
 $color-transparent-black: rgba( $color-black, $color-transparent-medium );
 $color-transparent-black-h: rgba( $color-black, $color-transparent-high );
 
+$color-transparent-blue-l: rgba( $color-blue, $color-transparent-low );
 $color-transparent-blue: rgba( $color-blue, $color-transparent-medium );
+$color-transparent-blue-l: rgba( $color-blue, $color-transparent-high );
+
+$color-transparent-purple-l: rgba( $color-purple, $color-transparent-low );
 $color-transparent-purple: rgba( $color-purple, $color-transparent-medium );
+$color-transparent-purple-h: rgba( $color-purple, $color-transparent-high );
 
+$color-transparent-orange-l: rgba( $color-orange, $color-transparent-low );
 $color-transparent-orange: rgba( $color-orange, $color-transparent-medium );
+$color-transparent-orange-h: rgba( $color-orange, $color-transparent-high );
+
+$color-transparent-yellow-l: rgba( $color-yellow, $color-transparent-low );
 $color-transparent-yellow: rgba( $color-yellow, $color-transparent-medium );
+$color-transparent-yellow-h: rgba( $color-yellow, $color-transparent-high );
 
+$color-transparent-red-l: rgba( $color-red, $color-transparent-low );
 $color-transparent-red: rgba( $color-red, $color-transparent-medium );
-$color-transparent-pink: rgba( $color-pink, $color-transparent-medium );
-$color-transparent-magenta: rgba( $color-magenta, $color-transparent-medium );
+$color-transparent-red-h: rgba( $color-red, $color-transparent-high );
 
+$color-transparent-pink-l: rgba( $color-pink, $color-transparent-low );
+$color-transparent-pink: rgba( $color-pink, $color-transparent-medium );
+$color-transparent-pink-h: rgba( $color-pink, $color-transparent-high );
+
+$color-transparent-magenta-l: rgba( $color-magenta, $color-transparent-low );
+$color-transparent-magenta: rgba( $color-magenta, $color-transparent-medium );
+$color-transparent-magenta-h: rgba( $color-magenta, $color-transparent-high );
+
+$color-transparent-green-l: rgba( $color-green, $color-transparent-low );
 $color-transparent-green: rgba( $color-green, $color-transparent-medium );
+$color-transparent-green-h: rgba( $color-green, $color-transparent-high );
+
+$color-transparent-green-d-l: rgba( $color-green-d, $color-transparent-low );
 $color-transparent-green-d: rgba( $color-green-d, $color-transparent-medium );
+$color-transparent-green-d-h: rgba( $color-green-d, $color-transparent-high );

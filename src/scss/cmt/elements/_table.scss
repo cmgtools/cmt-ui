@@ -13,111 +13,111 @@ Details: It defines the table styles as listed below:
 
 table {
 
-    th {
-        text-align: left;
-        padding: 0.25rem;
-    }
+	th {
+		text-align: left;
+		padding: 0.25rem;
+	}
 
-    td {
-        padding: 0.25rem;
-    }
+	td {
+		padding: 0.25rem;
+	}
 }
 
 .table {
-    width: 100%;
+	width: 100%;
 
-    &.table-zebra {
+	&.table-zebra {
 
-        > tbody {
+		> tbody {
 
-            tr:nth-child( even ) {
-                background-color: $color-primary-d;
-                color: $color-primary-text-d;
-            }
-        }
-    }
+			tr:nth-child( even ) {
+				background-color: $color-primary-d;
+				color: $color-primary-text-d;
+			}
+		}
+	}
 
-    &.table-hover {
+	&.table-hover {
 
-        > tbody {
+		> tbody {
 
-            tr:hover {
-                background-color: $color-secondary;
-                color: $color-secondary-text;
-            }
-        }
-    }
+			tr:hover {
+				background-color: $color-secondary;
+				color: $color-secondary-text;
+			}
+		}
+	}
 
-    &.table-border {
+	&.table-border {
 
-        > thead {
+		> thead {
 
-            th {
-                border: 1px solid $color-secondary;
-            }
-        }
+			th {
+				border: 1px solid $color-secondary;
+			}
+		}
 
-        > tbody {
+		> tbody {
 
-            td {
-                border: 1px solid $color-secondary;
-            }
-        }
-    }
+			td {
+				border: 1px solid $color-secondary;
+			}
+		}
+	}
 
-    &.table-fixed {
-        table-layout: fixed;
-    }
+	&.table-fixed {
+		table-layout: fixed;
+	}
 
-    &.table-responsive {
+	&.table-responsive {
 
-        > thead {
+		> thead {
 
-            > tr {
+			> tr {
 
-                > th {
-                    display: none;
-                    text-align: left;
+				> th {
+					display: none;
+					text-align: left;
 
-                    @include responsive-min( screen-tablet-large ) {
-                        display: table-cell;
-                    }
-                }
-            }
-        }
+					@include responsive-min( screen-tablet-large ) {
+						display: table-cell;
+					}
+				}
+			}
+		}
 
-        > tbody {
+		> tbody {
 
-            > tr {
+			> tr {
 
-                > td {
-                    display: block;
-                    text-align: left;
+				> td {
+					display: block;
+					text-align: left;
 
-                    &:before {
-                        content: attr(data-th);
-                        font-weight: bold;
-                        width: 30%;
-                        display: inline-block;
+					&:before {
+						content: attr(data-th);
+						font-weight: bold;
+						width: 30%;
+						display: inline-block;
 
-                        @include responsive-min( screen-tablet-large ) {
-                            display: none;
-                        }
-                    }
+						@include responsive-min( screen-tablet-large ) {
+							display: none;
+						}
+					}
 
-                    @include responsive-min( screen-tablet-large ) {
-                        display: table-cell;
-                    }
-                }
-            }
-        }
+					@include responsive-min( screen-tablet-large ) {
+						display: table-cell;
+					}
+				}
+			}
+		}
 
-        .wrap-table {
-            width: 68%;
+		.wrap-table {
+			width: 68%;
 
-            @include responsive-min( screen-tablet-large ) {
-                width: 100%;
-            }
-        }
-    }
+			@include responsive-min( screen-tablet-large ) {
+				width: 100%;
+			}
+		}
+	}
 }

@@ -11,77 +11,77 @@ Details: It defines the styles for html elements as listed below:
 ***********************************************************************/
 
 fieldset {
-    @include border( 1px, solid, $color-secondary );
+	@include border( 1px, solid, $color-secondary );
 
-    legend {
-        background-color: $color-secondary;
-        color: $color-secondary-text;
-        padding: $size-small-rem;
-        margin-left: 1rem;
-        @include rounded( $size-medium );
-    }
+	legend {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+		padding: $size-small-rem;
+		margin-left: 1rem;
+		@include rounded( $size-medium );
+	}
 }
 
 optgroup {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 blockquote {
-    position: relative;
-    margin: 0.5em;
-    padding: 0.5em 2em 0.5em 3em;
+	position: relative;
+	margin: 0.5em;
+	padding: 0.5em 2em 0.5em 3em;
 }
 
 blockquote:before {
-    position: absolute;
-    font-size: 6em;
-    line-height: 1;
-    top: 0;
-    left: 0;
-    content: "\201C";
+	position: absolute;
+	font-size: 6em;
+	line-height: 1;
+	top: 0;
+	left: 0;
+	content: "\201C";
 }
 
 blockquote:after {
-    position: absolute;
-    float: right;
-    font-size: 6em;
-    line-height: 1;
-    right: 0;
-    bottom: -0.5em;
-    content: "\201D";
+	position: absolute;
+	float: right;
+	font-size: 6em;
+	line-height: 1;
+	right: 0;
+	bottom: -0.5em;
+	content: "\201D";
 }
 
 // Lists
 .list {
 
-    &.list-radio {
+	&.list-radio {
 
-        label {
-            width: auto;
-        }
-    }
+		label {
+			width: auto;
+		}
+	}
 
-    &.style-circle {
-        list-style-type: circle;
-    }
+	&.style-circle {
+		list-style-type: circle;
+	}
 
-    &.style-square {
-        list-style-type: square;
-    }
+	&.style-square {
+		list-style-type: square;
+	}
 
-    &.style-decimal {
-        list-style-type: decimal;
-    }
+	&.style-decimal {
+		list-style-type: decimal;
+	}
 
-    &.style-image-default {
-        list-style-image: url( $images-path + "list-default.jpg" );
-    }
+	&.style-image-default {
+		list-style-image: url( $images-path + "list-default.jpg" );
+	}
 
-    &.position-inside {
-        list-style-position: inside;
-    }
+	&.position-inside {
+		list-style-position: inside;
+	}
 
-    &.position-outside {
-        list-style-position: outside;
-    }
+	&.position-outside {
+		list-style-position: outside;
+	}
 }

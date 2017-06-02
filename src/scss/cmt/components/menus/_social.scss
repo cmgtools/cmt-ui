@@ -12,136 +12,213 @@ Details: It defines the social network menu components as listed below:
 
 .menu-social {
 
-    // Default
-    a {
-        color: $color-white;
-        margin: 0;
-        display: inline-block;
-        @include transit-all( $transit-eio, $transit-time-small );
+	// Default
+	a {
+		color: $color-white;
+		margin: 0;
+		display: inline-block;
+		@include transit-all( $transit-eio, $transit-time-small );
 
-        &:hover {
-            background-color: $color-btn !important;
-        }
-    }
+		&:hover {
+			background-color: $color-btn !important;
+		}
+	}
 
-    // Social Icons
-    .icon, .cmti {
-        margin: 0;
-        margin-bottom: 0.25rem;
-        margin-right: 0.5rem;
-        padding: 0.25rem;
-    }
+	// Social Icons
+	.icon, .cmti {
+		margin: 0;
+		margin-bottom: 0.25rem;
+		margin-right: 0.5rem;
+		padding: 0.25rem;
+	}
+	
+	// Round cornered icons
+	.icon-rounded, .cmti-rounded {
+		@include rounded( $size-small );
+	}
+	
+	// Social Icons with border
+	.icon-border, .cmti-border {
+		border: 1px solid;
 
-    // Social Icons with background color
-    .icon-bkg, .cmti-bkg {
+		&.icon-facebook, &.cmti-social-facebook {
+			border-color: $color-facebook;
+		}
+	
+		&.icon-twitter, &.cmti-social-twitter {
+			border-color: $color-twitter;
+		}
+	
+		&.icon-google, &.cmti-social-google {
+			border-color: $color-google;
+		}
+	
+		&.icon-google-plus, &.cmti-social-google-plus {
+			border-color: $color-google-plus;
+		}
+	
+		&.icon-linkedin, &.cmti-social-linkedin {
+			border-color: $color-linkedin;
+		}
+	
+		&.icon-instagram, &.cmti-social-instagram {
+			border-color: $color-instagram;
+		}
+	
+		&.icon-pintrest, &.cmti-social-pintrest {
+			border-color: $color-pintrest;
+		}
+	
+		&.icon-youtube, &.cmti-social-youtube {
+			border-color: $color-youtube;
+		}
 
-        &.icon-facebook, &.cmti-social-facebook {
-            background-color: $color-facebook;
-        }
+		&:hover {
 
-        &.icon-twitter, &.cmti-social-twitter {
-            background-color: $color-twitter;
-        }
+			&.icon-facebook, &.cmti-social-facebook {
+				background-color: $color-facebook;
+			}
+		
+			&.icon-twitter, &.cmti-social-twitter {
+				background-color: $color-twitter;
+			}
+		
+			&.icon-google, &.cmti-social-google {
+				background-color: $color-google;
+			}
+		
+			&.icon-google-plus, &.cmti-social-google-plus {
+				background-color: $color-google-plus;
+			}
+		
+			&.icon-linkedin, &.cmti-social-linkedin {
+				background-color: $color-linkedin;
+			}
+		
+			&.icon-instagram, &.cmti-social-instagram {
+				background-color: $color-instagram;
+			}
+		
+			&.icon-pintrest, &.cmti-social-pintrest {
+				background-color: $color-pintrest;
+			}
+		
+			&.icon-youtube, &.cmti-social-youtube {
+				background-color: $color-youtube;
+			}
+		}
+	}
 
-        &.icon-google, &.cmti-social-google {
-            background-color: $color-google;
-        }
+	// Social Icons with background color
+	.icon-bkg, .cmti-bkg {
 
-        &.icon-google-plus, &.cmti-social-google-plus {
-            background-color: $color-google-plus;
-        }
+		&.icon-facebook, &.cmti-social-facebook {
+			background-color: $color-facebook;
+		}
+	
+		&.icon-twitter, &.cmti-social-twitter {
+			background-color: $color-twitter;
+		}
+	
+		&.icon-google, &.cmti-social-google {
+			background-color: $color-google;
+		}
+	
+		&.icon-google-plus, &.cmti-social-google-plus {
+			background-color: $color-google-plus;
+		}
+	
+		&.icon-linkedin, &.cmti-social-linkedin {
+			background-color: $color-linkedin;
+		}
+	
+		&.icon-instagram, &.cmti-social-instagram {
+			background-color: $color-instagram;
+		}
+	
+		&.icon-pintrest, &.cmti-social-pintrest {
+			background-color: $color-pintrest;
+		}
+	
+		&.icon-youtube, &.cmti-social-youtube {
+			background-color: $color-youtube;
+		}
+	}
 
-        &.icon-linkedin, &.cmti-social-linkedin {
-            background-color: $color-linkedin;
-        }
+	// Social Icons with text color
+	.icon-text, .cmti-text {
 
-        &.icon-instagram, &.cmti-social-instagram {
-            background-color: $color-instagram;
-        }
+		&.icon-facebook, &.cmti-social-facebook {
+			color: $color-facebook;
+		}
 
-        &.icon-pintrest, &.cmti-social-pintrest {
-            background-color: $color-pintrest;
-        }
+		&.icon-twitter, &.cmti-social-twitter {
+			color: $color-twitter;
+		}
 
-        &.icon-youtube, &.cmti-social-youtube {
-            background-color: $color-youtube;
-        }
-    }
+		&.icon-google, &.cmti-social-google {
+			color: $color-google;
+		}
 
-    // Social Icons with text color
-    .icon-text, .cmti-text {
+		&.icon-google-plus, &.cmti-social-google-plus {
+			color: $color-google-plus;
+		}
 
-        &.icon-facebook, &.cmti-social-facebook {
-            color: $color-facebook;
-        }
+		&.icon-linkedin, &.cmti-social-linkedin {
+			color: $color-linkedin;
+		}
 
-        &.icon-twitter, &.cmti-social-twitter {
-            color: $color-twitter;
-        }
+		&.icon-instagram, &.cmti-social-instagram {
+			color: $color-instagram;
+		}
 
-        &.icon-google, &.cmti-social-google {
-            color: $color-google;
-        }
+		&.icon-pintrest, &.cmti-social-pintrest {
+			color: $color-pintrest;
+		}
 
-        &.icon-google-plus, &.cmti-social-google-plus {
-            color: $color-google-plus;
-        }
+		&.icon-youtube, &.cmti-social-youtube {
+			color: $color-youtube;
+		}
 
-        &.icon-linkedin, &.cmti-social-linkedin {
-            color: $color-linkedin;
-        }
+		&:hover {
+			color: $color-btn-text;
+		}
+	}
 
-        &.icon-instagram, &.cmti-social-instagram {
-            color: $color-instagram;
-        }
+	// Social Buttons
+	.btn {
+		color: $color-white !important;
 
-        &.icon-pintrest, &.cmti-social-pintrest {
-            color: $color-pintrest;
-        }
+		&.facebook {
+			background-color: $color-facebook;
+		}
 
-        &.icon-youtube, &.cmti-social-youtube {
-            color: $color-youtube;
-        }
+		&.twitter {
+			background-color: $color-twitter;
+		}
 
-        &:hover {
-            color: $color-btn;
-        }
-    }
+		&.google {
+			background-color: $color-google;
+		}
 
-    // For Buttons
-    .btn {
-        color: $color-white !important;
+		&.google-plus {
+			background-color: $color-google-plus;
+		}
 
-        &.facebook {
-            background-color: $color-facebook;
-        }
+		&.linkedin {
+			background-color: $color-linkedin;
+		}
 
-        &.twitter {
-            background-color: $color-twitter;
-        }
+		&.instagram {
+			background-color: $color-instagram;
+		}
 
-        &.google {
-            background-color: $color-google;
-        }
+		&.pintrest {
+			background-color: $color-pintrest;
+		}
 
-        &.google-plus {
-            background-color: $color-google-plus;
-        }
-
-        &.linkedin {
-            background-color: $color-linkedin;
-        }
-
-        &.instagram {
-            background-color: $color-instagram;
-        }
-
-        &.pintrest {
-            background-color: $color-pintrest;
-        }
-
-        &.youtube {
-            background-color: $color-youtube;
-        }
-    }
+		&.youtube {
+			background-color: $color-youtube;
+		}
+	}
 }

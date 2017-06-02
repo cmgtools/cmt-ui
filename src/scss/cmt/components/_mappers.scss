@@ -1,71 +1,71 @@
 // == Category Mapper ===============
 
 .mapper-category {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
 
-    .wrap-categories {
-        height: 250px;
-        background-color: $color-primary;
+	.wrap-categories {
+		height: 250px;
+		background-color: $color-primary;
 
-        .category {
-            display: inline-block;
-            width: 100%;
-            margin: 10px;
-            background-color: $color-white;
+		.category {
+			display: inline-block;
+			width: 100%;
+			margin: 10px;
+			background-color: $color-white;
 
-            &.depth-1 {
-                padding-left: 15px;
-            }
+			&.depth-1 {
+				padding-left: 15px;
+			}
 
-            &.depth-2 {
-                padding-left: 30px;
-            }
+			&.depth-2 {
+				padding-left: 30px;
+			}
 
-            &.depth-3 {
-                padding-left: 45px;
-            }
-        }
-    }
+			&.depth-3 {
+				padding-left: 45px;
+			}
+		}
+	}
 }
 
 // Auto Suggest with mapper
 .mapper-category-auto {
 
-    .auto-mapped {
+	.auto-mapped {
 
-        .item-list {
+		.item-list {
 
-            li {
-                background-color: $color-secondary;
-                display: inline-block;
-                padding: 0.5rem;
-                margin-right: 0.5rem;
+			li {
+				background-color: $color-secondary;
+				display: inline-block;
+				padding: 0.5rem;
+				margin-right: 0.5rem;
 
-                .close {
-                    padding-left: 0.5rem;
-                }
-            }
-        }
-    }
+				.close {
+					padding-left: 0.5rem;
+				}
+			}
+		}
+	}
 }
 
 // == Tag Mapper ====================
 
 .mapper-tag {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
 
-    .wrap-tags {
+	.wrap-tags {
 
-        .tag {
-            background-color: $color-secondary;
-            position: relative;
-            display: inline-block;
-            padding: 0.5rem;
-            margin-right: 0.5rem;
-        }
-    }
+		.tag {
+			background-color: $color-secondary;
+			position: relative;
+			display: inline-block;
+			padding: 0.5rem;
+			margin-right: 0.5rem;
+		}
+	}
 }

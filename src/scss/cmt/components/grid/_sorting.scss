@@ -13,19 +13,19 @@ Details: It defines the styles of sorting components as listed below:
 // Sorting
 .wrap-sort {
 
-    .sort {
-        cursor: pointer;
+	.sort {
+		cursor: pointer;
 
-        &.sort-inline {
-            padding-right: 0.5rem;
-        }
+		&.sort-inline {
+			padding-right: 0.5rem;
+		}
 
-        &.sort-asc {
-            color: $color-success !important;
-        }
+		&.sort-asc {
+			color: $color-success !important;
+		}
 
-        &.sort-desc {
-            color: $color-error !important;
-        }
-    }
+		&.sort-desc {
+			color: $color-error !important;
+		}
+	}
 }

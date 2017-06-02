@@ -21,35 +21,35 @@ Details: It defines the styles for sidebar components as listed below:
 // Basic sidebar having title with button to show/hide menu for mobile devices and the menu items.
 // The title will be displayed for small screens and can be used to toggle the menu items.
 .sidebar-basic {
-    position: relative;
+	position: relative;
 
-    .title {
-        display: none;
-        background-color: $color-tertiary;
-        @extend %clearfix;
-        line-height: 32px;
-        padding: 5px;
-        font-size: 16px;
+	.title {
+		display: none;
+		background-color: $color-tertiary;
+		@extend %clearfix;
+		line-height: 32px;
+		padding: 5px;
+		font-size: 16px;
 
-        span {
-            float: right;
-            display: inline-block;
-            cursor: pointer;
-        }
-    }
+		span {
+			float: right;
+			display: inline-block;
+			cursor: pointer;
+		}
+	}
 
-    .menu {
-        display: block;
-    }
+	.menu {
+		display: block;
+	}
 
-    @include responsive-max( screen-tablet-large ) {
+	@include responsive-max( screen-tablet-large ) {
 
-        .title {
-            display: block;
-        }
+		.title {
+			display: block;
+		}
 
-        .menu {
-            display: none;
-        }
-    }
+		.menu {
+			display: none;
+		}
+	}
 }

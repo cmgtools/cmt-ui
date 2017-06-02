@@ -1,45 +1,45 @@
 // == Auto Fill (Suggest) ===========
 
 .auto-fill {
-    position: relative;
+	position: relative;
 
-    // Search field wrapper
-    .auto-search {
+	// Search field wrapper
+	.auto-search {
 
-    }
+	}
 
-    // Search result map
-    .auto-map {
-        position: relative;
+	// Search result map
+	.auto-map {
+		position: relative;
 
-        .item-list {
-            display: none;
-            position: absolute;
-            width: 100%;
+		.item-list {
+			display: none;
+			position: absolute;
+			width: 100%;
 
-            li {
-                background-color: $color-primary-d;
-                color: $color-primary-text-d;
-            }
-        }
-    }
+			li {
+				background-color: $color-primary-d;
+				color: $color-primary-text-d;
+			}
+		}
+	}
 
-    // Existing Mappings
-    .auto-mapped {
+	// Existing Mappings
+	.auto-mapped {
 
-        .item-list {
+		.item-list {
 
-            li {
-                background-color: $color-primary-d;
-                color: $color-primary-text-d;
-                display: inline-block;
-                padding: 0.5em;
-                margin: 0.25em;
+			li {
+				background-color: $color-primary-d;
+				color: $color-primary-text-d;
+				display: inline-block;
+				padding: 0.5em;
+				margin: 0.25em;
 
-                .close {
-                    margin-left: 0.5em;
-                }
-            }
-        }
-    }
+				.close {
+					margin-left: 0.5em;
+				}
+			}
+		}
+	}
 }
