@@ -33,21 +33,21 @@ Details: It defines the basic styles as listed below:
 
 html {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+		  box-sizing: border-box;
 }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
-     -moz-box-sizing: inherit;
-          box-sizing: inherit;
+	 -moz-box-sizing: inherit;
+		  box-sizing: inherit;
 }
 
 // The primary color will be used as default color for document body and text.
 
 html, body {
-    background-color: $color-primary;
-    color: $color-primary-text;
+	background-color: $color-primary;
+	color: $color-primary-text;
 }
 
 /**
@@ -57,37 +57,37 @@ html, body {
 
 .screen {
 
-    &.screen-mobile-small {
-        width: $screen-mobile-small;
-    }
+	&.screen-mobile-small {
+		width: $screen-mobile-small;
+	}
 
-    &.screen-mobile-large {
-        width: $screen-mobile-large;
-    }
+	&.screen-mobile-large {
+		width: $screen-mobile-large;
+	}
 
-    &.screen-tablet-small {
-        width: $screen-tablet-small;
-    }
+	&.screen-tablet-small {
+		width: $screen-tablet-small;
+	}
 
-    &.screen-tablet-large {
-        width: $screen-tablet-large;
-    }
+	&.screen-tablet-large {
+		width: $screen-tablet-large;
+	}
 
-    &.screen-desktop-small {
-        width: $screen-desktop-small;
-    }
+	&.screen-desktop-small {
+		width: $screen-desktop-small;
+	}
 
-    &.screen-desktop-medium {
-        width: $screen-desktop-medium;
-    }
+	&.screen-desktop-medium {
+		width: $screen-desktop-medium;
+	}
 
-    &.screen-desktop-large {
-        width: $screen-desktop-large;
-    }
+	&.screen-desktop-large {
+		width: $screen-desktop-large;
+	}
 
-    &.screen-desktop-xlarge {
-        width: $screen-desktop-xlarge;
-    }
+	&.screen-desktop-xlarge {
+		width: $screen-desktop-xlarge;
+	}
 }
 
 /**
@@ -97,9 +97,9 @@ html, body {
  */
 
 .color {
-    // default to primary
-    background-color: $color-primary;
-    color: $color-primary-text;
+	// default to primary
+	background-color: $color-primary;
+	color: $color-primary-text;
 /**
  * Color Palatte:
  * 1. primary: #{$color-primary}
@@ -122,462 +122,466 @@ html, body {
  * 18. tertiary text dark: #{$color-tertiary-text-d}
  */
 
-    &.color-primary-l {
-        background-color: $color-primary-l;
-        color: $color-primary-text-l;
-    }
+	&.color-primary-l {
+		background-color: $color-primary-l;
+		color: $color-primary-text-l;
+	}
 
-    &.color-primary-d {
-        background-color: $color-primary-d;
-        color: $color-primary-text-d;
-    }
+	&.color-primary-d {
+		background-color: $color-primary-d;
+		color: $color-primary-text-d;
+	}
 
-    &.color-secondary {
-        background-color: $color-secondary;
-        color: $color-secondary-text;
-    }
+	&.color-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
 
-    &.color-secondary-l {
-        background-color: $color-secondary-l;
-        color: $color-secondary-text-l;
-    }
+	&.color-secondary-l {
+		background-color: $color-secondary-l;
+		color: $color-secondary-text-l;
+	}
 
-    &.color-secondary-d {
-        background-color: $color-secondary-d;
-        color: $color-secondary-text-d;
-    }
+	&.color-secondary-d {
+		background-color: $color-secondary-d;
+		color: $color-secondary-text-d;
+	}
 
-    &.color-tertiary {
-        background-color: $color-tertiary;
-        color: $color-tertiary-text;
-    }
+	&.color-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
 
-    &.color-tertiary-l {
-        background-color: $color-tertiary-l;
-        color: $color-tertiary-text-l;
-    }
+	&.color-tertiary-l {
+		background-color: $color-tertiary-l;
+		color: $color-tertiary-text-l;
+	}
 
-    &.color-tertiary-d {
-        background-color: $color-tertiary-d;
-        color: $color-tertiary-text-d;
-    }
+	&.color-tertiary-d {
+		background-color: $color-tertiary-d;
+		color: $color-tertiary-text-d;
+	}
 
-    &.color-white {
-        background-color: $color-white;
-        color: $color-black;
-    }
+	&.color-white {
+		background-color: $color-white;
+		color: $color-black;
+	}
 
-    &.color-black {
-        background-color: $color-black;
-        color: $color-white;
-    }
+	&.color-black {
+		background-color: $color-black;
+		color: $color-white;
+	}
 }
 
 // Background Colors
 .bkg {
-    // default to primary
-    background-color: $color-primary !important;
+	// default to primary
+	background-color: $color-primary !important;
 
-    &.bkg-primary-l {
-        background-color: $color-primary-l !important;
-    }
+	&.bkg-primary-l {
+		background-color: $color-primary-l !important;
+	}
 
-    &.bkg-primary-d {
-        background-color: $color-primary-d !important;
-    }
+	&.bkg-primary-d {
+		background-color: $color-primary-d !important;
+	}
 
-    &.bkg-secondary {
-        background-color: $color-secondary !important;
-    }
+	&.bkg-secondary {
+		background-color: $color-secondary !important;
+	}
 
-    &.bkg-secondary-l {
-        background-color: $color-secondary-l !important;
-    }
+	&.bkg-secondary-l {
+		background-color: $color-secondary-l !important;
+	}
 
-    &.bkg-secondary-d {
-        background-color: $color-secondary-d !important;
-    }
+	&.bkg-secondary-d {
+		background-color: $color-secondary-d !important;
+	}
 
-    &.bkg-tertiary {
-        background-color: $color-tertiary !important;
-    }
+	&.bkg-tertiary {
+		background-color: $color-tertiary !important;
+	}
 
-    &.bkg-tertiary-l {
-        background-color: $color-tertiary-l !important;
-    }
+	&.bkg-tertiary-l {
+		background-color: $color-tertiary-l !important;
+	}
 
-    &.bkg-tertiary-d {
-        background-color: $color-tertiary-d !important;
-    }
+	&.bkg-tertiary-d {
+		background-color: $color-tertiary-d !important;
+	}
 
-    &.bkg-black {
-        background-color: $color-black !important;
-    }
+	&.bkg-black {
+		background-color: $color-black !important;
+	}
 
-    &.bkg-gray {
-        background-color: $color-gray !important;
-    }
+	&.bkg-gray {
+		background-color: $color-gray !important;
+	}
 
-    &.bkg-gray-l {
-        background-color: $color-gray-l !important;
-    }
+	&.bkg-gray-l {
+		background-color: $color-gray-l !important;
+	}
 
-    &.bkg-gray-d {
-        background-color: $color-gray-d !important;
-    }
+	&.bkg-gray-d {
+		background-color: $color-gray-d !important;
+	}
 
-    &.bkg-white {
-        background-color: $color-white !important;
-    }
+	&.bkg-white {
+		background-color: $color-white !important;
+	}
 
-    &.bkg-blue {
-        background-color: $color-blue !important;
-    }
+	&.bkg-blue {
+		background-color: $color-blue !important;
+	}
 
-    &.bkg-purple {
-        background-color: $color-purple !important;
-    }
+	&.bkg-purple {
+		background-color: $color-purple !important;
+	}
 
-    &.bkg-orange {
-        background-color: $color-orange !important;
-    }
+	&.bkg-orange {
+		background-color: $color-orange !important;
+	}
 
-    &.bkg-yellow {
-        background-color: $color-yellow !important;
-    }
+	&.bkg-yellow {
+		background-color: $color-yellow !important;
+	}
 
-    &.bkg-red {
-        background-color: $color-red !important;
-    }
+	&.bkg-red {
+		background-color: $color-red !important;
+	}
 
-    &.bkg-pink {
-        background-color: $color-pink !important;
-    }
+	&.bkg-pink {
+		background-color: $color-pink !important;
+	}
 
-    &.bkg-magenta {
-        background-color: $color-magenta !important;
-    }
+	&.bkg-magenta {
+		background-color: $color-magenta !important;
+	}
 
-    &.bkg-green {
-        background-color: $color-green !important;
-    }
+	&.bkg-green {
+		background-color: $color-green !important;
+	}
 
-    &.bkg-green-d {
-        background-color: $color-green-d !important;
-    }
+	&.bkg-green-d {
+		background-color: $color-green-d !important;
+	}
 }
 
 // Text Colors
 .text {
-    // default to primary text
-    color: $color-primary-text !important;
+	// default to primary text
+	color: $color-primary-text !important;
 
-    &.text-primary-l {
-        color: $color-primary-text-l !important;
-    }
+	&.text-primary-l {
+		color: $color-primary-text-l !important;
+	}
 
-    &.text-primary-d {
-        color: $color-primary-text-d !important;
-    }
+	&.text-primary-d {
+		color: $color-primary-text-d !important;
+	}
 
-    &.text-secondary {
-        color: $color-secondary-text !important;
-    }
+	&.text-secondary {
+		color: $color-secondary-text !important;
+	}
 
-    &.text-secondary-l {
-        color: $color-secondary-text-l !important;
-    }
+	&.text-secondary-l {
+		color: $color-secondary-text-l !important;
+	}
 
-    &.text-secondary-d {
-        color: $color-secondary-text-d !important;
-    }
+	&.text-secondary-d {
+		color: $color-secondary-text-d !important;
+	}
 
-    &.text-tertiary {
-        color: $color-tertiary-text !important;
-    }
+	&.text-tertiary {
+		color: $color-tertiary-text !important;
+	}
 
-    &.text-tertiary-l {
-        color: $color-tertiary-text-l !important;
-    }
+	&.text-tertiary-l {
+		color: $color-tertiary-text-l !important;
+	}
 
-    &.text-tertiary-d {
-        color: $color-tertiary-text-d !important;
-    }
+	&.text-tertiary-d {
+		color: $color-tertiary-text-d !important;
+	}
 
-    &.text-black {
-        color: $color-black !important;
-    }
+	&.text-link {
+		color: $color-link !important;
+	}
 
-    &.text-gray {
-        color: $color-gray !important;
-    }
+	&.text-black {
+		color: $color-black !important;
+	}
 
-    &.text-gray-l {
-        color: $color-gray-l !important;
-    }
+	&.text-gray {
+		color: $color-gray !important;
+	}
 
-    &.text-gray-d {
-        color: $color-gray-d !important;
-    }
+	&.text-gray-l {
+		color: $color-gray-l !important;
+	}
 
-    &.text-white {
-        color: $color-white !important;
-    }
+	&.text-gray-d {
+		color: $color-gray-d !important;
+	}
 
-    &.text-blue {
-        color: $color-blue !important;
-    }
+	&.text-white {
+		color: $color-white !important;
+	}
 
-    &.text-purple {
-        color: $color-purple !important;
-    }
+	&.text-blue {
+		color: $color-blue !important;
+	}
 
-    &.text-orange {
-        color: $color-orange !important;
-    }
+	&.text-purple {
+		color: $color-purple !important;
+	}
 
-    &.text-yellow {
-        color: $color-yellow !important;
-    }
+	&.text-orange {
+		color: $color-orange !important;
+	}
 
-    &.text-red {
-        color: $color-red !important;
-    }
+	&.text-yellow {
+		color: $color-yellow !important;
+	}
 
-    &.text-pink {
-        color: $color-pink !important;
-    }
+	&.text-red {
+		color: $color-red !important;
+	}
 
-    &.text-magenta {
-        color: $color-magenta !important;
-    }
+	&.text-pink {
+		color: $color-pink !important;
+	}
 
-    &.text-green {
-        color: $color-green !important;
-    }
+	&.text-magenta {
+		color: $color-magenta !important;
+	}
 
-    &.text-green-d {
-        color: $color-green-d !important;
-    }
+	&.text-green {
+		color: $color-green !important;
+	}
+
+	&.text-green-d {
+		color: $color-green-d !important;
+	}
 }
 
 // without margin and padding
 .mp {
 
-    .mp-none {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
+	.mp-none {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
 
-    .mp-none-top {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
+	.mp-none-top {
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+	}
 
-    .mp-none-right {
-        margin-right: 0 !important;
-        padding-right: 0 !important;
-    }
+	.mp-none-right {
+		margin-right: 0 !important;
+		padding-right: 0 !important;
+	}
 
-    .mp-none-bottom {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-    }
+	.mp-none-bottom {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	}
 
-    .mp-none-left {
-        margin-left: 0 !important;
-        padding-left: 0 !important;
-    }
+	.mp-none-left {
+		margin-left: 0 !important;
+		padding-left: 0 !important;
+	}
 }
 
 // Padding
 
 .padding {
 
-    .padding-none {
-        padding: 0 !important;
-    }
+	.padding-none {
+		padding: 0 !important;
+	}
 
-    .padding-none-top {
-        padding-top: 0 !important;
-    }
+	.padding-none-top {
+		padding-top: 0 !important;
+	}
 
-    .padding-none-right {
-        padding-right: 0 !important;
-    }
+	.padding-none-right {
+		padding-right: 0 !important;
+	}
 
-    .padding-none-bottom {
-        padding-bottom: 0 !important;
-    }
+	.padding-none-bottom {
+		padding-bottom: 0 !important;
+	}
 
-    .padding-none-left {
-        padding-left: 0 !important;
-    }
+	.padding-none-left {
+		padding-left: 0 !important;
+	}
 
-    &.padding-default {
-        padding: $size-default-rem;
-    }
+	&.padding-default {
+		padding: $size-default-rem;
+	}
 
-    &.padding-default-v {
-        padding-top: $size-default-rem;
-        padding-bottom: $size-default-rem;
-    }
+	&.padding-default-v {
+		padding-top: $size-default-rem;
+		padding-bottom: $size-default-rem;
+	}
 
-    &.padding-default-h {
-        padding-left: $size-default-rem;
-        padding-right: $size-default-rem;
-    }
+	&.padding-default-h {
+		padding-left: $size-default-rem;
+		padding-right: $size-default-rem;
+	}
 
-    &.padding-small {
-        padding: $size-small-rem;
-    }
+	&.padding-small {
+		padding: $size-small-rem;
+	}
 
-    &.padding-small-v {
-        padding-top: $size-small-rem;
-        padding-bottom: $size-small-rem;
-    }
+	&.padding-small-v {
+		padding-top: $size-small-rem;
+		padding-bottom: $size-small-rem;
+	}
 
-    &.padding-small-h {
-        padding-left: $size-small-rem;
-        padding-right: $size-small-rem;
-    }
+	&.padding-small-h {
+		padding-left: $size-small-rem;
+		padding-right: $size-small-rem;
+	}
 
-    &.padding-medium {
-        padding: $size-medium-rem;
-    }
+	&.padding-medium {
+		padding: $size-medium-rem;
+	}
 
-    &.padding-medium-v {
-        padding-top: $size-medium-rem;
-        padding-bottom: $size-medium-rem;
-    }
+	&.padding-medium-v {
+		padding-top: $size-medium-rem;
+		padding-bottom: $size-medium-rem;
+	}
 
-    &.padding-medium-h {
-        padding-left: $size-medium-rem;
-        padding-right: $size-medium-rem;
-    }
+	&.padding-medium-h {
+		padding-left: $size-medium-rem;
+		padding-right: $size-medium-rem;
+	}
 
-    &.padding-large {
-        padding: $size-large-rem;
-    }
+	&.padding-large {
+		padding: $size-large-rem;
+	}
 
-    &.padding-large-v {
-        padding-top: $size-large-rem;
-        padding-bottom: $size-large-rem;
-    }
+	&.padding-large-v {
+		padding-top: $size-large-rem;
+		padding-bottom: $size-large-rem;
+	}
 
-    &.padding-large-h {
-        padding-left: $size-large-rem;
-        padding-right: $size-large-rem;
-    }
+	&.padding-large-h {
+		padding-left: $size-large-rem;
+		padding-right: $size-large-rem;
+	}
 
-    &.padding-xlarge {
-        padding: $size-xlarge-rem;
-    }
+	&.padding-xlarge {
+		padding: $size-xlarge-rem;
+	}
 
-    &.padding-xlarge-v {
-        padding-top: $size-xlarge-rem;
-        padding-bottom: $size-xlarge-rem;
-    }
+	&.padding-xlarge-v {
+		padding-top: $size-xlarge-rem;
+		padding-bottom: $size-xlarge-rem;
+	}
 
-    &.padding-xlarge-h {
-        padding-left: $size-xlarge-rem;
-        padding-right: $size-xlarge-rem;
-    }
+	&.padding-xlarge-h {
+		padding-left: $size-xlarge-rem;
+		padding-right: $size-xlarge-rem;
+	}
 }
 
 // Margin
 
 .margin {
 
-    .margin-none {
-        margin: 0 !important;
-    }
+	.margin-none {
+		margin: 0 !important;
+	}
 
-    .margin-none-top {
-        margin-top: 0 !important;
-    }
+	.margin-none-top {
+		margin-top: 0 !important;
+	}
 
-    .margin-none-right {
-        margin-right: 0 !important;
-    }
+	.margin-none-right {
+		margin-right: 0 !important;
+	}
 
-    .margin-none-bottom {
-        margin-bottom: 0 !important;
-    }
+	.margin-none-bottom {
+		margin-bottom: 0 !important;
+	}
 
-    .margin-none-left {
-        margin-left: 0 !important;
-    }
+	.margin-none-left {
+		margin-left: 0 !important;
+	}
 
-    &.margin-default {
-        margin: $size-default-rem;
-    }
+	&.margin-default {
+		margin: $size-default-rem;
+	}
 
-    &.margin-default-v {
-        margin-top: $size-default-rem;
-        margin-bottom: $size-default-rem;
-    }
+	&.margin-default-v {
+		margin-top: $size-default-rem;
+		margin-bottom: $size-default-rem;
+	}
 
-    &.margin-default-h {
-        margin-left: $size-default-rem;
-        margin-right: $size-default-rem;
-    }
+	&.margin-default-h {
+		margin-left: $size-default-rem;
+		margin-right: $size-default-rem;
+	}
 
-    &.margin-small {
-        margin: $size-small-rem;
-    }
+	&.margin-small {
+		margin: $size-small-rem;
+	}
 
-    &.margin-small-v {
-        margin-top: $size-small-rem;
-        margin-bottom: $size-small-rem;
-    }
+	&.margin-small-v {
+		margin-top: $size-small-rem;
+		margin-bottom: $size-small-rem;
+	}
 
-    &.margin-small-h {
-        margin-left: $size-small-rem;
-        margin-right: $size-small-rem;
-    }
+	&.margin-small-h {
+		margin-left: $size-small-rem;
+		margin-right: $size-small-rem;
+	}
 
-    &.margin-medium {
-        margin: $size-medium-rem;
-    }
+	&.margin-medium {
+		margin: $size-medium-rem;
+	}
 
-    &.margin-medium-v {
-        margin-top: $size-medium-rem;
-        margin-bottom: $size-medium-rem;
-    }
+	&.margin-medium-v {
+		margin-top: $size-medium-rem;
+		margin-bottom: $size-medium-rem;
+	}
 
-    &.margin-medium-h {
-        margin-left: $size-medium-rem;
-        margin-right: $size-medium-rem;
-    }
+	&.margin-medium-h {
+		margin-left: $size-medium-rem;
+		margin-right: $size-medium-rem;
+	}
 
-    &.margin-large {
-        margin: $size-large-rem;
-    }
+	&.margin-large {
+		margin: $size-large-rem;
+	}
 
-    &.margin-large-v {
-        margin-top: $size-large-rem;
-        margin-bottom: $size-large-rem;
-    }
+	&.margin-large-v {
+		margin-top: $size-large-rem;
+		margin-bottom: $size-large-rem;
+	}
 
-    &.margin-large-h {
-        margin-left: $size-large-rem;
-        margin-right: $size-large-rem;
-    }
+	&.margin-large-h {
+		margin-left: $size-large-rem;
+		margin-right: $size-large-rem;
+	}
 
-    &.margin-xlarge {
-        margin: $size-xlarge-rem;
-    }
+	&.margin-xlarge {
+		margin: $size-xlarge-rem;
+	}
 
-    &.margin-xlarge-v {
-        margin-top: $size-xlarge-rem;
-        margin-bottom: $size-xlarge-rem;
-    }
+	&.margin-xlarge-v {
+		margin-top: $size-xlarge-rem;
+		margin-bottom: $size-xlarge-rem;
+	}
 
-    &.margin-xlarge-h {
-        margin-left: $size-xlarge-rem;
-        margin-right: $size-xlarge-rem;
-    }
+	&.margin-xlarge-h {
+		margin-left: $size-xlarge-rem;
+		margin-right: $size-xlarge-rem;
+	}
 }
 
 /**
@@ -585,28 +589,28 @@ html, body {
  */
 
 .clear {
-    clear: both !important;
+	clear: both !important;
 }
 
 .left {
-    float: left !important;
+	float: left !important;
 }
 
 .right {
-    float: right !important;
+	float: right !important;
 }
 
 .clear-none {
-    clear: none !important;
+	clear: none !important;
 }
 
 .float-none {
-    float: none !important;
+	float: none !important;
 }
 
 .float-none-center {
-    float: none !important;
-    margin: 0 auto;
+	float: none !important;
+	margin: 0 auto;
 }
 
 /**
@@ -616,49 +620,61 @@ html, body {
 // Width
 
 .width {
-    width: 100%;
+	width: 100%;
 
-    &.width-auto {
-        width: auto;
-    }
+	&.width-auto {
+		width: auto;
+	}
 
-    &.width-25 {
-        width: 25%;
-    }
+	&.width-1 {
+		width: 1%;
+	}
 
-    &.width-50 {
-        width: 50%;
-    }
+	&.width-5 {
+		width: 5%;
+	}
 
-    &.width-75 {
-        width: 75%;
-    }
+	&.width-10 {
+		width: 10%;
+	}
 
-    &.width-80 {
-        width: 80%;
-    }
+	&.width-25 {
+		width: 25%;
+	}
+
+	&.width-50 {
+		width: 50%;
+	}
+
+	&.width-75 {
+		width: 75%;
+	}
+
+	&.width-80 {
+		width: 80%;
+	}
 }
 
 // Height
 
 .height {
-    height: 100%;
+	height: 100%;
 
-    &.height-auto {
-        height: auto;
-    }
+	&.height-auto {
+		height: auto;
+	}
 
-    &.height-25 {
-        height: 25%;
-    }
+	&.height-25 {
+		height: 25%;
+	}
 
-    &.height-50 {
-        height: 50%;
-    }
+	&.height-50 {
+		height: 50%;
+	}
 
-    &.height-75 {
-        height: 75%;
-    }
+	&.height-75 {
+		height: 75%;
+	}
 }
 
 /**
@@ -667,20 +683,20 @@ html, body {
 
 // Horizontally center align the element
 .center {
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
 // Align the children of an element - left, horizontally center and right
 .align {
-    text-align: left !important;
+	text-align: left !important;
 
-    &.align-center {
-        text-align: center !important;
-    }
+	&.align-center {
+		text-align: center !important;
+	}
 
-    &.align-right {
-        text-align: right !important;
-    }
+	&.align-right {
+		text-align: right !important;
+	}
 }
 
 /**
@@ -688,245 +704,250 @@ html, body {
  */
 
 .filler-height {
-    height: 1rem;
+	height: 1rem;
 
-    &.filler-height-small {
-        height: 1.5rem;
-    }
+	&.filler-height-small {
+		height: 1.5rem;
+	}
 
-    &.filler-height-medium {
-        height: 2rem;
-    }
+	&.filler-height-medium {
+		height: 2rem;
+	}
 
-    &.filler-height-large {
-        height: 2.5rem;
-    }
+	&.filler-height-large {
+		height: 2.5rem;
+	}
 
-    &.filler-height-xlarge {
-        height: 3rem;
-    }
+	&.filler-height-xlarge {
+		height: 3rem;
+	}
 }
 
 /**
  * Tab fillers to seperate elements.
  */
 .filler-tab {
-    width: 1em;
-    height: 1px;
-    display: inline-block;
+	width: 1em;
+	height: 1px;
+	display: inline-block;
 
-    &.filler-tab-small {
-        width: 2em;
-    }
+	&.filler-tab-small {
+		width: 2em;
+	}
 
-    &.filler-tab-medium {
-        width: 4em;
-    }
+	&.filler-tab-medium {
+		width: 4em;
+	}
 
-    &.filler-tab-large {
-        width: 8em;
-    }
+	&.filler-tab-large {
+		width: 8em;
+	}
 
-    &.filler-tab-xlarge {
-        width: 10em;
-    }
+	&.filler-tab-xlarge {
+		width: 10em;
+	}
 }
 
 // Positioning
 
 .absolute {
-    position: absolute !important;
+	position: absolute !important;
 
-    // Horizontally center
-    &.absolute-center {
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
+	// Horizontally center
+	&.absolute-center {
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-    // Vertically center - both parent and child needs fixed width and height
-    &.absolute-middle {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
+	// Vertically center - both parent and child needs fixed width and height
+	&.absolute-middle {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-    &.absolute-top-left {
-        top: 0px;
-        left: 0px;
-    }
+	&.absolute-top-left {
+		top: 0px;
+		left: 0px;
+	}
 
-    // Horizontally center at top - child needs fixed width smaller than parent
-    &.absolute-top-center {
-        top: 0px;
-        left: 0px;
-        right: 0px;
-    }
+	// Horizontally center at top - child needs fixed width smaller than parent
+	&.absolute-top-center {
+		top: 0px;
+		left: 0px;
+		right: 0px;
+	}
 
-    &.absolute-top-right {
-        top: 0px;
-        right: 0px;
-    }
+	&.absolute-top-right {
+		top: 0px;
+		right: 0px;
+	}
 
-    &.absolute-bottom-left {
-        bottom: 0px;
-        left: 0px;
-    }
+	&.absolute-bottom-left {
+		bottom: 0px;
+		left: 0px;
+	}
 
-    // Horizontally center at bottom - child needs fixed width smaller than parent
-    &.absolute-bottom-center {
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-    }
+	// Horizontally center at bottom - child needs fixed width smaller than parent
+	&.absolute-bottom-center {
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
 
-    &.absolute-bottom-right {
-        bottom: 0px;
-        right: 0px;
-    }
+	&.absolute-bottom-right {
+		bottom: 0px;
+		right: 0px;
+	}
 }
 
 .relative {
-    position: relative !important;
+	position: relative !important;
 }
 
 .fixed {
-    position: fixed !important;
+	position: fixed !important;
 }
 
 // Display Type
 
 .block {
-    display: block !important;
+	display: block !important;
 }
 
 .inline-block {
-    display: inline-block !important;
+	display: inline-block !important;
 }
 
 .inline {
-    display: inline !important;
+	display: inline !important;
 }
 
 // Visibility - Without own space
 
 .visible {
-    display: block !important;
+	display: block !important;
 }
 
+// Strictly hidden
 .hidden {
-    display: none !important;
+	display: none !important;
+}
+
+.hidden-easy {
+	display: none;
 }
 
 // Visibility - Hidden/Displayed occupying space on screen
 
 .visible-space {
-    visibility: visible !important;
+	visibility: visible !important;
 }
 
 .hidden-space {
-    visibility: hidden !important;
+	visibility: hidden !important;
 }
 
 // Cursors
 
 .pointer {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .crosshair {
-    cursor: crosshair;
+	cursor: crosshair;
 }
 
 .help {
-    cursor: help;
+	cursor: help;
 }
 
 .wait {
-    cursor: wait;
+	cursor: wait;
 }
 
 .cursor {
-    cursor: default;
+	cursor: default;
 
-    &.cursor-pointer {
-        cursor: pointer;
-    }
+	&.cursor-pointer {
+		cursor: pointer;
+	}
 
-    &.cursor-crosshair {
-        cursor: crosshair;
-    }
+	&.cursor-crosshair {
+		cursor: crosshair;
+	}
 
-    &.cursor-help {
-        cursor: help;
-    }
+	&.cursor-help {
+		cursor: help;
+	}
 
-    &.cursor-wait {
-        cursor: wait;
-    }
+	&.cursor-wait {
+		cursor: wait;
+	}
 }
 
 // Disabled
 .disabled {
-    background-color: $color-gray !important;
-    color: $color-white !important;
-    cursor: default !important;
+	background-color: $color-gray !important;
+	color: $color-white !important;
+	cursor: default !important;
 
-    &:hover {
-        background-color: $color-gray !important;
-        color: $color-white !important;
-    }
+	&:hover {
+		background-color: $color-gray !important;
+		color: $color-white !important;
+	}
 }
 
 // Fluid Elements (blocks, images)
 
 .fluid {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 // Messages
 
 .warning, .error, .success, .info, .help-block {
-    font-size: $font-size-8;
-    width: 100%;
+	font-size: $font-size-8;
+	width: 100%;
 
-    &.highlight {
-        background-color: $color-secondary;
-    }
+	&.highlight {
+		background-color: $color-secondary;
+	}
 }
 
 .error {
-    color: $color-error;
+	color: $color-error;
 }
 
 .warning {
-    color: $color-warning;
+	color: $color-warning;
 }
 
 .success {
-    color: $color-success;
+	color: $color-success;
 }
 
 .info {
-    color: $color-info;
+	color: $color-info;
 }
 
 // Required for Yii Forms
 .form-group .help-block {
-    color: $color-error;
+	color: $color-error;
 }
 
 .error-field {
-    @include border( $size-default, solid, $color-error );
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );
+	@include border( $size-default, solid, $color-error );
+	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );
 }
 
 // icons alignment
 .cmti, .fa {
-    vertical-align: middle;
+	vertical-align: middle;
 }

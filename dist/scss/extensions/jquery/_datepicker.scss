@@ -10,81 +10,81 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 // == Datepicker ====================
 
 .ui-datepicker {
-    position: relative;
-    width:300px;
-    background-color:$color-white;
-    padding:5px;
-    display:none;
-    @include shadow-inset( 0, 0, 0, $color-tertiary-l, $spread: 1px );
+	position: relative;
+	width:300px;
+	background-color:$color-white;
+	padding:5px;
+	display:none;
+	@include shadow-inset( 0, 0, 0, $color-tertiary-l, $spread: 1px );
 }
 
 .ui-datepicker-header {
-    @extend %clearfix;
-    background-color: $color-tertiary;
-    text-align: center;
+	@extend %clearfix;
+	background-color: $color-tertiary;
+	text-align: center;
 }
 
 .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-title {
-    display: inline-block;
-    padding: 1em;
-    color: $color-tertiary-text;
+	display: inline-block;
+	padding: 1em;
+	color: $color-tertiary-text;
 }
 
 .ui-datepicker-prev {
-    float: left;
+	float: left;
 }
 
 .ui-datepicker-next {
-    float: right;
+	float: right;
 }
 
 .ui-datepicker-prev-hover, .ui-datepicker-next-hover {
-    background-color: $color-tertiary-d;
+	background-color: $color-tertiary-d;
 }
 
 .ui-datepicker-title {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .ui-datepicker-calendar {
-    background: $color-white;
-    color: $color-secondary;
-    width: 100%;
+	background: $color-white;
+	color: $color-secondary;
+	width: 100%;
 
-    th {
-        padding: 1em 0.25em;
-        color:$color-tertiary-text-l;
-    }
+	th {
+		padding: 1em 0.25em;
+		color:$color-tertiary-text-l;
+	}
 
-    td {
-        width: 12.28571%;
-        height: 2em;
-        line-height: 2em;
-        text-align: center;
+	td {
+		width: 12.28571%;
+		height: 2em;
+		line-height: 2em;
+		text-align: center;
 
-        span, a {
-            display: inline-block;
-            width: 90%;
-            margin: 5%;
-        }
+		span, a {
+			display: inline-block;
+			width: 90%;
+			margin: 5%;
+		}
 
-        a {
-            color: $color-tertiary-text-l;
+		a {
+			color: $color-tertiary-text-l;
 
-            &:hover {
-                background-color: $color-tertiary;
-                color: $color-tertiary-text;
-            }
+			&:hover {
+				background-color: $color-tertiary;
+				color: $color-tertiary-text;
+			}
 
-            &.ui-state-active {
-                background-color: $color-tertiary-d;
-                color: $color-tertiary-text;
-            }
-        }
-    }
+			&.ui-state-active {
+				background-color: $color-tertiary-d;
+				color: $color-tertiary-text;
+			}
+		}
+	}
 
-    .ui-state-disabled span {
-        background: $color-tertiary;
-        color: $color-secondary;
-    }
+	.ui-state-disabled span {
+		background: $color-tertiary;
+		color: $color-secondary;
+	}
 }

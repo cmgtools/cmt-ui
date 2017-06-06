@@ -13,88 +13,88 @@ Details: It defines the styles for login components as listed below:
 
 .wrap-login-box {
 
-    .btn-login, .btn-signup, .btn-forgot-password {
-        cursor: pointer;
-    }
+	.btn-login, .btn-signup, .btn-forgot-password {
+		cursor: pointer;
+	}
 
-    // The parent element to hold login and signup buttons
-    .login-actions {
+	// The parent element to hold login and signup buttons
+	.login-actions {
 
-        .btn-login {
-            // login button
-        }
+		.btn-login {
+			// login button
+		}
 
-        .btn-signup {
-            // signup button
-        }
+		.btn-signup {
+			// signup button
+		}
 
-        .btn-forgot-password {
-            // forgot password button
-        }
-    }
+		.btn-forgot-password {
+			// forgot password button
+		}
+	}
 
-    .box-login {
+	.box-login {
 
-        .wrap-login-fields {
-            // login fields
-        }
+		.wrap-login-fields {
+			// login fields
+		}
 
-        .wrap-forgot-btn {
+		.wrap-forgot-btn {
 
-            .btn-forgot-password {
-                // forgot password button
-            }
-        }
+			.btn-forgot-password {
+				// forgot password button
+			}
+		}
 
-        .wrap-signup-btn {
+		.wrap-signup-btn {
 
-            .btn-signup {
-                // signup button
-            }
-        }
-    }
+			.btn-signup {
+				// signup button
+			}
+		}
+	}
 
-    .box-forgot-password {
-        display: none;
+	.box-forgot-password {
+		display: none;
 
-        .wrap-forgot-fields {
-            // forgot password fields
-        }
+		.wrap-forgot-fields {
+			// forgot password fields
+		}
 
-        .wrap-login-btn {
+		.wrap-login-btn {
 
-            .btn-login {
-                // login button
-            }
-        }
+			.btn-login {
+				// login button
+			}
+		}
 
-        .wrap-signup-btn {
+		.wrap-signup-btn {
 
-            .btn-signup {
-                // signup button
-            }
-        }
-    }
+			.btn-signup {
+				// signup button
+			}
+		}
+	}
 
-    .box-signup {
-        display: none;
+	.box-signup {
+		display: none;
 
-        .wrap-signup-fields {
-            // signup fields
-        }
+		.wrap-signup-fields {
+			// signup fields
+		}
 
-        .wrap-forgot-btn {
+		.wrap-forgot-btn {
 
-            .btn-forgot-password {
-                // forgot password button
-            }
-        }
+			.btn-forgot-password {
+				// forgot password button
+			}
+		}
 
-        .wrap-login-btn {
+		.wrap-login-btn {
 
-            .btn-login {
-                // login button
-            }
-        }
-    }
+			.btn-login {
+				// login button
+			}
+		}
+	}
 }

@@ -25,90 +25,90 @@ Details: It defines the grid system and basic containers as listed below:
 
 // Responsive Row - Aligned middle by default
 .row {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    @extend %clearfix;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	@extend %clearfix;
 
-    &.row-small {
-        width: 25%;
-    }
+	&.row-small {
+		width: 25%;
+	}
 
-    &.row-medium {
-        width: 50%;
-    }
+	&.row-medium {
+		width: 50%;
+	}
 
-    &.row-large {
-        width: 80%;
-    }
+	&.row-large {
+		width: 80%;
+	}
 
-    &.row-xlarge {
-        width: 90%;
-    }
+	&.row-xlarge {
+		width: 90%;
+	}
 
-    &.row-inline {
-        text-align: center;
+	&.row-inline {
+		text-align: center;
 
-        &.row-inline-left {
-            text-align: left;
-        }
+		&.row-inline-left {
+			text-align: left;
+		}
 
-        &.row-inline-right {
-            text-align: right;
-        }
+		&.row-inline-right {
+			text-align: right;
+		}
 
-        & >.col, & >.colf {
-            display: inline-block !important;
-            float: none !important;
-        }
+		& >.col, & >.colf {
+			display: inline-block !important;
+			float: none !important;
+		}
 
-        // fix cols for width issue
-        & >.col3 {
-            width: 30%;
-        }
+		// fix cols for width issue
+		& >.col3 {
+			width: 30%;
+		}
 
-        & >.col4 {
-            width: 22.5%;
-        }
+		& >.col4 {
+			width: 22.5%;
+		}
 
-        @include responsive-max( screen-tablet-large ) {
+		@include responsive-max( screen-tablet-large ) {
 
-            &.max-cols-50 {
+			&.max-cols-50 {
 
-                & >.col3, & >.col4 {
-                    width: 47%;
-                }
-            }
+				& >.col3, & >.col4 {
+					width: 47%;
+				}
+			}
 
-            &.max-cols-100 {
+			&.max-cols-100 {
 
-                & >.col3, & >.col4 {
-                    width: 98%;
-                }
-            }
-        }
+				& >.col3, & >.col4 {
+					width: 98%;
+				}
+			}
+		}
 
-        @include responsive-max( screen-mobile-large ) {
+		@include responsive-max( screen-mobile-large ) {
 
-            &.max-cols-50, &.max-cols-100 {
+			&.max-cols-50, &.max-cols-100 {
 
-                & >.col3, & >.col4 {
-                    width: 98%;
-                }
-            }
-        }
-    }
+				& >.col3, & >.col4 {
+					width: 98%;
+				}
+			}
+		}
+	}
 }
 
 // Responsive Columns
 
 %col {
-    display: block;
-    float:left;
-    margin: 0 1%;
-    word-wrap: break-word;
-    min-height: 1px;
+	display: block;
+	float:left;
+	margin: 0 1%;
+	word-wrap: break-word;
+	min-height: 1px;
 }
 
 // generic column
@@ -132,11 +132,11 @@ Details: It defines the grid system and basic containers as listed below:
 // extended columns
 
 %col-small {
-    display: block;
-    float:left;
-    margin: 0 0.5%;
-    word-wrap: break-word;
-    min-height: 1px;
+	display: block;
+	float:left;
+	margin: 0 0.5%;
+	word-wrap: break-word;
+	min-height: 1px;
 }
 
 .col-small { @extend %col-small; }
@@ -149,40 +149,40 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-    .row {
+	.row {
 
-        &.row-small, &.row-medium, &.row-large, &.row-xlarge {
-            width: 100%;
-        }
-    }
+		&.row-small, &.row-medium, &.row-large, &.row-xlarge {
+			width: 100%;
+		}
+	}
 
-    .max-cols-50 {
+	.max-cols-50 {
 
-        & >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
-            width: 48%;
-        }
+		& >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
+			width: 48%;
+		}
 
-        & >.col:nth-child( odd ) {
-            clear: both;
-        }
-    }
+		& >.col:nth-child( odd ) {
+			clear: both;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-100 {
 
-        & >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
-            width: 98%;
-        }
-    }
+		& >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
+			width: 98%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-50, .max-cols-100 {
 
-        & >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
-            width: 98%;
-        }
-    }
+		& >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
+			width: 98%;
+		}
+	}
 }
 
 // Column multipliers
@@ -232,59 +232,59 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-cols-50 {
+	.max-cols-50 {
 
-        & >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
-        & >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
-        & >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
-            width: 48%;
-        }
-    }
+		& >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
+		& >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
+		& >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
+			width: 48%;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-100 {
 
-        & >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
-        & >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
-        & >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
-            width: 98%;
-        }
-    }
+		& >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
+		& >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
+		& >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
+			width: 98%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-50, .max-cols-100 {
 
-        & >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
-        & >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
-        & >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
-            width: 98%;
-        }
-    }
+		& >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
+		& >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
+		& >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
+			width: 98%;
+		}
+	}
 }
 
 // Col system having margin set to 0 to left most and right most. The cols must form a row and must not mix up i.e. only one type of columns allowed at a time.
 
 %colc {
-    display: block;
-    float:left;
-    margin: 0;
-    word-wrap: break-word;
-    min-height: 1px;
+	display: block;
+	float:left;
+	margin: 0;
+	word-wrap: break-word;
+	min-height: 1px;
 }
 
 %colc-f-l {
-    margin: 0 1%;
+	margin: 0 1%;
 
-    &:first-child {
-        margin-left: 0;
-        margin-right: 1%;
-    }
+	&:first-child {
+		margin-left: 0;
+		margin-right: 1%;
+	}
 
-    &:last-child {
-        margin-left: 1%;
-        margin-right: 0;
-    }
+	&:last-child {
+		margin-left: 1%;
+		margin-right: 0;
+	}
 }
 
 // generic column
@@ -307,33 +307,33 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-cols-50 {
+	.max-cols-50 {
 
-        & >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
-            width: 48%;
-        }
+		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+			width: 48%;
+		}
 
-        & >.colc:nth-child( odd ) {
-            clear: both;
-        }
-    }
+		& >.colc:nth-child( odd ) {
+			clear: both;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-100 {
 
-        & >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
-            width: 98%;
-        }
-    }
+		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+			width: 98%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-50, .max-cols-100 {
 
-        & >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
-            width: 98%;
-        }
-    }
+		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+			width: 98%;
+		}
+	}
 }
 
 .colc3x2 { width: 65.33333%; }
@@ -343,47 +343,47 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-cols-50 {
+	.max-cols-50 {
 
-        & >.colc3x2, & >.colc4x2, & >.colc4x3,
-        & >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
-            width: 48%;
-        }
-    }
+		& >.colc3x2, & >.colc4x2, & >.colc4x3,
+		& >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
+			width: 48%;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-100 {
 
-        & >.colc3x2, & >.colc4x2, & >.colc4x3,
-        & >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
-            width: 98%;
-        }
-    }
+		& >.colc3x2, & >.colc4x2, & >.colc4x3,
+		& >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
+			width: 98%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-50, .max-cols-100 {
 
-        & >.colc3x2, & >.colc4x2, & >.colc4x3,
-        & >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
-            width: 98%;
-        }
-    }
+		& >.colc3x2, & >.colc4x2, & >.colc4x3,
+		& >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
+			width: 98%;
+		}
+	}
 }
 
 // Full Width Columns
 
 %colf {
-    display: block;
-    float:left;
-    margin: 0;
-    word-wrap: break-word;
-    min-height: 1px;
+	display: block;
+	float:left;
+	margin: 0;
+	word-wrap: break-word;
+	min-height: 1px;
 }
 
 // generic column - it does not relate with col width
 .colf {
-    @extend %colf;
+	@extend %colf;
 }
 
 // 12 col system
@@ -411,33 +411,33 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-cols-50 {
+	.max-cols-50 {
 
-        & >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
-            width: 50%;
-        }
+		& >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
+			width: 50%;
+		}
 
-        & >.colf:nth-child( odd ) {
-            clear: both;
-        }
-    }
+		& >.colf:nth-child( odd ) {
+			clear: both;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-100 {
 
-        & >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
-            width: 100%;
-        }
-    }
+		& >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
+			width: 100%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-50, .max-cols-100 {
 
-        & >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
-            width: 100%;
-        }
-    }
+		& >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
+			width: 100%;
+		}
+	}
 }
 
 // Standard Layouts
@@ -485,65 +485,65 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-cols-50 {
+	.max-cols-50 {
 
-        & >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
-        & >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
-        & >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, & >.colf15x14 {
-            width: 50%;
-        }
-    }
+		& >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
+		& >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
+		& >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, & >.colf15x14 {
+			width: 50%;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-100 {
 
-        & >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
-        & >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
-        & >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
-            width: 100%;
-        }
-    }
+		& >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
+		& >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
+		& >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
+			width: 100%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-50, .max-cols-100 {
 
-        & >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
-        & >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
-        & >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
-            width: 100%;
-        }
-    }
+		& >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
+		& >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
+		& >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
+			width: 100%;
+		}
+	}
 }
 
 // Fixed width columns
 %col-fixed {
-    display: block;
-    float:left;
-    margin: 0;
-    word-wrap: break-word;
-    min-height: 1px;
+	display: block;
+	float:left;
+	margin: 0;
+	word-wrap: break-word;
+	min-height: 1px;
 }
 
 .col-fixed {
-    @extend %col-fixed;
+	@extend %col-fixed;
 
-    &.col-fixed-inline {
-        display: inline-block;
-        float: none;
-    }
+	&.col-fixed-inline {
+		display: inline-block;
+		float: none;
+	}
 
-    &.col-fixed-small {
-        width: 10rem;
-    }
+	&.col-fixed-small {
+		width: 10rem;
+	}
 
-    &.col-fixed-medium {
-        width: 16rem;
-    }
+	&.col-fixed-medium {
+		width: 16rem;
+	}
 
-    &.col-fixed-large {
-        width: 20rem;
-    }
+	&.col-fixed-large {
+		width: 20rem;
+	}
 }
 
 // full height first column
@@ -552,24 +552,24 @@ Details: It defines the grid system and basic containers as listed below:
 // Place it for first column with lower z-index. We need to repeat first column so that the column with col-filler will be overlapped by column having content.
 
 .wrap-col-filler {
-    position: relative;
-    z-index: 0;
+	position: relative;
+	z-index: 0;
 
-    .col-filler {
-        position: absolute;
-        z-index: -1;
-        top: 0px;
-        bottom: 0px;
-        float: none;
+	.col-filler {
+		position: absolute;
+		z-index: -1;
+		top: 0px;
+		bottom: 0px;
+		float: none;
 
-        &.col-filler-left {
-            left: 0;
-        }
+		&.col-filler-left {
+			left: 0;
+		}
 
-        &.col-filler-right {
-            right: 0;
-        }
-    }
+		&.col-filler-right {
+			right: 0;
+		}
+	}
 }
 
 // == Container =====================
@@ -580,13 +580,13 @@ Details: It defines the grid system and basic containers as listed below:
 
 // Container to wrap content header and content
 .container {
-    // container styles
-    .wrap-content {
-        //we might need to wrap content in order to use background for content
-        .content {
-            // content remains within wrap content to occupy it's own space
-        }
-    }
+	// container styles
+	.wrap-content {
+		//we might need to wrap content in order to use background for content
+		.content {
+			// content remains within wrap content to occupy it's own space
+		}
+	}
 }
 
 // Instructions to configure full height containers
@@ -600,154 +600,154 @@ Details: It defines the grid system and basic containers as listed below:
  * 7. The sidebar within content wrapper can have navigation links and ui widgets. In presence of sidebar, appropriate columns can be used to divide content wrapper width among sidebar and content.
  */
 .container-main {
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 
-    & >.header {
-        // Header within container.
-    }
+	& >.header {
+		// Header within container.
+	}
 
-    & >.sidebar {
-        // Sidebar within container.
-    }
+	& >.sidebar {
+		// Sidebar within container.
+	}
 
-    .wrap-content-main {
-        position: relative;
-        z-index: 1;
+	.wrap-content-main {
+		position: relative;
+		z-index: 1;
 
-        & >.header {
-            // Header within content wrapper.
-        }
+		& >.header {
+			// Header within content wrapper.
+		}
 
-        & >.sidebar {
-            // Sidebar within content wrapper.
-        }
+		& >.sidebar {
+			// Sidebar within content wrapper.
+		}
 
-        & >.content {
-            // Content within content wrapper
-        }
+		& >.content {
+			// Content within content wrapper
+		}
 
-        & >.footer {
-            // Footer within content wrapper.
-        }
-    }
+		& >.footer {
+			// Footer within content wrapper.
+		}
+	}
 
-    & >.footer {
-        // Footer within container.
-    }
+	& >.footer {
+		// Footer within container.
+	}
 }
 
 // == Content =======================
 
 // Restrict the content to x% width of parent having content in center. Works well with parents having background image, but content within a limited area.
 .content-90 {
-    position: relative;
-    padding-left: 5% !important;
-    padding-right: 5% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 5% !important;
+	padding-right: 5% !important;
+	width: 100% !important;
 }
 
 .content-80 {
-    position: relative;
-    padding-left: 10% !important;
-    padding-right: 10% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+	width: 100% !important;
 }
 
 .content-75 {
-    position: relative;
-    padding-left: 12.5% !important;
-    padding-right: 12.5% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 12.5% !important;
+	padding-right: 12.5% !important;
+	width: 100% !important;
 }
 
 .content-50 {
-    position: relative;
-    padding-left: 25% !important;
-    padding-right: 25% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 25% !important;
+	padding-right: 25% !important;
+	width: 100% !important;
 }
 
 .content-25 {
-    position: relative;
-    padding-left: 37.5% !important;
-    padding-right: 37.5% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 37.5% !important;
+	padding-right: 37.5% !important;
+	width: 100% !important;
 }
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-content-50 {
+	.max-content-50 {
 
-        & >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
-            width: 50% !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            margin: 0 auto;
-        }
-    }
+		& >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
+			width: 50% !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			margin: 0 auto;
+		}
+	}
 
-    .max-content-100 {
+	.max-content-100 {
 
-        & >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
-            width: 100% !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
-    }
+		& >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
+			width: 100% !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+	}
 }
 
 // Restrict the content to 25% width of parent with left align - Works well with parents having background image, but content within a limited area.
 .content-left-25 {
-    position: relative;
-    padding-right: 75% !important;
-    width: 100% !important;
+	position: relative;
+	padding-right: 75% !important;
+	width: 100% !important;
 }
 
 .content-left-50 {
-    position: relative;
-    padding-right: 50% !important;
-    width: 100% !important;
+	position: relative;
+	padding-right: 50% !important;
+	width: 100% !important;
 }
 
 // Restrict the content to 25% width of parent with right align - Works well with parents having background image, but content within a limited area.
 .content-right-25 {
-    position: relative;
-    padding-left: 75% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 75% !important;
+	width: 100% !important;
 }
 
 .content-right-50 {
-    position: relative;
-    padding-left: 50% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 50% !important;
+	width: 100% !important;
 }
 
 // Sometimes we need content to cover full height of container
 .max-height {
-    top: 0;
-    bottom: 0;
-    position: absolute;
+	top: 0;
+	bottom: 0;
+	position: absolute;
 }
 
 // Sometimes we need content to cover full height and width of container
 .max-block {
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
 }
 
 // Sticky content to stick at top of container
 .stick-top {
-    top: 0;
-    position: absolute;
-    width: 100%;
+	top: 0;
+	position: absolute;
+	width: 100%;
 }
 
 // Sticky content to stick at bottom of container
 .stick-bottom {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
 }

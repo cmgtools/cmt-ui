@@ -1,6 +1,6 @@
 /**********************************************************************
 Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info for display purpose and
-             the real form can be displayed when user click the edit button.
+			 the real form can be displayed when user click the edit button.
 
 Dependencies: variables, variables-ext, mixins, boxes/basic
 
@@ -17,37 +17,37 @@ Details: It defines the styles of form box components as listed below:
 // == Structure - Form Box ==========
 
 .box-form {
-    position: relative;
+	position: relative;
 
-    .btn-edit {
-        cursor: pointer;
-    }
+	.btn-edit {
+		cursor: pointer;
+	}
 
-    .wrap-info {
-        display: block;
-    }
+	.wrap-info {
+		display: block;
+	}
 
-    .wrap-form {
-        display: none;
-    }
+	.wrap-form {
+		display: none;
+	}
 }
 
 // == Basic Form Box ================
 
 .box-form-basic {
 
-    .btn-edit {
-        position: absolute;
-        display: inline-block;
-        top: 10px;
-        right: 10px;
-        color: $color-btn-text;
-        cursor: pointer;
+	.btn-edit {
+		position: absolute;
+		display: inline-block;
+		top: 10px;
+		right: 10px;
+		color: $color-btn-text;
+		cursor: pointer;
 
-        &:hover {
-            color: $color-btn-h-text;
-        }
-    }
+		&:hover {
+			color: $color-btn-h-text;
+		}
+	}
 }
 
 // == Collapsible Form Box ==========

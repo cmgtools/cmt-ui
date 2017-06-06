@@ -1,7 +1,7 @@
 /**********************************************************************
 Description: This file define the transition effects available in CMT-UI css framework. These allow changes in allowed css
-             properties smoothly over a defined time interval. We can define the animation/transition effects and duration
-             to change the property.
+			 properties smoothly over a defined time interval. We can define the animation/transition effects and duration
+			 to change the property.
 
 Dependencies: none
 
@@ -46,157 +46,157 @@ $transit-time-large: 450ms;
 
 // Default - all transitions
 @mixin transit-all( $transit, $duration, $delay: 0s ) {
-    -moz-transition: all $duration $transit $delay;
-    -ms-transition: all $duration $transit $delay;
-    -o-transition: all $duration $transit $delay;
-    -webkit-transition: all $duration $transit $delay;
-    transition: all $duration $transit $delay;
+	-moz-transition: all $duration $transit $delay;
+	-ms-transition: all $duration $transit $delay;
+	-o-transition: all $duration $transit $delay;
+	-webkit-transition: all $duration $transit $delay;
+	transition: all $duration $transit $delay;
 }
 
 // Visibility transitions
 @mixin transit-visibility( $transit, $duration, $delay: 0s ) {
-    -moz-transition: visibility $duration $transit $delay;
-    -ms-transition: visibility $duration $transit $delay;
-    -o-transition: visibility $duration $transit $delay;
-    -webkit-transition: visibility $duration $transit $delay;
-    transition: visibility $duration $transit $delay;
+	-moz-transition: visibility $duration $transit $delay;
+	-ms-transition: visibility $duration $transit $delay;
+	-o-transition: visibility $duration $transit $delay;
+	-webkit-transition: visibility $duration $transit $delay;
+	transition: visibility $duration $transit $delay;
 }
 
 @mixin transit-opacity( $transit, $duration, $delay: 0s ) {
-    -moz-transition: opacity $duration $transit $delay;
-    -ms-transition: opacity $duration $transit $delay;
-    -o-transition: opacity $duration $transit $delay;
-    -webkit-transition: opacity $duration $transit $delay;
-    transition: opacity $duration $transit $delay;
+	-moz-transition: opacity $duration $transit $delay;
+	-ms-transition: opacity $duration $transit $delay;
+	-o-transition: opacity $duration $transit $delay;
+	-webkit-transition: opacity $duration $transit $delay;
+	transition: opacity $duration $transit $delay;
 }
 
 @mixin transit-visibility-opacity( $transit, $duration, $delay: 0s ) {
-    -moz-transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
-    -ms-transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
-    -o-transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
-    -webkit-transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
-    transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
+	-moz-transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
+	-ms-transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
+	-o-transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
+	-webkit-transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
+	transition: visibility $duration $transit $delay, opacity $duration $transit $delay;
 }
 
 // Text Color transition
 @mixin transit-color( $transit, $duration, $delay: 0s ) {
-    -moz-transition: color $duration $transit $delay;
-    -ms-transition: color $duration $transit $delay;
-    -o-transition: color $duration $transit $delay;
-    -webkit-transition: color $duration $transit $delay;
-    transition: color $duration $transit $delay;
+	-moz-transition: color $duration $transit $delay;
+	-ms-transition: color $duration $transit $delay;
+	-o-transition: color $duration $transit $delay;
+	-webkit-transition: color $duration $transit $delay;
+	transition: color $duration $transit $delay;
 }
 
 // Background Color transition
 @mixin transit-bkg-color( $transit, $duration, $delay: 0s ) {
-    -moz-transition: background-color $duration $transit $delay;
-    -ms-transition: background-color $duration $transit $delay;
-    -o-transition: background-color $duration $transit $delay;
-    -webkit-transition: background-color $duration $transit $delay;
-    transition: background-color $duration $transit $delay;
+	-moz-transition: background-color $duration $transit $delay;
+	-ms-transition: background-color $duration $transit $delay;
+	-o-transition: background-color $duration $transit $delay;
+	-webkit-transition: background-color $duration $transit $delay;
+	transition: background-color $duration $transit $delay;
 }
 
 // Text and Background Color transitions
 @mixin transit-color-bkg-color( $transit, $duration, $delay: 0s ) {
-    -moz-transition: color $duration $transit $delay, background-color $duration $transit $delay;
-    -ms-transition: color $duration $transit $delay, background-color $duration $transit $delay;
-    -o-transition: color $duration $transit $delay, background-color $duration $transit $delay;
-    -webkit-transition: color $duration $transit $delay, background-color $duration $transit $delay;
-    transition: color $duration $transit $delay, background-color $duration $transit $delay;
+	-moz-transition: color $duration $transit $delay, background-color $duration $transit $delay;
+	-ms-transition: color $duration $transit $delay, background-color $duration $transit $delay;
+	-o-transition: color $duration $transit $delay, background-color $duration $transit $delay;
+	-webkit-transition: color $duration $transit $delay, background-color $duration $transit $delay;
+	transition: color $duration $transit $delay, background-color $duration $transit $delay;
 }
 
 // Padding transition
 @mixin transit-padding( $transit, $duration, $delay: 0s ) {
-    -moz-transition: padding $duration $transit-eo $delay;
-    -ms-transition: padding $duration $transit-eo $delay;
-    -o-transition: padding $duration $transit-eo $delay;
-    -webkit-transition: padding $duration $transit-eo $delay;
-    transition: padding $duration $transit-eo $delay;
+	-moz-transition: padding $duration $transit-eo $delay;
+	-ms-transition: padding $duration $transit-eo $delay;
+	-o-transition: padding $duration $transit-eo $delay;
+	-webkit-transition: padding $duration $transit-eo $delay;
+	transition: padding $duration $transit-eo $delay;
 }
 
 // Margin transition
 @mixin transit-margin( $transit, $duration, $delay: 0s ) {
-    -moz-transition: margin $duration $transit-eo $delay;
-    -ms-transition: margin $duration $transit-eo $delay;
-    -o-transition: margin $duration $transit-eo $delay;
-    -webkit-transition: margin $duration $transit-eo $delay;
-    transition: margin $duration $transit-eo $delay;
+	-moz-transition: margin $duration $transit-eo $delay;
+	-ms-transition: margin $duration $transit-eo $delay;
+	-o-transition: margin $duration $transit-eo $delay;
+	-webkit-transition: margin $duration $transit-eo $delay;
+	transition: margin $duration $transit-eo $delay;
 }
 
 // Width and Height transitions
 @mixin transit-width( $transit, $duration, $delay: 0s ) {
-    -moz-transition: width $duration $transit $delay;
-    -ms-transition: width $duration $transit $delay;
-    -o-transition: width $duration $transit $delay;
-    -webkit-transition: width $duration $transit $delay;
-    transition: width $duration $transit $delay;
+	-moz-transition: width $duration $transit $delay;
+	-ms-transition: width $duration $transit $delay;
+	-o-transition: width $duration $transit $delay;
+	-webkit-transition: width $duration $transit $delay;
+	transition: width $duration $transit $delay;
 }
 
 @mixin transit-height( $transit, $duration, $delay: 0s ) {
-    -moz-transition: height $duration $transit $delay;
-    -ms-transition: height $duration $transit $delay;
-    -o-transition: height $duration $transit $delay;
-    -webkit-transition: height $duration $transit $delay;
-    transition: height $duration $transit $delay;
+	-moz-transition: height $duration $transit $delay;
+	-ms-transition: height $duration $transit $delay;
+	-o-transition: height $duration $transit $delay;
+	-webkit-transition: height $duration $transit $delay;
+	transition: height $duration $transit $delay;
 }
 
 @mixin transit-width-height( $transit, $duration, $delay: 0s ) {
-    -moz-transition: width $duration $transit $delay, height $duration $transit $delay;
-    -ms-transition: width $duration $transit $delay, height $duration $transit $delay;
-    -o-transition: width $duration $transit $delay, height $duration $transit $delay;
-    -webkit-transition: width $duration $transit $delay, height $duration $transit $delay;
-    transition: width $duration $transit $delay, height $duration $transit $delay;
+	-moz-transition: width $duration $transit $delay, height $duration $transit $delay;
+	-ms-transition: width $duration $transit $delay, height $duration $transit $delay;
+	-o-transition: width $duration $transit $delay, height $duration $transit $delay;
+	-webkit-transition: width $duration $transit $delay, height $duration $transit $delay;
+	transition: width $duration $transit $delay, height $duration $transit $delay;
 }
 
 // Mixins Default implementation ***********************
 
 // All transitions
 .transit-all {
-    @include transit-all( $transit-eio, $transit-time-medium );
+	@include transit-all( $transit-eio, $transit-time-medium );
 }
 
 // Visibility transitions
 .transit-visibility {
-    @include transit-opacity( $transit-eio, $transit-time-medium );
+	@include transit-opacity( $transit-eio, $transit-time-medium );
 }
 
 .transit-opacity {
-    @include transit-opacity( $transit-eio, $transit-time-medium );
+	@include transit-opacity( $transit-eio, $transit-time-medium );
 }
 
 .transit-visibility-opacity {
-    @include transit-visibility-opacity( $transit-eio, $transit-time-medium );
+	@include transit-visibility-opacity( $transit-eio, $transit-time-medium );
 }
 
 // Text Color transition
 .transit-color {
-    @include transit-color( $transit-eio, $transit-time-medium );
+	@include transit-color( $transit-eio, $transit-time-medium );
 }
 
 // Background Color transition
 .transit-bkg-color {
-    @include transit-bkg-color( $transit-eio, $transit-time-medium );
+	@include transit-bkg-color( $transit-eio, $transit-time-medium );
 }
 
 // Text and Background Color transitions
 .transit-color-bkg-color {
-    @include transit-color-bkg-color( $transit-eio, $transit-time-medium );
+	@include transit-color-bkg-color( $transit-eio, $transit-time-medium );
 }
 
 // Padding transition
 .transit-padding {
-    @include transit-padding( $transit-eio, $transit-time-medium );
+	@include transit-padding( $transit-eio, $transit-time-medium );
 }
 
 // Width and Height transitions
 .transit-width {
-    @include transit-width( $transit-eio, $transit-time-medium );
+	@include transit-width( $transit-eio, $transit-time-medium );
 }
 
 .transit-height {
-    @include transit-height( $transit-eio, $transit-time-medium );
+	@include transit-height( $transit-eio, $transit-time-medium );
 }
 
 .transit-width-height {
-    @include transit-width-height( $transit-eio, $transit-time-medium );
+	@include transit-width-height( $transit-eio, $transit-time-medium );
 }

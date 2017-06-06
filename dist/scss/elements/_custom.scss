@@ -1,7 +1,7 @@
 /**********************************************************************
 Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-             elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-             for other standard libraries.
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
@@ -34,124 +34,124 @@ Details: It defines the custom element styles as listed below:
 // == Icon Picker ===================
 
 .wrap-icon-picker {
-    width: 100%;
+	width: 100%;
 
-    .icon-picker {
-        position: relative;
-        display: inline-block;
+	.icon-picker {
+		position: relative;
+		display: inline-block;
 
-        .wrap-icon {
-            display: inline-block;
-            position: relative;
-            width: 64px;
-            height: 64px;
-            text-align: center;
-            cursor: pointer;
-            background-color: $color-secondary;
-            color: $color-secondary-text;
-            @include transit-color-bkg-color( $transit-eio, $transit-time-small );
+		.wrap-icon {
+			display: inline-block;
+			position: relative;
+			width: 64px;
+			height: 64px;
+			text-align: center;
+			cursor: pointer;
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			@include transit-color-bkg-color( $transit-eio, $transit-time-small );
 
-            &:hover {
-                background-color: $color-btn;
-                color: $color-btn-text;
-            }
+			&:hover {
+				background-color: $color-btn;
+				color: $color-btn-text;
+			}
 
-            .picker-icon {
-                display: inline-block;
-                height: 64px;
-                line-height: 64px;
-                font-size: 48px;
-            }
-        }
+			.picker-icon {
+				display: inline-block;
+				height: 64px;
+				line-height: 64px;
+				font-size: 48px;
+			}
+		}
 
-        .icon-sets {
-            display: none;
-            position: absolute;
-            left: 0;
-            top: 64px;
-            width: 254px;
-            padding: 5px;
-            height: 216px;
-            background-color: $color-primary-d;
-            z-index: 1000000;
+		.icon-sets {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 64px;
+			width: 254px;
+			padding: 5px;
+			height: 216px;
+			background-color: $color-primary-d;
+			z-index: 1000000;
 
-            .wrap-icon {
-                margin: 2px;
-            }
-        }
-    }
+			.wrap-icon {
+				margin: 2px;
+			}
+		}
+	}
 }
 
 // == Select ========================
 
 .cmt-select-wrap {
-    width: 100%;
+	width: 100%;
 
-    select {
-        display: none;
-    }
+	select {
+		display: none;
+	}
 
-    .cmt-select {
-        position: relative;
-        background-color: $color-field;
+	.cmt-select {
+		position: relative;
+		background-color: $color-field;
 
-        // Select Value - default icon having width 32px. It can be changed based on icon dimensions.
-        .cmt-selected {
-            cursor: pointer;
-            position: relative;
-            z-index: 100000;
-            padding-right: 1.5em;
+		// Select Value - default icon having width 32px. It can be changed based on icon dimensions.
+		.cmt-selected {
+			cursor: pointer;
+			position: relative;
+			z-index: 100000;
+			padding-right: 1.5em;
 
-            // text for selected value
-            .s-text {
-                display: inline-block;
-                width: 100%;
-                overflow: hidden;
-                white-space: nowrap;
-                text-align: left;
-                color: $color-field-text;
-                font-size: 1em;
-                padding: 0.30em 0.25em;
-            }
+			// text for selected value
+			.s-text {
+				display: inline-block;
+				width: 100%;
+				overflow: hidden;
+				white-space: nowrap;
+				text-align: left;
+				color: $color-field-text;
+				font-size: 1em;
+				padding: 0.30em 0.25em;
+			}
 
-            // icon for select box
-            .s-icon {
-                position: absolute;
-                top: 0;
-                right: 0;
-                display: inline-block;
-                padding: 0.25em;
-            }
+			// icon for select box
+			.s-icon {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: inline-block;
+				padding: 0.25em;
+			}
 
-            // disabled
-            &.disabled {
-                cursor: default;
-            }
-        }
+			// disabled
+			&.disabled {
+				cursor: default;
+			}
+		}
 
-        // Select options
-        .cmt-select-list {
-            position: absolute;
-            width: 100%;
-            background-color: $color-field;
-            z-index: 100001;
-            max-height: 180px;
-            overflow-y: auto;
+		// Select options
+		.cmt-select-list {
+			position: absolute;
+			width: 100%;
+			background-color: $color-field;
+			z-index: 100001;
+			max-height: 180px;
+			overflow-y: auto;
 
-            li {
-                width: 100%;
-                overflow: hidden;
-                cursor: pointer;
-                padding: 10px;
-                background-color: $color-white;
-            }
+			li {
+				width: 100%;
+				overflow: hidden;
+				cursor: pointer;
+				padding: 10px;
+				background-color: $color-white;
+			}
 
-            li:hover {
-                color: $color-btn-a-text;
-                background-color: $color-btn;
-            }
-        }
-    }
+			li:hover {
+				color: $color-btn-a-text;
+				background-color: $color-btn;
+			}
+		}
+	}
 }
 
 // == Choice ========================
@@ -160,272 +160,272 @@ Details: It defines the custom element styles as listed below:
 
 .cmt-choice {
 
-    input[type=checkbox], input[type=radio] {
-        cursor: pointer;
-        display: none;
-    }
+	input[type=checkbox], input[type=radio] {
+		cursor: pointer;
+		display: none;
+	}
 
-    input[type=checkbox]+.label.pad-label::before, input[type=radio]+.label.pad-label::before {
-        margin-right: 8px;
-    }
+	input[type=checkbox]+.label.pad-label::before, input[type=radio]+.label.pad-label::before {
+		margin-right: 8px;
+	}
 
-    input[type=radio]+.label::before, input[type=checkbox]+.label::before {
-        font-family: "cmti-core";
-        font-weight: normal;
-        color: gray;
-        border-radius: 16px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-top: -5px;
-        line-height: 13px;
-    }
+	input[type=radio]+.label::before, input[type=checkbox]+.label::before {
+		font-family: "cmti-core";
+		font-weight: normal;
+		color: gray;
+		border-radius: 16px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: -5px;
+		line-height: 13px;
+	}
 
-    input[type=checkbox]:checked,input[type=radio]:checked, input[type=checkbox]:focus,input[type=radio]:focus {
-        outline:none !important;
-    }
+	input[type=checkbox]:checked,input[type=radio]:checked, input[type=checkbox]:focus,input[type=radio]:focus {
+		outline:none !important;
+	}
 
-    input[type=checkbox]:checked+.label::before, input[type=radio]:checked+.label::before {
-        display: inline-block;
-        background-color: #F5F8FC;
-        color: $color-btn;
-    }
+	input[type=checkbox]:checked+.label::before, input[type=radio]:checked+.label::before {
+		display: inline-block;
+		background-color: #F5F8FC;
+		color: $color-btn;
+	}
 
-    input[type=checkbox]:checked+.label, input[type=radio]:checked+.label {
-        color: $color-btn-a;
-    }
+	input[type=checkbox]:checked+.label, input[type=radio]:checked+.label {
+		color: $color-btn-a;
+	}
 
-    input[type=checkbox]:hover+.label::before, input[type=radio]:hover+.label::before, input[type=checkbox]+.label:hover::before, input[type=radio]+.label:hover::before {
-        color: $color-btn-h;
-    }
+	input[type=checkbox]:hover+.label::before, input[type=radio]:hover+.label::before, input[type=checkbox]+.label:hover::before, input[type=radio]+.label:hover::before {
+		color: $color-btn-h;
+	}
 
-    input[type=checkbox]:disabled+.label::before, input[type=radio]:disabled+.label::before {
-        background-color: #DDD !important;
-        color: #BBB;
-    }
+	input[type=checkbox]:disabled+.label::before, input[type=radio]:disabled+.label::before {
+		background-color: #DDD !important;
+		color: #BBB;
+	}
 
-    input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
-        content: "\e0a2";
-    }
+	input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
+		content: "\e0a2";
+	}
 
-    input[type=radio]:checked+.label::before {
-        content: "\e0a3";
-    }
+	input[type=radio]:checked+.label::before {
+		content: "\e0a3";
+	}
 
-    input[type=checkbox]+.label::before, input[type=checkbox]:disabled+.label::before {
-        content: "\3b";
-    }
+	input[type=checkbox]+.label::before, input[type=checkbox]:disabled+.label::before {
+		content: "\3b";
+	}
 
-    input[type=checkbox]:checked+.label::before {
-        content: "\3a";
-    }
+	input[type=checkbox]:checked+.label::before {
+		content: "\3a";
+	}
 }
 
 // == Rating ========================
 
 .cmt-rating {
-    text-align: left;
+	text-align: left;
 
-    // Span
-    .star {
-        display: inline-block;
-        padding: 0.30em;
-        margin-bottom: 0.75rem;
-        cursor: pointer;
-    }
+	// Span
+	.star {
+		display: inline-block;
+		padding: 0.30em;
+		margin-bottom: 0.75rem;
+		cursor: pointer;
+	}
 
-    // Radio or Checkbox
+	// Radio or Checkbox
 
-    input[type=checkbox]+.label.label-rating::before, input[type=radio]+.label.label-rating::before {
-        margin-right: 8px;
-    }
+	input[type=checkbox]+.label.label-rating::before, input[type=radio]+.label.label-rating::before {
+		margin-right: 8px;
+	}
 
-    input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
-        content: "\e0f3";
-    }
+	input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
+		content: "\e0f3";
+	}
 
-    input[type=radio]:checked+.label::before {
-        content: "\e0f3";
-    }
+	input[type=radio]:checked+.label::before {
+		content: "\e0f3";
+	}
 }
 
 // == Switch ========================
 
 // Reference: http://callmenick.com/post/css-toggle-switch-examples
 .cmt-switch {
-    position: relative;
-    display: inline-block;
+	position: relative;
+	display: inline-block;
 
-    .cmt-toggle {
-        position: absolute;
-        margin-left: -9999px;
-        visibility: hidden;
-    }
+	.cmt-toggle {
+		position: absolute;
+		margin-left: -9999px;
+		visibility: hidden;
+	}
 
-    .cmt-toggle + label {
-        display: inline-block;
-        position: relative;
-        cursor: pointer;
-        outline: none;
-        user-select: none;
-    }
+	.cmt-toggle + label {
+		display: inline-block;
+		position: relative;
+		cursor: pointer;
+		outline: none;
+		user-select: none;
+	}
 
-    .cmt-toggle-round + label {
-        width: 5em !important;
-        height: 1.5em;
-        padding: 0.5em;
-        background-color: $color-primary-d;
-        border-radius: 0.5em;
-    }
+	.cmt-toggle-round + label {
+		width: 5em !important;
+		height: 1.5em;
+		padding: 0.5em;
+		background-color: $color-primary-d;
+		border-radius: 0.5em;
+	}
 
-    .cmt-toggle-round + label:before,
-    .cmt-toggle-round + label:after {
-      display: inline-block;
-      position: absolute;
-      top: 1px;
-      left: 1px;
-      bottom: 1px;
-      content: "";
-    }
+	.cmt-toggle-round + label:before,
+	.cmt-toggle-round + label:after {
+	  display: inline-block;
+	  position: absolute;
+	  top: 1px;
+	  left: 1px;
+	  bottom: 1px;
+	  content: "";
+	}
 
-    .cmt-toggle-round + label:before {
-        right: 1px;
-        background-color: $color-white;
-        border-radius: 0.5em;
-        @include transit-bkg-color( $transit-eio, $transit-time-medium );
-    }
+	.cmt-toggle-round + label:before {
+		right: 1px;
+		background-color: $color-white;
+		border-radius: 0.5em;
+		@include transit-bkg-color( $transit-eio, $transit-time-medium );
+	}
 
-    .cmt-toggle-round + label:after {
-        width: 1.5em;
-        background-color: $color-blue;
-        border-radius: 0.5em;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        @include transit-margin( $transit-eio, $transit-time-medium );
-    }
+	.cmt-toggle-round + label:after {
+		width: 1.5em;
+		background-color: $color-blue;
+		border-radius: 0.5em;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		@include transit-margin( $transit-eio, $transit-time-medium );
+	}
 
-    .cmt-toggle-round:checked + label:before {
-        background-color: $color-green;
-    }
+	.cmt-toggle-round:checked + label:before {
+		background-color: $color-green;
+	}
 
-    .cmt-toggle-round:checked + label:after {
-        margin-left: 3.5em;
-    }
+	.cmt-toggle-round:checked + label:after {
+		margin-left: 3.5em;
+	}
 }
 
 // == Auto Suggest ==================
 
 .auto-suggest {
-    position: relative;
+	position: relative;
 
-    .wrap-auto-list {
-        position: absolute;
-        top: 2em;
-        left: 0;
-        display: none;
-        width: 100%;
-        z-index: 1000000;
-        background-color: $color-primary-d;
-        color: $color-primary-text-d;
+	.wrap-auto-list {
+		position: absolute;
+		top: 2em;
+		left: 0;
+		display: none;
+		width: 100%;
+		z-index: 1000000;
+		background-color: $color-primary-d;
+		color: $color-primary-text-d;
 
-        .list-item, li {
-            background-color: $color-primary-d;
-            color: $color-primary-text-d;
-            cursor: pointer;
+		.list-item, li {
+			background-color: $color-primary-d;
+			color: $color-primary-text-d;
+			cursor: pointer;
 
-            &:nth-child(even) {
-                background-color: $color-primary-l;
-                color: $color-primary-text-l;
-            }
+			&:nth-child(even) {
+				background-color: $color-primary-l;
+				color: $color-primary-text-l;
+			}
 
-            &:hover {
-                background-color: $color-secondary;
-                color: $color-secondary-text;
-            }
-        }
-    }
+			&:hover {
+				background-color: $color-secondary;
+				color: $color-secondary-text;
+			}
+		}
+	}
 }
 
 // == Button ========================
 
 .btn {
-    @extend %element-style;
-    @extend %element-style-action;
+	@extend %element-style;
+	@extend %element-style-action;
 
-    &.btn-25 {
-        width: 25% !important;
-    }
+	&.btn-25 {
+		width: 25% !important;
+	}
 
-    &.btn-50 {
-        width: 50% !important;
-    }
+	&.btn-50 {
+		width: 50% !important;
+	}
 
-    &.btn-75 {
-        width: 75% !important;
-    }
+	&.btn-75 {
+		width: 75% !important;
+	}
 
-    &.btn-small {
-        width: 80px !important;
-    }
+	&.btn-small {
+		width: 80px !important;
+	}
 
-    &.btn-medium {
-        width: 120px !important;
-    }
+	&.btn-medium {
+		width: 120px !important;
+	}
 
-    &.btn-large {
-        width: 180px !important;
-    }
+	&.btn-large {
+		width: 180px !important;
+	}
 
-    &.btn-xlarge {
-        width: 250px !important;
-    }
+	&.btn-xlarge {
+		width: 250px !important;
+	}
 
-    // White button with dark gray hover
-    &.btn-white {
-        background-color: $color-white;
-        color: $color-black;
+	// White button with dark gray hover
+	&.btn-white {
+		background-color: $color-white;
+		color: $color-black;
 
-        &:hover {
-            background-color: $color-gray-d;
-            color: $color-gray-l;
-        }
-    }
+		&:hover {
+			background-color: $color-gray-d;
+			color: $color-gray-l;
+		}
+	}
 
-    // Black button with dark gray hover
-    &.btn-black {
-        background-color: $color-black;
-        color: $color-white;
+	// Black button with dark gray hover
+	&.btn-black {
+		background-color: $color-black;
+		color: $color-white;
 
-        &:hover {
-            background-color: $color-gray-d;
-            color: $color-gray-l;
-        }
-    }
+		&:hover {
+			background-color: $color-gray-d;
+			color: $color-gray-l;
+		}
+	}
 
-    // Gray button with dark gray hover
-    &.btn-gray {
-        background-color: $color-gray;
-        color: $color-white;
+	// Gray button with dark gray hover
+	&.btn-gray {
+		background-color: $color-gray;
+		color: $color-white;
 
-        &:hover {
-            background-color: $color-gray-d;
-            color: $color-gray-l;
-        }
-    }
+		&:hover {
+			background-color: $color-gray-d;
+			color: $color-gray-l;
+		}
+	}
 
-    // Reversed hover of button color and text for white, black and gray buttons
-    &.btn-reverse {
+	// Reversed hover of button color and text for white, black and gray buttons
+	&.btn-reverse {
 
-        &:hover {
-            background-color: $color-btn !important;
-            color: $color-btn-text !important;
-        }
-    }
+		&:hover {
+			background-color: $color-btn !important;
+			color: $color-btn-text !important;
+		}
+	}
 }
 
 // == Icon Button ===================
 
 .btn-icon {
-    @extend %element-style;
-    @extend %element-style-action;
+	@extend %element-style;
+	@extend %element-style-action;
 }
 
 // == Button Group ==================
@@ -434,59 +434,59 @@ Details: It defines the custom element styles as listed below:
 
 .btn-group {
 
-    &.btn-group-top-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-align: left;
-    }
+	&.btn-group-top-left {
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: left;
+	}
 
-    &.btn-group-top-right {
-        position: absolute;
-        top: 0;
-        right: 0;
-        text-align: right;
-    }
+	&.btn-group-top-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: right;
+	}
 
-    &.btn-group-bottom-left {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        text-align: left;
-    }
+	&.btn-group-bottom-left {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		text-align: left;
+	}
 
-    &.btn-group-bottom-right {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        text-align: right;
-    }
+	&.btn-group-bottom-right {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		text-align: right;
+	}
 
-    & >.edit, & >.save, & >.delete {
-        color: $color-btn;
-        cursor: pointer;
-        @include transit-color( $transit-eio, $transit-time-small );
+	& >.edit, & >.save, & >.delete {
+		color: $color-btn;
+		cursor: pointer;
+		@include transit-color( $transit-eio, $transit-time-small );
 
-        &:hover {
-            color: $color-btn-h;
-        }
-    }
+		&:hover {
+			color: $color-btn-h;
+		}
+	}
 }
 
 // == Additionals ===================
 
 .cmt-click {
-    cursor: pointer;
+	cursor: pointer;
 
-    &.disabled {
-        cursor: default;
-    }
+	&.disabled {
+		cursor: default;
+	}
 }
 
 .list-radio {
 
-    label {
-        width: auto;
-        clear: none;
-    }
+	label {
+		width: auto;
+		clear: none;
+	}
 }

@@ -13,30 +13,30 @@ Details: It defines the styles for footer components as listed below:
 // == Structure - Footer ============
 
 .footer {
-    position: relative;
+	position: relative;
 
-    &.sticky {
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-    }
+	&.sticky {
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+	}
 
-    @include responsive-max( screen-tablet-large ) {
-        padding: 1rem;
-    }
+	@include responsive-max( screen-tablet-large ) {
+		padding: 1rem;
+	}
 }
 
 // == Basic Footer ==================
 
 .footer-basic {
-    background-color: $color-footer;
-    color: $color-footer-text;
-    width: 100%;
-    min-height: 50px;
-    position: relative;
-    z-index: 10000;
+	background-color: $color-footer;
+	color: $color-footer-text;
+	width: 100%;
+	min-height: 50px;
+	position: relative;
+	z-index: 10000;
 
-    .text {
-        color: $color-primary-text;
-    }
+	.text {
+		color: $color-primary-text;
+	}
 }

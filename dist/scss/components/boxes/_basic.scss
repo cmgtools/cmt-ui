@@ -18,94 +18,94 @@ Details: It defines the styles of box components as listed below:
 
 .box {
 
-    .box-header {
-        // Header having collapsible action
-        position: relative;
+	.box-header {
+		// Header having collapsible action
+		position: relative;
 
-        .header-icon {
-            // Header Icon
-        }
+		.header-icon {
+			// Header Icon
+		}
 
-        .header-title {
-            // Header Title
-        }
-    }
+		.header-title {
+			// Header Title
+		}
+	}
 
-    .box-content {
-        // Collapsible content
-        position: relative;
-    }
+	.box-content {
+		// Collapsible content
+		position: relative;
+	}
 
-    .box-footer {
-        // Footer having box info
-        position: relative;
+	.box-footer {
+		// Footer having box info
+		position: relative;
 
-        .footer-info {
-            // Footer Info
-        }
-    }
+		.footer-info {
+			// Footer Info
+		}
+	}
 }
 
 // == Basic Box =====================
 
 .box-basic {
-    padding: 1rem;
+	padding: 1rem;
 
-    .box-header {
-        background-color: $color-secondary;
-        color: $color-secondary-text;
-        padding: 0.5rem;
-     }
+	.box-header {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+		padding: 0.5rem;
+	 }
 
-     .box-content {
-        background-color: $color-primary;
-        color: $color-primary-text;
-        padding: 0.5rem;
-     }
+	 .box-content {
+		background-color: $color-primary;
+		color: $color-primary-text;
+		padding: 0.5rem;
+	 }
 
-    .box-footer {
-        // Footer having box info
-        background-color: $color-secondary-l;
-        color: $color-secondary-text-l;
-    }
+	.box-footer {
+		// Footer having box info
+		background-color: $color-secondary-l;
+		color: $color-secondary-text-l;
+	}
 }
 
 .box-basic-icon {
-    padding: 1rem;
+	padding: 1rem;
 
-    // Icon, text at center
-    .box-header {
+	// Icon, text at center
+	.box-header {
 
-        .header-icon {
-            position: absolute;
-            display: inline-block;
-            top: 0.5rem;
-            left: 0.5rem;
-        }
+		.header-icon {
+			position: absolute;
+			display: inline-block;
+			top: 0.5rem;
+			left: 0.5rem;
+		}
 
-        .header-title {
-            padding-left: 1.5rem;
-        }
-     }
+		.header-title {
+			padding-left: 1.5rem;
+		}
+	 }
 }
 
 // == Collapsible Box ===============
 
 .box-collapsible {
 
-    .box-header {
+	.box-header {
 
-        .btn-collapse {
-            position: absolute;
-            display: inline-block;
-            top: 0.5em;
-            right: 0.5em;
-            color: $color-btn-text;
-            cursor: pointer;
+		.btn-collapse {
+			position: absolute;
+			display: inline-block;
+			top: 0.5em;
+			right: 0.5em;
+			color: $color-btn-text;
+			cursor: pointer;
 
-            &:hover {
-                color: $color-btn-h-text;
-            }
-        }
-    }
+			&:hover {
+				color: $color-btn-h-text;
+			}
+		}
+	}
 }

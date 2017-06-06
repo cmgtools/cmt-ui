@@ -2,104 +2,104 @@
 
 .grid-table {
 
-    // Table Header
-    .table-header {
-        display: none;
-    }
+	// Table Header
+	.table-header {
+		display: none;
+	}
 
-    // Table Rows
-    .table-rows {
+	// Table Rows
+	.table-rows {
 
-        &.table-rows-zebra {
+		&.table-rows-zebra {
 
-            .table-row:nth-child( even ) {
-                background-color: $color-primary;
-            }
-        }
+			.table-row:nth-child( even ) {
+				background-color: $color-primary;
+			}
+		}
 
-        .table-row {
+		.table-row {
 
-            .table-row-header {
-                // row title
-            }
+			.table-row-header {
+				// row title
+			}
 
-            .table-row-data {
-                // row data - it can be anything ex: content box
+			.table-row-data {
+				// row data - it can be anything ex: content box
 
-                .data {
-                    display: inline-block;
-                    width: 68%;
-                    padding: 1%;
-                    word-wrap: break-word;
+				.data {
+					display: inline-block;
+					width: 68%;
+					padding: 1%;
+					word-wrap: break-word;
 
-                    &.title {
-                        width: 28%;
-                    }
-                }
-            }
-        }
-    }
+					&.title {
+						width: 28%;
+					}
+				}
+			}
+		}
+	}
 
-    @include responsive-min( screen-tablet-large ) {
+	@include responsive-min( screen-tablet-large ) {
 
-        .table-header {
-            display: block;
-        }
+		.table-header {
+			display: block;
+		}
 
-        // Table Rows
-        .table-rows {
+		// Table Rows
+		.table-rows {
 
-            .table-row {
+			.table-row {
 
-                .table-row-header {
-                    display: none;
-                }
+				.table-row-header {
+					display: none;
+				}
 
-                .table-row-data {
+				.table-row-data {
 
-                    .data {
-                        width: 100%;
-                        padding: 0;
+					.data {
+						width: 100%;
+						padding: 0;
 
-                        &.title {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
+						&.title {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 // == Basic Grid Table ==============
 
 .grid-table-basic {
-    background-color: $color-primary-d;
+	background-color: $color-primary-d;
 
-    // Table Header
-    .table-header {
-        background-color: $color-secondary;
-        color: $color-secondary-text;
-        padding: 0.25em 0.25rem;
-        text-align: left;
-    }
+	// Table Header
+	.table-header {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+		padding: 0.25em 0.25rem;
+		text-align: left;
+	}
 
-    // Table Rows
-    .table-rows {
-        border: 1px solid $color-secondary;
+	// Table Rows
+	.table-rows {
+		border: 1px solid $color-secondary;
 
-        // Avatar in grid rows
-        .avatar {
-            width: 48px;
-        }
+		// Avatar in grid rows
+		.avatar {
+			width: 48px;
+		}
 
-        .table-row {
-            padding: 0.25em 0.25rem;
-            border-bottom: 1px solid $color-secondary;
+		.table-row {
+			padding: 0.25em 0.25rem;
+			border-bottom: 1px solid $color-secondary;
 
-            &:last-child {
-                border-bottom: none;
-            }
-        }
-    }
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
 }

@@ -98,7 +98,7 @@ Details: It defines the commonly used variables as listed below:
  */
 /**********************************************************************
 Description: This file define the extended variables used by CMT-UI css framework. These are derived using
-             primary variables.
+			 primary variables.
 
 Dependencies: variables
 
@@ -109,11 +109,11 @@ Details: It defines the extended variables derived from primary variables as lis
 * Transparency      - This section define the variables for transparency.
 *                     3 Color Scheme    - Medium transparency applied to primary theme colors.
 *                     Gray shades       - Transparency effect applied to shades of gray.
-*                     Standard colors   - Medium transparency applied to primary theme colors.
+*                     Standard colors   - High, medium and low transparency applied to theme colors.
 ***********************************************************************/
 /**********************************************************************
 Description: This file define the mixins available in CMT-UI css framework. It also define the default classes
-             for all the mixins.
+			 for all the mixins.
 
 Dependencies: variables
 
@@ -1234,8 +1234,8 @@ Details: It define the mixins and their default implementation as listed below:
 
 /**********************************************************************
 Description: This file define the transition effects available in CMT-UI css framework. These allow changes in allowed css
-             properties smoothly over a defined time interval. We can define the animation/transition effects and duration
-             to change the property.
+			 properties smoothly over a defined time interval. We can define the animation/transition effects and duration
+			 to change the property.
 
 Dependencies: none
 
@@ -1346,7 +1346,7 @@ Details: It defines the transition mixins and default implementation as listed b
 
 /**********************************************************************
 Description: This file define the transformation effects available in CMT-UI css framework. These effects change the physical
-             look of an element i.e. position, orientation and scale.
+			 look of an element i.e. position, orientation and scale.
 
 Dependencies: none
 
@@ -1427,7 +1427,7 @@ Details: It defines the transformation mixins and default implementation as list
 
 /**********************************************************************
 Description: This file define the animation effects available in CMT-UI css framework. These animations give
-             smooth and nice visual effects to an element.
+			 smooth and nice visual effects to an element.
 
 Dependencies: none
 
@@ -1868,6 +1868,8 @@ html, body {
     color: #678d34 !important; }
   .text.text-tertiary-d {
     color: #c1db9e !important; }
+  .text.text-link {
+    color: #298ccf !important; }
   .text.text-black {
     color: #000000 !important; }
   .text.text-gray {
@@ -2086,6 +2088,12 @@ html, body {
   width: 100%; }
   .width.width-auto {
     width: auto; }
+  .width.width-1 {
+    width: 1%; }
+  .width.width-5 {
+    width: 5%; }
+  .width.width-10 {
+    width: 10%; }
   .width.width-25 {
     width: 25%; }
   .width.width-50 {
@@ -2204,6 +2212,9 @@ html, body {
 
 .hidden {
   display: none !important; }
+
+.hidden-easy {
+  display: none; }
 
 .visible-space {
   visibility: visible !important; }
@@ -2400,7 +2411,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1.08em; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
   vertical-align: middle;
   line-height: 1.2;
   font-family: Verdana, Geneva, sans-serif;
@@ -2498,7 +2509,7 @@ a, .link {
   .text-with-line .text-content {
     display: inline-block;
     padding: 0 1em;
-    background-color: #3C4655; }
+    background-color: #F2F2F2; }
 
 /**********************************************************************
 Description: This file define the grid system and basic containers of CMT-UI css framework.
@@ -3219,8 +3230,8 @@ blockquote:after {
 
 /**********************************************************************
 Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-             elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-             for other standard libraries.
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
 
 Dependencies: variables, mixins, transitions, transformation
 
@@ -4331,6 +4342,47 @@ Details: It defines the social network menu components as listed below:
   margin-right: 0.5rem;
   padding: 0.25rem; }
 
+.menu-social .icon-rounded, .menu-social .cmti-rounded {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px; }
+
+.menu-social .icon-border, .menu-social .cmti-border {
+  border: 1px solid; }
+  .menu-social .icon-border.icon-facebook, .menu-social .icon-border.cmti-social-facebook, .menu-social .cmti-border.icon-facebook, .menu-social .cmti-border.cmti-social-facebook {
+    border-color: #3B5998; }
+  .menu-social .icon-border.icon-twitter, .menu-social .icon-border.cmti-social-twitter, .menu-social .cmti-border.icon-twitter, .menu-social .cmti-border.cmti-social-twitter {
+    border-color: #00ACED; }
+  .menu-social .icon-border.icon-google, .menu-social .icon-border.cmti-social-google, .menu-social .cmti-border.icon-google, .menu-social .cmti-border.cmti-social-google {
+    border-color: #DD4B39; }
+  .menu-social .icon-border.icon-google-plus, .menu-social .icon-border.cmti-social-google-plus, .menu-social .cmti-border.icon-google-plus, .menu-social .cmti-border.cmti-social-google-plus {
+    border-color: #DD4B39; }
+  .menu-social .icon-border.icon-linkedin, .menu-social .icon-border.cmti-social-linkedin, .menu-social .cmti-border.icon-linkedin, .menu-social .cmti-border.cmti-social-linkedin {
+    border-color: #007BB6; }
+  .menu-social .icon-border.icon-instagram, .menu-social .icon-border.cmti-social-instagram, .menu-social .cmti-border.icon-instagram, .menu-social .cmti-border.cmti-social-instagram {
+    border-color: #125688; }
+  .menu-social .icon-border.icon-pintrest, .menu-social .icon-border.cmti-social-pintrest, .menu-social .cmti-border.icon-pintrest, .menu-social .cmti-border.cmti-social-pintrest {
+    border-color: #CB2027; }
+  .menu-social .icon-border.icon-youtube, .menu-social .icon-border.cmti-social-youtube, .menu-social .cmti-border.icon-youtube, .menu-social .cmti-border.cmti-social-youtube {
+    border-color: #BB0000; }
+  .menu-social .icon-border:hover.icon-facebook, .menu-social .icon-border:hover.cmti-social-facebook, .menu-social .cmti-border:hover.icon-facebook, .menu-social .cmti-border:hover.cmti-social-facebook {
+    background-color: #3B5998; }
+  .menu-social .icon-border:hover.icon-twitter, .menu-social .icon-border:hover.cmti-social-twitter, .menu-social .cmti-border:hover.icon-twitter, .menu-social .cmti-border:hover.cmti-social-twitter {
+    background-color: #00ACED; }
+  .menu-social .icon-border:hover.icon-google, .menu-social .icon-border:hover.cmti-social-google, .menu-social .cmti-border:hover.icon-google, .menu-social .cmti-border:hover.cmti-social-google {
+    background-color: #DD4B39; }
+  .menu-social .icon-border:hover.icon-google-plus, .menu-social .icon-border:hover.cmti-social-google-plus, .menu-social .cmti-border:hover.icon-google-plus, .menu-social .cmti-border:hover.cmti-social-google-plus {
+    background-color: #DD4B39; }
+  .menu-social .icon-border:hover.icon-linkedin, .menu-social .icon-border:hover.cmti-social-linkedin, .menu-social .cmti-border:hover.icon-linkedin, .menu-social .cmti-border:hover.cmti-social-linkedin {
+    background-color: #007BB6; }
+  .menu-social .icon-border:hover.icon-instagram, .menu-social .icon-border:hover.cmti-social-instagram, .menu-social .cmti-border:hover.icon-instagram, .menu-social .cmti-border:hover.cmti-social-instagram {
+    background-color: #125688; }
+  .menu-social .icon-border:hover.icon-pintrest, .menu-social .icon-border:hover.cmti-social-pintrest, .menu-social .cmti-border:hover.icon-pintrest, .menu-social .cmti-border:hover.cmti-social-pintrest {
+    background-color: #CB2027; }
+  .menu-social .icon-border:hover.icon-youtube, .menu-social .icon-border:hover.cmti-social-youtube, .menu-social .cmti-border:hover.icon-youtube, .menu-social .cmti-border:hover.cmti-social-youtube {
+    background-color: #BB0000; }
+
 .menu-social .icon-bkg.icon-facebook, .menu-social .icon-bkg.cmti-social-facebook, .menu-social .cmti-bkg.icon-facebook, .menu-social .cmti-bkg.cmti-social-facebook {
   background-color: #3B5998; }
 
@@ -4380,7 +4432,7 @@ Details: It defines the social network menu components as listed below:
   color: #BB0000; }
 
 .menu-social .icon-text:hover, .menu-social .cmti-text:hover {
-  color: #E74343; }
+  color: #FFFFFF; }
 
 .menu-social .btn {
   color: #FFFFFF !important; }
@@ -4636,7 +4688,7 @@ Details: It defines the styles for popup components as listed below:
       font-weight: bold; }
   .popup-basic .popup-data .popup-content {
     padding: 1rem;
-    overflow-y: scroll; }
+    overflow-y: auto; }
   .popup-basic .popup-data .popup-close {
     top: -0.5em;
     right: -0.5em;
@@ -4721,234 +4773,234 @@ Details: It defines the styles for popup components as listed below:
  * The preferred image size for gallery item is 360 x 270. We can maintain the same aspect ratio for larger images for expected results. */
 /*
 .gallery-basic {
-    padding: 0 10%;
+	padding: 0 10%;
 
-    .header {
-        background-color: $color-secondary;
-        color: $color-secondary-text;
-        min-height: 150px;
-        height: auto;
-        padding: 1em;
-        line-height: 1.4em;
+	.header {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+		min-height: 150px;
+		height: auto;
+		padding: 1em;
+		line-height: 1.4em;
 
-        h2 {
-            text-align: center;
-            margin-bottom: 1em;
-        }
-    }
+		h2 {
+			text-align: center;
+			margin-bottom: 1em;
+		}
+	}
 
-    .items {
-        padding: 1em;
+	.items {
+		padding: 1em;
 
-        li {
-            display: inline-block;
-            width: 49%;
-            padding: 1%;
-        }
+		li {
+			display: inline-block;
+			width: 49%;
+			padding: 1%;
+		}
 
-        .wrap-item {
-            position: relative;
-            width: 100%;
-            height: 150px;
-            cursor: pointer;
+		.wrap-item {
+			position: relative;
+			width: 100%;
+			height: 150px;
+			cursor: pointer;
 
-            &:hover {
+			&:hover {
 
-                .flip2 {
-                    opacity: 1;
-                    @include transform-rotate( 360deg );
-                }
-            }
+				.flip2 {
+					opacity: 1;
+					@include transform-rotate( 360deg );
+				}
+			}
 
-            .flip1 {
-                width: 100%;
-                height: 100%;
-            }
+			.flip1 {
+				width: 100%;
+				height: 100%;
+			}
 
-            .flip2 {
-                background-color: $color-primary;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                opacity: 0;
-                @include transit-all( $transit-linear, $transit-time-medium );
+			.flip2 {
+				background-color: $color-primary;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				opacity: 0;
+				@include transit-all( $transit-linear, $transit-time-medium );
 
-                .info {
-                    display: inline-block;
-                    width: 100%;
-                    height: 60%;
-                    padding: 5% 0;
-                }
-            }
-        }
-    }
+				.info {
+					display: inline-block;
+					width: 100%;
+					height: 60%;
+					padding: 5% 0;
+				}
+			}
+		}
+	}
 
-    @include responsive-min( screen-mobile-large ) {
+	@include responsive-min( screen-mobile-large ) {
 
-        .items {
+		.items {
 
-            .wrap-item {
-                height: 200px;
-            }
-        }
-    }
+			.wrap-item {
+				height: 200px;
+			}
+		}
+	}
 
-    @include responsive-min( screen-tablet-small ) {
+	@include responsive-min( screen-tablet-small ) {
 
-        .items {
+		.items {
 
-            li {
-                width: 33%;
-            }
+			li {
+				width: 33%;
+			}
 
-            .wrap-item {
-                height: 220px;
-            }
-        }
-    }
+			.wrap-item {
+				height: 220px;
+			}
+		}
+	}
 
-    @include responsive-min( screen-tablet-large ) {
+	@include responsive-min( screen-tablet-large ) {
 
-        .header {
-            height: 400px;
-            width: 30%;
-            padding: 2em;
-            float: left;
-        }
+		.header {
+			height: 400px;
+			width: 30%;
+			padding: 2em;
+			float: left;
+		}
 
-        .items {
-            width: 70%;
-            float: left;
-            padding: 0;
+		.items {
+			width: 70%;
+			float: left;
+			padding: 0;
 
-            li {
-                width: 32%;
-                padding-top: 0;
-            }
+			li {
+				width: 32%;
+				padding-top: 0;
+			}
 
-            .wrap-item {
-                height: 175px;
-            }
-        }
-    }
+			.wrap-item {
+				height: 175px;
+			}
+		}
+	}
 
-    @include responsive-min( screen-desktop-small ) {
+	@include responsive-min( screen-desktop-small ) {
 
-        .header {
-            height: 450px;
-        }
+		.header {
+			height: 450px;
+		}
 
-        .items {
+		.items {
 
-            .wrap-item {
-                height: 200px;
-            }
-        }
-    }
+			.wrap-item {
+				height: 200px;
+			}
+		}
+	}
 
-    @include responsive-min( screen-desktop-large ) {
-        @include valign-center;
+	@include responsive-min( screen-desktop-large ) {
+		@include valign-center;
 
-        .header {
-            height: 500px;
-        }
+		.header {
+			height: 500px;
+		}
 
-        .items {
+		.items {
 
-            .wrap-item {
-                height: 250px;
-            }
-        }
-    }
+			.wrap-item {
+				height: 250px;
+			}
+		}
+	}
 }
 
 .portfolio {
 
-    .flip-container {
-        width: 100%;
-        height: 150px;
-        
-        .front, .back {
-            width: 100%;
-            height: 150px;
-        }
-    }
-    
-    .link {
-        display: inline-block;
-        width: 100%;
-        margin-top: 15px;
-        text-align: center;
-    }
+	.flip-container {
+		width: 100%;
+		height: 150px;
+		
+		.front, .back {
+			width: 100%;
+			height: 150px;
+		}
+	}
+	
+	.link {
+		display: inline-block;
+		width: 100%;
+		margin-top: 15px;
+		text-align: center;
+	}
 
-    @include responsive-min( screen-mobile-small ) {
-        
-        .flip-container {
-            height: 180px;
-            
-            .front, .back {
-                height: 180px;
-            }
-        }
-    }
+	@include responsive-min( screen-mobile-small ) {
+		
+		.flip-container {
+			height: 180px;
+			
+			.front, .back {
+				height: 180px;
+			}
+		}
+	}
 
-    @include responsive-min( screen-mobile-large ) {
-        
-        .flip-container {
-            height: 200px;
-            
-            .front, .back {
-                height: 200px;
-            }
-        }
-    }
+	@include responsive-min( screen-mobile-large ) {
+		
+		.flip-container {
+			height: 200px;
+			
+			.front, .back {
+				height: 200px;
+			}
+		}
+	}
 
-    @include responsive-min( screen-tablet-small ) {
-        
-        .flip-container {
-            height: 220px;
-            
-            .front, .back {
-                height: 220px;
-            }
-        }
-    }
+	@include responsive-min( screen-tablet-small ) {
+		
+		.flip-container {
+			height: 220px;
+			
+			.front, .back {
+				height: 220px;
+			}
+		}
+	}
 
-    @include responsive-min( screen-tablet-large ) {
+	@include responsive-min( screen-tablet-large ) {
 
-        .flip-container {
-            height: 175px;
-            
-            .front, .back {
-                height: 175px;
-            }
-        }
-    }
+		.flip-container {
+			height: 175px;
+			
+			.front, .back {
+				height: 175px;
+			}
+		}
+	}
 
-    @include responsive-min( screen-desktop-small ) {
+	@include responsive-min( screen-desktop-small ) {
 
-        .flip-container {
-            height: 200px;
-            
-            .front, .back {
-                height: 200px;
-            }
-        }
-    }
+		.flip-container {
+			height: 200px;
+			
+			.front, .back {
+				height: 200px;
+			}
+		}
+	}
 
-    @include responsive-min( screen-desktop-large ) {
+	@include responsive-min( screen-desktop-large ) {
 
-        .flip-container {
-            height: 250px;
-            
-            .front, .back {
-                height: 250px;
-            }
-        }
-    }
+		.flip-container {
+			height: 250px;
+			
+			.front, .back {
+				height: 250px;
+			}
+		}
+	}
 }
 */
 .gallery-basic {
@@ -5163,8 +5215,8 @@ Details: It defines the styles of card components as listed below:
 
 /**********************************************************************
 Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-             more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-             wraps block header and content.
+			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
+			 wraps block header and content.
 
 Dependencies: variables, variables-ext, mixins
 
@@ -5344,7 +5396,7 @@ Details: It defines the styles for login components as listed below:
 
 /**********************************************************************
 Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info for display purpose and
-             the real form can be displayed when user click the edit button.
+			 the real form can be displayed when user click the edit button.
 
 Dependencies: variables, variables-ext, mixins, boxes/basic
 
@@ -5378,8 +5430,8 @@ Details: It defines the styles of form box components as listed below:
 
 /**********************************************************************
 Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-             more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-             wraps block header and content.
+			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
+			 wraps block header and content.
 
 Dependencies: variables, variables-ext, mixins
 
@@ -5502,70 +5554,67 @@ Details: It defines the styles for pagination components as listed below:
     .pagination li span, .pagination li a, .pagination .page-link span, .pagination .page-link a {
       text-decoration: none; }
 
-.pagination-basic li, .pagination-basic .page-link {
-  padding: 0 0.25em; }
-  .pagination-basic li span, .pagination-basic li a, .pagination-basic .page-link span, .pagination-basic .page-link a {
-    padding: 0.3em 0.5em;
-    background-color: #E74343;
+.pagination-basic li span, .pagination-basic li a, .pagination-basic .page-link span, .pagination-basic .page-link a {
+  padding: 0.3em 0.5em;
+  background-color: #E74343;
+  color: #FFFFFF; }
+  .pagination-basic li span:hover, .pagination-basic li a:hover, .pagination-basic .page-link span:hover, .pagination-basic .page-link a:hover {
+    background-color: #FF3636;
     color: #FFFFFF; }
-    .pagination-basic li span:hover, .pagination-basic li a:hover, .pagination-basic .page-link span:hover, .pagination-basic .page-link a:hover {
-      background-color: #FF3636;
-      color: #FFFFFF; }
-    .pagination-basic li span .icon, .pagination-basic li a .icon, .pagination-basic .page-link span .icon, .pagination-basic .page-link a .icon {
-      margin-top: -0.2em; }
-  .pagination-basic li.first.disabled span, .pagination-basic li.prev.disabled span, .pagination-basic li.next.disabled span, .pagination-basic li.last.disabled span, .pagination-basic .page-link.first.disabled span, .pagination-basic .page-link.prev.disabled span, .pagination-basic .page-link.next.disabled span, .pagination-basic .page-link.last.disabled span {
+  .pagination-basic li span .icon, .pagination-basic li a .icon, .pagination-basic .page-link span .icon, .pagination-basic .page-link a .icon {
+    margin-top: -0.2em; }
+
+.pagination-basic li.first.disabled span, .pagination-basic li.prev.disabled span, .pagination-basic li.next.disabled span, .pagination-basic li.last.disabled span, .pagination-basic .page-link.first.disabled span, .pagination-basic .page-link.prev.disabled span, .pagination-basic .page-link.next.disabled span, .pagination-basic .page-link.last.disabled span {
+  background-color: gray;
+  color: #363636; }
+  .pagination-basic li.first.disabled span:hover, .pagination-basic li.prev.disabled span:hover, .pagination-basic li.next.disabled span:hover, .pagination-basic li.last.disabled span:hover, .pagination-basic .page-link.first.disabled span:hover, .pagination-basic .page-link.prev.disabled span:hover, .pagination-basic .page-link.next.disabled span:hover, .pagination-basic .page-link.last.disabled span:hover {
     background-color: gray;
     color: #363636; }
-    .pagination-basic li.first.disabled span:hover, .pagination-basic li.prev.disabled span:hover, .pagination-basic li.next.disabled span:hover, .pagination-basic li.last.disabled span:hover, .pagination-basic .page-link.first.disabled span:hover, .pagination-basic .page-link.prev.disabled span:hover, .pagination-basic .page-link.next.disabled span:hover, .pagination-basic .page-link.last.disabled span:hover {
-      background-color: gray;
+  .pagination-basic li.first.disabled span .icon, .pagination-basic li.prev.disabled span .icon, .pagination-basic li.next.disabled span .icon, .pagination-basic li.last.disabled span .icon, .pagination-basic .page-link.first.disabled span .icon, .pagination-basic .page-link.prev.disabled span .icon, .pagination-basic .page-link.next.disabled span .icon, .pagination-basic .page-link.last.disabled span .icon {
+    color: #363636; }
+    .pagination-basic li.first.disabled span .icon:hover, .pagination-basic li.prev.disabled span .icon:hover, .pagination-basic li.next.disabled span .icon:hover, .pagination-basic li.last.disabled span .icon:hover, .pagination-basic .page-link.first.disabled span .icon:hover, .pagination-basic .page-link.prev.disabled span .icon:hover, .pagination-basic .page-link.next.disabled span .icon:hover, .pagination-basic .page-link.last.disabled span .icon:hover {
       color: #363636; }
-    .pagination-basic li.first.disabled span .icon, .pagination-basic li.prev.disabled span .icon, .pagination-basic li.next.disabled span .icon, .pagination-basic li.last.disabled span .icon, .pagination-basic .page-link.first.disabled span .icon, .pagination-basic .page-link.prev.disabled span .icon, .pagination-basic .page-link.next.disabled span .icon, .pagination-basic .page-link.last.disabled span .icon {
-      color: #363636; }
-      .pagination-basic li.first.disabled span .icon:hover, .pagination-basic li.prev.disabled span .icon:hover, .pagination-basic li.next.disabled span .icon:hover, .pagination-basic li.last.disabled span .icon:hover, .pagination-basic .page-link.first.disabled span .icon:hover, .pagination-basic .page-link.prev.disabled span .icon:hover, .pagination-basic .page-link.next.disabled span .icon:hover, .pagination-basic .page-link.last.disabled span .icon:hover {
-        color: #363636; }
-  .pagination-basic li.active a, .pagination-basic .page-link.active a {
-    background-color: #b51717;
-    color: #FFFFFF; }
 
-.pagination-full {
-  margin: 10px 0; }
-  .pagination-full .info {
-    float: left; }
-  .pagination-full .pagination {
-    float: right; }
-  .pagination-full .pagination, .pagination-full .pagination li {
+.pagination-basic li.active a, .pagination-basic .page-link.active a {
+  background-color: #b51717;
+  color: #FFFFFF; }
+
+.pagination-full .info {
+  display: inline-block;
+  width: 40%;
+  padding: 0.25em 0 0.5em;
+  text-align: left;
+  font-weight: normal; }
+
+.pagination-full .page-links {
+  display: inline-block;
+  width: 59%;
+  padding: 0.25em 0 0.5em;
+  text-align: right; }
+  .pagination-full .page-links .pagination li, .pagination-full .page-links .pagination .page-link {
     display: inline-block;
-    list-style: none; }
-  .pagination-full .pagination li {
-    margin: 0 2px;
-    font-size: 1em;
-    line-heigh: 1em; }
-  .pagination-full .pagination .prev, .pagination-full .pagination .next, .pagination-full .pagination li a {
-    color: #F2F2F2;
-    text-decoration: none;
-    height: 1.6em;
-    background-color: #232831;
-    -moz-transition: all 250ms ease-in-out 0s;
-    -ms-transition: all 250ms ease-in-out 0s;
-    -o-transition: all 250ms ease-in-out 0s;
-    -webkit-transition: all 250ms ease-in-out 0s;
-    transition: all 250ms ease-in-out 0s; }
-  .pagination-full .pagination li a {
-    padding: 2px 8px; }
-  .pagination-full .pagination .disabled span, .pagination-full .pagination .disabled span:hover {
-    background-color: #3C4655;
-    padding: 2px 8px;
-    height: 1.6em; }
-  .pagination-full .pagination .disabled span {
-    line-height: 1.6em; }
-  .pagination-full .pagination .active, .pagination-full .pagination .active a, .pagination-full .pagination li a:hover, .pagination-full .pagination .next:hover, .pagination-full .pagination .prev:hover {
-    background-color: #3C4655;
-    color: #F2F2F2;
-    -moz-transition: all 250ms ease-in-out 0s;
-    -ms-transition: all 250ms ease-in-out 0s;
-    -o-transition: all 250ms ease-in-out 0s;
-    -webkit-transition: all 250ms ease-in-out 0s;
-    transition: all 250ms ease-in-out 0s; }
+    list-style: none;
+    margin: 0;
+    margin-left: 3px; }
+    .pagination-full .page-links .pagination li span, .pagination-full .page-links .pagination li a, .pagination-full .page-links .pagination .page-link span, .pagination-full .page-links .pagination .page-link a {
+      background-color: #87BA45;
+      color: #96B0D6;
+      padding: 3px 8px;
+      text-decoration: none; }
+    .pagination-full .page-links .pagination li .active a, .pagination-full .page-links .pagination .page-link .active a {
+      background-color: #678d34;
+      color: #c1db9e; }
+    .pagination-full .page-links .pagination li a:hover, .pagination-full .page-links .pagination .page-link a:hover {
+      background-color: #F2F2F2;
+      color: #363636; }
+    .pagination-full .page-links .pagination li .disabled span, .pagination-full .page-links .pagination .page-link .disabled span {
+      background-color: #7F7F7F;
+      color: #FFFFFF; }
+
+@media only screen and (max-width: 1024px) {
+  .pagination-full .info, .pagination-full .page-links {
+    width: 100%;
+    text-align: center; } }
 
 /**********************************************************************
 Description: It defines the styles of the sorting components available in CMT-UI css framework.
@@ -5587,7 +5636,7 @@ Details: It defines the styles of sorting components as listed below:
 
 /**********************************************************************
 Description: It defines the styles of the blog components used to show blog posts on recent, popular, similar and
-             related widget. The blog posts will also be displayed on blog, category, tag, author and archive pages.
+			 related widget. The blog posts will also be displayed on blog, category, tag, author and archive pages.
 
 Dependencies: variables, variables-ext, mixins
 
@@ -5604,15 +5653,17 @@ Details: It defines the styles of blog components as listed below:
 *                 post info in 4th row.
 * Banner        - It shows banner in first row. An icon will be displayed if user hover on banner. Title in second row.
 *                 Content in 3rd row and post info in 4th row.
-* Single Post   - The barebone class for single post. The post will be displayed on it's page showing full content, banner
-*                 and author details.
-* Basic Single  - Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
 ***********************************************************************/
-.blog .post .post-banner .texture {
-  z-index: 10; }
-
-.blog .post .post-banner .post-title {
-  z-index: 20; }
+.blog .wrap-posts .post {
+  position: relative; }
+  .blog .wrap-posts .post .post-banner .texture {
+    z-index: 10; }
+  .blog .wrap-posts .post .post-banner .post-title {
+    z-index: 20; }
+  .blog .wrap-posts .post .post-banner .post-view {
+    z-index: 30; }
+    .blog .wrap-posts .post .post-banner .post-view .post-title {
+      z-index: 40; }
 
 .blog-basic .post {
   margin-bottom: 1em; }
@@ -5751,6 +5802,82 @@ Details: It defines the styles of blog components as listed below:
     .blog-banner .post .post-banner {
       height: 250px; } }
 
+.blog-banner-recent .post {
+  padding: 0.5rem;
+  margin-bottom: 1em;
+  background-color: #F2F2F2;
+  color: #363636; }
+  .blog-banner-recent .post .post-banner {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+    .blog-banner-recent .post .post-banner .texture {
+      z-index: 5; }
+    .blog-banner-recent .post .post-banner .post-view {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 50;
+      visibility: hidden;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      -moz-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
+      -ms-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
+      -o-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
+      -webkit-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
+      transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s; }
+    .blog-banner-recent .post .post-banner .post-view-content {
+      text-align: center; }
+      .blog-banner-recent .post .post-banner .post-view-content .icon {
+        color: #FFFFFF; }
+    .blog-banner-recent .post .post-banner:hover .post-view {
+      visibility: visible;
+      opacity: 1; }
+  .blog-banner-recent .post .post-author {
+    display: none; }
+  .blog-banner-recent .post .wrap-post-content {
+    padding: 0;
+    padding-left: 0.5rem;
+    float: left;
+    width: 50%;
+    height: 65px; }
+    .blog-banner-recent .post .wrap-post-content .post-title {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 0.5em; }
+      .blog-banner-recent .post .wrap-post-content .post-title a {
+        display: inline-block;
+        width: 100%; }
+    .blog-banner-recent .post .wrap-post-content .post-info {
+      display: none; }
+    .blog-banner-recent .post .wrap-post-content .post-content {
+      padding: 0;
+      height: 60px;
+      overflow: hidden; }
+  @media only screen and (min-width: 769px) {
+    .blog-banner-recent .post .post-banner {
+      height: 80px; } }
+  @media only screen and (min-width: 1025px) {
+    .blog-banner-recent .post .post-banner {
+      height: 120px; } }
+
+/**********************************************************************
+Description: It defines the styles of the blog post single page.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of blog post as listed below:
+* Single Post   - The barebone class for single post. The post will be displayed on it's page showing full content, banner
+*                 and author details.
+* Basic Single  - Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
+***********************************************************************/
 .post-single .post-banner .texture {
   z-index: 10; }
 

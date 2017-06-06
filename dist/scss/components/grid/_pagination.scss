@@ -15,178 +15,184 @@ Details: It defines the styles for pagination components as listed below:
 // == Structure - Pagination ========
 
 .pagination {
-    display: inline-block;
+	display: inline-block;
 
-    li, .page-link {
-        // List Item having Links, Prev and Next
-        display: inline-block;
-        list-style: none;
+	li, .page-link {
+		// List Item having Links, Prev and Next
+		display: inline-block;
+		list-style: none;
 
-        span, a {
-            // Links, Prev and Next - Normal state
-            text-decoration: none;
+		span, a {
+			// Links, Prev and Next - Normal state
+			text-decoration: none;
 
-            &:hover {
-                // Links, Prev and Next - Hover state
-            }
+			&:hover {
+				// Links, Prev and Next - Hover state
+			}
 
-            .icon {
-                // Icons for Prev - Next
-            }
-        }
+			.icon {
+				// Icons for Prev - Next
+			}
+		}
 
-        &.first, &.prev, &.next, &.last {
+		&.first, &.prev, &.next, &.last {
 
-            &.disabled {
+			&.disabled {
 
-                span {
-                    // Prev - Next in disabled state
+				span {
+					// Prev - Next in disabled state
 
-                    &:hover {
-                        // Prev - Next in disabled state
-                    }
+					&:hover {
+						// Prev - Next in disabled state
+					}
 
-                    .icon {
-                        // Icon used for Prev and Next
+					.icon {
+						// Icon used for Prev and Next
 
-                        &:hover {
-                            // Icon state on hover in disabled state
-                        }
-                    }
-                }
-            }
-        }
+						&:hover {
+							// Icon state on hover in disabled state
+						}
+					}
+				}
+			}
+		}
 
-        &.active {
+		&.active {
 
-            a {
-                // Link in active state
-            }
-        }
+			a {
+				// Link in active state
+			}
+		}
 
-        &.first {
-            // First link
-        }
+		&.first {
+			// First link
+		}
 
-        &.prev {
-            // Previous link
-        }
+		&.prev {
+			// Previous link
+		}
 
-        &.next {
-            // Next link
-        }
+		&.next {
+			// Next link
+		}
 
-        &.last {
-           // Last link
-        }
-    }
+		&.last {
+		   // Last link
+		}
+	}
 }
 
 // == Basic Pagination ==============
 
 .pagination-basic {
 
-    li, .page-link {
-        padding: 0 0.25em;
+	li, .page-link {
 
-        span, a {
-            padding: 0.3em 0.5em;
-            background-color: $color-btn;
-            color: $color-btn-text;
+		span, a {
+			padding: 0.3em 0.5em;
+			background-color: $color-btn;
+			color: $color-btn-text;
 
-            &:hover {
-                background-color: $color-btn-h;
-                color: $color-btn-h-text;
-            }
+			&:hover {
+				background-color: $color-btn-h;
+				color: $color-btn-h-text;
+			}
 
-            .icon {
-                margin-top: -0.2em;
-            }
-        }
+			.icon {
+				margin-top: -0.2em;
+			}
+		}
 
-        &.first, &.prev, &.next, &.last {
+		&.first, &.prev, &.next, &.last {
 
-            &.disabled {
+			&.disabled {
 
-                span {
-                    background-color: $color-btn-d;
-                    color: $color-btn-d-text;
+				span {
+					background-color: $color-btn-d;
+					color: $color-btn-d-text;
 
-                    &:hover {
-                        background-color: $color-btn-d;
-                        color: $color-btn-d-text;
-                    }
+					&:hover {
+						background-color: $color-btn-d;
+						color: $color-btn-d-text;
+					}
 
-                    .icon {
-                        color: $color-btn-d-text;
+					.icon {
+						color: $color-btn-d-text;
 
-                        &:hover {
-                            color: $color-btn-d-text;
-                        }
-                    }
-                }
-            }
-        }
+						&:hover {
+							color: $color-btn-d-text;
+						}
+					}
+				}
+			}
+		}
 
-        &.active {
+		&.active {
 
-            a {
-                background-color: $color-btn-a;
-                color: $color-btn-a-text;
-            }
-        }
-    }
+			a {
+				background-color: $color-btn-a;
+				color: $color-btn-a-text;
+			}
+		}
+	}
 }
 
 // == Full Pagination ===============
 
 .pagination-full {
-    margin: 10px 0;
 
     .info {
-        float: left;
-    }
-
-    .pagination {
-        float: right;
-    }
-
-    .pagination, .pagination li {
         display: inline-block;
-        list-style: none;
+        width: 40%;
+        padding: 0.25em 0 0.5em;
+        text-align: left;
+        font-weight: normal;
     }
+	
+	.page-links {
+        display: inline-block;
+        width: 59%;
+        padding: 0.25em 0 0.5em;
+        text-align: right;
+		
+		.pagination {
 
-    .pagination li {
-        margin: 0 2px;
-        font-size: 1em;
-        line-heigh: 1em;
-    }
+		    li, .page-link {
+		        display: inline-block;
+		        list-style: none;
+		        margin: 0;
+		        margin-left: 3px;
+	
+		        span, a {
+		            background-color: $color-tertiary;
+		            color: $color-secondary-text;
+		            padding: 3px 8px;
+		            text-decoration: none;
+		        }
+	
+			    .active a {
+			        background-color: $color-tertiary-d;
+			        color: $color-tertiary-text-d;
+			    }
+			
+			    a:hover {
+			        background-color: $color-primary;
+			        color: $color-primary-text;
+			    }
+			
+			    .disabled span {
+			        background-color: $color-gray;
+			        color: $color-white;
+			    }
+		    }
+		}
+	}
 
-    .pagination .prev, .pagination .next, .pagination li a {
-        color: $color-primary;
-        text-decoration: none;
-        height: 1.6em;
-        background-color: $color-secondary-d;
-        @include transit-all( $transit-eio, $transit-time-small );
-    }
+    @media only screen and ( max-width: $screen-tablet-large ) {
 
-    .pagination li a {
-        padding: 2px 8px;
-    }
-
-    .pagination .disabled span, .pagination .disabled span:hover {
-        background-color: $color-secondary;
-        padding: 2px 8px;
-        height: 1.6em;
-    }
-
-    .pagination .disabled span {
-        line-height:1.6em;
-    }
-
-    .pagination .active, .pagination .active a, .pagination li a:hover, .pagination .next:hover, .pagination .prev:hover {
-        background-color: $color-secondary;
-        color: $color-primary;
-        @include transit-all( $transit-eio, $transit-time-small );
+        .info, .page-links {
+            width: 100%;
+            text-align: center;
+        }
     }
 }

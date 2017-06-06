@@ -238,7 +238,7 @@ $color-field-d: #CCCCCC;      // Disabled Field
 $color-field-d-text: #909090;
 $color-placeholder: #aaaaaa;  // Placeholder
 
-// Regular Buttons
+// Buttons
 $color-btn: #E74343;
 $color-btn-text: #FFFFFF;
 $color-btn-h: #FF3636;    // Button Hover
@@ -251,6 +251,7 @@ $color-btn-d-text: #363636;
 // Additional Colors
 $color-header: #363636;
 $color-header-text: #ffffff;
+
 $color-footer: #363636;
 $color-footer-text: #ffffff;
 
@@ -259,22 +260,31 @@ $color-link-h: #E74343; // Hover color for links
 
 // Standard Colors
 $color-white: #FFFFFF;
+
 $color-gray: #7F7F7F;
 $color-gray-l: #A5A5A5;
 $color-gray-d: #595959;
+
 $color-black: #000000;
 
 $color-blue: #3F62A0;
+$color-blue-l: #f5f6f8;
+
 $color-purple: #663096;
 
 $color-orange: #F3702E;
+
 $color-yellow: #FFD800;
 
 $color-red: #B42A1A;
+$color-red-d: #b42a1a;
+
 $color-pink: #FF9DAB;
+
 $color-magenta: #B200B2;
 
 $color-green: #87C442;
+$color-green-l: #e7efe2;
 $color-green-d: #56832A;
 
 // User moods - errors, warnings and success

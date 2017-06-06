@@ -87,7 +87,6 @@ Details: It defines the styles for pagination components as listed below:
 .pagination-basic {
 
 	li, .page-link {
-		padding: 0 0.25em;
 
 		span, a {
 			padding: 0.3em 0.5em;
@@ -141,52 +140,59 @@ Details: It defines the styles for pagination components as listed below:
 // == Full Pagination ===============
 
 .pagination-full {
-	margin: 10px 0;
 
-	.info {
-		float: left;
+    .info {
+        display: inline-block;
+        width: 40%;
+        padding: 0.25em 0 0.5em;
+        text-align: left;
+        font-weight: normal;
+    }
+	
+	.page-links {
+        display: inline-block;
+        width: 59%;
+        padding: 0.25em 0 0.5em;
+        text-align: right;
+		
+		.pagination {
+
+		    li, .page-link {
+		        display: inline-block;
+		        list-style: none;
+		        margin: 0;
+		        margin-left: 3px;
+	
+		        span, a {
+		            background-color: $color-tertiary;
+		            color: $color-secondary-text;
+		            padding: 3px 8px;
+		            text-decoration: none;
+		        }
+	
+			    .active a {
+			        background-color: $color-tertiary-d;
+			        color: $color-tertiary-text-d;
+			    }
+			
+			    a:hover {
+			        background-color: $color-primary;
+			        color: $color-primary-text;
+			    }
+			
+			    .disabled span {
+			        background-color: $color-gray;
+			        color: $color-white;
+			    }
+		    }
+		}
 	}
 
-	.pagination {
-		float: right;
-	}
+    @media only screen and ( max-width: $screen-tablet-large ) {
 
-	.pagination, .pagination li {
-		display: inline-block;
-		list-style: none;
-	}
-
-	.pagination li {
-		margin: 0 2px;
-		font-size: 1em;
-		line-heigh: 1em;
-	}
-
-	.pagination .prev, .pagination .next, .pagination li a {
-		color: $color-primary;
-		text-decoration: none;
-		height: 1.6em;
-		background-color: $color-secondary-d;
-		@include transit-all( $transit-eio, $transit-time-small );
-	}
-
-	.pagination li a {
-		padding: 2px 8px;
-	}
-
-	.pagination .disabled span, .pagination .disabled span:hover {
-		background-color: $color-secondary;
-		padding: 2px 8px;
-		height: 1.6em;
-	}
-
-	.pagination .disabled span {
-		line-height:1.6em;
-	}
-
-	.pagination .active, .pagination .active a, .pagination li a:hover, .pagination .next:hover, .pagination .prev:hover {
-		background-color: $color-secondary;
-		color: $color-primary;
-		@include transit-all( $transit-eio, $transit-time-small );
-	}
+        .info, .page-links {
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
