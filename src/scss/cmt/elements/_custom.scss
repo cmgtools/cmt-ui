@@ -86,6 +86,7 @@ Details: It defines the custom element styles as listed below:
 
 .cmt-select-wrap {
 	width: 100%;
+	display: inline-block;
 
 	select {
 		display: none;
@@ -225,12 +226,27 @@ Details: It defines the custom element styles as listed below:
 .cmt-rating {
 	text-align: left;
 
-	// Span
-	.star {
-		display: inline-block;
-		padding: 0.30em;
-		margin-bottom: 0.75rem;
-		cursor: pointer;
+	.wrap-stars {
+
+		.star {
+			display: inline-block;
+			padding: 0.30em;
+			margin-bottom: 0.75rem;
+			cursor: pointer;
+		}
+	}
+
+	.wrap-messages {
+
+		.star-message {
+			display: none;
+			padding: 0.30em;
+			margin-bottom: 0.75rem;
+
+			&.selected {
+				display: inline-block;
+			}
+		}
 	}
 
 	// Radio or Checkbox

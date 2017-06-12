@@ -368,27 +368,27 @@ html, body {
 // without margin and padding
 .mp {
 
-	.mp-none {
+	&.mp-none {
 		margin: 0 !important;
 		padding: 0 !important;
 	}
 
-	.mp-none-top {
+	&.mp-none-top {
 		margin-top: 0 !important;
 		padding-top: 0 !important;
 	}
 
-	.mp-none-right {
+	&.mp-none-right {
 		margin-right: 0 !important;
 		padding-right: 0 !important;
 	}
 
-	.mp-none-bottom {
+	&.mp-none-bottom {
 		margin-bottom: 0 !important;
 		padding-bottom: 0 !important;
 	}
 
-	.mp-none-left {
+	&.mp-none-left {
 		margin-left: 0 !important;
 		padding-left: 0 !important;
 	}
@@ -398,23 +398,23 @@ html, body {
 
 .padding {
 
-	.padding-none {
+	&.padding-none {
 		padding: 0 !important;
 	}
 
-	.padding-none-top {
+	&.padding-none-top {
 		padding-top: 0 !important;
 	}
 
-	.padding-none-right {
+	&.padding-none-right {
 		padding-right: 0 !important;
 	}
 
-	.padding-none-bottom {
+	&.padding-none-bottom {
 		padding-bottom: 0 !important;
 	}
 
-	.padding-none-left {
+	&.padding-none-left {
 		padding-left: 0 !important;
 	}
 
@@ -493,23 +493,23 @@ html, body {
 
 .margin {
 
-	.margin-none {
+	&.margin-none {
 		margin: 0 !important;
 	}
 
-	.margin-none-top {
+	&.margin-none-top {
 		margin-top: 0 !important;
 	}
 
-	.margin-none-right {
+	&.margin-none-right {
 		margin-right: 0 !important;
 	}
 
-	.margin-none-bottom {
+	&.margin-none-bottom {
 		margin-bottom: 0 !important;
 	}
 
-	.margin-none-left {
+	&.margin-none-left {
 		margin-left: 0 !important;
 	}
 

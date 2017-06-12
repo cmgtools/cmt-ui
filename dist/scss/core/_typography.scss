@@ -205,6 +205,13 @@ p, span, em, div, a {
 .reader {
 	font-size: $font-size-7;
 	line-height: $line-height-text;
+
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 // Coding - Required to highlight code snippets

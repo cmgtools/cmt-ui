@@ -1899,39 +1899,39 @@ html, body {
   .text.text-green-d {
     color: #56832A !important; }
 
-.mp .mp-none {
+.mp.mp-none {
   margin: 0 !important;
   padding: 0 !important; }
 
-.mp .mp-none-top {
+.mp.mp-none-top {
   margin-top: 0 !important;
   padding-top: 0 !important; }
 
-.mp .mp-none-right {
+.mp.mp-none-right {
   margin-right: 0 !important;
   padding-right: 0 !important; }
 
-.mp .mp-none-bottom {
+.mp.mp-none-bottom {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important; }
 
-.mp .mp-none-left {
+.mp.mp-none-left {
   margin-left: 0 !important;
   padding-left: 0 !important; }
 
-.padding .padding-none {
+.padding.padding-none {
   padding: 0 !important; }
 
-.padding .padding-none-top {
+.padding.padding-none-top {
   padding-top: 0 !important; }
 
-.padding .padding-none-right {
+.padding.padding-none-right {
   padding-right: 0 !important; }
 
-.padding .padding-none-bottom {
+.padding.padding-none-bottom {
   padding-bottom: 0 !important; }
 
-.padding .padding-none-left {
+.padding.padding-none-left {
   padding-left: 0 !important; }
 
 .padding.padding-default {
@@ -1989,19 +1989,19 @@ html, body {
   padding-left: 2rem;
   padding-right: 2rem; }
 
-.margin .margin-none {
+.margin.margin-none {
   margin: 0 !important; }
 
-.margin .margin-none-top {
+.margin.margin-none-top {
   margin-top: 0 !important; }
 
-.margin .margin-none-right {
+.margin.margin-none-right {
   margin-right: 0 !important; }
 
-.margin .margin-none-bottom {
+.margin.margin-none-bottom {
   margin-bottom: 0 !important; }
 
-.margin .margin-none-left {
+.margin.margin-none-left {
   margin-left: 0 !important; }
 
 .margin.margin-default {
@@ -2423,6 +2423,11 @@ p, span, em, div, a {
 .reader {
   font-size: 1em;
   line-height: 1.4; }
+  .reader h1, .reader h2, .reader h3, .reader h4, .reader h5, .reader h6, .reader .h1, .reader .h2, .reader .h3, .reader .h4, .reader .h5, .reader .h6, .reader .heading {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0; }
 
 pre {
   font-family: "Courier New", Courier, monospace;
@@ -3301,7 +3306,8 @@ Details: It defines the custom element styles as listed below:
         margin: 2px; }
 
 .cmt-select-wrap {
-  width: 100%; }
+  width: 100%;
+  display: inline-block; }
   .cmt-select-wrap select {
     display: none; }
   .cmt-select-wrap .cmt-select {
@@ -3395,11 +3401,17 @@ Details: It defines the custom element styles as listed below:
 
 .cmt-rating {
   text-align: left; }
-  .cmt-rating .star {
+  .cmt-rating .wrap-stars .star {
     display: inline-block;
     padding: 0.30em;
     margin-bottom: 0.75rem;
     cursor: pointer; }
+  .cmt-rating .wrap-messages .star-message {
+    display: none;
+    padding: 0.30em;
+    margin-bottom: 0.75rem; }
+    .cmt-rating .wrap-messages .star-message.selected {
+      display: inline-block; }
   .cmt-rating input[type=checkbox] + .label.label-rating::before, .cmt-rating input[type=radio] + .label.label-rating::before {
     margin-right: 8px; }
   .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
@@ -3785,7 +3797,7 @@ label {
   .frm-icon-element.element-xlarge {
     width: 250px !important; }
   .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button {
-    padding-left: 1.75em;
+    padding-left: 2em;
     width: 100%; }
   .frm-icon-element .icon, .frm-icon-element .cmti, .frm-icon-element .fa {
     position: absolute;
@@ -3793,11 +3805,11 @@ label {
     box-shadow: none;
     outline: none;
     font-size: 1em;
-    padding: 0.30em;
+    padding: 0.30em 0.5em;
     margin: 0; }
   .frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select, .frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button {
     padding-left: 0.30em;
-    padding-right: 1.75em; }
+    padding-right: 2em; }
   .frm-icon-element.icon-right .icon, .frm-icon-element.icon-right .cmti, .frm-icon-element.icon-right .fa {
     right: 0; }
 

@@ -298,7 +298,7 @@ input[type="submit"], input[type="button"], button {
 	}
 
 	input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
-		padding-left: 1.75em;
+		padding-left: 2em;
 		width: 100%;
 	}
 
@@ -309,7 +309,7 @@ input[type="submit"], input[type="button"], button {
 		box-shadow: none;
 		outline: none;
 		font-size: 1em;
-		padding: 0.30em;
+		padding: 0.30em 0.5em;
 		margin: 0;
 	}
 
@@ -318,7 +318,7 @@ input[type="submit"], input[type="button"], button {
 
 		input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
 			padding-left: 0.30em;
-			padding-right: 1.75em;
+			padding-right: 2em;
 		}
 
 		.icon, .cmti, .fa {
