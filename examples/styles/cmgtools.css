@@ -2351,32 +2351,44 @@ html, body {
 /**
  * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
-.font-size {
+.text .text-default {
   font-size: 1em; }
-  .font-size.font-size-xxlarge {
-    font-size: 7.2em; }
-  .font-size.font-size-xlarge {
-    font-size: 4.5em; }
-  .font-size.font-size-large {
-    font-size: 3.5em; }
-  .font-size.font-size-large-1 {
-    font-size: 2.67em; }
-  .font-size.font-size-large-2 {
-    font-size: 2em; }
-  .font-size.font-size-large-3 {
-    font-size: 1.58em; }
-  .font-size.font-size-large-4 {
-    font-size: 1.33em; }
-  .font-size.font-size-large-5 {
-    font-size: 1.17em; }
-  .font-size.font-size-large-6 {
-    font-size: 1.08em; }
-  .font-size.font-size-small {
-    font-size: 0.8em; }
-  .font-size.font-size-tiny {
-    font-size: 0.7em; }
-  .font-size.font-size-micro {
-    font-size: 0.5em; }
+
+.text.text-xxlarge {
+  font-size: 7.2em; }
+
+.text.text-xlarge {
+  font-size: 4.5em; }
+
+.text.text-large {
+  font-size: 3.5em; }
+
+.text.text-large-1 {
+  font-size: 2.67em; }
+
+.text.text-large-2 {
+  font-size: 2em; }
+
+.text.text-large-3 {
+  font-size: 1.58em; }
+
+.text.text-large-4 {
+  font-size: 1.33em; }
+
+.text.text-large-5 {
+  font-size: 1.17em; }
+
+.text.text-large-6 {
+  font-size: 1.08em; }
+
+.text.text-small {
+  font-size: 0.8em; }
+
+.text.text-tiny {
+  font-size: 0.7em; }
+
+.text.text-micro {
+  font-size: 0.5em; }
 
 .line-height {
   line-height: 1em; }
@@ -2415,7 +2427,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
   vertical-align: middle;
   line-height: 1.2;
   font-family: Verdana, Geneva, sans-serif;
-  padding: 0.25em; }
+  padding: 0;
+  padding-bottom: 0.25em; }
 
 p, span, em, div, a {
   font-size: 1em; }
@@ -2424,10 +2437,7 @@ p, span, em, div, a {
   font-size: 1em;
   line-height: 1.4; }
   .reader h1, .reader h2, .reader h3, .reader h4, .reader h5, .reader h6, .reader .h1, .reader .h2, .reader .h3, .reader .h4, .reader .h5, .reader .h6, .reader .heading {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0; }
+    padding: 0.25em 0; }
 
 pre {
   font-family: "Courier New", Courier, monospace;
@@ -3305,6 +3315,34 @@ Details: It defines the custom element styles as listed below:
       .wrap-icon-picker .icon-picker .icon-sets .wrap-icon {
         margin: 2px; }
 
+.cmt-select-native {
+  position: relative;
+  display: inline-block; }
+  .cmt-select-native select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0.5em;
+    cursor: pointer;
+    padding-right: 1.8em;
+    text-shadow: 0 0 0 #000; }
+  .cmt-select-native select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000; }
+  .cmt-select-native select::-ms-expand {
+    display: none; }
+  .cmt-select-native .icon, .cmt-select-native .cmti, .cmt-select-native .fa {
+    position: absolute;
+    right: 0;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 1em;
+    padding-top: 0.70em;
+    padding-left: 0.20em;
+    padding-right: 0.60em;
+    margin: 0; }
+
 .cmt-select-wrap {
   width: 100%;
   display: inline-block; }
@@ -3805,7 +3843,7 @@ label {
     box-shadow: none;
     outline: none;
     font-size: 1em;
-    padding: 0.30em 0.5em;
+    padding: 0.30em 0.40em;
     margin: 0; }
   .frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select, .frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button {
     padding-left: 0.30em;
@@ -3926,7 +3964,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 .frm-icon-element .cmti, .frm-icon-element .icon, .frm-icon-element .fa {
   line-height: 1.4; }
 
-.cmt-form label, .cmt-form input[type="text"], .cmt-form input[type="email"], .cmt-form input[type="password"], .cmt-form textarea, .cmt-form select {
+.cmt-form input[type="text"], .cmt-form input[type="email"], .cmt-form input[type="password"], .cmt-form textarea, .cmt-form select {
   margin-bottom: 0.5rem; }
 
 .cmt-form .frm-icon-element .cmti, .cmt-form .frm-icon-element .icon, .cmt-form .frm-icon-element .fa {
@@ -3942,6 +3980,9 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   margin-top: 0.5rem; }
 
 .cmt-form .form-group .help-block {
+  margin-bottom: 0.5rem; }
+
+.cmt-form .frm-split-40-60 label {
   margin-bottom: 0.5rem; }
 
 /**********************************************************************
@@ -5594,24 +5635,24 @@ Details: It defines the styles for pagination components as listed below:
 .pagination-full .info {
   display: inline-block;
   width: 40%;
-  padding: 0.25em 0 0.5em;
   text-align: left;
   font-weight: normal; }
 
 .pagination-full .page-links {
   display: inline-block;
   width: 59%;
-  padding: 0.25em 0 0.5em;
   text-align: right; }
   .pagination-full .page-links .pagination li, .pagination-full .page-links .pagination .page-link {
     display: inline-block;
     list-style: none;
     margin: 0;
-    margin-left: 3px; }
+    margin-left: 3px;
+    height: 2.1em;
+    line-height: 2.1em; }
     .pagination-full .page-links .pagination li span, .pagination-full .page-links .pagination li a, .pagination-full .page-links .pagination .page-link span, .pagination-full .page-links .pagination .page-link a {
       background-color: #87BA45;
       color: #96B0D6;
-      padding: 3px 8px;
+      padding: 0.5em 0.75em;
       text-decoration: none; }
     .pagination-full .page-links .pagination li .active a, .pagination-full .page-links .pagination .page-link .active a {
       background-color: #678d34;

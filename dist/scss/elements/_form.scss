@@ -239,27 +239,27 @@ input[type="submit"], input[type="button"], button {
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
 .frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button {
-	  @include rounded( $size-medium );
+	@include rounded( $size-medium );
 }
 
 .frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
 .frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button {
-	  @include rounded-top( $size-medium );
+	@include rounded-top( $size-medium );
 }
 
 .frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
 .frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button {
-	  @include rounded-right( $size-medium );
+	@include rounded-right( $size-medium );
 }
 
 .frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
 .frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button {
-	  @include rounded-bottom( $size-medium );
+	@include rounded-bottom( $size-medium );
 }
 
 .frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
 .frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button {
-	  @include rounded-left( $size-medium );
+	@include rounded-left( $size-medium );
 }
 
 /** Iconified Elements - Works in presence of CMT-Icons and Font Awsome. It can be overriden to use any preferred icon font library. */
@@ -309,7 +309,7 @@ input[type="submit"], input[type="button"], button {
 		box-shadow: none;
 		outline: none;
 		font-size: 1em;
-		padding: 0.30em 0.5em;
+		padding: 0.30em 0.40em;
 		margin: 0;
 	}
 
@@ -496,7 +496,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 // Generic Form to wrap form elements
 .cmt-form {
 
-	label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
+	input[type="text"], input[type="email"], input[type="password"], textarea, select {
 		margin-bottom: 0.5rem;
 	}
 
@@ -526,5 +526,9 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	// Required for Yii Forms
 	.form-group .help-block {
 		margin-bottom: 0.5rem; // To match with form elements
+	}
+
+	.frm-split-40-60 label {
+		margin-bottom: 0.5rem;
 	}
 }

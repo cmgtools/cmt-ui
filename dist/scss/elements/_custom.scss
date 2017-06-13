@@ -84,6 +84,44 @@ Details: It defines the custom element styles as listed below:
 
 // == Select ========================
 
+.cmt-select-native {
+	position: relative;
+	display: inline-block;
+
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		padding: 0.5em;
+		cursor: pointer;
+		padding-right: 1.8em;
+		text-shadow: 0 0 0 #000;
+	}
+
+	select:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+	}
+
+	select::-ms-expand {
+		display: none;
+	}
+
+	// Compatible with CMT-Icons and other frameworks
+	.icon, .cmti, .fa {
+		position: absolute;
+		right: 0;
+		border: none;
+		box-shadow: none;
+		outline: none;
+		font-size: 1em;
+		padding-top: 0.70em;
+		padding-left: 0.20em;
+		padding-right: 0.60em;
+		margin: 0;
+	}
+}
+
 .cmt-select-wrap {
 	width: 100%;
 	display: inline-block;

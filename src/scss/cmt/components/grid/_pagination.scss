@@ -144,17 +144,15 @@ Details: It defines the styles for pagination components as listed below:
     .info {
         display: inline-block;
         width: 40%;
-        padding: 0.25em 0 0.5em;
         text-align: left;
         font-weight: normal;
     }
-	
+
 	.page-links {
         display: inline-block;
         width: 59%;
-        padding: 0.25em 0 0.5em;
         text-align: right;
-		
+
 		.pagination {
 
 		    li, .page-link {
@@ -162,24 +160,26 @@ Details: It defines the styles for pagination components as listed below:
 		        list-style: none;
 		        margin: 0;
 		        margin-left: 3px;
-	
+				height: 2.1em;
+				line-height: 2.1em;
+
 		        span, a {
 		            background-color: $color-tertiary;
 		            color: $color-secondary-text;
-		            padding: 3px 8px;
+		            padding: 0.5em 0.75em;
 		            text-decoration: none;
 		        }
-	
+
 			    .active a {
 			        background-color: $color-tertiary-d;
 			        color: $color-tertiary-text-d;
 			    }
-			
+
 			    a:hover {
 			        background-color: $color-primary;
 			        color: $color-primary-text;
 			    }
-			
+
 			    .disabled span {
 			        background-color: $color-gray;
 			        color: $color-white;
