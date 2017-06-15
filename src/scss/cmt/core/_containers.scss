@@ -72,18 +72,22 @@ Details: It defines the grid system and basic containers as listed below:
 			width: 22.5%;
 		}
 
+		& >.col5 {
+			width: 17%;
+		}
+
 		@include responsive-max( screen-tablet-large ) {
 
 			&.max-cols-50 {
 
-				& >.col3, & >.col4 {
+				& >.col3, & >.col4, & >.col5 {
 					width: 47%;
 				}
 			}
 
 			&.max-cols-100 {
 
-				& >.col3, & >.col4 {
+				& >.col3, & >.col4, & >.col5 {
 					width: 98%;
 				}
 			}
@@ -93,7 +97,7 @@ Details: It defines the grid system and basic containers as listed below:
 
 			&.max-cols-50, &.max-cols-100 {
 
-				& >.col3, & >.col4 {
+				& >.col3, & >.col4, & >.col5 {
 					width: 98%;
 				}
 			}

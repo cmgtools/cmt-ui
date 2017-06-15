@@ -1,85 +1,210 @@
 .cmt-slider {
 	position: relative;
-	width: 450px;
-	margin: 0px auto;
-	overflow: hidden;
-	height: 150px;
 
-	.slides-wrap {
-		position: absolute;
-		top: 0px;
+	.slides-wrapper {
+		position: relative;
 		width: 100%;
 		height: 100%;
-	}
-
-	.slide {
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 150px;
-		height: 150px;
 		overflow: hidden;
-		//background-color: white;
-		color: black;
-		text-align: center;
+
+		.slides-wrap {
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+
+			.slider-slide {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				overflow: hidden;
+			}
+		}
 	}
 
-	.control {
-		color: #2B3442;
+	.slider-control {
 		cursor: pointer;
-		font-weight: bold;
-		height: 80px;
-		width: 48px;
 		position: relative;
+
+		&.slider-control-left {
+			float: left;
+		}
+
+		&.slider-control-right {
+			float: right;
+		}
+	}
+}
+
+// Basic slider having fixed width slides
+.cmt-slider-basic {
+	margin: 0px auto;
+	width: 450px;
+
+	.slides-wrapper {
+		height: 150px;
+
+		.slides-wrap {
+
+			.slider-slide {
+				width: 150px;
+				height: 150px;
+				background-color: $color-secondary;
+				color: $color-secondary-text;
+				text-align: center;
+			}
+		}
+	}
+
+	.slider-control {
+		color: $color-tertiary;
 		top: 35px;
-		background-image: url("../images/slider-arrow.png");
-		background-repeat: none;
-		background-position: 0px 0px;
-	}
+		width: 64px;
+		height: 80px;
 
-	.control-left {
-		float: left;
-		left: 20px;
-		background-position: 0px 80px;
-
-		&:hover {
-			background-position: 0px 0px;
-		}
-	}
-
-	.control-right {
-		float: right;
-		right: 20px;
-		background-position: -48px 80px;
-
-		&:hover {
-			background-position: -48px 0px;
-		}
-	}
-
-	&.slider-item-image {
-
-		.slide {
-			cursor: pointer;
-			@include shadow-inset( 1px, 1px, 100px, $color-black, $spread: 0px );
+		&.slider-control-left {
+			float: left;
+			left: 0;
+			background-color: $color-tertiary;
 
 			&:hover {
-				@include transit-all( $transit-eio, $transit-time-small );
-				@include shadow-inset( 0px, 0px, 0px, $color-black, $spread: 0px );
+				background-color: $color-tertiary-l;
 			}
 		}
 
-		.control-left {
-			background: none;
-			color: $color-white;
-			left: 0;
+		&.slider-control-right {
+			float: right;
+			right: 0;
+			background-color: $color-tertiary;
+
+			&:hover {
+				background-color: $color-tertiary-l;
+			}
 		}
 
-		.control-right {
-			background: none;
-			color: $color-white;
-			right: 0;
-			text-align: right;
+		&.slider-control-bkg {
+			background-image: url( "../images/slider-arrow.png" );
+			background-repeat: none;
+			background-position: 0px 0px;
+
+			&.slider-control-left {
+				left: 20px;
+				background-position: 0px 80px;
+
+				&:hover {
+					background-position: 0px 0px;
+				}
+			}
+
+			&.slider-control-right {
+				right: 20px;
+				background-position: -48px 80px;
+
+				&:hover {
+					background-position: -48px 0px;
+				}
+			}
+		}
+	}
+}
+
+// TODO: Add basic slider having controls overlapping on slide.
+
+// Basic slider having fixed width slider and slides to occupy full width. The controls will be placed on left and right side without overlapping slides.
+.cmt-slider-basic-fixed {
+	width: 1628px;
+
+	.slides-wrapper {
+		width: 1500px;
+		margin: 0 64px;
+	}
+
+	@include responsive-max( screen-desktop-large ) {
+		width: 1328px;
+
+		.slides-wrapper {
+			width: 1200px;
+		}
+	}
+
+	@include responsive-max( screen-desktop-medium ) {
+		width: 1028px;
+
+		.slides-wrapper {
+			width: 900px;
+		}
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+		width: 690px;
+
+		.slides-wrapper {
+			width: 600px;
+			height: 100px;
+			margin: 0 45px;
+
+			.slides-wrap {
+
+				.slider-slide {
+					width: 100px;
+					height: 100px;
+				}
+			}
+		}
+
+		.slider-control {
+			width: 45px;
+			height: 100px;
+		}
+	}
+
+	@include responsive-max( screen-tablet-small ) {
+		width: 440px;
+
+		.slides-wrapper {
+			width: 360px;
+			height: 90px;
+
+			.slides-wrap {
+
+				.slider-slide {
+					width: 90px;
+					height: 90px;
+				}
+			}
+		}
+
+		.slider-control {
+			width: 40px;
+			height: 90px;
+		}
+	}
+
+	@include responsive-max( screen-mobile-large ) {
+		width: 260px;
+
+		.slides-wrapper {
+			width: 180px;
+		}
+	}
+}
+
+// Image slider
+.cmt-slider-image {
+
+	.slides-wrapper {
+
+		.slides-wrap {
+
+			.slider-slide {
+				cursor: pointer; // Trigger Lightbox
+				@include shadow-inset( 1px, 1px, 100px, $color-black, $spread: 0px );
+
+				&:hover {
+					@include transit-all( $transit-eio, $transit-time-small );
+					@include shadow-inset( 0px, 0px, 0px, $color-black, $spread: 0px );
+				}
+			}
 		}
 	}
 }

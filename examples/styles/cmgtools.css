@@ -2574,13 +2574,15 @@ Details: It defines the grid system and basic containers as listed below:
       width: 30%; }
     .row.row-inline > .col4 {
       width: 22.5%; }
+    .row.row-inline > .col5 {
+      width: 17%; }
     @media only screen and (max-width: 1024px) {
-      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4 {
+      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4, .row.row-inline.max-cols-50 > .col5 {
         width: 47%; }
-      .row.row-inline.max-cols-100 > .col3, .row.row-inline.max-cols-100 > .col4 {
+      .row.row-inline.max-cols-100 > .col3, .row.row-inline.max-cols-100 > .col4, .row.row-inline.max-cols-100 > .col5 {
         width: 98%; } }
     @media only screen and (max-width: 480px) {
-      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4, .row.row-inline.max-cols-100 > .col3, .row.row-inline.max-cols-100 > .col4 {
+      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4, .row.row-inline.max-cols-50 > .col5, .row.row-inline.max-cols-100 > .col3, .row.row-inline.max-cols-100 > .col4, .row.row-inline.max-cols-100 > .col5 {
         width: 98%; } }
 
 .col {
@@ -4756,71 +4758,133 @@ Details: It defines the styles for popup components as listed below:
   z-index: 999999999; }
 
 .cmt-slider {
-  position: relative;
-  width: 450px;
-  margin: 0px auto;
-  overflow: hidden;
-  height: 150px; }
-  .cmt-slider .slides-wrap {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%; }
-  .cmt-slider .slide {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    color: black;
-    text-align: center; }
-  .cmt-slider .control {
-    color: #2B3442;
-    cursor: pointer;
-    font-weight: bold;
-    height: 80px;
-    width: 48px;
+  position: relative; }
+  .cmt-slider .slides-wrapper {
     position: relative;
-    top: 35px;
-    background-image: url("../images/slider-arrow.png");
-    background-repeat: none;
-    background-position: 0px 0px; }
-  .cmt-slider .control-left {
-    float: left;
-    left: 20px;
-    background-position: 0px 80px; }
-    .cmt-slider .control-left:hover {
-      background-position: 0px 0px; }
-  .cmt-slider .control-right {
-    float: right;
-    right: 20px;
-    background-position: -48px 80px; }
-    .cmt-slider .control-right:hover {
-      background-position: -48px 0px; }
-  .cmt-slider.slider-item-image .slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .cmt-slider .slides-wrapper .slides-wrap {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 100%; }
+      .cmt-slider .slides-wrapper .slides-wrap .slider-slide {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden; }
+  .cmt-slider .slider-control {
     cursor: pointer;
-    -webkit-box-shadow: inset 1px 1px 100px 0px #000000;
-    -moz-box-shadow: inset 1px 1px 100px 0px #000000;
-    box-shadow: inset 1px 1px 100px 0px #000000; }
-    .cmt-slider.slider-item-image .slide:hover {
-      -moz-transition: all 250ms ease-in-out 0s;
-      -ms-transition: all 250ms ease-in-out 0s;
-      -o-transition: all 250ms ease-in-out 0s;
-      -webkit-transition: all 250ms ease-in-out 0s;
-      transition: all 250ms ease-in-out 0s;
-      -webkit-box-shadow: inset 0px 0px 0px 0px #000000;
-      -moz-box-shadow: inset 0px 0px 0px 0px #000000;
-      box-shadow: inset 0px 0px 0px 0px #000000; }
-  .cmt-slider.slider-item-image .control-left {
-    background: none;
-    color: #FFFFFF;
-    left: 0; }
-  .cmt-slider.slider-item-image .control-right {
-    background: none;
-    color: #FFFFFF;
-    right: 0;
-    text-align: right; }
+    position: relative; }
+    .cmt-slider .slider-control.slider-control-left {
+      float: left; }
+    .cmt-slider .slider-control.slider-control-right {
+      float: right; }
+
+.cmt-slider-basic {
+  margin: 0px auto;
+  width: 450px; }
+  .cmt-slider-basic .slides-wrapper {
+    height: 150px; }
+    .cmt-slider-basic .slides-wrapper .slides-wrap .slider-slide {
+      width: 150px;
+      height: 150px;
+      background-color: #3C4655;
+      color: #96B0D6;
+      text-align: center; }
+  .cmt-slider-basic .slider-control {
+    color: #87BA45;
+    top: 35px;
+    width: 64px;
+    height: 80px; }
+    .cmt-slider-basic .slider-control.slider-control-left {
+      float: left;
+      left: 0;
+      background-color: #87BA45; }
+      .cmt-slider-basic .slider-control.slider-control-left:hover {
+        background-color: #a4cb72; }
+    .cmt-slider-basic .slider-control.slider-control-right {
+      float: right;
+      right: 0;
+      background-color: #87BA45; }
+      .cmt-slider-basic .slider-control.slider-control-right:hover {
+        background-color: #a4cb72; }
+    .cmt-slider-basic .slider-control.slider-control-bkg {
+      background-image: url("../images/slider-arrow.png");
+      background-repeat: none;
+      background-position: 0px 0px; }
+      .cmt-slider-basic .slider-control.slider-control-bkg.slider-control-left {
+        left: 20px;
+        background-position: 0px 80px; }
+        .cmt-slider-basic .slider-control.slider-control-bkg.slider-control-left:hover {
+          background-position: 0px 0px; }
+      .cmt-slider-basic .slider-control.slider-control-bkg.slider-control-right {
+        right: 20px;
+        background-position: -48px 80px; }
+        .cmt-slider-basic .slider-control.slider-control-bkg.slider-control-right:hover {
+          background-position: -48px 0px; }
+
+.cmt-slider-basic-fixed {
+  width: 1628px; }
+  .cmt-slider-basic-fixed .slides-wrapper {
+    width: 1500px;
+    margin: 0 64px; }
+  @media only screen and (max-width: 1600px) {
+    .cmt-slider-basic-fixed {
+      width: 1328px; }
+      .cmt-slider-basic-fixed .slides-wrapper {
+        width: 1200px; } }
+  @media only screen and (max-width: 1360px) {
+    .cmt-slider-basic-fixed {
+      width: 1028px; }
+      .cmt-slider-basic-fixed .slides-wrapper {
+        width: 900px; } }
+  @media only screen and (max-width: 1024px) {
+    .cmt-slider-basic-fixed {
+      width: 690px; }
+      .cmt-slider-basic-fixed .slides-wrapper {
+        width: 600px;
+        height: 100px;
+        margin: 0 45px; }
+        .cmt-slider-basic-fixed .slides-wrapper .slides-wrap .slider-slide {
+          width: 100px;
+          height: 100px; }
+      .cmt-slider-basic-fixed .slider-control {
+        width: 45px;
+        height: 100px; } }
+  @media only screen and (max-width: 768px) {
+    .cmt-slider-basic-fixed {
+      width: 440px; }
+      .cmt-slider-basic-fixed .slides-wrapper {
+        width: 360px;
+        height: 90px; }
+        .cmt-slider-basic-fixed .slides-wrapper .slides-wrap .slider-slide {
+          width: 90px;
+          height: 90px; }
+      .cmt-slider-basic-fixed .slider-control {
+        width: 40px;
+        height: 90px; } }
+  @media only screen and (max-width: 480px) {
+    .cmt-slider-basic-fixed {
+      width: 260px; }
+      .cmt-slider-basic-fixed .slides-wrapper {
+        width: 180px; } }
+
+.cmt-slider-image .slides-wrapper .slides-wrap .slider-slide {
+  cursor: pointer;
+  -webkit-box-shadow: inset 1px 1px 100px 0px #000000;
+  -moz-box-shadow: inset 1px 1px 100px 0px #000000;
+  box-shadow: inset 1px 1px 100px 0px #000000; }
+  .cmt-slider-image .slides-wrapper .slides-wrap .slider-slide:hover {
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s;
+    -webkit-box-shadow: inset 0px 0px 0px 0px #000000;
+    -moz-box-shadow: inset 0px 0px 0px 0px #000000;
+    box-shadow: inset 0px 0px 0px 0px #000000; }
 
 /* The basic gallery to be used for the default gallery widget from CMSGears core module. We can also use it for any other platform. 
  * The preferred image size for gallery item is 360 x 270. We can maintain the same aspect ratio for larger images for expected results. */
