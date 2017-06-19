@@ -1090,6 +1090,18 @@ Details: It define the mixins and their default implementation as listed below:
 	&.border-xlarge {
 		@include border( $size-xlarge, solid, $color-border );
 	}
+
+	&.border-primary {
+		@include border( $size-default, solid, $color-primary );
+	}
+
+	&.border-secondary {
+		@include border( $size-default, solid, $color-secondary );
+	}
+
+	&.border-tertiary {
+		@include border( $size-default, solid, $color-tertiary );
+	}
 }
 
 .border-top {
@@ -1109,6 +1121,18 @@ Details: It define the mixins and their default implementation as listed below:
 
 	&.border-top-xlarge {
 		@include border-top( $size-xlarge, solid, $color-border );
+	}
+
+	&.border-top-primary {
+		@include border-top( $size-default, solid, $color-primary );
+	}
+
+	&.border-top-secondary {
+		@include border-top( $size-default, solid, $color-secondary );
+	}
+
+	&.border-top-tertiary {
+		@include border-top( $size-default, solid, $color-tertiary );
 	}
 }
 
@@ -1130,6 +1154,18 @@ Details: It define the mixins and their default implementation as listed below:
 	&.border-right-xlarge {
 		@include border-right( $size-xlarge, solid, $color-border );
 	}
+
+	&.border-right-primary {
+		@include border-right( $size-default, solid, $color-primary );
+	}
+
+	&.border-right-secondary {
+		@include border-right( $size-default, solid, $color-secondary );
+	}
+
+	&.border-right-tertiary {
+		@include border-right( $size-default, solid, $color-tertiary );
+	}
 }
 
 .border-bottom {
@@ -1150,6 +1186,18 @@ Details: It define the mixins and their default implementation as listed below:
 	&.border-bottom-xlarge {
 		@include border-bottom( $size-xlarge, solid, $color-border );
 	}
+
+	&.border-bottom-primary {
+		@include border-bottom( $size-default, solid, $color-primary );
+	}
+
+	&.border-bottom-secondary {
+		@include border-bottom( $size-default, solid, $color-secondary );
+	}
+
+	&.border-bottom-tertiary {
+		@include border-bottom( $size-default, solid, $color-tertiary );
+	}
 }
 
 .border-left {
@@ -1169,6 +1217,18 @@ Details: It define the mixins and their default implementation as listed below:
 
 	&.border-left-xlarge {
 		@include border-left( $size-xlarge, solid, $color-border );
+	}
+
+	&.border-left-primary {
+		@include border-left( $size-default, solid, $color-primary );
+	}
+
+	&.border-left-secondary {
+		@include border-left( $size-default, solid, $color-secondary );
+	}
+
+	&.border-left-tertiary {
+		@include border-left( $size-default, solid, $color-tertiary );
 	}
 }
 

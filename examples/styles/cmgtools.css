@@ -876,6 +876,12 @@ Details: It define the mixins and their default implementation as listed below:
     border: 10px solid #3C4655; }
   .border.border-xlarge {
     border: 14px solid #3C4655; }
+  .border.border-primary {
+    border: 1px solid #F2F2F2; }
+  .border.border-secondary {
+    border: 1px solid #3C4655; }
+  .border.border-tertiary {
+    border: 1px solid #87BA45; }
 
 .border-top {
   border-top: 1px solid #3C4655; }
@@ -887,6 +893,12 @@ Details: It define the mixins and their default implementation as listed below:
     border-top: 10px solid #3C4655; }
   .border-top.border-top-xlarge {
     border-top: 14px solid #3C4655; }
+  .border-top.border-top-primary {
+    border-top: 1px solid #F2F2F2; }
+  .border-top.border-top-secondary {
+    border-top: 1px solid #3C4655; }
+  .border-top.border-top-tertiary {
+    border-top: 1px solid #87BA45; }
 
 .border-right {
   border-right: 1px solid #3C4655; }
@@ -898,6 +910,12 @@ Details: It define the mixins and their default implementation as listed below:
     border-right: 10px solid #3C4655; }
   .border-right.border-right-xlarge {
     border-right: 14px solid #3C4655; }
+  .border-right.border-right-primary {
+    border-right: 1px solid #F2F2F2; }
+  .border-right.border-right-secondary {
+    border-right: 1px solid #3C4655; }
+  .border-right.border-right-tertiary {
+    border-right: 1px solid #87BA45; }
 
 .border-bottom {
   border-bottom: 1px solid #3C4655; }
@@ -909,6 +927,12 @@ Details: It define the mixins and their default implementation as listed below:
     border-bottom: 10px solid #3C4655; }
   .border-bottom.border-bottom-xlarge {
     border-bottom: 14px solid #3C4655; }
+  .border-bottom.border-bottom-primary {
+    border-bottom: 1px solid #F2F2F2; }
+  .border-bottom.border-bottom-secondary {
+    border-bottom: 1px solid #3C4655; }
+  .border-bottom.border-bottom-tertiary {
+    border-bottom: 1px solid #87BA45; }
 
 .border-left {
   border-left: 1px solid #3C4655; }
@@ -920,6 +944,12 @@ Details: It define the mixins and their default implementation as listed below:
     border-left: 10px solid #3C4655; }
   .border-left.border-left-xlarge {
     border-left: 14px solid #3C4655; }
+  .border-left.border-left-primary {
+    border-left: 1px solid #F2F2F2; }
+  .border-left.border-left-secondary {
+    border-left: 1px solid #3C4655; }
+  .border-left.border-left-tertiary {
+    border-left: 1px solid #87BA45; }
 
 .gradient.gradient-linear {
   background-color: #3C4655;
