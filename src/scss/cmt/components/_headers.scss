@@ -32,11 +32,12 @@ Details: It defines the styles for header components as listed below:
 
 // == Basic Header ==================
 
-/* Basic Header having logo, main menu and mobile menu icon.
+/* Basic Header having fixed width logo, main menu and mobile menu icon.
  * Responsive approach - Desktop first
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
- * Mobile Menu - Placed on right side, hidden for desktop
+ * Mobile Menu - Placed on right side, hidden for desktop - Use it only if required.
+ * Main menu can alone do the job in most of the cases.
  */
 .header-basic {
 	background-color: $color-header;
@@ -44,7 +45,7 @@ Details: It defines the styles for header components as listed below:
 	position: relative;
 	z-index: 10000;
 
-	.logo {
+	.header-logo {
 		cursor: pointer;
 		margin: 5px;
 		width: 140px;
@@ -60,24 +61,22 @@ Details: It defines the styles for header components as listed below:
 		z-index: 1;
 	}
 
-	#btn-mobile-menu {
+	#menu-main-mobile {
+		display: none;
+	}
+
+	#btn-menu-mobile {
 		position: absolute;
 		right: 0px;
 		cursor: pointer;
 		margin: 10px;
 		display: none;
 		z-index: 2;
-
-		span {
-			width: 36px;
-			height: 36px;
-			display: inline-block;
-		}
 	}
 
 	@include responsive-max( screen-tablet-large ) {
 
-		.logo {
+		.header-logo {
 			width: 70px;
 		}
 

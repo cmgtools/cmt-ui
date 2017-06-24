@@ -179,14 +179,14 @@ Details: It define the mixins and their default implementation as listed below:
 * Media Queries     - These mixins are pre-defined media queries using the screen sizes declared in variables file. This section
 *                     includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .frm-split-40-60 .form-group, .sidebar-basic .title {
+.clearfix, .row, .frm-split-40-60 .form-group, .sidebar-basic .sidebar-header .sidebar-title {
   zoom: 1; }
-  .clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .sidebar-basic .title:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-basic .title:after {
+  .clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .sidebar-basic .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-basic .sidebar-header .sidebar-title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-basic .title:after {
+  .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-basic .sidebar-header .sidebar-title:after {
     clear: both; }
 
 .texture, .pattern {
@@ -867,15 +867,15 @@ Details: It define the mixins and their default implementation as listed below:
     text-shadow: inset 1px 1px 5px 0px rgba(86, 131, 42, 0.6); }
 
 .border {
-  border: 1px solid #3C4655; }
+  border: 1px solid #232831; }
   .border.border-small {
-    border: 3px solid #3C4655; }
+    border: 3px solid #232831; }
   .border.border-medium {
-    border: 5px solid #3C4655; }
+    border: 5px solid #232831; }
   .border.border-large {
-    border: 10px solid #3C4655; }
+    border: 10px solid #232831; }
   .border.border-xlarge {
-    border: 14px solid #3C4655; }
+    border: 14px solid #232831; }
   .border.border-primary {
     border: 1px solid #F2F2F2; }
   .border.border-secondary {
@@ -884,15 +884,15 @@ Details: It define the mixins and their default implementation as listed below:
     border: 1px solid #87BA45; }
 
 .border-top {
-  border-top: 1px solid #3C4655; }
+  border-top: 1px solid #232831; }
   .border-top.border-top-small {
-    border-top: 3px solid #3C4655; }
+    border-top: 3px solid #232831; }
   .border-top.border-top-medium {
-    border-top: 5px solid #3C4655; }
+    border-top: 5px solid #232831; }
   .border-top.border-top-large {
-    border-top: 10px solid #3C4655; }
+    border-top: 10px solid #232831; }
   .border-top.border-top-xlarge {
-    border-top: 14px solid #3C4655; }
+    border-top: 14px solid #232831; }
   .border-top.border-top-primary {
     border-top: 1px solid #F2F2F2; }
   .border-top.border-top-secondary {
@@ -901,15 +901,15 @@ Details: It define the mixins and their default implementation as listed below:
     border-top: 1px solid #87BA45; }
 
 .border-right {
-  border-right: 1px solid #3C4655; }
+  border-right: 1px solid #232831; }
   .border-right.border-right-small {
-    border-right: 3px solid #3C4655; }
+    border-right: 3px solid #232831; }
   .border-right.border-right-medium {
-    border-right: 5px solid #3C4655; }
+    border-right: 5px solid #232831; }
   .border-right.border-right-large {
-    border-right: 10px solid #3C4655; }
+    border-right: 10px solid #232831; }
   .border-right.border-right-xlarge {
-    border-right: 14px solid #3C4655; }
+    border-right: 14px solid #232831; }
   .border-right.border-right-primary {
     border-right: 1px solid #F2F2F2; }
   .border-right.border-right-secondary {
@@ -918,15 +918,15 @@ Details: It define the mixins and their default implementation as listed below:
     border-right: 1px solid #87BA45; }
 
 .border-bottom {
-  border-bottom: 1px solid #3C4655; }
+  border-bottom: 1px solid #232831; }
   .border-bottom.border-bottom-small {
-    border-bottom: 3px solid #3C4655; }
+    border-bottom: 3px solid #232831; }
   .border-bottom.border-bottom-medium {
-    border-bottom: 5px solid #3C4655; }
+    border-bottom: 5px solid #232831; }
   .border-bottom.border-bottom-large {
-    border-bottom: 10px solid #3C4655; }
+    border-bottom: 10px solid #232831; }
   .border-bottom.border-bottom-xlarge {
-    border-bottom: 14px solid #3C4655; }
+    border-bottom: 14px solid #232831; }
   .border-bottom.border-bottom-primary {
     border-bottom: 1px solid #F2F2F2; }
   .border-bottom.border-bottom-secondary {
@@ -935,15 +935,15 @@ Details: It define the mixins and their default implementation as listed below:
     border-bottom: 1px solid #87BA45; }
 
 .border-left {
-  border-left: 1px solid #3C4655; }
+  border-left: 1px solid #232831; }
   .border-left.border-left-small {
-    border-left: 3px solid #3C4655; }
+    border-left: 3px solid #232831; }
   .border-left.border-left-medium {
-    border-left: 5px solid #3C4655; }
+    border-left: 5px solid #232831; }
   .border-left.border-left-large {
-    border-left: 10px solid #3C4655; }
+    border-left: 10px solid #232831; }
   .border-left.border-left-xlarge {
-    border-left: 14px solid #3C4655; }
+    border-left: 14px solid #232831; }
   .border-left.border-left-primary {
     border-left: 1px solid #F2F2F2; }
   .border-left.border-left-secondary {
@@ -1700,6 +1700,24 @@ input[type="radio"] {
 input[type="checkbox"] {
   vertical-align: bottom; }
 
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #aaaaaa; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #aaaaaa;
+  opacity: 1; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #aaaaaa;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #aaaaaa; }
+
 /**********************************************************************
 Description: This file define the basic and common styling used by CMT-UI css framework.
 
@@ -1952,6 +1970,14 @@ html, body {
 .padding.padding-none {
   padding: 0 !important; }
 
+.padding.padding-none-v {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+.padding.padding-none-h {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
 .padding.padding-none-top {
   padding-top: 0 !important; }
 
@@ -2021,6 +2047,14 @@ html, body {
 
 .margin.margin-none {
   margin: 0 !important; }
+
+.margin.margin-none-v {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.margin.margin-none-h {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
 
 .margin.margin-none-top {
   margin-top: 0 !important; }
@@ -2314,9 +2348,6 @@ html, body {
   -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
   box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25); }
 
-.cmti, .fa {
-  vertical-align: middle; }
-
 /**********************************************************************
 Description: This file define the styles specific to typography available in CMT-UI css framework.
 
@@ -2467,7 +2498,10 @@ p, span, em, div, a {
   font-size: 1em;
   line-height: 1.4; }
   .reader h1, .reader h2, .reader h3, .reader h4, .reader h5, .reader h6, .reader .h1, .reader .h2, .reader .h3, .reader .h4, .reader .h5, .reader .h6, .reader .heading {
-    padding: 0.25em 0; }
+    padding: 0.5em 0; }
+
+.cmti, .fa {
+  vertical-align: middle; }
 
 pre {
   font-family: "Courier New", Courier, monospace;
@@ -2545,6 +2579,10 @@ a, .link {
     color: #298ccf; }
   a:active, a:hover, .link:active, .link:hover {
     color: #E74343; }
+
+.text-line {
+  overflow: hidden;
+  white-space: nowrap; }
 
 .text-with-line {
   width: 100%;
@@ -3416,11 +3454,51 @@ Details: It defines the custom element styles as listed below:
         width: 100%;
         overflow: hidden;
         cursor: pointer;
-        padding: 10px;
         background-color: #FFFFFF; }
       .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
         color: #FFFFFF;
         background-color: #E74343; }
+
+.cmt-multiselect {
+  position: relative;
+  background-color: #F2F2F2; }
+  .cmt-multiselect .cmt-selected {
+    cursor: pointer;
+    position: relative;
+    z-index: 100000;
+    padding-right: 1.5em; }
+    .cmt-multiselect .cmt-selected .s-text {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: left;
+      color: #363636;
+      font-size: 1em;
+      padding: 0.30em 0.25em; }
+    .cmt-multiselect .cmt-selected .s-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      padding: 0.25em; }
+    .cmt-multiselect .cmt-selected.disabled {
+      cursor: default; }
+  .cmt-multiselect .cmt-select-list {
+    position: absolute;
+    width: 100%;
+    background-color: #F2F2F2;
+    z-index: 100001;
+    max-height: 180px;
+    overflow-y: auto; }
+    .cmt-multiselect .cmt-select-list li {
+      width: 100%;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #FFFFFF; }
+    .cmt-multiselect .cmt-select-list li:hover {
+      color: #FFFFFF;
+      background-color: #E74343; }
 
 .cmt-choice input[type=checkbox], .cmt-choice input[type=radio] {
   cursor: pointer;
@@ -3608,6 +3686,9 @@ Details: It defines the custom element styles as listed below:
   background-color: #E74343 !important;
   color: #FFFFFF !important; }
 
+a.btn {
+  color: #FFFFFF; }
+
 .btn-group.btn-group-top-left {
   position: absolute;
   top: 0;
@@ -3687,22 +3768,6 @@ Details: It defines the styles of form elements as listed below:
 form {
   margin: 0 auto;
   position: relative; }
-  form.form-25 {
-    width: 25%; }
-  form.form-50 {
-    width: 50%; }
-  form.form-75 {
-    width: 75%; }
-  form.form-small {
-    width: 300px; }
-  form.form-medium {
-    width: 450px; }
-  form.form-large {
-    width: 600px; }
-  @media only screen and (max-width: 1024px) {
-    form.form-25, form.form-50, form.form-75, form.form-small, form.form-medium, form.form-large {
-      width: 80%;
-      padding: 1rem 2%; } }
 
 .btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
   border: none;
@@ -3713,21 +3778,21 @@ form {
   margin: 0;
   display: inline-block; }
 
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-select-wrap, .element {
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .element, .cmt-select-wrap {
   width: 100%; }
-  label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.cmt-select-wrap, .element-25.element {
+  label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.element, .element-25.cmt-select-wrap {
     width: 25% !important; }
-  label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.cmt-select-wrap, .element-50.element {
+  label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.element, .element-50.cmt-select-wrap {
     width: 50% !important; }
-  label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.cmt-select-wrap, .element-75.element {
+  label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.element, .element-75.cmt-select-wrap {
     width: 75% !important; }
-  label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.cmt-select-wrap, .element-small.element {
+  label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.element, .element-small.cmt-select-wrap {
     width: 80px !important; }
-  label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.cmt-select-wrap, .element-medium.element {
+  label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.element, .element-medium.cmt-select-wrap {
     width: 120px !important; }
-  label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.cmt-select-wrap, .element-large.element {
+  label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.element, .element-large.cmt-select-wrap {
     width: 180px !important; }
-  label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.cmt-select-wrap, .element-xlarge.element {
+  label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.element, .element-xlarge.cmt-select-wrap {
     width: 250px !important; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
@@ -3780,72 +3845,18 @@ label {
   content: " *";
   color: #B42A1A; }
 
-.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
-  width: 100%; }
+.element {
+  display: inline-block; }
 
-.frm-split-40-60 label, .element-40 {
-  clear: both;
-  width: 40%;
-  float: left; }
+input[type="submit"], input[type="button"], button, .btn, .cmt-select .cmt-selected {
+  line-height: 1.4; }
 
-.element-40 label {
-  width: 100%; }
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
+  line-height: 1.4; }
 
-.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60 {
-  width: 60%;
-  float: left; }
-
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 select {
-  width: 100%; }
-
-.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
-.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -khtml-border-radius: 5px; }
-
-.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
-.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button {
-  -moz-border-radius-top-left: 5px;
-  -moz-border-radius-top-right: 5px;
-  -webkit-border-radius-top-left: 5px;
-  -webkit-border-radius-top-right: 5px;
-  border-radius: 5px 5px 0 0;
-  -khtml-border-radius-top-left: 5px;
-  -khtml-border-radius-top-right: 5px; }
-
-.frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
-.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button {
-  -moz-border-radius-top-right: 5px;
-  -moz-border-radius-bottom-right: 5px;
-  -webkit-border-radius-top-right: 5px;
-  -webkit-border-radius-bottom-right: 5px;
-  border-radius: 0 5px 5px 0;
-  -khtml-border-radius-top-right: 5px;
-  -khtml-border-radius-bottom-right: 5px; }
-
-.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
-.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button {
-  -moz-border-radius-bottom-left: 5px;
-  -moz-border-radius-bottom-right: 5px;
-  -webkit-border-radius-bottom-left: 5px;
-  -webkit-border-radius-bottom-right: 5px;
-  border-radius: 0 0 5px 5px;
-  -khtml-border-radius-bottom-left: 5px;
-  -khtml-border-radius-bottom-right: 5px; }
-
-.frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
-.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button {
-  -moz-border-radius-top-left: 5px;
-  -moz-border-radius-bottom-left: 5px;
-  -webkit-border-radius-top-left: 5px;
-  -webkit-border-radius-bottom-left: 5px;
-  border-radius: 5px 0 0 5px;
-  -khtml-border-radius-top-left: 5px;
-  -khtml-border-radius-bottom-left: 5px; }
+.btn-icon {
+  padding: 0.30em 0.5em;
+  line-height: 1.4; }
 
 /** Iconified Elements - Works in presence of CMT-Icons and Font Awsome. It can be overriden to use any preferred icon font library. */
 .frm-icon-element {
@@ -3866,7 +3877,8 @@ label {
     width: 180px !important; }
   .frm-icon-element.element-xlarge {
     width: 250px !important; }
-  .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button {
+  .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button,
+  .frm-icon-element .btn {
     padding-left: 2em;
     width: 100%; }
   .frm-icon-element .icon, .frm-icon-element .cmti, .frm-icon-element .fa {
@@ -3876,39 +3888,14 @@ label {
     outline: none;
     font-size: 1em;
     padding: 0.30em 0.40em;
-    margin: 0; }
-  .frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select, .frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button {
+    margin: 0;
+    line-height: 1.4; }
+  .frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select, .frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button,
+  .frm-icon-element.icon-right .btn {
     padding-left: 0.30em;
     padding-right: 2em; }
   .frm-icon-element.icon-right .icon, .frm-icon-element.icon-right .cmti, .frm-icon-element.icon-right .fa {
     right: 0; }
-
-.frm-split-40-60 .frm-icon-element {
-  width: 60%;
-  float: left; }
-  .frm-split-40-60 .frm-icon-element input[type="text"], .frm-split-40-60 .frm-icon-element input[type="email"], .frm-split-40-60 .frm-icon-element input[type="password"], .frm-split-40-60 .frm-icon-element textarea, .frm-split-40-60 .frm-icon-element select, .frm-split-40-60 .frm-icon-element input[type="submit"], .frm-split-40-60 .frm-icon-element input[type="button"], .frm-split-40-60 .frm-icon-element button {
-    float: none; }
-
-.frm-split-40-60 .ignore-40-60 .frm-icon-element {
-  width: 100%; }
-
-::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #aaaaaa; }
-
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #aaaaaa;
-  opacity: 1; }
-
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #aaaaaa;
-  opacity: 1; }
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #aaaaaa; }
 
 .cmt-checkbox, .cmt-switch {
   background: none; }
@@ -3916,22 +3903,16 @@ label {
     background: none;
     color: #363636; }
 
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
-  width: 60%;
-  float: left; }
-
-.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap {
-  width: 100%; }
-
-.element {
-  display: inline-block; }
-
+.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
+.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button,
 .frm-rounded-all .btn {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   -khtml-border-radius: 5px; }
 
+.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
+.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button,
 .frm-rounded-top .btn {
   -moz-border-radius-top-left: 5px;
   -moz-border-radius-top-right: 5px;
@@ -3941,6 +3922,8 @@ label {
   -khtml-border-radius-top-left: 5px;
   -khtml-border-radius-top-right: 5px; }
 
+.frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
+.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button,
 .frm-rounded-right .btn {
   -moz-border-radius-top-right: 5px;
   -moz-border-radius-bottom-right: 5px;
@@ -3950,6 +3933,8 @@ label {
   -khtml-border-radius-top-right: 5px;
   -khtml-border-radius-bottom-right: 5px; }
 
+.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
+.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button,
 .frm-rounded-bottom .btn {
   -moz-border-radius-bottom-left: 5px;
   -moz-border-radius-bottom-right: 5px;
@@ -3959,6 +3944,8 @@ label {
   -khtml-border-radius-bottom-left: 5px;
   -khtml-border-radius-bottom-right: 5px; }
 
+.frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
+.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button,
 .frm-rounded-left .btn {
   -moz-border-radius-top-left: 5px;
   -moz-border-radius-bottom-left: 5px;
@@ -3968,54 +3955,93 @@ label {
   -khtml-border-radius-top-left: 5px;
   -khtml-border-radius-bottom-left: 5px; }
 
-.frm-icon-element .btn {
-  padding-left: 1.75em; }
+.form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select {
+  margin-bottom: 0.5rem; }
 
-.frm-icon-element.icon-right .btn {
-  padding-left: 0.30em;
-  padding-right: 1.75em; }
+.form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
+  margin-bottom: 0.5rem; }
 
-.frm-split-40-60 .frm-icon-element .btn {
-  float: none; }
+.form .cmt-checkbox, .form .cmt-switch, .form .cmt-select-wrap {
+  margin-bottom: 0.5rem; }
+
+.form .warning, .form .error, .form .success, .form .info {
+  margin-bottom: 0.5rem; }
+
+.form .message.warning, .form .message.error, .form .message.success, .form .message.info {
+  margin-top: 0.5rem; }
+
+.form .form-group .help-block {
+  margin-bottom: 0.5rem; }
+
+.form .frm-split-40-60 label {
+  margin-bottom: 0.5rem; }
+
+.form.form-25 {
+  width: 25%; }
+
+.form.form-50 {
+  width: 50%; }
+
+.form.form-75 {
+  width: 75%; }
+
+.form.form-small {
+  width: 300px; }
+
+.form.form-medium {
+  width: 450px; }
+
+.form.form-large {
+  width: 600px; }
+
+@media only screen and (max-width: 1024px) {
+  .form.form-25, .form.form-50, .form.form-75, .form.form-small, .form.form-medium, .form.form-large {
+    width: 80%;
+    padding: 1rem 2%; } }
+
+.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
+  width: 100%; }
+
+.frm-split-40-60 label, .element-40 {
+  clear: both;
+  width: 40%;
+  float: left; }
+
+.element-40 label {
+  width: 100%; }
+
+.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
+  width: 60%;
+  float: left; }
+
+.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
+.element-60 textarea, .element-60 select,
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap {
+  width: 100%; }
+
+.frm-split-40-60 .frm-icon-element {
+  width: 60%;
+  float: left; }
+  .frm-split-40-60 .frm-icon-element input[type="text"], .frm-split-40-60 .frm-icon-element input[type="email"], .frm-split-40-60 .frm-icon-element input[type="password"], .frm-split-40-60 .frm-icon-element textarea, .frm-split-40-60 .frm-icon-element select, .frm-split-40-60 .frm-icon-element input[type="submit"], .frm-split-40-60 .frm-icon-element input[type="button"], .frm-split-40-60 .frm-icon-element button,
+  .frm-split-40-60 .frm-icon-element .btn {
+    float: none; }
+
+.frm-split-40-60 .ignore-40-60 .frm-icon-element {
+  width: 100%; }
 
 .frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
-.frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
+.frm-ignore-100 .btn, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
   float: none;
   width: auto; }
 
-.btn-icon {
-  padding: 0.30em 0.5em;
-  line-height: 1.4; }
-
-input[type="submit"], input[type="button"], button, .btn, .cmt-select .cmt-selected {
-  line-height: 1.4; }
-
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
-  line-height: 1.4; }
-
-.frm-icon-element .cmti, .frm-icon-element .icon, .frm-icon-element .fa {
-  line-height: 1.4; }
-
-.cmt-form input[type="text"], .cmt-form input[type="email"], .cmt-form input[type="password"], .cmt-form textarea, .cmt-form select {
-  margin-bottom: 0.5rem; }
-
-.cmt-form .frm-icon-element .cmti, .cmt-form .frm-icon-element .icon, .cmt-form .frm-icon-element .fa {
-  margin-bottom: 0.5rem; }
-
-.cmt-form .cmt-checkbox, .cmt-form .cmt-switch, .cmt-form .cmt-select-wrap {
-  margin-bottom: 0.5rem; }
-
-.cmt-form .warning, .cmt-form .error, .cmt-form .success, .cmt-form .info {
-  margin-bottom: 0.5rem; }
-
-.cmt-form .message.warning, .cmt-form .message.error, .cmt-form .message.success, .cmt-form .message.info {
-  margin-top: 0.5rem; }
-
-.cmt-form .form-group .help-block {
-  margin-bottom: 0.5rem; }
-
-.cmt-form .frm-split-40-60 label {
-  margin-bottom: 0.5rem; }
+@media only screen and (max-width: 480px) {
+  .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+    width: 100%; }
+  .frm-split-40-60 .help-block {
+    padding-left: 0; } }
 
 /**********************************************************************
 Description: It defines the table styles for CMT-UI css framework.
@@ -4547,12 +4573,12 @@ Details: It defines the styles for breadcrumbs.
 ***********************************************************************/
 .breadcrumb {
   list-style: none; }
+  .breadcrumb .breadcrumb-seperator {
+    padding: 0 0.25em; }
   .breadcrumb li {
     display: inline-block; }
   .breadcrumb a {
     display: inline-block; }
-  .breadcrumb .seperator {
-    padding: 0 0.25em; }
 
 /**********************************************************************
 Description: It defines the styles for header components available in CMT-UI css framework.
@@ -4578,18 +4604,19 @@ Details: It defines the styles for header components as listed below:
     width: 100%;
     z-index: 10000; }
 
-/* Basic Header having logo, main menu and mobile menu icon.
+/* Basic Header having fixed width logo, main menu and mobile menu icon.
  * Responsive approach - Desktop first
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
- * Mobile Menu - Placed on right side, hidden for desktop
+ * Mobile Menu - Placed on right side, hidden for desktop - Use it only if required.
+ * Main menu can alone do the job in most of the cases.
  */
 .header-basic {
   background-color: #363636;
   color: #ffffff;
   position: relative;
   z-index: 10000; }
-  .header-basic .logo {
+  .header-basic .header-logo {
     cursor: pointer;
     margin: 5px;
     width: 140px;
@@ -4601,19 +4628,17 @@ Details: It defines the styles for header components as listed below:
     text-align: right;
     display: block;
     z-index: 1; }
-  .header-basic #btn-mobile-menu {
+  .header-basic #menu-main-mobile {
+    display: none; }
+  .header-basic #btn-menu-mobile {
     position: absolute;
     right: 0px;
     cursor: pointer;
     margin: 10px;
     display: none;
     z-index: 2; }
-    .header-basic #btn-mobile-menu span {
-      width: 36px;
-      height: 36px;
-      display: inline-block; }
   @media only screen and (max-width: 1024px) {
-    .header-basic .logo {
+    .header-basic .header-logo {
       width: 70px; }
     .header-basic #menu-main {
       margin-top: 55px;
@@ -4632,8 +4657,9 @@ Details: It defines the styles for footer components as listed below:
 ***********************************************************************/
 .footer {
   position: relative; }
-  .footer.sticky {
+  .footer.footer-sticky {
     position: absolute;
+    width: 100%;
     left: 0px;
     bottom: 0px; }
   @media only screen and (max-width: 1024px) {
@@ -4647,39 +4673,47 @@ Details: It defines the styles for footer components as listed below:
   min-height: 50px;
   position: relative;
   z-index: 10000; }
-  .footer-basic .text {
-    color: #363636; }
 
 /**********************************************************************
-Description: It defines the styles for sidebar components available in CMT-UI css framework.
+Description: It defines the styles for sidebar components available in CMT-UI CSS framework.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for sidebar components as listed below:
 
-* Sidebar      - The barebone sidebar class with minimum styles.
+* Sidebar         - The barebone sidebar class with minimum styles.
 *
-* Basic        - The basic footer define the styles for easy to use sidebar.
+* Basic           -	The basic sidebar defines the styles of sidebar having header with button to trigger show/hide content for
+					mobile devices. The header will be displayed for small screens and it's trigger can be used to toggle the content.
+
 ***********************************************************************/
+.sidebar {
+  position: relative; }
+  .sidebar .sidebar-header {
+    position: relative; }
+  .sidebar .sidebar-content-wrap {
+    position: relative; }
+
 .sidebar-basic {
   position: relative; }
-  .sidebar-basic .title {
-    display: none;
-    background-color: #87BA45;
-    line-height: 32px;
-    padding: 5px;
-    font-size: 16px; }
-    .sidebar-basic .title span {
+  .sidebar-basic .sidebar-header {
+    display: none; }
+    .sidebar-basic .sidebar-header .sidebar-title {
+      background-color: #87BA45;
+      line-height: 1.33em;
+      padding: 0.5rem;
+      font-size: 1.17em; }
+    .sidebar-basic .sidebar-header .sidebar-control {
       float: right;
       display: inline-block;
       cursor: pointer; }
-  .sidebar-basic .menu {
+  .sidebar-basic .sidebar-content-wrap {
     display: block; }
   @media only screen and (max-width: 1024px) {
-    .sidebar-basic .title {
+    .sidebar-basic .sidebar-header {
       display: block; }
-    .sidebar-basic .menu {
-      display: none; } }
+      .sidebar-basic .sidebar-header .sidebar-content-wrap {
+        display: none; } }
 
 /**********************************************************************
 Description: It defines the styles for popup components available in CMT-UI css framework.
@@ -4712,7 +4746,7 @@ Details: It defines the styles for popup components as listed below:
     width: 100%;
     height: 100%;
     z-index: 10; }
-  .popup > .texture {
+  .popup .popup-bkg-texture {
     z-index: 15; }
   .popup .popup-screen-listener {
     position: absolute;
@@ -4731,22 +4765,13 @@ Details: It defines the styles for popup components as listed below:
       width: 100%;
       height: 100%;
       z-index: 100; }
-    .popup .popup-data.popup-data-small {
-      height: 200px;
-      width: 400px; }
-    .popup .popup-data.popup-data-medium {
-      height: 300px;
-      width: 600px; }
-      .popup .popup-data.popup-data-medium .popup-content {
-        height: 230px; }
-    .popup .popup-data.popup-data-large {
-      height: 400px;
-      width: 800px; }
-    .popup .popup-data .popup-wrap-title {
+    .popup .popup-data .popup-data-bkg-texture {
+      z-index: 15; }
+    .popup .popup-data .popup-header {
       position: relative;
       z-index: 150;
       width: 100%; }
-    .popup .popup-data .popup-content {
+    .popup .popup-data .popup-wrap-content .popup-content {
       position: relative;
       z-index: 150; }
     .popup .popup-data .popup-close {
@@ -4754,6 +4779,15 @@ Details: It defines the styles for popup components as listed below:
       z-index: 200;
       display: inline-block;
       cursor: pointer; }
+    .popup .popup-data.popup-data-small {
+      height: 200px;
+      width: 400px; }
+    .popup .popup-data.popup-data-medium {
+      height: 300px;
+      width: 600px; }
+    .popup .popup-data.popup-data-large {
+      height: 400px;
+      width: 800px; }
   @media only screen and (max-width: 768px) {
     .popup .popup-data-small, .popup .popup-data-medium, .popup .popup-data-large {
       width: 90% !important; } }
@@ -4764,14 +4798,14 @@ Details: It defines the styles for popup components as listed below:
 .popup-basic .popup-data {
   background-color: #3C4655;
   color: #96B0D6; }
-  .popup-basic .popup-data .popup-wrap-title {
+  .popup-basic .popup-data .popup-header {
     background-color: #87BA45;
     color: #E6E6E6;
     padding: 1rem; }
-    .popup-basic .popup-data .popup-wrap-title .popup-title {
+    .popup-basic .popup-data .popup-header .popup-title {
       font-size: 1.5em;
       font-weight: bold; }
-  .popup-basic .popup-data .popup-content {
+  .popup-basic .popup-data .popup-wrap-content {
     padding: 1rem;
     overflow-y: auto; }
   .popup-basic .popup-data .popup-close {
@@ -4787,126 +4821,145 @@ Details: It defines the styles for popup components as listed below:
   height: 100%;
   z-index: 999999999; }
 
+/**********************************************************************
+Description: It defines the styles of cmt slider available in CMT-UI css framework. It requires cmtSlider plugin from CMT-JS library.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of cmt slider as listed below:
+
+* CMT Slider  - The barebone slider with minimum styles to arrange slides and controls.
+*
+* Basic       - The basic slider defines the styles of slider having fixed with slides and slider width is also defined.
+*
+* Basic Fixed - The basic fixed slider works on top of basic slider. It's full width and responsive slider considering
+				slides are visible fully on each device. The controls will be placed on left and right side without
+				overlapping slides.
+
+* Basic Lightbox - The lightbox will add effects on slides to show them on a lightbox. A larger image might be displayed
+				around the slides.
+
+***********************************************************************/
 .cmt-slider {
   position: relative; }
-  .cmt-slider .slides-wrapper {
+  .cmt-slider .cmt-slider-slides-wrap {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden; }
-    .cmt-slider .slides-wrapper .slides-wrap {
+    .cmt-slider .cmt-slider-slides-wrap .cmt-slider-slides {
       position: absolute;
       top: 0px;
       width: 100%;
       height: 100%; }
-      .cmt-slider .slides-wrapper .slides-wrap .slider-slide {
+      .cmt-slider .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
         position: absolute;
         top: 0px;
         left: 0px;
         overflow: hidden; }
-  .cmt-slider .slider-control {
+  .cmt-slider .cmt-slider-control {
     cursor: pointer;
     position: relative; }
-    .cmt-slider .slider-control.slider-control-left {
+    .cmt-slider .cmt-slider-control.cmt-slider-control-left {
       float: left; }
-    .cmt-slider .slider-control.slider-control-right {
+    .cmt-slider .cmt-slider-control.cmt-slider-control-right {
       float: right; }
 
 .cmt-slider-basic {
   margin: 0px auto;
   width: 450px; }
-  .cmt-slider-basic .slides-wrapper {
+  .cmt-slider-basic .cmt-slider-slides-wrap {
     height: 150px; }
-    .cmt-slider-basic .slides-wrapper .slides-wrap .slider-slide {
+    .cmt-slider-basic .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
       width: 150px;
       height: 150px;
       background-color: #3C4655;
       color: #96B0D6;
       text-align: center; }
-  .cmt-slider-basic .slider-control {
+  .cmt-slider-basic .cmt-slider-control {
     color: #87BA45;
     top: 35px;
     width: 64px;
     height: 80px; }
-    .cmt-slider-basic .slider-control.slider-control-left {
+    .cmt-slider-basic .cmt-slider-control.cmt-slider-control-left {
       float: left;
       left: 0;
       background-color: #87BA45; }
-      .cmt-slider-basic .slider-control.slider-control-left:hover {
+      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-left:hover {
         background-color: #a4cb72; }
-    .cmt-slider-basic .slider-control.slider-control-right {
+    .cmt-slider-basic .cmt-slider-control.cmt-slider-control-right {
       float: right;
       right: 0;
       background-color: #87BA45; }
-      .cmt-slider-basic .slider-control.slider-control-right:hover {
+      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-right:hover {
         background-color: #a4cb72; }
-    .cmt-slider-basic .slider-control.slider-control-bkg {
+    .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg {
       background-image: url("../images/slider-arrow.png");
       background-repeat: none;
       background-position: 0px 0px; }
-      .cmt-slider-basic .slider-control.slider-control-bkg.slider-control-left {
+      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-left {
         left: 20px;
         background-position: 0px 80px; }
-        .cmt-slider-basic .slider-control.slider-control-bkg.slider-control-left:hover {
+        .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-left:hover {
           background-position: 0px 0px; }
-      .cmt-slider-basic .slider-control.slider-control-bkg.slider-control-right {
+      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-right {
         right: 20px;
         background-position: -48px 80px; }
-        .cmt-slider-basic .slider-control.slider-control-bkg.slider-control-right:hover {
+        .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg.cmt-slider-control-right:hover {
           background-position: -48px 0px; }
 
 .cmt-slider-basic-fixed {
   width: 1628px; }
-  .cmt-slider-basic-fixed .slides-wrapper {
+  .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
     width: 1500px;
     margin: 0 64px; }
   @media only screen and (max-width: 1600px) {
     .cmt-slider-basic-fixed {
       width: 1328px; }
-      .cmt-slider-basic-fixed .slides-wrapper {
+      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
         width: 1200px; } }
   @media only screen and (max-width: 1360px) {
     .cmt-slider-basic-fixed {
       width: 1028px; }
-      .cmt-slider-basic-fixed .slides-wrapper {
+      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
         width: 900px; } }
   @media only screen and (max-width: 1024px) {
     .cmt-slider-basic-fixed {
       width: 690px; }
-      .cmt-slider-basic-fixed .slides-wrapper {
+      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
         width: 600px;
         height: 100px;
         margin: 0 45px; }
-        .cmt-slider-basic-fixed .slides-wrapper .slides-wrap .slider-slide {
+        .cmt-slider-basic-fixed .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
           width: 100px;
           height: 100px; }
-      .cmt-slider-basic-fixed .slider-control {
+      .cmt-slider-basic-fixed .cmt-slider-control {
         width: 45px;
         height: 100px; } }
   @media only screen and (max-width: 768px) {
     .cmt-slider-basic-fixed {
       width: 440px; }
-      .cmt-slider-basic-fixed .slides-wrapper {
+      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
         width: 360px;
         height: 90px; }
-        .cmt-slider-basic-fixed .slides-wrapper .slides-wrap .slider-slide {
+        .cmt-slider-basic-fixed .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
           width: 90px;
           height: 90px; }
-      .cmt-slider-basic-fixed .slider-control {
+      .cmt-slider-basic-fixed .cmt-slider-control {
         width: 40px;
         height: 90px; } }
   @media only screen and (max-width: 480px) {
     .cmt-slider-basic-fixed {
       width: 260px; }
-      .cmt-slider-basic-fixed .slides-wrapper {
+      .cmt-slider-basic-fixed .cmt-slider-slides-wrap {
         width: 180px; } }
 
-.cmt-slider-image .slides-wrapper .slides-wrap .slider-slide {
+.cmt-slider-lightbox .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide {
   cursor: pointer;
   -webkit-box-shadow: inset 1px 1px 100px 0px #000000;
   -moz-box-shadow: inset 1px 1px 100px 0px #000000;
   box-shadow: inset 1px 1px 100px 0px #000000; }
-  .cmt-slider-image .slides-wrapper .slides-wrap .slider-slide:hover {
+  .cmt-slider-lightbox .cmt-slider-slides-wrap .cmt-slider-slides .cmt-slider-slide:hover {
     -moz-transition: all 250ms ease-in-out 0s;
     -ms-transition: all 250ms ease-in-out 0s;
     -o-transition: all 250ms ease-in-out 0s;
@@ -4916,7 +4969,41 @@ Details: It defines the styles for popup components as listed below:
     -moz-box-shadow: inset 0px 0px 0px 0px #000000;
     box-shadow: inset 0px 0px 0px 0px #000000; }
 
-/* The basic gallery to be used for the default gallery widget from CMSGears core module. We can also use it for any other platform. 
+/**********************************************************************
+Description: It defines the styles for gallery components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* Gallery     - The gallery component defines the barebone classes required to display gallery.
+*
+* Basic       - The basic gallery display items with flipper.
+
+***********************************************************************/
+.gallery {
+  position: relative; }
+  .gallery .gallery-header {
+    position: relative; }
+  .gallery .gallery-content-wrap {
+    position: relative; }
+  .gallery .gallery-items-wrap {
+    position: relative; }
+
+.gallery-basic {
+  background-color: #F2F2F2;
+  color: #363636; }
+  .gallery-basic .gallery-header {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+  .gallery-basic .gallery-content-wrap {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .gallery-basic .gallery-footer {
+    background-color: #232831;
+    color: #c2d1e7; }
+
+/* The basic gallery to be used for the default gallery widget from CMSGears core module. We can also use it for any other platform.
  * The preferred image size for gallery item is 360 x 270. We can maintain the same aspect ratio for larger images for expected results. */
 /*
 .gallery-basic {
@@ -5069,13 +5156,13 @@ Details: It defines the styles for popup components as listed below:
 	.flip-container {
 		width: 100%;
 		height: 150px;
-		
+
 		.front, .back {
 			width: 100%;
 			height: 150px;
 		}
 	}
-	
+
 	.link {
 		display: inline-block;
 		width: 100%;
@@ -5084,10 +5171,10 @@ Details: It defines the styles for popup components as listed below:
 	}
 
 	@include responsive-min( screen-mobile-small ) {
-		
+
 		.flip-container {
 			height: 180px;
-			
+
 			.front, .back {
 				height: 180px;
 			}
@@ -5095,10 +5182,10 @@ Details: It defines the styles for popup components as listed below:
 	}
 
 	@include responsive-min( screen-mobile-large ) {
-		
+
 		.flip-container {
 			height: 200px;
-			
+
 			.front, .back {
 				height: 200px;
 			}
@@ -5106,10 +5193,10 @@ Details: It defines the styles for popup components as listed below:
 	}
 
 	@include responsive-min( screen-tablet-small ) {
-		
+
 		.flip-container {
 			height: 220px;
-			
+
 			.front, .back {
 				height: 220px;
 			}
@@ -5120,7 +5207,7 @@ Details: It defines the styles for popup components as listed below:
 
 		.flip-container {
 			height: 175px;
-			
+
 			.front, .back {
 				height: 175px;
 			}
@@ -5131,7 +5218,7 @@ Details: It defines the styles for popup components as listed below:
 
 		.flip-container {
 			height: 200px;
-			
+
 			.front, .back {
 				height: 200px;
 			}
@@ -5142,7 +5229,7 @@ Details: It defines the styles for popup components as listed below:
 
 		.flip-container {
 			height: 250px;
-			
+
 			.front, .back {
 				height: 250px;
 			}
@@ -5150,37 +5237,16 @@ Details: It defines the styles for popup components as listed below:
 	}
 }
 */
-.gallery-basic {
-  width: 80%;
-  margin: 0 10%; }
-  .gallery-basic .header {
-    background-color: #1E2328;
-    color: #E6E6E6;
-    float: left;
-    width: 30%;
-    padding: 2em;
-    overflow: hidden; }
-  .gallery-basic .items {
-    float: left;
-    width: 70%; }
-  @media only screen and (max-width: 1024px) {
-    .gallery-basic {
-      width: 90%;
-      margin: 0 5%; }
-      .gallery-basic .header, .gallery-basic .items {
-        width: 100%;
-        margin-bottom: 1em; }
-      .gallery-basic .colf3 {
-        width: 33.3333%; } }
-  @media only screen and (max-width: 768px) {
-    .gallery-basic .colf3 {
-      width: 50%; } }
-  @media only screen and (max-width: 480px) {
-    .gallery-basic .colf3 {
-      width: 100%; }
-      .gallery-basic .colf3 .flip-container {
-        padding: 0 0 8px; } }
+/**********************************************************************
+Description: It defines the styles for flipper components available in CMT-UI css framework.
 
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for flipper components as listed below:
+
+* Flipper     - It flip the content on hover hiding the face and showing content.
+
+***********************************************************************/
 .flipper {
   position: relative;
   z-index: 1;
@@ -5209,63 +5275,73 @@ Details: It defines the styles for popup components as listed below:
       top: 0;
       height: 100%; }
 
-.mapper-category {
+/**********************************************************************
+Description: It defines the styles for mapper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* List        - The list mapper allows user to map multiple resources to active resource. The mappings
+*               can also maintain hierarchy with depth.
+*
+* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
+*				when user click on one of the auto suggest item.
+*
+* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+
+***********************************************************************/
+.mapper-list {
   width: 100%;
   margin: 0 auto;
   position: relative; }
-  .mapper-category .wrap-categories {
+  .mapper-list .mapper-list-items {
     height: 250px;
     background-color: #F2F2F2; }
-    .mapper-category .wrap-categories .category {
+    .mapper-list .mapper-list-items .mapper-list-item {
       display: inline-block;
       width: 100%;
       margin: 10px;
       background-color: #FFFFFF; }
-      .mapper-category .wrap-categories .category.depth-1 {
+      .mapper-list .mapper-list-items .mapper-list-item.depth-1 {
         padding-left: 15px; }
-      .mapper-category .wrap-categories .category.depth-2 {
+      .mapper-list .mapper-list-items .mapper-list-item.depth-2 {
         padding-left: 30px; }
-      .mapper-category .wrap-categories .category.depth-3 {
+      .mapper-list .mapper-list-items .mapper-list-item.depth-3 {
         padding-left: 45px; }
 
-.mapper-category-auto .auto-mapped .item-list li {
+.mapper-auto .mapper-auto-items .mapper-auto-item {
   background-color: #3C4655;
   display: inline-block;
   padding: 0.5rem;
   margin-right: 0.5rem; }
-  .mapper-category-auto .auto-mapped .item-list li .close {
+  .mapper-auto .mapper-auto-items .mapper-auto-item .mapper-auto-item-remove {
     padding-left: 0.5rem; }
 
-.mapper-tag {
+.mapper-submit {
   width: 100%;
   margin: 0 auto;
   position: relative; }
-  .mapper-tag .wrap-tags .tag {
+  .mapper-submit .mapper-submit-items .mapper-submit-item {
     background-color: #3C4655;
     position: relative;
     display: inline-block;
     padding: 0.5rem;
     margin-right: 0.5rem; }
+    .mapper-submit .mapper-submit-items .mapper-submit-item .mapper-submit-item-remove {
+      padding-left: 0.5rem; }
 
 .auto-fill {
   position: relative; }
-  .auto-fill .auto-map {
+  .auto-fill .auto-fill-items-wrap {
     position: relative; }
-    .auto-fill .auto-map .item-list {
+    .auto-fill .auto-fill-items-wrap .auto-fill-items {
       display: none;
       position: absolute;
       width: 100%; }
-      .auto-fill .auto-map .item-list li {
+      .auto-fill .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
         background-color: lightgray;
         color: #555555; }
-  .auto-fill .auto-mapped .item-list li {
-    background-color: lightgray;
-    color: #555555;
-    display: inline-block;
-    padding: 0.5em;
-    margin: 0.25em; }
-    .auto-fill .auto-mapped .item-list li .close {
-      margin-left: 0.5em; }
 
 .file-uploader {
   position: relative; }
@@ -5482,8 +5558,10 @@ Details: It defines the styles of box components as listed below:
 .box .box-header {
   position: relative; }
 
-.box .box-content {
+.box .box-content-wrap {
   position: relative; }
+  .box .box-content-wrap .box-content {
+    position: relative; }
 
 .box .box-footer {
   position: relative; }
@@ -5504,22 +5582,22 @@ Details: It defines the styles of box components as listed below:
 
 .box-basic-icon {
   padding: 1rem; }
-  .box-basic-icon .box-header .header-icon {
+  .box-basic-icon .box-header .box-header-icon {
     position: absolute;
     display: inline-block;
     top: 0.5rem;
     left: 0.5rem; }
-  .box-basic-icon .box-header .header-title {
+  .box-basic-icon .box-header .box-header-title {
     padding-left: 1.5rem; }
 
-.box-collapsible .box-header .btn-collapse {
+.box-collapsible .box-header .box-btn-collapse {
   position: absolute;
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
   color: #FFFFFF;
   cursor: pointer; }
-  .box-collapsible .box-header .btn-collapse:hover {
+  .box-collapsible .box-header .box-btn-collapse:hover {
     color: #FFFFFF; }
 
 /**********************************************************************
@@ -5726,7 +5804,7 @@ Details: It defines the styles for pagination components as listed below:
   background-color: #b51717;
   color: #FFFFFF; }
 
-.pagination-full .info {
+.pagination-full .page-info {
   display: inline-block;
   width: 40%;
   text-align: left;
@@ -5759,7 +5837,7 @@ Details: It defines the styles for pagination components as listed below:
       color: #FFFFFF; }
 
 @media only screen and (max-width: 1024px) {
-  .pagination-full .info, .pagination-full .page-links {
+  .pagination-full .page-info, .pagination-full .page-links {
     width: 100%;
     text-align: center; } }
 
@@ -6061,5 +6139,37 @@ Details: It defines the styles of blog post as listed below:
   @media only screen and (min-width: 1025px) {
     .post-single-basic .post-banner {
       height: 250px; } }
+
+/**********************************************************************
+Description: It defines the styles of widget components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of widget components as listed below:
+
+* Widget	  - The barebone widget with minimum styles.
+*
+* Basic       - The basic widget defines the styles of widget having text and background colors.
+
+***********************************************************************/
+.widget {
+  position: relative; }
+  .widget .widget-header {
+    position: relative; }
+  .widget .widget-content-wrap {
+    position: relative; }
+
+.widget-basic {
+  background-color: #F2F2F2;
+  color: #363636; }
+  .widget-basic .widget-header {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+  .widget-basic .widget-content-wrap {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .widget-basic .widget-footer {
+    background-color: #232831;
+    color: #c2d1e7; }
 
 /*# sourceMappingURL=cmgtools.css.map */

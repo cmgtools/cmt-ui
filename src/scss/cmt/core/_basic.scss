@@ -402,6 +402,16 @@ html, body {
 		padding: 0 !important;
 	}
 
+	&.padding-none-v {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	&.padding-none-h {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
 	&.padding-none-top {
 		padding-top: 0 !important;
 	}
@@ -495,6 +505,16 @@ html, body {
 
 	&.margin-none {
 		margin: 0 !important;
+	}
+
+	&.margin-none-v {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	&.margin-none-h {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
 	}
 
 	&.margin-none-top {
@@ -945,9 +965,4 @@ html, body {
 .error-field {
 	@include border( $size-default, solid, $color-error );
 	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );
-}
-
-// icons alignment
-.cmti, .fa {
-	vertical-align: middle;
 }

@@ -181,7 +181,6 @@ Details: It defines the custom element styles as listed below:
 				width: 100%;
 				overflow: hidden;
 				cursor: pointer;
-				padding: 10px;
 				background-color: $color-white;
 			}
 
@@ -189,6 +188,67 @@ Details: It defines the custom element styles as listed below:
 				color: $color-btn-a-text;
 				background-color: $color-btn;
 			}
+		}
+	}
+}
+
+.cmt-multiselect {
+	position: relative;
+	background-color: $color-field;
+
+	// Select Value - default icon having width 32px. It can be changed based on icon dimensions.
+	.cmt-selected {
+		cursor: pointer;
+		position: relative;
+		z-index: 100000;
+		padding-right: 1.5em;
+
+		// text for selected value
+		.s-text {
+			display: inline-block;
+			width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-align: left;
+			color: $color-field-text;
+			font-size: 1em;
+			padding: 0.30em 0.25em;
+		}
+
+		// icon for select box
+		.s-icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			padding: 0.25em;
+		}
+
+		// disabled
+		&.disabled {
+			cursor: default;
+		}
+	}
+
+	// Select options
+	.cmt-select-list {
+		position: absolute;
+		width: 100%;
+		background-color: $color-field;
+		z-index: 100001;
+		max-height: 180px;
+		overflow-y: auto;
+
+		li {
+			width: 100%;
+			overflow: hidden;
+			cursor: pointer;
+			background-color: $color-white;
+		}
+
+		li:hover {
+			color: $color-btn-a-text;
+			background-color: $color-btn;
 		}
 	}
 }
@@ -473,6 +533,10 @@ Details: It defines the custom element styles as listed below:
 			color: $color-btn-text !important;
 		}
 	}
+}
+
+a.btn {
+	color: $color-btn-text;
 }
 
 // == Icon Button ===================

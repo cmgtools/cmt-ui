@@ -206,13 +206,19 @@ p, span, em, div, a {
 	font-size: $font-size-7;
 }
 
+// Text Reader
 .reader {
 	font-size: $font-size-7;
 	line-height: $line-height-text;
 
 	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
-		padding: 0.25em 0;
+		padding: 0.5em 0;
 	}
+}
+
+// icons alignment
+.cmti, .fa {
+	vertical-align: middle;
 }
 
 // Coding - Required to highlight code snippets
@@ -330,6 +336,12 @@ a, .link {
 	&:active, &:hover {
 		color: $color-link-h;
 	}
+}
+
+// Single line
+.text-line {
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 // Text at center with background line

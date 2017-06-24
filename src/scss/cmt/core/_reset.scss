@@ -290,3 +290,23 @@ input[type="radio"] {
 input[type="checkbox"] {
 	vertical-align: bottom;
 }
+
+// Placeholder
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: $color-placeholder;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: $color-placeholder;
+   opacity:  1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: $color-placeholder;
+   opacity:  1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: $color-placeholder;
+}

@@ -1,12 +1,12 @@
 // Cut-down code in SASS, useful for vertical scrolling.
 
 .mCustomScrollbar {
-	-ms-touch-action: none; 
+	-ms-touch-action: none;
 	touch-action: none;
 
-	&.mCS_no_scrollbar { 
-		-ms-touch-action: auto; 
-		touch-action: auto; 
+	&.mCS_no_scrollbar {
+		-ms-touch-action: auto;
+		touch-action: auto;
 	}
 
 	.mCustomScrollBox {
@@ -26,8 +26,8 @@
 
 	.mCSB_inside {
 
-		& > .mCSB_container { 
-			margin-right: 30px; 
+		& > .mCSB_container {
+			margin-right: 30px;
 		}
 	}
 
@@ -54,7 +54,7 @@
 			height: 30px;
 			width: 100%;
 			z-index: 1;
-			
+
 			.mCSB_dragger_bar {
 				border-radius: 16px;
 				height: 100%;
@@ -74,8 +74,8 @@
 	}
 }
 
-.mCSB_scrollTools, 
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+.mCSB_scrollTools,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 .mCSB_scrollTools .mCSB_buttonUp,
 .mCSB_scrollTools .mCSB_buttonDown,
 .mCSB_scrollTools .mCSB_buttonLeft,
@@ -88,36 +88,36 @@
 
 // Theme
 
-.mCS-cmg-default.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { 
-	background-color: red; 
+.mCS-cmg-default.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: red;
 }
 
-.mCS-cmg-default.mCSB_scrollTools .mCSB_draggerRail { 
-	background-color: white; 
-} 
+.mCS-cmg-default.mCSB_scrollTools .mCSB_draggerRail {
+	background-color: white;
+}
 
 .mCSB_scrollTools{ opacity: 0.75; filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; }
 
-._mCS_1 .mCSB_dragger .mCSB_dragger_bar { 
-	background-color: red; 
+._mCS_1 .mCSB_dragger .mCSB_dragger_bar {
+	background-color: red;
 }
 
-._mCS_2 .mCSB_dragger .mCSB_dragger_bar { 
-	background-color: green; 
+._mCS_2 .mCSB_dragger .mCSB_dragger_bar {
+	background-color: green;
 }
 
-#mCSB_3_dragger_vertical .mCSB_dragger_bar { 
-	background-color: blue; 
+#mCSB_3_dragger_vertical .mCSB_dragger_bar {
+	background-color: blue;
 }
 
-#mCSB_1_scrollbar_vertical .mCSB_dragger { 
-	height: 100px; 
+#mCSB_1_scrollbar_vertical .mCSB_dragger {
+	height: 100px;
 }
 
-#mCSB_1_scrollbar_horizontal .mCSB_dragger { 
-	width: 100px; 
+#mCSB_1_scrollbar_horizontal .mCSB_dragger {
+	width: 100px;
 }
 
-.mCSB_1_scrollbar .mCSB_dragger .mCSB_draggerRail { 
-	width: 4px; 
+.mCSB_1_scrollbar .mCSB_dragger .mCSB_draggerRail {
+	width: 4px;
 }

@@ -15,8 +15,9 @@ Details: It defines the styles for footer components as listed below:
 .footer {
 	position: relative;
 
-	&.sticky {
+	&.footer-sticky {
 		position: absolute;
+		width: 100%;
 		left: 0px;
 		bottom: 0px;
 	}
@@ -35,8 +36,4 @@ Details: It defines the styles for footer components as listed below:
 	min-height: 50px;
 	position: relative;
 	z-index: 10000;
-
-	.text {
-		color: $color-primary-text;
-	}
 }

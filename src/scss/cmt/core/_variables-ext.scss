@@ -15,13 +15,10 @@ Details: It defines the extended variables derived from primary variables as lis
 ***********************************************************************/
 
 // Border & HR Colors
-$color-border: $color-secondary; // Default border color
+$color-border: $color-secondary-d; // Default border color
 $color-border-f: $color-tertiary; // Border color for focus
 
 $color-hr: $color-secondary; // Header Rule color
-
-// Inset Color
-$color-inset: $color-tertiary;
 
 // Gradient Colors
 $color-gradient-1: $color-primary; // First color for gradients

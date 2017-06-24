@@ -1,55 +1,74 @@
 /**********************************************************************
-Description: It defines the styles for sidebar components available in CMT-UI css framework.
+Description: It defines the styles for sidebar components available in CMT-UI CSS framework.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for sidebar components as listed below:
 
-* Sidebar      - The barebone sidebar class with minimum styles.
+* Sidebar         - The barebone sidebar class with minimum styles.
 *
-* Basic        - The basic footer define the styles for easy to use sidebar.
+* Basic           -	The basic sidebar defines the styles of sidebar having header with button to trigger show/hide content for
+					mobile devices. The header will be displayed for small screens and it's trigger can be used to toggle the content.
+
 ***********************************************************************/
 
 // == Structure - Sidebar ===========
 
 .sidebar {
+	position: relative;
 
+	.sidebar-header {
+		position: relative;
+
+		.sidebar-title {
+			// Title
+		}
+	}
+
+	.sidebar-content-wrap {
+		position: relative;
+
+		.sidebar-content {
+			// Content
+		}
+	}
 }
 
 // == Basic Sidebar =================
 
-// Basic sidebar having title with button to show/hide menu for mobile devices and the menu items.
-// The title will be displayed for small screens and can be used to toggle the menu items.
 .sidebar-basic {
 	position: relative;
 
-	.title {
+	.sidebar-header {
 		display: none;
-		background-color: $color-tertiary;
-		@extend %clearfix;
-		line-height: 32px;
-		padding: 5px;
-		font-size: 16px;
 
-		span {
+		.sidebar-title {
+			background-color: $color-tertiary;
+			line-height: $font-size-4;
+			padding: 0.5rem;
+			font-size: $font-size-5;
+			@extend %clearfix;
+		}
+
+		.sidebar-control {
 			float: right;
 			display: inline-block;
 			cursor: pointer;
 		}
 	}
 
-	.menu {
+	.sidebar-content-wrap {
 		display: block;
 	}
 
 	@include responsive-max( screen-tablet-large ) {
 
-		.title {
+		.sidebar-header {
 			display: block;
-		}
 
-		.menu {
-			display: none;
+			.sidebar-content-wrap {
+				display: none;
+			}
 		}
 	}
 }

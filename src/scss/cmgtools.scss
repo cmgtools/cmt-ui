@@ -118,7 +118,7 @@
 
 @import "cmt/components/sliders";
 @import "cmt/components/galleries";
-@import "cmt/components/flipper";
+@import "cmt/components/flippers";
 @import "cmt/components/mappers";
 @import "cmt/components/auto-fill";
 // project - sliders, galleries, flippers, mappers and auto fills
@@ -144,7 +144,10 @@
 
 @import "cmt/components/blog/blog";
 @import "cmt/components/blog/post";
-// project - blog grid
+// project - blog
+
+@import "cmt/components/widgets/basic";
+// project - widgets
 
 // ---------------------------------------//
 // Extensions Division - Optional

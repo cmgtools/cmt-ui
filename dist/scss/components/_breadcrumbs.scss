@@ -9,15 +9,15 @@ Details: It defines the styles for breadcrumbs.
 .breadcrumb {
 	list-style: none;
 
+	.breadcrumb-seperator {
+		padding: 0 0.25em;
+	}
+
 	li {
 		display: inline-block;
 	}
 
 	a {
 		display: inline-block;
-	}
-
-	.seperator {
-		padding: 0 0.25em;
 	}
 }

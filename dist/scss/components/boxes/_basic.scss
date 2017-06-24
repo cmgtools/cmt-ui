@@ -22,26 +22,41 @@ Details: It defines the styles of box components as listed below:
 		// Header having collapsible action
 		position: relative;
 
-		.header-icon {
+		.box-header-icon {
 			// Header Icon
 		}
 
-		.header-title {
+		.box-header-title {
 			// Header Title
+		}
+
+		.box-header-content {
+
 		}
 	}
 
-	.box-content {
-		// Collapsible content
+	.box-content-wrap {
 		position: relative;
+
+		// Space for background
+
+		// Space for texture
+
+		.box-content {
+			position: relative;
+		}
 	}
 
 	.box-footer {
 		// Footer having box info
 		position: relative;
 
-		.footer-info {
+		.box-footer-info {
 			// Footer Info
+		}
+
+		.box-footer-content {
+			// Footer Content
 		}
 	}
 }
@@ -76,14 +91,14 @@ Details: It defines the styles of box components as listed below:
 	// Icon, text at center
 	.box-header {
 
-		.header-icon {
+		.box-header-icon {
 			position: absolute;
 			display: inline-block;
 			top: 0.5rem;
 			left: 0.5rem;
 		}
 
-		.header-title {
+		.box-header-title {
 			padding-left: 1.5rem;
 		}
 	 }
@@ -95,7 +110,7 @@ Details: It defines the styles of box components as listed below:
 
 	.box-header {
 
-		.btn-collapse {
+		.box-btn-collapse {
 			position: absolute;
 			display: inline-block;
 			top: 0.5em;

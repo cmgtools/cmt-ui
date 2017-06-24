@@ -1,8 +1,19 @@
+/**********************************************************************
+Description: It defines the styles for flipper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for flipper components as listed below:
+
+* Flipper     - It flip the content on hover hiding the face and showing content.
+
+***********************************************************************/
+
 .flipper {
-	position: relative;  
+	position: relative;
 	z-index: 1;
 	width: 100%;
-	padding: 0 4px 8px;               
+	padding: 0 4px 8px;
 	perspective: 1000;
 
 	&:hover .flipper-content {
@@ -18,7 +29,7 @@
 			width: 100%;
 			backface-visibility: hidden;
 		}
-	
+
 		.flipper-face.flipper-back {
 			display: block;
 			transform: rotateY(180deg);
@@ -28,7 +39,7 @@
 			text-align: center;
 			background-color: $color-secondary;
 		}
-	
+
 		.flipper-back {
 			position:absolute;
 			top:0;

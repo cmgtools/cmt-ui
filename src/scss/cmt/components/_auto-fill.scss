@@ -1,45 +1,29 @@
 // == Auto Fill (Suggest) ===========
 
+// It can use auto mapper component to show mappings.
 .auto-fill {
 	position: relative;
 
 	// Search field wrapper
-	.auto-search {
+	.auto-fill-search {
 
 	}
 
-	// Search result map
-	.auto-map {
+	// Search results
+	.auto-fill-items-wrap {
 		position: relative;
 
-		.item-list {
+		.auto-fill-items {
 			display: none;
 			position: absolute;
 			width: 100%;
 
-			li {
+			.auto-fill-item {
 				background-color: $color-primary-d;
 				color: $color-primary-text-d;
 			}
 		}
 	}
 
-	// Existing Mappings
-	.auto-mapped {
-
-		.item-list {
-
-			li {
-				background-color: $color-primary-d;
-				color: $color-primary-text-d;
-				display: inline-block;
-				padding: 0.5em;
-				margin: 0.25em;
-
-				.close {
-					margin-left: 0.5em;
-				}
-			}
-		}
-	}
+	// auto mapper - part of auto fill component
 }

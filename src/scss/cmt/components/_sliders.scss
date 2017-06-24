@@ -1,19 +1,41 @@
+/**********************************************************************
+Description: It defines the styles of cmt slider available in CMT-UI css framework. It requires cmtSlider plugin from CMT-JS library.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of cmt slider as listed below:
+
+* CMT Slider  - The barebone slider with minimum styles to arrange slides and controls.
+*
+* Basic       - The basic slider defines the styles of slider having fixed with slides and slider width is also defined.
+*
+* Basic Fixed - The basic fixed slider works on top of basic slider. It's full width and responsive slider considering
+				slides are visible fully on each device. The controls will be placed on left and right side without
+				overlapping slides.
+
+* Basic Lightbox - The lightbox will add effects on slides to show them on a lightbox. A larger image might be displayed
+				around the slides.
+
+***********************************************************************/
+
+// == Structure - Slider ============
+
 .cmt-slider {
 	position: relative;
 
-	.slides-wrapper {
+	.cmt-slider-slides-wrap {
 		position: relative;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
 
-		.slides-wrap {
+		.cmt-slider-slides {
 			position: absolute;
 			top: 0px;
 			width: 100%;
 			height: 100%;
 
-			.slider-slide {
+			.cmt-slider-slide {
 				position: absolute;
 				top: 0px;
 				left: 0px;
@@ -22,31 +44,33 @@
 		}
 	}
 
-	.slider-control {
+	.cmt-slider-control {
 		cursor: pointer;
 		position: relative;
 
-		&.slider-control-left {
+		&.cmt-slider-control-left {
 			float: left;
 		}
 
-		&.slider-control-right {
+		&.cmt-slider-control-right {
 			float: right;
 		}
 	}
 }
+
+// == Basic =========================
 
 // Basic slider having fixed width slides
 .cmt-slider-basic {
 	margin: 0px auto;
 	width: 450px;
 
-	.slides-wrapper {
+	.cmt-slider-slides-wrap {
 		height: 150px;
 
-		.slides-wrap {
+		.cmt-slider-slides {
 
-			.slider-slide {
+			.cmt-slider-slide {
 				width: 150px;
 				height: 150px;
 				background-color: $color-secondary;
@@ -56,13 +80,13 @@
 		}
 	}
 
-	.slider-control {
+	.cmt-slider-control {
 		color: $color-tertiary;
 		top: 35px;
 		width: 64px;
 		height: 80px;
 
-		&.slider-control-left {
+		&.cmt-slider-control-left {
 			float: left;
 			left: 0;
 			background-color: $color-tertiary;
@@ -72,7 +96,7 @@
 			}
 		}
 
-		&.slider-control-right {
+		&.cmt-slider-control-right {
 			float: right;
 			right: 0;
 			background-color: $color-tertiary;
@@ -82,12 +106,12 @@
 			}
 		}
 
-		&.slider-control-bkg {
+		&.cmt-slider-control-bkg {
 			background-image: url( "../images/slider-arrow.png" );
 			background-repeat: none;
 			background-position: 0px 0px;
 
-			&.slider-control-left {
+			&.cmt-slider-control-left {
 				left: 20px;
 				background-position: 0px 80px;
 
@@ -96,7 +120,7 @@
 				}
 			}
 
-			&.slider-control-right {
+			&.cmt-slider-control-right {
 				right: 20px;
 				background-position: -48px 80px;
 
@@ -110,11 +134,12 @@
 
 // TODO: Add basic slider having controls overlapping on slide.
 
-// Basic slider having fixed width slider and slides to occupy full width. The controls will be placed on left and right side without overlapping slides.
+// == Basic - Fixed =================
+
 .cmt-slider-basic-fixed {
 	width: 1628px;
 
-	.slides-wrapper {
+	.cmt-slider-slides-wrap {
 		width: 1500px;
 		margin: 0 64px;
 	}
@@ -122,7 +147,7 @@
 	@include responsive-max( screen-desktop-large ) {
 		width: 1328px;
 
-		.slides-wrapper {
+		.cmt-slider-slides-wrap {
 			width: 1200px;
 		}
 	}
@@ -130,7 +155,7 @@
 	@include responsive-max( screen-desktop-medium ) {
 		width: 1028px;
 
-		.slides-wrapper {
+		.cmt-slider-slides-wrap {
 			width: 900px;
 		}
 	}
@@ -138,21 +163,21 @@
 	@include responsive-max( screen-tablet-large ) {
 		width: 690px;
 
-		.slides-wrapper {
+		.cmt-slider-slides-wrap {
 			width: 600px;
 			height: 100px;
 			margin: 0 45px;
 
-			.slides-wrap {
+			.cmt-slider-slides {
 
-				.slider-slide {
+				.cmt-slider-slide {
 					width: 100px;
 					height: 100px;
 				}
 			}
 		}
 
-		.slider-control {
+		.cmt-slider-control {
 			width: 45px;
 			height: 100px;
 		}
@@ -161,20 +186,20 @@
 	@include responsive-max( screen-tablet-small ) {
 		width: 440px;
 
-		.slides-wrapper {
+		.cmt-slider-slides-wrap {
 			width: 360px;
 			height: 90px;
 
-			.slides-wrap {
+			.cmt-slider-slides {
 
-				.slider-slide {
+				.cmt-slider-slide {
 					width: 90px;
 					height: 90px;
 				}
 			}
 		}
 
-		.slider-control {
+		.cmt-slider-control {
 			width: 40px;
 			height: 90px;
 		}
@@ -183,20 +208,28 @@
 	@include responsive-max( screen-mobile-large ) {
 		width: 260px;
 
-		.slides-wrapper {
+		.cmt-slider-slides-wrap {
 			width: 180px;
 		}
 	}
 }
 
-// Image slider
-.cmt-slider-image {
+// == Basic - Lightbox ==============
 
-	.slides-wrapper {
+// TODO : Add lightbox popup styles
 
-		.slides-wrap {
+.cmt-slider-lightbox {
 
-			.slider-slide {
+	.cmt-slider-image {
+		// Wrapper to show larger image
+	}
+
+	// Slider will form thumbnail filmstrip.
+	.cmt-slider-slides-wrap {
+
+		.cmt-slider-slides {
+
+			.cmt-slider-slide {
 				cursor: pointer; // Trigger Lightbox
 				@include shadow-inset( 1px, 1px, 100px, $color-black, $spread: 0px );
 

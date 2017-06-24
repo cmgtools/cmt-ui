@@ -1,3 +1,5 @@
+// TODO: Change pattern and layout of file uploader.
+
 .file-uploader {
 	position: relative;
 
@@ -17,7 +19,7 @@
 
 		.message-upload {
 			margin: 1em 0;
-			display: none;          
+			display: none;
 		}
 
 		.btn-show-chooser {
@@ -32,7 +34,7 @@
 	.wrap-chooser {
 		display: none;
 	}
-	
+
 	.chooser, .btn-direct-chooser {
 		position: relative;
 
@@ -69,7 +71,7 @@
 				top: 0px;
 				left: 0px;
 				width: 120px;
-				height: 120px;  
+				height: 120px;
 				z-index: 10;
 				text-align: center;
 				line-height: 120px;
@@ -83,7 +85,7 @@
 			canvas {
 			  position: absolute;
 			  top: 0px;
-			  left: 0px;  
+			  left: 0px;
 			  width: 120px;
 			  height: 120px;
 			  z-index: 50;

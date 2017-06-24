@@ -141,7 +141,7 @@ Details: It defines the styles for pagination components as listed below:
 
 .pagination-full {
 
-    .info {
+    .page-info {
         display: inline-block;
         width: 40%;
         text-align: left;
@@ -190,7 +190,7 @@ Details: It defines the styles for pagination components as listed below:
 
     @media only screen and ( max-width: $screen-tablet-large ) {
 
-        .info, .page-links {
+        .page-info, .page-links {
             width: 100%;
             text-align: center;
         }

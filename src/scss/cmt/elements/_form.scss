@@ -39,39 +39,6 @@ form {
 	// make forms center aligned by default
 	margin: 0 auto;
 	position: relative;
-
-	// Fixed width forms
-	&.form-25 {
-		width: 25%;
-	}
-
-	&.form-50 {
-		width: 50%;
-	}
-
-	&.form-75 {
-		width: 75%;
-	}
-
-	&.form-small {
-		width: 300px;
-	}
-
-	&.form-medium {
-		width: 450px;
-	}
-
-	&.form-large {
-		width: 600px;
-	}
-
-	@include responsive-max( screen-tablet-large ) {
-
-		&.form-25, &.form-50, &.form-75, &.form-small, &.form-medium, &.form-large {
-			width: 80%;
-			padding: $size-medium-rem 2%;
-		}
-	}
 }
 
 // == Form Elements =================
@@ -134,7 +101,7 @@ form {
 	&:focus {
 		background-color: $color-field-f;
 		color: $color-field-f-text;
-		@include shadow-inset( 0, 0, 0, $color-inset, 1px );
+		@include shadow-inset( 0, 0, 0, $color-border-f, 1px );
 	}
 
 	&:disabled {
@@ -195,72 +162,30 @@ input[type="submit"], input[type="button"], button {
 	color: $color-red;
 }
 
-// Splitted forms having label on left consuming 40% width and field on right side having remaining 60% width
-// We have two options to use the 40-60 concept i.e. either using frm-split-40-60 or using element-40 and element-60.
-// For both the options, the left side element clears the floating and parent must use clearfix to derive it's height from form elements.
-
-.frm-split-40-60 {
-
-	// fix for yii forms
-	.form-group {
-		@extend %clearfix;
-	}
-
-	.ignore-40-60 {
-
-		label, .element-40, input[type="text"], input[type="email"], input[type="password"], textarea, select, .element-60 {
-			width: 100%;
-		}
-	}
+.element {
+	@extend %element-size;
+	display: inline-block;
 }
 
-.frm-split-40-60 label, .element-40 {
-	clear: both;
-	width: 40%;
-	float: left;
+// Line Height Fix
+
+input[type="submit"], input[type="button"], button, .btn, .cmt-select .cmt-selected {
+	line-height: 1.4;
 }
 
-.element-40 label {
-	width: 100%;
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
+	line-height: 1.4;
 }
 
-.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60 {
-	width: 60%;
-	float: left;
+
+// Icon Button
+
+.btn-icon {
+	padding: 0.30em 0.5em;
+	line-height: 1.4;
 }
 
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 select {
-	width: 100%;
-}
-
-// Round cornered elements
-
-.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
-.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button {
-	@include rounded( $size-medium );
-}
-
-.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
-.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button {
-	@include rounded-top( $size-medium );
-}
-
-.frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
-.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button {
-	@include rounded-right( $size-medium );
-}
-
-.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
-.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button {
-	@include rounded-bottom( $size-medium );
-}
-
-.frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
-.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button {
-	@include rounded-left( $size-medium );
-}
+// == Iconified Elements ============
 
 /** Iconified Elements - Works in presence of CMT-Icons and Font Awsome. It can be overriden to use any preferred icon font library. */
 
@@ -297,7 +222,8 @@ input[type="submit"], input[type="button"], button {
 		width: 250px !important;
 	}
 
-	input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
+	input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
+	.btn {
 		padding-left: 2em;
 		width: 100%;
 	}
@@ -311,12 +237,14 @@ input[type="submit"], input[type="button"], button {
 		font-size: 1em;
 		padding: 0.30em 0.40em;
 		margin: 0;
+		line-height: 1.4;
 	}
 
 	// Show icon on right side
 	&.icon-right {
 
-		input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
+		input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
+		.btn {
 			padding-left: 0.30em;
 			padding-right: 2em;
 		}
@@ -325,46 +253,6 @@ input[type="submit"], input[type="button"], button {
 			right: 0;
 		}
 	}
-}
-
-.frm-split-40-60 {
-
-	.frm-icon-element {
-
-		width: 60%;
-		float: left;
-
-		input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button {
-			float: none;
-		}
-	}
-
-	.ignore-40-60 {
-
-		.frm-icon-element {
-			width: 100%;
-		}
-	}
-}
-
-// Placeholder
-
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-	color: $color-placeholder;
-}
-
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color: $color-placeholder;
-   opacity:  1;
-}
-
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color: $color-placeholder;
-   opacity:  1;
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: $color-placeholder;
 }
 
 // == Custom Elements ===============
@@ -387,114 +275,41 @@ input[type="submit"], input[type="button"], button {
 	@extend %element-size;
 }
 
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
-	width: 60%;
-	float: left;
+// == Round Cornered Form Elements ==
+
+.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
+.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button,
+.frm-rounded-all .btn {
+	@include rounded( $size-medium );
 }
 
-.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap  {
-	width: 100%;
+.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
+.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button,
+.frm-rounded-top .btn {
+	@include rounded-top( $size-medium );
 }
 
-.element {
-	@extend %element-size;
-	display: inline-block;
+.frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
+.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button,
+.frm-rounded-right .btn {
+	@include rounded-right( $size-medium );
 }
 
-// Round cornered elements
-
-.frm-rounded-all {
-
-	  .btn {
-		  @include rounded( $size-medium );
-	  }
+.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
+.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button,
+.frm-rounded-bottom .btn {
+	@include rounded-bottom( $size-medium );
 }
 
-.frm-rounded-top {
-
-	  .btn {
-		  @include rounded-top( $size-medium );
-	  }
+.frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
+.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button,
+.frm-rounded-left .btn {
+	@include rounded-left( $size-medium );
 }
 
-.frm-rounded-right {
+// == Forms =========================
 
-	  .btn {
-		  @include rounded-right( $size-medium );
-	  }
-}
-
-.frm-rounded-bottom {
-
-	  .btn {
-		  @include rounded-bottom( $size-medium );
-	  }
-}
-
-.frm-rounded-left {
-
-	  .btn {
-		  @include rounded-left( $size-medium );
-	  }
-}
-
-// Iconified Elements
-
-.frm-icon-element {
-
-	.btn {
-		padding-left: 1.75em;
-	}
-
-	&.icon-right {
-
-		.btn {
-			padding-left: 0.30em;
-			padding-right: 1.75em;
-		}
-	}
-}
-
-.frm-split-40-60 .frm-icon-element {
-
-	.btn {
-		float: none;
-	}
-}
-
-// Ignore 100% width behavior for form elements
-
-.frm-ignore-100 {
-
-	label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
-	.cmt-checkbox, .cmt-switch, .cmt-choice {
-		float: none;
-		width: auto;
-	}
-}
-
-.btn-icon {
-	padding: 0.30em 0.5em;
-	line-height: 1.4;
-}
-
-input[type="submit"], input[type="button"], button, .btn, .cmt-select .cmt-selected {
-	line-height: 1.4;
-}
-
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select {
-	line-height: 1.4;
-}
-
-.frm-icon-element {
-
-	.cmti, .icon, .fa {
-		line-height: 1.4;
-	}
-}
-
-// Generic Form to wrap form elements
-.cmt-form {
+.form {
 
 	input[type="text"], input[type="email"], input[type="password"], textarea, select {
 		margin-bottom: 0.5rem;
@@ -530,5 +345,127 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 	.frm-split-40-60 label {
 		margin-bottom: 0.5rem;
+	}
+
+	// Fixed width forms
+
+	&.form-25 {
+		width: 25%;
+	}
+
+	&.form-50 {
+		width: 50%;
+	}
+
+	&.form-75 {
+		width: 75%;
+	}
+
+	&.form-small {
+		width: 300px;
+	}
+
+	&.form-medium {
+		width: 450px;
+	}
+
+	&.form-large {
+		width: 600px;
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		&.form-25, &.form-50, &.form-75, &.form-small, &.form-medium, &.form-large {
+			width: 80%;
+			padding: $size-medium-rem 2%;
+		}
+	}
+}
+
+// == Splitted Form Elements ========
+
+// Splitted forms having label on left consuming 40% width and field on right side having remaining 60% width
+// We have two options to use the 40-60 concept i.e. either using frm-split-40-60 or using element-40 and element-60.
+// For both the options, the left side element clears the floating and parent must use clearfix to derive it's height from form elements.
+
+.frm-split-40-60 {
+
+	// fix for yii forms
+	.form-group {
+		@extend %clearfix;
+	}
+
+	.ignore-40-60 {
+
+		label, .element-40, input[type="text"], input[type="email"], input[type="password"], textarea, select, .element-60 {
+			width: 100%;
+		}
+	}
+}
+
+.frm-split-40-60 label, .element-40 {
+	clear: both;
+	width: 40%;
+	float: left;
+}
+
+.element-40 label {
+	width: 100%;
+}
+
+.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
+	width: 60%;
+	float: left;
+}
+
+.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
+.element-60 textarea, .element-60 select,
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap {
+	width: 100%;
+}
+
+.frm-split-40-60 {
+
+	.frm-icon-element {
+
+		width: 60%;
+		float: left;
+
+		input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
+		.btn {
+			float: none;
+		}
+	}
+
+	.ignore-40-60 {
+
+		.frm-icon-element {
+			width: 100%;
+		}
+	}
+}
+
+// Ignore 100% width behavior for form elements
+
+.frm-ignore-100 {
+
+	label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
+	.btn, .cmt-checkbox, .cmt-switch, .cmt-choice {
+		float: none;
+		width: auto;
+	}
+}
+
+@include responsive-max ( screen-mobile-large ) {
+
+	.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+	.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+		width: 100%;
+	}
+
+	.frm-split-40-60 .help-block {
+		padding-left: 0;
 	}
 }
