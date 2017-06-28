@@ -17,6 +17,7 @@ Details: It defines the styles of box components as listed below:
 // == Structure - Box ===============
 
 .box {
+	position: relative;
 
 	.box-header {
 		// Header having collapsible action

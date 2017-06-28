@@ -333,6 +333,11 @@ Details: It define the mixins and their default implementation as listed below:
   -moz-border-radius: 1px;
   border-radius: 1px;
   -khtml-border-radius: 1px; }
+  .rounded.rounded-none {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    -khtml-border-radius: 0 !important; }
   .rounded.rounded-small {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -1871,6 +1876,8 @@ html, body {
     background-color: #678d34 !important; }
   .bkg.bkg-black {
     background-color: #000000 !important; }
+  .bkg.bkg-black-transparent {
+    background-color: rgba(0, 0, 0, 0.6) !important; }
   .bkg.bkg-gray {
     background-color: #7F7F7F !important; }
   .bkg.bkg-gray-l {
@@ -2001,9 +2008,6 @@ html, body {
   padding-left: 0.25rem;
   padding-right: 0.25rem; }
 
-.padding.padding-small {
-  padding: 0.5rem; }
-
 .padding.padding-small-v {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
@@ -2045,6 +2049,69 @@ html, body {
   padding-left: 2rem;
   padding-right: 2rem; }
 
+.padding.padding-top-default {
+  padding-top: 0.25rem; }
+
+.padding.padding-bottom-default {
+  padding-bottom: 0.25rem; }
+
+.padding.padding-left-default {
+  padding-left: 0.25rem; }
+
+.padding.padding-right-default {
+  padding-right: 0.25rem; }
+
+.padding.padding-small {
+  padding: 0.5rem; }
+
+.padding.padding-top-small {
+  padding-top: 0.5rem; }
+
+.padding.padding-bottom-small {
+  padding-bottom: 0.5rem; }
+
+.padding.padding-left-small {
+  padding-left: 0.5rem; }
+
+.padding.padding-right-small {
+  padding-right: 0.5rem; }
+
+.padding.padding-top-medium {
+  padding-top: 1rem; }
+
+.padding.padding-bottom-medium {
+  padding-bottom: 1rem; }
+
+.padding.padding-left-medium {
+  padding-left: 1rem; }
+
+.padding.padding-right-medium {
+  padding-right: 1rem; }
+
+.padding.padding-top-large {
+  padding-top: 1.5rem; }
+
+.padding.padding-bottom-large {
+  padding-bottom: 1.5rem; }
+
+.padding.padding-left-large {
+  padding-left: 1.5rem; }
+
+.padding.padding-right-large {
+  padding-right: 1.5rem; }
+
+.padding.padding-top-xlarge {
+  padding-top: 2rem; }
+
+.padding.padding-bottom-xlarge {
+  padding-bottom: 2rem; }
+
+.padding.padding-left-xlarge {
+  padding-left: 2rem; }
+
+.padding.padding-right-xlarge {
+  padding-right: 2rem; }
+
 .margin.margin-none {
   margin: 0 !important; }
 
@@ -2078,9 +2145,6 @@ html, body {
 .margin.margin-default-h {
   margin-left: 0.25rem;
   margin-right: 0.25rem; }
-
-.margin.margin-small {
-  margin: 0.5rem; }
 
 .margin.margin-small-v {
   margin-top: 0.5rem;
@@ -2121,6 +2185,69 @@ html, body {
 
 .margin.margin-xlarge-h {
   margin-left: 2rem;
+  margin-right: 2rem; }
+
+.margin.margin-top-default {
+  margin-top: 0.25rem; }
+
+.margin.margin-bottom-default {
+  margin-bottom: 0.25rem; }
+
+.margin.margin-left-default {
+  margin-left: 0.25rem; }
+
+.margin.margin-right-default {
+  margin-right: 0.25rem; }
+
+.margin.margin-small {
+  margin: 0.5rem; }
+
+.margin.margin-top-small {
+  margin-top: 0.5rem; }
+
+.margin.margin-bottom-small {
+  margin-bottom: 0.5rem; }
+
+.margin.margin-left-small {
+  margin-left: 0.5rem; }
+
+.margin.margin-right-small {
+  margin-right: 0.5rem; }
+
+.margin.margin-top-medium {
+  margin-top: 1rem; }
+
+.margin.margin-bottom-medium {
+  margin-bottom: 1rem; }
+
+.margin.margin-left-medium {
+  margin-left: 1rem; }
+
+.margin.margin-right-medium {
+  margin-right: 1rem; }
+
+.margin.margin-top-large {
+  margin-top: 1.5rem; }
+
+.margin.margin-bottom-large {
+  margin-bottom: 1.5rem; }
+
+.margin.margin-left-large {
+  margin-left: 1.5rem; }
+
+.margin.margin-right-large {
+  margin-right: 1.5rem; }
+
+.margin.margin-top-xlarge {
+  margin-top: 2rem; }
+
+.margin.margin-bottom-xlarge {
+  margin-bottom: 2rem; }
+
+.margin.margin-left-xlarge {
+  margin-left: 2rem; }
+
+.margin.margin-right-xlarge {
   margin-right: 2rem; }
 
 /**
@@ -2464,7 +2591,7 @@ html, body {
   .line-height.line-height-header {
     line-height: 1.2; }
   .line-height.line-height-text {
-    line-height: 1.4; }
+    line-height: 1.5; }
 
 h1, .h1 {
   font-size: 2.67em; }
@@ -2496,7 +2623,7 @@ p, span, em, div, a {
 
 .reader {
   font-size: 1em;
-  line-height: 1.4; }
+  line-height: 1.5; }
   .reader h1, .reader h2, .reader h3, .reader h4, .reader h5, .reader h6, .reader .h1, .reader .h2, .reader .h3, .reader .h4, .reader .h5, .reader .h6, .reader .heading {
     padding: 0.5em 0; }
 
@@ -3490,7 +3617,8 @@ Details: It defines the custom element styles as listed below:
     background-color: #F2F2F2;
     z-index: 100001;
     max-height: 180px;
-    overflow-y: auto; }
+    overflow-y: auto;
+    display: none; }
     .cmt-multiselect .cmt-select-list li {
       width: 100%;
       overflow: hidden;
@@ -5555,16 +5683,16 @@ Details: It defines the styles of box components as listed below:
 * Collapsible - The collapsible boxes are similar to basic, but these can also be collapsed hiding content keeping
 *               header and footer visible. The content collapse on clicking header / collapse button on header.
 ***********************************************************************/
-.box .box-header {
+.box {
   position: relative; }
-
-.box .box-content-wrap {
-  position: relative; }
-  .box .box-content-wrap .box-content {
+  .box .box-header {
     position: relative; }
-
-.box .box-footer {
-  position: relative; }
+  .box .box-content-wrap {
+    position: relative; }
+    .box .box-content-wrap .box-content {
+      position: relative; }
+  .box .box-footer {
+    position: relative; }
 
 .box-basic {
   padding: 1rem; }

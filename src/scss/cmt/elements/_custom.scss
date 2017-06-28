@@ -238,7 +238,8 @@ Details: It defines the custom element styles as listed below:
 		z-index: 100001;
 		max-height: 180px;
 		overflow-y: auto;
-
+		display: none;
+		
 		li {
 			width: 100%;
 			overflow: hidden;

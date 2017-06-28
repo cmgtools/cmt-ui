@@ -633,6 +633,10 @@ Details: It define the mixins and their default implementation as listed below:
 .rounded {
 	@include rounded( $size-default );
 
+	&.rounded-none {
+		@include rounded( 0 !important );
+	}
+
 	&.rounded-small {
 		@include rounded( $size-small );
 	}
