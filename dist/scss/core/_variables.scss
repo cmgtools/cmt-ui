@@ -238,6 +238,11 @@ $color-field-d: #CCCCCC;      // Disabled Field
 $color-field-d-text: #909090;
 $color-placeholder: #aaaaaa;  // Placeholder
 
+$color-inset: #F2F2F2; // Inset color for fields
+$color-inset-h: #E9E9E9; // Inset color for field hover
+$color-inset-f: #E1E1E1; // Inset color for field focus
+$color-inset-d: #CCCCCC; // Inset color for disabled field
+
 // Buttons
 $color-btn: #E74343;
 $color-btn-text: #FFFFFF;
@@ -258,6 +263,10 @@ $color-footer-text: #ffffff;
 $color-link: #298ccf; // Default color for all the links
 $color-link-h: #E74343; // Hover color for links
 
+$color-border: #7F7F7F; // Default border color
+$color-border-l: #A5A5A5; // Light border color
+$color-border-d: #595959; // Dark border color
+
 // Standard Colors
 $color-white: #FFFFFF;
 
@@ -268,24 +277,40 @@ $color-gray-d: #595959;
 $color-black: #000000;
 
 $color-blue: #3F62A0;
-$color-blue-l: #f5f6f8;
+$color-blue-l: #6284C1;
+$color-blue-d: #2C446F;
 
-$color-purple: #663096;
+$color-purple: #8946C4;
+$color-purple-l: #AA7AD4;
+$color-purple-d: #663096;
 
 $color-orange: #F3702E;
+$color-orange-l: #F79C6E;
+$color-orange-d: #D14E0C;
 
-$color-yellow: #FFD800;
+$color-yellow: #EDCE4F;
+$color-yellow-l: #F3DF8D;
+$color-yellow-d: #E1B917;
 
-$color-red: #B42A1A;
-$color-red-d: #b42a1a;
+$color-red: #C32D1C;
+$color-red-l: #E3503F;
+$color-red-d: #881F13;
 
-$color-pink: #FF9DAB;
+$color-pink: #E4287C;
+$color-pink-l: #EC64A1;
+$color-pink-d: #B2165C;
 
 $color-magenta: #B200B2;
+$color-magenta-l: #F600F6;
+$color-magenta-d: #6E006E;
 
-$color-green: #87C442;
-$color-green-l: #e7efe2;
-$color-green-d: #56832A;
+$color-green: #7CAA2D;
+$color-green-l: #9FCF4B;
+$color-green-d: #55741F;
+
+$color-brown: #8B4513;
+$color-brown-l: #C7631B;
+$color-brown-d: #4F270B;
 
 // User moods - errors, warnings and success
 $color-error: #E74343;    // To show errors
@@ -294,7 +319,7 @@ $color-success: #A5D75A;  // To show success
 $color-info: #3F62A0;     // To be used for notes or hints
 
 // Social Network colors
-$color-social: #a5d75a; // Common for all social buttons
+$color-social: #A5D75A; // Common for all social buttons
 
 $color-dropbox: #007EE5;
 $color-facebook: #3B5998;

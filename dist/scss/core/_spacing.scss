@@ -1,0 +1,408 @@
+/**********************************************************************
+Description: This file define the styles for margin and padding used by CMT-UI css framework.
+
+Dependencies: variables, mixins
+
+Details: It defines the margin and padding styles as listed below:
+* Margin & Padding  - These classes remove margin or padding or both. There are also classes to have pre-defined
+*                     margin and padding.
+***********************************************************************/
+
+// without margin and padding
+.mp {
+
+	&.mp-none {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	&.mp-none-top {
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+	}
+
+	&.mp-none-right {
+		margin-right: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	&.mp-none-bottom {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	&.mp-none-left {
+		margin-left: 0 !important;
+		padding-left: 0 !important;
+	}
+}
+
+// Padding
+
+.padding {
+
+	&.padding-none {
+		padding: 0 !important;
+	}
+
+	&.padding-none-v {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	&.padding-none-h {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	&.padding-none-top {
+		padding-top: 0 !important;
+	}
+
+	&.padding-none-right {
+		padding-right: 0 !important;
+	}
+
+	&.padding-none-bottom {
+		padding-bottom: 0 !important;
+	}
+
+	&.padding-none-left {
+		padding-left: 0 !important;
+	}
+
+	&.padding-default {
+		padding: $size-default-rem;
+	}
+
+	&.padding-default-v {
+		padding-top: $size-default-rem;
+		padding-bottom: $size-default-rem;
+	}
+
+	&.padding-default-h {
+		padding-left: $size-default-rem;
+		padding-right: $size-default-rem;
+	}
+
+	&.padding-small-v {
+		padding-top: $size-small-rem;
+		padding-bottom: $size-small-rem;
+	}
+
+	&.padding-small-h {
+		padding-left: $size-small-rem;
+		padding-right: $size-small-rem;
+	}
+
+	&.padding-medium {
+		padding: $size-medium-rem;
+	}
+
+	&.padding-medium-v {
+		padding-top: $size-medium-rem;
+		padding-bottom: $size-medium-rem;
+	}
+
+	&.padding-medium-h {
+		padding-left: $size-medium-rem;
+		padding-right: $size-medium-rem;
+	}
+
+	&.padding-large {
+		padding: $size-large-rem;
+	}
+
+	&.padding-large-v {
+		padding-top: $size-large-rem;
+		padding-bottom: $size-large-rem;
+	}
+
+	&.padding-large-h {
+		padding-left: $size-large-rem;
+		padding-right: $size-large-rem;
+	}
+
+	&.padding-xlarge {
+		padding: $size-xlarge-rem;
+	}
+
+	&.padding-xlarge-v {
+		padding-top: $size-xlarge-rem;
+		padding-bottom: $size-xlarge-rem;
+	}
+
+	&.padding-xlarge-h {
+		padding-left: $size-xlarge-rem;
+		padding-right: $size-xlarge-rem;
+	}
+
+	&.padding-top-default {
+		padding-top: $size-default-rem;
+	}
+
+	&.padding-bottom-default {
+		padding-bottom: $size-default-rem;
+	}
+
+	&.padding-left-default {
+		padding-left: $size-default-rem;
+	}
+
+	&.padding-right-default {
+		padding-right: $size-default-rem;
+	}
+
+	&.padding-small {
+		padding: $size-small-rem;
+	}
+
+	&.padding-top-small {
+		padding-top: $size-small-rem;
+	}
+
+	&.padding-bottom-small {
+		padding-bottom: $size-small-rem;
+	}
+
+	&.padding-left-small {
+		padding-left: $size-small-rem;
+	}
+
+	&.padding-right-small {
+		padding-right: $size-small-rem;
+	}
+
+	&.padding-top-medium {
+		padding-top: $size-medium-rem;
+	}
+
+	&.padding-bottom-medium {
+		padding-bottom: $size-medium-rem;
+	}
+
+	&.padding-left-medium {
+		padding-left: $size-medium-rem;
+	}
+
+	&.padding-right-medium {
+		padding-right: $size-medium-rem;
+	}
+
+	&.padding-top-large {
+		padding-top: $size-large-rem;
+	}
+
+	&.padding-bottom-large {
+		padding-bottom: $size-large-rem;
+	}
+
+	&.padding-left-large {
+		padding-left: $size-large-rem;
+	}
+
+	&.padding-right-large {
+		padding-right: $size-large-rem;
+	}
+
+	&.padding-top-xlarge {
+		padding-top: $size-xlarge-rem;
+	}
+
+	&.padding-bottom-xlarge {
+		padding-bottom: $size-xlarge-rem;
+	}
+
+	&.padding-left-xlarge {
+		padding-left: $size-xlarge-rem;
+	}
+
+	&.padding-right-xlarge {
+		padding-right: $size-xlarge-rem;
+	}
+}
+
+// Margin
+
+.margin {
+
+	&.margin-none {
+		margin: 0 !important;
+	}
+
+	&.margin-none-v {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	&.margin-none-h {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	&.margin-none-top {
+		margin-top: 0 !important;
+	}
+
+	&.margin-none-right {
+		margin-right: 0 !important;
+	}
+
+	&.margin-none-bottom {
+		margin-bottom: 0 !important;
+	}
+
+	&.margin-none-left {
+		margin-left: 0 !important;
+	}
+
+	&.margin-default {
+		margin: $size-default-rem;
+	}
+
+	&.margin-default-v {
+		margin-top: $size-default-rem;
+		margin-bottom: $size-default-rem;
+	}
+
+	&.margin-default-h {
+		margin-left: $size-default-rem;
+		margin-right: $size-default-rem;
+	}
+
+	&.margin-small-v {
+		margin-top: $size-small-rem;
+		margin-bottom: $size-small-rem;
+	}
+
+	&.margin-small-h {
+		margin-left: $size-small-rem;
+		margin-right: $size-small-rem;
+	}
+
+	&.margin-medium {
+		margin: $size-medium-rem;
+	}
+
+	&.margin-medium-v {
+		margin-top: $size-medium-rem;
+		margin-bottom: $size-medium-rem;
+	}
+
+	&.margin-medium-h {
+		margin-left: $size-medium-rem;
+		margin-right: $size-medium-rem;
+	}
+
+	&.margin-large {
+		margin: $size-large-rem;
+	}
+
+	&.margin-large-v {
+		margin-top: $size-large-rem;
+		margin-bottom: $size-large-rem;
+	}
+
+	&.margin-large-h {
+		margin-left: $size-large-rem;
+		margin-right: $size-large-rem;
+	}
+
+	&.margin-xlarge {
+		margin: $size-xlarge-rem;
+	}
+
+	&.margin-xlarge-v {
+		margin-top: $size-xlarge-rem;
+		margin-bottom: $size-xlarge-rem;
+	}
+
+	&.margin-xlarge-h {
+		margin-left: $size-xlarge-rem;
+		margin-right: $size-xlarge-rem;
+	}
+
+	&.margin-top-default {
+		margin-top: $size-default-rem;
+	}
+
+	&.margin-bottom-default {
+		margin-bottom: $size-default-rem;
+	}
+
+	&.margin-left-default {
+		margin-left: $size-default-rem;
+	}
+
+	&.margin-right-default {
+		margin-right: $size-default-rem;
+	}
+
+	&.margin-small {
+		margin: $size-small-rem;
+	}
+
+	&.margin-top-small {
+		margin-top: $size-small-rem;
+	}
+
+	&.margin-bottom-small {
+		margin-bottom: $size-small-rem;
+	}
+
+	&.margin-left-small {
+		margin-left: $size-small-rem;
+	}
+
+	&.margin-right-small {
+		margin-right: $size-small-rem;
+	}
+
+	&.margin-top-medium {
+		margin-top: $size-medium-rem;
+	}
+
+	&.margin-bottom-medium {
+		margin-bottom: $size-medium-rem;
+	}
+
+	&.margin-left-medium {
+		margin-left: $size-medium-rem;
+	}
+
+	&.margin-right-medium {
+		margin-right: $size-medium-rem;
+	}
+
+	&.margin-top-large {
+		margin-top: $size-large-rem;
+	}
+
+	&.margin-bottom-large {
+		margin-bottom: $size-large-rem;
+	}
+
+	&.margin-left-large {
+		margin-left: $size-large-rem;
+	}
+
+	&.margin-right-large {
+		margin-right: $size-large-rem;
+	}
+
+	&.margin-top-xlarge {
+		margin-top: $size-xlarge-rem;
+	}
+
+	&.margin-bottom-xlarge {
+		margin-bottom: $size-xlarge-rem;
+	}
+
+	&.margin-left-xlarge {
+		margin-left: $size-xlarge-rem;
+	}
+
+	&.margin-right-xlarge {
+		margin-right: $size-xlarge-rem;
+	}
+}

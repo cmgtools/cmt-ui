@@ -70,6 +70,10 @@ html, body {
 .font {
 	font-family: $font-default;
 
+	.font-bold {
+		font-weight: bold;
+	}
+
 	&.font-heading {
 		font-family: $font-heading;
 	}
@@ -286,7 +290,10 @@ pre {
 // Text Alignment
 
 .text-align {
-	text-align: left !important;
+
+	&.text-align-left {
+		text-align: left !important;
+	}
 
 	&.text-align-center {
 		text-align: center !important;
@@ -338,13 +345,13 @@ a, .link {
 	}
 }
 
-// Single line
+// Text in single line
 .text-line {
 	overflow: hidden;
 	white-space: nowrap;
 }
 
-// Text at center with background line
+// Text at center of background line
 .text-with-line {
 	width: 100%;
 	height: 0.75em;

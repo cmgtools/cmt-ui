@@ -51,29 +51,29 @@ Details: It defines the commonly used variables as listed below:
 *                     tumblr, vimeo, vine, vk, whatsapp, youtube.
 ***********************************************************************/
 /*! CMGTools  - CMT-UI(CMGTools UI) is a responsive and component oriented css framework having pre-defined and commonly used components
- *              that can be easily adapted by all the mobile, tablet and desktop screens.
+ *              that can be easily adapted by all the desktop, tablet and mobile screens.
  * Version    - 1.0.0-alpha
  * License    - GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
  *
  * Copyright © 2015-2017 by VulpineCode Technologies Private Limited (http://www.vulpinecode.com) All rights reserved.
  *
  * Introduction - CMT-UI(CMGTools UI) is a responsive and component oriented css framework having pre-defined and commonly used components
- *    that can be easily adapted by all the mobile, tablet and desktop screens.
+ *    that can be easily adapted by all the desktop, tablet and mobile screens.
  *
  *    It's divided on high level into core, elements, components and extension where each division consist of SASS files having specific
  *    features and components according to file name. All the divisions are arranged in such a way that these can be overriden by the project SASS
  *    either following the same divisions or it's own directory and file arrangements.
  *
  *    Core        - The core division is most important and foundation of CMT-UI. It consist of variables, reset, typography, effects(animations,
- *                  transitions and transformations), mixins, basic elements and containers(rows and columns). Every project must include all the
- *                  core files in order to work properly.
+ *                  transitions and transformations), mixins, basic elements and containers(12 and 15 columns grid using rows and columns). Every
+ *					project must include all the core files in order to work properly.
  *
- *    Elements    - This division consist of styling of form, form elements and tables.
+ *    Elements    - This division consist of styling of form, form elements, tables and other html elements.
  *
  *    Components  - The components are either self dependent or associated with CMT-JS(CMGTools Javascript) framework in order to be fully
  *                  functional. The JS part of these components can also be implemented either using plain JS or widely used frameworks and
  *                  libraries. The components available with CMT-UI are menus, breadcrumbs, headers, footers, sidebars, popups, blocks, boxes, grid,
- *                  cards, sliders, galleries, flippers, file uploaders and blogs.
+ *                  cards, sliders, galleries, flippers, file uploaders, auto suggest and blogs.
  *
  *                  It provides layout and basic arrangement of these components and also provide few commonly used implementation of the barebone
  *                  components.
@@ -189,6 +189,11 @@ Details: It define the mixins and their default implementation as listed below:
   .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-basic .sidebar-header .sidebar-title:after {
     clear: both; }
 
+/*
+Notes:
+1. bkg-image, bkg-image-fill, bkg-auto, bkg-image-scroll, bkg-image-fixed - need inline css for background-image
+2. bkg-element - It use the img tag to cover background of parent element.
+*/
 .texture, .pattern {
   position: absolute;
   width: 100%;
@@ -312,54 +317,59 @@ Details: It define the mixins and their default implementation as listed below:
   .transparent-bkg.transparent-bkg-blue {
     background-color: rgba(63, 98, 160, 0.6); }
   .transparent-bkg.transparent-bkg-purple {
-    background-color: rgba(102, 48, 150, 0.6); }
+    background-color: rgba(137, 70, 196, 0.6); }
   .transparent-bkg.transparent-bkg-orange {
     background-color: rgba(243, 112, 46, 0.6); }
   .transparent-bkg.transparent-bkg-yellow {
-    background-color: rgba(255, 216, 0, 0.6); }
+    background-color: rgba(237, 206, 79, 0.6); }
   .transparent-bkg.transparent-bkg-red {
-    background-color: rgba(180, 42, 26, 0.6); }
+    background-color: rgba(195, 45, 28, 0.6); }
   .transparent-bkg.transparent-bkg-pink {
-    background-color: rgba(255, 157, 171, 0.6); }
+    background-color: rgba(228, 40, 124, 0.6); }
   .transparent-bkg.transparent-bkg-magenta {
     background-color: rgba(178, 0, 178, 0.6); }
   .transparent-bkg.transparent-bkg-green {
-    background-color: rgba(135, 196, 66, 0.6); }
+    background-color: rgba(124, 170, 45, 0.6); }
   .transparent-bkg.transparent-bkg-green-d {
-    background-color: rgba(86, 131, 42, 0.6); }
+    background-color: rgba(85, 116, 31, 0.6); }
 
-.rounded {
+.rounded.rounded-none {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  -khtml-border-radius: 0 !important; }
+
+.rounded.rounded-default {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
   -khtml-border-radius: 1px; }
-  .rounded.rounded-none {
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    border-radius: 0 !important;
-    -khtml-border-radius: 0 !important; }
-  .rounded.rounded-small {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -khtml-border-radius: 3px; }
-  .rounded.rounded-medium {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -khtml-border-radius: 5px; }
-  .rounded.rounded-large {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -khtml-border-radius: 10px; }
-  .rounded.rounded-xlarge {
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    border-radius: 14px;
-    -khtml-border-radius: 14px; }
 
-.rounded-top {
+.rounded.rounded-small {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px; }
+
+.rounded.rounded-medium {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px; }
+
+.rounded.rounded-large {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -khtml-border-radius: 10px; }
+
+.rounded.rounded-xlarge {
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  -khtml-border-radius: 14px; }
+
+.rounded.rounded-top {
   -moz-border-radius-top-left: 1px;
   -moz-border-radius-top-right: 1px;
   -webkit-border-radius-top-left: 1px;
@@ -367,7 +377,7 @@ Details: It define the mixins and their default implementation as listed below:
   border-radius: 1px 1px 0 0;
   -khtml-border-radius-top-left: 1px;
   -khtml-border-radius-top-right: 1px; }
-  .rounded-top.rounded-top-small {
+  .rounded.rounded-top.rounded-top-small {
     -moz-border-radius-top-left: 3px;
     -moz-border-radius-top-right: 3px;
     -webkit-border-radius-top-left: 3px;
@@ -375,7 +385,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 3px 3px 0 0;
     -khtml-border-radius-top-left: 3px;
     -khtml-border-radius-top-right: 3px; }
-  .rounded-top.rounded-top-medium {
+  .rounded.rounded-top.rounded-top-medium {
     -moz-border-radius-top-left: 5px;
     -moz-border-radius-top-right: 5px;
     -webkit-border-radius-top-left: 5px;
@@ -383,7 +393,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 5px 5px 0 0;
     -khtml-border-radius-top-left: 5px;
     -khtml-border-radius-top-right: 5px; }
-  .rounded-top.rounded-top-large {
+  .rounded.rounded-top.rounded-top-large {
     -moz-border-radius-top-left: 10px;
     -moz-border-radius-top-right: 10px;
     -webkit-border-radius-top-left: 10px;
@@ -391,7 +401,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 10px 10px 0 0;
     -khtml-border-radius-top-left: 10px;
     -khtml-border-radius-top-right: 10px; }
-  .rounded-top.rounded-top-xlarge {
+  .rounded.rounded-top.rounded-top-xlarge {
     -moz-border-radius-top-left: 14px;
     -moz-border-radius-top-right: 14px;
     -webkit-border-radius-top-left: 14px;
@@ -400,7 +410,7 @@ Details: It define the mixins and their default implementation as listed below:
     -khtml-border-radius-top-left: 14px;
     -khtml-border-radius-top-right: 14px; }
 
-.rounded-right {
+.rounded.rounded-right {
   -moz-border-radius-top-right: 1px;
   -moz-border-radius-bottom-right: 1px;
   -webkit-border-radius-top-right: 1px;
@@ -408,7 +418,7 @@ Details: It define the mixins and their default implementation as listed below:
   border-radius: 0 1px 1px 0;
   -khtml-border-radius-top-right: 1px;
   -khtml-border-radius-bottom-right: 1px; }
-  .rounded-right.rounded-right-small {
+  .rounded.rounded-right.rounded-right-small {
     -moz-border-radius-top-right: 3px;
     -moz-border-radius-bottom-right: 3px;
     -webkit-border-radius-top-right: 3px;
@@ -416,7 +426,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 0 3px 3px 0;
     -khtml-border-radius-top-right: 3px;
     -khtml-border-radius-bottom-right: 3px; }
-  .rounded-right.rounded-right-medium {
+  .rounded.rounded-right.rounded-right-medium {
     -moz-border-radius-top-right: 5px;
     -moz-border-radius-bottom-right: 5px;
     -webkit-border-radius-top-right: 5px;
@@ -424,7 +434,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 0 5px 5px 0;
     -khtml-border-radius-top-right: 5px;
     -khtml-border-radius-bottom-right: 5px; }
-  .rounded-right.rounded-right-large {
+  .rounded.rounded-right.rounded-right-large {
     -moz-border-radius-top-right: 10px;
     -moz-border-radius-bottom-right: 10px;
     -webkit-border-radius-top-right: 10px;
@@ -432,7 +442,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 0 10px 10px 0;
     -khtml-border-radius-top-right: 10px;
     -khtml-border-radius-bottom-right: 10px; }
-  .rounded-right.rounded-right-xlarge {
+  .rounded.rounded-right.rounded-right-xlarge {
     -moz-border-radius-top-right: 14px;
     -moz-border-radius-bottom-right: 14px;
     -webkit-border-radius-top-right: 14px;
@@ -441,7 +451,7 @@ Details: It define the mixins and their default implementation as listed below:
     -khtml-border-radius-top-right: 14px;
     -khtml-border-radius-bottom-right: 14px; }
 
-.rounded-bottom {
+.rounded.rounded-bottom {
   -moz-border-radius-bottom-left: 1px;
   -moz-border-radius-bottom-right: 1px;
   -webkit-border-radius-bottom-left: 1px;
@@ -449,7 +459,7 @@ Details: It define the mixins and their default implementation as listed below:
   border-radius: 0 0 1px 1px;
   -khtml-border-radius-bottom-left: 1px;
   -khtml-border-radius-bottom-right: 1px; }
-  .rounded-bottom.rounded-bottom-small {
+  .rounded.rounded-bottom.rounded-bottom-small {
     -moz-border-radius-bottom-left: 3px;
     -moz-border-radius-bottom-right: 3px;
     -webkit-border-radius-bottom-left: 3px;
@@ -457,7 +467,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 0 0 3px 3px;
     -khtml-border-radius-bottom-left: 3px;
     -khtml-border-radius-bottom-right: 3px; }
-  .rounded-bottom.rounded-bottom-medium {
+  .rounded.rounded-bottom.rounded-bottom-medium {
     -moz-border-radius-bottom-left: 5px;
     -moz-border-radius-bottom-right: 5px;
     -webkit-border-radius-bottom-left: 5px;
@@ -465,7 +475,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 0 0 5px 5px;
     -khtml-border-radius-bottom-left: 5px;
     -khtml-border-radius-bottom-right: 5px; }
-  .rounded-bottom.rounded-bottom-large {
+  .rounded.rounded-bottom.rounded-bottom-large {
     -moz-border-radius-bottom-left: 10px;
     -moz-border-radius-bottom-right: 10px;
     -webkit-border-radius-bottom-left: 10px;
@@ -473,7 +483,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 0 0 10px 10px;
     -khtml-border-radius-bottom-left: 10px;
     -khtml-border-radius-bottom-right: 10px; }
-  .rounded-bottom.rounded-bottom-xlarge {
+  .rounded.rounded-bottom.rounded-bottom-xlarge {
     -moz-border-radius-bottom-left: 14px;
     -moz-border-radius-bottom-right: 14px;
     -webkit-border-radius-bottom-left: 14px;
@@ -482,7 +492,7 @@ Details: It define the mixins and their default implementation as listed below:
     -khtml-border-radius-bottom-left: 14px;
     -khtml-border-radius-bottom-right: 14px; }
 
-.rounded-left {
+.rounded.rounded-left {
   -moz-border-radius-top-left: 1px;
   -moz-border-radius-bottom-left: 1px;
   -webkit-border-radius-top-left: 1px;
@@ -490,7 +500,7 @@ Details: It define the mixins and their default implementation as listed below:
   border-radius: 1px 0 0 1px;
   -khtml-border-radius-top-left: 1px;
   -khtml-border-radius-bottom-left: 1px; }
-  .rounded-left.rounded-left-small {
+  .rounded.rounded-left.rounded-left-small {
     -moz-border-radius-top-left: 3px;
     -moz-border-radius-bottom-left: 3px;
     -webkit-border-radius-top-left: 3px;
@@ -498,7 +508,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 3px 0 0 3px;
     -khtml-border-radius-top-left: 3px;
     -khtml-border-radius-bottom-left: 3px; }
-  .rounded-left.rounded-left-medium {
+  .rounded.rounded-left.rounded-left-medium {
     -moz-border-radius-top-left: 5px;
     -moz-border-radius-bottom-left: 5px;
     -webkit-border-radius-top-left: 5px;
@@ -506,7 +516,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 5px 0 0 5px;
     -khtml-border-radius-top-left: 5px;
     -khtml-border-radius-bottom-left: 5px; }
-  .rounded-left.rounded-left-large {
+  .rounded.rounded-left.rounded-left-large {
     -moz-border-radius-top-left: 10px;
     -moz-border-radius-bottom-left: 10px;
     -webkit-border-radius-top-left: 10px;
@@ -514,7 +524,7 @@ Details: It define the mixins and their default implementation as listed below:
     border-radius: 10px 0 0 10px;
     -khtml-border-radius-top-left: 10px;
     -khtml-border-radius-bottom-left: 10px; }
-  .rounded-left.rounded-left-xlarge {
+  .rounded.rounded-left.rounded-left-xlarge {
     -moz-border-radius-top-left: 14px;
     -moz-border-radius-bottom-left: 14px;
     -webkit-border-radius-top-left: 14px;
@@ -523,105 +533,105 @@ Details: It define the mixins and their default implementation as listed below:
     -khtml-border-radius-top-left: 14px;
     -khtml-border-radius-bottom-left: 14px; }
 
-.rounded-top-left {
+.rounded.rounded-top-left {
   -moz-border-radius-top-left: 1px;
   -webkit-border-radius-top-left: 1px;
   border-radius: 1px 0 0 0;
   -khtml-border-radius-top-left: 1px; }
-  .rounded-top-left.rounded-top-left-small {
+  .rounded.rounded-top-left.rounded-top-left-small {
     -moz-border-radius-top-left: 3px;
     -webkit-border-radius-top-left: 3px;
     border-radius: 3px 0 0 0;
     -khtml-border-radius-top-left: 3px; }
-  .rounded-top-left.rounded-top-left-medium {
+  .rounded.rounded-top-left.rounded-top-left-medium {
     -moz-border-radius-top-left: 5px;
     -webkit-border-radius-top-left: 5px;
     border-radius: 5px 0 0 0;
     -khtml-border-radius-top-left: 5px; }
-  .rounded-top-left.rounded-top-left-large {
+  .rounded.rounded-top-left.rounded-top-left-large {
     -moz-border-radius-top-left: 10px;
     -webkit-border-radius-top-left: 10px;
     border-radius: 10px 0 0 0;
     -khtml-border-radius-top-left: 10px; }
-  .rounded-top-left.rounded-top-left-xlarge {
+  .rounded.rounded-top-left.rounded-top-left-xlarge {
     -moz-border-radius-top-left: 14px;
     -webkit-border-radius-top-left: 14px;
     border-radius: 14px 0 0 0;
     -khtml-border-radius-top-left: 14px; }
 
-.rounded-top-right {
+.rounded.rounded-top-right {
   -moz-border-radius-top-right: 1px;
   -webkit-border-radius-top-right: 1px;
   border-radius: 0 1px 0 0;
   -khtml-border-radius-top-right: 1px; }
-  .rounded-top-right.rounded-top-right-small {
+  .rounded.rounded-top-right.rounded-top-right-small {
     -moz-border-radius-top-right: 3px;
     -webkit-border-radius-top-right: 3px;
     border-radius: 0 3px 0 0;
     -khtml-border-radius-top-right: 3px; }
-  .rounded-top-right.rounded-top-right-medium {
+  .rounded.rounded-top-right.rounded-top-right-medium {
     -moz-border-radius-top-right: 5px;
     -webkit-border-radius-top-right: 5px;
     border-radius: 0 5px 0 0;
     -khtml-border-radius-top-right: 5px; }
-  .rounded-top-right.rounded-top-right-large {
+  .rounded.rounded-top-right.rounded-top-right-large {
     -moz-border-radius-top-right: 10px;
     -webkit-border-radius-top-right: 10px;
     border-radius: 0 10px 0 0;
     -khtml-border-radius-top-right: 10px; }
-  .rounded-top-right.rounded-top-right-xlarge {
+  .rounded.rounded-top-right.rounded-top-right-xlarge {
     -moz-border-radius-top-right: 14px;
     -webkit-border-radius-top-right: 14px;
     border-radius: 0 14px 0 0;
     -khtml-border-radius-top-right: 14px; }
 
-.rounded-bottom-left {
+.rounded.rounded-bottom-left {
   -moz-border-radius-bottom-left: 1px;
   -webkit-border-radius-bottom-left: 1px;
   border-radius: 0 0 1px 0;
   -khtml-border-radius-bottom-left: 1px; }
-  .rounded-bottom-left.rounded-bottom-left-small {
+  .rounded.rounded-bottom-left.rounded-bottom-left-small {
     -moz-border-radius-bottom-left: 3px;
     -webkit-border-radius-bottom-left: 3px;
     border-radius: 0 0 3px 0;
     -khtml-border-radius-bottom-left: 3px; }
-  .rounded-bottom-left.rounded-bottom-left-medium {
+  .rounded.rounded-bottom-left.rounded-bottom-left-medium {
     -moz-border-radius-bottom-left: 5px;
     -webkit-border-radius-bottom-left: 5px;
     border-radius: 0 0 5px 0;
     -khtml-border-radius-bottom-left: 5px; }
-  .rounded-bottom-left.rounded-bottom-left-large {
+  .rounded.rounded-bottom-left.rounded-bottom-left-large {
     -moz-border-radius-bottom-left: 10px;
     -webkit-border-radius-bottom-left: 10px;
     border-radius: 0 0 10px 0;
     -khtml-border-radius-bottom-left: 10px; }
-  .rounded-bottom-left.rounded-bottom-left-xlarge {
+  .rounded.rounded-bottom-left.rounded-bottom-left-xlarge {
     -moz-border-radius-bottom-left: 14px;
     -webkit-border-radius-bottom-left: 14px;
     border-radius: 0 0 14px 0;
     -khtml-border-radius-bottom-left: 14px; }
 
-.rounded-bottom-right {
+.rounded.rounded-bottom-right {
   -moz-border-radius-bottom-right: 1px;
   -webkit-border-radius-bottom-right: 1px;
   border-radius: 0 0 0 1px;
   -khtml-border-radius-bottom-right: 1px; }
-  .rounded-bottom-right.rounded-bottom-right-small {
+  .rounded.rounded-bottom-right.rounded-bottom-right-small {
     -moz-border-radius-bottom-right: 3px;
     -webkit-border-radius-bottom-right: 3px;
     border-radius: 0 0 0 3px;
     -khtml-border-radius-bottom-right: 3px; }
-  .rounded-bottom-right.rounded-bottom-right-medium {
+  .rounded.rounded-bottom-right.rounded-bottom-right-medium {
     -moz-border-radius-bottom-right: 5px;
     -webkit-border-radius-bottom-right: 5px;
     border-radius: 0 0 0 5px;
     -khtml-border-radius-bottom-right: 5px; }
-  .rounded-bottom-right.rounded-bottom-right-large {
+  .rounded.rounded-bottom-right.rounded-bottom-right-large {
     -moz-border-radius-bottom-right: 10px;
     -webkit-border-radius-bottom-right: 10px;
     border-radius: 0 0 0 10px;
     -khtml-border-radius-bottom-right: 10px; }
-  .rounded-bottom-right.rounded-bottom-right-xlarge {
+  .rounded.rounded-bottom-right.rounded-bottom-right-xlarge {
     -moz-border-radius-bottom-right: 14px;
     -webkit-border-radius-bottom-right: 14px;
     border-radius: 0 0 0 14px;
@@ -656,37 +666,37 @@ Details: It define the mixins and their default implementation as listed below:
     -moz-box-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
     box-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6); }
   .shadow.shadow-purple {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(102, 48, 150, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(102, 48, 150, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(102, 48, 150, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
   .shadow.shadow-orange {
     -webkit-box-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
     -moz-box-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
     box-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6); }
   .shadow.shadow-yellow {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 216, 0, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(255, 216, 0, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(255, 216, 0, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6); }
   .shadow.shadow-red {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(180, 42, 26, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(180, 42, 26, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(180, 42, 26, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6); }
   .shadow.shadow-pink {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 157, 171, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(255, 157, 171, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(255, 157, 171, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6); }
   .shadow.shadow-magenta {
     -webkit-box-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
     -moz-box-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
     box-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6); }
   .shadow.shadow-green {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(135, 196, 66, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(135, 196, 66, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(135, 196, 66, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6); }
   .shadow.shadow-green-d {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(86, 131, 42, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(86, 131, 42, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(86, 131, 42, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6); }
 
 .shadow-inset {
   -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
@@ -717,37 +727,37 @@ Details: It define the mixins and their default implementation as listed below:
     -moz-box-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
     box-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6); }
   .shadow-inset.shadow-inset-purple {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(102, 48, 150, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(102, 48, 150, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(102, 48, 150, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
   .shadow-inset.shadow-inset-orange {
     -webkit-box-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
     -moz-box-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
     box-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6); }
   .shadow-inset.shadow-inset-yellow {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 216, 0, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(255, 216, 0, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(255, 216, 0, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6); }
   .shadow-inset.shadow-inset-red {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(180, 42, 26, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(180, 42, 26, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(180, 42, 26, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6); }
   .shadow-inset.shadow-inset-pink {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 157, 171, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(255, 157, 171, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(255, 157, 171, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6); }
   .shadow-inset.shadow-inset-magenta {
     -webkit-box-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
     -moz-box-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
     box-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6); }
   .shadow-inset.shadow-inset-green {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(135, 196, 66, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(135, 196, 66, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(135, 196, 66, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6); }
   .shadow-inset.shadow-inset-green-d {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(86, 131, 42, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(86, 131, 42, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(86, 131, 42, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6); }
 
 .text-shadow {
   -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
@@ -778,37 +788,37 @@ Details: It define the mixins and their default implementation as listed below:
     -moz-text-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
     text-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6); }
   .text-shadow.text-shadow-purple {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(102, 48, 150, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(102, 48, 150, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(102, 48, 150, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
   .text-shadow.text-shadow-orange {
     -webkit-text-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
     -moz-text-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
     text-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6); }
   .text-shadow.text-shadow-yellow {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 216, 0, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(255, 216, 0, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(255, 216, 0, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6); }
   .text-shadow.text-shadow-red {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(180, 42, 26, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(180, 42, 26, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(180, 42, 26, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6); }
   .text-shadow.text-shadow-pink {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 157, 171, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(255, 157, 171, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(255, 157, 171, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6); }
   .text-shadow.text-shadow-magenta {
     -webkit-text-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
     -moz-text-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
     text-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6); }
   .text-shadow.text-shadow-green {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(135, 196, 66, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(135, 196, 66, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(135, 196, 66, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6); }
   .text-shadow.text-shadow-green-d {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(86, 131, 42, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(86, 131, 42, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(86, 131, 42, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6); }
 
 .text-shadow-inset {
   -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
@@ -839,121 +849,128 @@ Details: It define the mixins and their default implementation as listed below:
     -moz-text-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
     text-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6); }
   .text-shadow-inset.text-shadow-inset-purple {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(102, 48, 150, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(102, 48, 150, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(102, 48, 150, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
   .text-shadow-inset.text-shadow-inset-orange {
     -webkit-text-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
     -moz-text-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
     text-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6); }
   .text-shadow-inset.text-shadow-inset-yellow {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 216, 0, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(255, 216, 0, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(255, 216, 0, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6); }
   .text-shadow-inset.text-shadow-inset-red {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(180, 42, 26, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(180, 42, 26, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(180, 42, 26, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6); }
   .text-shadow-inset.text-shadow-inset-pink {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 157, 171, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(255, 157, 171, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(255, 157, 171, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6); }
   .text-shadow-inset.text-shadow-inset-magenta {
     -webkit-text-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
     -moz-text-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
     text-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6); }
   .text-shadow-inset.text-shadow-inset-green {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(135, 196, 66, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(135, 196, 66, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(135, 196, 66, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6); }
   .text-shadow-inset.text-shadow-inset-green-d {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(86, 131, 42, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(86, 131, 42, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(86, 131, 42, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6); }
 
-.border {
-  border: 1px solid #232831; }
-  .border.border-small {
-    border: 3px solid #232831; }
-  .border.border-medium {
-    border: 5px solid #232831; }
-  .border.border-large {
-    border: 10px solid #232831; }
-  .border.border-xlarge {
-    border: 14px solid #232831; }
-  .border.border-primary {
-    border: 1px solid #F2F2F2; }
-  .border.border-secondary {
-    border: 1px solid #3C4655; }
-  .border.border-tertiary {
-    border: 1px solid #87BA45; }
+.border.border-default {
+  border: 1px solid #7F7F7F; }
 
-.border-top {
-  border-top: 1px solid #232831; }
-  .border-top.border-top-small {
-    border-top: 3px solid #232831; }
-  .border-top.border-top-medium {
-    border-top: 5px solid #232831; }
-  .border-top.border-top-large {
-    border-top: 10px solid #232831; }
-  .border-top.border-top-xlarge {
-    border-top: 14px solid #232831; }
-  .border-top.border-top-primary {
+.border.border-small {
+  border: 3px solid #7F7F7F; }
+
+.border.border-medium {
+  border: 5px solid #7F7F7F; }
+
+.border.border-large {
+  border: 10px solid #7F7F7F; }
+
+.border.border-xlarge {
+  border: 14px solid #7F7F7F; }
+
+.border.border-primary {
+  border: 1px solid #F2F2F2; }
+
+.border.border-secondary {
+  border: 1px solid #3C4655; }
+
+.border.border-tertiary {
+  border: 1px solid #87BA45; }
+
+.border.border-top {
+  border-top: 1px solid #7F7F7F; }
+  .border.border-top.border-top-small {
+    border-top: 3px solid #7F7F7F; }
+  .border.border-top.border-top-medium {
+    border-top: 5px solid #7F7F7F; }
+  .border.border-top.border-top-large {
+    border-top: 10px solid #7F7F7F; }
+  .border.border-top.border-top-xlarge {
+    border-top: 14px solid #7F7F7F; }
+  .border.border-top.border-top-primary {
     border-top: 1px solid #F2F2F2; }
-  .border-top.border-top-secondary {
+  .border.border-top.border-top-secondary {
     border-top: 1px solid #3C4655; }
-  .border-top.border-top-tertiary {
+  .border.border-top.border-top-tertiary {
     border-top: 1px solid #87BA45; }
 
-.border-right {
-  border-right: 1px solid #232831; }
-  .border-right.border-right-small {
-    border-right: 3px solid #232831; }
-  .border-right.border-right-medium {
-    border-right: 5px solid #232831; }
-  .border-right.border-right-large {
-    border-right: 10px solid #232831; }
-  .border-right.border-right-xlarge {
-    border-right: 14px solid #232831; }
-  .border-right.border-right-primary {
+.border.border-right {
+  border-right: 1px solid #7F7F7F; }
+  .border.border-right.border-right-small {
+    border-right: 3px solid #7F7F7F; }
+  .border.border-right.border-right-medium {
+    border-right: 5px solid #7F7F7F; }
+  .border.border-right.border-right-large {
+    border-right: 10px solid #7F7F7F; }
+  .border.border-right.border-right-xlarge {
+    border-right: 14px solid #7F7F7F; }
+  .border.border-right.border-right-primary {
     border-right: 1px solid #F2F2F2; }
-  .border-right.border-right-secondary {
+  .border.border-right.border-right-secondary {
     border-right: 1px solid #3C4655; }
-  .border-right.border-right-tertiary {
+  .border.border-right.border-right-tertiary {
     border-right: 1px solid #87BA45; }
 
-.border-bottom {
-  border-bottom: 1px solid #232831; }
-  .border-bottom.border-bottom-small {
-    border-bottom: 3px solid #232831; }
-  .border-bottom.border-bottom-medium {
-    border-bottom: 5px solid #232831; }
-  .border-bottom.border-bottom-large {
-    border-bottom: 10px solid #232831; }
-  .border-bottom.border-bottom-xlarge {
-    border-bottom: 14px solid #232831; }
-  .border-bottom.border-bottom-primary {
+.border.border-bottom {
+  border-bottom: 1px solid #7F7F7F; }
+  .border.border-bottom.border-bottom-small {
+    border-bottom: 3px solid #7F7F7F; }
+  .border.border-bottom.border-bottom-medium {
+    border-bottom: 5px solid #7F7F7F; }
+  .border.border-bottom.border-bottom-large {
+    border-bottom: 10px solid #7F7F7F; }
+  .border.border-bottom.border-bottom-xlarge {
+    border-bottom: 14px solid #7F7F7F; }
+  .border.border-bottom.border-bottom-primary {
     border-bottom: 1px solid #F2F2F2; }
-  .border-bottom.border-bottom-secondary {
+  .border.border-bottom.border-bottom-secondary {
     border-bottom: 1px solid #3C4655; }
-  .border-bottom.border-bottom-tertiary {
+  .border.border-bottom.border-bottom-tertiary {
     border-bottom: 1px solid #87BA45; }
 
-.border-left {
-  border-left: 1px solid #232831; }
-  .border-left.border-left-small {
-    border-left: 3px solid #232831; }
-  .border-left.border-left-medium {
-    border-left: 5px solid #232831; }
-  .border-left.border-left-large {
-    border-left: 10px solid #232831; }
-  .border-left.border-left-xlarge {
-    border-left: 14px solid #232831; }
-  .border-left.border-left-primary {
+.border.border-left {
+  border-left: 1px solid #7F7F7F; }
+  .border.border-left.border-left-small {
+    border-left: 3px solid #7F7F7F; }
+  .border.border-left.border-left-medium {
+    border-left: 5px solid #7F7F7F; }
+  .border.border-left.border-left-large {
+    border-left: 10px solid #7F7F7F; }
+  .border.border-left.border-left-xlarge {
+    border-left: 14px solid #7F7F7F; }
+  .border.border-left.border-left-primary {
     border-left: 1px solid #F2F2F2; }
-  .border-left.border-left-secondary {
+  .border.border-left.border-left-secondary {
     border-left: 1px solid #3C4655; }
-  .border-left.border-left-tertiary {
+  .border.border-left.border-left-tertiary {
     border-left: 1px solid #87BA45; }
 
 .gradient.gradient-linear {
@@ -1154,6 +1171,7 @@ Details: It define the mixins and their default implementation as listed below:
   background-position: 50% 50% 9 !important;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover; }
 
 .bkg-image-fill {
@@ -1162,6 +1180,7 @@ Details: It define the mixins and their default implementation as listed below:
   background-position: 50% 50% 9 !important;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
   background-size: 100% 100%; }
 
 .bkg-auto {
@@ -1189,6 +1208,7 @@ Details: It define the mixins and their default implementation as listed below:
 
 .bkg-element {
   position: relative;
+  display: block;
   top: -50%;
   left: -50%;
   width: 200%;
@@ -1202,6 +1222,44 @@ Details: It define the mixins and their default implementation as listed below:
     margin: auto;
     min-width: 50%;
     min-height: 50%; }
+
+.bkg-element-medium {
+  position: relative;
+  display: block;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%; }
+  .bkg-element-medium img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 70%;
+    min-height: 70%;
+    max-width: 100%;
+    max-height: 100%; }
+
+.bkg-element-small {
+  position: relative;
+  display: block;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%; }
+  .bkg-element-small img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 80%;
+    min-height: 80%;
+    max-width: 100%;
+    max-height: 100%; }
 
 .texture {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC"); }
@@ -1585,7 +1643,7 @@ hr {
   margin-left: auto;
   margin-right: auto;
   border: none;
-  border-top: 1px solid #3C4655; }
+  border-top: 1px solid #7F7F7F; }
 
 input, select {
   vertical-align: middle; }
@@ -1730,12 +1788,7 @@ Dependencies: variables, mixins
 
 Details: It defines the basic styles as listed below:
 * Box border        - It's applied to html and all elements in order to calculate width including border and padding.
-* Default Color     - The default background and text color is set to primary from the 3 Color Scheme.
 * Screen            - The default classes having screen sizes using variables defined in variable file.
-* Colors            - This section define the classes having appropriate background and text color following 3 Color
-*                     Scheme and the standard colors.
-* Margin & Padding  - These classes remove margin or padding or both. There are also classes to have pre-defined
-*                     margin and padding.
 * Floats            - The floating classes either clear the float, no float or add left/right float.
 * Width & Height    - This section define width and height classes having predefined values in percentage.
 * Alignments        - The alignment classes allows to align either the element itself or it's children.
@@ -1797,13 +1850,246 @@ html, body {
   width: 1920px; }
 
 /**
+ * Floating Blocks - These classes can be used to clear or float the elements.
+ */
+.clear {
+  clear: both !important; }
+
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.clear-none {
+  clear: none !important; }
+
+.float-none {
+  float: none !important; }
+
+.float-none-center {
+  float: none !important;
+  margin: 0 auto; }
+
+/**
+ * Pre-defined width and height, handy at few places.
+ */
+.width {
+  width: 100%; }
+  .width.width-auto {
+    width: auto; }
+  .width.width-1 {
+    width: 1%; }
+  .width.width-5 {
+    width: 5%; }
+  .width.width-10 {
+    width: 10%; }
+  .width.width-25 {
+    width: 25%; }
+  .width.width-50 {
+    width: 50%; }
+  .width.width-75 {
+    width: 75%; }
+  .width.width-80 {
+    width: 80%; }
+
+.height {
+  height: 100%; }
+  .height.height-auto {
+    height: auto; }
+  .height.height-25 {
+    height: 25%; }
+  .height.height-50 {
+    height: 50%; }
+  .height.height-75 {
+    height: 75%; }
+
+/**
+ * Alignments for centered box and text.
+ */
+.center {
+  margin: 0 auto; }
+
+.align {
+  text-align: left !important; }
+  .align.align-center {
+    text-align: center !important; }
+  .align.align-right {
+    text-align: right !important; }
+
+/**
+ * Height fillers to seperate boxes.
+ */
+.filler-height {
+  height: 1rem; }
+  .filler-height.filler-height-small {
+    height: 1.5rem; }
+  .filler-height.filler-height-medium {
+    height: 2rem; }
+  .filler-height.filler-height-large {
+    height: 2.5rem; }
+  .filler-height.filler-height-xlarge {
+    height: 3rem; }
+
+/**
+ * Tab fillers to seperate elements.
+ */
+.filler-tab {
+  width: 1em;
+  height: 1px;
+  display: inline-block; }
+  .filler-tab.filler-tab-small {
+    width: 2em; }
+  .filler-tab.filler-tab-medium {
+    width: 4em; }
+  .filler-tab.filler-tab-large {
+    width: 8em; }
+  .filler-tab.filler-tab-xlarge {
+    width: 10em; }
+
+.absolute {
+  position: absolute !important; }
+  .absolute.absolute-center {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .absolute.absolute-middle {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
+  .absolute.absolute-top-left {
+    top: 0px;
+    left: 0px; }
+  .absolute.absolute-top-center {
+    top: 0px;
+    left: 0px;
+    right: 0px; }
+  .absolute.absolute-top-right {
+    top: 0px;
+    right: 0px; }
+  .absolute.absolute-bottom-left {
+    bottom: 0px;
+    left: 0px; }
+  .absolute.absolute-bottom-center {
+    bottom: 0px;
+    left: 0px;
+    right: 0px; }
+  .absolute.absolute-bottom-right {
+    bottom: 0px;
+    right: 0px; }
+
+.relative {
+  position: relative !important; }
+
+.fixed {
+  position: fixed !important; }
+
+.block {
+  display: block !important; }
+
+.inline-block {
+  display: inline-block !important; }
+
+.inline {
+  display: inline !important; }
+
+.visible {
+  display: block !important; }
+
+.hidden {
+  display: none !important; }
+
+.hidden-easy {
+  display: none; }
+
+.visible-space {
+  visibility: visible !important; }
+
+.hidden-space {
+  visibility: hidden !important; }
+
+.pointer {
+  cursor: pointer; }
+
+.crosshair {
+  cursor: crosshair; }
+
+.help {
+  cursor: help; }
+
+.wait {
+  cursor: wait; }
+
+.cursor {
+  cursor: default; }
+  .cursor.cursor-pointer {
+    cursor: pointer; }
+  .cursor.cursor-crosshair {
+    cursor: crosshair; }
+  .cursor.cursor-help {
+    cursor: help; }
+  .cursor.cursor-wait {
+    cursor: wait; }
+
+.disabled {
+  background-color: #7F7F7F !important;
+  color: #FFFFFF !important;
+  cursor: default !important; }
+  .disabled:hover {
+    background-color: #7F7F7F !important;
+    color: #FFFFFF !important; }
+
+.fluid {
+  max-width: 100%;
+  height: auto; }
+
+.warning, .error, .success, .info, .help-block {
+  font-size: 0.8em;
+  width: 100%; }
+  .warning.highlight, .error.highlight, .success.highlight, .info.highlight, .help-block.highlight {
+    background-color: #3C4655; }
+
+.error {
+  color: #E74343; }
+
+.warning {
+  color: #EF9300; }
+
+.success {
+  color: #A5D75A; }
+
+.info {
+  color: #3F62A0; }
+
+.form-group .help-block {
+  color: #E74343; }
+
+.error-field {
+  border: 1px solid #E74343;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
+  box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25); }
+
+/**********************************************************************
+Description: This file define the text and background colors used by CMT-UI css framework.
+
+Dependencies: variables, mixins
+
+Details: It defines the text and background colors as listed below:
+* Default Color     - The default background and text color is set to primary from the 3 Color Scheme.
+* Colors            - This section define the classes having appropriate background and text color following 3 Color
+*                     Scheme and the standard colors.
+***********************************************************************/
+/**
  * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
  * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
  * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
  */
 .color {
-  background-color: #F2F2F2;
-  color: #363636;
   /**
  * Color Palatte:
  * 1. primary: #F2F2F2
@@ -1825,6 +2111,9 @@ html, body {
  * 17. tertiary dark: #678d34
  * 18. tertiary text dark: #c1db9e
  */ }
+  .color.color-primary {
+    background-color: #F2F2F2;
+    color: #363636; }
   .color.color-primary-l {
     background-color: white;
     color: #171717; }
@@ -1856,104 +2145,267 @@ html, body {
     background-color: #000000;
     color: #FFFFFF; }
 
-.bkg {
+.bkg.bkg-primary {
   background-color: #F2F2F2 !important; }
-  .bkg.bkg-primary-l {
-    background-color: white !important; }
-  .bkg.bkg-primary-d {
-    background-color: lightgray !important; }
-  .bkg.bkg-secondary {
-    background-color: #3C4655 !important; }
-  .bkg.bkg-secondary-l {
-    background-color: #556479 !important; }
-  .bkg.bkg-secondary-d {
-    background-color: #232831 !important; }
-  .bkg.bkg-tertiary {
-    background-color: #87BA45 !important; }
-  .bkg.bkg-tertiary-l {
-    background-color: #a4cb72 !important; }
-  .bkg.bkg-tertiary-d {
-    background-color: #678d34 !important; }
-  .bkg.bkg-black {
-    background-color: #000000 !important; }
-  .bkg.bkg-black-transparent {
-    background-color: rgba(0, 0, 0, 0.6) !important; }
-  .bkg.bkg-gray {
-    background-color: #7F7F7F !important; }
-  .bkg.bkg-gray-l {
-    background-color: #A5A5A5 !important; }
-  .bkg.bkg-gray-d {
-    background-color: #595959 !important; }
-  .bkg.bkg-white {
-    background-color: #FFFFFF !important; }
-  .bkg.bkg-blue {
-    background-color: #3F62A0 !important; }
-  .bkg.bkg-purple {
-    background-color: #663096 !important; }
-  .bkg.bkg-orange {
-    background-color: #F3702E !important; }
-  .bkg.bkg-yellow {
-    background-color: #FFD800 !important; }
-  .bkg.bkg-red {
-    background-color: #B42A1A !important; }
-  .bkg.bkg-pink {
-    background-color: #FF9DAB !important; }
-  .bkg.bkg-magenta {
-    background-color: #B200B2 !important; }
-  .bkg.bkg-green {
-    background-color: #87C442 !important; }
-  .bkg.bkg-green-d {
-    background-color: #56832A !important; }
 
-.text {
+.bkg.bkg-primary-l {
+  background-color: white !important; }
+
+.bkg.bkg-primary-d {
+  background-color: lightgray !important; }
+
+.bkg.bkg-secondary {
+  background-color: #3C4655 !important; }
+
+.bkg.bkg-secondary-l {
+  background-color: #556479 !important; }
+
+.bkg.bkg-secondary-d {
+  background-color: #232831 !important; }
+
+.bkg.bkg-tertiary {
+  background-color: #87BA45 !important; }
+
+.bkg.bkg-tertiary-l {
+  background-color: #a4cb72 !important; }
+
+.bkg.bkg-tertiary-d {
+  background-color: #678d34 !important; }
+
+.bkg.bkg-black {
+  background-color: #000000 !important; }
+
+.bkg.bkg-black-transparent {
+  background-color: rgba(0, 0, 0, 0.6) !important; }
+
+.bkg.bkg-gray {
+  background-color: #7F7F7F !important; }
+
+.bkg.bkg-gray-l {
+  background-color: #A5A5A5 !important; }
+
+.bkg.bkg-gray-d {
+  background-color: #595959 !important; }
+
+.bkg.bkg-white {
+  background-color: #FFFFFF !important; }
+
+.bkg.bkg-blue {
+  background-color: #3F62A0 !important; }
+
+.bkg.bkg-blue-l {
+  background-color: #6284C1 !important; }
+
+.bkg.bkg-blue-d {
+  background-color: #2C446F !important; }
+
+.bkg.bkg-purple {
+  background-color: #8946C4 !important; }
+
+.bkg.bkg-purple-l {
+  background-color: #AA7AD4 !important; }
+
+.bkg.bkg-purple-d {
+  background-color: #663096 !important; }
+
+.bkg.bkg-orange {
+  background-color: #F3702E !important; }
+
+.bkg.bkg-orange-l {
+  background-color: #F79C6E !important; }
+
+.bkg.bkg-orange-d {
+  background-color: #D14E0C !important; }
+
+.bkg.bkg-yellow {
+  background-color: #EDCE4F !important; }
+
+.bkg.bkg-yellow-l {
+  background-color: #F3DF8D !important; }
+
+.bkg.bkg-yellow-d {
+  background-color: #E1B917 !important; }
+
+.bkg.bkg-red {
+  background-color: #C32D1C !important; }
+
+.bkg.bkg-red-l {
+  background-color: #E3503F !important; }
+
+.bkg.bkg-red-d {
+  background-color: #881F13 !important; }
+
+.bkg.bkg-pink {
+  background-color: #E4287C !important; }
+
+.bkg.bkg-pink-l {
+  background-color: #EC64A1 !important; }
+
+.bkg.bkg-pink-d {
+  background-color: #B2165C !important; }
+
+.bkg.bkg-magenta {
+  background-color: #B200B2 !important; }
+
+.bkg.bkg-magenta-l {
+  background-color: #F600F6 !important; }
+
+.bkg.bkg-magenta-d {
+  background-color: #6E006E !important; }
+
+.bkg.bkg-green {
+  background-color: #7CAA2D !important; }
+
+.bkg.bkg-green-l {
+  background-color: #9FCF4B !important; }
+
+.bkg.bkg-brown-d {
+  background-color: #4F270B !important; }
+
+.bkg.bkg-brown {
+  background-color: #8B4513 !important; }
+
+.bkg.bkg-brown-l {
+  background-color: #C7631B !important; }
+
+.bkg.bkg-brown-d {
+  background-color: #4F270B !important; }
+
+.text.text-primary {
   color: #363636 !important; }
-  .text.text-primary-l {
-    color: #171717 !important; }
-  .text.text-primary-d {
-    color: #555555 !important; }
-  .text.text-secondary {
-    color: #96B0D6 !important; }
-  .text.text-secondary-l {
-    color: #6a8fc5 !important; }
-  .text.text-secondary-d {
-    color: #c2d1e7 !important; }
-  .text.text-tertiary {
-    color: #E6E6E6 !important; }
-  .text.text-tertiary-l {
-    color: #678d34 !important; }
-  .text.text-tertiary-d {
-    color: #c1db9e !important; }
-  .text.text-link {
-    color: #298ccf !important; }
-  .text.text-black {
-    color: #000000 !important; }
-  .text.text-gray {
-    color: #7F7F7F !important; }
-  .text.text-gray-l {
-    color: #A5A5A5 !important; }
-  .text.text-gray-d {
-    color: #595959 !important; }
-  .text.text-white {
-    color: #FFFFFF !important; }
-  .text.text-blue {
-    color: #3F62A0 !important; }
-  .text.text-purple {
-    color: #663096 !important; }
-  .text.text-orange {
-    color: #F3702E !important; }
-  .text.text-yellow {
-    color: #FFD800 !important; }
-  .text.text-red {
-    color: #B42A1A !important; }
-  .text.text-pink {
-    color: #FF9DAB !important; }
-  .text.text-magenta {
-    color: #B200B2 !important; }
-  .text.text-green {
-    color: #87C442 !important; }
-  .text.text-green-d {
-    color: #56832A !important; }
 
+.text.text-primary-l {
+  color: #171717 !important; }
+
+.text.text-primary-d {
+  color: #555555 !important; }
+
+.text.text-secondary {
+  color: #96B0D6 !important; }
+
+.text.text-secondary-l {
+  color: #6a8fc5 !important; }
+
+.text.text-secondary-d {
+  color: #c2d1e7 !important; }
+
+.text.text-tertiary {
+  color: #E6E6E6 !important; }
+
+.text.text-tertiary-l {
+  color: #678d34 !important; }
+
+.text.text-tertiary-d {
+  color: #c1db9e !important; }
+
+.text.text-link {
+  color: #298ccf !important; }
+
+.text.text-black {
+  color: #000000 !important; }
+
+.text.text-gray {
+  color: #7F7F7F !important; }
+
+.text.text-gray-l {
+  color: #A5A5A5 !important; }
+
+.text.text-gray-d {
+  color: #595959 !important; }
+
+.text.text-white {
+  color: #FFFFFF !important; }
+
+.text.text-blue {
+  color: #3F62A0 !important; }
+
+.text.text-blue-l {
+  color: #6284C1 !important; }
+
+.text.text-blue-d {
+  color: #2C446F !important; }
+
+.text.text-purple {
+  color: #8946C4 !important; }
+
+.text.text-purple-l {
+  color: #AA7AD4 !important; }
+
+.text.text-purple-d {
+  color: #663096 !important; }
+
+.text.text-orange {
+  color: #F3702E !important; }
+
+.text.text-orange-l {
+  color: #F79C6E !important; }
+
+.text.text-orange-d {
+  color: #D14E0C !important; }
+
+.text.text-yellow {
+  color: #EDCE4F !important; }
+
+.text.text-yellow-l {
+  color: #F3DF8D !important; }
+
+.text.text-yellow-d {
+  color: #E1B917 !important; }
+
+.text.text-red {
+  color: #C32D1C !important; }
+
+.text.text-red-l {
+  color: #E3503F !important; }
+
+.text.text-red-d {
+  color: #881F13 !important; }
+
+.text.text-pink {
+  color: #E4287C !important; }
+
+.text.text-pink-l {
+  color: #EC64A1 !important; }
+
+.text.text-pink-d {
+  color: #B2165C !important; }
+
+.text.text-magenta {
+  color: #B200B2 !important; }
+
+.text.text-magenta-l {
+  color: #F600F6 !important; }
+
+.text.text-magenta-d {
+  color: #6E006E !important; }
+
+.text.text-green {
+  color: #7CAA2D !important; }
+
+.text.text-green-l {
+  color: #9FCF4B !important; }
+
+.text.text-brown-d {
+  color: #4F270B !important; }
+
+.text.text-brown {
+  color: #8B4513 !important; }
+
+.text.text-brown-l {
+  color: #C7631B !important; }
+
+.text.text-brown-d {
+  color: #4F270B !important; }
+
+/**********************************************************************
+Description: This file define the styles for margin and padding used by CMT-UI css framework.
+
+Dependencies: variables, mixins
+
+Details: It defines the margin and padding styles as listed below:
+* Margin & Padding  - These classes remove margin or padding or both. There are also classes to have pre-defined
+*                     margin and padding.
+***********************************************************************/
 .mp.mp-none {
   margin: 0 !important;
   padding: 0 !important; }
@@ -2250,231 +2702,6 @@ html, body {
 .margin.margin-right-xlarge {
   margin-right: 2rem; }
 
-/**
- * Floating Blocks - These classes can be used to clear or float the elements.
- */
-.clear {
-  clear: both !important; }
-
-.left {
-  float: left !important; }
-
-.right {
-  float: right !important; }
-
-.clear-none {
-  clear: none !important; }
-
-.float-none {
-  float: none !important; }
-
-.float-none-center {
-  float: none !important;
-  margin: 0 auto; }
-
-/**
- * Pre-defined width and height, handy at few places.
- */
-.width {
-  width: 100%; }
-  .width.width-auto {
-    width: auto; }
-  .width.width-1 {
-    width: 1%; }
-  .width.width-5 {
-    width: 5%; }
-  .width.width-10 {
-    width: 10%; }
-  .width.width-25 {
-    width: 25%; }
-  .width.width-50 {
-    width: 50%; }
-  .width.width-75 {
-    width: 75%; }
-  .width.width-80 {
-    width: 80%; }
-
-.height {
-  height: 100%; }
-  .height.height-auto {
-    height: auto; }
-  .height.height-25 {
-    height: 25%; }
-  .height.height-50 {
-    height: 50%; }
-  .height.height-75 {
-    height: 75%; }
-
-/**
- * Alignments for centered box and text.
- */
-.center {
-  margin: 0 auto; }
-
-.align {
-  text-align: left !important; }
-  .align.align-center {
-    text-align: center !important; }
-  .align.align-right {
-    text-align: right !important; }
-
-/**
- * Height fillers to seperate boxes.
- */
-.filler-height {
-  height: 1rem; }
-  .filler-height.filler-height-small {
-    height: 1.5rem; }
-  .filler-height.filler-height-medium {
-    height: 2rem; }
-  .filler-height.filler-height-large {
-    height: 2.5rem; }
-  .filler-height.filler-height-xlarge {
-    height: 3rem; }
-
-/**
- * Tab fillers to seperate elements.
- */
-.filler-tab {
-  width: 1em;
-  height: 1px;
-  display: inline-block; }
-  .filler-tab.filler-tab-small {
-    width: 2em; }
-  .filler-tab.filler-tab-medium {
-    width: 4em; }
-  .filler-tab.filler-tab-large {
-    width: 8em; }
-  .filler-tab.filler-tab-xlarge {
-    width: 10em; }
-
-.absolute {
-  position: absolute !important; }
-  .absolute.absolute-center {
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto; }
-  .absolute.absolute-middle {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto; }
-  .absolute.absolute-top-left {
-    top: 0px;
-    left: 0px; }
-  .absolute.absolute-top-center {
-    top: 0px;
-    left: 0px;
-    right: 0px; }
-  .absolute.absolute-top-right {
-    top: 0px;
-    right: 0px; }
-  .absolute.absolute-bottom-left {
-    bottom: 0px;
-    left: 0px; }
-  .absolute.absolute-bottom-center {
-    bottom: 0px;
-    left: 0px;
-    right: 0px; }
-  .absolute.absolute-bottom-right {
-    bottom: 0px;
-    right: 0px; }
-
-.relative {
-  position: relative !important; }
-
-.fixed {
-  position: fixed !important; }
-
-.block {
-  display: block !important; }
-
-.inline-block {
-  display: inline-block !important; }
-
-.inline {
-  display: inline !important; }
-
-.visible {
-  display: block !important; }
-
-.hidden {
-  display: none !important; }
-
-.hidden-easy {
-  display: none; }
-
-.visible-space {
-  visibility: visible !important; }
-
-.hidden-space {
-  visibility: hidden !important; }
-
-.pointer {
-  cursor: pointer; }
-
-.crosshair {
-  cursor: crosshair; }
-
-.help {
-  cursor: help; }
-
-.wait {
-  cursor: wait; }
-
-.cursor {
-  cursor: default; }
-  .cursor.cursor-pointer {
-    cursor: pointer; }
-  .cursor.cursor-crosshair {
-    cursor: crosshair; }
-  .cursor.cursor-help {
-    cursor: help; }
-  .cursor.cursor-wait {
-    cursor: wait; }
-
-.disabled {
-  background-color: #7F7F7F !important;
-  color: #FFFFFF !important;
-  cursor: default !important; }
-  .disabled:hover {
-    background-color: #7F7F7F !important;
-    color: #FFFFFF !important; }
-
-.fluid {
-  max-width: 100%;
-  height: auto; }
-
-.warning, .error, .success, .info, .help-block {
-  font-size: 0.8em;
-  width: 100%; }
-  .warning.highlight, .error.highlight, .success.highlight, .info.highlight, .help-block.highlight {
-    background-color: #3C4655; }
-
-.error {
-  color: #E74343; }
-
-.warning {
-  color: #EF9300; }
-
-.success {
-  color: #A5D75A; }
-
-.info {
-  color: #3F62A0; }
-
-.form-group .help-block {
-  color: #E74343; }
-
-.error-field {
-  border: 1px solid #E74343;
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
-  box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25); }
-
 /**********************************************************************
 Description: This file define the styles specific to typography available in CMT-UI css framework.
 
@@ -2531,6 +2758,8 @@ html, body {
  */
 .font {
   font-family: Arial, Helvetica, sans-serif; }
+  .font .font-bold {
+    font-weight: bold; }
   .font.font-heading {
     font-family: Verdana, Geneva, sans-serif; }
   .font.font-code {
@@ -2674,14 +2903,17 @@ pre {
 .ellipsis {
   text-overflow: ellipsis; }
 
-.text-align {
+.text-align.text-align-left {
   text-align: left !important; }
-  .text-align.text-align-center {
-    text-align: center !important; }
-  .text-align.text-align-right {
-    text-align: right !important; }
-  .text-align.text-align-justify {
-    text-align: justify !important; }
+
+.text-align.text-align-center {
+  text-align: center !important; }
+
+.text-align.text-align-right {
+  text-align: right !important; }
+
+.text-align.text-align-justify {
+  text-align: justify !important; }
 
 .word-spacing {
   word-spacing: 1px; }
@@ -2714,7 +2946,7 @@ a, .link {
 .text-with-line {
   width: 100%;
   height: 0.75em;
-  border-bottom: 1px solid #3C4655;
+  border-bottom: 1px solid #7F7F7F;
   text-align: center; }
   .text-with-line .text-content {
     display: inline-block;
@@ -3742,7 +3974,7 @@ Details: It defines the custom element styles as listed below:
     -webkit-transition: margin 350ms ease-out 0s;
     transition: margin 350ms ease-out 0s; }
   .cmt-switch .cmt-toggle-round:checked + label:before {
-    background-color: #87C442; }
+    background-color: #7CAA2D; }
   .cmt-switch .cmt-toggle-round:checked + label:after {
     margin-left: 3.5em; }
 
@@ -3924,26 +4156,35 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     width: 250px !important; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
+  background-color: #F2F2F2;
+  color: #363636;
+  text-align: left;
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
-  background-color: #F2F2F2;
-  color: #363636;
-  text-align: left; }
+  -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
+  -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
+  box-shadow: inset 0 0 0 1px #F2F2F2; }
   input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
     background-color: #E9E9E9;
-    color: #363636; }
+    color: #363636;
+    -webkit-box-shadow: inset 0 0 0 1px #E9E9E9;
+    -moz-box-shadow: inset 0 0 0 1px #E9E9E9;
+    box-shadow: inset 0 0 0 1px #E9E9E9; }
   input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
     background-color: #E1E1E1;
     color: #4F688E;
-    -webkit-box-shadow: inset 0 0 0 1px #87BA45;
-    -moz-box-shadow: inset 0 0 0 1px #87BA45;
-    box-shadow: inset 0 0 0 1px #87BA45; }
+    -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
+    -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
+    box-shadow: inset 0 0 0 1px #E1E1E1; }
   input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
     background-color: #CCCCCC;
-    color: #909090; }
+    color: #909090;
+    -webkit-box-shadow: inset 0 0 0 1px #CCCCCC;
+    -moz-box-shadow: inset 0 0 0 1px #CCCCCC;
+    box-shadow: inset 0 0 0 1px #CCCCCC; }
 
 .btn, .btn-icon, input[type="submit"], input[type="button"], button {
   -moz-transition: all 350ms ease-in-out 0s;
@@ -3971,7 +4212,7 @@ label {
 
 .required .control-label:after {
   content: " *";
-  color: #B42A1A; }
+  color: #C32D1C; }
 
 .element {
   display: inline-block; }
@@ -4024,6 +4265,11 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     padding-right: 2em; }
   .frm-icon-element.icon-right .icon, .frm-icon-element.icon-right .cmti, .frm-icon-element.icon-right .fa {
     right: 0; }
+
+.cmt-checkbox, .cmt-switch {
+  -webkit-box-shadow: inset 0 0 0 0px #F2F2F2;
+  -moz-box-shadow: inset 0 0 0 0px #F2F2F2;
+  box-shadow: inset 0 0 0 0px #F2F2F2; }
 
 .cmt-checkbox, .cmt-switch {
   background: none; }
@@ -5592,6 +5838,7 @@ Details: It defines the styles for header components as listed below:
     background-position: 50% 50% 9 !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -5633,6 +5880,7 @@ Details: It defines the styles for header components as listed below:
     background-position: 50% 50% 9 !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     width: 100%;
     height: 150%;
@@ -6100,6 +6348,7 @@ Details: It defines the styles of blog components as listed below:
     background-position: 50% 50% 9 !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover; }
     .blog-banner .post .post-banner .texture {
       z-index: 5; }
@@ -6170,6 +6419,7 @@ Details: It defines the styles of blog components as listed below:
     background-position: 50% 50% 9 !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover; }
     .blog-banner-recent .post .post-banner .texture {
       z-index: 5; }

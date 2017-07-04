@@ -325,7 +325,7 @@ Details: It define the mixins and their default implementation as listed below:
 }
 
 // Align child - vertically and horizontally at center
-@mixin vh-align-child-center {
+@mixin vh-align-center {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
@@ -406,6 +406,12 @@ Details: It define the mixins and their default implementation as listed below:
 	background-repeat: repeat;
 }
 
+/*
+Notes:
+1. bkg-image, bkg-image-fill, bkg-auto, bkg-image-scroll, bkg-image-fixed - need inline css for background-image
+2. bkg-element - It use the img tag to cover background of parent element.
+*/
+
 // Cover the background
 @mixin bkg-image {
 	background-repeat: no-repeat;
@@ -413,6 +419,7 @@ Details: It define the mixins and their default implementation as listed below:
 	background-position: 50% 50%9 !important;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 }
 
@@ -423,6 +430,7 @@ Details: It define the mixins and their default implementation as listed below:
 	background-position: 50% 50%9 !important;
 	-webkit-background-size: $width $height;
 	-moz-background-size: $width $height;
+	-o-background-size: $width $height;
 	background-size: $width $height;
 }
 
@@ -462,6 +470,7 @@ Details: It define the mixins and their default implementation as listed below:
 // background filled with img - use it inside a block having fixed height
 @mixin bkg-element {
 	position: relative;
+	display: block;
 	top: -50%;
 	left: -50%;
 	width: 200%;
@@ -476,6 +485,50 @@ Details: It define the mixins and their default implementation as listed below:
 		margin: auto;
 		min-width: 50%;
 		min-height: 50%;
+	}
+}
+
+@mixin bkg-element-medium {
+	position: relative;
+	display: block;
+	top: -30%;
+	left: -30%;
+	width: 160%;
+	height: 160%;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		min-width: 70%;
+		min-height: 70%;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+@mixin bkg-element-small {
+	position: relative;
+	display: block;
+	top: -20%;
+	left: -20%;
+	width: 140%;
+	height: 140%;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		min-width: 80%;
+		min-height: 80%;
+		max-width: 100%;
+		max-height: 100%;
 	}
 }
 
@@ -631,10 +684,13 @@ Details: It define the mixins and their default implementation as listed below:
 // Round Corners
 
 .rounded {
-	@include rounded( $size-default );
 
 	&.rounded-none {
 		@include rounded( 0 !important );
+	}
+
+	&.rounded-default {
+		@include rounded( $size-default );
 	}
 
 	&.rounded-small {
@@ -652,165 +708,165 @@ Details: It define the mixins and their default implementation as listed below:
 	&.rounded-xlarge {
 		@include rounded( $size-xlarge );
 	}
-}
 
-.rounded-top {
-	@include rounded-top( $size-default );
+	&.rounded-top {
+		@include rounded-top( $size-default );
 
-	&.rounded-top-small {
-		@include rounded-top( $size-small );
+		&.rounded-top-small {
+			@include rounded-top( $size-small );
+		}
+
+		&.rounded-top-medium {
+			@include rounded-top( $size-medium );
+		}
+
+		&.rounded-top-large {
+			@include rounded-top( $size-large );
+		}
+
+		&.rounded-top-xlarge {
+			@include rounded-top( $size-xlarge );
+		}
 	}
 
-	&.rounded-top-medium {
-		@include rounded-top( $size-medium );
+	&.rounded-right {
+		@include rounded-right( $size-default );
+
+		&.rounded-right-small {
+			@include rounded-right( $size-small );
+		}
+
+		&.rounded-right-medium {
+			@include rounded-right( $size-medium );
+		}
+
+		&.rounded-right-large {
+			@include rounded-right( $size-large );
+		}
+
+		&.rounded-right-xlarge {
+			@include rounded-right( $size-xlarge );
+		}
 	}
 
-	&.rounded-top-large {
-		@include rounded-top( $size-large );
+	&.rounded-bottom {
+		@include rounded-bottom( $size-default );
+
+		&.rounded-bottom-small {
+			@include rounded-bottom( $size-small );
+		}
+
+		&.rounded-bottom-medium {
+			@include rounded-bottom( $size-medium );
+		}
+
+		&.rounded-bottom-large {
+			@include rounded-bottom( $size-large );
+		}
+
+		&.rounded-bottom-xlarge {
+			@include rounded-bottom( $size-xlarge );
+		}
 	}
 
-	&.rounded-top-xlarge {
-		@include rounded-top( $size-xlarge );
-	}
-}
+	&.rounded-left {
+		@include rounded-left( $size-default );
 
-.rounded-right {
-	@include rounded-right( $size-default );
+		&.rounded-left-small {
+			@include rounded-left( $size-small );
+		}
 
-	&.rounded-right-small {
-		@include rounded-right( $size-small );
-	}
+		&.rounded-left-medium {
+			@include rounded-left( $size-medium );
+		}
 
-	&.rounded-right-medium {
-		@include rounded-right( $size-medium );
-	}
+		&.rounded-left-large {
+			@include rounded-left( $size-large );
+		}
 
-	&.rounded-right-large {
-		@include rounded-right( $size-large );
-	}
-
-	&.rounded-right-xlarge {
-		@include rounded-right( $size-xlarge );
-	}
-}
-
-.rounded-bottom {
-	@include rounded-bottom( $size-default );
-
-	&.rounded-bottom-small {
-		@include rounded-bottom( $size-small );
+		&.rounded-left-xlarge {
+			@include rounded-left( $size-xlarge );
+		}
 	}
 
-	&.rounded-bottom-medium {
-		@include rounded-bottom( $size-medium );
+	&.rounded-top-left {
+		@include rounded-top-left( $size-default );
+
+		&.rounded-top-left-small {
+			@include rounded-top-left( $size-small );
+		}
+
+		&.rounded-top-left-medium {
+			@include rounded-top-left( $size-medium );
+		}
+
+		&.rounded-top-left-large {
+			@include rounded-top-left( $size-large );
+		}
+
+		&.rounded-top-left-xlarge {
+			@include rounded-top-left( $size-xlarge );
+		}
 	}
 
-	&.rounded-bottom-large {
-		@include rounded-bottom( $size-large );
+	&.rounded-top-right {
+		@include rounded-top-right( $size-default );
+
+		&.rounded-top-right-small {
+			@include rounded-top-right( $size-small );
+		}
+
+		&.rounded-top-right-medium {
+			@include rounded-top-right( $size-medium );
+		}
+
+		&.rounded-top-right-large {
+			@include rounded-top-right( $size-large );
+		}
+
+		&.rounded-top-right-xlarge {
+			@include rounded-top-right( $size-xlarge );
+		}
 	}
 
-	&.rounded-bottom-xlarge {
-		@include rounded-bottom( $size-xlarge );
-	}
-}
+	&.rounded-bottom-left {
+		@include rounded-bottom-left( $size-default );
 
-.rounded-left {
-	@include rounded-left( $size-default );
+		&.rounded-bottom-left-small {
+			@include rounded-bottom-left( $size-small );
+		}
 
-	&.rounded-left-small {
-		@include rounded-left( $size-small );
-	}
+		&.rounded-bottom-left-medium {
+			@include rounded-bottom-left( $size-medium );
+		}
 
-	&.rounded-left-medium {
-		@include rounded-left( $size-medium );
-	}
+		&.rounded-bottom-left-large {
+			@include rounded-bottom-left( $size-large );
+		}
 
-	&.rounded-left-large {
-		@include rounded-left( $size-large );
-	}
-
-	&.rounded-left-xlarge {
-		@include rounded-left( $size-xlarge );
-	}
-}
-
-.rounded-top-left {
-	@include rounded-top-left( $size-default );
-
-	&.rounded-top-left-small {
-		@include rounded-top-left( $size-small );
+		&.rounded-bottom-left-xlarge {
+			@include rounded-bottom-left( $size-xlarge );
+		}
 	}
 
-	&.rounded-top-left-medium {
-		@include rounded-top-left( $size-medium );
-	}
+	&.rounded-bottom-right {
+		@include rounded-bottom-right( $size-default );
 
-	&.rounded-top-left-large {
-		@include rounded-top-left( $size-large );
-	}
+		&.rounded-bottom-right-small {
+			@include rounded-bottom-right( $size-small );
+		}
 
-	&.rounded-top-left-xlarge {
-		@include rounded-top-left( $size-xlarge );
-	}
-}
+		&.rounded-bottom-right-medium {
+			@include rounded-bottom-right( $size-medium );
+		}
 
-.rounded-top-right {
-	@include rounded-top-right( $size-default );
+		&.rounded-bottom-right-large {
+			@include rounded-bottom-right( $size-large );
+		}
 
-	&.rounded-top-right-small {
-		@include rounded-top-right( $size-small );
-	}
-
-	&.rounded-top-right-medium {
-		@include rounded-top-right( $size-medium );
-	}
-
-	&.rounded-top-right-large {
-		@include rounded-top-right( $size-large );
-	}
-
-	&.rounded-top-right-xlarge {
-		@include rounded-top-right( $size-xlarge );
-	}
-}
-
-.rounded-bottom-left {
-	@include rounded-bottom-left( $size-default );
-
-	&.rounded-bottom-left-small {
-		@include rounded-bottom-left( $size-small );
-	}
-
-	&.rounded-bottom-left-medium {
-		@include rounded-bottom-left( $size-medium );
-	}
-
-	&.rounded-bottom-left-large {
-		@include rounded-bottom-left( $size-large );
-	}
-
-	&.rounded-bottom-left-xlarge {
-		@include rounded-bottom-left( $size-xlarge );
-	}
-}
-
-.rounded-bottom-right {
-	@include rounded-bottom-right( $size-default );
-
-	&.rounded-bottom-right-small {
-		@include rounded-bottom-right( $size-small );
-	}
-
-	&.rounded-bottom-right-medium {
-		@include rounded-bottom-right( $size-medium );
-	}
-
-	&.rounded-bottom-right-large {
-		@include rounded-bottom-right( $size-large );
-	}
-
-	&.rounded-bottom-right-xlarge {
-		@include rounded-bottom-right( $size-xlarge );
+		&.rounded-bottom-right-xlarge {
+			@include rounded-bottom-right( $size-xlarge );
+		}
 	}
 }
 
@@ -1077,7 +1133,10 @@ Details: It define the mixins and their default implementation as listed below:
 // Borders
 
 .border {
-	@include border( $size-default, solid, $color-border );
+
+	&.border-default {
+		@include border( $size-default, solid, $color-border );
+	}
 
 	&.border-small {
 		@include border( $size-small, solid, $color-border );
@@ -1106,133 +1165,133 @@ Details: It define the mixins and their default implementation as listed below:
 	&.border-tertiary {
 		@include border( $size-default, solid, $color-tertiary );
 	}
-}
 
-.border-top {
-	@include border-top( $size-default, solid, $color-border );
+	&.border-top {
+		@include border-top( $size-default, solid, $color-border );
 
-	&.border-top-small {
-		@include border-top( $size-small, solid, $color-border );
+		&.border-top-small {
+			@include border-top( $size-small, solid, $color-border );
+		}
+
+		&.border-top-medium {
+			@include border-top( $size-medium, solid, $color-border );
+		}
+
+		&.border-top-large {
+			@include border-top( $size-large, solid, $color-border );
+		}
+
+		&.border-top-xlarge {
+			@include border-top( $size-xlarge, solid, $color-border );
+		}
+
+		&.border-top-primary {
+			@include border-top( $size-default, solid, $color-primary );
+		}
+
+		&.border-top-secondary {
+			@include border-top( $size-default, solid, $color-secondary );
+		}
+
+		&.border-top-tertiary {
+			@include border-top( $size-default, solid, $color-tertiary );
+		}
 	}
 
-	&.border-top-medium {
-		@include border-top( $size-medium, solid, $color-border );
+	&.border-right {
+		@include border-right( $size-default, solid, $color-border );
+
+		&.border-right-small {
+			@include border-right( $size-small, solid, $color-border );
+		}
+
+		&.border-right-medium {
+			@include border-right( $size-medium, solid, $color-border );
+		}
+
+		&.border-right-large {
+			@include border-right( $size-large, solid, $color-border );
+		}
+
+		&.border-right-xlarge {
+			@include border-right( $size-xlarge, solid, $color-border );
+		}
+
+		&.border-right-primary {
+			@include border-right( $size-default, solid, $color-primary );
+		}
+
+		&.border-right-secondary {
+			@include border-right( $size-default, solid, $color-secondary );
+		}
+
+		&.border-right-tertiary {
+			@include border-right( $size-default, solid, $color-tertiary );
+		}
 	}
 
-	&.border-top-large {
-		@include border-top( $size-large, solid, $color-border );
+	&.border-bottom {
+		@include border-bottom( $size-default, solid, $color-border );
+
+		&.border-bottom-small {
+			@include border-bottom( $size-small, solid, $color-border );
+		}
+
+		&.border-bottom-medium {
+			@include border-bottom( $size-medium, solid, $color-border );
+		}
+
+		&.border-bottom-large {
+			@include border-bottom( $size-large, solid, $color-border );
+		}
+
+		&.border-bottom-xlarge {
+			@include border-bottom( $size-xlarge, solid, $color-border );
+		}
+
+		&.border-bottom-primary {
+			@include border-bottom( $size-default, solid, $color-primary );
+		}
+
+		&.border-bottom-secondary {
+			@include border-bottom( $size-default, solid, $color-secondary );
+		}
+
+		&.border-bottom-tertiary {
+			@include border-bottom( $size-default, solid, $color-tertiary );
+		}
 	}
 
-	&.border-top-xlarge {
-		@include border-top( $size-xlarge, solid, $color-border );
-	}
+	&.border-left {
+		@include border-left( $size-default, solid, $color-border );
 
-	&.border-top-primary {
-		@include border-top( $size-default, solid, $color-primary );
-	}
+		&.border-left-small {
+			@include border-left( $size-small, solid, $color-border );
+		}
 
-	&.border-top-secondary {
-		@include border-top( $size-default, solid, $color-secondary );
-	}
+		&.border-left-medium {
+			@include border-left( $size-medium, solid, $color-border );
+		}
 
-	&.border-top-tertiary {
-		@include border-top( $size-default, solid, $color-tertiary );
-	}
-}
+		&.border-left-large {
+			@include border-left( $size-large, solid, $color-border );
+		}
 
-.border-right {
-	@include border-right( $size-default, solid, $color-border );
+		&.border-left-xlarge {
+			@include border-left( $size-xlarge, solid, $color-border );
+		}
 
-	&.border-right-small {
-		@include border-right( $size-small, solid, $color-border );
-	}
+		&.border-left-primary {
+			@include border-left( $size-default, solid, $color-primary );
+		}
 
-	&.border-right-medium {
-		@include border-right( $size-medium, solid, $color-border );
-	}
+		&.border-left-secondary {
+			@include border-left( $size-default, solid, $color-secondary );
+		}
 
-	&.border-right-large {
-		@include border-right( $size-large, solid, $color-border );
-	}
-
-	&.border-right-xlarge {
-		@include border-right( $size-xlarge, solid, $color-border );
-	}
-
-	&.border-right-primary {
-		@include border-right( $size-default, solid, $color-primary );
-	}
-
-	&.border-right-secondary {
-		@include border-right( $size-default, solid, $color-secondary );
-	}
-
-	&.border-right-tertiary {
-		@include border-right( $size-default, solid, $color-tertiary );
-	}
-}
-
-.border-bottom {
-	@include border-bottom( $size-default, solid, $color-border );
-
-	&.border-bottom-small {
-		@include border-bottom( $size-small, solid, $color-border );
-	}
-
-	&.border-bottom-medium {
-		@include border-bottom( $size-medium, solid, $color-border );
-	}
-
-	&.border-bottom-large {
-		@include border-bottom( $size-large, solid, $color-border );
-	}
-
-	&.border-bottom-xlarge {
-		@include border-bottom( $size-xlarge, solid, $color-border );
-	}
-
-	&.border-bottom-primary {
-		@include border-bottom( $size-default, solid, $color-primary );
-	}
-
-	&.border-bottom-secondary {
-		@include border-bottom( $size-default, solid, $color-secondary );
-	}
-
-	&.border-bottom-tertiary {
-		@include border-bottom( $size-default, solid, $color-tertiary );
-	}
-}
-
-.border-left {
-	@include border-left( $size-default, solid, $color-border );
-
-	&.border-left-small {
-		@include border-left( $size-small, solid, $color-border );
-	}
-
-	&.border-left-medium {
-		@include border-left( $size-medium, solid, $color-border );
-	}
-
-	&.border-left-large {
-		@include border-left( $size-large, solid, $color-border );
-	}
-
-	&.border-left-xlarge {
-		@include border-left( $size-xlarge, solid, $color-border );
-	}
-
-	&.border-left-primary {
-		@include border-left( $size-default, solid, $color-primary );
-	}
-
-	&.border-left-secondary {
-		@include border-left( $size-default, solid, $color-secondary );
-	}
-
-	&.border-left-tertiary {
-		@include border-left( $size-default, solid, $color-tertiary );
+		&.border-left-tertiary {
+			@include border-left( $size-default, solid, $color-tertiary );
+		}
 	}
 }
 
@@ -1283,7 +1342,7 @@ Details: It define the mixins and their default implementation as listed below:
 
 // Align Element Children
 .vhalign-center {
-	@include vh-align-child-center;
+	@include vh-align-center;
 }
 
 // Max Area - No clubbing
@@ -1373,6 +1432,14 @@ Details: It define the mixins and their default implementation as listed below:
 
 .bkg-element {
 	@include bkg-element;
+}
+
+.bkg-element-medium {
+	@include bkg-element-medium;
+}
+
+.bkg-element-small {
+	@include bkg-element-small;
 }
 
 // Default Texture

@@ -14,11 +14,8 @@ Details: It defines the extended variables derived from primary variables as lis
 *                     Standard colors   - High, medium and low transparency applied to theme colors.
 ***********************************************************************/
 
-// Border & HR Colors
-$color-border: $color-secondary-d; // Default border color
-$color-border-f: $color-tertiary; // Border color for focus
-
-$color-hr: $color-secondary; // Header Rule color
+// Header Rule
+$color-hr: $color-border; // Header Rule color
 
 // Gradient Colors
 $color-gradient-1: $color-primary; // First color for gradients

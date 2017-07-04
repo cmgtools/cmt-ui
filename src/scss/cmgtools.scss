@@ -5,29 +5,29 @@
 @import "cmt/core/variables";
 
 /*! CMGTools  - CMT-UI(CMGTools UI) is a responsive and component oriented css framework having pre-defined and commonly used components
- *              that can be easily adapted by all the mobile, tablet and desktop screens.
+ *              that can be easily adapted by all the desktop, tablet and mobile screens.
  * Version    - #{$version}
  * License    - GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
  *
  * Copyright © 2015-2017 by VulpineCode Technologies Private Limited (http://www.vulpinecode.com) All rights reserved.
  *
  * Introduction - CMT-UI(CMGTools UI) is a responsive and component oriented css framework having pre-defined and commonly used components
- *    that can be easily adapted by all the mobile, tablet and desktop screens.
+ *    that can be easily adapted by all the desktop, tablet and mobile screens.
  *
  *    It's divided on high level into core, elements, components and extension where each division consist of SASS files having specific
  *    features and components according to file name. All the divisions are arranged in such a way that these can be overriden by the project SASS
  *    either following the same divisions or it's own directory and file arrangements.
  *
  *    Core        - The core division is most important and foundation of CMT-UI. It consist of variables, reset, typography, effects(animations,
- *                  transitions and transformations), mixins, basic elements and containers(rows and columns). Every project must include all the
- *                  core files in order to work properly.
+ *                  transitions and transformations), mixins, basic elements and containers(12 and 15 columns grid using rows and columns). Every
+ *					project must include all the core files in order to work properly.
  *
- *    Elements    - This division consist of styling of form, form elements and tables.
+ *    Elements    - This division consist of styling of form, form elements, tables and other html elements.
  *
  *    Components  - The components are either self dependent or associated with CMT-JS(CMGTools Javascript) framework in order to be fully
  *                  functional. The JS part of these components can also be implemented either using plain JS or widely used frameworks and
  *                  libraries. The components available with CMT-UI are menus, breadcrumbs, headers, footers, sidebars, popups, blocks, boxes, grid,
- *                  cards, sliders, galleries, flippers, file uploaders and blogs.
+ *                  cards, sliders, galleries, flippers, file uploaders, auto suggest and blogs.
  *
  *                  It provides layout and basic arrangement of these components and also provide few commonly used implementation of the barebone
  *                  components.
@@ -71,6 +71,10 @@
 // project - reset
 @import "cmt/core/basic";
 // project - basic
+@import "cmt/core/coloring";
+// project - coloring
+@import "cmt/core/spacing";
+// project - spacing
 
 @import "cmt/core/typography";
 // project - typography
