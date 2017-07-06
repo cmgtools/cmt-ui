@@ -329,6 +329,30 @@ pre {
 	}
 }
 
+// Letter Spacing
+.letter-spacing {
+	
+	&.letter-spacing-default {
+		letter-spacing: $size-default-px;
+	}
+	
+	&.letter-spacing-small {
+		letter-spacing: $size-small-px;
+	}
+	
+	&.letter-spacing-medium {
+		letter-spacing: $size-medium-px;
+	}
+	
+	&.letter-spacing-large {
+		letter-spacing: $size-large-px;
+	}
+	
+	&.letter-spacing-xlarge {
+		letter-spacing: $size-xlarge-px;
+	}
+}
+
 // Links
 
 a, .link {

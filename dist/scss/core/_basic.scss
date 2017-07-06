@@ -184,7 +184,7 @@ html, body {
 
 // Horizontally center align the element
 .center {
-	margin: 0 auto;
+	margin: 0 auto !important;
 }
 
 // Align the children of an element - left, horizontally center and right

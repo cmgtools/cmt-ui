@@ -1987,7 +1987,7 @@ html, body {
  * Alignments for centered box and text.
  */
 .center {
-  margin: 0 auto; }
+  margin: 0 auto !important; }
 
 .align {
   text-align: left !important; }
@@ -3004,6 +3004,21 @@ pre {
     word-spacing: 10px; }
   .word-spacing .word-spacing-xlarge {
     word-spacing: 14px; }
+
+.letter-spacing.letter-spacing-default {
+  letter-spacing: 1px; }
+
+.letter-spacing.letter-spacing-small {
+  letter-spacing: 3px; }
+
+.letter-spacing.letter-spacing-medium {
+  letter-spacing: 5px; }
+
+.letter-spacing.letter-spacing-large {
+  letter-spacing: 10px; }
+
+.letter-spacing.letter-spacing-xlarge {
+  letter-spacing: 14px; }
 
 a, .link {
   color: #298ccf;
