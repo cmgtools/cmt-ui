@@ -1589,12 +1589,12 @@ code, kbd, pre, samp {
   font-family: "Courier New", Courier, monospace;
   font-size: 1em; }
 
-ol, ul, nav {
-  list-style: none; }
-
 nav ul, nav ol {
   list-style: none;
   list-style-image: none; }
+
+ol:not(.browser-default), ol:not(.browser-default) li, ul:not(.browser-default), ul:not(.browser-default) li, nav:not(.browser-default), nav:not(.browser-default) li {
+  list-style-type: none; }
 
 blockquote, q {
   quotes: none; }
@@ -1763,23 +1763,102 @@ input[type="radio"] {
 input[type="checkbox"] {
   vertical-align: bottom; }
 
-::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #aaaaaa; }
-
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #aaaaaa;
-  opacity: 1; }
-
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #aaaaaa;
-  opacity: 1; }
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #aaaaaa; }
+/**** --------------wysiwig reset -----------------*/
+.wysiwyg {
+  color: black; }
+  .wysiwyg html, .wysiwyg address, .wysiwyg blockquote, .wysiwyg body, .wysiwyg dd, .wysiwyg div, .wysiwyg dl, .wysiwyg dt, .wysiwyg fieldset, .wysiwyg form, .wysiwyg frame, .wysiwyg frameset, .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6, .wysiwyg noframes, .wysiwyg ol, .wysiwyg p, .wysiwyg ul, .wysiwyg center, .wysiwyg dir, .wysiwyg hr, .wysiwyg menu, .wysiwyg pre {
+    display: block;
+    unicode-bidi: embed; }
+  .wysiwyg li {
+    display: list-item; }
+  .wysiwyg head {
+    display: none; }
+  .wysiwyg table {
+    display: table; }
+  .wysiwyg tr {
+    display: table-row; }
+  .wysiwyg thead {
+    display: table-header-group; }
+  .wysiwyg tbody {
+    display: table-row-group; }
+  .wysiwyg tfoot {
+    display: table-footer-group; }
+  .wysiwyg col {
+    display: table-column; }
+  .wysiwyg colgroup {
+    display: table-column-group; }
+  .wysiwyg td, .wysiwyg th {
+    display: table-cell; }
+  .wysiwyg caption {
+    display: table-caption; }
+  .wysiwyg th {
+    font-weight: bolder;
+    text-align: center; }
+  .wysiwyg caption {
+    text-align: center; }
+  .wysiwyg body {
+    margin: 8px; }
+  .wysiwyg h1 {
+    font-size: 2em;
+    margin: .67em 0; }
+  .wysiwyg h2 {
+    font-size: 1.5em;
+    margin: .75em 0; }
+  .wysiwyg h3 {
+    font-size: 1.17em;
+    margin: .83em 0; }
+  .wysiwyg h4, .wysiwyg p,
+  .wysiwyg blockquote, .wysiwyg ul,
+  .wysiwyg fieldset, .wysiwyg form,
+  .wysiwyg ol, .wysiwyg dl, .wysiwyg dir,
+  .wysiwyg menu {
+    margin: 1.12em 0; }
+  .wysiwyg h5 {
+    font-size: .83em;
+    margin: 1.5em 0; }
+  .wysiwyg h6 {
+    font-size: .75em;
+    margin: 1.67em 0; }
+  .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4,
+  .wysiwyg h5, .wysiwyg h6, .wysiwyg b,
+  .wysiwyg strong {
+    font-weight: bolder; }
+  .wysiwyg blockquote {
+    margin-left: 40px;
+    margin-right: 40px; }
+  .wysiwyg i, .wysiwyg cite, .wysiwyg em,
+  .wysiwyg var, .wysiwyg address {
+    font-style: italic; }
+  .wysiwyg pre, .wysiwyg tt, .wysiwyg code,
+  .wysiwyg kbd, .wysiwyg samp {
+    font-family: monospace; }
+  .wysiwyg pre {
+    white-space: pre; }
+  .wysiwyg button, .wysiwyg textarea,
+  .wysiwyg input, .wysiwyg select {
+    display: inline-block; }
+  .wysiwyg big {
+    font-size: 1.17em; }
+  .wysiwyg small, .wysiwyg sub, .wysiwyg sup {
+    font-size: .83em; }
+  .wysiwyg sub {
+    vertical-align: sub; }
+  .wysiwyg sup {
+    vertical-align: super; }
+  .wysiwyg table {
+    border-spacing: 2px; }
+  .wysiwyg thead, .wysiwyg tbody,
+  .wysiwyg tfoot {
+    vertical-align: middle; }
+  .wysiwyg td, .wysiwyg th, .wysiwyg tr {
+    vertical-align: inherit; }
+  .wysiwyg s, .wysiwyg strike, .wysiwyg del {
+    text-decoration: line-through; }
+  .wysiwyg hr {
+    border: 1px inset; }
+  .wysiwyg ol, .wysiwyg ul, .wysiwyg dir,
+  .wysiwyg menu, .wysiwyg dd {
+    margin-left: 40px; }
 
 /**********************************************************************
 Description: This file define the basic and common styling used by CMT-UI css framework.
@@ -4923,20 +5002,36 @@ Details: It defines the social network menu components as listed below:
   color: #FFFFFF !important; }
   .menu-social .btn.facebook {
     background-color: #3B5998; }
+    .menu-social .btn.facebook:hover {
+      background-color: #2d4373 !important; }
   .menu-social .btn.twitter {
     background-color: #00ACED; }
+    .menu-social .btn.twitter:hover {
+      background-color: #0087ba !important; }
   .menu-social .btn.google {
     background-color: #DD4B39; }
+    .menu-social .btn.google:hover {
+      background-color: #c23321 !important; }
   .menu-social .btn.google-plus {
     background-color: #DD4B39; }
+    .menu-social .btn.google-plus:hover {
+      background-color: #c23321 !important; }
   .menu-social .btn.linkedin {
     background-color: #007BB6; }
+    .menu-social .btn.linkedin:hover {
+      background-color: #005983 !important; }
   .menu-social .btn.instagram {
     background-color: #125688; }
+    .menu-social .btn.instagram:hover {
+      background-color: #0c3a5b !important; }
   .menu-social .btn.pintrest {
     background-color: #CB2027; }
+    .menu-social .btn.pintrest:hover {
+      background-color: #9f191f !important; }
   .menu-social .btn.youtube {
     background-color: #BB0000; }
+    .menu-social .btn.youtube:hover {
+      background-color: #880000 !important; }
 
 /**********************************************************************
 Description: It defines the styles for breadcrumbs available in CMT-UI css framework.
