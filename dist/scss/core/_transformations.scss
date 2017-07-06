@@ -76,7 +76,7 @@ Details: It defines the transformation mixins and default implementation as list
 // Transitions & Transformations ***********************
 
 .grow {
-	@include transit-width-height( $transit-eio, $transit-time-medium );
+	@include transit-all( $transit-eio, $transit-time-medium );
 
 	&:hover {
 		@include transform-scale( 1.2 );

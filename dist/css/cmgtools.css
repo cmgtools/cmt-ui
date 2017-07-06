@@ -1506,11 +1506,11 @@ Details: It defines the transformation mixins and default implementation as list
   transform: scale(1, -1); }
 
 .grow {
-  -moz-transition: width 350ms ease-in-out 0s, height 350ms ease-in-out 0s;
-  -ms-transition: width 350ms ease-in-out 0s, height 350ms ease-in-out 0s;
-  -o-transition: width 350ms ease-in-out 0s, height 350ms ease-in-out 0s;
-  -webkit-transition: width 350ms ease-in-out 0s, height 350ms ease-in-out 0s;
-  transition: width 350ms ease-in-out 0s, height 350ms ease-in-out 0s; }
+  -moz-transition: all 350ms ease-in-out 0s;
+  -ms-transition: all 350ms ease-in-out 0s;
+  -o-transition: all 350ms ease-in-out 0s;
+  -webkit-transition: all 350ms ease-in-out 0s;
+  transition: all 350ms ease-in-out 0s; }
   .grow:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
