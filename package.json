@@ -22,10 +22,13 @@
     "url": "https://github.com/cmgtools/cmt-ui/issues"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-sass": "~1.1.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "github:gruntjs/grunt-contrib-cssmin",
+    "grunt-contrib-uglify": "^3.0.1",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-cssmin": "git://github.com/gruntjs/grunt-contrib-cssmin",
-    "grunt-contrib-copy": "~0.8.2"
+    "grunt-npm-install": "^0.3.1",
+    "grunt-sass": "^1.1.0"
   }
 }

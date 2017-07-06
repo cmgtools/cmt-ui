@@ -191,34 +191,66 @@ Details: It defines the social network menu components as listed below:
 
 		&.facebook {
 			background-color: $color-facebook;
+			
+			&:hover {
+				background-color: darken( $color-facebook, 10% ) !important;
+			}
 		}
 
 		&.twitter {
 			background-color: $color-twitter;
+			
+			&:hover {
+				background-color: darken( $color-twitter, 10% ) !important;
+			}
 		}
 
 		&.google {
 			background-color: $color-google;
+			
+			&:hover {
+				background-color: darken( $color-google, 10% ) !important;
+			}
 		}
 
 		&.google-plus {
 			background-color: $color-google-plus;
+			
+			&:hover {
+				background-color: darken( $color-google-plus, 10% ) !important;
+			}
 		}
 
 		&.linkedin {
 			background-color: $color-linkedin;
+			
+			&:hover {
+				background-color: darken( $color-linkedin, 10% ) !important;
+			}
 		}
 
 		&.instagram {
 			background-color: $color-instagram;
+			
+			&:hover {
+				background-color: darken( $color-instagram, 10% ) !important;
+			}
 		}
 
 		&.pintrest {
 			background-color: $color-pintrest;
+			
+			&:hover {
+				background-color: darken( $color-pintrest, 10% ) !important;
+			}
 		}
 
 		&.youtube {
 			background-color: $color-youtube;
+			
+			&:hover {
+				background-color: darken( $color-youtube, 10% ) !important;
+			}
 		}
 	}
 }
