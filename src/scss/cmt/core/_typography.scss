@@ -70,6 +70,10 @@ html, body {
 .font {
 	font-family: $font-default;
 
+	.font-light {
+		font-weight: lighter;
+	}
+
 	.font-bold {
 		font-weight: bold;
 	}

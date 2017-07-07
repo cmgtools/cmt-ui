@@ -119,6 +119,8 @@
 
 @import "cmt/components/popups";
 // project - popups
+@import "cmt/components/popouts";
+// project - popouts
 
 @import "cmt/components/sliders";
 @import "cmt/components/galleries";
@@ -130,16 +132,27 @@
 @import "cmt/components/file-uploader";
 // project - file uploaders
 
+// Notes: Cards can be used in Boxes, Widgets, Blocks, Grid, Blog
+
 @import "cmt/components/cards/basic";
 // project - data cards
 
-@import "cmt/components/blocks/basic";
-// project - blocks
+// Notes: Boxes can be used in Widgets, Blocks, Grid, Blog
 
 @import "cmt/components/boxes/basic";
 @import "cmt/components/boxes/login";
 @import "cmt/components/boxes/form";
 // project - boxes
+
+// Notes: Widgets can be used in Blocks, Grid, Blog
+
+@import "cmt/components/widgets/basic";
+// project - widgets
+
+// Notes: Blocks can be used to form pages
+
+@import "cmt/components/blocks/basic";
+// project - blocks
 
 @import "cmt/components/grid/data";
 @import "cmt/components/grid/pagination";
@@ -149,9 +162,6 @@
 @import "cmt/components/blog/blog";
 @import "cmt/components/blog/post";
 // project - blog
-
-@import "cmt/components/widgets/basic";
-// project - widgets
 
 // ---------------------------------------//
 // Extensions Division - Optional

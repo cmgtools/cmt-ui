@@ -92,24 +92,24 @@ form {
 	color: $color-field-text;
 	text-align: left;
 	@include transit-all( $transit-eio, $transit-time-small );
-	@include shadow-inset( 0, 0, 0, $color-inset, 1px );
+	@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
 
 	&:hover {
 		background-color: $color-field-h;
 		color: $color-field-h-text;
-		@include shadow-inset( 0, 0, 0, $color-inset-h, 1px );
+		@include shadow-inset( 0, 0, 0, $color-shadow-inset-h, 1px );
 	}
 
 	&:focus {
 		background-color: $color-field-f;
 		color: $color-field-f-text;
-		@include shadow-inset( 0, 0, 0, $color-inset-f, 1px );
+		@include shadow-inset( 0, 0, 0, $color-shadow-inset-f, 1px );
 	}
 
 	&:disabled {
 		background-color: $color-field-d;
 		color: $color-field-d-text;
-		@include shadow-inset( 0, 0, 0, $color-inset-d, 1px );
+		@include shadow-inset( 0, 0, 0, $color-shadow-inset-d, 1px );
 	}
 }
 
@@ -227,7 +227,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 	input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
 	.btn {
-		padding-left: 2em;
+		padding-left: 2.1em;
 		width: 100%;
 	}
 
@@ -249,7 +249,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 		input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
 		.btn {
 			padding-left: 0.30em;
-			padding-right: 2em;
+			padding-right: 2.1em;
 		}
 
 		.icon, .cmti, .fa {
@@ -263,7 +263,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 .cmt-checkbox, .cmt-switch {
 	@extend %element-style;
 	@extend %element-style-field;
-	@include shadow-inset( 0, 0, 0, $color-inset, 0px );
+	@include shadow-inset( 0, 0, 0, $color-shadow-inset, 0px );
 }
 
 .cmt-checkbox, .cmt-switch {
@@ -386,6 +386,17 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	}
 }
 
+// Ignore 100% width behavior for form elements
+
+.frm-ignore-100 {
+
+	label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
+	.btn, .cmt-checkbox, .cmt-switch, .cmt-choice {
+		float: none;
+		width: auto;
+	}
+}
+
 // == Splitted Form Elements ========
 
 // Splitted forms having label on left consuming 40% width and field on right side having remaining 60% width
@@ -448,17 +459,6 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 		.frm-icon-element {
 			width: 100%;
 		}
-	}
-}
-
-// Ignore 100% width behavior for form elements
-
-.frm-ignore-100 {
-
-	label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
-	.btn, .cmt-checkbox, .cmt-switch, .cmt-choice {
-		float: none;
-		width: auto;
 	}
 }
 

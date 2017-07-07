@@ -160,20 +160,26 @@ $size-small-px: 3px;
 $size-medium-px: 5px;
 $size-large-px: 10px;
 $size-xlarge-px: 14px;
+$size-xxlarge-px: 24px;
+$size-xxxlarge-px: 48px;
 
 // Size in em
-$size-default-em: 0.25em;
-$size-small-em: 0.5em;
-$size-medium-em: 1em;
-$size-large-em: 1.5em;
-$size-xlarge-em: 2em;
+$size-default-em: 0.5em;
+$size-small-em: 1em;
+$size-medium-em: 2em;
+$size-large-em: 3em;
+$size-xlarge-em: 5em;
+$size-xxlarge-em: 10em;
+$size-xxxlarge-em: 15em;
 
 // Size in rem
-$size-default-rem: 0.25rem;
-$size-small-rem: 0.5rem;
-$size-medium-rem: 1rem;
-$size-large-rem: 1.5rem;
-$size-xlarge-rem: 2rem;
+$size-default-rem: 0.5rem;
+$size-small-rem: 1rem;
+$size-medium-rem: 2rem;
+$size-large-rem: 3rem;
+$size-xlarge-rem: 5rem;
+$size-xxlarge-rem: 10rem;
+$size-xxxlarge-rem: 15rem;
 
 // Theme sizes
 $size-default: $size-default-px;
@@ -181,6 +187,8 @@ $size-small: $size-small-px;
 $size-medium: $size-medium-px;
 $size-large: $size-large-px;
 $size-xlarge: $size-xlarge-px;
+$size-xxlarge: $size-xxlarge-px;
+$size-xxxlarge: $size-xxxlarge-px;
 
 // Color Factor - We can use it using lighten/darken methods - ex: $color-primary-l: lighten( $color-primary, $color-factor )
 $color-factor: 12%;
@@ -238,10 +246,10 @@ $color-field-d: #CCCCCC;      // Disabled Field
 $color-field-d-text: #909090;
 $color-placeholder: #aaaaaa;  // Placeholder
 
-$color-inset: #F2F2F2; // Inset color for fields
-$color-inset-h: #E9E9E9; // Inset color for field hover
-$color-inset-f: #E1E1E1; // Inset color for field focus
-$color-inset-d: #CCCCCC; // Inset color for disabled field
+$color-shadow-inset: #F2F2F2; // Inset color for fields
+$color-shadow-inset-h: #E9E9E9; // Inset color for field hover
+$color-shadow-inset-f: #E1E1E1; // Inset color for field focus
+$color-shadow-inset-d: #CCCCCC; // Inset color for disabled field
 
 // Buttons
 $color-btn: #E74343;
@@ -276,25 +284,25 @@ $color-gray-d: #595959;
 
 $color-black: #000000;
 
-$color-blue: #3F62A0;
-$color-blue-l: #6284C1;
-$color-blue-d: #2C446F;
+$color-blue: #0074D9;
+$color-blue-l: #1E96FF;
+$color-blue-d: #0059A6;
 
 $color-purple: #8946C4;
 $color-purple-l: #AA7AD4;
 $color-purple-d: #663096;
 
-$color-orange: #F3702E;
-$color-orange-l: #F79C6E;
-$color-orange-d: #D14E0C;
+$color-orange: #FF851B;
+$color-orange-l: #FFA95F;
+$color-orange-d: #E76B00;
 
-$color-yellow: #EDCE4F;
-$color-yellow-l: #F3DF8D;
-$color-yellow-d: #E1B917;
+$color-yellow: #FFDC00;
+$color-yellow-l: #FFE544;
+$color-yellow-d: #DDBF00;
 
-$color-red: #C32D1C;
-$color-red-l: #E3503F;
-$color-red-d: #881F13;
+$color-red: #FF4136;
+$color-red-l: #FF6158;
+$color-red-d: #F10D00;
 
 $color-pink: #E4287C;
 $color-pink-l: #EC64A1;
@@ -311,6 +319,15 @@ $color-green-d: #55741F;
 $color-brown: #8B4513;
 $color-brown-l: #C7631B;
 $color-brown-d: #4F270B;
+
+// Special Colors
+$color-aqua: #8AE2E3;
+$color-golden: #E9C011;
+$color-silver: #E7E8E7;
+$color-maroon: #542628;
+$color-olive: #A3A54C;
+$color-lime: #D3F235;
+$color-navy: #003653;
 
 // User moods - errors, warnings and success
 $color-error: #E74343;    // To show errors

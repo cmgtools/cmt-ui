@@ -24,7 +24,9 @@ $color-gradient-2: $color-secondary; // Second color for gradients
 // Shadow Colors
 $color-shadow: rgba( $color-black, $color-transparent-low );
 
-// Transparent Colors
+// Transparent Colors - Color, Low and High
+
+// Standard Colors
 $color-transparent-primary-l: rgba( $color-primary, $color-transparent-low );
 $color-transparent-primary: rgba( $color-primary, $color-transparent-medium );
 $color-transparent-primary-h: rgba( $color-primary, $color-transparent-high );
@@ -41,7 +43,9 @@ $color-transparent-white-l: rgba( $color-white, $color-transparent-low );
 $color-transparent-white: rgba( $color-white, $color-transparent-medium );
 $color-transparent-white-h: rgba( $color-white, $color-transparent-high );
 
+$color-transparent-gray-l: rgba( $color-gray, $color-transparent-low );
 $color-transparent-gray: rgba( $color-gray, $color-transparent-medium );
+$color-transparent-gray-h: rgba( $color-gray, $color-transparent-high );
 
 $color-transparent-black-l: rgba( $color-black, $color-transparent-low );
 $color-transparent-black: rgba( $color-black, $color-transparent-medium );
@@ -79,6 +83,35 @@ $color-transparent-green-l: rgba( $color-green, $color-transparent-low );
 $color-transparent-green: rgba( $color-green, $color-transparent-medium );
 $color-transparent-green-h: rgba( $color-green, $color-transparent-high );
 
-$color-transparent-green-d-l: rgba( $color-green-d, $color-transparent-low );
-$color-transparent-green-d: rgba( $color-green-d, $color-transparent-medium );
-$color-transparent-green-d-h: rgba( $color-green-d, $color-transparent-high );
+$color-transparent-brown-l: rgba( $color-brown, $color-transparent-low );
+$color-transparent-brown: rgba( $color-brown, $color-transparent-medium );
+$color-transparent-brown-h: rgba( $color-brown, $color-transparent-high );
+
+// Special Colors
+$color-transparent-aqua-l: rgba( $color-aqua, $color-transparent-low );
+$color-transparent-aqua: rgba( $color-aqua, $color-transparent-medium );
+$color-transparent-aqua-h: rgba( $color-aqua, $color-transparent-high );
+
+$color-transparent-golden-l: rgba( $color-golden, $color-transparent-low );
+$color-transparent-golden: rgba( $color-golden, $color-transparent-medium );
+$color-transparent-golden-h: rgba( $color-golden, $color-transparent-high );
+
+$color-transparent-silver-l: rgba( $color-silver, $color-transparent-low );
+$color-transparent-silver: rgba( $color-silver, $color-transparent-medium );
+$color-transparent-silver-h: rgba( $color-silver, $color-transparent-high );
+
+$color-transparent-maroon-l: rgba( $color-maroon, $color-transparent-low );
+$color-transparent-maroon: rgba( $color-maroon, $color-transparent-medium );
+$color-transparent-maroon-h: rgba( $color-maroon, $color-transparent-high );
+
+$color-transparent-olive-l: rgba( $color-olive, $color-transparent-low );
+$color-transparent-olive: rgba( $color-olive, $color-transparent-medium );
+$color-transparent-olive-h: rgba( $color-olive, $color-transparent-high );
+
+$color-transparent-lime-l: rgba( $color-lime, $color-transparent-low );
+$color-transparent-lime: rgba( $color-lime, $color-transparent-medium );
+$color-transparent-lime-h: rgba( $color-lime, $color-transparent-high );
+
+$color-transparent-navy-l: rgba( $color-navy, $color-transparent-low );
+$color-transparent-navy: rgba( $color-navy, $color-transparent-medium );
+$color-transparent-navy-h: rgba( $color-navy, $color-transparent-high );
