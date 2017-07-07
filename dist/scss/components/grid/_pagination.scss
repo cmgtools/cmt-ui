@@ -141,58 +141,58 @@ Details: It defines the styles for pagination components as listed below:
 
 .pagination-full {
 
-    .page-info {
-        display: inline-block;
-        width: 40%;
-        text-align: left;
-        font-weight: normal;
-    }
+	.page-info {
+		display: inline-block;
+		width: 40%;
+		text-align: left;
+		font-weight: normal;
+	}
 
 	.page-links {
-        display: inline-block;
-        width: 59%;
-        text-align: right;
+		display: inline-block;
+		width: 59%;
+		text-align: right;
 
 		.pagination {
 
-		    li, .page-link {
-		        display: inline-block;
-		        list-style: none;
-		        margin: 0;
-		        margin-left: 3px;
+			li, .page-link {
+				display: inline-block;
+				list-style: none;
+				margin: 0;
+				margin-left: 3px;
 				height: 2.1em;
 				line-height: 2.1em;
 
-		        span, a {
-		            background-color: $color-tertiary;
-		            color: $color-secondary-text;
-		            padding: 0.5em 0.75em;
-		            text-decoration: none;
-		        }
+				span, a {
+					background-color: $color-tertiary;
+					color: $color-secondary-text;
+					padding: 0.5em 0.75em;
+					text-decoration: none;
+				}
 
-			    .active a {
-			        background-color: $color-tertiary-d;
-			        color: $color-tertiary-text-d;
-			    }
+				.active a {
+					background-color: $color-tertiary-d;
+					color: $color-tertiary-text-d;
+				}
 
-			    a:hover {
-			        background-color: $color-primary;
-			        color: $color-primary-text;
-			    }
+				a:hover {
+					background-color: $color-primary;
+					color: $color-primary-text;
+				}
 
-			    .disabled span {
-			        background-color: $color-gray;
-			        color: $color-white;
-			    }
-		    }
+				.disabled span {
+					background-color: $color-gray;
+					color: $color-white;
+				}
+			}
 		}
 	}
 
-    @media only screen and ( max-width: $screen-tablet-large ) {
+	@media only screen and ( max-width: $screen-tablet-large ) {
 
-        .page-info, .page-links {
-            width: 100%;
-            text-align: center;
-        }
-    }
+		.page-info, .page-links {
+			width: 100%;
+			text-align: center;
+		}
+	}
 }

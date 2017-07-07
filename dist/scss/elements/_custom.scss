@@ -33,14 +33,14 @@ Details: It defines the custom element styles as listed below:
 
 // == Icon Picker ===================
 
-.wrap-icon-picker {
+.icon-picker-wrap {
 	width: 100%;
 
 	.icon-picker {
 		position: relative;
 		display: inline-block;
 
-		.wrap-icon {
+		.picker-icon-wrap {
 			display: inline-block;
 			position: relative;
 			width: 64px;
@@ -64,7 +64,7 @@ Details: It defines the custom element styles as listed below:
 			}
 		}
 
-		.icon-sets {
+		.picker-icon-sets {
 			display: none;
 			position: absolute;
 			left: 0;
@@ -75,7 +75,7 @@ Details: It defines the custom element styles as listed below:
 			background-color: $color-primary-d;
 			z-index: 1000000;
 
-			.wrap-icon {
+			.picker-icon-wrap {
 				margin: 2px;
 			}
 		}
@@ -84,48 +84,11 @@ Details: It defines the custom element styles as listed below:
 
 // == Select ========================
 
-.cmt-select-native {
-	position: relative;
-	display: inline-block;
-
-	select {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		padding: 0.5em;
-		cursor: pointer;
-		padding-right: 1.8em;
-		text-shadow: 0 0 0 #000;
-	}
-
-	select:-moz-focusring {
-		color: transparent;
-		text-shadow: 0 0 0 #000;
-	}
-
-	select::-ms-expand {
-		display: none;
-	}
-
-	// Compatible with CMT-Icons and other frameworks
-	.icon, .cmti, .fa {
-		position: absolute;
-		right: 0;
-		border: none;
-		box-shadow: none;
-		outline: none;
-		font-size: 1em;
-		padding-top: 0.70em;
-		padding-left: 0.20em;
-		padding-right: 0.60em;
-		margin: 0;
-	}
-}
-
 .cmt-select-wrap {
 	width: 100%;
 	display: inline-block;
 
+	// Hide native select
 	select {
 		display: none;
 	}
@@ -140,6 +103,7 @@ Details: It defines the custom element styles as listed below:
 			position: relative;
 			z-index: 100000;
 			padding-right: 1.5em;
+			@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
 
 			// text for selected value
 			.s-text {
@@ -176,6 +140,7 @@ Details: It defines the custom element styles as listed below:
 			z-index: 100001;
 			max-height: 180px;
 			overflow-y: auto;
+			@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
 
 			li {
 				width: 100%;
@@ -202,6 +167,7 @@ Details: It defines the custom element styles as listed below:
 		position: relative;
 		z-index: 100000;
 		padding-right: 1.5em;
+		@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
 
 		// text for selected value
 		.s-text {
@@ -239,7 +205,8 @@ Details: It defines the custom element styles as listed below:
 		max-height: 180px;
 		overflow-y: auto;
 		display: none;
-		
+		@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
+
 		li {
 			width: 100%;
 			overflow: hidden;
@@ -254,6 +221,45 @@ Details: It defines the custom element styles as listed below:
 	}
 }
 
+.cmt-select-native {
+	position: relative;
+	display: inline-block;
+
+	// Decorate native select
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		padding: 0.5em;
+		cursor: pointer;
+		padding-right: 1.8em;
+		text-shadow: 0 0 0 #000;
+	}
+
+	select:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+	}
+
+	select::-ms-expand {
+		display: none;
+	}
+
+	// Compatible with CMT-Icons and other frameworks
+	.icon, .cmti, .fa {
+		position: absolute;
+		right: 0;
+		border: none;
+		box-shadow: none;
+		outline: none;
+		font-size: 1em;
+		padding-top: 0.70em;
+		padding-left: 0.20em;
+		padding-right: 0.60em;
+		margin: 0;
+	}
+}
+
 // == Choice ========================
 
 // Choices using radio or checkbox
@@ -265,7 +271,11 @@ Details: It defines the custom element styles as listed below:
 		display: none;
 	}
 
-	input[type=checkbox]+.label.pad-label::before, input[type=radio]+.label.pad-label::before {
+	label {
+		cursor: pointer;
+	}
+
+	input[type=checkbox] + .label.pad-label::before, input[type=radio] + .label.pad-label::before {
 		margin-right: 8px;
 	}
 
@@ -280,42 +290,42 @@ Details: It defines the custom element styles as listed below:
 		line-height: 13px;
 	}
 
-	input[type=checkbox]:checked,input[type=radio]:checked, input[type=checkbox]:focus,input[type=radio]:focus {
+	input[type=checkbox]:checked, input[type=radio]:checked, input[type=checkbox]:focus, input[type=radio]:focus {
 		outline:none !important;
 	}
 
-	input[type=checkbox]:checked+.label::before, input[type=radio]:checked+.label::before {
+	input[type=checkbox]:checked + .label::before, input[type=radio]:checked + .label::before {
 		display: inline-block;
 		background-color: #F5F8FC;
 		color: $color-btn;
 	}
 
-	input[type=checkbox]:checked+.label, input[type=radio]:checked+.label {
+	input[type=checkbox]:checked + .label, input[type=radio]:checked + .label {
 		color: $color-btn-a;
 	}
 
-	input[type=checkbox]:hover+.label::before, input[type=radio]:hover+.label::before, input[type=checkbox]+.label:hover::before, input[type=radio]+.label:hover::before {
+	input[type=checkbox]:hover + .label::before, input[type=radio]:hover + .label::before, input[type=checkbox] + .label:hover::before, input[type=radio] + .label:hover::before {
 		color: $color-btn-h;
 	}
 
-	input[type=checkbox]:disabled+.label::before, input[type=radio]:disabled+.label::before {
+	input[type=checkbox]:disabled + .label::before, input[type=radio]:disabled + .label::before {
 		background-color: #DDD !important;
 		color: #BBB;
 	}
 
-	input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
+	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
 		content: "\e0a2";
 	}
 
-	input[type=radio]:checked+.label::before {
+	input[type=radio]:checked + .label::before {
 		content: "\e0a3";
 	}
 
-	input[type=checkbox]+.label::before, input[type=checkbox]:disabled+.label::before {
+	input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
 		content: "\3b";
 	}
 
-	input[type=checkbox]:checked+.label::before {
+	input[type=checkbox]:checked + .label::before {
 		content: "\3a";
 	}
 }
@@ -347,14 +357,18 @@ Details: It defines the custom element styles as listed below:
 			}
 		}
 	}
+}
 
-	// Radio or Checkbox
+.cmt-rating-native {
+	text-align: left;
 
-	input[type=checkbox]+.label.label-rating::before, input[type=radio]+.label.label-rating::before {
+	// Radio or Checkbox - these styles work together with cmt-choice
+
+	input[type=checkbox] + .label.label-rating::before, input[type=radio] + .label.label-rating::before {
 		margin-right: 8px;
 	}
 
-	input[type=radio]+.label::before, input[type=radio]:disabled+.label::before {
+	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
 		content: "\e0f3";
 	}
 
@@ -427,6 +441,8 @@ Details: It defines the custom element styles as listed below:
 }
 
 // == Auto Suggest ==================
+
+// TODO: Check spinner positioning
 
 .auto-suggest {
 	position: relative;
@@ -523,6 +539,134 @@ Details: It defines the custom element styles as listed below:
 		&:hover {
 			background-color: $color-gray-d;
 			color: $color-gray-l;
+		}
+	}
+
+	&.btn-blue {
+		background-color: $color-blue;
+
+		&:hover {
+			background-color: $color-blue-d;
+		}
+	}
+
+	&.btn-purple {
+		background-color: $color-purple;
+
+		&:hover {
+			background-color: $color-purple-d;
+		}
+	}
+
+	&.btn-orange {
+		background-color: $color-orange;
+
+		&:hover {
+			background-color: $color-orange-d;
+		}
+	}
+
+	&.btn-yellow {
+		background-color: $color-yellow;
+
+		&:hover {
+			background-color: $color-yellow-d;
+		}
+	}
+
+	&.btn-red {
+		background-color: $color-red;
+
+		&:hover {
+			background-color: $color-red-d;
+		}
+	}
+
+	&.btn-pink {
+		background-color: $color-pink;
+
+		&:hover {
+			background-color: $color-pink-d;
+		}
+	}
+
+	&.btn-magenta {
+		background-color: $color-magenta;
+
+		&:hover {
+			background-color: $color-magenta-d;
+		}
+	}
+
+	&.btn-green {
+		background-color: $color-green;
+
+		&:hover {
+			background-color: $color-green-d;
+		}
+	}
+
+	&.btn-brown {
+		background-color: $color-brown;
+
+		&:hover {
+			background-color: $color-brown-d;
+		}
+	}
+
+	&.btn-aqua {
+		background-color: $color-aqua;
+
+		&:hover {
+			background-color: darken( $color-aqua, 15% );
+		}
+	}
+
+	&.btn-golden {
+		background-color: $color-golden;
+
+		&:hover {
+			background-color: darken( $color-golden, 15% );
+		}
+	}
+
+	&.btn-silver {
+		background-color: $color-silver;
+
+		&:hover {
+			background-color: darken( $color-silver, 15% );
+		}
+	}
+
+	&.btn-maroon {
+		background-color: $color-maroon;
+
+		&:hover {
+			background-color: darken( $color-maroon, 15% );
+		}
+	}
+
+	&.btn-olive {
+		background-color: $color-olive;
+
+		&:hover {
+			background-color: darken( $color-olive, 15% );
+		}
+	}
+
+	&.btn-lime {
+		background-color: $color-lime;
+
+		&:hover {
+			background-color: darken( $color-lime, 15% );
+		}
+	}
+
+	&.btn-navy {
+		background-color: $color-navy;
+
+		&:hover {
+			background-color: darken( $color-navy, 15% );
 		}
 	}
 

@@ -19,15 +19,15 @@ Details: It defines the styles of form box components as listed below:
 .box-form {
 	position: relative;
 
-	.btn-edit {
+	.box-form-trigger {
 		cursor: pointer;
 	}
 
-	.wrap-info {
+	.box-form-info-wrap {
 		display: block;
 	}
 
-	.wrap-form {
+	.box-form-content-wrap {
 		display: none;
 	}
 }
@@ -36,7 +36,7 @@ Details: It defines the styles of form box components as listed below:
 
 .box-form-basic {
 
-	.btn-edit {
+	.box-form-trigger {
 		position: absolute;
 		display: inline-block;
 		top: 10px;

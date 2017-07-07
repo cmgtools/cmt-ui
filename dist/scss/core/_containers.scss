@@ -557,7 +557,7 @@ Details: It defines the grid system and basic containers as listed below:
 // The main usage of col filler is to fill background of an element in floated elements case. Ex: Sidebar need to show background color with same height as that of content.
 // Place it for first column with lower z-index. We need to repeat first column so that the column with col-filler will be overlapped by column having content.
 
-.wrap-col-filler {
+.col-filler-wrap {
 	position: relative;
 	z-index: 0;
 
@@ -587,8 +587,10 @@ Details: It defines the grid system and basic containers as listed below:
 // Container to wrap content header and content
 .container {
 	// container styles
-	.wrap-content {
+
+	.content-wrap {
 		//we might need to wrap content in order to use background for content
+
 		.content {
 			// content remains within wrap content to occupy it's own space
 		}
@@ -617,7 +619,7 @@ Details: It defines the grid system and basic containers as listed below:
 		// Sidebar within container.
 	}
 
-	.wrap-content-main {
+	.content-main-wrap {
 		position: relative;
 		z-index: 1;
 
@@ -629,7 +631,7 @@ Details: It defines the grid system and basic containers as listed below:
 			// Sidebar within content wrapper.
 		}
 
-		& >.content {
+		& >.content-main {
 			// Content within content wrapper
 		}
 

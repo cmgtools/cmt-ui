@@ -265,6 +265,34 @@ Details: It defines the text and background colors as listed below:
 	&.bkg-brown-d {
 		background-color: $color-brown-d !important;
 	}
+
+	&.bkg-aqua {
+		background-color: $color-aqua !important;
+	}
+
+	&.bkg-golden {
+		background-color: $color-golden !important;
+	}
+
+	&.bkg-silver {
+		background-color: $color-silver !important;
+	}
+
+	&.bkg-maroon {
+		background-color: $color-maroon !important;
+	}
+
+	&.bkg-olive {
+		background-color: $color-olive !important;
+	}
+
+	&.bkg-lime {
+		background-color: $color-lime !important;
+	}
+
+	&.bkg-navy {
+		background-color: $color-navy !important;
+	}
 }
 
 // Text Colors
@@ -436,5 +464,33 @@ Details: It defines the text and background colors as listed below:
 
 	&.text-brown-d {
 		color: $color-brown-d !important;
+	}
+
+	&.text-aqua {
+		color: $color-aqua !important;
+	}
+
+	&.btextkg-golden {
+		color: $color-golden !important;
+	}
+
+	&.text-silver {
+		color: $color-silver !important;
+	}
+
+	&.text-maroon {
+		color: $color-maroon !important;
+	}
+
+	&.text-olive {
+		color: $color-olive !important;
+	}
+
+	&.text-lime {
+		color: $color-lime !important;
+	}
+
+	&.text-navy {
+		color: $color-navy !important;
 	}
 }

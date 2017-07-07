@@ -11,13 +11,13 @@ Details: It defines the styles of blog post as listed below:
 
 // == Single Post - Structure =======
 
-.post-single {
+.post-wrap {
 	// post
 
 	.post-banner {
 		// banner
 
-		.texture {
+		> .texture {
 			// texture on top of banner
 			z-index: 10;
 		}
@@ -39,7 +39,7 @@ Details: It defines the styles of blog post as listed below:
 		}
 	}
 
-	.wrap-post-content {
+	.post-content-wrap {
 
 		.post-title {
 			// post title
@@ -57,7 +57,7 @@ Details: It defines the styles of blog post as listed below:
 
 // == Basic Single Post =============
 
-.post-single-basic {
+.post-basic {
 	padding: 1em;
 	background-color: $color-primary-l;
 

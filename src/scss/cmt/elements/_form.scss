@@ -16,19 +16,23 @@ Details: It defines the styles of form elements as listed below:
 *
 * Button            - This section adds default styles for submit and button elements.
 *
-* Ignore 100%       - This class allows form to ignore 100% width of elements.
-*
 * Mandatory         - This class adds * to field lables marked as required.
-*
-* Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
-*                     fields on right side.
-*
-* Round corner      - This section define classes to make form elements round cornered.
 *
 * Icon elements     - This class adds options to specify icon for an element. The icon will be added to left by
 *                     default, but it can also be displayed on right side.
 *
 * Placeholder       - This section make placeholder color same for all the browsers.
+*
+* Custom Element	- This section decorates the custom elements.
+*
+* Round corner      - This section define classes to make form elements round cornered.
+*
+* Forms				- The form class add required spacing to render the form elements.
+*
+* Ignore 100%       - This class allows form to ignore 100% width of elements.
+*
+* Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
+*                     fields on right side.
 ***********************************************************************/
 
 // Notes: Refer reset for basic reset done for form elements.
@@ -256,6 +260,26 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 			right: 0;
 		}
 	}
+}
+
+// == Placeholder ===================
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: $color-placeholder;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: $color-placeholder;
+   opacity:  1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: $color-placeholder;
+   opacity:  1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: $color-placeholder;
 }
 
 // == Custom Elements ===============

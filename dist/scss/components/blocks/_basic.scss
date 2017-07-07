@@ -74,7 +74,7 @@ Details: It defines the styles for header components as listed below:
 	}
 
 	// Content Wrapper on top of texture
-	.block-wrap-content {
+	.block-content-wrap {
 		position: relative;
 		z-index: 15;
 
@@ -87,15 +87,9 @@ Details: It defines the styles for header components as listed below:
 		.block-content {
 
 			// Default Content Box having title and text content
-			.box-content {
+			.box-block-content {
 
-				.box-content-title {
-					// default content box title
-				}
-
-				.box-content-text {
-				  // default content box text
-				}
+				// Box layout - derived from box component
 			}
 		}
 
@@ -113,17 +107,17 @@ Details: It defines the styles for header components as listed below:
 		text-align: center;
 		z-index: 10000;
 
-		&.top {
+		&.block-splitter-top {
 			top: 0;
 			margin-top: -50px;
 		}
 
-		&.bottom {
+		&.block-splitter-bottom {
 			bottom: 0;
 			margin-bottom: -50px;
 		}
 
-		.icon {
+		.block-splitter-icon {
 			display: inline-block;
 			width: 100px;
 			height: 100px;

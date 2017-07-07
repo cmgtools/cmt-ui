@@ -315,23 +315,23 @@ Notes:
   .transparent-bkg.transparent-bkg-black {
     background-color: rgba(0, 0, 0, 0.6); }
   .transparent-bkg.transparent-bkg-blue {
-    background-color: rgba(63, 98, 160, 0.6); }
+    background-color: rgba(0, 116, 217, 0.6); }
   .transparent-bkg.transparent-bkg-purple {
     background-color: rgba(137, 70, 196, 0.6); }
   .transparent-bkg.transparent-bkg-orange {
-    background-color: rgba(243, 112, 46, 0.6); }
+    background-color: rgba(255, 133, 27, 0.6); }
   .transparent-bkg.transparent-bkg-yellow {
-    background-color: rgba(237, 206, 79, 0.6); }
+    background-color: rgba(255, 220, 0, 0.6); }
   .transparent-bkg.transparent-bkg-red {
-    background-color: rgba(195, 45, 28, 0.6); }
+    background-color: rgba(255, 65, 54, 0.6); }
   .transparent-bkg.transparent-bkg-pink {
     background-color: rgba(228, 40, 124, 0.6); }
   .transparent-bkg.transparent-bkg-magenta {
     background-color: rgba(178, 0, 178, 0.6); }
   .transparent-bkg.transparent-bkg-green {
     background-color: rgba(124, 170, 45, 0.6); }
-  .transparent-bkg.transparent-bkg-green-d {
-    background-color: rgba(85, 116, 31, 0.6); }
+  .transparent-bkg.transparent-bkg-brown {
+    background-color: rgba(139, 69, 19, 0.6); }
 
 .rounded.rounded-none {
   -webkit-border-radius: 0 !important;
@@ -662,25 +662,25 @@ Notes:
     -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6); }
   .shadow.shadow-blue {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6); }
   .shadow.shadow-purple {
     -webkit-box-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
     -moz-box-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
     box-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
   .shadow.shadow-orange {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6); }
   .shadow.shadow-yellow {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6); }
   .shadow.shadow-red {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
+    box-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6); }
   .shadow.shadow-pink {
     -webkit-box-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
     -moz-box-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
@@ -723,25 +723,25 @@ Notes:
     -moz-box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
     box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6); }
   .shadow-inset.shadow-inset-blue {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6); }
   .shadow-inset.shadow-inset-purple {
     -webkit-box-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
     -moz-box-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
     box-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
   .shadow-inset.shadow-inset-orange {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6); }
   .shadow-inset.shadow-inset-yellow {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6); }
   .shadow-inset.shadow-inset-red {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
+    box-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6); }
   .shadow-inset.shadow-inset-pink {
     -webkit-box-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
     -moz-box-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
@@ -784,25 +784,25 @@ Notes:
     -moz-text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
     text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6); }
   .text-shadow.text-shadow-blue {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(63, 98, 160, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6); }
   .text-shadow.text-shadow-purple {
     -webkit-text-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
     -moz-text-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
     text-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
   .text-shadow.text-shadow-orange {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(243, 112, 46, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6); }
   .text-shadow.text-shadow-yellow {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(237, 206, 79, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6); }
   .text-shadow.text-shadow-red {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(195, 45, 28, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
+    text-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6); }
   .text-shadow.text-shadow-pink {
     -webkit-text-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
     -moz-text-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
@@ -845,25 +845,25 @@ Notes:
     -moz-text-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
     text-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6); }
   .text-shadow-inset.text-shadow-inset-blue {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(63, 98, 160, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6); }
   .text-shadow-inset.text-shadow-inset-purple {
     -webkit-text-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
     -moz-text-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
     text-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
   .text-shadow-inset.text-shadow-inset-orange {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(243, 112, 46, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6); }
   .text-shadow-inset.text-shadow-inset-yellow {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(237, 206, 79, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6); }
   .text-shadow-inset.text-shadow-inset-red {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(195, 45, 28, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
+    text-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6); }
   .text-shadow-inset.text-shadow-inset-pink {
     -webkit-text-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
     -moz-text-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
@@ -1763,12 +1763,13 @@ input[type="radio"] {
 input[type="checkbox"] {
   vertical-align: bottom; }
 
-/**** --------------wysiwig reset -----------------*/
 .wysiwyg {
-  color: black; }
+  color: #363636; }
   .wysiwyg html, .wysiwyg address, .wysiwyg blockquote, .wysiwyg body, .wysiwyg dd, .wysiwyg div, .wysiwyg dl, .wysiwyg dt, .wysiwyg fieldset, .wysiwyg form, .wysiwyg frame, .wysiwyg frameset, .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6, .wysiwyg noframes, .wysiwyg ol, .wysiwyg p, .wysiwyg ul, .wysiwyg center, .wysiwyg dir, .wysiwyg hr, .wysiwyg menu, .wysiwyg pre {
     display: block;
     unicode-bidi: embed; }
+  .wysiwyg body {
+    margin: 8px; }
   .wysiwyg li {
     display: list-item; }
   .wysiwyg head {
@@ -1796,8 +1797,6 @@ input[type="checkbox"] {
     text-align: center; }
   .wysiwyg caption {
     text-align: center; }
-  .wysiwyg body {
-    margin: 8px; }
   .wysiwyg h1 {
     font-size: 2em;
     margin: .67em 0; }
@@ -2270,13 +2269,13 @@ Details: It defines the text and background colors as listed below:
   background-color: #FFFFFF !important; }
 
 .bkg.bkg-blue {
-  background-color: #3F62A0 !important; }
+  background-color: #0074D9 !important; }
 
 .bkg.bkg-blue-l {
-  background-color: #6284C1 !important; }
+  background-color: #1E96FF !important; }
 
 .bkg.bkg-blue-d {
-  background-color: #2C446F !important; }
+  background-color: #0059A6 !important; }
 
 .bkg.bkg-purple {
   background-color: #8946C4 !important; }
@@ -2288,31 +2287,31 @@ Details: It defines the text and background colors as listed below:
   background-color: #663096 !important; }
 
 .bkg.bkg-orange {
-  background-color: #F3702E !important; }
+  background-color: #FF851B !important; }
 
 .bkg.bkg-orange-l {
-  background-color: #F79C6E !important; }
+  background-color: #FFA95F !important; }
 
 .bkg.bkg-orange-d {
-  background-color: #D14E0C !important; }
+  background-color: #E76B00 !important; }
 
 .bkg.bkg-yellow {
-  background-color: #EDCE4F !important; }
+  background-color: #FFDC00 !important; }
 
 .bkg.bkg-yellow-l {
-  background-color: #F3DF8D !important; }
+  background-color: #FFE544 !important; }
 
 .bkg.bkg-yellow-d {
-  background-color: #E1B917 !important; }
+  background-color: #DDBF00 !important; }
 
 .bkg.bkg-red {
-  background-color: #C32D1C !important; }
+  background-color: #FF4136 !important; }
 
 .bkg.bkg-red-l {
-  background-color: #E3503F !important; }
+  background-color: #FF6158 !important; }
 
 .bkg.bkg-red-d {
-  background-color: #881F13 !important; }
+  background-color: #F10D00 !important; }
 
 .bkg.bkg-pink {
   background-color: #E4287C !important; }
@@ -2349,6 +2348,27 @@ Details: It defines the text and background colors as listed below:
 
 .bkg.bkg-brown-d {
   background-color: #4F270B !important; }
+
+.bkg.bkg-aqua {
+  background-color: #8AE2E3 !important; }
+
+.bkg.bkg-golden {
+  background-color: #E9C011 !important; }
+
+.bkg.bkg-silver {
+  background-color: #E7E8E7 !important; }
+
+.bkg.bkg-maroon {
+  background-color: #542628 !important; }
+
+.bkg.bkg-olive {
+  background-color: #A3A54C !important; }
+
+.bkg.bkg-lime {
+  background-color: #D3F235 !important; }
+
+.bkg.bkg-navy {
+  background-color: #003653 !important; }
 
 .text.text-primary {
   color: #363636 !important; }
@@ -2396,13 +2416,13 @@ Details: It defines the text and background colors as listed below:
   color: #FFFFFF !important; }
 
 .text.text-blue {
-  color: #3F62A0 !important; }
+  color: #0074D9 !important; }
 
 .text.text-blue-l {
-  color: #6284C1 !important; }
+  color: #1E96FF !important; }
 
 .text.text-blue-d {
-  color: #2C446F !important; }
+  color: #0059A6 !important; }
 
 .text.text-purple {
   color: #8946C4 !important; }
@@ -2414,31 +2434,31 @@ Details: It defines the text and background colors as listed below:
   color: #663096 !important; }
 
 .text.text-orange {
-  color: #F3702E !important; }
+  color: #FF851B !important; }
 
 .text.text-orange-l {
-  color: #F79C6E !important; }
+  color: #FFA95F !important; }
 
 .text.text-orange-d {
-  color: #D14E0C !important; }
+  color: #E76B00 !important; }
 
 .text.text-yellow {
-  color: #EDCE4F !important; }
+  color: #FFDC00 !important; }
 
 .text.text-yellow-l {
-  color: #F3DF8D !important; }
+  color: #FFE544 !important; }
 
 .text.text-yellow-d {
-  color: #E1B917 !important; }
+  color: #DDBF00 !important; }
 
 .text.text-red {
-  color: #C32D1C !important; }
+  color: #FF4136 !important; }
 
 .text.text-red-l {
-  color: #E3503F !important; }
+  color: #FF6158 !important; }
 
 .text.text-red-d {
-  color: #881F13 !important; }
+  color: #F10D00 !important; }
 
 .text.text-pink {
   color: #E4287C !important; }
@@ -2475,6 +2495,27 @@ Details: It defines the text and background colors as listed below:
 
 .text.text-brown-d {
   color: #4F270B !important; }
+
+.text.text-aqua {
+  color: #8AE2E3 !important; }
+
+.text.btextkg-golden {
+  color: #E9C011 !important; }
+
+.text.text-silver {
+  color: #E7E8E7 !important; }
+
+.text.text-maroon {
+  color: #542628 !important; }
+
+.text.text-olive {
+  color: #A3A54C !important; }
+
+.text.text-lime {
+  color: #D3F235 !important; }
+
+.text.text-navy {
+  color: #003653 !important; }
 
 /**********************************************************************
 Description: This file define the styles for margin and padding used by CMT-UI css framework.
@@ -2529,119 +2570,119 @@ Details: It defines the margin and padding styles as listed below:
   padding-left: 0 !important; }
 
 .padding.padding-default {
-  padding: 0.25rem; }
+  padding: 0.5rem; }
 
 .padding.padding-default-v {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem; }
-
-.padding.padding-default-h {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem; }
-
-.padding.padding-small-v {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
 
-.padding.padding-small-h {
+.padding.padding-default-h {
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
 
-.padding.padding-medium {
-  padding: 1rem; }
-
-.padding.padding-medium-v {
+.padding.padding-small-v {
   padding-top: 1rem;
   padding-bottom: 1rem; }
 
-.padding.padding-medium-h {
+.padding.padding-small-h {
   padding-left: 1rem;
   padding-right: 1rem; }
 
-.padding.padding-large {
-  padding: 1.5rem; }
-
-.padding.padding-large-v {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
-
-.padding.padding-large-h {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
-
-.padding.padding-xlarge {
+.padding.padding-medium {
   padding: 2rem; }
 
-.padding.padding-xlarge-v {
+.padding.padding-medium-v {
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
-.padding.padding-xlarge-h {
+.padding.padding-medium-h {
   padding-left: 2rem;
   padding-right: 2rem; }
 
+.padding.padding-large {
+  padding: 3rem; }
+
+.padding.padding-large-v {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
+.padding.padding-large-h {
+  padding-left: 3rem;
+  padding-right: 3rem; }
+
+.padding.padding-xlarge {
+  padding: 5rem; }
+
+.padding.padding-xlarge-v {
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+
+.padding.padding-xlarge-h {
+  padding-left: 5rem;
+  padding-right: 5rem; }
+
 .padding.padding-top-default {
-  padding-top: 0.25rem; }
-
-.padding.padding-bottom-default {
-  padding-bottom: 0.25rem; }
-
-.padding.padding-left-default {
-  padding-left: 0.25rem; }
-
-.padding.padding-right-default {
-  padding-right: 0.25rem; }
-
-.padding.padding-small {
-  padding: 0.5rem; }
-
-.padding.padding-top-small {
   padding-top: 0.5rem; }
 
-.padding.padding-bottom-small {
+.padding.padding-bottom-default {
   padding-bottom: 0.5rem; }
 
-.padding.padding-left-small {
+.padding.padding-left-default {
   padding-left: 0.5rem; }
 
-.padding.padding-right-small {
+.padding.padding-right-default {
   padding-right: 0.5rem; }
 
-.padding.padding-top-medium {
+.padding.padding-small {
+  padding: 1rem; }
+
+.padding.padding-top-small {
   padding-top: 1rem; }
 
-.padding.padding-bottom-medium {
+.padding.padding-bottom-small {
   padding-bottom: 1rem; }
 
-.padding.padding-left-medium {
+.padding.padding-left-small {
   padding-left: 1rem; }
 
-.padding.padding-right-medium {
+.padding.padding-right-small {
   padding-right: 1rem; }
 
-.padding.padding-top-large {
-  padding-top: 1.5rem; }
-
-.padding.padding-bottom-large {
-  padding-bottom: 1.5rem; }
-
-.padding.padding-left-large {
-  padding-left: 1.5rem; }
-
-.padding.padding-right-large {
-  padding-right: 1.5rem; }
-
-.padding.padding-top-xlarge {
+.padding.padding-top-medium {
   padding-top: 2rem; }
 
-.padding.padding-bottom-xlarge {
+.padding.padding-bottom-medium {
   padding-bottom: 2rem; }
 
-.padding.padding-left-xlarge {
+.padding.padding-left-medium {
   padding-left: 2rem; }
 
-.padding.padding-right-xlarge {
+.padding.padding-right-medium {
   padding-right: 2rem; }
+
+.padding.padding-top-large {
+  padding-top: 3rem; }
+
+.padding.padding-bottom-large {
+  padding-bottom: 3rem; }
+
+.padding.padding-left-large {
+  padding-left: 3rem; }
+
+.padding.padding-right-large {
+  padding-right: 3rem; }
+
+.padding.padding-top-xlarge {
+  padding-top: 5rem; }
+
+.padding.padding-bottom-xlarge {
+  padding-bottom: 5rem; }
+
+.padding.padding-left-xlarge {
+  padding-left: 5rem; }
+
+.padding.padding-right-xlarge {
+  padding-right: 5rem; }
 
 .margin.margin-none {
   margin: 0 !important; }
@@ -2667,119 +2708,119 @@ Details: It defines the margin and padding styles as listed below:
   margin-left: 0 !important; }
 
 .margin.margin-default {
-  margin: 0.25rem; }
+  margin: 0.5rem; }
 
 .margin.margin-default-v {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem; }
-
-.margin.margin-default-h {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem; }
-
-.margin.margin-small-v {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem; }
 
-.margin.margin-small-h {
+.margin.margin-default-h {
   margin-left: 0.5rem;
   margin-right: 0.5rem; }
 
-.margin.margin-medium {
-  margin: 1rem; }
-
-.margin.margin-medium-v {
+.margin.margin-small-v {
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
-.margin.margin-medium-h {
+.margin.margin-small-h {
   margin-left: 1rem;
   margin-right: 1rem; }
 
-.margin.margin-large {
-  margin: 1.5rem; }
-
-.margin.margin-large-v {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem; }
-
-.margin.margin-large-h {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem; }
-
-.margin.margin-xlarge {
+.margin.margin-medium {
   margin: 2rem; }
 
-.margin.margin-xlarge-v {
+.margin.margin-medium-v {
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
-.margin.margin-xlarge-h {
+.margin.margin-medium-h {
   margin-left: 2rem;
   margin-right: 2rem; }
 
+.margin.margin-large {
+  margin: 3rem; }
+
+.margin.margin-large-v {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.margin.margin-large-h {
+  margin-left: 3rem;
+  margin-right: 3rem; }
+
+.margin.margin-xlarge {
+  margin: 5rem; }
+
+.margin.margin-xlarge-v {
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+
+.margin.margin-xlarge-h {
+  margin-left: 5rem;
+  margin-right: 5rem; }
+
 .margin.margin-top-default {
-  margin-top: 0.25rem; }
-
-.margin.margin-bottom-default {
-  margin-bottom: 0.25rem; }
-
-.margin.margin-left-default {
-  margin-left: 0.25rem; }
-
-.margin.margin-right-default {
-  margin-right: 0.25rem; }
-
-.margin.margin-small {
-  margin: 0.5rem; }
-
-.margin.margin-top-small {
   margin-top: 0.5rem; }
 
-.margin.margin-bottom-small {
+.margin.margin-bottom-default {
   margin-bottom: 0.5rem; }
 
-.margin.margin-left-small {
+.margin.margin-left-default {
   margin-left: 0.5rem; }
 
-.margin.margin-right-small {
+.margin.margin-right-default {
   margin-right: 0.5rem; }
 
-.margin.margin-top-medium {
+.margin.margin-small {
+  margin: 1rem; }
+
+.margin.margin-top-small {
   margin-top: 1rem; }
 
-.margin.margin-bottom-medium {
+.margin.margin-bottom-small {
   margin-bottom: 1rem; }
 
-.margin.margin-left-medium {
+.margin.margin-left-small {
   margin-left: 1rem; }
 
-.margin.margin-right-medium {
+.margin.margin-right-small {
   margin-right: 1rem; }
 
-.margin.margin-top-large {
-  margin-top: 1.5rem; }
-
-.margin.margin-bottom-large {
-  margin-bottom: 1.5rem; }
-
-.margin.margin-left-large {
-  margin-left: 1.5rem; }
-
-.margin.margin-right-large {
-  margin-right: 1.5rem; }
-
-.margin.margin-top-xlarge {
+.margin.margin-top-medium {
   margin-top: 2rem; }
 
-.margin.margin-bottom-xlarge {
+.margin.margin-bottom-medium {
   margin-bottom: 2rem; }
 
-.margin.margin-left-xlarge {
+.margin.margin-left-medium {
   margin-left: 2rem; }
 
-.margin.margin-right-xlarge {
+.margin.margin-right-medium {
   margin-right: 2rem; }
+
+.margin.margin-top-large {
+  margin-top: 3rem; }
+
+.margin.margin-bottom-large {
+  margin-bottom: 3rem; }
+
+.margin.margin-left-large {
+  margin-left: 3rem; }
+
+.margin.margin-right-large {
+  margin-right: 3rem; }
+
+.margin.margin-top-xlarge {
+  margin-top: 5rem; }
+
+.margin.margin-bottom-xlarge {
+  margin-bottom: 5rem; }
+
+.margin.margin-left-xlarge {
+  margin-left: 5rem; }
+
+.margin.margin-right-xlarge {
+  margin-right: 5rem; }
 
 /**********************************************************************
 Description: This file define the styles specific to typography available in CMT-UI css framework.
@@ -2837,6 +2878,8 @@ html, body {
  */
 .font {
   font-family: Arial, Helvetica, sans-serif; }
+  .font .font-light {
+    font-weight: lighter; }
   .font .font-bold {
     font-weight: bold; }
   .font.font-heading {
@@ -3585,18 +3628,18 @@ Details: It defines the grid system and basic containers as listed below:
 .col-fixed.col-fixed-large {
   width: 20rem; }
 
-.wrap-col-filler {
+.col-filler-wrap {
   position: relative;
   z-index: 0; }
-  .wrap-col-filler .col-filler {
+  .col-filler-wrap .col-filler {
     position: absolute;
     z-index: -1;
     top: 0px;
     bottom: 0px;
     float: none; }
-    .wrap-col-filler .col-filler.col-filler-left {
+    .col-filler-wrap .col-filler.col-filler-left {
       left: 0; }
-    .wrap-col-filler .col-filler.col-filler-right {
+    .col-filler-wrap .col-filler.col-filler-right {
       right: 0; }
 
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
@@ -3611,7 +3654,7 @@ Details: It defines the grid system and basic containers as listed below:
 .container-main {
   position: relative;
   z-index: 1; }
-  .container-main .wrap-content-main {
+  .container-main .content-main-wrap {
     position: relative;
     z-index: 1; }
 
@@ -3713,7 +3756,7 @@ fieldset {
   fieldset legend {
     background-color: #3C4655;
     color: #96B0D6;
-    padding: 0.5rem;
+    padding: 1rem;
     margin-left: 1rem;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -3798,12 +3841,12 @@ Details: It defines the custom element styles as listed below:
 *                   parent element must use positioning i.e. absolute, relative etc in order to place group at
 *                   appropriate postion.
 ***********************************************************************/
-.wrap-icon-picker {
+.icon-picker-wrap {
   width: 100%; }
-  .wrap-icon-picker .icon-picker {
+  .icon-picker-wrap .icon-picker {
     position: relative;
     display: inline-block; }
-    .wrap-icon-picker .icon-picker .wrap-icon {
+    .icon-picker-wrap .icon-picker .picker-icon-wrap {
       display: inline-block;
       position: relative;
       width: 64px;
@@ -3817,15 +3860,15 @@ Details: It defines the custom element styles as listed below:
       -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
       -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
       transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
-      .wrap-icon-picker .icon-picker .wrap-icon:hover {
+      .icon-picker-wrap .icon-picker .picker-icon-wrap:hover {
         background-color: #E74343;
         color: #FFFFFF; }
-      .wrap-icon-picker .icon-picker .wrap-icon .picker-icon {
+      .icon-picker-wrap .icon-picker .picker-icon-wrap .picker-icon {
         display: inline-block;
         height: 64px;
         line-height: 64px;
         font-size: 48px; }
-    .wrap-icon-picker .icon-picker .icon-sets {
+    .icon-picker-wrap .icon-picker .picker-icon-sets {
       display: none;
       position: absolute;
       left: 0;
@@ -3835,8 +3878,108 @@ Details: It defines the custom element styles as listed below:
       height: 216px;
       background-color: lightgray;
       z-index: 1000000; }
-      .wrap-icon-picker .icon-picker .icon-sets .wrap-icon {
+      .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-wrap {
         margin: 2px; }
+
+.cmt-select-wrap {
+  width: 100%;
+  display: inline-block; }
+  .cmt-select-wrap select {
+    display: none; }
+  .cmt-select-wrap .cmt-select {
+    position: relative;
+    background-color: #F2F2F2; }
+    .cmt-select-wrap .cmt-select .cmt-selected {
+      cursor: pointer;
+      position: relative;
+      z-index: 100000;
+      padding-right: 1.5em;
+      -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
+      -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
+      box-shadow: inset 0 0 0 1px #F2F2F2; }
+      .cmt-select-wrap .cmt-select .cmt-selected .s-text {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: left;
+        color: #363636;
+        font-size: 1em;
+        padding: 0.30em 0.25em; }
+      .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        padding: 0.25em; }
+      .cmt-select-wrap .cmt-select .cmt-selected.disabled {
+        cursor: default; }
+    .cmt-select-wrap .cmt-select .cmt-select-list {
+      position: absolute;
+      width: 100%;
+      background-color: #F2F2F2;
+      z-index: 100001;
+      max-height: 180px;
+      overflow-y: auto;
+      -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
+      -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
+      box-shadow: inset 0 0 0 1px #F2F2F2; }
+      .cmt-select-wrap .cmt-select .cmt-select-list li {
+        width: 100%;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: #FFFFFF; }
+      .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
+        color: #FFFFFF;
+        background-color: #E74343; }
+
+.cmt-multiselect {
+  position: relative;
+  background-color: #F2F2F2; }
+  .cmt-multiselect .cmt-selected {
+    cursor: pointer;
+    position: relative;
+    z-index: 100000;
+    padding-right: 1.5em;
+    -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
+    -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
+    box-shadow: inset 0 0 0 1px #F2F2F2; }
+    .cmt-multiselect .cmt-selected .s-text {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: left;
+      color: #363636;
+      font-size: 1em;
+      padding: 0.30em 0.25em; }
+    .cmt-multiselect .cmt-selected .s-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      padding: 0.25em; }
+    .cmt-multiselect .cmt-selected.disabled {
+      cursor: default; }
+  .cmt-multiselect .cmt-select-list {
+    position: absolute;
+    width: 100%;
+    background-color: #F2F2F2;
+    z-index: 100001;
+    max-height: 180px;
+    overflow-y: auto;
+    display: none;
+    -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
+    -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
+    box-shadow: inset 0 0 0 1px #F2F2F2; }
+    .cmt-multiselect .cmt-select-list li {
+      width: 100%;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #FFFFFF; }
+    .cmt-multiselect .cmt-select-list li:hover {
+      color: #FFFFFF;
+      background-color: #E74343; }
 
 .cmt-select-native {
   position: relative;
@@ -3866,97 +4009,12 @@ Details: It defines the custom element styles as listed below:
     padding-right: 0.60em;
     margin: 0; }
 
-.cmt-select-wrap {
-  width: 100%;
-  display: inline-block; }
-  .cmt-select-wrap select {
-    display: none; }
-  .cmt-select-wrap .cmt-select {
-    position: relative;
-    background-color: #F2F2F2; }
-    .cmt-select-wrap .cmt-select .cmt-selected {
-      cursor: pointer;
-      position: relative;
-      z-index: 100000;
-      padding-right: 1.5em; }
-      .cmt-select-wrap .cmt-select .cmt-selected .s-text {
-        display: inline-block;
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-align: left;
-        color: #363636;
-        font-size: 1em;
-        padding: 0.30em 0.25em; }
-      .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: inline-block;
-        padding: 0.25em; }
-      .cmt-select-wrap .cmt-select .cmt-selected.disabled {
-        cursor: default; }
-    .cmt-select-wrap .cmt-select .cmt-select-list {
-      position: absolute;
-      width: 100%;
-      background-color: #F2F2F2;
-      z-index: 100001;
-      max-height: 180px;
-      overflow-y: auto; }
-      .cmt-select-wrap .cmt-select .cmt-select-list li {
-        width: 100%;
-        overflow: hidden;
-        cursor: pointer;
-        background-color: #FFFFFF; }
-      .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
-        color: #FFFFFF;
-        background-color: #E74343; }
-
-.cmt-multiselect {
-  position: relative;
-  background-color: #F2F2F2; }
-  .cmt-multiselect .cmt-selected {
-    cursor: pointer;
-    position: relative;
-    z-index: 100000;
-    padding-right: 1.5em; }
-    .cmt-multiselect .cmt-selected .s-text {
-      display: inline-block;
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      text-align: left;
-      color: #363636;
-      font-size: 1em;
-      padding: 0.30em 0.25em; }
-    .cmt-multiselect .cmt-selected .s-icon {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: inline-block;
-      padding: 0.25em; }
-    .cmt-multiselect .cmt-selected.disabled {
-      cursor: default; }
-  .cmt-multiselect .cmt-select-list {
-    position: absolute;
-    width: 100%;
-    background-color: #F2F2F2;
-    z-index: 100001;
-    max-height: 180px;
-    overflow-y: auto;
-    display: none; }
-    .cmt-multiselect .cmt-select-list li {
-      width: 100%;
-      overflow: hidden;
-      cursor: pointer;
-      background-color: #FFFFFF; }
-    .cmt-multiselect .cmt-select-list li:hover {
-      color: #FFFFFF;
-      background-color: #E74343; }
-
 .cmt-choice input[type=checkbox], .cmt-choice input[type=radio] {
   cursor: pointer;
   display: none; }
+
+.cmt-choice label {
+  cursor: pointer; }
 
 .cmt-choice input[type=checkbox] + .label.pad-label::before, .cmt-choice input[type=radio] + .label.pad-label::before {
   margin-right: 8px; }
@@ -4014,11 +4072,14 @@ Details: It defines the custom element styles as listed below:
     margin-bottom: 0.75rem; }
     .cmt-rating .wrap-messages .star-message.selected {
       display: inline-block; }
-  .cmt-rating input[type=checkbox] + .label.label-rating::before, .cmt-rating input[type=radio] + .label.label-rating::before {
+
+.cmt-rating-native {
+  text-align: left; }
+  .cmt-rating-native input[type=checkbox] + .label.label-rating::before, .cmt-rating-native input[type=radio] + .label.label-rating::before {
     margin-right: 8px; }
-  .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
+  .cmt-rating-native input[type=radio] + .label::before, .cmt-rating-native input[type=radio]:disabled + .label::before {
     content: "\e0f3"; }
-  .cmt-rating input[type=radio]:checked + .label::before {
+  .cmt-rating-native input[type=radio]:checked + .label::before {
     content: "\e0f3"; }
 
 .cmt-switch {
@@ -4059,7 +4120,7 @@ Details: It defines the custom element styles as listed below:
     transition: background-color 350ms ease-in-out 0s; }
   .cmt-switch .cmt-toggle-round + label:after {
     width: 1.5em;
-    background-color: #3F62A0;
+    background-color: #0074D9;
     border-radius: 0.5em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     -moz-transition: margin 350ms ease-out 0s;
@@ -4136,6 +4197,86 @@ Details: It defines the custom element styles as listed below:
     background-color: #595959;
     color: #A5A5A5; }
 
+.btn.btn-blue {
+  background-color: #0074D9; }
+  .btn.btn-blue:hover {
+    background-color: #0059A6; }
+
+.btn.btn-purple {
+  background-color: #8946C4; }
+  .btn.btn-purple:hover {
+    background-color: #663096; }
+
+.btn.btn-orange {
+  background-color: #FF851B; }
+  .btn.btn-orange:hover {
+    background-color: #E76B00; }
+
+.btn.btn-yellow {
+  background-color: #FFDC00; }
+  .btn.btn-yellow:hover {
+    background-color: #DDBF00; }
+
+.btn.btn-red {
+  background-color: #FF4136; }
+  .btn.btn-red:hover {
+    background-color: #F10D00; }
+
+.btn.btn-pink {
+  background-color: #E4287C; }
+  .btn.btn-pink:hover {
+    background-color: #B2165C; }
+
+.btn.btn-magenta {
+  background-color: #B200B2; }
+  .btn.btn-magenta:hover {
+    background-color: #6E006E; }
+
+.btn.btn-green {
+  background-color: #7CAA2D; }
+  .btn.btn-green:hover {
+    background-color: #55741F; }
+
+.btn.btn-brown {
+  background-color: #8B4513; }
+  .btn.btn-brown:hover {
+    background-color: #4F270B; }
+
+.btn.btn-aqua {
+  background-color: #8AE2E3; }
+  .btn.btn-aqua:hover {
+    background-color: #4cd3d4; }
+
+.btn.btn-golden {
+  background-color: #E9C011; }
+  .btn.btn-golden:hover {
+    background-color: #a2850c; }
+
+.btn.btn-silver {
+  background-color: #E7E8E7; }
+  .btn.btn-silver:hover {
+    background-color: #c0c3c0; }
+
+.btn.btn-maroon {
+  background-color: #542628; }
+  .btn.btn-maroon:hover {
+    background-color: #1f0e0f; }
+
+.btn.btn-olive {
+  background-color: #A3A54C; }
+  .btn.btn-olive:hover {
+    background-color: #6f7134; }
+
+.btn.btn-lime {
+  background-color: #D3F235; }
+  .btn.btn-lime:hover {
+    background-color: #aecd0d; }
+
+.btn.btn-navy {
+  background-color: #003653; }
+  .btn.btn-navy:hover {
+    background-color: #000407; }
+
 .btn.btn-reverse:hover {
   background-color: #E74343 !important;
   color: #FFFFFF !important; }
@@ -4205,19 +4346,23 @@ Details: It defines the styles of form elements as listed below:
 *
 * Button            - This section adds default styles for submit and button elements.
 *
-* Ignore 100%       - This class allows form to ignore 100% width of elements.
-*
 * Mandatory         - This class adds * to field lables marked as required.
-*
-* Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
-*                     fields on right side.
-*
-* Round corner      - This section define classes to make form elements round cornered.
 *
 * Icon elements     - This class adds options to specify icon for an element. The icon will be added to left by
 *                     default, but it can also be displayed on right side.
 *
 * Placeholder       - This section make placeholder color same for all the browsers.
+*
+* Custom Element	- This section decorates the custom elements.
+*
+* Round corner      - This section define classes to make form elements round cornered.
+*
+* Forms				- The form class add required spacing to render the form elements.
+*
+* Ignore 100%       - This class allows form to ignore 100% width of elements.
+*
+* Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
+*                     fields on right side.
 ***********************************************************************/
 form {
   margin: 0 auto;
@@ -4306,7 +4451,7 @@ label {
 
 .required .control-label:after {
   content: " *";
-  color: #C32D1C; }
+  color: #FF4136; }
 
 .element {
   display: inline-block; }
@@ -4342,7 +4487,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     width: 250px !important; }
   .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button,
   .frm-icon-element .btn {
-    padding-left: 2em;
+    padding-left: 2.1em;
     width: 100%; }
   .frm-icon-element .icon, .frm-icon-element .cmti, .frm-icon-element .fa {
     position: absolute;
@@ -4356,9 +4501,27 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   .frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select, .frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button,
   .frm-icon-element.icon-right .btn {
     padding-left: 0.30em;
-    padding-right: 2em; }
+    padding-right: 2.1em; }
   .frm-icon-element.icon-right .icon, .frm-icon-element.icon-right .cmti, .frm-icon-element.icon-right .fa {
     right: 0; }
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #aaaaaa; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #aaaaaa;
+  opacity: 1; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #aaaaaa;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #aaaaaa; }
 
 .cmt-checkbox, .cmt-switch {
   -webkit-box-shadow: inset 0 0 0 0px #F2F2F2;
@@ -4465,7 +4628,12 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 @media only screen and (max-width: 1024px) {
   .form.form-25, .form.form-50, .form.form-75, .form.form-small, .form.form-medium, .form.form-large {
     width: 80%;
-    padding: 1rem 2%; } }
+    padding: 2rem 2%; } }
+
+.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
+.frm-ignore-100 .btn, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
+  float: none;
+  width: auto; }
 
 .frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
   width: 100%; }
@@ -4498,11 +4666,6 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-split-40-60 .ignore-40-60 .frm-icon-element {
   width: 100%; }
-
-.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
-.frm-ignore-100 .btn, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
-  float: none;
-  width: auto; }
 
 @media only screen and (max-width: 480px) {
   .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
@@ -4906,20 +5069,23 @@ Details: It defines the social network menu components as listed below:
 .menu-social a {
   color: #FFFFFF;
   margin: 0;
-  display: inline-block;
+  display: inline-block; }
+
+.menu-social .icon, .menu-social .cmti {
+  margin: 0;
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s; }
-  .menu-social a:hover {
-    background-color: #E74343 !important; }
 
-.menu-social .icon, .menu-social .cmti {
-  margin: 0;
-  margin-bottom: 0.25rem;
-  margin-right: 0.5rem;
-  padding: 0.25rem; }
+.menu-social.menu-social-right .icon, .menu-social.menu-social-right .cmti {
+  margin-left: 0.5rem; }
+
+.menu-social.menu-social-left .icon, .menu-social.menu-social-left .cmti {
+  margin-right: 0.5rem; }
 
 .menu-social .icon-rounded, .menu-social .cmti-rounded {
   -webkit-border-radius: 3px;
@@ -4986,6 +5152,30 @@ Details: It defines the social network menu components as listed below:
 .menu-social .icon-bkg.icon-youtube, .menu-social .icon-bkg.cmti-social-youtube, .menu-social .cmti-bkg.icon-youtube, .menu-social .cmti-bkg.cmti-social-youtube {
   background-color: #BB0000; }
 
+.menu-social .icon-bkg:hover.icon-facebook, .menu-social .icon-bkg:hover.cmti-social-facebook, .menu-social .cmti-bkg:hover.icon-facebook, .menu-social .cmti-bkg:hover.cmti-social-facebook {
+  background-color: #2d4373; }
+
+.menu-social .icon-bkg:hover.icon-twitter, .menu-social .icon-bkg:hover.cmti-social-twitter, .menu-social .cmti-bkg:hover.icon-twitter, .menu-social .cmti-bkg:hover.cmti-social-twitter {
+  background-color: #0087ba; }
+
+.menu-social .icon-bkg:hover.icon-google, .menu-social .icon-bkg:hover.cmti-social-google, .menu-social .cmti-bkg:hover.icon-google, .menu-social .cmti-bkg:hover.cmti-social-google {
+  background-color: #c23321; }
+
+.menu-social .icon-bkg:hover.icon-google-plus, .menu-social .icon-bkg:hover.cmti-social-google-plus, .menu-social .cmti-bkg:hover.icon-google-plus, .menu-social .cmti-bkg:hover.cmti-social-google-plus {
+  background-color: #c23321; }
+
+.menu-social .icon-bkg:hover.icon-linkedin, .menu-social .icon-bkg:hover.cmti-social-linkedin, .menu-social .cmti-bkg:hover.icon-linkedin, .menu-social .cmti-bkg:hover.cmti-social-linkedin {
+  background-color: #005983; }
+
+.menu-social .icon-bkg:hover.icon-instagram, .menu-social .icon-bkg:hover.cmti-social-instagram, .menu-social .cmti-bkg:hover.icon-instagram, .menu-social .cmti-bkg:hover.cmti-social-instagram {
+  background-color: #0c3a5b; }
+
+.menu-social .icon-bkg:hover.icon-pintrest, .menu-social .icon-bkg:hover.cmti-social-pintrest, .menu-social .cmti-bkg:hover.icon-pintrest, .menu-social .cmti-bkg:hover.cmti-social-pintrest {
+  background-color: #9f191f; }
+
+.menu-social .icon-bkg:hover.icon-youtube, .menu-social .icon-bkg:hover.cmti-social-youtube, .menu-social .cmti-bkg:hover.icon-youtube, .menu-social .cmti-bkg:hover.cmti-social-youtube {
+  background-color: #880000; }
+
 .menu-social .icon-text.icon-facebook, .menu-social .icon-text.cmti-social-facebook, .menu-social .cmti-text.icon-facebook, .menu-social .cmti-text.cmti-social-facebook {
   color: #3B5998; }
 
@@ -5017,36 +5207,36 @@ Details: It defines the social network menu components as listed below:
   color: #FFFFFF !important; }
   .menu-social .btn.facebook {
     background-color: #3B5998; }
-    .menu-social .btn.facebook:hover {
-      background-color: #2d4373 !important; }
   .menu-social .btn.twitter {
     background-color: #00ACED; }
-    .menu-social .btn.twitter:hover {
-      background-color: #0087ba !important; }
   .menu-social .btn.google {
     background-color: #DD4B39; }
-    .menu-social .btn.google:hover {
-      background-color: #c23321 !important; }
   .menu-social .btn.google-plus {
     background-color: #DD4B39; }
-    .menu-social .btn.google-plus:hover {
-      background-color: #c23321 !important; }
   .menu-social .btn.linkedin {
     background-color: #007BB6; }
-    .menu-social .btn.linkedin:hover {
-      background-color: #005983 !important; }
   .menu-social .btn.instagram {
     background-color: #125688; }
-    .menu-social .btn.instagram:hover {
-      background-color: #0c3a5b !important; }
   .menu-social .btn.pintrest {
     background-color: #CB2027; }
-    .menu-social .btn.pintrest:hover {
-      background-color: #9f191f !important; }
   .menu-social .btn.youtube {
     background-color: #BB0000; }
-    .menu-social .btn.youtube:hover {
-      background-color: #880000 !important; }
+  .menu-social .btn:hover.facebook {
+    background-color: #2d4373; }
+  .menu-social .btn:hover.twitter {
+    background-color: #0087ba; }
+  .menu-social .btn:hover.google {
+    background-color: #c23321; }
+  .menu-social .btn:hover.google-plus {
+    background-color: #c23321; }
+  .menu-social .btn:hover.linkedin {
+    background-color: #005983; }
+  .menu-social .btn:hover.instagram {
+    background-color: #0c3a5b; }
+  .menu-social .btn:hover.pintrest {
+    background-color: #9f191f; }
+  .menu-social .btn:hover.youtube {
+    background-color: #880000; }
 
 /**********************************************************************
 Description: It defines the styles for breadcrumbs available in CMT-UI css framework.
@@ -5304,6 +5494,20 @@ Details: It defines the styles for popup components as listed below:
   width: 100%;
   height: 100%;
   z-index: 999999999; }
+
+/**********************************************************************
+Description: It defines the styles for popout components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for popout components as listed below:
+
+* Popout      - The barebone popout class with minimum styles to position it's elements.
+*
+***********************************************************************/
+.popout {
+  position: relative;
+  display: none; }
 
 /**********************************************************************
 Description: It defines the styles of cmt slider available in CMT-UI css framework. It requires cmtSlider plugin from CMT-JS library.
@@ -5921,112 +6125,6 @@ Details: It defines the styles of card components as listed below:
   text-align: center; }
 
 /**********************************************************************
-Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-			 wraps block header and content.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for header components as listed below:
-
-* Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
-*               listed options:
-*                   - It can have background image with or without parallax effects.
-*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
-*                     background and even content wrapper background in the form of image or texture.
-*                   - Height of block must not be set using min-height to get background with parallax working.
-*
-* Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
-*               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
-*               by CMT-JS framework.
-***********************************************************************/
-.block {
-  position: relative; }
-  .block .block-bkg {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-  .block .block-bkg-fixed {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-  .block .block-bkg-scroll {
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    background-attachment: scroll;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-  .block .block-bkg-parallax {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50% 9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    height: 150%;
-    position: absolute;
-    top: -50%;
-    left: 0;
-    z-index: 5; }
-  .block > .texture {
-    z-index: 10; }
-  .block .block-wrap-content {
-    position: relative;
-    z-index: 15; }
-  .block .block-splitter {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    z-index: 10000; }
-    .block .block-splitter.top {
-      top: 0;
-      margin-top: -50px; }
-    .block .block-splitter.bottom {
-      bottom: 0;
-      margin-bottom: -50px; }
-    .block .block-splitter .icon {
-      display: inline-block;
-      width: 100px;
-      height: 100px; }
-
-.block-basic {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-
-/**********************************************************************
 Description: It defines the styles of box components available in CMT-UI css framework.
 
 Dependencies: variables, variables-ext, mixins
@@ -6122,22 +6220,160 @@ Details: It defines the styles of form box components as listed below:
 ***********************************************************************/
 .box-form {
   position: relative; }
-  .box-form .btn-edit {
+  .box-form .box-form-trigger {
     cursor: pointer; }
-  .box-form .wrap-info {
+  .box-form .box-form-info-wrap {
     display: block; }
-  .box-form .wrap-form {
+  .box-form .box-form-content-wrap {
     display: none; }
 
-.box-form-basic .btn-edit {
+.box-form-basic .box-form-trigger {
   position: absolute;
   display: inline-block;
   top: 10px;
   right: 10px;
   color: #FFFFFF;
   cursor: pointer; }
-  .box-form-basic .btn-edit:hover {
+  .box-form-basic .box-form-trigger:hover {
     color: #FFFFFF; }
+
+/**********************************************************************
+Description: It defines the styles of widget components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of widget components as listed below:
+
+* Widget	  - The barebone widget with minimum styles.
+*
+* Basic       - The basic widget defines the styles of widget having text and background colors.
+
+***********************************************************************/
+.widget {
+  position: relative; }
+  .widget .widget-header {
+    position: relative; }
+  .widget .widget-content-wrap {
+    position: relative; }
+
+.widget-basic {
+  background-color: #F2F2F2;
+  color: #363636; }
+  .widget-basic .widget-header {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+  .widget-basic .widget-content-wrap {
+    background-color: #3C4655;
+    color: #96B0D6; }
+  .widget-basic .widget-footer {
+    background-color: #232831;
+    color: #c2d1e7; }
+
+/**********************************************************************
+Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
+			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
+			 wraps block header and content.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for header components as listed below:
+
+* Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
+*               listed options:
+*                   - It can have background image with or without parallax effects.
+*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
+*                     background and even content wrapper background in the form of image or texture.
+*                   - Height of block must not be set using min-height to get background with parallax working.
+*
+* Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
+*               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
+*               by CMT-JS framework.
+***********************************************************************/
+.block {
+  position: relative; }
+  .block .block-bkg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .block .block-bkg-fixed {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .block .block-bkg-scroll {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .block .block-bkg-parallax {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    z-index: 5; }
+  .block > .texture {
+    z-index: 10; }
+  .block .block-content-wrap {
+    position: relative;
+    z-index: 15; }
+  .block .block-splitter {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    z-index: 10000; }
+    .block .block-splitter.block-splitter-top {
+      top: 0;
+      margin-top: -50px; }
+    .block .block-splitter.block-splitter-bottom {
+      bottom: 0;
+      margin-bottom: -50px; }
+    .block .block-splitter .block-splitter-icon {
+      display: inline-block;
+      width: 100px;
+      height: 100px; }
+
+.block-basic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
 
 /**********************************************************************
 Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
@@ -6365,92 +6601,95 @@ Details: It defines the styles of blog components as listed below:
 * Banner        - It shows banner in first row. An icon will be displayed if user hover on banner. Title in second row.
 *                 Content in 3rd row and post info in 4th row.
 ***********************************************************************/
-.blog .wrap-posts .post {
+.blog > .texture {
+  z-index: 10; }
+
+.blog .blog-posts .blog-post {
   position: relative; }
-  .blog .wrap-posts .post .post-banner .texture {
+  .blog .blog-posts .blog-post .blog-post-banner > .texture {
     z-index: 10; }
-  .blog .wrap-posts .post .post-banner .post-title {
+  .blog .blog-posts .blog-post .blog-post-banner .blog-post-title {
     z-index: 20; }
-  .blog .wrap-posts .post .post-banner .post-view {
+  .blog .blog-posts .blog-post .blog-post-banner .blog-post-view {
     z-index: 30; }
-    .blog .wrap-posts .post .post-banner .post-view .post-title {
+    .blog .blog-posts .blog-post .blog-post-banner .blog-post-view .blog-post-title {
       z-index: 40; }
 
-.blog-basic .post {
+.blog-basic .blog-post {
   margin-bottom: 1em; }
-  .blog-basic .post .post-banner {
+  .blog-basic .blog-post .blog-post-banner {
     padding: 1em; }
-    .blog-basic .post .post-banner img {
+    .blog-basic .blog-post .blog-post-banner img {
       width: 100%; }
-      .blog-basic .post .post-banner img.bkg-fill {
+      .blog-basic .blog-post .blog-post-banner img.bkg-fill {
         background-color: #F2F2F2; }
-  .blog-basic .post .post-author {
+  .blog-basic .blog-post .blog-post-author {
     position: relative; }
-    .blog-basic .post .post-author .post-author-avatar {
+    .blog-basic .blog-post .blog-post-author .blog-post-author-avatar {
       width: 80px;
       height: 80px; }
-      .blog-basic .post .post-author .post-author-avatar img {
+      .blog-basic .blog-post .blog-post-author .blog-post-author-avatar img {
         width: 100%; }
-      .blog-basic .post .post-author .post-author-avatar.circled1 {
+      .blog-basic .blog-post .blog-post-author .blog-post-author-avatar.circled1 {
         background-color: #F2F2F2; }
-    .blog-basic .post .post-author .post-author-info {
+    .blog-basic .blog-post .blog-post-author .blog-post-author-info {
       position: absolute;
       top: 0;
       right: 0;
       display: inline-block; }
-  .blog-basic .post .post-content {
+  .blog-basic .blog-post .blog-post-content-wrap .blog-post-content {
     padding: 1em; }
-    .blog-basic .post .post-content .post-title {
+    .blog-basic .blog-post .blog-post-content-wrap .blog-post-content .blog-post-title {
       font-size: 1.17em; }
   @media only screen and (min-width: 769px) {
-    .blog-basic .post .post-banner {
+    .blog-basic .blog-post .blog-post-banner {
       float: left;
       width: 350px; }
-    .blog-basic .post .post-author {
+    .blog-basic .blog-post .blog-post-author {
       width: 100%;
       padding-left: 350px;
       position: relative; } }
 
-.blog-regular .post {
+.blog-regular .blog-post {
   margin-bottom: 1em; }
-  .blog-regular .post .post-banner {
+  .blog-regular .blog-post .blog-post-banner {
     padding: 1em; }
-    .blog-regular .post .post-banner img {
+    .blog-regular .blog-post .blog-post-banner img {
       width: 100%; }
-      .blog-regular .post .post-banner img.bkg-fill {
+      .blog-regular .blog-post .blog-post-banner img.bkg-fill {
         background-color: #F2F2F2; }
-  .blog-regular .post .post-author {
+  .blog-regular .blog-post .blog-post-author {
     position: relative; }
-    .blog-regular .post .post-author .post-author-avatar {
+    .blog-regular .blog-post .blog-post-author .blog-post-author-avatar {
       width: 80px;
       height: 80px; }
-      .blog-regular .post .post-author .post-author-avatar img {
+      .blog-regular .blog-post .blog-post-author .blog-post-author-avatar img {
         width: 100%; }
-      .blog-regular .post .post-author .post-author-avatar.circled1 {
+      .blog-regular .blog-post .blog-post-author .blog-post-author-avatar.circled1 {
         background-color: #F2F2F2; }
-    .blog-regular .post .post-author .post-author-info {
+    .blog-regular .blog-post .blog-post-author .blog-post-author-info {
       position: absolute;
       top: 0;
       right: 0;
       display: inline-block; }
-  .blog-regular .post .post-content {
+  .blog-regular .blog-post .blog-post-content-wrap .blog-post-content {
     padding: 1em; }
-    .blog-regular .post .post-content .post-title {
+    .blog-regular .blog-post .blog-post-content-wrap .blog-post-content .blog-post-title {
       font-size: 1.17em; }
   @media only screen and (min-width: 769px) {
-    .blog-regular .post .post-banner {
+    .blog-regular .blog-post .blog-post-banner {
       float: left;
       width: 350px; }
-    .blog-regular .post .post-author {
+    .blog-regular .blog-post .blog-post-author {
       width: 100%;
       padding-left: 350px;
       position: relative; } }
 
-.blog-banner .post {
+.blog-banner .blog-post {
   margin-bottom: 1em;
   background-color: #F2F2F2;
   color: #363636; }
-  .blog-banner .post .post-banner {
+  .blog-banner .blog-post .blog-post-banner {
     position: relative;
     height: 120px;
     background-repeat: no-repeat;
@@ -6460,9 +6699,7 @@ Details: It defines the styles of blog components as listed below:
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-    .blog-banner .post .post-banner .texture {
-      z-index: 5; }
-    .blog-banner .post .post-banner .post-view {
+    .blog-banner .blog-post .blog-post-banner .blog-post-view {
       position: relative;
       width: 100%;
       height: 100%;
@@ -6475,51 +6712,51 @@ Details: It defines the styles of blog components as listed below:
       -o-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
       -webkit-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
       transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s; }
-    .blog-banner .post .post-banner .post-view-content {
-      text-align: center; }
-      .blog-banner .post .post-banner .post-view-content .icon {
-        color: #FFFFFF; }
-    .blog-banner .post .post-banner:hover .post-view {
+      .blog-banner .blog-post .blog-post-banner .blog-post-view .blog-post-summary {
+        text-align: center; }
+        .blog-banner .blog-post .blog-post-banner .blog-post-view .blog-post-summary .blog-post-icon {
+          color: #FFFFFF; }
+    .blog-banner .blog-post .blog-post-banner:hover .blog-post-view {
       visibility: visible;
       opacity: 1; }
-  .blog-banner .post .post-author {
+  .blog-banner .blog-post .blog-post-author {
     position: relative; }
-    .blog-banner .post .post-author span {
+    .blog-banner .blog-post .blog-post-author span {
       display: inline-block; }
-    .blog-banner .post .post-author .post-author-avatar {
+    .blog-banner .blog-post .blog-post-author .blog-post-author-avatar {
       width: 40px;
       height: 40px; }
-      .blog-banner .post .post-author .post-author-avatar img {
+      .blog-banner .blog-post .blog-post-author .blog-post-author-avatar img {
         width: 100%; }
-      .blog-banner .post .post-author .post-author-avatar.circled1 {
+      .blog-banner .blog-post .blog-post-author .blog-post-author-avatar.circled1 {
         background-color: #F2F2F2; }
-  .blog-banner .post .wrap-post-content {
+  .blog-banner .blog-post .blog-post-content-wrap {
     padding: 1rem;
     line-height: 1.5em; }
-    .blog-banner .post .wrap-post-content .post-title {
+    .blog-banner .blog-post .blog-post-content-wrap .blog-post-title {
       margin: 0; }
-      .blog-banner .post .wrap-post-content .post-title a {
+      .blog-banner .blog-post .blog-post-content-wrap .blog-post-title a {
         display: inline-block;
         width: 100%; }
-    .blog-banner .post .wrap-post-content .post-info .publish-time {
+    .blog-banner .blog-post .blog-post-content-wrap .blog-post-info .publish-time {
       text-align: center; }
-    .blog-banner .post .wrap-post-content .post-content {
+    .blog-banner .blog-post .blog-post-content-wrap .blog-post-content {
       padding: 1rem 0; }
   @media only screen and (min-width: 769px) {
-    .blog-banner .post .post-banner {
+    .blog-banner .blog-post .blog-post-banner {
       height: 180px; }
-    .blog-banner .post .wrap-post-content .post-info .publish-time {
+    .blog-banner .blog-post .blog-post-content-wrap .blog-post-info .publish-time {
       text-align: right; } }
   @media only screen and (min-width: 1025px) {
-    .blog-banner .post .post-banner {
+    .blog-banner .blog-post .blog-post-banner {
       height: 250px; } }
 
-.blog-banner-recent .post {
+.blog-banner-recent .blog-post {
   padding: 0.5rem;
   margin-bottom: 1em;
   background-color: #F2F2F2;
   color: #363636; }
-  .blog-banner-recent .post .post-banner {
+  .blog-banner-recent .blog-post .blog-post-banner {
     position: relative;
     float: left;
     width: 50%;
@@ -6531,9 +6768,7 @@ Details: It defines the styles of blog components as listed below:
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-    .blog-banner-recent .post .post-banner .texture {
-      z-index: 5; }
-    .blog-banner-recent .post .post-banner .post-view {
+    .blog-banner-recent .blog-post .blog-post-banner .blog-post-view {
       position: relative;
       width: 100%;
       height: 100%;
@@ -6546,39 +6781,39 @@ Details: It defines the styles of blog components as listed below:
       -o-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
       -webkit-transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s;
       transition: visibility 350ms ease-in-out 0s, opacity 350ms ease-in-out 0s; }
-    .blog-banner-recent .post .post-banner .post-view-content {
-      text-align: center; }
-      .blog-banner-recent .post .post-banner .post-view-content .icon {
-        color: #FFFFFF; }
-    .blog-banner-recent .post .post-banner:hover .post-view {
+      .blog-banner-recent .blog-post .blog-post-banner .blog-post-view .blog-post-summary {
+        text-align: center; }
+        .blog-banner-recent .blog-post .blog-post-banner .blog-post-view .blog-post-summary .icon {
+          color: #FFFFFF; }
+    .blog-banner-recent .blog-post .blog-post-banner:hover .blog-post-view {
       visibility: visible;
       opacity: 1; }
-  .blog-banner-recent .post .post-author {
+  .blog-banner-recent .blog-post .blog-post-author {
     display: none; }
-  .blog-banner-recent .post .wrap-post-content {
+  .blog-banner-recent .blog-post .blog-post-content-wrap {
     padding: 0;
     padding-left: 0.5rem;
     float: left;
     width: 50%;
     height: 65px; }
-    .blog-banner-recent .post .wrap-post-content .post-title {
+    .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-title {
       margin: 0;
       padding: 0;
       margin-bottom: 0.5em; }
-      .blog-banner-recent .post .wrap-post-content .post-title a {
+      .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-title a {
         display: inline-block;
         width: 100%; }
-    .blog-banner-recent .post .wrap-post-content .post-info {
+    .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-info {
       display: none; }
-    .blog-banner-recent .post .wrap-post-content .post-content {
+    .blog-banner-recent .blog-post .blog-post-content-wrap .blog-post-content {
       padding: 0;
       height: 60px;
       overflow: hidden; }
   @media only screen and (min-width: 769px) {
-    .blog-banner-recent .post .post-banner {
+    .blog-banner-recent .blog-post .blog-post-banner {
       height: 80px; } }
   @media only screen and (min-width: 1025px) {
-    .blog-banner-recent .post .post-banner {
+    .blog-banner-recent .blog-post .blog-post-banner {
       height: 120px; } }
 
 /**********************************************************************
@@ -6591,73 +6826,41 @@ Details: It defines the styles of blog post as listed below:
 *                 and author details.
 * Basic Single  - Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
 ***********************************************************************/
-.post-single .post-banner .texture {
+.post-wrap .post-banner > .texture {
   z-index: 10; }
 
-.post-single .post-banner .post-title {
+.post-wrap .post-banner .post-title {
   z-index: 20; }
 
-.post-single-basic {
+.post-basic {
   padding: 1em;
   background-color: white; }
-  .post-single-basic .post-banner {
+  .post-basic .post-banner {
     height: 150px; }
-    .post-single-basic .post-banner img {
+    .post-basic .post-banner img {
       width: 100%; }
-  .post-single-basic .post-author {
+  .post-basic .post-author {
     position: relative; }
-    .post-single-basic .post-author .post-author-avatar {
+    .post-basic .post-author .post-author-avatar {
       display: inline-block;
       width: 80px;
       height: 80px; }
-      .post-single-basic .post-author .post-author-avatar img {
+      .post-basic .post-author .post-author-avatar img {
         width: 100%; }
-      .post-single-basic .post-author .post-author-avatar.circled1 {
+      .post-basic .post-author .post-author-avatar.circled1 {
         background-color: #F2F2F2; }
-    .post-single-basic .post-author .post-author-info {
+    .post-basic .post-author .post-author-info {
       position: absolute;
       top: 0;
       right: 0;
       display: inline-block; }
-  .post-single-basic .post-content {
+  .post-basic .post-content {
     margin-bottom: 1em; }
   @media only screen and (min-width: 481px) {
-    .post-single-basic .post-banner {
+    .post-basic .post-banner {
       height: 200px; } }
   @media only screen and (min-width: 1025px) {
-    .post-single-basic .post-banner {
+    .post-basic .post-banner {
       height: 250px; } }
-
-/**********************************************************************
-Description: It defines the styles of widget components available in CMT-UI css framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles of widget components as listed below:
-
-* Widget	  - The barebone widget with minimum styles.
-*
-* Basic       - The basic widget defines the styles of widget having text and background colors.
-
-***********************************************************************/
-.widget {
-  position: relative; }
-  .widget .widget-header {
-    position: relative; }
-  .widget .widget-content-wrap {
-    position: relative; }
-
-.widget-basic {
-  background-color: #F2F2F2;
-  color: #363636; }
-  .widget-basic .widget-header {
-    background-color: #87BA45;
-    color: #E6E6E6; }
-  .widget-basic .widget-content-wrap {
-    background-color: #3C4655;
-    color: #96B0D6; }
-  .widget-basic .widget-footer {
-    background-color: #232831;
-    color: #c2d1e7; }
 
 /*# sourceMappingURL=cmgtools.css.map */
