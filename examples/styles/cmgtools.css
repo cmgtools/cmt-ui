@@ -1806,11 +1806,7 @@ input[type="checkbox"] {
   .wysiwyg h3 {
     font-size: 1.17em;
     margin: .83em 0; }
-  .wysiwyg h4, .wysiwyg p,
-  .wysiwyg blockquote, .wysiwyg ul,
-  .wysiwyg fieldset, .wysiwyg form,
-  .wysiwyg ol, .wysiwyg dl, .wysiwyg dir,
-  .wysiwyg menu {
+  .wysiwyg h4, .wysiwyg p, .wysiwyg blockquote, .wysiwyg ul, .wysiwyg fieldset, .wysiwyg form, .wysiwyg ol, .wysiwyg dl, .wysiwyg dir, .wysiwyg menu {
     margin: 1.12em 0; }
   .wysiwyg h5 {
     font-size: .83em;
@@ -1818,23 +1814,18 @@ input[type="checkbox"] {
   .wysiwyg h6 {
     font-size: .75em;
     margin: 1.67em 0; }
-  .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4,
-  .wysiwyg h5, .wysiwyg h6, .wysiwyg b,
-  .wysiwyg strong {
+  .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6, .wysiwyg b, .wysiwyg strong {
     font-weight: bolder; }
   .wysiwyg blockquote {
     margin-left: 40px;
     margin-right: 40px; }
-  .wysiwyg i, .wysiwyg cite, .wysiwyg em,
-  .wysiwyg var, .wysiwyg address {
+  .wysiwyg i, .wysiwyg cite, .wysiwyg em, .wysiwyg var, .wysiwyg address {
     font-style: italic; }
-  .wysiwyg pre, .wysiwyg tt, .wysiwyg code,
-  .wysiwyg kbd, .wysiwyg samp {
+  .wysiwyg pre, .wysiwyg tt, .wysiwyg code, .wysiwyg kbd, .wysiwyg samp {
     font-family: monospace; }
   .wysiwyg pre {
     white-space: pre; }
-  .wysiwyg button, .wysiwyg textarea,
-  .wysiwyg input, .wysiwyg select {
+  .wysiwyg button, .wysiwyg textarea, .wysiwyg input, .wysiwyg select {
     display: inline-block; }
   .wysiwyg big {
     font-size: 1.17em; }
@@ -1846,8 +1837,7 @@ input[type="checkbox"] {
     vertical-align: super; }
   .wysiwyg table {
     border-spacing: 2px; }
-  .wysiwyg thead, .wysiwyg tbody,
-  .wysiwyg tfoot {
+  .wysiwyg thead, .wysiwyg tbody, .wysiwyg tfoot {
     vertical-align: middle; }
   .wysiwyg td, .wysiwyg th, .wysiwyg tr {
     vertical-align: inherit; }
@@ -1855,8 +1845,7 @@ input[type="checkbox"] {
     text-decoration: line-through; }
   .wysiwyg hr {
     border: 1px inset; }
-  .wysiwyg ol, .wysiwyg ul, .wysiwyg dir,
-  .wysiwyg menu, .wysiwyg dd {
+  .wysiwyg ol, .wysiwyg ul, .wysiwyg dir, .wysiwyg menu, .wysiwyg dd {
     margin-left: 40px; }
 
 /**********************************************************************
