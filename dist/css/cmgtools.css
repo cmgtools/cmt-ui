@@ -3200,6 +3200,10 @@ Details: It defines the grid system and basic containers as listed below:
 @media only screen and (max-width: 1024px) {
   .row.row-small, .row.row-medium, .row.row-large, .row.row-xlarge {
     width: 100%; }
+  .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15 {
+    width: 23%; }
+  .max-cols-25 > .col:nth-child(4) {
+    clear: both; }
   .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15 {
     width: 48%; }
   .max-cols-50 > .col:nth-child(odd) {
@@ -3208,7 +3212,7 @@ Details: It defines the grid system and basic containers as listed below:
     width: 98%; } }
 
 @media only screen and (max-width: 480px) {
-  .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15, .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
+  .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15, .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15, .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
     width: 98%; } }
 
 .col3x2 {
@@ -3312,6 +3316,10 @@ Details: It defines the grid system and basic containers as listed below:
 
 /* full width for mobile, tablet */
 @media only screen and (max-width: 1024px) {
+  .max-cols-25 > .col3x2, .max-cols-25 > .col4x2, .max-cols-25 > .col4x3, .max-cols-25 > .col5x2, .max-cols-25 > .col5x3, .max-cols-25 > .col5x4, .max-cols-25 > .col6x2, .max-cols-25 > .col6x3, .max-cols-25 > .col6x4, .max-cols-25 > .col6x5,
+  .max-cols-25 > .col12x2, .max-cols-25 > .col12x3, .max-cols-25 > .col12x4, .max-cols-25 > .col12x5, .max-cols-25 > .col12x6, .max-cols-25 > .col12x7, .max-cols-25 > .col12x8, .max-cols-25 > .col12x9, .max-cols-25 > .col12x10, .max-cols-25 > .col12x11,
+  .max-cols-25 > .col15x2, .max-cols-25 > .col15x3, .max-cols-25 > .col15x4, .max-cols-25 > .col15x5, .max-cols-25 > .col15x6, .max-cols-25 > .col15x7, .max-cols-25 > .col15x8, .max-cols-25 > .col15x9, .max-cols-25 > .col15x10, .max-cols-25 > .col15x11, .max-cols-25 > .col15x12, .max-cols-25 > .col15x13, .max-cols-25 > .col15x14 {
+    width: 23%; }
   .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5,
   .max-cols-50 > .col12x2, .max-cols-50 > .col12x3, .max-cols-50 > .col12x4, .max-cols-50 > .col12x5, .max-cols-50 > .col12x6, .max-cols-50 > .col12x7, .max-cols-50 > .col12x8, .max-cols-50 > .col12x9, .max-cols-50 > .col12x10, .max-cols-50 > .col12x11,
   .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14 {
@@ -3322,7 +3330,9 @@ Details: It defines the grid system and basic containers as listed below:
     width: 98%; } }
 
 @media only screen and (max-width: 480px) {
-  .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5,
+  .max-cols-25 > .col3x2, .max-cols-25 > .col4x2, .max-cols-25 > .col4x3, .max-cols-25 > .col5x2, .max-cols-25 > .col5x3, .max-cols-25 > .col5x4, .max-cols-25 > .col6x2, .max-cols-25 > .col6x3, .max-cols-25 > .col6x4, .max-cols-25 > .col6x5,
+  .max-cols-25 > .col12x2, .max-cols-25 > .col12x3, .max-cols-25 > .col12x4, .max-cols-25 > .col12x5, .max-cols-25 > .col12x6, .max-cols-25 > .col12x7, .max-cols-25 > .col12x8, .max-cols-25 > .col12x9, .max-cols-25 > .col12x10, .max-cols-25 > .col12x11,
+  .max-cols-25 > .col15x2, .max-cols-25 > .col15x3, .max-cols-25 > .col15x4, .max-cols-25 > .col15x5, .max-cols-25 > .col15x6, .max-cols-25 > .col15x7, .max-cols-25 > .col15x8, .max-cols-25 > .col15x9, .max-cols-25 > .col15x10, .max-cols-25 > .col15x11, .max-cols-25 > .col15x12, .max-cols-25 > .col15x13, .max-cols-25 > .col15x14, .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5,
   .max-cols-50 > .col12x2, .max-cols-50 > .col12x3, .max-cols-50 > .col12x4, .max-cols-50 > .col12x5, .max-cols-50 > .col12x6, .max-cols-50 > .col12x7, .max-cols-50 > .col12x8, .max-cols-50 > .col12x9, .max-cols-50 > .col12x10, .max-cols-50 > .col12x11,
   .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14, .max-cols-100 > .col3x2, .max-cols-100 > .col4x2, .max-cols-100 > .col4x3, .max-cols-100 > .col5x2, .max-cols-100 > .col5x3, .max-cols-100 > .col5x4, .max-cols-100 > .col6x2, .max-cols-100 > .col6x3, .max-cols-100 > .col6x4, .max-cols-100 > .col6x5,
   .max-cols-100 > .col12x2, .max-cols-100 > .col12x3, .max-cols-100 > .col12x4, .max-cols-100 > .col12x5, .max-cols-100 > .col12x6, .max-cols-100 > .col12x7, .max-cols-100 > .col12x8, .max-cols-100 > .col12x9, .max-cols-100 > .col12x10, .max-cols-100 > .col12x11,
@@ -3469,6 +3479,10 @@ Details: It defines the grid system and basic containers as listed below:
   width: 6.66666%; }
 
 @media only screen and (max-width: 1024px) {
+  .max-cols-25 > .colf1, .max-cols-25 > .colf2, .max-cols-25 > .colf3, .max-cols-25 > .colf4, .max-cols-25 > .colf5, .max-cols-25 > .colf6, .max-cols-25 > .colf7, .max-cols-25 > .colf8, .max-cols-25 > .colf9, .max-cols-25 > .colf10, .max-cols-25 > .colf11, .max-cols-25 > .colf12, .max-cols-25 > .colf13, .max-cols-25 > .colf14, .max-cols-25 > .colf15 {
+    width: 25%; }
+  .max-cols-25 > .colf:nth-child(4) {
+    clear: both; }
   .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15 {
     width: 50%; }
   .max-cols-50 > .colf:nth-child(odd) {
@@ -3477,7 +3491,7 @@ Details: It defines the grid system and basic containers as listed below:
     width: 100%; } }
 
 @media only screen and (max-width: 480px) {
-  .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15, .max-cols-100 > .colf1, .max-cols-100 > .colf2, .max-cols-100 > .colf3, .max-cols-100 > .colf4, .max-cols-100 > .colf5, .max-cols-100 > .colf6, .max-cols-100 > .colf7, .max-cols-100 > .colf8, .max-cols-100 > .colf9, .max-cols-100 > .colf10, .max-cols-100 > .colf11, .max-cols-100 > .colf12, .max-cols-100 > .colf13, .max-cols-100 > .colf14, .max-cols-100 > .colf15 {
+  .max-cols-25 > .colf1, .max-cols-25 > .colf2, .max-cols-25 > .colf3, .max-cols-25 > .colf4, .max-cols-25 > .colf5, .max-cols-25 > .colf6, .max-cols-25 > .colf7, .max-cols-25 > .colf8, .max-cols-25 > .colf9, .max-cols-25 > .colf10, .max-cols-25 > .colf11, .max-cols-25 > .colf12, .max-cols-25 > .colf13, .max-cols-25 > .colf14, .max-cols-25 > .colf15, .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15, .max-cols-100 > .colf1, .max-cols-100 > .colf2, .max-cols-100 > .colf3, .max-cols-100 > .colf4, .max-cols-100 > .colf5, .max-cols-100 > .colf6, .max-cols-100 > .colf7, .max-cols-100 > .colf8, .max-cols-100 > .colf9, .max-cols-100 > .colf10, .max-cols-100 > .colf11, .max-cols-100 > .colf12, .max-cols-100 > .colf13, .max-cols-100 > .colf14, .max-cols-100 > .colf15 {
     width: 100%; } }
 
 .colf3x2 {
@@ -3580,6 +3594,10 @@ Details: It defines the grid system and basic containers as listed below:
   width: 93.33324%; }
 
 @media only screen and (max-width: 1024px) {
+  .max-cols-25 > .colf3x2, .max-cols-25 > .colf4x2, .max-cols-25 > .colf4x3, .max-cols-25 > .colf5x2, .max-cols-25 > .colf5x3, .max-cols-25 > .colf5x4, .max-cols-25 > .colf6x2, .max-cols-25 > .colf6x3, .max-cols-25 > .colf6x4, .max-cols-25 > .colf6x5,
+  .max-cols-25 > .colf12x2, .max-cols-25 > .colf12x3, .max-cols-25 > .colf12x4, .max-cols-25 > .colf12x5, .max-cols-25 > .colf12x6, .max-cols-25 > .colf12x7, .max-cols-25 > .colf12x8, .max-cols-25 > .colf12x9, .max-cols-25 > .colf12x10, .max-cols-25 > .colf12x11,
+  .max-cols-25 > .colf15x2, .max-cols-25 > .colf15x3, .max-cols-25 > .colf15x4, .max-cols-25 > .colf15x5, .max-cols-25 > .colf15x6, .max-cols-25 > .colf15x7, .max-cols-25 > .colf15x8, .max-cols-25 > .colf15x9, .max-cols-25 > .colf15x10, .max-cols-25 > .colf15x11, .max-cols-25 > .colf15x12, .max-cols-25 > .colf15x13, .max-cols-25 > .colf15x14 {
+    width: 25%; }
   .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5,
   .max-cols-50 > .colf12x2, .max-cols-50 > .colf12x3, .max-cols-50 > .colf12x4, .max-cols-50 > .colf12x5, .max-cols-50 > .colf12x6, .max-cols-50 > .colf12x7, .max-cols-50 > .colf12x8, .max-cols-50 > .colf12x9, .max-cols-50 > .colf12x10, .max-cols-50 > .colf12x11,
   .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 > .colf15x14 {
@@ -3590,7 +3608,9 @@ Details: It defines the grid system and basic containers as listed below:
     width: 100%; } }
 
 @media only screen and (max-width: 480px) {
-  .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5,
+  .max-cols-25 > .colf3x2, .max-cols-25 > .colf4x2, .max-cols-25 > .colf4x3, .max-cols-25 > .colf5x2, .max-cols-25 > .colf5x3, .max-cols-25 > .colf5x4, .max-cols-25 > .colf6x2, .max-cols-25 > .colf6x3, .max-cols-25 > .colf6x4, .max-cols-25 > .colf6x5,
+  .max-cols-25 > .colf12x2, .max-cols-25 > .colf12x3, .max-cols-25 > .colf12x4, .max-cols-25 > .colf12x5, .max-cols-25 > .colf12x6, .max-cols-25 > .colf12x7, .max-cols-25 > .colf12x8, .max-cols-25 > .colf12x9, .max-cols-25 > .colf12x10, .max-cols-25 > .colf12x11,
+  .max-cols-25 > .colf15x2, .max-cols-25 > .colf15x3, .max-cols-25 > .colf15x4, .max-cols-25 > .colf15x5, .max-cols-25 > .colf15x6, .max-cols-25 > .colf15x7, .max-cols-25 > .colf15x8, .max-cols-25 > .colf15x9, .max-cols-25 > .colf15x10, .max-cols-25 > .colf15x11, .max-cols-25 > .colf15x12, .max-cols-25 > .colf15x13, .max-cols-25 .colf15x14, .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5,
   .max-cols-50 > .colf12x2, .max-cols-50 > .colf12x3, .max-cols-50 > .colf12x4, .max-cols-50 > .colf12x5, .max-cols-50 > .colf12x6, .max-cols-50 > .colf12x7, .max-cols-50 > .colf12x8, .max-cols-50 > .colf12x9, .max-cols-50 > .colf12x10, .max-cols-50 > .colf12x11,
   .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 .colf15x14, .max-cols-100 > .colf3x2, .max-cols-100 > .colf4x2, .max-cols-100 > .colf4x3, .max-cols-100 > .colf5x2, .max-cols-100 > .colf5x3, .max-cols-100 > .colf5x4, .max-cols-100 > .colf6x2, .max-cols-100 > .colf6x3, .max-cols-100 > .colf6x4, .max-cols-100 > .colf6x5,
   .max-cols-100 > .colf12x2, .max-cols-100 > .colf12x3, .max-cols-100 > .colf12x4, .max-cols-100 > .colf12x5, .max-cols-100 > .colf12x6, .max-cols-100 > .colf12x7, .max-cols-100 > .colf12x8, .max-cols-100 > .colf12x9, .max-cols-100 > .colf12x10, .max-cols-100 > .colf12x11,
@@ -3678,6 +3698,11 @@ Details: It defines the grid system and basic containers as listed below:
   width: 100% !important; }
 
 @media only screen and (max-width: 1024px) {
+  .max-content-25 > .content-90, .max-content-25 > .content-80, .max-content-25 > .content-75, .max-content-25 > .content-50, .max-content-25 > .content-25 {
+    width: 25% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto; }
   .max-content-50 > .content-90, .max-content-50 > .content-80, .max-content-50 > .content-75, .max-content-50 > .content-50, .max-content-50 > .content-25 {
     width: 50% !important;
     padding-left: 0 !important;
@@ -6113,6 +6138,9 @@ Details: It defines the styles of card components as listed below:
 .card-element .card-data {
   text-align: center; }
 
+.card-element .card-footer {
+  text-align: center; }
+
 /**********************************************************************
 Description: It defines the styles of box components available in CMT-UI css framework.
 
@@ -6200,7 +6228,7 @@ Dependencies: variables, variables-ext, mixins, boxes/basic
 
 Details: It defines the styles of form box components as listed below:
 
-* Form        - The barebone form box class having edot button and wrappers for info and form.
+* Form        - The barebone form box class having trigger and wrappers for info and content. The info and content can be swapped using trigger.
 *
 * Basic       - The basic form define styles to position the edit icon.
 *
@@ -6225,6 +6253,9 @@ Details: It defines the styles of form box components as listed below:
   cursor: pointer; }
   .box-form-basic .box-form-trigger:hover {
     color: #FFFFFF; }
+
+.box-form-collapsible .box-form-collapsible-trigger {
+  cursor: pointer; }
 
 /**********************************************************************
 Description: It defines the styles of widget components available in CMT-UI css framework.
