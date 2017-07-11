@@ -5,21 +5,21 @@ Dependencies: none
 
 Details: It defines the styles for login components as listed below:
 
-* Login box wrapper - It's wrapper for login, register and forgot password forms. It depends on cmtLoginRegister
-*                     jQuery plugin available in CMT-JS framework.
+* Login box wrapper - It's a group of boxes having wrapper for login, register and forgot password forms.
+					  It depends on cmtLoginRegister jQuery plugin available in CMT-JS framework.
 ***********************************************************************/
 
 // TODO: Update naming convention using box prefix in order to follow unified approach.
 
 // == Structure - Login =============
 
-.wrap-login-box {
+.box-login-wrap {
 
-	.btn-login, .btn-signup, .btn-forgot-password {
+	.btn-login, .btn-signup, .btn-forgot {
 		cursor: pointer;
 	}
 
-	// The parent element to hold login and signup buttons
+	// The parent element to hold login and signup buttons seperately outside the boxes
 	.login-actions {
 
 		.btn-login {
@@ -30,50 +30,65 @@ Details: It defines the styles for login components as listed below:
 			// signup button
 		}
 
-		.btn-forgot-password {
+		.btn-forgot {
 			// forgot password button
 		}
 	}
 
 	.box-login {
+		// Visible by default
 
-		.wrap-login-fields {
-			// login fields
-		}
+		.box-content-wrap {
+			position: relative;
 
-		.wrap-forgot-btn {
+			.box-content {
 
-			.btn-forgot-password {
-				// forgot password button
-			}
-		}
+				.box-login-fields {
+					// login fields
+				}
 
-		.wrap-signup-btn {
+				.btn-forgot-wrap {
 
-			.btn-signup {
-				// signup button
+					.btn-forgot {
+						// forgot password button
+					}
+				}
+
+				.btn-signup-wrap {
+
+					.btn-signup {
+						// signup button
+					}
+				}
 			}
 		}
 	}
 
-	.box-forgot-password {
+	.box-forgot {
 		display: none;
 
-		.wrap-forgot-fields {
-			// forgot password fields
-		}
+		.box-content-wrap {
+			position: relative;
 
-		.wrap-login-btn {
+			.box-content {
 
-			.btn-login {
-				// login button
-			}
-		}
+				.box-forgot-fields {
+					// forgot password fields
+				}
 
-		.wrap-signup-btn {
+				.btn-login-wrap {
 
-			.btn-signup {
-				// signup button
+					.btn-login {
+						// login button
+					}
+				}
+
+				.btn-signup-wrap {
+
+					.btn-signup {
+						// signup button
+					}
+				}
 			}
 		}
 	}
@@ -81,21 +96,28 @@ Details: It defines the styles for login components as listed below:
 	.box-signup {
 		display: none;
 
-		.wrap-signup-fields {
-			// signup fields
-		}
+		.box-content-wrap {
+			position: relative;
 
-		.wrap-forgot-btn {
+			.box-content {
 
-			.btn-forgot-password {
-				// forgot password button
-			}
-		}
+				.box-signup-fields {
+					// signup fields
+				}
 
-		.wrap-login-btn {
+				.btn-forgot-wrap {
 
-			.btn-login {
-				// login button
+					.btn-forgot {
+						// forgot password button
+					}
+				}
+
+				.btn-login-wrap {
+
+					.btn-login {
+						// login button
+					}
+				}
 			}
 		}
 	}

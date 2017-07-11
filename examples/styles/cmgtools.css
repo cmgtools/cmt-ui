@@ -5459,7 +5459,7 @@ Details: It defines the styles for popup components as listed below:
       position: relative;
       z-index: 150;
       width: 100%; }
-    .popup .popup-data .popup-wrap-content .popup-content {
+    .popup .popup-data .popup-content-wrap .popup-content {
       position: relative;
       z-index: 150; }
     .popup .popup-data .popup-close {
@@ -5493,7 +5493,7 @@ Details: It defines the styles for popup components as listed below:
     .popup-basic .popup-data .popup-header .popup-title {
       font-size: 1.5em;
       font-weight: bold; }
-  .popup-basic .popup-data .popup-wrap-content {
+  .popup-basic .popup-data .popup-content-wrap {
     padding: 1rem;
     overflow-y: auto; }
   .popup-basic .popup-data .popup-close {
@@ -6208,17 +6208,24 @@ Dependencies: none
 
 Details: It defines the styles for login components as listed below:
 
-* Login box wrapper - It's wrapper for login, register and forgot password forms. It depends on cmtLoginRegister
-*                     jQuery plugin available in CMT-JS framework.
+* Login box wrapper - It's a group of boxes having wrapper for login, register and forgot password forms.
+					  It depends on cmtLoginRegister jQuery plugin available in CMT-JS framework.
 ***********************************************************************/
-.wrap-login-box .btn-login, .wrap-login-box .btn-signup, .wrap-login-box .btn-forgot-password {
+.box-login-wrap .btn-login, .box-login-wrap .btn-signup, .box-login-wrap .btn-forgot {
   cursor: pointer; }
 
-.wrap-login-box .box-forgot-password {
-  display: none; }
+.box-login-wrap .box-login .box-content-wrap {
+  position: relative; }
 
-.wrap-login-box .box-signup {
+.box-login-wrap .box-forgot {
   display: none; }
+  .box-login-wrap .box-forgot .box-content-wrap {
+    position: relative; }
+
+.box-login-wrap .box-signup {
+  display: none; }
+  .box-login-wrap .box-signup .box-content-wrap {
+    position: relative; }
 
 /**********************************************************************
 Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info for display purpose and
