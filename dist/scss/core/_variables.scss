@@ -239,11 +239,11 @@ $color-opaque-high: 0.80;
 $color-field: #F2F2F2;
 $color-field-text: #363636;
 $color-field-h: #E9E9E9;      // Field Hover
-$color-field-h-text: #363636;
+$color-field-text-h: #363636;
 $color-field-f: #E1E1E1;      // Focused Field
-$color-field-f-text: #4F688E;
+$color-field-text-f: #4F688E;
 $color-field-d: #CCCCCC;      // Disabled Field
-$color-field-d-text: #909090;
+$color-field-text-d: #909090;
 $color-placeholder: #aaaaaa;  // Placeholder
 
 $color-shadow-inset: #F2F2F2; // Inset color for fields
@@ -255,11 +255,11 @@ $color-shadow-inset-d: #CCCCCC; // Inset color for disabled field
 $color-btn: #E74343;
 $color-btn-text: #FFFFFF;
 $color-btn-h: #FF3636;    // Button Hover
-$color-btn-h-text: #FFFFFF;
+$color-btn-text-h: #FFFFFF;
 $color-btn-a: #b51717;    // Active Button
-$color-btn-a-text: #FFFFFF;
+$color-btn-text-a: #FFFFFF;
 $color-btn-d: gray;       // Disabled Button
-$color-btn-d-text: #363636;
+$color-btn-text-d: #363636;
 
 // Additional Colors
 $color-header: #363636;

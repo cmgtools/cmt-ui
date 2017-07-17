@@ -147,10 +147,11 @@ Details: It defines the custom element styles as listed below:
 				overflow: hidden;
 				cursor: pointer;
 				background-color: $color-white;
+				padding: 0.25em;
 			}
 
 			li:hover {
-				color: $color-btn-a-text;
+				color: $color-btn-text-a;
 				background-color: $color-btn;
 			}
 		}
@@ -212,10 +213,11 @@ Details: It defines the custom element styles as listed below:
 			overflow: hidden;
 			cursor: pointer;
 			background-color: $color-white;
+			padding: 0.25em;
 		}
 
 		li:hover {
-			color: $color-btn-a-text;
+			color: $color-btn-text-a;
 			background-color: $color-btn;
 		}
 	}
@@ -273,6 +275,11 @@ Details: It defines the custom element styles as listed below:
 
 	label {
 		cursor: pointer;
+		padding: 0;
+	}
+
+	.label {
+		margin-top: 0.25em;
 	}
 
 	input[type=checkbox] + .label.pad-label::before, input[type=radio] + .label.pad-label::before {

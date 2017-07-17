@@ -35,17 +35,19 @@ Details: It defines the styles of form box components as listed below:
 // == Basic Form Box ================
 
 .box-form-basic {
+    background-color: $color-primary;
+	color: $color-primary-text;
 
 	.box-form-trigger {
 		position: absolute;
 		display: inline-block;
 		top: 10px;
 		right: 10px;
-		color: $color-btn-text;
+		color: $color-link;
 		cursor: pointer;
 
 		&:hover {
-			color: $color-btn-h-text;
+			color: $color-link-h;
 		}
 	}
 }

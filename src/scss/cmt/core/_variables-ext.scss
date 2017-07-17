@@ -22,7 +22,9 @@ $color-gradient-1: $color-primary; // First color for gradients
 $color-gradient-2: $color-secondary; // Second color for gradients
 
 // Shadow Colors
-$color-shadow: rgba( $color-black, $color-transparent-low );
+$color-shadow: rgba( $color-border, $color-transparent-low );
+$color-shadow-l: rgba( $color-border-l, $color-transparent-low );
+$color-shadow-d: rgba( $color-border-d, $color-transparent-low );
 
 // Transparent Colors - Color, Low and High
 

@@ -116,11 +116,11 @@ Details: It defines the styles of box components as listed below:
 			display: inline-block;
 			top: 0.5em;
 			right: 0.5em;
-			color: $color-btn-text;
+			color: $color-link;
 			cursor: pointer;
 
 			&:hover {
-				color: $color-btn-h-text;
+				color: $color-link-h;
 			}
 		}
 	}

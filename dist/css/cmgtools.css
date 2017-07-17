@@ -638,248 +638,248 @@ Notes:
     -khtml-border-radius-bottom-right: 14px; }
 
 .shadow {
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.6); }
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6); }
   .shadow.shadow-primary {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(242, 242, 242, 0.6); }
   .shadow.shadow-secondary {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(60, 70, 85, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(60, 70, 85, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(60, 70, 85, 0.6); }
   .shadow.shadow-tertiary {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(135, 186, 69, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(135, 186, 69, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(135, 186, 69, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6); }
   .shadow.shadow-gray {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(127, 127, 127, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(127, 127, 127, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(127, 127, 127, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6); }
   .shadow.shadow-black {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.6); }
   .shadow.shadow-blue {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(0, 116, 217, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(0, 116, 217, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(0, 116, 217, 0.6); }
   .shadow.shadow-purple {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(137, 70, 196, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(137, 70, 196, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(137, 70, 196, 0.6); }
   .shadow.shadow-orange {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(255, 133, 27, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(255, 133, 27, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(255, 133, 27, 0.6); }
   .shadow.shadow-yellow {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(255, 220, 0, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(255, 220, 0, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(255, 220, 0, 0.6); }
   .shadow.shadow-red {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(255, 65, 54, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(255, 65, 54, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(255, 65, 54, 0.6); }
   .shadow.shadow-pink {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(228, 40, 124, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(228, 40, 124, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(228, 40, 124, 0.6); }
   .shadow.shadow-magenta {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(178, 0, 178, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(178, 0, 178, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(178, 0, 178, 0.6); }
   .shadow.shadow-green {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(124, 170, 45, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(124, 170, 45, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(124, 170, 45, 0.6); }
   .shadow.shadow-green-d {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
-    box-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6); }
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(85, 116, 31, 0.6); }
 
 .shadow-inset {
-  -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  -moz-box-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  box-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.6); }
+  -webkit-box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6); }
   .shadow-inset.shadow-inset-primary {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(242, 242, 242, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(242, 242, 242, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(242, 242, 242, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(242, 242, 242, 0.6); }
   .shadow-inset.shadow-inset-secondary {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(60, 70, 85, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(60, 70, 85, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(60, 70, 85, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(60, 70, 85, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(60, 70, 85, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(60, 70, 85, 0.6); }
   .shadow-inset.shadow-inset-tertiary {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(135, 186, 69, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(135, 186, 69, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(135, 186, 69, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(135, 186, 69, 0.6); }
   .shadow-inset.shadow-inset-gray {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(127, 127, 127, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(127, 127, 127, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(127, 127, 127, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6); }
   .shadow-inset.shadow-inset-black {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.6); }
   .shadow-inset.shadow-inset-blue {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(0, 116, 217, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(0, 116, 217, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(0, 116, 217, 0.6); }
   .shadow-inset.shadow-inset-purple {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(137, 70, 196, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(137, 70, 196, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(137, 70, 196, 0.6); }
   .shadow-inset.shadow-inset-orange {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(255, 133, 27, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(255, 133, 27, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(255, 133, 27, 0.6); }
   .shadow-inset.shadow-inset-yellow {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(255, 220, 0, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(255, 220, 0, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(255, 220, 0, 0.6); }
   .shadow-inset.shadow-inset-red {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(255, 65, 54, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(255, 65, 54, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(255, 65, 54, 0.6); }
   .shadow-inset.shadow-inset-pink {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(228, 40, 124, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(228, 40, 124, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(228, 40, 124, 0.6); }
   .shadow-inset.shadow-inset-magenta {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(178, 0, 178, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(178, 0, 178, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(178, 0, 178, 0.6); }
   .shadow-inset.shadow-inset-green {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(124, 170, 45, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(124, 170, 45, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(124, 170, 45, 0.6); }
   .shadow-inset.shadow-inset-green-d {
-    -webkit-box-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
-    -moz-box-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
-    box-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6); }
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(85, 116, 31, 0.6); }
 
 .text-shadow {
-  -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  -moz-text-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  text-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.6); }
+  -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  -moz-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6); }
   .text-shadow.text-shadow-primary {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(242, 242, 242, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(242, 242, 242, 0.6); }
   .text-shadow.text-shadow-secondary {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(60, 70, 85, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(60, 70, 85, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(60, 70, 85, 0.6); }
   .text-shadow.text-shadow-tertiary {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(135, 186, 69, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(135, 186, 69, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(135, 186, 69, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6); }
   .text-shadow.text-shadow-gray {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(127, 127, 127, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(127, 127, 127, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(127, 127, 127, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6); }
   .text-shadow.text-shadow-black {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.6); }
   .text-shadow.text-shadow-blue {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(0, 116, 217, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(0, 116, 217, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(0, 116, 217, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(0, 116, 217, 0.6); }
   .text-shadow.text-shadow-purple {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(137, 70, 196, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(137, 70, 196, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(137, 70, 196, 0.6); }
   .text-shadow.text-shadow-orange {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(255, 133, 27, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 133, 27, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(255, 133, 27, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(255, 133, 27, 0.6); }
   .text-shadow.text-shadow-yellow {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(255, 220, 0, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 220, 0, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(255, 220, 0, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(255, 220, 0, 0.6); }
   .text-shadow.text-shadow-red {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(255, 65, 54, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 65, 54, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(255, 65, 54, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(255, 65, 54, 0.6); }
   .text-shadow.text-shadow-pink {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(228, 40, 124, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(228, 40, 124, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(228, 40, 124, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(228, 40, 124, 0.6); }
   .text-shadow.text-shadow-magenta {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(178, 0, 178, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(178, 0, 178, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(178, 0, 178, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(178, 0, 178, 0.6); }
   .text-shadow.text-shadow-green {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(124, 170, 45, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(124, 170, 45, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(124, 170, 45, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(124, 170, 45, 0.6); }
   .text-shadow.text-shadow-green-d {
-    -webkit-text-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
-    -moz-text-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
-    text-shadow: 1px 1px 5px 0px rgba(85, 116, 31, 0.6); }
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(85, 116, 31, 0.6); }
 
 .text-shadow-inset {
-  -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  -moz-text-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.6);
-  text-shadow: inset 1px 1px 5px 0px rgba(255, 255, 255, 0.6); }
+  -webkit-text-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  -moz-text-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6); }
   .text-shadow-inset.text-shadow-inset-primary {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(242, 242, 242, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(242, 242, 242, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(242, 242, 242, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(242, 242, 242, 0.6); }
   .text-shadow-inset.text-shadow-inset-secondary {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(60, 70, 85, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(60, 70, 85, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(60, 70, 85, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(60, 70, 85, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(60, 70, 85, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(60, 70, 85, 0.6); }
   .text-shadow-inset.text-shadow-inset-tertiary {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(135, 186, 69, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(135, 186, 69, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(135, 186, 69, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(135, 186, 69, 0.6); }
   .text-shadow-inset.text-shadow-inset-gray {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(127, 127, 127, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(127, 127, 127, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(127, 127, 127, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6); }
   .text-shadow-inset.text-shadow-inset-black {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.6); }
   .text-shadow-inset.text-shadow-inset-blue {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(0, 116, 217, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(0, 116, 217, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(0, 116, 217, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(0, 116, 217, 0.6); }
   .text-shadow-inset.text-shadow-inset-purple {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(137, 70, 196, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(137, 70, 196, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(137, 70, 196, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(137, 70, 196, 0.6); }
   .text-shadow-inset.text-shadow-inset-orange {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(255, 133, 27, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(255, 133, 27, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(255, 133, 27, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(255, 133, 27, 0.6); }
   .text-shadow-inset.text-shadow-inset-yellow {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(255, 220, 0, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(255, 220, 0, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(255, 220, 0, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(255, 220, 0, 0.6); }
   .text-shadow-inset.text-shadow-inset-red {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(255, 65, 54, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(255, 65, 54, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(255, 65, 54, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(255, 65, 54, 0.6); }
   .text-shadow-inset.text-shadow-inset-pink {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(228, 40, 124, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(228, 40, 124, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(228, 40, 124, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(228, 40, 124, 0.6); }
   .text-shadow-inset.text-shadow-inset-magenta {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(178, 0, 178, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(178, 0, 178, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(178, 0, 178, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(178, 0, 178, 0.6); }
   .text-shadow-inset.text-shadow-inset-green {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(124, 170, 45, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(124, 170, 45, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(124, 170, 45, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(124, 170, 45, 0.6); }
   .text-shadow-inset.text-shadow-inset-green-d {
-    -webkit-text-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
-    -moz-text-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6);
-    text-shadow: inset 1px 1px 5px 0px rgba(85, 116, 31, 0.6); }
+    -webkit-text-shadow: inset 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
+    -moz-text-shadow: inset 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
+    text-shadow: inset 1px 1px 5px 0 rgba(85, 116, 31, 0.6); }
 
 .border.border-default {
   border: 1px solid #7F7F7F; }
@@ -2137,9 +2137,9 @@ html, body {
 
 .error-field {
   border: 1px solid #E74343;
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
-  box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25); }
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
+  -moz-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
+  box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25); }
 
 /**********************************************************************
 Description: This file define the text and background colors used by CMT-UI css framework.
@@ -3060,6 +3060,8 @@ a, .link {
   -o-transition: color 250ms ease-in-out 0s;
   -webkit-transition: color 250ms ease-in-out 0s;
   transition: color 250ms ease-in-out 0s; }
+  a.btn, .link.btn {
+    color: #FFFFFF; }
   a:link, a:visited, .link:link, .link:visited {
     color: #298ccf; }
   a:active, a:hover, .link:active, .link:hover {
@@ -3942,7 +3944,8 @@ Details: It defines the custom element styles as listed below:
         width: 100%;
         overflow: hidden;
         cursor: pointer;
-        background-color: #FFFFFF; }
+        background-color: #FFFFFF;
+        padding: 0.25em; }
       .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
         color: #FFFFFF;
         background-color: #E74343; }
@@ -3990,7 +3993,8 @@ Details: It defines the custom element styles as listed below:
       width: 100%;
       overflow: hidden;
       cursor: pointer;
-      background-color: #FFFFFF; }
+      background-color: #FFFFFF;
+      padding: 0.25em; }
     .cmt-multiselect .cmt-select-list li:hover {
       color: #FFFFFF;
       background-color: #E74343; }
@@ -4028,7 +4032,11 @@ Details: It defines the custom element styles as listed below:
   display: none; }
 
 .cmt-choice label {
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 0; }
+
+.cmt-choice .label {
+  margin-top: 0.25em; }
 
 .cmt-choice input[type=checkbox] + .label.pad-label::before, .cmt-choice input[type=radio] + .label.pad-label::before {
   margin-right: 8px; }
@@ -4543,7 +4551,8 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   box-shadow: inset 0 0 0 0px #F2F2F2; }
 
 .cmt-checkbox, .cmt-switch {
-  background: none; }
+  background: none;
+  padding-left: 0; }
   .cmt-checkbox:hover, .cmt-switch:hover {
     background: none;
     color: #363636; }
@@ -4616,7 +4625,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   margin-top: 0.5rem; }
 
 .form .form-group .help-block {
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.25rem; }
 
 .form .frm-split-40-60 label {
   margin-bottom: 0.5rem; }
@@ -4860,9 +4869,9 @@ Details: It defines the menu components as listed below:
     padding: 10px 2%;
     width: 96%;
     background-color: #3C4655;
-    -webkit-box-shadow: 1px 1px 2px 0px #3C4655;
-    -moz-box-shadow: 1px 1px 2px 0px #3C4655;
-    box-shadow: 1px 1px 2px 0px #3C4655; }
+    -webkit-box-shadow: 1px 1px 2px 0 #3C4655;
+    -moz-box-shadow: 1px 1px 2px 0 #3C4655;
+    box-shadow: 1px 1px 2px 0 #3C4655; }
     .hnav-basic .nav-sub > li {
       display: inline-block;
       float: none;
@@ -6196,10 +6205,10 @@ Details: It defines the styles of box components as listed below:
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
-  color: #FFFFFF;
+  color: #298ccf;
   cursor: pointer; }
   .box-collapsible .box-header .box-btn-collapse:hover {
-    color: #FFFFFF; }
+    color: #E74343; }
 
 /**********************************************************************
 Description: It defines the styles for login components available in CMT-UI css framework.
@@ -6251,15 +6260,18 @@ Details: It defines the styles of form box components as listed below:
   .box-form .box-form-content-wrap {
     display: none; }
 
-.box-form-basic .box-form-trigger {
-  position: absolute;
-  display: inline-block;
-  top: 10px;
-  right: 10px;
-  color: #FFFFFF;
-  cursor: pointer; }
-  .box-form-basic .box-form-trigger:hover {
-    color: #FFFFFF; }
+.box-form-basic {
+  background-color: #F2F2F2;
+  color: #363636; }
+  .box-form-basic .box-form-trigger {
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    right: 10px;
+    color: #298ccf;
+    cursor: pointer; }
+    .box-form-basic .box-form-trigger:hover {
+      color: #E74343; }
 
 .box-form-collapsible .box-form-collapsible-trigger {
   cursor: pointer; }
@@ -6403,109 +6415,81 @@ Details: It defines the styles for header components as listed below:
   overflow: hidden; }
 
 /**********************************************************************
-Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-			 wraps block header and content.
+Description: It defines the styles of the data grid components forming the grid without html tables.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for header components as listed below:
+Details: It defines the styles for data grid components as listed below:
 
-* Block       - The barebone grid class with minimum styles common for all the data grids.
+* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
 *
-* Basic       - The basic data grid having coloring.
+* Basic       - The basic data grid having default coloring.
 ***********************************************************************/
-.grid-data .grid-content .grid-rows {
+.grid-data .grid-content-wrap .grid-content .grid-rows-wrap {
   display: none; }
-  .grid-data .grid-content .grid-rows.active {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap.active {
     display: block; }
-  .grid-data .grid-content .grid-rows.grid-rows-zebra .grid-row:nth-child(even) {
-    background-color: #F2F2F2; }
-  .grid-data .grid-content .grid-rows .grid-rows-header {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap.grid-rows-zebra .grid-row:nth-child(even) {
+    background-color: #3C4655; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
     display: none;
     font-weight: bold; }
-  .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
     display: inline-block;
     width: 68%;
     padding: 1%;
     word-wrap: break-word; }
-    .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data.title {
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.title {
       width: 28%; }
-  .grid-data .grid-content .grid-rows .grid-rows-footer {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
     display: none;
     font-weight: bold; }
 
-.grid-data .grid-content .grid-cards {
+.grid-data .grid-content-wrap .grid-content .grid-cards-wrap {
   display: none; }
-  .grid-data .grid-content .grid-cards.active {
+  .grid-data .grid-content-wrap .grid-content .grid-cards-wrap.active {
     display: block; }
 
 @media only screen and (min-width: 1025px) {
-  .grid-data .grid-content .grid-rows .grid-rows-header {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
     display: block; }
-  .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-header {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-header {
     display: none; }
-  .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
     width: 100%;
     padding: 0; }
-    .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data.title {
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.title {
       display: none; }
-  .grid-data .grid-content .grid-rows .grid-rows-footer {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
     display: block; } }
 
-.grid-basic {
+.grid-data-basic {
   background-color: lightgray;
   padding: 10px; }
-  .grid-basic .grid-header {
+  .grid-data-basic .grid-header {
     background-color: #3C4655;
     color: #96B0D6;
     padding: 0.25em 10px;
     text-align: right;
     min-height: 2em; }
-    .grid-basic .grid-header .info {
+    .grid-data-basic .grid-header .grid-header-content {
       display: inline-block;
       float: left;
       padding: 0.25em 0.5em; }
-  .grid-basic .grid-footer {
+  .grid-data-basic .grid-footer {
     background-color: #3C4655;
     color: #96B0D6;
     padding: 0.25em 10px;
     text-align: right;
     min-height: 2em; }
-    .grid-basic .grid-footer .info {
+    .grid-data-basic .grid-footer .grid-footer-info {
       display: inline-block;
       float: left;
       padding: 0.25em 0.5em; }
-  .grid-basic .grid-rows {
+  .grid-data-basic .grid-rows {
     margin: 10px 0; }
-    .grid-basic .grid-rows .avatar {
+    .grid-data-basic .grid-rows .avatar {
       width: 48px; }
-  .grid-basic .pagination, .grid-basic .pagination li {
-    display: inline-block;
-    list-style: none; }
-  .grid-basic .pagination li {
-    margin: 0 0.5em; }
-    .grid-basic .pagination li span, .grid-basic .pagination li a {
-      display: inline-block;
-      background-color: #87BA45;
-      color: white;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      -khtml-border-radius: 5px;
-      font-size: 1em;
-      padding: 0.25em 0.5em;
-      -moz-transition: background-color 250ms ease-in-out 0s;
-      -ms-transition: background-color 250ms ease-in-out 0s;
-      -o-transition: background-color 250ms ease-in-out 0s;
-      -webkit-transition: background-color 250ms ease-in-out 0s;
-      transition: background-color 250ms ease-in-out 0s; }
-      .grid-basic .pagination li span:hover, .grid-basic .pagination li a:hover {
-        background-color: #a4cb72;
-        color: #678d34; }
-    .grid-basic .pagination li.disabled span, .grid-basic .pagination li.disabled a, .grid-basic .pagination li.disabled:hover span, .grid-basic .pagination li.disabled:hover a {
-      background-color: gray;
-      color: #F2F2F2; }
 
 /**********************************************************************
 Description: It defines the styles of the pagination components having links to navigate pages.
@@ -6599,13 +6583,13 @@ Details: It defines the styles of sorting components as listed below:
 
 * Sort        - The barebone sort class with minimum styles common for all the sorting.
 ***********************************************************************/
-.wrap-sort .sort {
+.grid-sort .sort {
   cursor: pointer; }
-  .wrap-sort .sort.sort-inline {
+  .grid-sort .sort.sort-inline {
     padding-right: 0.5rem; }
-  .wrap-sort .sort.sort-asc {
+  .grid-sort .sort.sort-asc {
     color: #A5D75A !important; }
-  .wrap-sort .sort.sort-desc {
+  .grid-sort .sort.sort-desc {
     color: #E74343 !important; }
 
 /**********************************************************************

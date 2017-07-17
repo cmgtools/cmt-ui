@@ -174,27 +174,33 @@ Details: It define the mixins and their default implementation as listed below:
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
 
-@mixin shadow( $x, $y, $blur, $color, $spread: 0px ) {
+@mixin shadow( $x, $y, $blur, $color, $spread: 0 ) {
 	-webkit-box-shadow: $x $y $blur $spread $color;
 	-moz-box-shadow: $x $y $blur $spread $color;
 	box-shadow: $x $y $blur $spread $color;
 }
 
-@mixin shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
+@mixin shadow-inset( $x, $y, $blur, $color, $spread: 0 ) {
 	-webkit-box-shadow: inset $x $y $blur $spread $color;
 	-moz-box-shadow: inset $x $y $blur $spread $color;
 	box-shadow: inset $x $y $blur $spread $color;
 }
 
+@mixin shadow-inset-top-bottom( $x1, $y1, $blur1, $color1, $x2, $y2, $blur2, $color2, $spread1: 0, $spread2: 0 ) {
+	-webkit-box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
+	-moz-box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
+	box-shadow: inset inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
+}
+
 // Box Shadow with x and y distance having blur ratio and color of shadow
 
-@mixin text-shadow( $x, $y, $blur, $color, $spread: 0px ) {
+@mixin text-shadow( $x, $y, $blur, $color, $spread: 0 ) {
 	-webkit-text-shadow: $x $y $blur $spread $color;
 	-moz-text-shadow: $x $y $blur $spread $color;
 	text-shadow: $x $y $blur $spread $color;
 }
 
-@mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
+@mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0 ) {
 	-webkit-text-shadow: inset $x $y $blur $spread $color;
 	-moz-text-shadow: inset $x $y $blur $spread $color;
 	text-shadow: inset $x $y $blur $spread $color;

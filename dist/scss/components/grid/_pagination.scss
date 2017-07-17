@@ -95,7 +95,7 @@ Details: It defines the styles for pagination components as listed below:
 
 			&:hover {
 				background-color: $color-btn-h;
-				color: $color-btn-h-text;
+				color: $color-btn-text-h;
 			}
 
 			.icon {
@@ -109,18 +109,18 @@ Details: It defines the styles for pagination components as listed below:
 
 				span {
 					background-color: $color-btn-d;
-					color: $color-btn-d-text;
+					color: $color-btn-text-d;
 
 					&:hover {
 						background-color: $color-btn-d;
-						color: $color-btn-d-text;
+						color: $color-btn-text-d;
 					}
 
 					.icon {
-						color: $color-btn-d-text;
+						color: $color-btn-text-d;
 
 						&:hover {
-							color: $color-btn-d-text;
+							color: $color-btn-text-d;
 						}
 					}
 				}
@@ -131,7 +131,7 @@ Details: It defines the styles for pagination components as listed below:
 
 			a {
 				background-color: $color-btn-a;
-				color: $color-btn-a-text;
+				color: $color-btn-text-a;
 			}
 		}
 	}

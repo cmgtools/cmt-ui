@@ -1,15 +1,13 @@
 /**********************************************************************
-Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-			 wraps block header and content.
+Description: It defines the styles of the data grid components forming the grid without html tables.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for header components as listed below:
+Details: It defines the styles for data grid components as listed below:
 
-* Block       - The barebone grid class with minimum styles common for all the data grids.
+* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
 *
-* Basic       - The basic data grid having coloring.
+* Basic       - The basic data grid having default coloring.
 ***********************************************************************/
 
 // == Structure - Data Grid =========
@@ -17,194 +15,244 @@ Details: It defines the styles for header components as listed below:
 // The Grid Data acts as wrapper to the data. It follows mobile first approach.
 .grid-data {
 
-	// Grid Title
-	.grid-title {
+	// Grid Search
+	.grid-search-wrap {
 
-		.title {
-			// grid title
-		}
-
-		.options {
-			// grid options in header
+		.grid-search {
+			// Search wrapper
 		}
 	}
 
 	// Grid Sort
-	.grid-sort {
+	.grid-sort-wrap {
 		// The grid sort columns
 
-		.wrap-sort {
+		.grid-sort {
 			// Sort wrapper
 		}
 	}
 
 	// Grid Filters
-	.grid-filters {
+	.grid-filters-wrap {
 		// The grid filters
 
-		.wrap-filters {
+		.grid-filters {
 			// Filter wrapper
 		}
 	}
 
+	// Bulk Options
+	.grid-bulk-wrap {
+
+		.grid-bulk {
+			// Bulk wrapper
+		}
+	}
+
 	// Grid Report
-	.grid-report {
+	.grid-report-wrap {
 		// The grid report having options to generate custom reports
 
-		.grid-report-fields {
-			// Wrapper for fields
+		.grid-report {
+
+			.grid-report-fields {
+				// Wrapper for fields
+			}
+
+			.grid-report-actions {
+				// Wrapper for actions
+			}
+		}
+	}
+
+	// Grid Head
+	.grid-head-wrap {
+
+		.grid-title {
+			// grid title
 		}
 
-		.grid-report-actions {
-			// Wrapper for actions
+		.grid-head-options {
+			// grid options - sort, search, filter, bulk, report
 		}
 	}
 
 	// Grid Options
-	.grid-options {
-		// Grid Options having bulk and search options
+	.grid-options-wrap {
 
-		.wrap-bulk {
-			// Bulk wrapper
-		}
-
-		.wrap-search {
-			// Quick Search wrapper
+		.grid-options {
+			// grid options - sort, search, filter, bulk, report
 		}
 	}
 
 	// Grid Header
-	.grid-header {
+	.grid-header-wrap {
 		// Grid Header having pagination and import/export options
+
+		.grid-header {
+
+			.grid-header-info {
+				// footer content
+			}
+
+			.grid-header-options {
+				// footer content
+			}
+
+			.grid-header-content {
+				// header content
+			}
+		}
 	}
 
 	// Grid Content
-	.grid-content {
+	.grid-content-wrap {
 		// Grid content like grid rows or blocks goes here
 
-		// Grid Rows
-		.grid-rows {
-			display: none;
+		.grid-content {
 
-			&.active {
-				display: block;
-			}
-
-			&.grid-rows-zebra {
-
-				.grid-row:nth-child( even ) {
-					background-color: $color-primary;
-				}
-			}
-
-			// rows header hidden for mobile
-			.grid-rows-header {
+			// Grid Rows
+			.grid-rows-wrap {
 				display: none;
-				font-weight: bold;
-			}
 
-			.wrap-grid-rows {
+				&.active {
+					display: block;
+				}
 
-				.grid-row {
+				&.grid-rows-zebra {
 
-					.grid-row-header {
-						// row title
+					.grid-row:nth-child( even ) {
+						background-color: $color-secondary;
 					}
+				}
 
-					.grid-row-data {
-						// row data - it can be anything ex: content box
+				// rows header hidden for mobile
+				.grid-rows-header {
+					display: none;
+					font-weight: bold;
+				}
 
-						.data {
-							display: inline-block;
-							width: 68%;
-							padding: 1%;
-							word-wrap: break-word;
+				.grid-rows {
 
-							&.title {
-								width: 28%;
+					.grid-row {
+
+						.grid-row-header {
+							// row title
+						}
+
+						.grid-row-data {
+							// row data - it can be anything ex: content box
+
+							// support classes for mobile views
+							.data {
+								display: inline-block;
+								width: 68%;
+								padding: 1%;
+								word-wrap: break-word;
+
+								&.title {
+									width: 28%;
+								}
 							}
 						}
-					}
 
-					.grid-row-footer {
-						// row footer
+						.grid-row-footer {
+							// row footer
+						}
 					}
+				}
+
+				// rows footer hidden for mobile
+				.grid-rows-footer {
+					display: none;
+					font-weight: bold;
 				}
 			}
 
-			// rows footer hidden for mobile
-			.grid-rows-footer {
+			// Grid Cards
+			.grid-cards-wrap {
 				display: none;
-				font-weight: bold;
-			}
-		}
 
-		// Grid Cards
-		.grid-cards {
-			display: none;
-
-			&.active {
-				display: block;
-			}
-
-			.grid-card {
-
-				.grid-card-header {
-					// card title
+				&.active {
+					display: block;
 				}
 
-				.grid-card-data {
-					// card data - it can be anything ex: content box
-				}
+				.grid-cards {
 
-				.grid-card-footer {
-					// card footer
+					.grid-card {
+
+						.grid-card-header {
+							// card title
+						}
+
+						.grid-card-data {
+							// card data - it can be anything ex: content box
+						}
+
+						.grid-card-footer {
+							// card footer
+						}
+					}
 				}
 			}
 		}
 	}
 
 	// Grid Footer
-	.grid-footer {
+	.grid-footer-wrap {
 		// Grid Footer having pagination and import/export options. It's similar to Grid Header
+
+		.grid-footer {
+
+			.grid-footer-info {
+				// footer content
+			}
+
+			.grid-footer-options {
+				// footer content
+			}
+		}
 	}
 
 	@include responsive-min( screen-tablet-large ) {
 
 		// Grid Content Wrapper
-		.grid-content {
+		.grid-content-wrap {
 
-			// Grid Rows
-			.grid-rows {
+			.grid-content {
 
-				.grid-rows-header {
-					display: block;
-				}
+				// Grid Rows
+				.grid-rows-wrap {
 
-				.wrap-grid-rows {
+					.grid-rows-header {
+						display: block;
+					}
 
-					.grid-row {
+					.grid-rows {
 
-						.grid-row-header {
-							display: none;
-						}
+						.grid-row {
 
-						.grid-row-data {
+							.grid-row-header {
+								display: none;
+							}
 
-							.data {
-								width: 100%;
-								padding: 0;
+							.grid-row-data {
 
-								&.title {
-									display: none;
+								.data {
+									width: 100%;
+									padding: 0;
+
+									&.title {
+										display: none;
+									}
 								}
 							}
 						}
 					}
-				}
 
-				.grid-rows-footer {
-					display: block;
+					.grid-rows-footer {
+						display: block;
+					}
 				}
 			}
 		}
@@ -214,7 +262,7 @@ Details: It defines the styles for header components as listed below:
 // Basic Data Grid ==================
 
 // Basic Grid
-.grid-basic {
+.grid-data-basic {
 	background-color: $color-primary-d;
 	padding: 10px;
 
@@ -226,7 +274,7 @@ Details: It defines the styles for header components as listed below:
 		text-align: right;
 		min-height: 2em;
 
-		.info {
+		.grid-header-content {
 			display: inline-block;
 			float: left;
 			padding: 0.25em 0.5em;
@@ -241,7 +289,7 @@ Details: It defines the styles for header components as listed below:
 		text-align: right;
 		min-height: 2em;
 
-		.info {
+		.grid-footer-info {
 			display: inline-block;
 			float: left;
 			padding: 0.25em 0.5em;
@@ -255,42 +303,6 @@ Details: It defines the styles for header components as listed below:
 		// Avatar in grid rows
 		.avatar {
 			width: 48px;
-		}
-	}
-
-	// Grid Pagination
-	.pagination {
-
-		&, li {
-			display: inline-block;
-			list-style: none;
-		}
-
-		li {
-			margin: 0 0.5em;
-
-			span, a {
-				display: inline-block;
-				background-color: $color-tertiary;
-				color: $color-primary-l;
-				@include rounded( 5px );
-				font-size: 1em;
-				padding: 0.25em 0.5em;
-				@include transit-bkg-color( $transit-eio, $transit-time-small );
-
-				&:hover {
-					background-color: $color-tertiary-l;
-					color: $color-tertiary-text-l;
-				}
-			}
-
-			&.disabled, &.disabled:hover {
-
-				span, a {
-					background-color: gray;
-					color: $color-primary;
-				}
-			}
 		}
 	}
 }
