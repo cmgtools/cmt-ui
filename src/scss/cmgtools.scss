@@ -129,9 +129,6 @@
 @import "cmt/components/auto-fill";
 // project - sliders, galleries, flippers, mappers and auto fills
 
-@import "cmt/components/file-uploader";
-// project - file uploaders
-
 // Notes: Cards can be used in Boxes, Widgets, Blocks, Grid, Blog
 
 @import "cmt/components/cards/basic";
@@ -142,6 +139,7 @@
 @import "cmt/components/boxes/basic";
 @import "cmt/components/boxes/login";
 @import "cmt/components/boxes/form";
+@import "cmt/components/boxes/file";
 // project - boxes
 
 // Notes: Widgets can be used in Blocks, Grid, Blog

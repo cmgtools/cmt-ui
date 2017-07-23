@@ -6124,82 +6124,6 @@ Details: It defines the styles for mapper components as listed below:
         background-color: lightgray;
         color: #555555; }
 
-.file-uploader {
-  position: relative; }
-  .file-uploader .postview {
-    position: relative;
-    margin: 0 auto; }
-    .file-uploader .postview .wrap-file {
-      text-align: center;
-      padding: 1em; }
-      .file-uploader .postview .wrap-file .cmt-icon {
-        font-size: 10em; }
-    .file-uploader .postview .message-upload {
-      margin: 1em 0;
-      display: none; }
-    .file-uploader .postview .btn-show-chooser {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      right: 0;
-      padding: 1em; }
-  .file-uploader .wrap-chooser {
-    display: none; }
-  .file-uploader .chooser, .file-uploader .btn-direct-chooser {
-    position: relative; }
-    .file-uploader .chooser input[type="file"], .file-uploader .btn-direct-chooser input[type="file"] {
-      opacity: 0;
-      cursor: pointer !important;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0px;
-      left: 0px; }
-  .file-uploader .chooser {
-    overflow: hidden;
-    text-align: center; }
-  .file-uploader .preview {
-    position: relative;
-    margin: 0 auto;
-    text-align: center; }
-    .file-uploader .preview .wrap-drag {
-      position: relative;
-      margin: 0 auto;
-      width: 120px;
-      height: 120px; }
-      .file-uploader .preview .wrap-drag .drag {
-        background-color: #F2F2F2;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 120px;
-        height: 120px;
-        z-index: 10;
-        text-align: center;
-        line-height: 120px; }
-        .file-uploader .preview .wrap-drag .drag.hover {
-          background-color: #87BA45;
-          color: #E6E6E6; }
-      .file-uploader .preview .wrap-drag canvas {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 120px;
-        height: 120px;
-        z-index: 50;
-        display: none; }
-  .file-uploader .preloader {
-    padding-top: 10px; }
-    .file-uploader .preloader .preloader-bar {
-      background-color: #87BA45;
-      width: 0%;
-      height: 10px; }
-  .file-uploader .post-action {
-    display: none;
-    text-align: center; }
-  .file-uploader .fields {
-    position: relative; }
-
 /**********************************************************************
 Description: It defines the styles of data card components available in CMT-UI css framework.
 
@@ -6346,6 +6270,85 @@ Details: It defines the styles of form box components as listed below:
 
 .box-form-collapsible .box-form-collapsible-trigger {
   cursor: pointer; }
+
+.box-file-uploader .btn-chooser {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  z-index: 10; }
+
+.box-file-uploader .box-content-wrap .box-content .file-wrap {
+  position: relative;
+  margin: 0 auto; }
+
+.box-file-uploader .box-content-wrap .box-content .chooser-wrap {
+  display: none; }
+  .box-file-uploader .box-content-wrap .box-content .chooser-wrap .file-preloader {
+    padding-top: 10px; }
+    .box-file-uploader .box-content-wrap .box-content .chooser-wrap .file-preloader .file-preloader-bar {
+      background-color: #87BA45;
+      width: 0%;
+      height: 10px; }
+
+.box-file-uploader .box-content-wrap .box-content .form-wrap .post-action {
+  display: none;
+  text-align: center; }
+
+.box-file-uploader .box-content-wrap .box-content .form-wrap .file-info, .box-file-uploader .box-content-wrap .box-content .form-wrap .file-fields {
+  position: relative; }
+
+.card-file {
+  text-align: center;
+  padding: 1em; }
+  .card-file .card-data .icon {
+    font-size: 10em; }
+  .card-file .card-footer {
+    margin: 1em 0;
+    display: none; }
+
+.card-file-chooser .card-data {
+  position: relative;
+  overflow: hidden;
+  text-align: center; }
+  .card-file-chooser .card-data input[type="file"] {
+    opacity: 0;
+    cursor: pointer !important;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+
+.card-file-dragger {
+  position: relative;
+  margin: 0 auto;
+  text-align: center; }
+  .card-file-dragger .card-data .drag-wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px; }
+    .card-file-dragger .card-data .drag-wrap .drag {
+      background-color: #F2F2F2;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 120px;
+      height: 120px;
+      z-index: 10;
+      text-align: center;
+      line-height: 120px; }
+      .card-file-dragger .card-data .drag-wrap .drag.hover {
+        background-color: #87BA45;
+        color: #E6E6E6; }
+    .card-file-dragger .card-data .drag-wrap canvas {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 120px;
+      height: 120px;
+      z-index: 50;
+      display: none; }
 
 /**********************************************************************
 Description: It defines the styles of widget components available in CMT-UI css framework.
