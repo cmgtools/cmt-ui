@@ -154,7 +154,10 @@ Details: It defines the styles for popup components as listed below:
 
 		.popup-content-wrap {
 			padding: 1rem;
-			overflow-y: auto;
+
+			.overflow-auto {
+				overflow-y: auto;
+			}
 
 			.popup-content {
 				// content
@@ -162,9 +165,9 @@ Details: It defines the styles for popup components as listed below:
 		}
 
 		.popup-close {
-			top: -0.5em;
-			right: -0.5em;
-			color: $color-link;
+			top: 0.75em;
+			right: 0.75em;
+			color: $color-tertiary-text;
 		}
 	}
 }

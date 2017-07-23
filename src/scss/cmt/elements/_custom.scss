@@ -61,6 +61,7 @@ Details: It defines the custom element styles as listed below:
 				height: 64px;
 				line-height: 64px;
 				font-size: 48px;
+				cursor: pointer;
 			}
 		}
 
@@ -69,7 +70,7 @@ Details: It defines the custom element styles as listed below:
 			position: absolute;
 			left: 0;
 			top: 64px;
-			width: 254px;
+			width: 264px;
 			padding: 5px;
 			height: 216px;
 			background-color: $color-primary-d;
@@ -77,6 +78,17 @@ Details: It defines the custom element styles as listed below:
 
 			.picker-icon-wrap {
 				margin: 2px;
+				width: 48px;
+				height: 48px;
+
+				.picker-icon {
+					display: inline-block;
+					width: 48px;
+					height: 48px;
+					line-height: 48px;
+					font-size: 36px;
+					cursor: pointer;
+				}
 			}
 		}
 	}
@@ -486,7 +498,12 @@ Details: It defines the custom element styles as listed below:
 
 .btn {
 	@extend %element-style;
+	@extend %element-size;
 	@extend %element-style-action;
+
+	&.btn-auto {
+		width: auto;
+	}
 
 	&.btn-25 {
 		width: 25% !important;
@@ -689,6 +706,60 @@ Details: It defines the custom element styles as listed below:
 
 a.btn {
 	color: $color-btn-text;
+}
+
+// == Rounded Icon ==================
+
+.icon-rounded {
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	width: 1.5em;
+	height: 1.5em;
+	line-height: 1.2em;
+	display: inline-block;
+	cursor: pointer;
+	@include circled1( $color-tertiary, $color-tertiary-text );
+	@include transit-bkg-color( $transit-eio, $transit-time-medium );
+
+	.icon {
+		font-size: 1em;
+	}
+
+	&:hover {
+		background-color: $color-tertiary-d;
+		color: $color-tertiary-text-d;
+	}
+
+	&.icon-rounded-small {
+		width: 2em;
+		height: 2em;
+		line-height: 1.6em;
+
+		.icon {
+			font-size: 1.5em;
+		}
+	}
+
+	&.icon-rounded-medium {
+		width: 2.5em;
+		height: 2.5em;
+		line-height: 2.1em;
+
+		.icon {
+			font-size: 2em;
+		}
+	}
+
+	&.icon-rounded-large {
+		width: 3em;
+		height: 3em;
+		line-height: 2.5em;
+
+		.icon {
+			font-size: 2.5em;
+		}
+	}
 }
 
 // == Icon Button ===================

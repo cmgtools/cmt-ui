@@ -27,12 +27,13 @@ Details: It defines the styles of form elements as listed below:
 *
 * Round corner      - This section define classes to make form elements round cornered.
 *
-* Forms				- The form class add required spacing to render the form elements.
-*
 * Ignore 100%       - This class allows form to ignore 100% width of elements.
 *
 * Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
 *                     fields on right side.
+*
+* Forms				- The form class add required spacing to render the form elements.
+*
 ***********************************************************************/
 
 // Notes: Refer reset for basic reset done for form elements.
@@ -336,6 +337,104 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	@include rounded-left( $size-medium );
 }
 
+// Ignore 100% width behavior for form elements
+.frm-ignore-100 {
+
+	label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
+	.btn, .cmt-checkbox, .cmt-switch, .cmt-choice {
+		float: none;
+		width: auto;
+	}
+}
+
+// == Splitted Form Elements ========
+
+// Splitted forms having label on left consuming 40% width and field on right side having remaining 60% width
+// We have two options to use the 40-60 concept i.e. either using frm-split-40-60 or using element-40 and element-60.
+// For both the options, the left side element clears the floating and parent must use clearfix to derive it's height from form elements.
+
+.frm-split-40-60 {
+
+	// fix for yii forms
+	.form-group {
+		@extend %clearfix;
+	}
+
+	.ignore-40-60 {
+
+		label, .element-40, input[type="text"], input[type="email"], input[type="password"], textarea, select, .element-60 {
+			width: 100%;
+		}
+	}
+}
+
+.frm-split-40-60 label, .element-40 {
+	clear: both;
+	width: 40%;
+	float: left;
+}
+
+.element-40 label {
+	width: 100%;
+}
+
+.frm-split-40-60 {
+
+	&.ignore-clear {
+
+		label, .element-40 {
+			clear: none;
+		}
+	}
+}
+
+.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 .icon-picker {
+	width: 60%;
+	float: left;
+}
+
+.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
+.element-60 textarea, .element-60 select,
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap, .element-60 .icon-picker {
+	width: 100%;
+}
+
+.frm-split-40-60 {
+
+	.frm-icon-element {
+
+		width: 60%;
+		float: left;
+
+		input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
+		.btn {
+			float: none;
+		}
+	}
+
+	.ignore-40-60 {
+
+		.frm-icon-element {
+			width: 100%;
+		}
+	}
+}
+
+@include responsive-max ( screen-mobile-large ) {
+
+	.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+	.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+		width: 100%;
+	}
+
+	.frm-split-40-60 .help-block {
+		padding-left: 0;
+	}
+}
+
 // == Forms =========================
 
 .form {
@@ -408,93 +507,5 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 			width: 80%;
 			padding: $size-medium-rem 2%;
 		}
-	}
-}
-
-// Ignore 100% width behavior for form elements
-
-.frm-ignore-100 {
-
-	label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
-	.btn, .cmt-checkbox, .cmt-switch, .cmt-choice {
-		float: none;
-		width: auto;
-	}
-}
-
-// == Splitted Form Elements ========
-
-// Splitted forms having label on left consuming 40% width and field on right side having remaining 60% width
-// We have two options to use the 40-60 concept i.e. either using frm-split-40-60 or using element-40 and element-60.
-// For both the options, the left side element clears the floating and parent must use clearfix to derive it's height from form elements.
-
-.frm-split-40-60 {
-
-	// fix for yii forms
-	.form-group {
-		@extend %clearfix;
-	}
-
-	.ignore-40-60 {
-
-		label, .element-40, input[type="text"], input[type="email"], input[type="password"], textarea, select, .element-60 {
-			width: 100%;
-		}
-	}
-}
-
-.frm-split-40-60 label, .element-40 {
-	clear: both;
-	width: 40%;
-	float: left;
-}
-
-.element-40 label {
-	width: 100%;
-}
-
-.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
-	width: 60%;
-	float: left;
-}
-
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 select,
-.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap {
-	width: 100%;
-}
-
-.frm-split-40-60 {
-
-	.frm-icon-element {
-
-		width: 60%;
-		float: left;
-
-		input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
-		.btn {
-			float: none;
-		}
-	}
-
-	.ignore-40-60 {
-
-		.frm-icon-element {
-			width: 100%;
-		}
-	}
-}
-
-@include responsive-max ( screen-mobile-large ) {
-
-	.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-	.frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
-		width: 100%;
-	}
-
-	.frm-split-40-60 .help-block {
-		padding-left: 0;
 	}
 }

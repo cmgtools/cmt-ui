@@ -9,16 +9,45 @@ Details: It defines the styles for popout components as listed below:
 *
 ***********************************************************************/
 
-// == Structure - Popup =============
+// == Structure - Popout ============
 
 .popout {
 	position: relative;
-	display: none; // hidden at start
+
+	.popout-trigger {
+		// Popout trigger
+	}
 
 	.popout-content-wrap {
+		display: none; // hidden at start
+		// Popout content wrapper
 
 		.popout-content {
+			// Popout content
+		}
+	}
+}
 
+// == Structure - Popout Group ======
+
+.popout-group {
+
+	.popout-actions {
+
+		.popout-trigger {
+			// Popout trigger
+		}
+	}
+
+	.popouts {
+		// Popouts wrapper
+
+		.popout {
+			display: none;
+
+			.popout-content-wrap {
+				display: block;
+			}
 		}
 	}
 }

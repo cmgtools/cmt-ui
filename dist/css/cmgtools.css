@@ -2954,9 +2954,7 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
   vertical-align: middle;
   line-height: 1.2;
-  font-family: Verdana, Geneva, sans-serif;
-  padding: 0;
-  padding-bottom: 0.25em; }
+  font-family: Verdana, Geneva, sans-serif; }
 
 p, span, em, div, a {
   font-size: 1em; }
@@ -3883,19 +3881,29 @@ Details: It defines the custom element styles as listed below:
         display: inline-block;
         height: 64px;
         line-height: 64px;
-        font-size: 48px; }
+        font-size: 48px;
+        cursor: pointer; }
     .icon-picker-wrap .icon-picker .picker-icon-sets {
       display: none;
       position: absolute;
       left: 0;
       top: 64px;
-      width: 254px;
+      width: 264px;
       padding: 5px;
       height: 216px;
       background-color: lightgray;
       z-index: 1000000; }
       .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-wrap {
-        margin: 2px; }
+        margin: 2px;
+        width: 48px;
+        height: 48px; }
+        .icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-wrap .picker-icon {
+          display: inline-block;
+          width: 48px;
+          height: 48px;
+          line-height: 48px;
+          font-size: 36px;
+          cursor: pointer; }
 
 .cmt-select-wrap {
   width: 100%;
@@ -4177,6 +4185,9 @@ Details: It defines the custom element styles as listed below:
         background-color: #3C4655;
         color: #96B0D6; }
 
+.btn.btn-auto {
+  width: auto; }
+
 .btn.btn-25 {
   width: 25% !important; }
 
@@ -4306,6 +4317,53 @@ Details: It defines the custom element styles as listed below:
 a.btn {
   color: #FFFFFF; }
 
+.icon-rounded {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.2em;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #87BA45;
+  color: #E6E6E6;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -khtml-border-radius: 100%;
+  -moz-transition: background-color 350ms ease-in-out 0s;
+  -ms-transition: background-color 350ms ease-in-out 0s;
+  -o-transition: background-color 350ms ease-in-out 0s;
+  -webkit-transition: background-color 350ms ease-in-out 0s;
+  transition: background-color 350ms ease-in-out 0s; }
+  .icon-rounded .icon {
+    font-size: 1em; }
+  .icon-rounded:hover {
+    background-color: #678d34;
+    color: #c1db9e; }
+  .icon-rounded.icon-rounded-small {
+    width: 2em;
+    height: 2em;
+    line-height: 1.6em; }
+    .icon-rounded.icon-rounded-small .icon {
+      font-size: 1.5em; }
+  .icon-rounded.icon-rounded-medium {
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.1em; }
+    .icon-rounded.icon-rounded-medium .icon {
+      font-size: 2em; }
+  .icon-rounded.icon-rounded-large {
+    width: 3em;
+    height: 3em;
+    line-height: 2.5em; }
+    .icon-rounded.icon-rounded-large .icon {
+      font-size: 2.5em; }
+
 .btn-group.btn-group-top-left {
   position: absolute;
   top: 0;
@@ -4379,12 +4437,13 @@ Details: It defines the styles of form elements as listed below:
 *
 * Round corner      - This section define classes to make form elements round cornered.
 *
-* Forms				- The form class add required spacing to render the form elements.
-*
 * Ignore 100%       - This class allows form to ignore 100% width of elements.
 *
 * Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
 *                     fields on right side.
+*
+* Forms				- The form class add required spacing to render the form elements.
+*
 ***********************************************************************/
 form {
   margin: 0 auto;
@@ -4399,21 +4458,21 @@ form {
   margin: 0;
   display: inline-block; }
 
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .element, .cmt-select-wrap {
+.btn, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .element, .cmt-select-wrap {
   width: 100%; }
-  label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.element, .element-25.cmt-select-wrap {
+  .element-25.btn, label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.element, .element-25.cmt-select-wrap {
     width: 25% !important; }
-  label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.element, .element-50.cmt-select-wrap {
+  .element-50.btn, label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.element, .element-50.cmt-select-wrap {
     width: 50% !important; }
-  label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.element, .element-75.cmt-select-wrap {
+  .element-75.btn, label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.element, .element-75.cmt-select-wrap {
     width: 75% !important; }
-  label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.element, .element-small.cmt-select-wrap {
+  .element-small.btn, label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.element, .element-small.cmt-select-wrap {
     width: 80px !important; }
-  label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.element, .element-medium.cmt-select-wrap {
+  .element-medium.btn, label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.element, .element-medium.cmt-select-wrap {
     width: 120px !important; }
-  label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.element, .element-large.cmt-select-wrap {
+  .element-large.btn, label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.element, .element-large.cmt-select-wrap {
     width: 180px !important; }
-  label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.element, .element-xlarge.cmt-select-wrap {
+  .element-xlarge.btn, label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.element, .element-xlarge.cmt-select-wrap {
     width: 250px !important; }
 
 input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
@@ -4609,6 +4668,54 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   -khtml-border-radius-top-left: 5px;
   -khtml-border-radius-bottom-left: 5px; }
 
+.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
+.frm-ignore-100 .btn, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
+  float: none;
+  width: auto; }
+
+.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
+  width: 100%; }
+
+.frm-split-40-60 label, .element-40 {
+  clear: both;
+  width: 40%;
+  float: left; }
+
+.element-40 label {
+  width: 100%; }
+
+.frm-split-40-60.ignore-clear label, .frm-split-40-60.ignore-clear .element-40 {
+  clear: none; }
+
+.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 .icon-picker {
+  width: 60%;
+  float: left; }
+
+.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
+.element-60 textarea, .element-60 select,
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap, .element-60 .icon-picker {
+  width: 100%; }
+
+.frm-split-40-60 .frm-icon-element {
+  width: 60%;
+  float: left; }
+  .frm-split-40-60 .frm-icon-element input[type="text"], .frm-split-40-60 .frm-icon-element input[type="email"], .frm-split-40-60 .frm-icon-element input[type="password"], .frm-split-40-60 .frm-icon-element textarea, .frm-split-40-60 .frm-icon-element select, .frm-split-40-60 .frm-icon-element input[type="submit"], .frm-split-40-60 .frm-icon-element input[type="button"], .frm-split-40-60 .frm-icon-element button,
+  .frm-split-40-60 .frm-icon-element .btn {
+    float: none; }
+
+.frm-split-40-60 .ignore-40-60 .frm-icon-element {
+  width: 100%; }
+
+@media only screen and (max-width: 480px) {
+  .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+    width: 100%; }
+  .frm-split-40-60 .help-block {
+    padding-left: 0; } }
+
 .form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select {
   margin-bottom: 0.5rem; }
 
@@ -4652,50 +4759,6 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   .form.form-25, .form.form-50, .form.form-75, .form.form-small, .form.form-medium, .form.form-large {
     width: 80%;
     padding: 2rem 2%; } }
-
-.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
-.frm-ignore-100 .btn, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
-  float: none;
-  width: auto; }
-
-.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
-  width: 100%; }
-
-.frm-split-40-60 label, .element-40 {
-  clear: both;
-  width: 40%;
-  float: left; }
-
-.element-40 label {
-  width: 100%; }
-
-.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
-  width: 60%;
-  float: left; }
-
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 select,
-.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap {
-  width: 100%; }
-
-.frm-split-40-60 .frm-icon-element {
-  width: 60%;
-  float: left; }
-  .frm-split-40-60 .frm-icon-element input[type="text"], .frm-split-40-60 .frm-icon-element input[type="email"], .frm-split-40-60 .frm-icon-element input[type="password"], .frm-split-40-60 .frm-icon-element textarea, .frm-split-40-60 .frm-icon-element select, .frm-split-40-60 .frm-icon-element input[type="submit"], .frm-split-40-60 .frm-icon-element input[type="button"], .frm-split-40-60 .frm-icon-element button,
-  .frm-split-40-60 .frm-icon-element .btn {
-    float: none; }
-
-.frm-split-40-60 .ignore-40-60 .frm-icon-element {
-  width: 100%; }
-
-@media only screen and (max-width: 480px) {
-  .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
-    width: 100%; }
-  .frm-split-40-60 .help-block {
-    padding-left: 0; } }
 
 /**********************************************************************
 Description: It defines the table styles for CMT-UI css framework.
@@ -5503,12 +5566,13 @@ Details: It defines the styles for popup components as listed below:
       font-size: 1.5em;
       font-weight: bold; }
   .popup-basic .popup-data .popup-content-wrap {
-    padding: 1rem;
-    overflow-y: auto; }
+    padding: 1rem; }
+    .popup-basic .popup-data .popup-content-wrap .overflow-auto {
+      overflow-y: auto; }
   .popup-basic .popup-data .popup-close {
-    top: -0.5em;
-    right: -0.5em;
-    color: #298ccf; }
+    top: 0.75em;
+    right: 0.75em;
+    color: #E6E6E6; }
 
 .popup-modal {
   position: fixed;
@@ -5529,8 +5593,14 @@ Details: It defines the styles for popout components as listed below:
 *
 ***********************************************************************/
 .popout {
-  position: relative;
+  position: relative; }
+  .popout .popout-content-wrap {
+    display: none; }
+
+.popout-group .popouts .popout {
   display: none; }
+  .popout-group .popouts .popout .popout-content-wrap {
+    display: block; }
 
 /**********************************************************************
 Description: It defines the styles of cmt slider available in CMT-UI css framework. It requires cmtSlider plugin from CMT-JS library.
@@ -6182,13 +6252,14 @@ Details: It defines the styles of box components as listed below:
     background-color: #3C4655;
     color: #96B0D6;
     padding: 0.5rem; }
-  .box-basic .box-content {
+  .box-basic .box-content-wrap {
     background-color: #F2F2F2;
     color: #363636;
     padding: 0.5rem; }
   .box-basic .box-footer {
     background-color: #556479;
-    color: #6a8fc5; }
+    color: #6a8fc5;
+    padding: 0.25rem; }
 
 .box-basic-icon {
   padding: 1rem; }
@@ -6200,14 +6271,14 @@ Details: It defines the styles of box components as listed below:
   .box-basic-icon .box-header .box-header-title {
     padding-left: 1.5rem; }
 
-.box-collapsible .box-header .box-btn-collapse {
+.box-collapsible .box-header .box-collapse-trigger {
   position: absolute;
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
-  color: #298ccf;
+  color: #96B0D6;
   cursor: pointer; }
-  .box-collapsible .box-header .box-btn-collapse:hover {
+  .box-collapsible .box-header .box-collapse-trigger:hover {
     color: #E74343; }
 
 /**********************************************************************
@@ -6439,7 +6510,7 @@ Details: It defines the styles for data grid components as listed below:
     width: 68%;
     padding: 1%;
     word-wrap: break-word; }
-    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.title {
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
       width: 28%; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
     display: none;
@@ -6458,7 +6529,7 @@ Details: It defines the styles for data grid components as listed below:
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
     width: 100%;
     padding: 0; }
-    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.title {
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
       display: none; }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
     display: block; } }
