@@ -1,3 +1,5 @@
+// == File Uploader Box =============
+
 .box-file-uploader {
 
 	.btn-chooser {
@@ -33,7 +35,6 @@
 			.form-wrap {
 
 				.post-action {
-					display: none;
 					text-align: center;
 				}
 
@@ -44,6 +45,29 @@
 		}
 	}
 }
+
+.box-file-uploader-direct {
+
+	.btn-chooser {
+		display: none;
+	}
+
+	.box-content-wrap {
+
+		.box-content {
+
+			.file-wrap {
+				display: none;
+			}
+
+			.chooser-wrap {
+				display: block;
+			}
+		}
+	}
+}
+
+// == File Uploader - Cards =========
 
 .card-file {
 	text-align: center;

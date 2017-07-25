@@ -233,7 +233,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button,
 	.btn {
 		padding-left: 2.1em;
-		width: 100%;
+		width: 100% !important;
 	}
 
 	// Compatible with CMT-Icons and other frameworks
@@ -260,6 +260,21 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 		.icon, .cmti, .fa {
 			right: 0;
 		}
+	}
+}
+
+// == Field Button ==================
+
+.frm-field-button {
+	text-align: center;
+
+	input[type="text"] {
+		width: 70%;
+	}
+
+	input[type="submit"], input[type="button"], button, .btn {
+		width: 30%;
+		margin-left: -4px;
 	}
 }
 
@@ -365,6 +380,12 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 		label, .element-40, input[type="text"], input[type="email"], input[type="password"], textarea, select, .element-60 {
 			width: 100%;
 		}
+	}
+
+	// Auto Suggest
+	.auto-fill-items-wrap {
+		width: 60%;
+		margin-left: 40%;
 	}
 }
 

@@ -708,12 +708,19 @@ a.btn {
 	color: $color-btn-text;
 }
 
-// == Rounded Icon ==================
+// == Icon Button ===================
+
+.btn-icon {
+	@extend %element-style;
+	@extend %element-style-action;
+}
+
+// == Rounded Icon Button ===========
 
 .icon-rounded {
 	position: absolute;
-	top: 0.5em;
-	right: 0.5em;
+	top: 0.25em;
+	right: 0.25em;
 	width: 1.5em;
 	height: 1.5em;
 	line-height: 1.2em;
@@ -760,13 +767,6 @@ a.btn {
 			font-size: 2.5em;
 		}
 	}
-}
-
-// == Icon Button ===================
-
-.btn-icon {
-	@extend %element-style;
-	@extend %element-style-action;
 }
 
 // == Button Group ==================

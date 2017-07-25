@@ -4319,8 +4319,8 @@ a.btn {
 
 .icon-rounded {
   position: absolute;
-  top: 0.5em;
-  right: 0.5em;
+  top: 0.25em;
+  right: 0.25em;
   width: 1.5em;
   height: 1.5em;
   line-height: 1.2em;
@@ -4569,7 +4569,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button,
   .frm-icon-element .btn {
     padding-left: 2.1em;
-    width: 100%; }
+    width: 100% !important; }
   .frm-icon-element .icon, .frm-icon-element .cmti, .frm-icon-element .fa {
     position: absolute;
     border: none;
@@ -4585,6 +4585,14 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     padding-right: 2.1em; }
   .frm-icon-element.icon-right .icon, .frm-icon-element.icon-right .cmti, .frm-icon-element.icon-right .fa {
     right: 0; }
+
+.frm-field-button {
+  text-align: center; }
+  .frm-field-button input[type="text"] {
+    width: 70%; }
+  .frm-field-button input[type="submit"], .frm-field-button input[type="button"], .frm-field-button button, .frm-field-button .btn {
+    width: 30%;
+    margin-left: -4px; }
 
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
@@ -4675,6 +4683,10 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
   width: 100%; }
+
+.frm-split-40-60 .auto-fill-items-wrap {
+  width: 60%;
+  margin-left: 40%; }
 
 .frm-split-40-60 label, .element-40 {
   clear: both;
@@ -6114,15 +6126,27 @@ Details: It defines the styles for mapper components as listed below:
 
 .auto-fill {
   position: relative; }
-  .auto-fill .auto-fill-items-wrap {
+  .auto-fill .auto-fill-source {
+    position: relative;
+    z-index: 100000; }
+    .auto-fill .auto-fill-source .auto-fill-items-wrap {
+      position: relative; }
+      .auto-fill .auto-fill-source .auto-fill-items-wrap .auto-fill-items {
+        display: none; }
+  .auto-fill .auto-fill-target {
     position: relative; }
-    .auto-fill .auto-fill-items-wrap .auto-fill-items {
-      display: none;
-      position: absolute;
-      width: 100%; }
-      .auto-fill .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
-        background-color: lightgray;
-        color: #555555; }
+
+.auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items {
+  position: absolute;
+  width: 100%; }
+  .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
+    background-color: lightgray;
+    color: #555555;
+    padding: 0.5em;
+    cursor: pointer; }
+  .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-message {
+    background-color: lightgray;
+    color: #555555; }
 
 /**********************************************************************
 Description: It defines the styles of data card components available in CMT-UI css framework.
@@ -6291,11 +6315,19 @@ Details: It defines the styles of form box components as listed below:
       height: 10px; }
 
 .box-file-uploader .box-content-wrap .box-content .form-wrap .post-action {
-  display: none;
   text-align: center; }
 
 .box-file-uploader .box-content-wrap .box-content .form-wrap .file-info, .box-file-uploader .box-content-wrap .box-content .form-wrap .file-fields {
   position: relative; }
+
+.box-file-uploader-direct .btn-chooser {
+  display: none; }
+
+.box-file-uploader-direct .box-content-wrap .box-content .file-wrap {
+  display: none; }
+
+.box-file-uploader-direct .box-content-wrap .box-content .chooser-wrap {
+  display: block; }
 
 .card-file {
   text-align: center;
