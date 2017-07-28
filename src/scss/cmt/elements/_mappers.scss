@@ -5,29 +5,52 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for mapper components as listed below:
 
+* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
+*
 * List        - The list mapper allows user to map multiple resources to active resource. The mappings
-*               can also maintain hierarchy with depth.
+*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
 *
 * Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
 *				when user click on one of the auto suggest item.
 *
 * Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
-
+*
 ***********************************************************************/
+
+// == Structure - Mapper ============
+
+.mapper {
+	position: relative;
+	// Mapper
+
+	.mapper-items {
+		// Mapper items wrapper
+
+		.mapper-item {
+			position: relative;
+			// Mapper item
+
+			.mapper-item-remove {
+				// Trigger to remove mapped item
+
+				// Notes: Use btn-icon or icon-o as trigger
+			}
+		}
+	}
+}
 
 // == Mapper - List =================
 
 .mapper-list {
 	width: 100%;
 	margin: 0 auto;
-	position: relative;
 
-	.mapper-list-items {
+	.mapper-items {
 		height: 250px;
 		background-color: $color-primary;
 		// Add scroll based on needs
 
-		.mapper-list-item {
+		.mapper-item {
 			display: inline-block;
 			width: 100%;
 			margin: 10px;
@@ -53,17 +76,15 @@ Details: It defines the styles for mapper components as listed below:
 // Auto Suggest with mapper - It works together with auto fill component
 .mapper-auto {
 
-	.mapper-auto-items {
+	// Auto Fill element, request trigger
 
-		.mapper-auto-item {
+	.mapper-items {
+
+		.mapper-item {
 			background-color: $color-secondary;
 			display: inline-block;
 			padding: 0.5rem;
 			margin-right: 0.5rem;
-
-			.mapper-auto-item-remove {
-				padding-left: 0.5rem;
-			}
 		}
 	}
 }
@@ -73,20 +94,16 @@ Details: It defines the styles for mapper components as listed below:
 .mapper-submit {
 	width: 100%;
 	margin: 0 auto;
-	position: relative;
 
-	.mapper-submit-items {
+	// Mapping element, request trigger
 
-		.mapper-submit-item {
+	.mapper-items {
+
+		.mapper-item {
 			background-color: $color-secondary;
-			position: relative;
 			display: inline-block;
 			padding: 0.5rem;
 			margin-right: 0.5rem;
-
-			.mapper-submit-item-remove {
-				padding-left: 0.5rem;
-			}
 		}
 	}
 }

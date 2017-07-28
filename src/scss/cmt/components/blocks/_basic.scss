@@ -81,8 +81,16 @@ Details: It defines the styles for header components as listed below:
 		// Block Header
 		.block-header {
 
+			.block-header-icon {
+				// Header icon
+			}
+
 			.block-header-title {
 				// Header title
+			}
+
+			.block-header-info {
+				// Header Info
 			}
 
 			.block-header-content {
@@ -104,7 +112,11 @@ Details: It defines the styles for header components as listed below:
 		.block-footer {
 
 			.block-footer-info {
-				// Header content
+				// Footer Info
+			}
+
+			.block-footer-content {
+				// Footer Content
 			}
 		}
 	}

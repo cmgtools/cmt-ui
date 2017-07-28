@@ -717,7 +717,7 @@ a.btn {
 
 // == Rounded Icon Button ===========
 
-.icon-rounded {
+.btn-icon-o {
 	position: absolute;
 	top: 0.25em;
 	right: 0.25em;
@@ -738,7 +738,7 @@ a.btn {
 		color: $color-tertiary-text-d;
 	}
 
-	&.icon-rounded-small {
+	&.btn-icon-o-small {
 		width: 2em;
 		height: 2em;
 		line-height: 1.6em;
@@ -748,7 +748,7 @@ a.btn {
 		}
 	}
 
-	&.icon-rounded-medium {
+	&.btn-icon-o-medium {
 		width: 2.5em;
 		height: 2.5em;
 		line-height: 2.1em;
@@ -758,7 +758,7 @@ a.btn {
 		}
 	}
 
-	&.icon-rounded-large {
+	&.btn-icon-o-large {
 		width: 3em;
 		height: 3em;
 		line-height: 2.5em;

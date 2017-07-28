@@ -71,6 +71,7 @@
 // project - reset
 @import "cmt/core/basic";
 // project - basic
+
 @import "cmt/core/coloring";
 // project - coloring
 @import "cmt/core/spacing";
@@ -99,6 +100,18 @@
 @import "cmt/elements/table";
 // project - table
 
+@import "cmt/elements/breadcrumbs";
+// project - breadcrumbs
+
+@import "cmt/elements/flippers";
+// project - flippers
+
+@import "cmt/elements/mappers";
+// project - mappers
+
+@import "cmt/elements/auto-fill";
+// project - auto fill
+
 // ---------------------------------------//
 // Components Division - Optional
 // Re-usable components having barebone structure and default implementations.
@@ -109,25 +122,24 @@
 @import "cmt/components/menus/social";
 // project - menus
 
-@import "cmt/components/breadcrumbs";
-// project - breadcrumbs
+@import "cmt/components/headers/basic";
+// project - headers
 
-@import "cmt/components/headers";
-@import "cmt/components/footers";
-@import "cmt/components/sidebars";
-// project - headers, footers & sidebars
+@import "cmt/components/footers/basic";
+// project - footers
 
-@import "cmt/components/popups";
-// project - popups
-@import "cmt/components/popouts";
-// project - popouts
+@import "cmt/components/sidebars/basic";
+// project - sidebars
 
-@import "cmt/components/sliders";
-@import "cmt/components/galleries";
-@import "cmt/components/flippers";
-@import "cmt/components/mappers";
-@import "cmt/components/auto-fill";
-// project - sliders, galleries, flippers, mappers and auto fills
+@import "cmt/components/popups/basic";
+@import "cmt/components/popups/popouts";
+// project - popups & popouts
+
+@import "cmt/components/sliders/basic";
+// project - sliders
+
+@import "cmt/components/galleries/basic";
+// project - galleries
 
 // Notes: Cards can be used in Boxes, Widgets, Blocks, Grid, Blog
 
@@ -145,6 +157,9 @@
 // Notes: Widgets can be used in Blocks, Grid, Blog
 
 @import "cmt/components/widgets/basic";
+@import "cmt/components/widgets/blog/post";
+@import "cmt/components/widgets/cart/cart";
+@import "cmt/components/widgets/cart/product";
 // project - widgets
 
 // Notes: Blocks can be used to form pages
@@ -152,14 +167,21 @@
 @import "cmt/components/blocks/basic";
 // project - blocks
 
-@import "cmt/components/grid/data";
 @import "cmt/components/grid/pagination";
 @import "cmt/components/grid/sorting";
+@import "cmt/components/grid/filters";
+@import "cmt/components/grid/data";
+@import "cmt/components/grid/tables";
 // project - data grids
 
 @import "cmt/components/blog/blog";
 @import "cmt/components/blog/post";
 // project - blog
+
+@import "cmt/components/cart/product";
+@import "cmt/components/cart/cart";
+@import "cmt/components/cart/shop";
+// project - cart
 
 // ---------------------------------------//
 // Extensions Division - Optional

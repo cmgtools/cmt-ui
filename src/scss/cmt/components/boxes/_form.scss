@@ -1,6 +1,6 @@
 /**********************************************************************
 Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info for display purpose and
-			 the real form can be displayed when user click the edit button.
+			 the real form can be displayed when user click the swap trigger.
 
 Dependencies: variables, variables-ext, mixins, boxes/basic
 
@@ -9,6 +9,8 @@ Details: It defines the styles of form box components as listed below:
 * Form        - The barebone form box class having trigger and wrappers for info and content. The info and content can be swapped using trigger.
 *
 * Basic       - The basic form define styles to position the edit icon.
+*
+* Flipper	  - The flipper works without the trigger.
 *
 * Collapsible - The collapsible form boxes are similar to basic, but these can also be collapsed hiding content keeping
 *               header and footer visible. The content collapse on clicking header / collapse button on header.

@@ -19,12 +19,12 @@ Details: It defines the styles of widget components as listed below:
 	.widget-header {
 		position: relative;
 
-		.widget-title {
-			// Title
+		.widget-header-title {
+			// Header Title
 		}
 
 		.widget-header-content {
-			// header content
+			// Header Content
 		}
 	}
 
@@ -39,8 +39,8 @@ Details: It defines the styles of widget components as listed below:
 	.widget-footer {
 		// Footer
 
-		.widget-footer-content {
-			// footer content
+		.widget-footer-info {
+			// Footer Info
 		}
 	}
 }
