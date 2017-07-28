@@ -16,7 +16,15 @@ Details: It defines the styles of card components as listed below:
 
 	.card-header {
 
-		.card-title {
+		.card-header-icon {
+
+		}
+
+		.card-header-title {
+
+		}
+
+		.card-header-actions {
 
 		}
 	}
@@ -27,6 +35,13 @@ Details: It defines the styles of card components as listed below:
 
 	.card-footer {
 
+		.card-footer-info {
+
+		}
+
+		.card-footer-actions {
+
+		}
 	}
 }
 

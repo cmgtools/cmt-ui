@@ -1,0 +1,185 @@
+/**********************************************************************
+Description: It defines the styles for popup components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for popup components as listed below:
+
+* Popup       - The barebone popup class with minimum styles to position it's elements.
+*
+* Basic       - The basic popup define the default coloring and spacing for popup data.
+*
+* Modal       - The modal popup will be fixed and positioned on top of all other elements.
+***********************************************************************/
+
+// == Structure - Popup =============
+
+.popup {
+	position: relative;
+	display: none; // hidden at start
+
+	// It covers visible area - useful for modal dialogs
+	.popup-screen {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+		background-color: $color-transparent-black;
+	}
+
+	// Popup background - useful for modal dialogs to show background image
+	.popup-bkg {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+	}
+
+	// Texture on top of popup background
+	.popup-bkg-texture {
+		z-index: 15;
+	}
+
+	// It's transparent and covers visible area and listen for user action to close popup - useful for modal dialogs
+	.popup-screen-listener {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 20;
+	}
+
+	// Popup Data with background and texture to wrap title and content
+	.popup-data {
+		position: relative;
+		z-index: 50;
+
+		// Data background
+		.popup-data-bkg {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 100;
+		}
+
+		// Texture on top of data background
+		.popup-data-bkg-texture {
+			z-index: 15;
+		}
+
+		.popup-header {
+			position: relative;
+			z-index: 150;
+			width: 100%;
+
+			.popup-title  {
+				// title
+			}
+		}
+
+		.popup-content-wrap {
+
+			.popup-content {
+				position: relative;
+				z-index: 150;
+			}
+		}
+
+		.popup-close {
+			position: absolute;
+			z-index: 200;
+			display: inline-block;
+			cursor: pointer;
+
+			.close-icon {
+				// close icon
+			}
+		}
+
+		&.popup-data-small {
+			height: 200px;
+			width: 400px;
+		}
+
+		&.popup-data-medium {
+			height: 300px;
+			width: 600px;
+		}
+
+		&.popup-data-large {
+			height: 400px;
+			width: 800px;
+		}
+	}
+
+	@include responsive-max ( screen-tablet-small ) {
+
+		.popup-data-small, .popup-data-medium, .popup-data-large {
+
+			width: 90% !important;
+		}
+	}
+}
+
+// == Basic Popup ===================
+
+.popup-basic {
+
+	.popup-screen {
+		background-color: $color-transparent-black;
+	}
+
+	// Popup Data
+	.popup-data {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+
+		.popup-header {
+			background-color: $color-tertiary;
+			color: $color-tertiary-text;
+			padding: 1rem;
+
+			.popup-title  {
+				font-size: 1.5em;
+				font-weight: bold;
+			}
+		}
+
+		.popup-content-wrap {
+			padding: 1rem;
+
+			.overflow-auto {
+				overflow-y: auto;
+			}
+
+			.popup-content {
+				// content
+			}
+		}
+
+		.popup-close {
+			top: 0.75em;
+			right: 0.75em;
+			color: $color-tertiary-text;
+		}
+	}
+}
+
+// == Modal Popup ===================
+
+// Modal Popup
+.popup-modal {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 999999999; // highest z-index
+}

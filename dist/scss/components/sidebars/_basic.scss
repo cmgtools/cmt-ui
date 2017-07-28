@@ -1,0 +1,74 @@
+/**********************************************************************
+Description: It defines the styles for sidebar components available in CMT-UI CSS framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for sidebar components as listed below:
+
+* Sidebar         - The barebone sidebar class with minimum styles.
+*
+* Basic           -	The basic sidebar defines the styles of sidebar having header with button to trigger show/hide content for
+					mobile devices. The header will be displayed for small screens and it's trigger can be used to toggle the content.
+
+***********************************************************************/
+
+// == Structure - Sidebar ===========
+
+.sidebar {
+	position: relative;
+
+	.sidebar-header {
+		position: relative;
+
+		.sidebar-title {
+			// Title
+		}
+	}
+
+	.sidebar-content-wrap {
+		position: relative;
+
+		.sidebar-content {
+			// Content
+		}
+	}
+}
+
+// == Basic Sidebar =================
+
+.sidebar-basic {
+	position: relative;
+
+	.sidebar-header {
+		display: none;
+
+		.sidebar-title {
+			background-color: $color-tertiary;
+			line-height: $font-size-4;
+			padding: 0.5rem;
+			font-size: $font-size-5;
+			@extend %clearfix;
+		}
+
+		.sidebar-control {
+			float: right;
+			display: inline-block;
+			cursor: pointer;
+		}
+	}
+
+	.sidebar-content-wrap {
+		display: block;
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		.sidebar-header {
+			display: block;
+
+			.sidebar-content-wrap {
+				display: none;
+			}
+		}
+	}
+}

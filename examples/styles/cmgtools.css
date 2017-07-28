@@ -4317,7 +4317,7 @@ Details: It defines the custom element styles as listed below:
 a.btn {
   color: #FFFFFF; }
 
-.icon-rounded {
+.btn-icon-o {
   position: absolute;
   top: 0.25em;
   right: 0.25em;
@@ -4340,28 +4340,28 @@ a.btn {
   -o-transition: background-color 350ms ease-in-out 0s;
   -webkit-transition: background-color 350ms ease-in-out 0s;
   transition: background-color 350ms ease-in-out 0s; }
-  .icon-rounded .icon {
+  .btn-icon-o .icon {
     font-size: 1em; }
-  .icon-rounded:hover {
+  .btn-icon-o:hover {
     background-color: #678d34;
     color: #c1db9e; }
-  .icon-rounded.icon-rounded-small {
+  .btn-icon-o.btn-icon-o-small {
     width: 2em;
     height: 2em;
     line-height: 1.6em; }
-    .icon-rounded.icon-rounded-small .icon {
+    .btn-icon-o.btn-icon-o-small .icon {
       font-size: 1.5em; }
-  .icon-rounded.icon-rounded-medium {
+  .btn-icon-o.btn-icon-o-medium {
     width: 2.5em;
     height: 2.5em;
     line-height: 2.1em; }
-    .icon-rounded.icon-rounded-medium .icon {
+    .btn-icon-o.btn-icon-o-medium .icon {
       font-size: 2em; }
-  .icon-rounded.icon-rounded-large {
+  .btn-icon-o.btn-icon-o-large {
     width: 3em;
     height: 3em;
     line-height: 2.5em; }
-    .icon-rounded.icon-rounded-large .icon {
+    .btn-icon-o.btn-icon-o-large .icon {
       font-size: 2.5em; }
 
 .btn-group.btn-group-top-left {
@@ -4826,6 +4826,140 @@ table td {
     @media only screen and (min-width: 1025px) {
       .table.table-responsive .wrap-table {
         width: 100%; } }
+
+/**********************************************************************
+Description: It defines the styles for breadcrumbs available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for breadcrumbs.
+***********************************************************************/
+.breadcrumb {
+  list-style: none; }
+  .breadcrumb .breadcrumb-seperator {
+    padding: 0 0.25em; }
+  .breadcrumb li {
+    display: inline-block; }
+  .breadcrumb a {
+    display: inline-block; }
+
+/**********************************************************************
+Description: It defines the styles for flipper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for flipper components as listed below:
+
+* Flipper     - It flip the content on hover hiding the face and showing content.
+
+***********************************************************************/
+.flipper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 4px 8px;
+  perspective: 1000; }
+  .flipper:hover .flipper-content {
+    transform: rotateY(180deg); }
+  .flipper .flipper-content {
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s linear; }
+    .flipper .flipper-content .flipper-face {
+      width: 100%;
+      backface-visibility: hidden; }
+    .flipper .flipper-content .flipper-face.flipper-back {
+      display: block;
+      transform: rotateY(180deg);
+      box-sizing: border-box;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      background-color: #3C4655; }
+    .flipper .flipper-content .flipper-back {
+      position: absolute;
+      top: 0;
+      height: 100%; }
+
+/**********************************************************************
+Description: It defines the styles for mapper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
+*
+* List        - The list mapper allows user to map multiple resources to active resource. The mappings
+*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
+*
+* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
+*				when user click on one of the auto suggest item.
+*
+* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+*
+***********************************************************************/
+.mapper {
+  position: relative; }
+  .mapper .mapper-items .mapper-item {
+    position: relative; }
+
+.mapper-list {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-list .mapper-items {
+    height: 250px;
+    background-color: #F2F2F2; }
+    .mapper-list .mapper-items .mapper-item {
+      display: inline-block;
+      width: 100%;
+      margin: 10px;
+      background-color: #FFFFFF; }
+      .mapper-list .mapper-items .mapper-item.depth-1 {
+        padding-left: 15px; }
+      .mapper-list .mapper-items .mapper-item.depth-2 {
+        padding-left: 30px; }
+      .mapper-list .mapper-items .mapper-item.depth-3 {
+        padding-left: 45px; }
+
+.mapper-auto .mapper-items .mapper-item {
+  background-color: #3C4655;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 0.5rem; }
+
+.mapper-submit {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-submit .mapper-items .mapper-item {
+    background-color: #3C4655;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem; }
+
+.auto-fill {
+  position: relative; }
+  .auto-fill .auto-fill-source {
+    position: relative;
+    z-index: 100000; }
+    .auto-fill .auto-fill-source .auto-fill-items-wrap {
+      position: relative; }
+      .auto-fill .auto-fill-source .auto-fill-items-wrap .auto-fill-items {
+        display: none; }
+  .auto-fill .auto-fill-target {
+    position: relative; }
+
+.auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items {
+  position: absolute;
+  width: 100%; }
+  .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
+    background-color: lightgray;
+    color: #555555;
+    padding: 0.5em;
+    cursor: pointer; }
+  .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-message {
+    background-color: lightgray;
+    color: #555555; }
 
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.
@@ -5335,22 +5469,6 @@ Details: It defines the social network menu components as listed below:
     background-color: #9f191f; }
   .menu-social .btn:hover.youtube {
     background-color: #880000; }
-
-/**********************************************************************
-Description: It defines the styles for breadcrumbs available in CMT-UI css framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for breadcrumbs.
-***********************************************************************/
-.breadcrumb {
-  list-style: none; }
-  .breadcrumb .breadcrumb-seperator {
-    padding: 0 0.25em; }
-  .breadcrumb li {
-    display: inline-block; }
-  .breadcrumb a {
-    display: inline-block; }
 
 /**********************************************************************
 Description: It defines the styles for header components available in CMT-UI css framework.
@@ -6031,124 +6149,6 @@ Details: It defines the styles for mapper components as listed below:
 }
 */
 /**********************************************************************
-Description: It defines the styles for flipper components available in CMT-UI css framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for flipper components as listed below:
-
-* Flipper     - It flip the content on hover hiding the face and showing content.
-
-***********************************************************************/
-.flipper {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  padding: 0 4px 8px;
-  perspective: 1000; }
-  .flipper:hover .flipper-content {
-    transform: rotateY(180deg); }
-  .flipper .flipper-content {
-    width: 100%;
-    transform-style: preserve-3d;
-    transition: all 0.5s linear; }
-    .flipper .flipper-content .flipper-face {
-      width: 100%;
-      backface-visibility: hidden; }
-    .flipper .flipper-content .flipper-face.flipper-back {
-      display: block;
-      transform: rotateY(180deg);
-      box-sizing: border-box;
-      padding: 10px;
-      color: white;
-      text-align: center;
-      background-color: #3C4655; }
-    .flipper .flipper-content .flipper-back {
-      position: absolute;
-      top: 0;
-      height: 100%; }
-
-/**********************************************************************
-Description: It defines the styles for mapper components available in CMT-UI css framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for mapper components as listed below:
-
-* List        - The list mapper allows user to map multiple resources to active resource. The mappings
-*               can also maintain hierarchy with depth.
-*
-* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
-*				when user click on one of the auto suggest item.
-*
-* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
-
-***********************************************************************/
-.mapper-list {
-  width: 100%;
-  margin: 0 auto;
-  position: relative; }
-  .mapper-list .mapper-list-items {
-    height: 250px;
-    background-color: #F2F2F2; }
-    .mapper-list .mapper-list-items .mapper-list-item {
-      display: inline-block;
-      width: 100%;
-      margin: 10px;
-      background-color: #FFFFFF; }
-      .mapper-list .mapper-list-items .mapper-list-item.depth-1 {
-        padding-left: 15px; }
-      .mapper-list .mapper-list-items .mapper-list-item.depth-2 {
-        padding-left: 30px; }
-      .mapper-list .mapper-list-items .mapper-list-item.depth-3 {
-        padding-left: 45px; }
-
-.mapper-auto .mapper-auto-items .mapper-auto-item {
-  background-color: #3C4655;
-  display: inline-block;
-  padding: 0.5rem;
-  margin-right: 0.5rem; }
-  .mapper-auto .mapper-auto-items .mapper-auto-item .mapper-auto-item-remove {
-    padding-left: 0.5rem; }
-
-.mapper-submit {
-  width: 100%;
-  margin: 0 auto;
-  position: relative; }
-  .mapper-submit .mapper-submit-items .mapper-submit-item {
-    background-color: #3C4655;
-    position: relative;
-    display: inline-block;
-    padding: 0.5rem;
-    margin-right: 0.5rem; }
-    .mapper-submit .mapper-submit-items .mapper-submit-item .mapper-submit-item-remove {
-      padding-left: 0.5rem; }
-
-.auto-fill {
-  position: relative; }
-  .auto-fill .auto-fill-source {
-    position: relative;
-    z-index: 100000; }
-    .auto-fill .auto-fill-source .auto-fill-items-wrap {
-      position: relative; }
-      .auto-fill .auto-fill-source .auto-fill-items-wrap .auto-fill-items {
-        display: none; }
-  .auto-fill .auto-fill-target {
-    position: relative; }
-
-.auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items {
-  position: absolute;
-  width: 100%; }
-  .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
-    background-color: lightgray;
-    color: #555555;
-    padding: 0.5em;
-    cursor: pointer; }
-  .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-message {
-    background-color: lightgray;
-    color: #555555; }
-
-/**********************************************************************
 Description: It defines the styles of data card components available in CMT-UI css framework.
 
 Dependencies: variables, variables-ext, mixins
@@ -6257,7 +6257,7 @@ Details: It defines the styles for login components as listed below:
 
 /**********************************************************************
 Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info for display purpose and
-			 the real form can be displayed when user click the edit button.
+			 the real form can be displayed when user click the swap trigger.
 
 Dependencies: variables, variables-ext, mixins, boxes/basic
 
@@ -6266,6 +6266,8 @@ Details: It defines the styles of form box components as listed below:
 * Form        - The barebone form box class having trigger and wrappers for info and content. The info and content can be swapped using trigger.
 *
 * Basic       - The basic form define styles to position the edit icon.
+*
+* Flipper	  - The flipper works without the trigger.
 *
 * Collapsible - The collapsible form boxes are similar to basic, but these can also be collapsed hiding content keeping
 *               header and footer visible. The content collapse on clicking header / collapse button on header.
@@ -6332,7 +6334,7 @@ Details: It defines the styles of form box components as listed below:
 .card-file {
   text-align: center;
   padding: 1em; }
-  .card-file .card-data .icon {
+  .card-file .card-data .icon-file {
     font-size: 10em; }
   .card-file .card-footer {
     margin: 1em 0;
@@ -6521,83 +6523,6 @@ Details: It defines the styles for header components as listed below:
   overflow: hidden; }
 
 /**********************************************************************
-Description: It defines the styles of the data grid components forming the grid without html tables.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for data grid components as listed below:
-
-* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
-*
-* Basic       - The basic data grid having default coloring.
-***********************************************************************/
-.grid-data .grid-content-wrap .grid-content .grid-rows-wrap {
-  display: none; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap.active {
-    display: block; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap.grid-rows-zebra .grid-row:nth-child(even) {
-    background-color: #3C4655; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
-    display: none;
-    font-weight: bold; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
-    display: inline-block;
-    width: 68%;
-    padding: 1%;
-    word-wrap: break-word; }
-    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
-      width: 28%; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
-    display: none;
-    font-weight: bold; }
-
-.grid-data .grid-content-wrap .grid-content .grid-cards-wrap {
-  display: none; }
-  .grid-data .grid-content-wrap .grid-content .grid-cards-wrap.active {
-    display: block; }
-
-@media only screen and (min-width: 1025px) {
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
-    display: block; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-header {
-    display: none; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
-    width: 100%;
-    padding: 0; }
-    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
-      display: none; }
-  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
-    display: block; } }
-
-.grid-data-basic {
-  background-color: lightgray;
-  padding: 10px; }
-  .grid-data-basic .grid-header {
-    background-color: #3C4655;
-    color: #96B0D6;
-    padding: 0.25em 10px;
-    text-align: right;
-    min-height: 2em; }
-    .grid-data-basic .grid-header .grid-header-content {
-      display: inline-block;
-      float: left;
-      padding: 0.25em 0.5em; }
-  .grid-data-basic .grid-footer {
-    background-color: #3C4655;
-    color: #96B0D6;
-    padding: 0.25em 10px;
-    text-align: right;
-    min-height: 2em; }
-    .grid-data-basic .grid-footer .grid-footer-info {
-      display: inline-block;
-      float: left;
-      padding: 0.25em 0.5em; }
-  .grid-data-basic .grid-rows {
-    margin: 10px 0; }
-    .grid-data-basic .grid-rows .avatar {
-      width: 48px; }
-
-/**********************************************************************
 Description: It defines the styles of the pagination components having links to navigate pages.
 
 Dependencies: variables, variables-ext, mixins
@@ -6697,6 +6622,146 @@ Details: It defines the styles of sorting components as listed below:
     color: #A5D75A !important; }
   .grid-sort .sort.sort-desc {
     color: #E74343 !important; }
+
+/**********************************************************************
+Description: It defines the styles of the data grid components forming the grid without html tables.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for data grid components as listed below:
+
+* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
+*
+* Basic       - The basic data grid having default coloring.
+***********************************************************************/
+.grid-data .grid-content-wrap .grid-content .grid-rows-wrap {
+  display: none; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap.active {
+    display: block; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
+    display: none;
+    font-weight: bold; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows.grid-rows-zebra .grid-row:nth-child(even) {
+    background-color: #3C4655; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
+    display: inline-block;
+    width: 68%;
+    padding: 1%;
+    word-wrap: break-word; }
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
+      width: 28%; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
+    display: none;
+    font-weight: bold; }
+
+.grid-data .grid-content-wrap .grid-content .grid-cards-wrap {
+  display: none; }
+  .grid-data .grid-content-wrap .grid-content .grid-cards-wrap.active {
+    display: block; }
+
+@media only screen and (min-width: 1025px) {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
+    display: block; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-header {
+    display: none; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
+    width: 100%;
+    padding: 0; }
+    .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.data-title {
+      display: none; }
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
+    display: block; } }
+
+.grid-data-basic {
+  background-color: lightgray;
+  padding: 10px; }
+  .grid-data-basic .grid-header-wrap .grid-header {
+    background-color: #3C4655;
+    color: #96B0D6;
+    padding: 0.25em 10px;
+    text-align: right;
+    min-height: 2em; }
+    .grid-data-basic .grid-header-wrap .grid-header .grid-header-content {
+      display: inline-block;
+      float: left;
+      padding: 0.25em 0.5em; }
+  .grid-data-basic .grid-footer-wrap .grid-footer {
+    background-color: #3C4655;
+    color: #96B0D6;
+    padding: 0.25em 10px;
+    text-align: right;
+    min-height: 2em; }
+    .grid-data-basic .grid-footer-wrap .grid-footer .grid-footer-info {
+      display: inline-block;
+      float: left;
+      padding: 0.25em 0.5em; }
+  .grid-data-basic .grid-rows-wrap .grid-rows {
+    margin: 10px 0; }
+    .grid-data-basic .grid-rows-wrap .grid-rows .avatar {
+      width: 48px; }
+
+/**********************************************************************
+Description: It defines the styles of the table grid components forming the grid using html tables.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for data table components as listed below:
+
+* Table Grid  - The barebone grid class with minimum styles common for all the table grids.
+*
+* Basic       - The basic data grid having default coloring.
+***********************************************************************/
+.grid-table .grid-table-header {
+  display: none; }
+
+.grid-table .grid-table-rows.grid-table-rows-zebra .grid-table-row:nth-child(even) {
+  background-color: #F2F2F2; }
+
+.grid-table .grid-table-rows .grid-table-row .grid-table-row-data .data {
+  display: inline-block;
+  width: 68%;
+  padding: 1%;
+  word-wrap: break-word; }
+  .grid-table .grid-table-rows .grid-table-row .grid-table-row-data .data.title {
+    width: 28%; }
+
+.grid-table .grid-table-footer {
+  display: none; }
+
+@media only screen and (min-width: 1025px) {
+  .grid-table .grid-table-header {
+    display: block; }
+  .grid-table .grid-table-rows .grid-table-row .grid-table-row-header {
+    display: none; }
+  .grid-table .grid-table-rows .grid-table-row .grid-table-row-data .data {
+    width: 100%;
+    padding: 0; }
+    .grid-table .grid-table-rows .grid-table-row .grid-table-row-data .data.title {
+      display: none; }
+  .grid-table .grid-table-footer {
+    display: block; } }
+
+.grid-table-basic {
+  background-color: lightgray; }
+  .grid-table-basic .grid-table-header {
+    background-color: #3C4655;
+    color: #96B0D6;
+    padding: 0.25em 0.25rem;
+    text-align: left; }
+  .grid-table-basic .grid-table-rows {
+    border: 1px solid #3C4655; }
+    .grid-table-basic .grid-table-rows .avatar {
+      width: 48px; }
+    .grid-table-basic .grid-table-rows .grid-table-row {
+      padding: 0.25em 0.25rem;
+      border-bottom: 1px solid #3C4655; }
+      .grid-table-basic .grid-table-rows .grid-table-row:last-child {
+        border-bottom: none; }
+  .grid-table-basic .grid-table-footer {
+    background-color: #3C4655;
+    color: #96B0D6;
+    padding: 0.25em 0.25rem;
+    text-align: left; }
 
 /**********************************************************************
 Description: It defines the styles of the blog components used to show blog posts on recent, popular, similar and
@@ -6943,10 +7008,10 @@ Details: It defines the styles of blog post as listed below:
 *                 and author details.
 * Basic Single  - Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
 ***********************************************************************/
-.post-wrap .post-banner > .texture {
+.post .post-banner > .texture {
   z-index: 10; }
 
-.post-wrap .post-banner .post-title {
+.post .post-banner .post-title {
   z-index: 20; }
 
 .post-basic {

@@ -119,13 +119,6 @@ Details: It defines the styles for data grid components as listed below:
 					display: block;
 				}
 
-				&.grid-rows-zebra {
-
-					.grid-row:nth-child( even ) {
-						background-color: $color-secondary;
-					}
-				}
-
 				// rows header hidden for mobile
 				.grid-rows-header {
 					display: none;
@@ -133,6 +126,13 @@ Details: It defines the styles for data grid components as listed below:
 				}
 
 				.grid-rows {
+
+					&.grid-rows-zebra {
+
+						.grid-row:nth-child( even ) {
+							background-color: $color-secondary;
+						}
+					}
 
 					.grid-row {
 
@@ -267,42 +267,51 @@ Details: It defines the styles for data grid components as listed below:
 	padding: 10px;
 
 	// Grid Header
-	.grid-header {
-		background-color: $color-secondary;
-		color: $color-secondary-text;
-		padding: 0.25em 10px;
-		text-align: right;
-		min-height: 2em;
+	.grid-header-wrap {
 
-		.grid-header-content {
-			display: inline-block;
-			float: left;
-			padding: 0.25em 0.5em;
+		.grid-header {
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			padding: 0.25em 10px;
+			text-align: right;
+			min-height: 2em;
+
+			.grid-header-content {
+				display: inline-block;
+				float: left;
+				padding: 0.25em 0.5em;
+			}
 		}
 	}
 
 	// Grid Footer
-	.grid-footer {
-		background-color: $color-secondary;
-		color: $color-secondary-text;
-		padding: 0.25em 10px;
-		text-align: right;
-		min-height: 2em;
+	.grid-footer-wrap {
 
-		.grid-footer-info {
-			display: inline-block;
-			float: left;
-			padding: 0.25em 0.5em;
+		.grid-footer {
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			padding: 0.25em 10px;
+			text-align: right;
+			min-height: 2em;
+
+			.grid-footer-info {
+				display: inline-block;
+				float: left;
+				padding: 0.25em 0.5em;
+			}
 		}
 	}
 
 	// Grid Rows
-	.grid-rows {
-		margin: 10px 0;
+	.grid-rows-wrap {
 
-		// Avatar in grid rows
-		.avatar {
-			width: 48px;
+		.grid-rows {
+			margin: 10px 0;
+
+			// Avatar in grid rows
+			.avatar {
+				width: 48px;
+			}
 		}
 	}
 }
