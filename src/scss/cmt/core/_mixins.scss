@@ -1144,6 +1144,14 @@ Notes:
 		@include border( $size-default, solid, $color-border );
 	}
 
+	&.border-default-l {
+		@include border( $size-default, solid, $color-border-d );
+	}
+
+	&.border-default-d {
+		@include border( $size-default, solid, $color-border-l );
+	}
+
 	&.border-small {
 		@include border( $size-small, solid, $color-border );
 	}

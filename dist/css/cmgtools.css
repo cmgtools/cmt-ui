@@ -884,6 +884,12 @@ Notes:
 .border.border-default {
   border: 1px solid #7F7F7F; }
 
+.border.border-default-l {
+  border: 1px solid #595959; }
+
+.border.border-default-d {
+  border: 1px solid #A5A5A5; }
+
 .border.border-small {
   border: 3px solid #7F7F7F; }
 
@@ -4407,6 +4413,44 @@ a.btn {
 .list-radio label {
   width: auto;
   clear: none; }
+
+.splitter {
+  margin: 0 auto; }
+  .splitter.splitter-h {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #7F7F7F; }
+    .splitter.splitter-h.splitter-h-25 {
+      width: 25%; }
+    .splitter.splitter-h.splitter-h-50 {
+      width: 50%; }
+    .splitter.splitter-h.splitter-h-75 {
+      width: 75%; }
+    .splitter.splitter-h.splitter-h-80 {
+      width: 80%; }
+    .splitter.splitter-h.splitter-h-small {
+      width: 25px; }
+    .splitter.splitter-h.splitter-h-medium {
+      width: 50px; }
+    .splitter.splitter-h.splitter-h-large {
+      width: 150px; }
+  .splitter.splitter-v {
+    border-right: 1px solid #7F7F7F;
+    width: 1px; }
+    .splitter.splitter-v.splitter-v-25 {
+      height: 25%; }
+    .splitter.splitter-v.splitter-v-50 {
+      height: 50%; }
+    .splitter.splitter-v.splitter-v-75 {
+      height: 75%; }
+    .splitter.splitter-v.splitter-v-80 {
+      height: 80%; }
+    .splitter.splitter-v.splitter-v-small {
+      height: 125px; }
+    .splitter.splitter-v.splitter-v-medium {
+      height: 250px; }
+    .splitter.splitter-v.splitter-v-large {
+      height: 500px; }
 
 /**********************************************************************
 Description: It defines the styles of form elements for CMT-UI css framework.
