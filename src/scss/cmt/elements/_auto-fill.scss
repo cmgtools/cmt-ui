@@ -1,3 +1,17 @@
+/**********************************************************************
+Description: It defines the styles of auto fill elements available in CMT-UI css framework. These
+			 elements require Javascript/JQuery to populate the suggestions.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Auto Fill       - The auto fill element shows suggestion.
+*
+* Auto Suggest    - The auto suggest class turns an input field to auto-suggest field. It depends on cmtAutoSuggest
+*                   jQuery plugin available in CMT-JS framework.
+***********************************************************************/
+
 // == Structure - Auto Fill =========
 
 // It can use auto mapper component to show mappings.
@@ -66,6 +80,41 @@
 					background-color: $color-primary-d;
 					color: $color-primary-text-d;
 				}
+			}
+		}
+	}
+}
+
+// == Auto Suggest ==================
+
+// TODO: Update it to match with the auto fill structure and also check spinner positioning for fields with(left, right) or without icon.
+
+.auto-suggest {
+	position: relative;
+
+	.wrap-auto-list {
+		position: absolute;
+		top: 2em;
+		left: 0;
+		display: none;
+		width: 100%;
+		z-index: 1000000;
+		background-color: $color-primary-d;
+		color: $color-primary-text-d;
+
+		.list-item, li {
+			background-color: $color-primary-d;
+			color: $color-primary-text-d;
+			cursor: pointer;
+
+			&:nth-child(even) {
+				background-color: $color-primary-l;
+				color: $color-primary-text-l;
+			}
+
+			&:hover {
+				background-color: $color-secondary;
+				color: $color-secondary-text;
 			}
 		}
 	}

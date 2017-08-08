@@ -352,6 +352,21 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 	@include rounded-left( $size-medium );
 }
 
+.frm-rounded-all .frm-icon-element {
+
+	.icon, .cmti, .fa {
+		@include rounded-left( $size-medium );
+	}
+
+	&.icon-right {
+
+		.icon, .cmti, .fa {
+			@include rounded-left( 0 );
+			@include rounded-right( $size-medium );
+		}
+	}
+}
+
 // Ignore 100% width behavior for form elements
 .frm-ignore-100 {
 

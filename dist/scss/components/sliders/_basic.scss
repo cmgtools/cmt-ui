@@ -46,14 +46,16 @@ Details: It defines the styles of cmt slider as listed below:
 
 	.cmt-slider-control {
 		cursor: pointer;
-		position: relative;
+		position: absolute;
 
 		&.cmt-slider-control-left {
-			float: left;
+			top: 0;
+			left: 0;
 		}
 
 		&.cmt-slider-control-right {
-			float: right;
+			top: 0;
+			right: 0;
 		}
 	}
 }
@@ -81,29 +83,14 @@ Details: It defines the styles of cmt slider as listed below:
 	}
 
 	.cmt-slider-control {
-		color: $color-tertiary;
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
 		top: 35px;
 		width: 64px;
 		height: 80px;
 
-		&.cmt-slider-control-left {
-			float: left;
-			left: 0;
-			background-color: $color-tertiary;
-
-			&:hover {
-				background-color: $color-tertiary-l;
-			}
-		}
-
-		&.cmt-slider-control-right {
-			float: right;
-			right: 0;
-			background-color: $color-tertiary;
-
-			&:hover {
-				background-color: $color-tertiary-l;
-			}
+		&:hover {
+			background-color: $color-tertiary-l;
 		}
 
 		&.cmt-slider-control-bkg {

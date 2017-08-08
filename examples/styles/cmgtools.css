@@ -1415,6 +1415,13 @@ Details: It defines the transition mixins and default implementation as listed b
   -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
   transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s; }
 
+.transit-background {
+  -moz-transition: background 350ms ease-in-out 0s;
+  -ms-transition: background 350ms ease-in-out 0s;
+  -o-transition: background 350ms ease-in-out 0s;
+  -webkit-transition: background 350ms ease-in-out 0s;
+  transition: background 350ms ease-in-out 0s; }
+
 .transit-padding {
   -moz-transition: padding 350ms ease-out 0s;
   -ms-transition: padding 350ms ease-out 0s;
@@ -3852,14 +3859,14 @@ Details: It defines the custom element styles as listed below:
 *
 * Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
 *
-* Auto Suggest    - The auto suggest class turns an input field to auto-suggest field. It depends on cmtAutoSuggest
-*                   jQuery plugin available in CMT-JS framework.
-*
 * Button          - This class turns an element into button and does not need any JS to work.
 *
 * Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
 *                   parent element must use positioning i.e. absolute, relative etc in order to place group at
 *                   appropriate postion.
+*
+* Splitter		  - The splitters can be used to split an element either vertically or horizontally.
+*
 ***********************************************************************/
 .icon-picker-wrap {
   width: 100%; }
@@ -4041,7 +4048,8 @@ Details: It defines the custom element styles as listed below:
     padding-right: 0.60em;
     margin: 0; }
 
-.cmt-choice input[type=checkbox], .cmt-choice input[type=radio] {
+.cmt-choice input[type=checkbox],
+.cmt-choice input[type=radio] {
   cursor: pointer;
   display: none; }
 
@@ -4052,10 +4060,12 @@ Details: It defines the custom element styles as listed below:
 .cmt-choice .label {
   margin-top: 0.25em; }
 
-.cmt-choice input[type=checkbox] + .label.pad-label::before, .cmt-choice input[type=radio] + .label.pad-label::before {
+.cmt-choice input[type=checkbox] + .label.pad-label::before,
+.cmt-choice input[type=radio] + .label.pad-label::before {
   margin-right: 8px; }
 
-.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=checkbox] + .label::before {
+.cmt-choice input[type=checkbox] + .label::before,
+.cmt-choice input[type=radio] + .label::before {
   font-family: "cmti-core";
   font-weight: normal;
   color: gray;
@@ -4065,21 +4075,26 @@ Details: It defines the custom element styles as listed below:
   margin-top: -5px;
   line-height: 13px; }
 
-.cmt-choice input[type=checkbox]:checked, .cmt-choice input[type=radio]:checked, .cmt-choice input[type=checkbox]:focus, .cmt-choice input[type=radio]:focus {
+.cmt-choice input[type=checkbox]:checked, .cmt-choice input[type=checkbox]:focus,
+.cmt-choice input[type=radio]:checked, .cmt-choice input[type=radio]:focus {
   outline: none !important; }
 
-.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-choice input[type=radio]:checked + .label::before {
+.cmt-choice input[type=checkbox]:checked + .label::before,
+.cmt-choice input[type=radio]:checked + .label::before {
   display: inline-block;
   background-color: #F5F8FC;
   color: #E74343; }
 
-.cmt-choice input[type=checkbox]:checked + .label, .cmt-choice input[type=radio]:checked + .label {
+.cmt-choice input[type=checkbox]:checked + .label,
+.cmt-choice input[type=radio]:checked + .label {
   color: #b51717; }
 
-.cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=radio] + .label:hover::before {
+.cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=checkbox]:checked + .label::before,
+.cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=radio] + .label:hover::before, .cmt-choice input[type=radio]:checked + .label::before {
   color: #FF3636; }
 
-.cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
+.cmt-choice input[type=checkbox]:disabled + .label::before,
+.cmt-choice input[type=radio]:disabled + .label::before {
   background-color: #DDD !important;
   color: #BBB; }
 
@@ -4168,28 +4183,6 @@ Details: It defines the custom element styles as listed below:
     background-color: #7CAA2D; }
   .cmt-switch .cmt-toggle-round:checked + label:after {
     margin-left: 3.5em; }
-
-.auto-suggest {
-  position: relative; }
-  .auto-suggest .wrap-auto-list {
-    position: absolute;
-    top: 2em;
-    left: 0;
-    display: none;
-    width: 100%;
-    z-index: 1000000;
-    background-color: lightgray;
-    color: #555555; }
-    .auto-suggest .wrap-auto-list .list-item, .auto-suggest .wrap-auto-list li {
-      background-color: lightgray;
-      color: #555555;
-      cursor: pointer; }
-      .auto-suggest .wrap-auto-list .list-item:nth-child(even), .auto-suggest .wrap-auto-list li:nth-child(even) {
-        background-color: white;
-        color: #171717; }
-      .auto-suggest .wrap-auto-list .list-item:hover, .auto-suggest .wrap-auto-list li:hover {
-        background-color: #3C4655;
-        color: #96B0D6; }
 
 .btn.btn-auto {
   width: auto; }
@@ -4405,15 +4398,6 @@ a.btn {
   .btn-group > .edit:hover, .btn-group > .save:hover, .btn-group > .delete:hover {
     color: #FF3636; }
 
-.cmt-click {
-  cursor: pointer; }
-  .cmt-click.disabled {
-    cursor: default; }
-
-.list-radio label {
-  width: auto;
-  clear: none; }
-
 .splitter {
   margin: 0 auto; }
   .splitter.splitter-h {
@@ -4451,6 +4435,15 @@ a.btn {
       height: 250px; }
     .splitter.splitter-v.splitter-v-large {
       height: 500px; }
+
+.cmt-click {
+  cursor: pointer; }
+  .cmt-click.disabled {
+    cursor: default; }
+
+.list-radio label {
+  width: auto;
+  clear: none; }
 
 /**********************************************************************
 Description: It defines the styles of form elements for CMT-UI css framework.
@@ -4720,6 +4713,31 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   -khtml-border-radius-top-left: 5px;
   -khtml-border-radius-bottom-left: 5px; }
 
+.frm-rounded-all .frm-icon-element .icon, .frm-rounded-all .frm-icon-element .cmti, .frm-rounded-all .frm-icon-element .fa {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  border-radius: 5px 0 0 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px; }
+
+.frm-rounded-all .frm-icon-element.icon-right .icon, .frm-rounded-all .frm-icon-element.icon-right .cmti, .frm-rounded-all .frm-icon-element.icon-right .fa {
+  -moz-border-radius-top-left: 0;
+  -moz-border-radius-bottom-left: 0;
+  -webkit-border-radius-top-left: 0;
+  -webkit-border-radius-bottom-left: 0;
+  border-radius: 0 0 0 0;
+  -khtml-border-radius-top-left: 0;
+  -khtml-border-radius-bottom-left: 0;
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px; }
+
 .frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
 .frm-ignore-100 .btn, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
   float: none;
@@ -4981,6 +4999,19 @@ Details: It defines the styles for mapper components as listed below:
     padding: 0.5rem;
     margin-right: 0.5rem; }
 
+/**********************************************************************
+Description: It defines the styles of auto fill elements available in CMT-UI css framework. These
+			 elements require Javascript/JQuery to populate the suggestions.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Auto Fill       - The auto fill element shows suggestion.
+*
+* Auto Suggest    - The auto suggest class turns an input field to auto-suggest field. It depends on cmtAutoSuggest
+*                   jQuery plugin available in CMT-JS framework.
+***********************************************************************/
 .auto-fill {
   position: relative; }
   .auto-fill .auto-fill-source {
@@ -5004,6 +5035,28 @@ Details: It defines the styles for mapper components as listed below:
   .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-message {
     background-color: lightgray;
     color: #555555; }
+
+.auto-suggest {
+  position: relative; }
+  .auto-suggest .wrap-auto-list {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    display: none;
+    width: 100%;
+    z-index: 1000000;
+    background-color: lightgray;
+    color: #555555; }
+    .auto-suggest .wrap-auto-list .list-item, .auto-suggest .wrap-auto-list li {
+      background-color: lightgray;
+      color: #555555;
+      cursor: pointer; }
+      .auto-suggest .wrap-auto-list .list-item:nth-child(even), .auto-suggest .wrap-auto-list li:nth-child(even) {
+        background-color: white;
+        color: #171717; }
+      .auto-suggest .wrap-auto-list .list-item:hover, .auto-suggest .wrap-auto-list li:hover {
+        background-color: #3C4655;
+        color: #96B0D6; }
 
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.
@@ -5814,11 +5867,13 @@ Details: It defines the styles of cmt slider as listed below:
         overflow: hidden; }
   .cmt-slider .cmt-slider-control {
     cursor: pointer;
-    position: relative; }
+    position: absolute; }
     .cmt-slider .cmt-slider-control.cmt-slider-control-left {
-      float: left; }
+      top: 0;
+      left: 0; }
     .cmt-slider .cmt-slider-control.cmt-slider-control-right {
-      float: right; }
+      top: 0;
+      right: 0; }
 
 .cmt-slider-basic {
   margin: 0px auto;
@@ -5832,22 +5887,13 @@ Details: It defines the styles of cmt slider as listed below:
       color: #96B0D6;
       text-align: center; }
   .cmt-slider-basic .cmt-slider-control {
-    color: #87BA45;
+    background-color: #87BA45;
+    color: #E6E6E6;
     top: 35px;
     width: 64px;
     height: 80px; }
-    .cmt-slider-basic .cmt-slider-control.cmt-slider-control-left {
-      float: left;
-      left: 0;
-      background-color: #87BA45; }
-      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-left:hover {
-        background-color: #a4cb72; }
-    .cmt-slider-basic .cmt-slider-control.cmt-slider-control-right {
-      float: right;
-      right: 0;
-      background-color: #87BA45; }
-      .cmt-slider-basic .cmt-slider-control.cmt-slider-control-right:hover {
-        background-color: #a4cb72; }
+    .cmt-slider-basic .cmt-slider-control:hover {
+      background-color: #a4cb72; }
     .cmt-slider-basic .cmt-slider-control.cmt-slider-control-bkg {
       background-image: url("../images/slider-arrow.png");
       background-repeat: none;
@@ -5931,7 +5977,7 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for mapper components as listed below:
 
-* Gallery     - The gallery component defines the barebone classes required to display gallery.
+* Gallery     - The gallery component defines the barebone classes required to display image gallery.
 *
 * Basic       - The basic gallery display items with flipper.
 

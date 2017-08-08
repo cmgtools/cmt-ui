@@ -105,6 +105,15 @@ $transit-time-large: 450ms;
 	transition: color $duration $transit $delay, background-color $duration $transit $delay;
 }
 
+// Background transitions
+@mixin transit-background( $transit, $duration, $delay: 0s ) {
+	-moz-transition: background $duration $transit $delay;
+	-ms-transition: background $duration $transit $delay;
+	-o-transition: background $duration $transit $delay;
+	-webkit-transition: background $duration $transit $delay;
+	transition: background $duration $transit $delay;
+}
+
 // Padding transition
 @mixin transit-padding( $transit, $duration, $delay: 0s ) {
 	-moz-transition: padding $duration $transit-eo $delay;
@@ -181,6 +190,11 @@ $transit-time-large: 450ms;
 // Text and Background Color transitions
 .transit-color-bkg-color {
 	@include transit-color-bkg-color( $transit-eio, $transit-time-medium );
+}
+
+// Background transition
+.transit-background {
+	@include transit-background( $transit-eio, $transit-time-medium );
 }
 
 // Padding transition

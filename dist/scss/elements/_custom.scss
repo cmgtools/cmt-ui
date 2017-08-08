@@ -21,14 +21,14 @@ Details: It defines the custom element styles as listed below:
 *
 * Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
 *
-* Auto Suggest    - The auto suggest class turns an input field to auto-suggest field. It depends on cmtAutoSuggest
-*                   jQuery plugin available in CMT-JS framework.
-*
 * Button          - This class turns an element into button and does not need any JS to work.
 *
 * Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
 *                   parent element must use positioning i.e. absolute, relative etc in order to place group at
 *                   appropriate postion.
+*
+* Splitter		  - The splitters can be used to split an element either vertically or horizontally.
+*
 ***********************************************************************/
 
 // == Icon Picker ===================
@@ -280,7 +280,8 @@ Details: It defines the custom element styles as listed below:
 
 .cmt-choice {
 
-	input[type=checkbox], input[type=radio] {
+	input[type=checkbox],
+	input[type=radio] {
 		cursor: pointer;
 		display: none;
 	}
@@ -294,11 +295,15 @@ Details: It defines the custom element styles as listed below:
 		margin-top: 0.25em;
 	}
 
-	input[type=checkbox] + .label.pad-label::before, input[type=radio] + .label.pad-label::before {
+	// Normal State
+
+	input[type=checkbox] + .label.pad-label::before,
+	input[type=radio] + .label.pad-label::before {
 		margin-right: 8px;
 	}
 
-	input[type=radio]+.label::before, input[type=checkbox]+.label::before {
+	input[type=checkbox]+.label::before,
+	input[type=radio]+.label::before {
 		font-family: "cmti-core";
 		font-weight: normal;
 		color: gray;
@@ -309,28 +314,41 @@ Details: It defines the custom element styles as listed below:
 		line-height: 13px;
 	}
 
-	input[type=checkbox]:checked, input[type=radio]:checked, input[type=checkbox]:focus, input[type=radio]:focus {
+	// Checked State
+
+	input[type=checkbox]:checked, input[type=checkbox]:focus,
+	input[type=radio]:checked, input[type=radio]:focus {
 		outline:none !important;
 	}
 
-	input[type=checkbox]:checked + .label::before, input[type=radio]:checked + .label::before {
+	input[type=checkbox]:checked + .label::before,
+	input[type=radio]:checked + .label::before {
 		display: inline-block;
 		background-color: #F5F8FC;
 		color: $color-btn;
 	}
 
-	input[type=checkbox]:checked + .label, input[type=radio]:checked + .label {
+	input[type=checkbox]:checked + .label,
+	input[type=radio]:checked + .label {
 		color: $color-btn-a;
 	}
 
-	input[type=checkbox]:hover + .label::before, input[type=radio]:hover + .label::before, input[type=checkbox] + .label:hover::before, input[type=radio] + .label:hover::before {
+	// Hover State - Normal, Checked
+
+	input[type=checkbox]:hover + .label::before, input[type=checkbox] + .label:hover::before, input[type=checkbox]:checked + .label::before,
+	input[type=radio]:hover + .label::before, input[type=radio] + .label:hover::before, input[type=radio]:checked + .label::before {
 		color: $color-btn-h;
 	}
 
-	input[type=checkbox]:disabled + .label::before, input[type=radio]:disabled + .label::before {
+	// Disabled State
+
+	input[type=checkbox]:disabled + .label::before,
+	input[type=radio]:disabled + .label::before {
 		background-color: #DDD !important;
 		color: #BBB;
 	}
+
+	// Display Content - Icon
 
 	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
 		content: "\e0a2";
@@ -456,41 +474,6 @@ Details: It defines the custom element styles as listed below:
 
 	.cmt-toggle-round:checked + label:after {
 		margin-left: 3.5em;
-	}
-}
-
-// == Auto Suggest ==================
-
-// TODO: Check spinner positioning
-
-.auto-suggest {
-	position: relative;
-
-	.wrap-auto-list {
-		position: absolute;
-		top: 2em;
-		left: 0;
-		display: none;
-		width: 100%;
-		z-index: 1000000;
-		background-color: $color-primary-d;
-		color: $color-primary-text-d;
-
-		.list-item, li {
-			background-color: $color-primary-d;
-			color: $color-primary-text-d;
-			cursor: pointer;
-
-			&:nth-child(even) {
-				background-color: $color-primary-l;
-				color: $color-primary-text-l;
-			}
-
-			&:hover {
-				background-color: $color-secondary;
-				color: $color-secondary-text;
-			}
-		}
 	}
 }
 
@@ -814,23 +797,7 @@ a.btn {
 	}
 }
 
-// == Additionals ===================
-
-.cmt-click {
-	cursor: pointer;
-
-	&.disabled {
-		cursor: default;
-	}
-}
-
-.list-radio {
-
-	label {
-		width: auto;
-		clear: none;
-	}
-}
+// == Splitter ======================
 
 .splitter {
 	margin: 0 auto;
@@ -900,5 +867,23 @@ a.btn {
 		&.splitter-v-large {
 			height: 500px;
 		}
+	}
+}
+
+// == Additionals ===================
+
+.cmt-click {
+	cursor: pointer;
+
+	&.disabled {
+		cursor: default;
+	}
+}
+
+.list-radio {
+
+	label {
+		width: auto;
+		clear: none;
 	}
 }
