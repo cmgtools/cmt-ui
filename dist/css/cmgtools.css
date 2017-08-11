@@ -4960,6 +4960,8 @@ Details: It defines the styles for mapper components as listed below:
 *
 * Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
 *
+* Action	  - The action mapper will allow users to toggle each item individually by click.
+*
 ***********************************************************************/
 .mapper {
   position: relative; }
@@ -4994,6 +4996,15 @@ Details: It defines the styles for mapper components as listed below:
   width: 100%;
   margin: 0 auto; }
   .mapper-submit .mapper-items .mapper-item {
+    background-color: #3C4655;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem; }
+
+.mapper-action {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-action .mapper-items .mapper-item {
     background-color: #3C4655;
     display: inline-block;
     padding: 0.5rem;
