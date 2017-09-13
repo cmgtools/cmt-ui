@@ -4561,7 +4561,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
     color: #FFFFFF; }
   .btn:disabled, .btn-icon:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
     background-color: gray;
-    color: #363636; }
+    color: #363636;
+    cursor: default; }
 
 label {
   text-align: left;

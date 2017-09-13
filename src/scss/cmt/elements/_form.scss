@@ -138,6 +138,7 @@ form {
 	&:disabled {
 		background-color: $color-btn-d;
 		color: $color-btn-text-d;
+		cursor: default;
 	}
 }
 
