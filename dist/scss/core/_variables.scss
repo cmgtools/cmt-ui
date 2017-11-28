@@ -139,7 +139,8 @@ $font-size-10: 0.50em;
 //$font-size-8: 0.87em;
 //$font-size-9: 0.76em;
 
-// Standard screen sizes -
+// Standard screen sizes
+
 // Mobiles
 $screen-mobile-small: 320px;
 $screen-mobile-large: 480px;
@@ -153,15 +154,17 @@ $screen-desktop-small: 1280px;
 $screen-desktop-medium: 1360px;
 $screen-desktop-large: 1600px;
 $screen-desktop-xlarge: 1920px;
+$screen-desktop-xxlarge: 3840px;
+$screen-desktop-xxxlarge: 4096px;
 
 // Standard size for element's radius, border, shadow, padding, margin
 $size-default-px: 1px;
 $size-small-px: 3px;
 $size-medium-px: 5px;
-$size-large-px: 10px;
-$size-xlarge-px: 14px;
-$size-xxlarge-px: 24px;
-$size-xxxlarge-px: 48px;
+$size-large-px: 8px;
+$size-xlarge-px: 13px;
+$size-xxlarge-px: 21px;
+$size-xxxlarge-px: 34px;
 
 // Size in em
 $size-default-em: 0.5em;
@@ -169,8 +172,8 @@ $size-small-em: 1em;
 $size-medium-em: 2em;
 $size-large-em: 3em;
 $size-xlarge-em: 5em;
-$size-xxlarge-em: 10em;
-$size-xxxlarge-em: 15em;
+$size-xxlarge-em: 8em;
+$size-xxxlarge-em: 13em;
 
 // Size in rem
 $size-default-rem: 0.5rem;
@@ -178,8 +181,8 @@ $size-small-rem: 1rem;
 $size-medium-rem: 2rem;
 $size-large-rem: 3rem;
 $size-xlarge-rem: 5rem;
-$size-xxlarge-rem: 10rem;
-$size-xxxlarge-rem: 15rem;
+$size-xxlarge-rem: 8rem;
+$size-xxxlarge-rem: 13rem;
 
 // Theme sizes
 $size-default: $size-default-px;
