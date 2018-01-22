@@ -1,364 +1,595 @@
 /**********************************************************************
-Description: It defines the grid system and basic containers for CMGTools.
+Description: This file define the grid system and basic containers of CMT-UI css framework.
+
 Dependencies: variables, mixins
+
+Details: It defines the grid system and basic containers as listed below:
+* Row               - The row is the primary class of grid system. It can cover either 100% width
+*                     or specified width keeping itself at center of parent element. A row can also be declared
+*                     to have all columns inline irrespective of their float.
+* Column            - The column system can form either 12 column or 15 column grid with or without margin
+*                     seperating each column. The columns without margin can be implemented using full column
+*                     classes.
+* Column Filler     - The filler column can be used to make a column with full height in case it's background
+*                     color is different from other columns in same grid. The filler column will act as placeholder
+*                     and fill the background of smaller column in order to have all the columns appear as full
+*                     columns with same height and with different background color.
+* Container         - The container is placeholder for content. The content can also be wrapped within content wrapper.
+*                     This section also explain the possible arrangements for page header, footer, sidebar and content
+*                     within main container.
+* Content           - The content classes can be used to align content by occupying full or partial width. The classes
+*                     also include classes to arrange content within container or parent element.
 ***********************************************************************/
 
-/* Grid System ********************* */
+// == Grid System ===================
 
 // Responsive Row - Aligned middle by default
 .row {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	@extend %clearfix;
 
-    &.row-small {
-        width: 25%;
-    }
+	&.row-small {
+		width: 25%;
+	}
 
-    &.row-medium {
-        width: 50%;
-    }
+	&.row-medium {
+		width: 50%;
+	}
 
-    &.row-large {
-        width: 80%;
-    }
+	&.row-large {
+		width: 80%;
+	}
 
-    &.row-xlarge {
-        width: 90%;
-    }
+	&.row-xlarge {
+		width: 90%;
+	}
 
-    &.row-inline {
-        text-align: center;
+	&.row-inline {
+		text-align: center;
 
-        .col, .colf {
-            display: inline-block !important;
-            float: none !important;
-        }
+		&.row-inline-left {
+			text-align: left;
+		}
 
-        // fix for width issue
-        .col3 {
-            width: 30%;
-        }
+		&.row-inline-right {
+			text-align: right;
+		}
 
-        @include responsive-max( screen-tablet-large ) {
+		& >.col, & >.colf {
+			display: inline-block !important;
+			float: none !important;
+		}
 
-            &.max-cols-50 {
+		// fix cols for width issue
+		& >.col3 {
+			width: 30%;
+		}
 
-                & >.col3 {
-                    width: 47%;
-                }
-            }
+		& >.col4 {
+			width: 22.5%;
+		}
 
-            &.max-cols-100 {
+		& >.col5 {
+			width: 17%;
+		}
 
-                & >.col3 {
-                    width: 98%;
-                }
-            }
-        }
+		@include responsive-max( screen-tablet-large ) {
 
-        @include responsive-max( screen-mobile-large ) {
+			&.max-cols-50 {
 
-            &.max-cols-50, &.max-cols-100 {
+				& >.col3, & >.col4, & >.col5 {
+					width: 47%;
+				}
+			}
 
-                & >.col3 {
-                    width: 98%;
-                }
-            }
-        }
-    }
+			&.max-cols-100 {
+
+				& >.col3, & >.col4, & >.col5 {
+					width: 98%;
+				}
+			}
+		}
+
+		@include responsive-max( screen-mobile-large ) {
+
+			&.max-cols-50, &.max-cols-100 {
+
+				& >.col3, & >.col4, & >.col5 {
+					width: 98%;
+				}
+			}
+		}
+	}
 }
 
 // Responsive Columns
 
 %col {
-    display: block;
-    float:left;
-    margin: 0.5rem 1%;
-    word-wrap: break-word;
+	display: block;
+	float:left;
+	margin: 0 1%;
+	word-wrap: break-word;
+	min-height: 1px;
 }
 
-// generic column - it does not relate with col width
+// generic column
 .col { @extend %col; }
 
 // 12 col system
 
-.col1 { @extend %col; width: 98%; }
-.col2 { @extend %col; width: 48%; }
-.col3 { @extend %col; width: 31.33333%; }
-.col4 { @extend %col; width: 23%; }
-.col5 { @extend %col; width: 18%; }
-.col6 { @extend %col; width: 14.66666%; }
-.col7 { @extend %col; width: 12.28571%; }
-.col8 { @extend %col; width: 10.5%; }
-.col9 { @extend %col; width:  9.11111%; }
-.col10 { @extend %col; width: 8%; }
-.col11 { @extend %col; width: 7.09090%; }
-.col12 { @extend %col; width: 6.33333%; }
-
+.col1 { width: 98%; }
+.col2 { width: 48%; }
+.col3 { width: 31.33333%; }
+.col4 { width: 23%; }
+.col5 { width: 18%; }
+.col6 { width: 14.66666%; }
+.col7 { width: 12.28571%; }
+.col8 { width: 10.5%; }
+.col9 { width:  9.11111%; }
+.col10 { width: 8%; }
+.col11 { width: 7.09090%; }
+.col12 { width: 6.33333%; }
 
 // extended columns
 
 %col-small {
-    display: block;
-    float:left;
-    margin: 0.5rem 0.5%;
-    word-wrap: break-word;
+	display: block;
+	float:left;
+	margin: 0 0.5%;
+	word-wrap: break-word;
+	min-height: 1px;
 }
 
-.col13 { @extend %col-small; width: 6.69230%; }
-.col14 { @extend %col-small; width: 6.14285%; }
-.col15 { @extend %col-small; width: 5.66666%; }
+.col-small { @extend %col-small; }
+
+.col13 { width: 6.69230%; }
+.col14 { width: 6.14285%; }
+.col15 { width: 5.66666%; }
 
 // Full width rows and columns for mobiles and small tablets
 
 @include responsive-max( screen-tablet-large ) {
 
-    .row {
+	.row {
 
-        &.row-small, &.row-medium, &.row-large, &.row-xlarge {
-            width: 100%;
-        }
-    }
+		&.row-small, &.row-medium, &.row-large, &.row-xlarge {
+			width: 100%;
+		}
+	}
 
-    .max-cols-50 {
+	.max-cols-25 {
 
-        & >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
-            width: 48%;
-        }
+		& >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
+			width: 23%;
+		}
 
-        & >.col:nth-child( odd ) {
-            clear: both;
-        }
-    }
+		& >.col:nth-child( 4 ) {
+			clear: both;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-50 {
 
-        & >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
-            width: 98%;
-        }
-    }
+		& >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
+			width: 48%;
+		}
+
+		& >.col:nth-child( odd ) {
+			clear: both;
+		}
+	}
+
+	.max-cols-100 {
+
+		& >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
+			width: 98%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-25, .max-cols-50, .max-cols-100 {
 
-        & >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
-            width: 98%;
-        }
-    }
+		& >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
+			width: 98%;
+		}
+	}
 }
 
 // Column multipliers
 
-.col3x2 { @extend %col; width: 64.666666%; }
-.col4x2 { @extend %col; width: 48%; }
-.col4x3 { @extend %col; width: 73%; }
-.col5x2 { @extend %col; width: 38%; }
-.col5x3 { @extend %col; width: 58%; }
-.col5x4 { @extend %col; width: 78%; }
-.col6x2 { @extend %col; width: 31.33332%;  }
-.col6x3 { @extend %col; width: 47.99998%;  }
-.col6x4 { @extend %col; width: 64.66664%;  }
-.col6x5 { @extend %col; width: 81.33330%;  }
-.col12x2 { @extend %col; width: 14.66666%; }
-.col12x3 { @extend %col; width: 22.99999%; }
-.col12x4 { @extend %col; width: 31.33332%; }
-.col12x5 { @extend %col; width: 39.66665%; }
-.col12x6 { @extend %col; width: 47.99993%; }
-.col12x7 { @extend %col; width: 56.33331%; }
-.col12x8 { @extend %col; width: 64.66664%; }
-.col12x9 { @extend %col; width: 72.99997%; }
-.col12x10 { @extend %col; width: 81.33333%; }
-.col12x11 { @extend %col; width: 89.66663%; }
-.col15x2 { @extend %col-small; width:12.33332%; }
-.col15x3 { @extend %col-small; width:18.99998%; }
-.col15x4 { @extend %col-small; width:25.66664%; }
-.col15x5 { @extend %col-small; width:32.33330%; }
-.col15x6 { @extend %col-small; width:38.99996%; }
-.col15x7 { @extend %col-small; width:45.66662%; }
-.col15x8 { @extend %col-small; width:52.33328%; }
-.col15x9 { @extend %col-small; width:58.99994%; }
-.col15x10 { @extend %col-small; width:65.66660%; }
-.col15x11 { @extend %col-small; width:72.33326%; }
-.col15x12 { @extend %col-small; width:78.99992%; }
-.col15x13 { @extend %col-small; width:85.66658%; }
-.col15x14 { @extend %col-small; width:92.33324%; }
+.col3x2 { width: 64.666666%; }
+
+.col4x2 { width: 48%; }
+.col4x3 { width: 73%; }
+
+.col5x2 { width: 38%; }
+.col5x3 { width: 58%; }
+.col5x4 { width: 78%; }
+
+.col6x2 { width: 31.33332%;  }
+.col6x3 { width: 47.99998%;  }
+.col6x4 { width: 64.66664%;  }
+.col6x5 { width: 81.33330%;  }
+
+.col12x2 { width: 14.66666%; }
+.col12x3 { width: 22.99999%; }
+.col12x4 { width: 31.33332%; }
+.col12x5 { width: 39.66665%; }
+.col12x6 { width: 47.99993%; }
+.col12x7 { width: 56.33331%; }
+.col12x8 { width: 64.66664%; }
+.col12x9 { width: 72.99997%; }
+.col12x10 { width: 81.33333%; }
+.col12x11 { width: 89.66663%; }
+
+// extended columns
+
+.col15x2 { width:12.33332%; }
+.col15x3 { width:18.99998%; }
+.col15x4 { width:25.66664%; }
+.col15x5 { width:32.33330%; }
+.col15x6 { width:38.99996%; }
+.col15x7 { width:45.66662%; }
+.col15x8 { width:52.33328%; }
+.col15x9 { width:58.99994%; }
+.col15x10 { width:65.66660%; }
+.col15x11 { width:72.33326%; }
+.col15x12 { width:78.99992%; }
+.col15x13 { width:85.66658%; }
+.col15x14 { width:92.33324%; }
 
 /* full width for mobile, tablet */
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-cols-50 {
+	.max-cols-25 {
 
-        & >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
-        & >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
-        & >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
-            width: 48%;
-        }
-    }
+		& >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
+		& >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
+		& >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
+			width: 23%;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-50 {
 
-        & >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
-        & >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
-        & >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
-            width: 98%;
-        }
-    }
+		& >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
+		& >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
+		& >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
+			width: 48%;
+		}
+	}
+
+	.max-cols-100 {
+
+		& >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
+		& >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
+		& >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
+			width: 98%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-25, .max-cols-50, .max-cols-100 {
 
-        & >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
-        & >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
-        & >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
-            width: 98%;
-        }
-    }
+		& >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
+		& >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
+		& >.col15x2, & >.col15x3, & >.col15x4, & >.col15x5, & >.col15x6, & >.col15x7, & >.col15x8, & >.col15x9, & >.col15x10, & >.col15x11, & >.col15x12, & >.col15x13, & >.col15x14 {
+			width: 98%;
+		}
+	}
+}
+
+// TODO: Test colc system before implementation
+
+// Col system having margin set to 0 to left most and right most. The cols must form a row and must not mix up i.e. only one type of columns allowed at a time.
+
+%colc {
+	display: block;
+	float:left;
+	margin: 0;
+	word-wrap: break-word;
+	min-height: 1px;
+}
+
+%colc-f-l {
+	margin: 0 1%;
+
+	&:first-child {
+		margin-left: 0;
+		margin-right: 1%;
+	}
+
+	&:last-child {
+		margin-left: 1%;
+		margin-right: 0;
+	}
+}
+
+// generic column
+.colc { @extend %colc; }
+
+// 12 col system
+
+.colc1 { width: 100%; }
+.colc2 { width: 49%; @extend %colc-f-l; }
+.colc3 { width: 32%; @extend %colc-f-l; }
+.colc4 { width: 23.5%; @extend %colc-f-l; }
+.colc5 { width: 18.4%; @extend %colc-f-l; }
+.colc6 { width: 15%; @extend %colc-f-l; }
+.colc7 { width: 12.57143%; @extend %colc-f-l; }
+.colc8 { width: 10.75%; @extend %colc-f-l; }
+.colc9 { width: 9.33333%; @extend %colc-f-l; }
+.colc10 { width: 8.2%; @extend %colc-f-l; }
+.colc11 { width: 7.27273%; @extend %colc-f-l; }
+.colc12 { width: 6.5%; @extend %colc-f-l; }
+
+@include responsive-max( screen-tablet-large ) {
+
+	.max-cols-50 {
+
+		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+			width: 48%;
+		}
+
+		& >.colc:nth-child( odd ) {
+			clear: both;
+		}
+	}
+
+	.max-cols-100 {
+
+		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+			width: 98%;
+		}
+	}
+}
+
+@include responsive-max( screen-mobile-large ) {
+
+	.max-cols-50, .max-cols-100 {
+
+		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
+			width: 98%;
+		}
+	}
+}
+
+.colc3x2 { width: 65.33333%; }
+
+.colc4x2 { width: 49%; }
+.colc4x3 { width: 73.5%; }
+
+@include responsive-max( screen-tablet-large ) {
+
+	.max-cols-50 {
+
+		& >.colc3x2, & >.colc4x2, & >.colc4x3,
+		& >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
+			width: 48%;
+		}
+	}
+
+	.max-cols-100 {
+
+		& >.colc3x2, & >.colc4x2, & >.colc4x3,
+		& >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
+			width: 98%;
+		}
+	}
+}
+
+@include responsive-max( screen-mobile-large ) {
+
+	.max-cols-50, .max-cols-100 {
+
+		& >.colc3x2, & >.colc4x2, & >.colc4x3,
+		& >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
+			width: 98%;
+		}
+	}
 }
 
 // Full Width Columns
 
 %colf {
-    display: block;
-    float:left;
-    margin: 0;
-    word-wrap: break-word;
+	display: block;
+	float:left;
+	margin: 0;
+	word-wrap: break-word;
+	min-height: 1px;
 }
 
 // generic column - it does not relate with col width
 .colf {
-    @extend %colf;
+	@extend %colf;
 }
 
 // 12 col system
 
-.colf1 { @extend %colf; width: 100%; }
-.colf2 { @extend %colf; width: 50%; }
-.colf3 { @extend %colf; width: 33.33333%; }
-.colf4 { @extend %colf; width: 25%; }
-.colf5 { @extend %colf; width: 20%; }
-.colf6 { @extend %colf; width: 16.66666%; }
-.colf7 { @extend %colf; width: 14.28571%; }
-.colf8 { @extend %colf; width: 12.5%; }
-.colf9 { @extend %colf; width:  11.11111%; }
-.colf10 { @extend %colf; width: 10%; }
-.colf11 { @extend %colf; width: 9.09090%; }
-.colf12 { @extend %colf; width: 8.33333%; }
+.colf1 { width: 100%; }
+.colf2 { width: 50%; }
+.colf3 { width: 33.333333%; }
+.colf4 { width: 25%; }
+.colf5 { width: 20%; }
+.colf6 { width: 16.666667%; }
+.colf7 { width: 14.285714%; }
+.colf8 { width: 12.5%; }
+.colf9 { width:  11.11111%; }
+.colf10 { width: 10%; }
+.colf11 { width: 9.09090%; }
+.colf12 { width: 8.33333%; }
 
 // extended columns
 
-.colf13 { @extend %colf; width: 7.69230%; }
-.colf14 { @extend %colf; width: 7.14285%; }
-.colf15 { @extend %colf; width: 6.66666%; }
+.colf13 { width: 7.69230%; }
+.colf14 { width: 7.14285%; }
+.colf15 { width: 6.66666%; }
 
 // full width for mobile, tablet
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-cols-50 {
+	.max-cols-25 {
 
-        & >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
-            width: 50%;
-        }
+		& >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
+			width: 25%;
+		}
 
-        & >.colf:nth-child( odd ) {
-            clear: both;
-        }
-    }
+		& >.colf:nth-child( 4 ) {
+			clear: both;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-50 {
 
-        & >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
-            width: 100%;
-        }
-    }
+		& >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
+			width: 50%;
+		}
+
+		& >.colf:nth-child( odd ) {
+			clear: both;
+		}
+	}
+
+	.max-cols-100 {
+
+		& >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
+			width: 100%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-25, .max-cols-50, .max-cols-100 {
 
-        & >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
-            width: 100%;
-        }
-    }
+		& >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
+			width: 100%;
+		}
+	}
 }
 
 // Standard Layouts
 
-.colf3x2 { @extend %colf; width: 66.666666%; }
-.colf4x2 { @extend %colf; width: 50%; }
-.colf4x3 { @extend %colf; width: 75%; }
-.colf5x2 { @extend %colf; width: 40%; }
-.colf5x3 { @extend %colf; width: 60%; }
-.colf5x4 { @extend %colf; width: 80%; }
-.colf6x2 { @extend %colf; width: 33.33332%;  }
-.colf6x3 { @extend %colf; width: 49.99998%;  }
-.colf6x4 { @extend %colf; width: 66.66664%;  }
-.colf6x5 { @extend %colf; width: 83.33330%;  }
-.colf12x2 { @extend %colf; width: 16.66666%; }
-.colf12x3 { @extend %colf; width: 24.99999%; }
-.colf12x4 { @extend %colf; width: 33.33332%; }
-.colf12x5 { @extend %colf; width: 41.66665%; }
-.colf12x6 { @extend %colf; width: 49.99993%; }
-.colf12x7 { @extend %colf; width: 58.33331%; }
-.colf12x8 { @extend %colf; width: 66.66664%; }
-.colf12x9 { @extend %colf; width: 74.99997%; }
-.colf12x10 { @extend %colf; width: 83.33333%; }
-.colf12x11 { @extend %colf; width: 91.66663%; }
-.colf15x2 { @extend %colf; width:13.33332%; }
-.colf15x3 { @extend %colf; width:19.99998%; }
-.colf15x4 { @extend %colf; width:26.66664%; }
-.colf15x5 { @extend %colf; width:33.33330%; }
-.colf15x6 { @extend %colf; width:39.99996%; }
-.colf15x7 { @extend %colf; width:46.66662%; }
-.colf15x8 { @extend %colf; width:53.33328%; }
-.colf15x9 { @extend %colf; width:59.99994%; }
-.colf15x10 { @extend %colf; width:66.66660%; }
-.colf15x11 { @extend %colf; width:73.33326%; }
-.colf15x12 { @extend %colf; width:79.99992%; }
-.colf15x13 { @extend %colf; width:86.66658%; }
-.colf15x14 { @extend %colf; width:93.33324%; }
+.colf3x2 { width: 66.666666%; }
+
+.colf4x2 { width: 50%; }
+.colf4x3 { width: 75%; }
+
+.colf5x2 { width: 40%; }
+.colf5x3 { width: 60%; }
+.colf5x4 { width: 80%; }
+
+.colf6x2 { width: 33.33332%;  }
+.colf6x3 { width: 49.99998%;  }
+.colf6x4 { width: 66.66664%;  }
+.colf6x5 { width: 83.33330%;  }
+
+.colf12x2 { width: 16.66666%; }
+.colf12x3 { width: 24.99999%; }
+.colf12x4 { width: 33.33332%; }
+.colf12x5 { width: 41.66665%; }
+.colf12x6 { width: 49.99993%; }
+.colf12x7 { width: 58.33331%; }
+.colf12x8 { width: 66.66664%; }
+.colf12x9 { width: 74.99997%; }
+.colf12x10 { width: 83.33333%; }
+.colf12x11 { width: 91.66663%; }
+
+.colf15x2 { width:13.33332%; }
+.colf15x3 { width:19.99998%; }
+.colf15x4 { width:26.66664%; }
+.colf15x5 { width:33.33330%; }
+.colf15x6 { width:39.99996%; }
+.colf15x7 { width:46.66662%; }
+.colf15x8 { width:53.33328%; }
+.colf15x9 { width:59.99994%; }
+.colf15x10 { width:66.66660%; }
+.colf15x11 { width:73.33326%; }
+.colf15x12 { width:79.99992%; }
+.colf15x13 { width:86.66658%; }
+.colf15x14 { width:93.33324%; }
 
 // full width for mobile, tablet
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-cols-50 {
+	.max-cols-25 {
 
-        & >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
-        & >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
-        & >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, & >.colf15x14 {
-            width: 50%;
-        }
-    }
+		& >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
+		& >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
+		& >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, & >.colf15x14 {
+			width: 25%;
+		}
+	}
 
-    .max-cols-100 {
+	.max-cols-50 {
 
-        & >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
-        & >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
-        & >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
-            width: 100%;
-        }
-    }
+		& >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
+		& >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
+		& >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, & >.colf15x14 {
+			width: 50%;
+		}
+	}
+
+	.max-cols-100 {
+
+		& >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
+		& >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
+		& >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
+			width: 100%;
+		}
+	}
 }
 
 @include responsive-max( screen-mobile-large ) {
 
-    .max-cols-50, .max-cols-100 {
+	.max-cols-25, .max-cols-50, .max-cols-100 {
 
-        & >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
-        & >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
-        & >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
-            width: 100%;
-        }
-    }
+		& >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
+		& >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
+		& >.colf15x2, & >.colf15x3, & >.colf15x4, & >.colf15x5, & >.colf15x6, & >.colf15x7, & >.colf15x8, & >.colf15x9, & >.colf15x10, & >.colf15x11, & >.colf15x12, & >.colf15x13, .colf15x14 {
+			width: 100%;
+		}
+	}
+}
+
+// Fixed width columns
+%col-fixed {
+	display: block;
+	float:left;
+	margin: 0;
+	word-wrap: break-word;
+	min-height: 1px;
+}
+
+.col-fixed {
+	@extend %col-fixed;
+
+	&.col-fixed-inline {
+		display: inline-block;
+		float: none;
+	}
+
+	&.col-fixed-small {
+		width: 10rem;
+	}
+
+	&.col-fixed-medium {
+		width: 16rem;
+	}
+
+	&.col-fixed-large {
+		width: 20rem;
+	}
 }
 
 // full height first column
@@ -366,19 +597,28 @@ Dependencies: variables, mixins
 // The main usage of col filler is to fill background of an element in floated elements case. Ex: Sidebar need to show background color with same height as that of content.
 // Place it for first column with lower z-index. We need to repeat first column so that the column with col-filler will be overlapped by column having content.
 
-.wrap-col-filler {
+.col-filler-wrap {
+	position: relative;
+	z-index: 0;
 
-    position: relative;
-    z-index: 0;
+	.col-filler {
+		position: absolute;
+		z-index: -1;
+		top: 0px;
+		bottom: 0px;
+		float: none;
 
-    .col-filler {
-        position: absolute;
-        z-index: -1;
-        top: 0px;
-        bottom: 0px;
-        float: none;
-    }
+		&.col-filler-left {
+			left: 0;
+		}
+
+		&.col-filler-right {
+			right: 0;
+		}
+	}
 }
+
+// == Container =====================
 
 // Container and Content can be used to wrap several components together forming a single unit.
 // These should be used at high level, else blocks are most suitable to divide a page horizontally or vertically.
@@ -386,16 +626,18 @@ Dependencies: variables, mixins
 
 // Container to wrap content header and content
 .container {
-    // container styles
-    .wrap-content {
-        //we might need to wrap content in order to use background for content
-        .content {
-            // content remains within wrap content to occupy it's own space
-        }
-    }
+	// container styles
+
+	.content-wrap {
+		//we might need to wrap content in order to use background for content
+
+		.content {
+			// content remains within wrap content to occupy it's own space
+		}
+	}
 }
 
-// Full Height Containers - Set if required
+// Instructions to configure full height containers
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.
  * 2. The main container should also occupy full width and set min-height to 100% to allow content grow vertically. The content will overflow html/body set to 100% height.
@@ -406,278 +648,164 @@ Dependencies: variables, mixins
  * 7. The sidebar within content wrapper can have navigation links and ui widgets. In presence of sidebar, appropriate columns can be used to divide content wrapper width among sidebar and content.
  */
 .container-main {
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 
-    .wrap-content-main {
-        position: relative;
-        z-index: 1;
+	& >.header {
+		// Header within container.
+	}
 
-        .sidebar {
-            // Sidebar within content wrapper. It's optional.
-        }
+	& >.sidebar {
+		// Sidebar within container.
+	}
 
-        .content {
-            // Content within content wrapper
-        }
-    }
+	.content-main-wrap {
+		position: relative;
+		z-index: 1;
+
+		& >.header {
+			// Header within content wrapper.
+		}
+
+		& >.sidebar {
+			// Sidebar within content wrapper.
+		}
+
+		& >.content-main {
+			// Content within content wrapper
+		}
+
+		& >.footer {
+			// Footer within content wrapper.
+		}
+	}
+
+	& >.footer {
+		// Footer within container.
+	}
 }
+
+// == Content =======================
 
 // Restrict the content to x% width of parent having content in center. Works well with parents having background image, but content within a limited area.
 .content-90 {
-    position: relative;
-    padding-left: 5% !important;
-    padding-right: 5% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 5% !important;
+	padding-right: 5% !important;
+	width: 100% !important;
 }
 
 .content-80 {
-    position: relative;
-    padding-left: 10% !important;
-    padding-right: 10% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+	width: 100% !important;
 }
 
-.content-74 {
-    position: relative;
-    padding-left: 13% !important;
-    padding-right: 13% !important;
-    width: 100% !important;
+.content-75 {
+	position: relative;
+	padding-left: 12.5% !important;
+	padding-right: 12.5% !important;
+	width: 100% !important;
 }
 
 .content-50 {
-    position: relative;
-    padding-left: 25% !important;
-    padding-right: 25% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 25% !important;
+	padding-right: 25% !important;
+	width: 100% !important;
 }
 
-.content-26 {
-    position: relative;
-    padding-left: 37% !important;
-    padding-right: 37% !important;
-    width: 100% !important;
+.content-25 {
+	position: relative;
+	padding-left: 37.5% !important;
+	padding-right: 37.5% !important;
+	width: 100% !important;
 }
 
 @include responsive-max( screen-tablet-large ) {
 
-    .max-content-50 {
+	.max-content-25 {
 
-        & >.content-90, & >.content-80, & >.content-74, & >.content-50, & >.content-26 {
-            width: 50% !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            margin: 0 auto;
-        }
-    }
+		& >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
+			width: 25% !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			margin: 0 auto;
+		}
+	}
 
-    .max-content-100 {
+	.max-content-50 {
 
-        & >.content-90, & >.content-80, & >.content-74, & >.content-50, & >.content-26 {
-            width: 100% !important;
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-        }
-    }
+		& >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
+			width: 50% !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			margin: 0 auto;
+		}
+	}
+
+	.max-content-100 {
+
+		& >.content-90, & >.content-80, & >.content-75, & >.content-50, & >.content-25 {
+			width: 100% !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+	}
 }
 
 // Restrict the content to 25% width of parent with left align - Works well with parents having background image, but content within a limited area.
 .content-left-25 {
-    position: relative;
-    padding-right: 75% !important;
-    width: 100% !important;
+	position: relative;
+	padding-right: 75% !important;
+	width: 100% !important;
 }
 
 .content-left-50 {
-    position: relative;
-    padding-right: 50% !important;
-    width: 100% !important;
+	position: relative;
+	padding-right: 50% !important;
+	width: 100% !important;
 }
 
 // Restrict the content to 25% width of parent with right align - Works well with parents having background image, but content within a limited area.
 .content-right-25 {
-    position: relative;
-    padding-left: 75% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 75% !important;
+	width: 100% !important;
 }
 
 .content-right-50 {
-    position: relative;
-    padding-left: 50% !important;
-    width: 100% !important;
+	position: relative;
+	padding-left: 50% !important;
+	width: 100% !important;
 }
 
-// Sometimes we need a container to cover full height
+// Sometimes we need content to cover full height of container
 .max-height {
-    top: 0;
-    bottom: 0;
-    position: absolute;
+	top: 0;
+	bottom: 0;
+	position: absolute;
 }
 
-// Sometimes we need a container to cover full height and width
+// Sometimes we need content to cover full height and width of container
 .max-block {
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    width: 100%;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
 }
 
-// Sticky container to stick at tpo
+// Sticky content to stick at top of container
 .stick-top {
-    top: 0;
-    position: absolute;
+	top: 0;
+	position: absolute;
+	width: 100%;
 }
 
-// Sticky container to stick at bottom
+// Sticky content to stick at bottom of container
 .stick-bottom {
-    bottom: 0;
-    position: absolute;
-}
-
-// Pre-defined margin and padding to be utilised by containers for consistency
-
-.padding {
-
-    &.padding-default {
-        padding: $size-default-rem;
-    }
-
-    &.padding-default-v {
-        padding-top: $size-default-rem;
-        padding-bottom: $size-default-rem;
-    }
-
-    &.padding-default-h {
-        padding-left: $size-default-rem;
-        padding-right: $size-default-rem;
-    }
-
-    &.padding-small {
-        padding: $size-small-rem;
-    }
-
-    &.padding-small-v {
-        padding-top: $size-small-rem;
-        padding-bottom: $size-small-rem;
-    }
-
-    &.padding-small-h {
-        padding-left: $size-small-rem;
-        padding-right: $size-small-rem;
-    }
-
-    &.padding-medium {
-        padding: $size-medium-rem;
-    }
-
-    &.padding-medium-v {
-        padding-top: $size-medium-rem;
-        padding-bottom: $size-medium-rem;
-    }
-
-    &.padding-medium-h {
-        padding-left: $size-medium-rem;
-        padding-right: $size-medium-rem;
-    }
-
-    &.padding-large {
-        padding: $size-large-rem;
-    }
-
-    &.padding-large-v {
-        padding-top: $size-large-rem;
-        padding-bottom: $size-large-rem;
-    }
-
-    &.padding-large-h {
-        padding-left: $size-large-rem;
-        padding-right: $size-large-rem;
-    }
-
-    &.padding-xlarge {
-        padding: $size-xlarge-rem;
-    }
-
-    &.padding-xlarge-v {
-        padding-top: $size-xlarge-rem;
-        padding-bottom: $size-xlarge-rem;
-    }
-
-    &.padding-xlarge-h {
-        padding-left: $size-xlarge-rem;
-        padding-right: $size-xlarge-rem;
-    }
-}
-
-.margin {
-
-    &.margin-default {
-        margin: $size-default-rem;
-    }
-
-    &.margin-default-v {
-        margin-top: $size-default-rem;
-        margin-bottom: $size-default-rem;
-    }
-
-    &.margin-default-h {
-        margin-left: $size-default-rem;
-        margin-right: $size-default-rem;
-    }
-
-    &.margin-small {
-        margin: $size-small-rem;
-    }
-
-    &.margin-small-v {
-        margin-top: $size-small-rem;
-        margin-bottom: $size-small-rem;
-    }
-
-    &.margin-small-h {
-        margin-left: $size-small-rem;
-        margin-right: $size-small-rem;
-    }
-
-    &.margin-medium {
-        margin: $size-medium-rem;
-    }
-
-    &.margin-medium-v {
-        margin-top: $size-medium-rem;
-        margin-bottom: $size-medium-rem;
-    }
-
-    &.margin-medium-h {
-        margin-left: $size-medium-rem;
-        margin-right: $size-medium-rem;
-    }
-
-    &.margin-large {
-        margin: $size-large-rem;
-    }
-
-    &.margin-large-v {
-        margin-top: $size-large-rem;
-        margin-bottom: $size-large-rem;
-    }
-
-    &.margin-large-h {
-        margin-left: $size-large-rem;
-        margin-right: $size-large-rem;
-    }
-
-    &.margin-xlarge {
-        margin: $size-xlarge-rem;
-    }
-
-    &.margin-xlarge-v {
-        margin-top: $size-xlarge-rem;
-        margin-bottom: $size-xlarge-rem;
-    }
-
-    &.margin-xlarge-h {
-        margin-left: $size-xlarge-rem;
-        margin-right: $size-xlarge-rem;
-    }
+	bottom: 0;
+	position: absolute;
+	width: 100%;
 }

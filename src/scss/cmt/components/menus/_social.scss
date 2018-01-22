@@ -1,0 +1,304 @@
+/**********************************************************************
+Description: It defines the styles for social network menu components available in CMT-UI css framework.
+
+Dependencies: none
+
+Details: It defines the social network menu components as listed below:
+
+* Social Menu     - The social menu class is special menu class used for social icons. It supports the social
+*                   icons available in CMT-Icons library. It can be further extended to support other icon
+*                   libraries.
+***********************************************************************/
+
+.menu-social {
+
+	// Default
+	a {
+		color: $color-white;
+		margin: 0;
+		display: inline-block;
+	}
+
+	// Social Icons
+	.icon, .cmti {
+		margin: 0;
+		margin-bottom: 0.25rem;
+		padding: 0.25rem;
+
+		@include transit-all( $transit-eio, $transit-time-small );
+	}
+
+	&.menu-social-right {
+
+		.icon, .cmti {
+			margin-left: 0.5rem;
+		}
+	}
+
+	&.menu-social-left {
+
+		.icon, .cmti {
+			margin-right: 0.5rem;
+		}
+	}
+
+	// Round cornered icons
+	.icon-rounded, .cmti-rounded {
+		@include rounded( $size-small );
+	}
+
+	// Social Icons with border
+	.icon-border, .cmti-border {
+		border: 1px solid;
+
+		&.icon-facebook, &.cmti-social-facebook {
+			border-color: $color-facebook;
+		}
+
+		&.icon-twitter, &.cmti-social-twitter {
+			border-color: $color-twitter;
+		}
+
+		&.icon-google, &.cmti-social-google {
+			border-color: $color-google;
+		}
+
+		&.icon-google-plus, &.cmti-social-google-plus {
+			border-color: $color-google-plus;
+		}
+
+		&.icon-linkedin, &.cmti-social-linkedin {
+			border-color: $color-linkedin;
+		}
+
+		&.icon-instagram, &.cmti-social-instagram {
+			border-color: $color-instagram;
+		}
+
+		&.icon-pintrest, &.cmti-social-pintrest {
+			border-color: $color-pintrest;
+		}
+
+		&.icon-youtube, &.cmti-social-youtube {
+			border-color: $color-youtube;
+		}
+
+		&:hover {
+
+			&.icon-facebook, &.cmti-social-facebook {
+				background-color: $color-facebook;
+			}
+
+			&.icon-twitter, &.cmti-social-twitter {
+				background-color: $color-twitter;
+			}
+
+			&.icon-google, &.cmti-social-google {
+				background-color: $color-google;
+			}
+
+			&.icon-google-plus, &.cmti-social-google-plus {
+				background-color: $color-google-plus;
+			}
+
+			&.icon-linkedin, &.cmti-social-linkedin {
+				background-color: $color-linkedin;
+			}
+
+			&.icon-instagram, &.cmti-social-instagram {
+				background-color: $color-instagram;
+			}
+
+			&.icon-pintrest, &.cmti-social-pintrest {
+				background-color: $color-pintrest;
+			}
+
+			&.icon-youtube, &.cmti-social-youtube {
+				background-color: $color-youtube;
+			}
+		}
+	}
+
+	// Social Icons with background color
+	.icon-bkg, .cmti-bkg {
+
+		&.icon-facebook, &.cmti-social-facebook {
+			background-color: $color-facebook;
+		}
+
+		&.icon-twitter, &.cmti-social-twitter {
+			background-color: $color-twitter;
+		}
+
+		&.icon-google, &.cmti-social-google {
+			background-color: $color-google;
+		}
+
+		&.icon-google-plus, &.cmti-social-google-plus {
+			background-color: $color-google-plus;
+		}
+
+		&.icon-linkedin, &.cmti-social-linkedin {
+			background-color: $color-linkedin;
+		}
+
+		&.icon-instagram, &.cmti-social-instagram {
+			background-color: $color-instagram;
+		}
+
+		&.icon-pintrest, &.cmti-social-pintrest {
+			background-color: $color-pintrest;
+		}
+
+		&.icon-youtube, &.cmti-social-youtube {
+			background-color: $color-youtube;
+		}
+
+		&:hover {
+
+			&.icon-facebook, &.cmti-social-facebook {
+				background-color: darken( $color-facebook, 10% );
+			}
+
+			&.icon-twitter, &.cmti-social-twitter {
+				background-color: darken( $color-twitter, 10% );
+			}
+
+			&.icon-google, &.cmti-social-google {
+				background-color: darken( $color-google, 10% );
+			}
+
+			&.icon-google-plus, &.cmti-social-google-plus {
+				background-color: darken( $color-google-plus, 10% );
+			}
+
+			&.icon-linkedin, &.cmti-social-linkedin {
+				background-color: darken( $color-linkedin, 10% );
+			}
+
+			&.icon-instagram, &.cmti-social-instagram {
+				background-color: darken( $color-instagram, 10% );
+			}
+
+			&.icon-pintrest, &.cmti-social-pintrest {
+				background-color: darken( $color-pintrest, 10% );
+			}
+
+			&.icon-youtube, &.cmti-social-youtube {
+				background-color: darken( $color-youtube, 10% );
+			}
+		}
+	}
+
+	// Social Icons with text color
+	.icon-text, .cmti-text {
+
+		&.icon-facebook, &.cmti-social-facebook {
+			color: $color-facebook;
+		}
+
+		&.icon-twitter, &.cmti-social-twitter {
+			color: $color-twitter;
+		}
+
+		&.icon-google, &.cmti-social-google {
+			color: $color-google;
+		}
+
+		&.icon-google-plus, &.cmti-social-google-plus {
+			color: $color-google-plus;
+		}
+
+		&.icon-linkedin, &.cmti-social-linkedin {
+			color: $color-linkedin;
+		}
+
+		&.icon-instagram, &.cmti-social-instagram {
+			color: $color-instagram;
+		}
+
+		&.icon-pintrest, &.cmti-social-pintrest {
+			color: $color-pintrest;
+		}
+
+		&.icon-youtube, &.cmti-social-youtube {
+			color: $color-youtube;
+		}
+
+		&:hover {
+			color: $color-btn-text;
+		}
+	}
+
+	// Social Buttons
+	.btn {
+		color: $color-white !important;
+
+		&.facebook {
+			background-color: $color-facebook;
+		}
+
+		&.twitter {
+			background-color: $color-twitter;
+		}
+
+		&.google {
+			background-color: $color-google;
+		}
+
+		&.google-plus {
+			background-color: $color-google-plus;
+		}
+
+		&.linkedin {
+			background-color: $color-linkedin;
+		}
+
+		&.instagram {
+			background-color: $color-instagram;
+		}
+
+		&.pintrest {
+			background-color: $color-pintrest;
+		}
+
+		&.youtube {
+			background-color: $color-youtube;
+		}
+
+		&:hover {
+
+			&.facebook {
+				background-color: darken( $color-facebook, 10% );
+			}
+
+			&.twitter {
+				background-color: darken( $color-twitter, 10% );
+			}
+
+			&.google {
+				background-color: darken( $color-google, 10% );
+			}
+
+			&.google-plus {
+				background-color: darken( $color-google-plus, 10% );
+			}
+
+			&.linkedin {
+				background-color: darken( $color-linkedin, 10% );
+			}
+
+			&.instagram {
+				background-color: darken( $color-instagram, 10% );
+			}
+
+			&.pintrest {
+				background-color: darken( $color-pintrest, 10% );
+			}
+
+			&.youtube {
+				background-color: darken( $color-youtube, 10% );
+			}
+		}
+	}
+}

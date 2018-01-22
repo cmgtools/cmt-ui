@@ -1,265 +1,88 @@
 /**********************************************************************
-Description: The basic styles for CMGTools.
-Dependencies: variables
+Description: This file define the basic and common styling used by CMT-UI css framework.
+
+Dependencies: variables, mixins
+
+Details: It defines the basic styles as listed below:
+* Box border        - It's applied to html and all elements in order to calculate width including border and padding.
+* Screen            - The default classes having screen sizes using variables defined in variable file.
+* Floats            - The floating classes either clear the float, no float or add left/right float.
+* Width & Height    - This section define width and height classes having predefined values in percentage.
+* Alignments        - The alignment classes allows to align either the element itself or it's children.
+* Height Filler     - These classes can be used to add vertical spacing.
+* Tab Filler        - These classes can be used to add horizontal spacing between inline boxes.
+* Positioning       - This section define the positioning classes.
+* Display           - The display classes control the display property i.e. inline, block or inline block.
+* Visibility        - These classes control the display property i.e. block or none. The visibility property specific
+*                     classes can be used to show or hide an element keeping it's space on screen.
+* Cursor            - The cursor classes.
+* Disabled          - It disable an element by changing color to gray and cursor to default.
+* Fluid             - The fluid class makes children occupying 100% width with auto height. Useful for responsive images.
+* Message           - These classes can be used to show message according to failure, warning or success.
 ***********************************************************************/
 
 /**
- * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive.
- * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
- */
-
-.screen {
-    // TODO: add default screen styles
-
-    &.screen-mobile-small {
-        width: $screen-mobile-small;
-    }
-
-    &.screen-mobile-large {
-        width: $screen-mobile-large;
-    }
-
-    &.screen-tablet-small {
-        width: $screen-tablet-small;
-    }
-
-    &.screen-tablet-large {
-        width: $screen-tablet-large;
-    }
-
-    &.screen-desktop-small {
-        width: $screen-desktop-small;
-    }
-
-    &.screen-desktop-medium {
-        width: $screen-desktop-medium;
-    }
-
-    &.screen-desktop-large {
-        width: $screen-desktop-large;
-    }
-
-    &.screen-desktop-xlarge {
-        width: $screen-desktop-xlarge;
-    }
-}
-
-/**
- * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
- * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
- * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
- */
-
-.color {
-    // default to primary
-    background-color: $color-primary;
-    color: $color-primary-text;
-/**
- * Color Palatte:
- * 1. primary: #{$color-primary}
- * 2. primary text: #{$color-primary-text}
- * 3. primary light: #{$color-primary-l}
- * 4. primary text light: #{$color-primary-text-l}
- * 5. primary dark: #{$color-primary-d}
- * 6. primary text dark: #{$color-primary-text-d}
- * 7. secondary: #{$color-secondary}
- * 8. secondary text: #{$color-secondary-text}
- * 9. secondary light: #{$color-secondary-l}
- * 10. secondary text light: #{$color-secondary-text-l}
- * 11. secondary dark: #{$color-secondary-d}
- * 12. secondary text dark: #{$color-secondary-text-d}
- * 13. tertiary: #{$color-tertiary}
- * 14. tertiary text: #{$color-tertiary-text}
- * 15. tertiary light: #{$color-tertiary-l}
- * 16. tertiary text light: #{$color-tertiary-text-l}
- * 17. tertiary dark: #{$color-tertiary-d}
- * 18. tertiary text dark: #{$color-tertiary-text-d}
- */
-
-    &.color-primary-l {
-        background-color: $color-primary-l;
-        color: $color-primary-text-l;
-    }
-
-    &.color-primary-d {
-        background-color: $color-primary-d;
-        color: $color-primary-text-d;
-    }
-
-    &.color-secondary {
-        background-color: $color-secondary;
-        color: $color-secondary-text;
-    }
-
-    &.color-secondary-l {
-        background-color: $color-secondary-l;
-        color: $color-secondary-text-l;
-    }
-
-    &.color-secondary-d {
-        background-color: $color-secondary-d;
-        color: $color-secondary-text-d;
-    }
-
-    &.color-tertiary {
-        background-color: $color-tertiary;
-        color: $color-tertiary-text;
-    }
-
-    &.color-tertiary-l {
-        background-color: $color-tertiary-l;
-        color: $color-tertiary-text-l;
-    }
-
-    &.color-tertiary-d {
-        background-color: $color-tertiary-d;
-        color: $color-tertiary-text-d;
-    }
-
-    &.color-white {
-        background-color: $color-white;
-        color: $color-black;
-    }
-
-    &.color-black {
-        background-color: $color-black;
-        color: $color-white;
-    }
-}
-
-// Background Colors
-.bkg {
-    // default to primary
-    background-color: $color-primary;
-
-    &.bkg-primary-l {
-        background-color: $color-primary-l;
-    }
-
-    &.bkg-primary-d {
-        background-color: $color-primary-d;
-    }
-
-    &.bkg-secondary {
-        background-color: $color-secondary;
-    }
-
-    &.bkg-secondary-l {
-        background-color: $color-secondary-l;
-    }
-
-    &.bkg-secondary-d {
-        background-color: $color-secondary-d;
-    }
-
-    &.bkg-tertiary {
-        background-color: $color-tertiary;
-    }
-
-    &.bkg-tertiary-l {
-        background-color: $color-tertiary-l;
-    }
-
-    &.bkg-tertiary-d {
-        background-color: $color-tertiary-d;
-    }
-
-    &.bkg-black {
-        background-color: $color-black;
-    }
-
-    &.bkg-gray {
-        background-color: $color-gray;
-    }
-
-    &.bkg-white {
-        background-color: $color-white;
-    }
-
-    &.bkg-blue {
-        background-color: $color-blue;
-    }
-
-    &.bkg-purple {
-        background-color: $color-purple;
-    }
-
-    &.bkg-orange {
-        background-color: $color-orange;
-    }
-
-    &.bkg-yellow {
-        background-color: $color-yellow;
-    }
-
-    .bkg-red {
-        background-color: $color-red;
-    }
-
-    &.bkg-pink {
-        background-color: $color-pink;
-    }
-
-    &.bkg-magenta {
-        background-color: $color-magenta;
-    }
-
-    &.bkg-green {
-        background-color: $color-green;
-    }
-
-    &.bkg-green-d {
-        background-color: $color-green-d;
-    }
-}
-
-/**
- * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and
- * padding. The remaining space deducting border and padding from given width will be used by element content.
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including
+ * border and padding. The remaining space deducting border and padding from given width will be used by element content.
  */
 
 html {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+		  box-sizing: border-box;
 }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
-     -moz-box-sizing: inherit;
-          box-sizing: inherit;
+	 -moz-box-sizing: inherit;
+		  box-sizing: inherit;
 }
 
-/**
- * The primary color will be used as default color for document body and text.
- */
+// The primary color will be used as default color for document body and text.
 
 html, body {
-    background-color: $color-primary;
-    color: $color-primary-text;
-}
-
-// margin and padding less
-
-.margin-none {
-    margin: 0 !important;
-}
-
-.padding-none {
-    padding: 0 !important;
-}
-
-.mp-none {
-    margin: 0 !important;
-    padding: 0 !important;
+	background-color: $color-primary;
+	color: $color-primary-text;
 }
 
 /**
- * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is
+ * a tedius task without going responsive. CMGTools have used the most commonly used standard resolutions to cover maximum screens.
  */
 
-#pre-loader-main {
-    display: block;
+.screen {
+
+	&.screen-mobile-small {
+		width: $screen-mobile-small;
+	}
+
+	&.screen-mobile-large {
+		width: $screen-mobile-large;
+	}
+
+	&.screen-tablet-small {
+		width: $screen-tablet-small;
+	}
+
+	&.screen-tablet-large {
+		width: $screen-tablet-large;
+	}
+
+	&.screen-desktop-small {
+		width: $screen-desktop-small;
+	}
+
+	&.screen-desktop-medium {
+		width: $screen-desktop-medium;
+	}
+
+	&.screen-desktop-large {
+		width: $screen-desktop-large;
+	}
+
+	&.screen-desktop-xlarge {
+		width: $screen-desktop-xlarge;
+	}
 }
 
 /**
@@ -267,28 +90,28 @@ html, body {
  */
 
 .clear {
-    clear: both !important;
+	clear: both !important;
 }
 
 .left {
-    float: left !important;
+	float: left !important;
 }
 
 .right {
-    float: right !important;
+	float: right !important;
 }
 
 .clear-none {
-    clear: none !important;
+	clear: none !important;
 }
 
 .float-none {
-    float: none !important;
+	float: none !important;
 }
 
 .float-none-center {
-    float: none !important;
-    margin: 0 auto;
+	float: none !important;
+	margin: 0 auto;
 }
 
 /**
@@ -298,69 +121,83 @@ html, body {
 // Width
 
 .width {
-    width: 100%;
+	width: 100%;
 
-    &.width-auto {
-        width: auto;
-    }
+	&.width-auto {
+		width: auto;
+	}
 
-    &.width-25 {
-        width: 25%;
-    }
+	&.width-1 {
+		width: 1%;
+	}
 
-    &.width-50 {
-        width: 50%;
-    }
+	&.width-5 {
+		width: 5%;
+	}
 
-    &.width-75 {
-        width: 75%;
-    }
+	&.width-10 {
+		width: 10%;
+	}
 
-    &.width-80 {
-        width: 80%;
-    }
+	&.width-25 {
+		width: 25%;
+	}
+
+	&.width-50 {
+		width: 50%;
+	}
+
+	&.width-75 {
+		width: 75%;
+	}
+
+	&.width-80 {
+		width: 80%;
+	}
 }
 
 // Height
 
 .height {
-    height: 100%;
+	height: 100%;
 
-    &.height-auto {
-        height: auto;
-    }
+	&.height-auto {
+		height: auto;
+	}
 
-    &.height-25 {
-        height: 25%;
-    }
+	&.height-25 {
+		height: 25%;
+	}
 
-    &.height-50 {
-        height: 50%;
-    }
+	&.height-50 {
+		height: 50%;
+	}
 
-    &.height-75 {
-        height: 75%;
-    }
+	&.height-75 {
+		height: 75%;
+	}
 }
 
 /**
  * Alignments for centered box and text.
  */
 
+// Horizontally center align the element
 .center {
-    margin: 0 auto;
+	margin: 0 auto !important;
 }
 
+// Align the children of an element - left, horizontally center and right
 .align {
-    text-align: left !important;
+	text-align: left !important;
 
-    &.align-center {
-        text-align: center !important;
-    }
+	&.align-center {
+		text-align: center !important;
+	}
 
-    &.align-right {
-        text-align: right !important;
-    }
+	&.align-right {
+		text-align: right !important;
+	}
 }
 
 /**
@@ -368,168 +205,247 @@ html, body {
  */
 
 .filler-height {
-    height: 1em;
+	height: 1rem;
 
-    &.filler-height-small {
-        height: 1.5em;
-    }
+	&.filler-height-small {
+		height: 1.5rem;
+	}
 
-    &.filler-height-medium {
-        height: 2em;
-    }
+	&.filler-height-medium {
+		height: 2rem;
+	}
 
-    &.filler-height-large {
-        height: 2.5em;
-    }
+	&.filler-height-large {
+		height: 2.5rem;
+	}
 
-    &.filler-height-xlarge {
-        height: 3em;
-    }
+	&.filler-height-xlarge {
+		height: 3rem;
+	}
 }
 
 /**
  * Tab fillers to seperate elements.
  */
 .filler-tab {
-    width: 2em;
-    display: inline-block;
+	width: 1em;
+	height: 1px;
+	display: inline-block;
 
-    &.filler-tab-small {
-        width: 4em;
-    }
+	&.filler-tab-small {
+		width: 2em;
+	}
 
-    &.filler-tab-medium {
-        width: 6em;
-    }
+	&.filler-tab-medium {
+		width: 4em;
+	}
 
-    &.filler-tab-large {
-        width: 8em;
-    }
+	&.filler-tab-large {
+		width: 8em;
+	}
 
-    &.filler-tab-xlarge {
-        width: 10em;
-    }
+	&.filler-tab-xlarge {
+		width: 10em;
+	}
 }
 
 // Positioning
+
 .absolute {
-    position: absolute !important;
+	position: absolute !important;
 
-    &.absolute-center {
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
+	// Horizontally center
+	&.absolute-center {
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-    &.absolute-top-left {
-        top: 0px;
-        left: 0px;
-    }
+	// Vertically center - both parent and child needs fixed width and height
+	&.absolute-middle {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-    &.absolute-top-right {
-        top: 0px;
-        right: 0px;
-    }
+	&.absolute-top-left {
+		top: 0px;
+		left: 0px;
+	}
 
-    &.absolute-bottom-left {
-        bottom: 0px;
-        left: 0px;
-    }
+	// Horizontally center at top - child needs fixed width smaller than parent
+	&.absolute-top-center {
+		top: 0px;
+		left: 0px;
+		right: 0px;
+	}
 
-    &.absolute-bottom-right {
-        bottom: 0px;
-        right: 0px;
-    }
+	&.absolute-top-right {
+		top: 0px;
+		right: 0px;
+	}
+
+	&.absolute-bottom-left {
+		bottom: 0px;
+		left: 0px;
+	}
+
+	// Horizontally center at bottom - child needs fixed width smaller than parent
+	&.absolute-bottom-center {
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+	}
+
+	&.absolute-bottom-right {
+		bottom: 0px;
+		right: 0px;
+	}
 }
 
 .relative {
-    position: relative !important;
+	position: relative !important;
 }
 
 .fixed {
-    position: fixed !important;
+	position: fixed !important;
 }
 
 // Display Type
 
 .block {
-    display: block !important;
+	display: block !important;
 }
 
 .inline-block {
-    display: inline-block !important;
+	display: inline-block !important;
 }
 
 .inline {
-    display: inline !important;
-}
-
-.disabled {
-    background-color: $color-gray !important;
-    color: $color-white !important;
-    cursor: default !important;
-
-    &:hover {
-        background-color: $color-gray !important;
-        color: $color-white !important;
-    }
-}
-
-// Cursors
-.pointer {
-    cursor: pointer;
+	display: inline !important;
 }
 
 // Visibility - Without own space
 
 .visible {
-    display: block !important;
+	display: block !important;
 }
 
+// Strictly hidden
 .hidden {
-    display: none !important;
+	display: none !important;
+}
+
+.hidden-easy {
+	display: none;
 }
 
 // Visibility - Hidden/Displayed occupying space on screen
 
 .visible-space {
-    visibility: visible !important;
+	visibility: visible !important;
 }
 
 .hidden-space {
-    visibility: hidden !important;
+	visibility: hidden !important;
+}
+
+// Cursors - Direct
+
+.pointer {
+	cursor: pointer;
+}
+
+.crosshair {
+	cursor: crosshair;
+}
+
+.help {
+	cursor: help;
+}
+
+.wait {
+	cursor: wait;
+}
+
+// Cursors - Standard
+
+.cursor {
+	cursor: default;
+
+	&.cursor-pointer {
+		cursor: pointer;
+	}
+
+	&.cursor-crosshair {
+		cursor: crosshair;
+	}
+
+	&.cursor-help {
+		cursor: help;
+	}
+
+	&.cursor-wait {
+		cursor: wait;
+	}
+}
+
+// Disabled
+.disabled {
+	background-color: $color-gray !important;
+	color: $color-white !important;
+	cursor: default !important;
+
+	&:hover {
+		background-color: $color-gray !important;
+		color: $color-white !important;
+	}
 }
 
 // Fluid Elements (blocks, images)
 
 .fluid {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
-// Messages - Most probably used for form and ajax processing
+// Messages
 
-.warning, .error, .success, .help-block {
-    //display: inline-block;
-    width: 100%;
-    font-size: $font-size-8;
+.warning, .error, .success, .info, .help-block {
+	font-size: $font-size-8;
+	width: 100%;
+
+	&.highlight {
+		background-color: $color-secondary;
+	}
 }
 
-.error, .help-block {
-    color: $color-error;
+.error {
+	color: $color-error;
 }
 
 .warning {
-    color: $color-warning;
+	color: $color-warning;
 }
 
 .success {
-    color: $color-success;
+	color: $color-success;
+}
+
+.info {
+	color: $color-info;
 }
 
 // Required for Yii Forms
+.form-group .help-block {
+	color: $color-error;
+}
+
 .error-field {
-    @include border( $size-default, solid, $color-error );
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparency-low ) );
+	@include border( $size-default, solid, $color-error );
+	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-error, $color-transparent-low ) );
 }

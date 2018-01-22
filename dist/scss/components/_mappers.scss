@@ -1,0 +1,92 @@
+/**********************************************************************
+Description: It defines the styles for mapper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* List        - The list mapper allows user to map multiple resources to active resource. The mappings
+*               can also maintain hierarchy with depth.
+*
+* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
+*				when user click on one of the auto suggest item.
+*
+* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+
+***********************************************************************/
+
+// == Mapper - List =================
+
+.mapper-list {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+
+	.mapper-list-items {
+		height: 250px;
+		background-color: $color-primary;
+		// Add scroll based on needs
+
+		.mapper-list-item {
+			display: inline-block;
+			width: 100%;
+			margin: 10px;
+			background-color: $color-white;
+
+			&.depth-1 {
+				padding-left: 15px;
+			}
+
+			&.depth-2 {
+				padding-left: 30px;
+			}
+
+			&.depth-3 {
+				padding-left: 45px;
+			}
+		}
+	}
+}
+
+// == Mapper - Auto =================
+
+// Auto Suggest with mapper - It works together with auto fill component
+.mapper-auto {
+
+	.mapper-auto-items {
+
+		.mapper-auto-item {
+			background-color: $color-secondary;
+			display: inline-block;
+			padding: 0.5rem;
+			margin-right: 0.5rem;
+
+			.mapper-auto-item-remove {
+				padding-left: 0.5rem;
+			}
+		}
+	}
+}
+
+// == Mapper - Submit ===============
+
+.mapper-submit {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+
+	.mapper-submit-items {
+
+		.mapper-submit-item {
+			background-color: $color-secondary;
+			position: relative;
+			display: inline-block;
+			padding: 0.5rem;
+			margin-right: 0.5rem;
+
+			.mapper-submit-item-remove {
+				padding-left: 0.5rem;
+			}
+		}
+	}
+}

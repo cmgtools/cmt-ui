@@ -1,0 +1,68 @@
+/**********************************************************************
+Description: It defines the styles of widget components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of widget components as listed below:
+
+* Widget	  - The barebone widget with minimum styles.
+*
+* Basic       - The basic widget defines the styles of widget having text and background colors.
+
+***********************************************************************/
+
+// == Structure - Widget ============
+
+.widget {
+	position: relative;
+
+	.widget-header {
+		position: relative;
+
+		.widget-header-title {
+			// Header Title
+		}
+
+		.widget-header-content {
+			// Header Content
+		}
+	}
+
+	.widget-content-wrap {
+		position: relative;
+
+		.widget-content {
+			// Content
+		}
+	}
+
+	.widget-footer {
+		// Footer
+
+		.widget-footer-info {
+			// Footer Info
+		}
+	}
+}
+
+// == Basic =========================
+
+.widget-basic {
+	background-color: $color-primary;
+	color: $color-primary-text;
+
+	.widget-header {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
+
+	.widget-content-wrap {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+
+	.widget-footer {
+		background-color: $color-secondary-d;
+		color: $color-secondary-text-d;
+	}
+}

@@ -1,0 +1,317 @@
+/**********************************************************************
+Description: It defines the styles of the data grid components forming the grid without html tables.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for data grid components as listed below:
+
+* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
+*
+* Basic       - The basic data grid having default coloring.
+***********************************************************************/
+
+// == Structure - Data Grid =========
+
+// The Grid Data acts as wrapper to the data. It follows mobile first approach.
+.grid-data {
+
+	// Grid Search
+	.grid-search-wrap {
+
+		.grid-search {
+			// Search wrapper
+		}
+	}
+
+	// Grid Sort
+	.grid-sort-wrap {
+		// The grid sort columns
+
+		.grid-sort {
+			// Sort wrapper
+		}
+	}
+
+	// Grid Filters
+	.grid-filters-wrap {
+		// The grid filters
+
+		.grid-filters {
+			// Filter wrapper
+		}
+	}
+
+	// Bulk Options
+	.grid-bulk-wrap {
+
+		.grid-bulk {
+			// Bulk wrapper
+		}
+	}
+
+	// Grid Report
+	.grid-report-wrap {
+		// The grid report having options to generate custom reports
+
+		.grid-report {
+
+			.grid-report-fields {
+				// Wrapper for fields
+			}
+
+			.grid-report-actions {
+				// Wrapper for actions
+			}
+		}
+	}
+
+	// Grid Head
+	.grid-head-wrap {
+
+		.grid-title {
+			// grid title
+		}
+
+		.grid-head-options {
+			// grid options - sort, search, filter, bulk, report
+		}
+	}
+
+	// Grid Options
+	.grid-options-wrap {
+
+		.grid-options {
+			// grid options - sort, search, filter, bulk, report
+		}
+	}
+
+	// Grid Header
+	.grid-header-wrap {
+		// Grid Header having pagination and import/export options
+
+		.grid-header {
+
+			.grid-header-info {
+				// footer content
+			}
+
+			.grid-header-options {
+				// footer content
+			}
+
+			.grid-header-content {
+				// header content
+			}
+		}
+	}
+
+	// Grid Content
+	.grid-content-wrap {
+		// Grid content like grid rows or blocks goes here
+
+		.grid-content {
+
+			// Grid Rows
+			.grid-rows-wrap {
+				display: none;
+
+				&.active {
+					display: block;
+				}
+
+				// rows header hidden for mobile
+				.grid-rows-header {
+					display: none;
+					font-weight: bold;
+				}
+
+				.grid-rows {
+
+					&.grid-rows-zebra {
+
+						.grid-row:nth-child( even ) {
+							background-color: $color-secondary;
+						}
+					}
+
+					.grid-row {
+
+						.grid-row-header {
+							// row title
+						}
+
+						.grid-row-data {
+							// row data - it can be anything ex: content box
+
+							// support classes for mobile views
+							.data {
+								display: inline-block;
+								width: 68%;
+								padding: 1%;
+								word-wrap: break-word;
+
+								&.data-title {
+									width: 28%;
+								}
+							}
+						}
+
+						.grid-row-footer {
+							// row footer
+						}
+					}
+				}
+
+				// rows footer hidden for mobile
+				.grid-rows-footer {
+					display: none;
+					font-weight: bold;
+				}
+			}
+
+			// Grid Cards
+			.grid-cards-wrap {
+				display: none;
+
+				&.active {
+					display: block;
+				}
+
+				.grid-cards {
+
+					.grid-card {
+
+						.grid-card-header {
+							// card title
+						}
+
+						.grid-card-data {
+							// card data - it can be anything ex: content box
+						}
+
+						.grid-card-footer {
+							// card footer
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Grid Footer
+	.grid-footer-wrap {
+		// Grid Footer having pagination and import/export options. It's similar to Grid Header
+
+		.grid-footer {
+
+			.grid-footer-info {
+				// footer content
+			}
+
+			.grid-footer-options {
+				// footer content
+			}
+		}
+	}
+
+	@include responsive-min( screen-tablet-large ) {
+
+		// Grid Content Wrapper
+		.grid-content-wrap {
+
+			.grid-content {
+
+				// Grid Rows
+				.grid-rows-wrap {
+
+					.grid-rows-header {
+						display: block;
+					}
+
+					.grid-rows {
+
+						.grid-row {
+
+							.grid-row-header {
+								display: none;
+							}
+
+							.grid-row-data {
+
+								.data {
+									width: 100%;
+									padding: 0;
+
+									&.data-title {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+
+					.grid-rows-footer {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Basic Data Grid ==================
+
+// Basic Grid
+.grid-data-basic {
+	background-color: $color-primary-d;
+	padding: 10px;
+
+	// Grid Header
+	.grid-header-wrap {
+
+		.grid-header {
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			padding: 0.25em 10px;
+			text-align: right;
+			min-height: 2em;
+
+			.grid-header-content {
+				display: inline-block;
+				float: left;
+				padding: 0.25em 0.5em;
+			}
+		}
+	}
+
+	// Grid Footer
+	.grid-footer-wrap {
+
+		.grid-footer {
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			padding: 0.25em 10px;
+			text-align: right;
+			min-height: 2em;
+
+			.grid-footer-info {
+				display: inline-block;
+				float: left;
+				padding: 0.25em 0.5em;
+			}
+		}
+	}
+
+	// Grid Rows
+	.grid-rows-wrap {
+
+		.grid-rows {
+			margin: 10px 0;
+
+			// Avatar in grid rows
+			.avatar {
+				width: 48px;
+			}
+		}
+	}
+}

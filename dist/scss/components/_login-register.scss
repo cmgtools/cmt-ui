@@ -1,11 +1,95 @@
-.box-forgot-password, .box-signup {
-    display: none;
-}
+/**********************************************************************
+Description: It defines the styles for login components available in CMT-UI css framework.
 
-.btn-forgot-password, .btn-login, .btn-signup {
-    cursor: pointer;
+Dependencies: none
 
-    &:hover {
-        color: $color-link;
+Details: It defines the styles for login components as listed below:
+* Login box wrapper - It's wrapper for login, register and forgot password forms. It depends on cmtLoginRegister
+*                     jQuery plugin available in CMT-JS framework.
+***********************************************************************/
+
+// == Structure - Login =============
+
+.wrap-login-box {
+
+    .btn-login, .btn-signup, .btn-forgot-password {
+        cursor: pointer;
+    }
+
+    // The parent element to hold login and signup buttons
+    .login-actions {
+
+        .btn-login {
+            // login button
+        }
+
+        .btn-signup {
+            // signup button
+        }
+    }
+
+    .box-login {
+
+        .wrap-login-fields {
+            // login fields
+        }
+
+        .wrap-forgot-btn {
+
+            .btn-forgot-password {
+                // forgot password button
+            }
+        }
+
+        .wrap-signup-btn {
+
+            .btn-signup {
+                // signup button
+            }
+        }
+    }
+
+    .box-forgot-password {
+        display: none;
+
+        .wrap-forgot-fields {
+            // forgot password fields
+        }
+
+        .wrap-login-btn {
+
+            .btn-login {
+                // login button
+            }
+        }
+
+        .wrap-signup-btn {
+
+            .btn-signup {
+                // signup button
+            }
+        }
+    }
+
+    .box-signup {
+        display: none;
+
+        .wrap-signup-fields {
+            // signup fields
+        }
+
+        .wrap-forgot-btn {
+
+            .btn-forgot-password {
+                // forgot password button
+            }
+        }
+
+        .wrap-login-btn {
+
+            .btn-login {
+                // login button
+            }
+        }
     }
 }

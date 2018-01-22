@@ -1,22 +1,123 @@
 /**********************************************************************
-Description: It defines the default table style available in CMGTools.
+Description: It defines the table styles for CMT-UI css framework.
+
 Dependencies: variables, mixins
+
+Details: It defines the table styles as listed below:
+
 ***********************************************************************/
 
-// Tables Default Style
+// Notes: Refer reset for basic reset done for table, th and td.
+
+// == HTML Tables =====================
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+
+	th {
+		text-align: left;
+		padding: 0.25rem;
+	}
+
+	td {
+		padding: 0.25rem;
+	}
 }
 
-th {
-    font-weight: bold;
-    vertical-align: middle;
-}
+.table {
+	width: 100%;
 
-td {
-    font-weight: normal;
-    vertical-align: middle;
-    padding: 0.25em 0;
+	&.table-zebra {
+
+		> tbody {
+
+			tr:nth-child( even ) {
+				background-color: $color-primary-d;
+				color: $color-primary-text-d;
+			}
+		}
+	}
+
+	&.table-hover {
+
+		> tbody {
+
+			tr:hover {
+				background-color: $color-secondary;
+				color: $color-secondary-text;
+			}
+		}
+	}
+
+	&.table-border {
+
+		> thead {
+
+			th {
+				border: 1px solid $color-secondary;
+			}
+		}
+
+		> tbody {
+
+			td {
+				border: 1px solid $color-secondary;
+			}
+		}
+	}
+
+	&.table-fixed {
+		table-layout: fixed;
+	}
+
+	&.table-responsive {
+
+		> thead {
+
+			> tr {
+
+				> th {
+					display: none;
+					text-align: left;
+
+					@include responsive-min( screen-tablet-large ) {
+						display: table-cell;
+					}
+				}
+			}
+		}
+
+		> tbody {
+
+			> tr {
+
+				> td {
+					display: block;
+					text-align: left;
+
+					&:before {
+						content: attr(data-th);
+						font-weight: bold;
+						width: 30%;
+						display: inline-block;
+
+						@include responsive-min( screen-tablet-large ) {
+							display: none;
+						}
+					}
+
+					@include responsive-min( screen-tablet-large ) {
+						display: table-cell;
+					}
+				}
+			}
+		}
+
+		.wrap-table {
+			width: 68%;
+
+			@include responsive-min( screen-tablet-large ) {
+				width: 100%;
+			}
+		}
+	}
 }

@@ -1,0 +1,53 @@
+/**********************************************************************
+Description: It defines the styles for popout components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for popout components as listed below:
+
+* Popout      - The barebone popout class with minimum styles to position it's elements.
+*
+***********************************************************************/
+
+// == Structure - Popout ============
+
+.popout {
+	position: relative;
+
+	.popout-trigger {
+		// Popout trigger
+	}
+
+	.popout-content-wrap {
+		display: none; // hidden at start
+		// Popout content wrapper
+
+		.popout-content {
+			// Popout content
+		}
+	}
+}
+
+// == Structure - Popout Group ======
+
+.popout-group {
+
+	.popout-actions {
+
+		.popout-trigger {
+			// Popout trigger
+		}
+	}
+
+	.popouts {
+		// Popouts wrapper
+
+		.popout {
+			display: none;
+
+			.popout-content-wrap {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,903 +1,1728 @@
 /**********************************************************************
-Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
+Description: This file define the mixins available in CMT-UI css framework. It also define the default classes
+			 for all the mixins.
+
 Dependencies: variables
+
+Details: It define the mixins and their default implementation as listed below:
+
+* Clearfix          - It allows parent element to fix zero height issue in case it consist of floating children by
+*                     forcing itself to self-clear floating children.
+*
+* Opacity           - The opacity mixin is cross-browser solution to make elements opaque. The passed value must be
+*                     between 0 to 1. Higher value means higher opacity and less transparency and vice versa.
+*
+* Transparency      - The transparency mixin is cross-browser solution to make elements transparent. The passed value must be
+*                     between 0 to 1. Higher value means higher transparency and less opacity and vice versa.
+*
+* Background        - Transparent background mixin allows to add transparency effect to background color.
+*
+* Round corners     - These mixins provide different ways to achieve round corner effects including all, top, right,
+*                     bottom, left, top left, top right, bottom left and bottom right.
+*
+* Shadow            - The shadow mixins add shadow effects to elements including outer and inner.
+*
+* Text shadow       - The text shadow mixins add shadow effects to text including outer and inner.
+*
+* Border            - The border mixins provide options to add border including all, top, right, bottom and left.
+*
+* Gradients         - These mixins provide options to apply gradient effects. These include linear, linear with angle
+*                     and radial.
+*
+* Circle effect 1   - It make the parent round cornered and child aligned at center. The parent must be either square
+*                     or rectangular in order to work with this effect.
+*
+* Circle effect 2   - It make the element circular having fixed width and height. It does not consider child alignment.
+*
+* Circle effect 3   - It make the element circular by applying padding at bottom. It does not consider child alignment.
+*
+* Text Shape        - It make shape behind text having elliptical or circular effect.
+*
+* Vertical Center   - It provide mixin to vertically align a child at center of parent.
+*
+* Child Center      - It provide mixin to align child at center both horizontally and vertically.
+*
+* Max area          - These mixins allows child to 100% cover parent. The childs can be either opaque or transparent.
+*
+* Max area cover    - It adds option to have text aligned at center to max area mixins. Initially these elements will be
+*                     hidden and displayed when required.
+*
+* Background        - The background mixins provide options to have below listed backgrounds:
+*                     Tiled              - The background will repeat image both horizontally and vertically.
+*                     Background Image   - The background will be filled with image aligned at center. The image will adjust
+*                                          it's position to fully cover the element.
+*                     Background Fill    - The background will be filled at center with image having specified width and height.
+*                     Background Auto    - The background will be filled with image covering 100% width and auto height.
+*                     Background Scroll  - The background will scroll at low speed as compared to user scroll giving parallax effect.
+*                     Background Fixed   - The background will be filled 100% with fixed image and allows user to scroll content.
+*                     Background Element - The element will adjust itself to allow img tag to fill it completely. The element
+*                                          must be child of parent having fixed height.
+*
+* Textures          - Textures are special tiles having a pattern occupying few pixels. These will give special effects to underlying
+*                     content and images.
+*
+* Blur              - Blus is another mixin adding lens effect to blur underlying content and images.
+*
+* Media Queries     - These mixins are pre-defined media queries using the screen sizes declared in variables file. This section
+*                     includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
 
 // Clearfix
 %clearfix {
-    zoom: 1;
+	zoom: 1;
 
-    &:before, &:after {
-        content: "\0020";
-        display: block;
-        height: 0;
-        overflow: hidden;
-    }
+	&:before, &:after {
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
+	}
 
-    &:after {
-        clear: both;
-    }
+	&:after {
+		clear: both;
+	}
 }
 
 // Opacity
 @mixin opaque( $value ) {
-    zoom: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = " + $value*100 + " )";
-    -moz-opacity: $value;
-    -khtml-opacity: $value;
-    filter: alpha( opacity = $value*100 );
-    opacity: $value;
+	zoom: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = " + $value*100 + " )";
+	-moz-opacity: $value;
+	-khtml-opacity: $value;
+	filter: alpha( opacity = ( $value*100 ) );
+	opacity: $value;
+}
+
+// Transparency
+@mixin transparent( $value ) {
+	zoom: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = " + ( 100 - $value*100 ) + " )";
+	-moz-opacity: ( 1 - $value );
+	-khtml-opacity: ( 1 - $value );
+	filter: alpha( opacity = ( 100 - $value*100 ) );
+	opacity: ( 1 - $value );
 }
 
 // Transparent Background
-@mixin transparentBkg( $color, $alpha: 0.6 ) {
-    background-color: rgba( $color, $alpha );
+@mixin transparentBkg( $color, $alpha: $color-transparent-medium ) {
+	background-color: rgba( $color, $alpha );
 }
 
 // Round Corners
 @mixin rounded( $radius ) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
-    -khtml-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+	-khtml-border-radius: $radius;
 }
 
 @mixin rounded-top( $radius ) {
-    -moz-border-radius-top-left: $radius;       -moz-border-radius-top-right: $radius;
-    -webkit-border-radius-top-left: $radius;    -webkit-border-radius-top-right: $radius;
-    border-radius: $radius $radius 0 0;
-    -khtml-border-radius-top-left: $radius;     -khtml-border-radius-top-right: $radius;
+	-moz-border-radius-top-left: $radius;       -moz-border-radius-top-right: $radius;
+	-webkit-border-radius-top-left: $radius;    -webkit-border-radius-top-right: $radius;
+	border-radius: $radius $radius 0 0;
+	-khtml-border-radius-top-left: $radius;     -khtml-border-radius-top-right: $radius;
 }
 
 @mixin rounded-right( $radius ) {
-    -moz-border-radius-top-right: $radius;      -moz-border-radius-bottom-right: $radius;
-    -webkit-border-radius-top-right: $radius;   -webkit-border-radius-bottom-right: $radius;
-    border-radius: 0 $radius $radius 0;
-    -khtml-border-radius-top-right: $radius;    -khtml-border-radius-bottom-right: $radius;
+	-moz-border-radius-top-right: $radius;      -moz-border-radius-bottom-right: $radius;
+	-webkit-border-radius-top-right: $radius;   -webkit-border-radius-bottom-right: $radius;
+	border-radius: 0 $radius $radius 0;
+	-khtml-border-radius-top-right: $radius;    -khtml-border-radius-bottom-right: $radius;
 }
 
 @mixin rounded-bottom( $radius ) {
-    -moz-border-radius-bottom-left: $radius;      -moz-border-radius-bottom-right: $radius;
-    -webkit-border-radius-bottom-left: $radius;   -webkit-border-radius-bottom-right: $radius;
-    border-radius: 0 0 $radius $radius;
-    -khtml-border-radius-bottom-left: $radius;    -khtml-border-radius-bottom-right: $radius;
+	-moz-border-radius-bottom-left: $radius;      -moz-border-radius-bottom-right: $radius;
+	-webkit-border-radius-bottom-left: $radius;   -webkit-border-radius-bottom-right: $radius;
+	border-radius: 0 0 $radius $radius;
+	-khtml-border-radius-bottom-left: $radius;    -khtml-border-radius-bottom-right: $radius;
 }
 
 @mixin rounded-left( $radius ) {
-    -moz-border-radius-top-left: $radius;      -moz-border-radius-bottom-left: $radius;
-    -webkit-border-radius-top-left: $radius;   -webkit-border-radius-bottom-left: $radius;
-    border-radius: $radius 0 0 $radius;
-    -khtml-border-radius-top-left: $radius;    -khtml-border-radius-bottom-left: $radius;
+	-moz-border-radius-top-left: $radius;      -moz-border-radius-bottom-left: $radius;
+	-webkit-border-radius-top-left: $radius;   -webkit-border-radius-bottom-left: $radius;
+	border-radius: $radius 0 0 $radius;
+	-khtml-border-radius-top-left: $radius;    -khtml-border-radius-bottom-left: $radius;
 }
 
 @mixin rounded-top-left( $radius ) {
-    -moz-border-radius-top-left: $radius;
-    -webkit-border-radius-top-left: $radius;
-    border-radius: $radius 0 0 0;
-    -khtml-border-radius-top-left: $radius;
+	-moz-border-radius-top-left: $radius;
+	-webkit-border-radius-top-left: $radius;
+	border-radius: $radius 0 0 0;
+	-khtml-border-radius-top-left: $radius;
 }
 
 @mixin rounded-top-right( $radius ) {
-    -moz-border-radius-top-right: $radius;
-    -webkit-border-radius-top-right: $radius;
-    border-radius: 0 $radius 0 0;
-    -khtml-border-radius-top-right: $radius;
+	-moz-border-radius-top-right: $radius;
+	-webkit-border-radius-top-right: $radius;
+	border-radius: 0 $radius 0 0;
+	-khtml-border-radius-top-right: $radius;
 }
 
 @mixin rounded-bottom-left( $radius ) {
-    -moz-border-radius-bottom-left: $radius;
-    -webkit-border-radius-bottom-left: $radius;
-    border-radius: 0 0 $radius 0;
-    -khtml-border-radius-bottom-left: $radius;
+	-moz-border-radius-bottom-left: $radius;
+	-webkit-border-radius-bottom-left: $radius;
+	border-radius: 0 0 $radius 0;
+	-khtml-border-radius-bottom-left: $radius;
 }
 
 @mixin rounded-bottom-right( $radius ) {
-    -moz-border-radius-bottom-right: $radius;
-    -webkit-border-radius-bottom-right: $radius;
-    border-radius: 0 0 0 $radius;
-    -khtml-border-radius-bottom-right: $radius;
-}
-
-// Circled - Style having border radius 100% and child elements aligned at center position
-@mixin circled1( $bkg-color, $color ) {
-    overflow: hidden;
-    text-align: center;
-    vertical-align: middle;
-    background-color: $bkg-color;
-    color: $color;
-    -moz-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    border-radius: 100%;
-    -khtml-border-radius: 100%;
-}
-
-// Circled - Style having border radius 50% with fixed height and width without child consideration
-@mixin circled2( $width, $height, $bkg-color ) {
-    width: $width;
-    height: $height;
-    background: $bkg-color;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
-// Circled - Style having border radius 50% and responsive without child consideration
-@mixin circled3( $bkg-color, $pad: 50% ) {
-    width: 50%;
-    height:0;
-    background-color: $bkg-color;
-    padding-bottom: $pad;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-}
-
-// Text wrapper - Can be used to wrap text aligned centre both horizontally and vertically. The radius can be set to 50% for circle effect.
-@mixin shape-text( $bkg-color, $txt-color, $pad1: 100%, $pad2: 50%, $radius: 0 ) {
-    width: 50%;
-
-    &:after {
-        width: 100%;
-        height: 0;
-        background-color: $bkg-color;
-        content: "";
-        display: block;
-        padding-bottom: $pad1;
-        -moz-border-radius: $radius;
-        -webkit-border-radius: $radius;
-        border-radius: $radius;
-    }
-
-    span {
-        display: inline-block;
-        float: left;
-        width: 100%;
-        padding-top: $pad2;
-        line-height: 1em;
-        margin-top: -0.5em;
-        text-align: center;
-        color: $txt-color;
-    }
+	-moz-border-radius-bottom-right: $radius;
+	-webkit-border-radius-bottom-right: $radius;
+	border-radius: 0 0 0 $radius;
+	-khtml-border-radius-bottom-right: $radius;
 }
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
 
-@mixin shadow( $x, $y, $blur, $color, $spread: 0px ) {
-    -webkit-box-shadow: $x $y $blur $spread $color;
-    -moz-box-shadow: $x $y $blur $spread $color;
-    box-shadow: $x $y $blur $spread $color;
+@mixin shadow( $x, $y, $blur, $color, $spread: 0 ) {
+	-webkit-box-shadow: $x $y $blur $spread $color;
+	-moz-box-shadow: $x $y $blur $spread $color;
+	box-shadow: $x $y $blur $spread $color;
 }
 
-@mixin shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
-    -webkit-box-shadow: inset $x $y $blur $spread $color;
-    -moz-box-shadow: inset $x $y $blur $spread $color;
-    box-shadow: inset $x $y $blur $spread $color;
+@mixin shadow-inset( $x, $y, $blur, $color, $spread: 0 ) {
+	-webkit-box-shadow: inset $x $y $blur $spread $color;
+	-moz-box-shadow: inset $x $y $blur $spread $color;
+	box-shadow: inset $x $y $blur $spread $color;
+}
+
+@mixin shadow-inset-top-bottom( $x1, $y1, $blur1, $color1, $x2, $y2, $blur2, $color2, $spread1: 0, $spread2: 0 ) {
+	-webkit-box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
+	-moz-box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
+	box-shadow: inset inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
 }
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
 
-@mixin text-shadow( $x, $y, $blur, $color, $opacity: 1 ) {
-    -webkit-text-shadow: $x $y $blur rgba( $color, $opacity );
-    -moz-text-shadow: $x $y $blur rgba( $color, $opacity );
-    text-shadow: $x $y $blur rgba( $color, $opacity );
+@mixin text-shadow( $x, $y, $blur, $color, $spread: 0 ) {
+	-webkit-text-shadow: $x $y $blur $spread $color;
+	-moz-text-shadow: $x $y $blur $spread $color;
+	text-shadow: $x $y $blur $spread $color;
 }
 
-@mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0px ) {
-    -webkit-text-shadow: inset $x $y $blur $spread $color;
-    -moz-text-shadow: inset $x $y $blur $spread $color;
-    text-shadow: inset $x $y $blur $spread $color;
+@mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0 ) {
+	-webkit-text-shadow: inset $x $y $blur $spread $color;
+	-moz-text-shadow: inset $x $y $blur $spread $color;
+	text-shadow: inset $x $y $blur $spread $color;
 }
 
 // Borders
 
 @mixin border( $width, $style, $color ) {
-    border: $width $style $color;
+	border: $width $style $color;
 }
 
 @mixin border-top( $width, $style, $color ) {
-    border-top: $width $style $color;
+	border-top: $width $style $color;
 }
 
 @mixin border-right( $width, $style, $color ) {
-    border-right: $width $style $color;
+	border-right: $width $style $color;
 }
 
 @mixin border-bottom( $width, $style, $color ) {
-    border-bottom: $width $style $color;
+	border-bottom: $width $style $color;
 }
 
 @mixin border-left( $width, $style, $color ) {
-    border-left: $width $style $color;
+	border-left: $width $style $color;
 }
 
 // TODO: Add missing gradient mixins
 
 // Linear Gradient - Default - Top to Bottom
 @mixin linear-gradient( $start, $end, $direction: 'bottom' ) {
-    background-color: $end;
-    background-image: -moz-linear-gradient( $direction, $start, $end );
-    background-image: -o-linear-gradient( $direction, $start, $end );
-    background-image: -webkit-gradient( linear, left top, left bottom, color-stop( 0, $start ), color-stop( 1, $end ) );
-    background-image: -webkit-linear-gradient( $direction, $start, $end );
-    background-image: -ms-linear-gradient( $direction, $start, $end );
-    background-image: linear-gradient( to $direction, $start, $end );
+	background-color: $end;
+	background-image: -moz-linear-gradient( $direction, $start, $end );
+	background-image: -o-linear-gradient( $direction, $start, $end );
+	background-image: -webkit-gradient( linear, left top, left bottom, color-stop( 0, $start ), color-stop( 1, $end ) );
+	background-image: -webkit-linear-gradient( $direction, $start, $end );
+	background-image: -ms-linear-gradient( $direction, $start, $end );
+	background-image: linear-gradient( to $direction, $start, $end );
 }
 
-@mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle ) {
+@mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle: 0deg ) {
 
-    background: $start;
-    background: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
-    background: -webkit-linear-gradient($angle, $start $startPos, $end $endPos);
-    background: -o-linear-gradient($angle, $start $startPos, $end $endPos);
-    background: -ms-linear-gradient($angle, $start $startPos, $end $endPos);
+	background: $start;
+	background: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
+	background: -webkit-linear-gradient($angle, $start $startPos, $end $endPos);
+	background: -o-linear-gradient($angle, $start $startPos, $end $endPos);
+	background: -ms-linear-gradient($angle, $start $startPos, $end $endPos);
 
-    background: linear-gradient($linearAngle, $start $startPos, $end $endPos);
+	background: linear-gradient($linearAngle, $start $startPos, $end $endPos);
 }
 
 // Radial Gradient - Default - Top to Bottom
 @mixin radial-gradient( $start, $end, $direction: circle at center top ) {
-    //background-image: -webkit-gradient( radial, center center, 0, center center, 141, from(black), to(white), color-stop(25%, blue), color-stop(40%, green), color-stop(60%, red), color-stop(80%, purple));
-    //background-image: -webkit-radial-gradient( 45px 45px, farthest-corner, #F00 0%, #00F 100% ) repeat scroll 0% 0% rgba( 0, 0, 0, 0 );
-    background-image: radial-gradient( $direction, $start, $end );
+	//background-image: -webkit-gradient( radial, center center, 0, center center, 141, from(black), to(white), color-stop(25%, blue), color-stop(40%, green), color-stop(60%, red), color-stop(80%, purple));
+	//background-image: -webkit-radial-gradient( 45px 45px, farthest-corner, #F00 0%, #00F 100% ) repeat scroll 0% 0% rgba( 0, 0, 0, 0 );
+	background-image: radial-gradient( $direction, $start, $end );
+}
+
+// Circled - Style having border radius 100% and child elements aligned at center position
+@mixin circled1( $bkg-color, $color ) {
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+	background-color: $bkg-color;
+	color: $color;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	-khtml-border-radius: 100%;
+}
+
+// Circled - Style having border radius 50% with fixed height and width without child consideration
+@mixin circled2( $width, $height, $bkg-color ) {
+	width: $width;
+	height: $height;
+	background: $bkg-color;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+// Circled - Style having border radius 50% and responsive without child consideration
+@mixin circled3( $bkg-color, $pad: 50% ) {
+	width: 50%;
+	height:0;
+	background-color: $bkg-color;
+	padding-bottom: $pad;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+// Text wrapper - Can be used to wrap text aligned centre both horizontally and vertically. The radius can be set to 50% for circle effect.
+@mixin shape-text( $bkg-color, $txt-color, $pad1: 100%, $pad2: 50%, $radius: 0 ) {
+	width: 50%;
+
+	&:after {
+		width: 100%;
+		height: 0;
+		background-color: $bkg-color;
+		content: "";
+		display: block;
+		padding-bottom: $pad1;
+		-moz-border-radius: $radius;
+		-webkit-border-radius: $radius;
+		border-radius: $radius;
+	}
+
+	span {
+		display: inline-block;
+		float: left;
+		width: 100%;
+		padding-top: $pad2;
+		line-height: 1em;
+		margin-top: -0.5em;
+		text-align: center;
+		color: $txt-color;
+	}
 }
 
 // Vertically Align Center - It works for containers or elements having parent without min-height.
 @mixin valign-center {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY( -50% );
-      -ms-transform: translateY( -50% );
-        transform: translateY( -50% );
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY( -50% );
+	  -ms-transform: translateY( -50% );
+		transform: translateY( -50% );
 }
 
 // Align child - vertically and horizontally at center
-@mixin vh-align-child-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+@mixin vh-align-center {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
 }
 
 // Max area boxes - Parent must have position attribute
 
 %max-area {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
 }
 
 @mixin max-area() {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
 }
 
-@mixin max-area-transparent( $color: $color-black, $alpha: 0.6 ) {
-      @include max-area;
-      background-color: rgba( $color, $alpha );
+@mixin max-area-color( $color ) {
+	  @include max-area;
+	  background-color: $color;
 }
 
-@mixin max-area-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: 0.6 ) {
-      @include max-area;
-      background-color: rgba( $r, $g, $b, $alpha );
+@mixin max-area-rgb( $r: 0, $g: 0, $b: 0 ) {
+	  @include max-area;
+	  background-color: rgba( $r, $g, $b, 0 );
+}
+
+@mixin max-area-transparent( $color: $color-black, $alpha: $color-transparent-medium ) {
+	  @include max-area;
+	  background-color: rgba( $color, $alpha );
+}
+
+@mixin max-area-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium ) {
+	  @include max-area;
+	  background-color: rgba( $r, $g, $b, $alpha );
 }
 
 // Max Area Cover - The element overlays(cover) all other child elements of it's parent unless the other child got greater z-index.
 // Initially it's set to hidden and can be made visible when required. most useful example is
 // having a full cover pre-loader with spinner on top of all other elements.
-@mixin max-area-cover {
-    @include max-area-transparent;
-    text-align: center;
-    color: $color-primary-text;
-    z-index: 1000000;
-    display: none;
+@mixin max-area-cover( $display: none ) {
+	@include max-area;
+	z-index: 1000000;
+	display: $display;
+	// Text alignment and color
+	text-align: center;
+	color: $color-primary-text;
+}
+
+@mixin max-area-cover-color( $color: $color-black, $display: none ) {
+	  @include max-area-cover( $display );
+	  background-color: $color;
+}
+
+@mixin max-area-cover-rgb( $r: 0, $g: 0, $b: 0, $display: none ) {
+	  @include max-area-cover( $display );
+	  background-color: rgba( $r, $g, $b, 0 );
+}
+
+@mixin max-area-cover-transparent( $color: $color-black, $alpha: $color-transparent-medium, $display: none ) {
+	  @include max-area-cover( $display );
+	  background-color: rgba( $color, $alpha );
+}
+
+@mixin max-area-cover-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium, $display: none ) {
+	  @include max-area-cover( $display );
+	  background-color: rgba( $r, $g, $b, $alpha );
 }
 
 // Backgrounds
 @mixin bkg-tile {
-    background-repeat: repeat;
+	background-repeat: repeat;
 }
 
-// Cover the background keeping perspective in mind
+/*
+Notes:
+1. bkg-image, bkg-image-fill, bkg-auto, bkg-image-scroll, bkg-image-fixed - need inline css for background-image
+2. bkg-element - It use the img tag to cover background of parent element.
+*/
+
+// Cover the background
 @mixin bkg-image {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50%9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-position: 50% 50%9 !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 // Cover the background and fill with specified width and height
 @mixin bkg-image-fill( $width: 100%, $height: 100% ) {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50%9 !important;
-    -webkit-background-size: $width $height;
-    -moz-background-size: $width $height;
-    background-size: $width $height;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-position: 50% 50%9 !important;
+	-webkit-background-size: $width $height;
+	-moz-background-size: $width $height;
+	-o-background-size: $width $height;
+	background-size: $width $height;
 }
 
 // background center align with auto height
 @mixin bkg-auto {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
 }
 
-// Cover the background keeping perspective in mind. It need little javascript/jquery code.
+// Cover the background keeping parallax in mind. It need little javascript/jquery code.
 //  jQuery( window ).scroll(function() {
 //    var scrolledY = jQuery( window ).scrollTop();
 //    jQuery( <selector> ).css( 'background-position', 'center ' + ( ( scrolledY ) ) + 'px' );
 //  });
 //
 @mixin bkg-image-scroll {
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-position: 50% 50%9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-position: 50% 50%9 !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-attachment: scroll;
 }
 
 @mixin bkg-image-fixed {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-position: 50% 50%9 !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-position: 50% 50%9 !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
-// background using img - use it inside a block having fixed height
-@mixin bkg-img {
-    position: relative;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+// background filled with img - use it inside a block having fixed height
+@mixin bkg-element {
+	position: relative;
+	display: block;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
 
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        min-width: 50%;
-        min-height: 50%;
-    }
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		min-width: 50%;
+		min-height: 50%;
+	}
+}
+
+@mixin bkg-element-medium {
+	position: relative;
+	display: block;
+	top: -30%;
+	left: -30%;
+	width: 160%;
+	height: 160%;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		min-width: 70%;
+		min-height: 70%;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+@mixin bkg-element-small {
+	position: relative;
+	display: block;
+	top: -20%;
+	left: -20%;
+	width: 140%;
+	height: 140%;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		min-width: 80%;
+		min-height: 80%;
+		max-width: 100%;
+		max-height: 100%;
+	}
 }
 
 // Textures
 
 %textures {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    @include bkg-tile;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include bkg-tile;
 }
 
 @mixin blur( $value ) {
-    filter: blur($value);
-    -webkit-filter: blur($value);
-    -moz-filter: blur($value);
-    -o-filter: blur($value);
-    -ms-filter: blur($value);
+	filter: blur($value);
+	-webkit-filter: blur($value);
+	-moz-filter: blur($value);
+	-o-filter: blur($value);
+	-ms-filter: blur($value);
 }
 
 // Mixins Default implementation ***********************
 
 // Clearfix
 .clearfix {
-    @extend %clearfix;
+	@extend %clearfix;
 }
 
 // Opacity
+.opaque {
+	@include opaque( $color-opaque-default );
 
-.opaque-25 {
-    @include opaque( 0.25 );
+	&.opaque-low {
+		@include opaque( $color-opaque-low );
+	}
+
+	&.opaque-medium {
+		@include opaque( $color-opaque-medium );
+	}
+
+	&.opaque-high {
+		@include opaque( $color-opaque-high );
+	}
+
+	&.opaque-25 {
+		@include opaque( 0.25 );
+	}
+
+	&.opaque-50 {
+		@include opaque( 0.50 );
+	}
+
+	&.opaque-75 {
+		@include opaque( 0.75 );
+	}
 }
 
-.opaque-50 {
-    @include opaque( 0.50 );
-}
+// Transparency
+.transparent {
+	@include transparent( $color-transparent-default );
 
-.opaque-75 {
-    @include opaque( 0.75 );
+	&.transparent-low {
+		@include transparent( $color-transparent-low );
+	}
+
+	&.transparent-medium {
+		@include transparent( $color-transparent-medium );
+	}
+
+	&.transparent-high {
+		@include transparent( $color-transparent-high );
+	}
+
+	&.transparent-25 {
+		@include transparent( 0.25 );
+	}
+
+	&.transparent-50 {
+		@include transparent( 0.50 );
+	}
+
+	&.transparent-75 {
+		@include transparent( 0.75 );
+	}
 }
 
 // Transparent backgrounds
+.transparent-bkg {
+	@include transparentBkg( $color-transparent-white );
 
-.bkg-transparent-white {
-    @include transparentBkg( $color-transparent-white );
-}
+	// Transparent backgrounds - 3 Color Scheme
 
-.bkg-transparent-gray {
-    @include transparentBkg( $color-transparent-gray );
-}
+	&.transparent-bkg-primary {
+		@include transparentBkg( $color-transparent-primary );
+	}
 
-.bkg-transparent-black {
-    @include transparentBkg( $color-transparent-black );
-}
+	&.transparent-bkg-secondary {
+		@include transparentBkg( $color-transparent-secondary );
+	}
 
-.bkg-transparent-primary {
-    @include transparentBkg( $color-transparent-primary );
-}
+	&.transparent-bkg-tertiary {
+		@include transparentBkg( $color-transparent-tertiary );
+	}
 
-.bkg-transparent-secondary {
-    @include transparentBkg( $color-transparent-secondary );
-}
+	// Standard Background Colors
 
-.bkg-transparent-tertiary {
-    @include transparentBkg( $color-transparent-tertiary );
+	&.transparent-bkg-gray {
+		@include transparentBkg( $color-transparent-gray );
+	}
+
+	&.transparent-bkg-black {
+		@include transparentBkg( $color-transparent-black );
+	}
+
+	&.transparent-bkg-blue {
+		@include transparentBkg( $color-transparent-blue );
+	}
+
+	&.transparent-bkg-purple {
+		@include transparentBkg( $color-transparent-purple );
+	}
+
+	&.transparent-bkg-orange {
+		@include transparentBkg( $color-transparent-orange );
+	}
+
+	&.transparent-bkg-yellow {
+		@include transparentBkg( $color-transparent-yellow );
+	}
+
+	&.transparent-bkg-red {
+		@include transparentBkg( $color-transparent-red );
+	}
+
+	&.transparent-bkg-pink {
+		@include transparentBkg( $color-transparent-pink );
+	}
+
+	&.transparent-bkg-magenta {
+		@include transparentBkg( $color-transparent-magenta );
+	}
+
+	&.transparent-bkg-green {
+		@include transparentBkg( $color-transparent-green );
+	}
+
+	&.transparent-bkg-brown {
+		@include transparentBkg( $color-transparent-brown );
+	}
 }
 
 // Round Corners
 
 .rounded {
-    @include rounded( $size-default );
+
+	&.rounded-none {
+		@include rounded( 0 !important );
+	}
+
+	&.rounded-default {
+		@include rounded( $size-default );
+	}
+
+	&.rounded-small {
+		@include rounded( $size-small );
+	}
+
+	&.rounded-medium {
+		@include rounded( $size-medium );
+	}
+
+	&.rounded-large {
+		@include rounded( $size-large );
+	}
+
+	&.rounded-xlarge {
+		@include rounded( $size-xlarge );
+	}
+
+	&.rounded-top {
+		@include rounded-top( $size-default );
+
+		&.rounded-top-small {
+			@include rounded-top( $size-small );
+		}
+
+		&.rounded-top-medium {
+			@include rounded-top( $size-medium );
+		}
+
+		&.rounded-top-large {
+			@include rounded-top( $size-large );
+		}
+
+		&.rounded-top-xlarge {
+			@include rounded-top( $size-xlarge );
+		}
+	}
+
+	&.rounded-right {
+		@include rounded-right( $size-default );
+
+		&.rounded-right-small {
+			@include rounded-right( $size-small );
+		}
+
+		&.rounded-right-medium {
+			@include rounded-right( $size-medium );
+		}
+
+		&.rounded-right-large {
+			@include rounded-right( $size-large );
+		}
+
+		&.rounded-right-xlarge {
+			@include rounded-right( $size-xlarge );
+		}
+	}
+
+	&.rounded-bottom {
+		@include rounded-bottom( $size-default );
+
+		&.rounded-bottom-small {
+			@include rounded-bottom( $size-small );
+		}
+
+		&.rounded-bottom-medium {
+			@include rounded-bottom( $size-medium );
+		}
+
+		&.rounded-bottom-large {
+			@include rounded-bottom( $size-large );
+		}
+
+		&.rounded-bottom-xlarge {
+			@include rounded-bottom( $size-xlarge );
+		}
+	}
+
+	&.rounded-left {
+		@include rounded-left( $size-default );
+
+		&.rounded-left-small {
+			@include rounded-left( $size-small );
+		}
+
+		&.rounded-left-medium {
+			@include rounded-left( $size-medium );
+		}
+
+		&.rounded-left-large {
+			@include rounded-left( $size-large );
+		}
+
+		&.rounded-left-xlarge {
+			@include rounded-left( $size-xlarge );
+		}
+	}
+
+	&.rounded-top-left {
+		@include rounded-top-left( $size-default );
+
+		&.rounded-top-left-small {
+			@include rounded-top-left( $size-small );
+		}
+
+		&.rounded-top-left-medium {
+			@include rounded-top-left( $size-medium );
+		}
+
+		&.rounded-top-left-large {
+			@include rounded-top-left( $size-large );
+		}
+
+		&.rounded-top-left-xlarge {
+			@include rounded-top-left( $size-xlarge );
+		}
+	}
+
+	&.rounded-top-right {
+		@include rounded-top-right( $size-default );
+
+		&.rounded-top-right-small {
+			@include rounded-top-right( $size-small );
+		}
+
+		&.rounded-top-right-medium {
+			@include rounded-top-right( $size-medium );
+		}
+
+		&.rounded-top-right-large {
+			@include rounded-top-right( $size-large );
+		}
+
+		&.rounded-top-right-xlarge {
+			@include rounded-top-right( $size-xlarge );
+		}
+	}
+
+	&.rounded-bottom-left {
+		@include rounded-bottom-left( $size-default );
+
+		&.rounded-bottom-left-small {
+			@include rounded-bottom-left( $size-small );
+		}
+
+		&.rounded-bottom-left-medium {
+			@include rounded-bottom-left( $size-medium );
+		}
+
+		&.rounded-bottom-left-large {
+			@include rounded-bottom-left( $size-large );
+		}
+
+		&.rounded-bottom-left-xlarge {
+			@include rounded-bottom-left( $size-xlarge );
+		}
+	}
+
+	&.rounded-bottom-right {
+		@include rounded-bottom-right( $size-default );
+
+		&.rounded-bottom-right-small {
+			@include rounded-bottom-right( $size-small );
+		}
+
+		&.rounded-bottom-right-medium {
+			@include rounded-bottom-right( $size-medium );
+		}
+
+		&.rounded-bottom-right-large {
+			@include rounded-bottom-right( $size-large );
+		}
+
+		&.rounded-bottom-right-xlarge {
+			@include rounded-bottom-right( $size-xlarge );
+		}
+	}
 }
-
-.rounded-medium {
-    @include rounded( $size-medium );
-}
-
-.rounded-large {
-    @include rounded( $size-large );
-}
-
-.rounded-top {
-    @include rounded-top( $size-default );
-}
-
-.rounded-right {
-    @include rounded-right( $size-default );
-}
-
-.rounded-bottom {
-    @include rounded-bottom( $size-default );
-}
-
-.rounded-left {
-    @include rounded-left( $size-default );
-}
-
-.rounded-top-left {
-    @include rounded-top-left( $size-default );
-}
-
-.rounded-top-right {
-    @include rounded-top-right( $size-default );
-}
-
-.rounded-bottom-left {
-    @include rounded-bottom-left( $size-default );
-}
-
-.rounded-bottom-right {
-    @include rounded-bottom-right( $size-default );
-}
-
-// Circled
-
-.circled1 {
-    @include circled1( $color-secondary, $color-secondary-text );
-}
-
-.circled2 {
-    @include circled2( 250px, 250px, $color-secondary );
-}
-
-.circled3 {
-    @include circled3( $color-secondary );
-}
-
-.shape-text {
-    @include shape-text( $color-secondary, $color-secondary-text );
-}
-
-// TODO: Add inset shadows
 
 // Shadow
 .shadow {
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-black, 0.4 ) );
+	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
+
+	// 3 Color Scheme
+
+	&.shadow-primary {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
+	}
+
+	&.shadow-secondary {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparent-medium ) );
+	}
+
+	&.shadow-tertiary {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
+	}
+
+	// Standard Shadows
+
+	&.shadow-gray {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
+	}
+
+	&.shadow-black {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-black, $color-transparent-medium ) );
+	}
+
+	&.shadow-blue {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-blue, $color-transparent-medium ) );
+	}
+
+	&.shadow-purple {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-purple, $color-transparent-medium ) );
+	}
+
+	&.shadow-orange {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-orange, $color-transparent-medium ) );
+	}
+
+	&.shadow-yellow {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-yellow, $color-transparent-medium ) );
+	}
+
+	&.shadow-red {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-red, $color-transparent-medium ) );
+	}
+
+	&.shadow-pink {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-pink, $color-transparent-medium ) );
+	}
+
+	&.shadow-magenta {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-magenta, $color-transparent-medium ) );
+	}
+
+	&.shadow-green {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
+	}
+
+	&.shadow-green-d {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+	}
 }
 
-.shadow-primary {
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, 0.4 ) );
+// Shadow Inset
+.shadow-inset {
+	@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
+
+	// 3 Color Scheme
+
+	&.shadow-inset-primary {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-secondary {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-tertiary {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
+	}
+
+	// Standard Inset Shadows
+
+	&.shadow-inset-gray {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-black {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-black, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-blue {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-blue, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-purple {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-purple, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-orange {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-orange, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-yellow {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-yellow, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-red {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-red, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-pink {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-pink, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-magenta {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-magenta, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-green {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
+	}
+
+	&.shadow-inset-green-d {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+	}
 }
 
-.shadow-secondary {
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, 0.4 ) );
-}
-
-.shadow-tertiary {
-    @include shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, 0.4 ) );
-}
-
+// Text Shadow
 .text-shadow {
-    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
+	@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
+
+	// 3 Color Scheme
+
+	&.text-shadow-primary {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-secondary {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-tertiary {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
+	}
+
+	// Standard Text Shadows
+
+	&.text-shadow-gray {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-black {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-black, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-blue {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-blue, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-purple {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-purple, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-orange {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-orange, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-yellow {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-yellow, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-red {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-red, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-pink {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-pink, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-magenta {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-magenta, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-green {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-green-d {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+	}
 }
 
-.text-shadow-primary {
-    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
-}
+// Text Shadow Inset
+.text-shadow-inset {
+	@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
 
-.text-shadow-secondary {
-    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
-}
+	// 3 Color Scheme
 
-.text-shadow-tertiary {
-    @include text-shadow( $size-default, $size-default, $size-medium, $color-black, 0.4 );
+	&.text-shadow-inset-primary {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-secondary {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-secondary, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-tertiary {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-tertiary, $color-transparent-medium ) );
+	}
+
+	// Standard Inset Text Shadows
+
+	&.text-shadow-inset-gray {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-gray, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-black {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-black, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-blue {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-blue, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-purple {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-purple, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-orange {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-orange, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-yellow {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-yellow, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-red {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-red, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-pink {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-pink, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-magenta {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-magenta, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-green {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
+	}
+
+	&.text-shadow-inset-green-d {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+	}
 }
 
 // Borders
 
-.border-default {
-    @include border( $size-default, solid, $color-secondary );
-}
+.border {
 
-.border-default-top {
-    @include border-top( $size-default, solid, $color-secondary );
-}
+	&.border-default {
+		@include border( $size-default, solid, $color-border );
+	}
 
-.border-default-right {
-    @include border-right( $size-default, solid, $color-secondary );
-}
+	&.border-default-l {
+		@include border( $size-default, solid, $color-border-d );
+	}
 
-.border-default-bottom {
-    @include border-bottom( $size-default, solid, $color-secondary );
-}
+	&.border-default-d {
+		@include border( $size-default, solid, $color-border-l );
+	}
 
-.border-default-left {
-    @include border-left( $size-default, solid, $color-secondary );
+	&.border-small {
+		@include border( $size-small, solid, $color-border );
+	}
+
+	&.border-medium {
+		@include border( $size-medium, solid, $color-border );
+	}
+
+	&.border-large {
+		@include border( $size-large, solid, $color-border );
+	}
+
+	&.border-xlarge {
+		@include border( $size-xlarge, solid, $color-border );
+	}
+
+	&.border-primary {
+		@include border( $size-default, solid, $color-primary );
+	}
+
+	&.border-secondary {
+		@include border( $size-default, solid, $color-secondary );
+	}
+
+	&.border-tertiary {
+		@include border( $size-default, solid, $color-tertiary );
+	}
+
+	&.border-top {
+		@include border-top( $size-default, solid, $color-border );
+
+		&.border-top-small {
+			@include border-top( $size-small, solid, $color-border );
+		}
+
+		&.border-top-medium {
+			@include border-top( $size-medium, solid, $color-border );
+		}
+
+		&.border-top-large {
+			@include border-top( $size-large, solid, $color-border );
+		}
+
+		&.border-top-xlarge {
+			@include border-top( $size-xlarge, solid, $color-border );
+		}
+
+		&.border-top-primary {
+			@include border-top( $size-default, solid, $color-primary );
+		}
+
+		&.border-top-secondary {
+			@include border-top( $size-default, solid, $color-secondary );
+		}
+
+		&.border-top-tertiary {
+			@include border-top( $size-default, solid, $color-tertiary );
+		}
+	}
+
+	&.border-right {
+		@include border-right( $size-default, solid, $color-border );
+
+		&.border-right-small {
+			@include border-right( $size-small, solid, $color-border );
+		}
+
+		&.border-right-medium {
+			@include border-right( $size-medium, solid, $color-border );
+		}
+
+		&.border-right-large {
+			@include border-right( $size-large, solid, $color-border );
+		}
+
+		&.border-right-xlarge {
+			@include border-right( $size-xlarge, solid, $color-border );
+		}
+
+		&.border-right-primary {
+			@include border-right( $size-default, solid, $color-primary );
+		}
+
+		&.border-right-secondary {
+			@include border-right( $size-default, solid, $color-secondary );
+		}
+
+		&.border-right-tertiary {
+			@include border-right( $size-default, solid, $color-tertiary );
+		}
+	}
+
+	&.border-bottom {
+		@include border-bottom( $size-default, solid, $color-border );
+
+		&.border-bottom-small {
+			@include border-bottom( $size-small, solid, $color-border );
+		}
+
+		&.border-bottom-medium {
+			@include border-bottom( $size-medium, solid, $color-border );
+		}
+
+		&.border-bottom-large {
+			@include border-bottom( $size-large, solid, $color-border );
+		}
+
+		&.border-bottom-xlarge {
+			@include border-bottom( $size-xlarge, solid, $color-border );
+		}
+
+		&.border-bottom-primary {
+			@include border-bottom( $size-default, solid, $color-primary );
+		}
+
+		&.border-bottom-secondary {
+			@include border-bottom( $size-default, solid, $color-secondary );
+		}
+
+		&.border-bottom-tertiary {
+			@include border-bottom( $size-default, solid, $color-tertiary );
+		}
+	}
+
+	&.border-left {
+		@include border-left( $size-default, solid, $color-border );
+
+		&.border-left-small {
+			@include border-left( $size-small, solid, $color-border );
+		}
+
+		&.border-left-medium {
+			@include border-left( $size-medium, solid, $color-border );
+		}
+
+		&.border-left-large {
+			@include border-left( $size-large, solid, $color-border );
+		}
+
+		&.border-left-xlarge {
+			@include border-left( $size-xlarge, solid, $color-border );
+		}
+
+		&.border-left-primary {
+			@include border-left( $size-default, solid, $color-primary );
+		}
+
+		&.border-left-secondary {
+			@include border-left( $size-default, solid, $color-secondary );
+		}
+
+		&.border-left-tertiary {
+			@include border-left( $size-default, solid, $color-tertiary );
+		}
+	}
 }
 
 // Gradients
+.gradient {
+	// No defaults
 
-.gradient-linear {
-    @include linear-gradient( $color-primary, $color-secondary );
+	&.gradient-linear {
+		@include linear-gradient( $color-gradient-1, $color-gradient-2 );
+	}
+
+	&.gradient-linear-angle {
+		@include linear-angle-gradient( 135deg, $color-gradient-1, 25%, $color-gradient-2, 75% );
+	}
+
+	&.gradient-radial {
+		@include radial-gradient( $color-gradient-1, $color-gradient-2 );
+	}
 }
 
-.gradient-radial {
-    @include radial-gradient( $color-primary, $color-secondary );
+// Circled
+.circled {
+	// No Defaults
+
+	&.circled1 {
+		@include circled1( $color-secondary, $color-secondary-text );
+	}
+
+	&.circled2 {
+		@include circled2( 250px, 250px, $color-secondary );
+	}
+
+	&.circled3 {
+		@include circled3( $color-secondary );
+	}
+}
+
+.shape-text {
+	@include shape-text( $color-secondary, $color-secondary-text );
 }
 
 // Alignments
 
+// Align Element
 .valign-center {
-    @include valign-center;
+	@include valign-center;
 }
 
-.child-center {
-    @include vh-align-child-center;
+// Align Element Children
+.vhalign-center {
+	@include vh-align-center;
 }
 
-// Max Area
+// Max Area - No clubbing
 
 .max-area {
-    @include max-area;
+	@include max-area;
+}
+
+.max-area-color {
+	@include max-area-color( $color-secondary );
+}
+
+.max-area-rgb {
+	@include max-area-rgb;
 }
 
 .max-area-transparent {
-    @include max-area-transparent;
+	@include max-area-transparent;
 }
 
-.max-area-cover {
-    @include max-area-cover;
+.max-area-transparent-rgb {
+	@include max-area-transparent-rgb;
 }
+
+// Max Area - relative position
 
 .max-area-relative {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 
-// Backgrounds
+// Max Area Cover - No clubbing
+
+.max-area-cover {
+	@include max-area-cover;
+}
+
+.max-area-cover-color {
+	@include max-area-cover-color;
+}
+
+.max-area-cover-rgb {
+	@include max-area-cover-rgb;
+}
+
+.max-area-cover-transparent {
+	@include max-area-cover-transparent;
+}
+
+.max-area-cover-transparent-rgb {
+	@include max-area-cover-transparent-rgb;
+}
+
+// Max Area Cover - Show pre-loaders. Little JS is required to hide pre-loader on loading the page.
+
+.pre-loader {
+	display: block;
+}
+
+// Backgrounds - No clubbing
 
 .bkg-tile {
-    @include bkg-tile;
+	@include bkg-tile;
 }
 
 .bkg-image {
-    @include bkg-image;
+	@include bkg-image;
 }
 
 .bkg-image-fill {
-    @include bkg-image-fill;
+	@include bkg-image-fill;
 }
 
 .bkg-auto {
-    @include bkg-auto;
+	@include bkg-auto;
 }
 
 .bkg-image-scroll {
-    @include bkg-image-scroll;
+	@include bkg-image-scroll;
 }
 
 .bkg-image-fixed {
-    @include bkg-image-fixed;
+	@include bkg-image-fixed;
 }
 
-.bkg-img {
-    @include bkg-img;
+.bkg-element {
+	@include bkg-element;
+}
+
+.bkg-element-medium {
+	@include bkg-element-medium;
+}
+
+.bkg-element-small {
+	@include bkg-element-small;
 }
 
 // Default Texture
 
 .texture {
-    @extend %textures;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
+	@extend %textures;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
 
-    &.texture-bar-s {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC');
-    }
+	&.texture-bar-s {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC');
+	}
 
-    &.texture-bar-m {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAAHHBk5tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDIAAJIVDGz9cSP7AAAAAElFTkSuQmCC');
-    }
+	&.texture-bar-m {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAAHHBk5tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDIAAJIVDGz9cSP7AAAAAElFTkSuQmCC');
+	}
 
-    &.texture-bar-l {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAAHaA37VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMEEwMjQzNTdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMEEwMjQzNjdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwQTAyNDMzN0U0NzExRTU5MDY4RUFDMzhGMEREQzY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwQTAyNDM0N0U0NzExRTU5MDY4RUFDMzhGMEREQzY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mZqYcQAAADJJREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDJAUYUMAA2TD2qNBZ0eAAAAAElFTkSuQmCC');
-    }
+	&.texture-bar-l {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAAHaA37VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMEEwMjQzNTdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMEEwMjQzNjdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwQTAyNDMzN0U0NzExRTU5MDY4RUFDMzhGMEREQzY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwQTAyNDM0N0U0NzExRTU5MDY4RUFDMzhGMEREQzY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mZqYcQAAADJJREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDJAUYUMAA2TD2qNBZ0eAAAAAElFTkSuQmCC');
+	}
 
-    &.texture-grid-w {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//vy9AADGACIAAYgSzgAAggOAMJgYoAAgguAgMMDGgAYAAIqyCsABAgIFdAcQ4aUwdBI0kVQEAViAs7e1rqlEAAAAASUVORK5CYII=');
-    }
+	&.texture-grid-w {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//vy9AADGACIAAYgSzgAAggOAMJgYoAAgguAgMMDGgAYAAIqyCsABAgIFdAcQ4aUwdBI0kVQEAViAs7e1rqlEAAAAASUVORK5CYII=');
+	}
 
-    &.texture-grid-b {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYGBX/P//HyeNqYOgkaQqAAAXoxjjLGdo/wAAAABJRU5ErkJggg==');
-    }
+	&.texture-grid-b {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYGBX/P//HyeNqYOgkaQqAAAXoxjjLGdo/wAAAABJRU5ErkJggg==');
+	}
 
-    &.texture-grain-w {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi+P//fwxAADGACIAAYgSzgAAggMA8JhADIIAQQkAAEEAgDozNwMSABFA4AAGGogynKqIkAGovFsbm0NI0AAAAAElFTkSuQmCC');
-    }
+	&.texture-grain-w {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi+P//fwxAADGACIAAYgSzgAAggMA8JhADIIAQQkAAEEAgDozNwMSABFA4AAGGogynKqIkAGovFsbm0NI0AAAAAElFTkSuQmCC');
+	}
 
-    &.texture-grain-w-l {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi+P//fwxAADGACIAAYgSzgAAggEAMEM3AxAAFAAEEF4EBJgY0ABBAYBNAqmA0Vi0xUHYMVkMBAgzuACBYgqwSxsfQgQ5gdsQgiaHwCZoAAAFwL9t1tvLGAAAAAElFTkSuQmCC');
-    }
+	&.texture-grain-w-l {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi+P//fwxAADGACIAAYgSzgAAggEAMEM3AxAAFAAEEF4EBJgY0ABBAYBNAqmA0Vi0xUHYMVkMBAgzuACBYgqwSxsfQgQ5gdsQgiaHwCZoAAAFwL9t1tvLGAAAAAElFTkSuQmCC');
+	}
 
-    &.texture-grain-b {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
-    }
+	&.texture-grain-b {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC');
+	}
 
-    &.texture-grain-b-l {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIMb///+DaAYmBigACCC4CAwwMaABgAACmwBSBaMxtBBWARBgcAccPXo4HURbW9ui8DHNRAOUmwAAwWk26e28KNgAAAAASUVORK5CYII=');
-    }
+	&.texture-grain-b-l {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIMb///+DaAYmBigACCC4CAwwMaABgAACmwBSBaMxtBBWARBgcAccPXo4HURbW9ui8DHNRAOUmwAAwWk26e28KNgAAAAASUVORK5CYII=');
+	}
 
-    &.texture-diagonal-w {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpi+P//fwxAADEACQaAAGIEEUAQAxBAYB4TiAkQQGAWSAGIBgggFA5MMVxDDFSWASDAUJSh68cQRNaBoQAAHDFj9Tn4HhEAAAAASUVORK5CYII=');
-    }
+	&.texture-diagonal-w {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpi+P//fwxAADEACQaAAGIEEUAQAxBAYB4TiAkQQGAWSAGIBgggFA5MMVxDDFSWASDAUJSh68cQRNaBoQAAHDFj9Tn4HhEAAAAASUVORK5CYII=');
+	}
 
-    &.texture-diagonal-w-r {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwNAADGACIAAYgSzGBhiAAIIxIsBCwEEEJgFYoAwQADB5OFq4LIoygACDEUGXRVWSayqQRgATKlm8CR0i1QAAAAASUVORK5CYII=');
-    }
+	&.texture-diagonal-w-r {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwNAADGACIAAYgSzGBhiAAIIxIsBCwEEEJgFYoAwQADB5OFq4LIoygACDEUGXRVWSayqQRgATKlm8CR0i1QAAAAASUVORK5CYII=');
+	}
 
-    &.texture-diagonal-b {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpi+P//PwNAADGACIAAYrCysikGMQACCMxgBLEAAggsDsIgEYAAQuXAFMOVwQQAAgxFBkMVuiDcYGy6AIpfVV7EbepaAAAAAElFTkSuQmCC');
-    }
+	&.texture-diagonal-b {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpi+P//PwNAADGACIAAYrCysikGMQACCMxgBLEAAggsDsIgEYAAQuXAFMOVwQQAAgxFBkMVuiDcYGy6AIpfVV7EbepaAAAAAElFTkSuQmCC');
+	}
 
-    &.texture-diagonal-b-r {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg==');
-    }
+	&.texture-diagonal-b-r {
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg==');
+	}
 }
 
 .blur {
-    transform: scale(1.1);
-    @include blur( $size-default );
+	transform: scale(1.1);
+	@include blur( $size-default );
 
-    &.blur-small {
-        @include blur( $size-small );
-    }
+	&.blur-small {
+		@include blur( $size-small );
+	}
 
-    &.blur-medium {
-        @include blur( $size-medium );
-    }
+	&.blur-medium {
+		@include blur( $size-medium );
+	}
 
-    &.blur-large {
-        @include blur( $size-large );
-    }
+	&.blur-large {
+		@include blur( $size-large );
+	}
 
-    &.blur-xlarge {
-        @include blur( $size-xlarge );
-    }
+	&.blur-xlarge {
+		@include blur( $size-xlarge );
+	}
 }
 
+// Add default image
 .pattern {
-    @extend %textures;
-    background-image: url( $images-path + "pattern-default.jpg" );
+	@extend %textures;
+	background-image: url( $images-path + "pattern-default.jpg" );
 }
 
 // Media Queries **************************************
 
-// Current and Lower
+// In Between - Current and Lower
 
 @mixin responsive( $width ) {
 
-    @if $width == screen-mobile-small {
+	@if $width == screen-mobile-small {
 
-        @media only screen and ( min-width: $screen-mobile-small ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-mobile-small ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-mobile-large {
+	@else if $width == screen-mobile-large {
 
-        @media only screen and ( min-width: $screen-mobile-small + 1 ) and ( max-width: $screen-mobile-large ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-mobile-small + 1 ) and ( max-width: $screen-mobile-large ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-tablet-small {
+	@else if $width == screen-tablet-small {
 
-        @media only screen and ( min-width: $screen-mobile-large + 1 ) and ( max-width: $screen-tablet-small ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-mobile-large + 1 ) and ( max-width: $screen-tablet-small ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-tablet-large {
+	@else if $width == screen-tablet-large {
 
-        @media only screen and ( min-width: $screen-tablet-small + 1 ) and ( max-width: $screen-tablet-large ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-tablet-small + 1 ) and ( max-width: $screen-tablet-large ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-small {
+	@else if $width == screen-desktop-small {
 
-        @media only screen and ( min-width: $screen-tablet-large + 1 ) and ( max-width: $screen-desktop-small ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-tablet-large + 1 ) and ( max-width: $screen-desktop-small ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-medium {
+	@else if $width == screen-desktop-medium {
 
-        @media only screen and ( min-width: $screen-desktop-small + 1 ) and ( max-width: $screen-desktop-medium ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-desktop-small + 1 ) and ( max-width: $screen-desktop-medium ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-large {
+	@else if $width == screen-desktop-large {
 
-        @media only screen and ( min-width: $screen-desktop-medium + 1 ) and ( max-width: $screen-desktop-large ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-desktop-medium + 1 ) and ( max-width: $screen-desktop-large ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-xlarge {
+	@else if $width == screen-desktop-xlarge {
 
-        @media only screen and ( min-width: $screen-desktop-large + 1 ) and ( max-width: $screen-desktop-xlarge ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-desktop-large + 1 ) and ( max-width: $screen-desktop-xlarge ) {
+			@content;
+		}
+	}
  }
 
 // Desktop First
 
 @mixin responsive-max( $width ) {
 
-    @if $width == screen-mobile-small {
+	@if $width == screen-mobile-small {
 
-        @media only screen and ( max-width: $screen-mobile-small ) {
-            @content;
-        }
-    }
+		@media only screen and ( max-width: $screen-mobile-small ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-mobile-large {
+	@else if $width == screen-mobile-large {
 
-        @media only screen and ( max-width: $screen-mobile-large ) {
-            @content;
-        }
-    }
+		@media only screen and ( max-width: $screen-mobile-large ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-tablet-small {
+	@else if $width == screen-tablet-small {
 
-        @media only screen and ( max-width: $screen-tablet-small ) {
-            @content;
-        }
-    }
+		@media only screen and ( max-width: $screen-tablet-small ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-tablet-large {
+	@else if $width == screen-tablet-large {
 
-        @media only screen and ( max-width: $screen-tablet-large ) {
-            @content;
-        }
-    }
+		@media only screen and ( max-width: $screen-tablet-large ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-small {
+	@else if $width == screen-desktop-small {
 
-        @media only screen and ( max-width: $screen-desktop-small ) {
-            @content;
-        }
-    }
+		@media only screen and ( max-width: $screen-desktop-small ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-medium {
+	@else if $width == screen-desktop-medium {
 
-        @media only screen and ( max-width: $screen-desktop-medium ) {
-            @content;
-        }
-    }
+		@media only screen and ( max-width: $screen-desktop-medium ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-large {
+	@else if $width == screen-desktop-large {
 
-        @media only screen and ( max-width: $screen-desktop-large ) {
-            @content;
-        }
-    }
+		@media only screen and ( max-width: $screen-desktop-large ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-xlarge {
+	@else if $width == screen-desktop-xlarge {
 
-        @media only screen and ( max-width: $screen-desktop-xlarge ) {
-            @content;
-        }
-    }
+		@media only screen and ( max-width: $screen-desktop-xlarge ) {
+			@content;
+		}
+	}
 }
 
 // Mobile First
 
 @mixin responsive-min( $width ) {
 
-    @if $width == screen-mobile-small {
+	@if $width == screen-mobile-small {
 
-        @media only screen and ( min-width: $screen-mobile-small + 1 ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-mobile-small + 1 ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-mobile-large {
+	@else if $width == screen-mobile-large {
 
-        @media only screen and ( min-width: $screen-mobile-large + 1 ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-mobile-large + 1 ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-tablet-small {
+	@else if $width == screen-tablet-small {
 
-        @media only screen and ( min-width: $screen-tablet-small + 1 ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-tablet-small + 1 ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-tablet-large {
+	@else if $width == screen-tablet-large {
 
-        @media only screen and ( min-width: $screen-tablet-large + 1 ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-tablet-large + 1 ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-small {
+	@else if $width == screen-desktop-small {
 
-        @media only screen and ( min-width: $screen-desktop-small + 1 ) {
-           @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-desktop-small + 1 ) {
+		   @content;
+		}
+	}
 
-    @else if $width == screen-desktop-medium {
+	@else if $width == screen-desktop-medium {
 
-        @media only screen and ( min-width: $screen-desktop-medium + 1 ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-desktop-medium + 1 ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-large {
+	@else if $width == screen-desktop-large {
 
-        @media only screen and ( min-width: $screen-desktop-large + 1 ) {
-            @content;
-        }
-    }
+		@media only screen and ( min-width: $screen-desktop-large + 1 ) {
+			@content;
+		}
+	}
 
-    @else if $width == screen-desktop-xlarge {
+	@else if $width == screen-desktop-xlarge {
 
-        @media only screen and ( min-width: $screen-desktop-xlarge + 1 ) {
-            @content;
-        }
-    }
- }
+		@media only screen and ( min-width: $screen-desktop-xlarge + 1 ) {
+			@content;
+		}
+	}
+}

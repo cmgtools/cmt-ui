@@ -1,280 +1,396 @@
 /**********************************************************************
-Description: The default text elements and font styles for CMGTools.
+Description: This file define the styles specific to typography available in CMT-UI css framework.
+
 Dependencies: variables, mixins
+
+Details: It defines the typography specific styles as listed below:
+
+* Default Font      - The default font and line height is set at document level.
+*
+* Responsive font   - The fonts are made responsive by changing the size for most common screen sizes.
+*
+* Font              - The font classes can be used to change element font.
+*
+* Font size         - These classes use the font size variables defined in variables file.
+*
+* Line height       - These classes define the line height to allow line spacing for better readability.
+*
+* Headers           - The header classes define the line height, font and font size for headers.
+*
+* Text              - It define the line height, font and font size for text elements.
+*
+* Code              - Pre element with default text and background color.
+*
+* Font weight       - The font weight classes can be used to change font weight of selected elements.
+*
+* Font style        - These classes can be used to change the font styles including italic, underline,
+*                     uppercase, lowercose, text striking.
+*
+* Text alignment    - The alignment classes to align text.
+*
+* Word spacing      - This section includes classes to add space between words.
+*
+* Link              - The link element using link colors in default, active and hover states.
+*
+* Text with line    - This class can be used to decorate text having background line at center.
 ***********************************************************************/
+
+// TODO: Add support for viewport width.
 
 // Default font for entire html document
 html, body {
-    font-family: $font-default;
-    line-height: 1;
+	font-family: $font-default;
 }
 
-// Base Font Size following mobile first approach. We have kept 3 font size as standard based on device range.
+// Base Font Size following mobile first approach. We have kept 4 font size(ranging 12px to 18px) as standard based on device range.
 html, body {
-    // 12px on tablet devices. A little smaller than tablet. It can be overriden by project css if there is a need to follow the de-facto standard.
-    font-size: 12px;
+	// 12px on tablet devices. A little smaller than tablet. It can be overriden by project css if there is a need to follow the de-facto standard.
+	font-size: 12px;
 
-    // 14px on tablet devices. A little smaller than desktop. It can be overriden by project css if there is a need to follow the de-facto standard.
-    @include responsive-min( screen-mobile-large ) {
-        font-size: 14px;
-    }
+	// 14px on tablet devices. A little smaller than desktop. It can be overriden by project css if there is a need to follow the de-facto standard.
+	@include responsive-min( screen-mobile-large ) {
+		font-size: 14px;
+	}
 
-    // 16px on desktop devices. 16px is the de-facto standard
-    @include responsive-min( screen-tablet-large ) {
-        font-size: 16px;
-    }
+	// 16px on desktop devices. 16px is the de-facto standard
+	@include responsive-min( screen-tablet-large ) {
+		font-size: 16px;
+	}
+
+	// 18px on large desktop devices.
+	@include responsive-min( screen-desktop-large ) {
+		font-size: 18px;
+	}
 }
 
 /**
- * Standard Fonts - The font classes default, heading and code can be used for global headers and code font.
+ * Standard Fonts - The font classes default, heading and code based on font families defined in variables file.
  */
 
 .font {
+	font-family: $font-default;
 
-    &.font-default {
-        font-family: $font-default;
-    }
+	.font-light {
+		font-weight: lighter;
+	}
 
-    &.font-heading {
-        font-family: $font-heading;
-    }
+	.font-bold {
+		font-weight: bold;
+	}
 
-    &.font-code {
-        font-family: $font-code;
-    }
+	&.font-heading {
+		font-family: $font-heading;
+	}
+
+	&.font-code {
+		font-family: $font-code;
+	}
 }
 
 /**
  * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
 
-.font-size {
+.text {
 
-    &.font-size-large-1 {
-        font-size: $font-size-1;
-    }
+	.text-default {
+		font-size: $font-size-7;
+	}
 
-    &.font-size-large-2 {
-        font-size: $font-size-2;
-    }
+	&.text-xxlarge {
+		font-size: $font-size-xxlarge;
+	}
 
-    &.font-size-large-3 {
-        font-size: $font-size-3;
-    }
+	&.text-xlarge {
+		font-size: $font-size-xlarge;
+	}
 
-    &.font-size-large-4 {
-        font-size: $font-size-4;
-    }
+	&.text-large {
+		font-size: $font-size-large;
+	}
 
-    &.font-size-large-5 {
-        font-size: $font-size-5;
-    }
+	&.text-large-1 {
+		font-size: $font-size-1;
+	}
 
-    &.font-size-large-6 {
-        font-size: $font-size-6;
-    }
+	&.text-large-2 {
+		font-size: $font-size-2;
+	}
 
-    &.font-size-default {
-        font-size: $font-size-7;
-    }
+	&.text-large-3 {
+		font-size: $font-size-3;
+	}
 
-    &.font-size-small {
-        font-size: $font-size-8;
-    }
+	&.text-large-4 {
+		font-size: $font-size-4;
+	}
 
-    &.font-size-tiny {
-        font-size: $font-size-9;
-    }
+	&.text-large-5 {
+		font-size: $font-size-5;
+	}
+
+	&.text-large-6 {
+		font-size: $font-size-6;
+	}
+
+	&.text-small {
+		font-size: $font-size-8;
+	}
+
+	&.text-tiny {
+		font-size: $font-size-tiny;
+	}
+
+	&.text-micro {
+		font-size: $font-size-micro;
+	}
 }
 
 // Standard Line Height
 .line-height {
-    line-height: 1em;
+	line-height: 1em;
 
-    &.line-height-small {
-        line-height: 1.5em;
-    }
+	&.line-height-small {
+		line-height: 1.2em;
+	}
 
-    &.line-height-medium {
-        line-height: 2em;
-    }
+	&.line-height-medium {
+		line-height: 1.4em;
+	}
 
-    &.line-height-large {
-        line-height: 2.5em;
-    }
+	&.line-height-large {
+		line-height: 2em;
+	}
 
-    &.line-height-xlarge {
-        line-height: 3em;
-    }
+	&.line-height-xlarge {
+		line-height: 2.6em;
+	}
+
+	&.line-height-header {
+		line-height: $line-height-header;
+	}
+
+	&.line-height-text {
+		line-height: $line-height-text;
+	}
 }
 
 // Headers
 
 h1, .h1 {
-    font-size: $font-size-1;
+	font-size: $font-size-1;
 }
 
 h2, .h2 {
-    font-size: $font-size-2;
+	font-size: $font-size-2;
 }
 
 h3, .h3 {
-    font-size: $font-size-3;
+	font-size: $font-size-3;
 }
 
 h4, .h4 {
-    font-size: $font-size-4;
+	font-size: $font-size-4;
 }
 
 h5, .h5 {
-    font-size: $font-size-5;
+	font-size: $font-size-5;
 }
 
 h6, .h6 {
-    font-size: $font-size-6;
+	font-size: $font-size-6;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
-    verticle-align: middle;
-    padding: 0.25em 0;
-    margin: 0.25em 0;
-    font-family: $font-heading;
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
+	vertical-align: middle;
+	line-height: $line-height-header;
+	font-family: $font-heading;
 }
 
 // Text Elements
-
 p, span, em, div, a {
-    font-size: $font-size-7;
+	font-size: $font-size-7;
 }
 
-// Content for reading purpose
-
+// Text Reader
 .reader {
-    font-size: $font-size-7;
-    line-height: 1.5em;
+	font-size: $font-size-7;
+	line-height: $line-height-text;
+
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
+		padding: 0.5em 0;
+	}
 }
 
-// Coding - Required to highlight code
+// icons alignment
+.cmti, .fa {
+	vertical-align: middle;
+}
+
+// Coding - Required to highlight code snippets
 pre {
-    font-family: $font-code;
-    color: $color-gray-d;
-    background-color: $color-gray-l;
+	font-family: $font-code;
+	color: $color-gray-d;
+	background-color: $color-gray-l;
 }
 
 // Font Weight
-
-.bold {
-    font-weight: bold;
+.normal {
+	font-weight: normal;
 }
 
-.normal {
-    font-weight: normal;
+.bold {
+	font-weight: bold;
+}
+
+.bolder {
+	font-weight: bolder;
+}
+
+.lighter {
+	font-weight: lighter;
 }
 
 // Text Style and Decoration
 
 .italic {
-    font-style: italic;
+	font-style: italic;
 }
 
 .underline {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .uppercase {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .lowercase {
-    text-transform: lowercase;
+	text-transform: lowercase;
 }
 
 .strikethrough {
-    text-decoration: line-through;
+	text-decoration: line-through;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.break-all {
+	word-break: break-all;
+}
+
+.break-word {
+	word-wrap: break-word;
+}
+
+.ellipsis {
+	text-overflow: ellipsis;
+}
+
+// Text Alignment
+
+.text-align {
+
+	&.text-align-left {
+		text-align: left !important;
+	}
+
+	&.text-align-center {
+		text-align: center !important;
+	}
+
+	&.text-align-right {
+		text-align: right !important;
+	}
+
+	&.text-align-justify {
+		text-align: justify !important;
+	}
+}
+
+// Word Spacing
+.word-spacing {
+	word-spacing: $size-default;
+
+	.word-spacing-small {
+		word-spacing: $size-small;
+	}
+
+	.word-spacing-medium {
+		word-spacing: $size-medium;
+	}
+
+	.word-spacing-large {
+		word-spacing: $size-large;
+	}
+
+	.word-spacing-xlarge {
+		word-spacing: $size-xlarge;
+	}
+}
+
+// Letter Spacing
+.letter-spacing {
+
+	&.letter-spacing-default {
+		letter-spacing: $size-default-px;
+	}
+
+	&.letter-spacing-small {
+		letter-spacing: $size-small-px;
+	}
+
+	&.letter-spacing-medium {
+		letter-spacing: $size-medium-px;
+	}
+
+	&.letter-spacing-large {
+		letter-spacing: $size-large-px;
+	}
+
+	&.letter-spacing-xlarge {
+		letter-spacing: $size-xlarge-px;
+	}
 }
 
 // Links
 
 a, .link {
-    color: $color-link;
+	color: $color-link;
+	cursor: pointer;
+	@include transit-color( $transit-eio, $transit-time-small );
 
-    &:hover {
-        color: $color-link-h;
-    }
+	&.btn {
+		color: $color-btn-text;
+	}
+
+	&:link, &:visited {
+		color: $color-link;
+	}
+
+	&:active, &:hover {
+		color: $color-link-h;
+	}
 }
 
-// Text Colors
-.text {
-    // default to primary text
-    color: $color-primary-text !important;
-
-    &.text-secondary {
-        color: $color-secondary-text !important;
-    }
-
-    &.text-tertiary {
-        color: $color-tertiary-text !important;
-    }
-
-    &.text-black {
-        color: $color-black !important;
-    }
-
-    &.text-gray {
-        color: $color-gray !important;
-    }
-
-    &.text-white {
-        color: $color-white !important;
-    }
-
-    &.text-blue {
-        color: $color-blue !important;
-    }
-
-    &.text-purple {
-        color: $color-purple !important;
-    }
-
-    &.text-orange {
-        color: $color-orange !important;
-    }
-
-    &.text-yellow {
-        color: $color-yellow !important;
-    }
-
-    &.text-red {
-        color: $color-red !important;
-    }
-
-    &.text-pink {
-        color: $color-pink !important;
-    }
-
-    &.text-magenta {
-        color: $color-magenta !important;
-    }
-
-    &.text-green {
-        color: $color-green !important;
-    }
-
-    &.text-green-d {
-        color: $color-green-d !important;
-    }
+// Text in single line
+.text-line {
+	overflow: hidden;
+	white-space: nowrap;
 }
 
-// Text at center with background line
+// Text at center of background line
 .text-with-line {
-    text-align: center;
-    border-top: 1px solid $color-black;
-    margin: 1rem 0;
+	width: 100%;
+	height: 0.75em;
+	border-bottom: 1px solid $color-hr;
+	text-align: center;
 
-    .text-content {
-        display: inline-block;
-        margin-top: -1.25em;
-        padding: 0 1rem;
-        background-color: $color-primary;
-    }
+	.text-content {
+		display: inline-block;
+		padding: 0 1em;
+		background-color: $color-primary;
+	}
 }

@@ -1,0 +1,28 @@
+// TODO: Plan the layout and add default implementation for horizontal and vertical arrangement.
+
+.cmt-tabs {
+
+	.tab-links-wrap {
+		border-bottom: 1px solid $color-border-d;
+
+		.tab-link {
+			display: inline-block;
+			padding: 0.5em 1em;
+			margin-left: -4px;
+			cursor: pointer;
+
+			&.active {
+				border: 1px solid $color-border-d;
+				border-bottom: 1px solid $color-primary-l;
+				margin-bottom: -1px;
+			}
+		}
+	}
+
+	.tab-content-wrap {
+
+		.tab-content {
+			display: none;
+		}
+	}
+}

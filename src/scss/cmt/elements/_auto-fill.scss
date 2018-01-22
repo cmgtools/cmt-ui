@@ -1,0 +1,121 @@
+/**********************************************************************
+Description: It defines the styles of auto fill elements available in CMT-UI css framework. These
+			 elements require Javascript/JQuery to populate the suggestions.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Auto Fill       - The auto fill element shows suggestion.
+*
+* Auto Suggest    - The auto suggest class turns an input field to auto-suggest field. It depends on cmtAutoSuggest
+*                   jQuery plugin available in CMT-JS framework.
+***********************************************************************/
+
+// == Structure - Auto Fill =========
+
+// It can use auto mapper component to show mappings.
+.auto-fill {
+	position: relative;
+
+	.auto-fill-source {
+		position: relative;
+		z-index: 100000;
+
+		// Search field wrapper
+		.auto-fill-search {
+
+			.auto-fill-text {
+				// Search field
+			}
+		}
+
+		// Search results
+		.auto-fill-items-wrap {
+			position: relative;
+
+			.auto-fill-items {
+				// Items
+				display: none;
+
+				.auto-fill-item {
+					// Item
+				}
+
+				.auto-fill-message {
+					// Message
+				}
+			}
+		}
+	}
+
+	// auto mapper - part of auto fill component
+	.auto-fill-target {
+		position: relative;
+	}
+}
+
+// == Basic Auto Fill (Suggest) =====
+
+// It can use auto mapper component to show mappings.
+.auto-fill-basic {
+
+	.auto-fill-source {
+
+		// Search results
+		.auto-fill-items-wrap {
+
+			.auto-fill-items {
+				position: absolute;
+				width: 100%;
+
+				.auto-fill-item {
+					background-color: $color-primary-d;
+					color: $color-primary-text-d;
+					padding: 0.5em;
+					cursor: pointer;
+				}
+
+				.auto-fill-message {
+					background-color: $color-primary-d;
+					color: $color-primary-text-d;
+				}
+			}
+		}
+	}
+}
+
+// == Auto Suggest ==================
+
+// TODO: Update it to match with the auto fill structure and also check spinner positioning for fields with(left, right) or without icon.
+
+.auto-suggest {
+	position: relative;
+
+	.wrap-auto-list {
+		position: absolute;
+		top: 2em;
+		left: 0;
+		display: none;
+		width: 100%;
+		z-index: 1000000;
+		background-color: $color-primary-d;
+		color: $color-primary-text-d;
+
+		.list-item, li {
+			background-color: $color-primary-d;
+			color: $color-primary-text-d;
+			cursor: pointer;
+
+			&:nth-child(even) {
+				background-color: $color-primary-l;
+				color: $color-primary-text-l;
+			}
+
+			&:hover {
+				background-color: $color-secondary;
+				color: $color-secondary-text;
+			}
+		}
+	}
+}

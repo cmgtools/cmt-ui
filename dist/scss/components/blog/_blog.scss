@@ -1,0 +1,458 @@
+/**********************************************************************
+Description: It defines the styles of the blog components used to show blog posts on recent, popular, similar and
+			 related widget. The blog posts will also be displayed on blog, category, tag, author and archive pages.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of blog components as listed below:
+* Blog          - The barebone blog class with minimum styles common for all the blog components. The base class can
+*                 have below listed options:
+*                     - It wraps multiple posts having banner, title, summary, author and publish info.
+*                     - It might also show pagination to navigate through pages.
+*                     - It might support ajax based pagination following either traditional page links or scroll
+*                       based pagination.
+* Basic         - It shows banner floated left and content flowing below banner. Author is next to banner with time
+*                 details. Title is below author and than content flows.
+* Regular       - It shows banner, author avatar, and info in single row. Title in second row. Content in 3rd row and
+*                 post info in 4th row.
+* Banner        - It shows banner in first row. An icon will be displayed if user hover on banner. Title in second row.
+*                 Content in 3rd row and post info in 4th row.
+***********************************************************************/
+
+// == Structure - Blog ==============
+
+.blog {
+
+	> .texture {
+		// texture of blog component
+		z-index: 10;
+	}
+
+	.blog-posts {
+		// Wrapper of all posts
+
+		.blog-post {
+			// single post used to show post details including banner, author and content
+			position: relative;
+
+			.blog-post-banner {
+				// banner - it can be either background image or img
+
+				> .texture {
+					// texture on top of banner
+					z-index: 10;
+				}
+
+				.blog-post-title {
+					// post title - sometimes title goes with post banner
+					z-index: 20;
+				}
+
+				.blog-post-view {
+					// The post view to show options on hover
+					z-index: 30;
+
+					.blog-post-title {
+						// post title - sometimes title goes with post view
+						z-index: 40;
+					}
+
+					.blog-post-summary {
+						// Summary to be displayed on hover
+					}
+				}
+			}
+
+			.blog-post-title {
+				// post title - it can be independent from post banner or content in most of the cases
+			}
+
+			.blog-post-author {
+				// Post author information
+
+				.blog-post-author-avatar {
+					// author avatar
+				}
+
+				.blog-post-author-info {
+					// author details like name, publish time
+				}
+			}
+
+			.blog-post-content-wrap {
+				// wrapper for post title, content and info
+
+				.blog-post-title {
+					// post title goes with content wrap
+				}
+
+				.blog-post-info {
+					// post info like author name, publish time
+					// Sometimes post-author can be included within post-info at end of post content
+				}
+
+				.blog-post-summary {
+					// Post summary having different formatting
+				}
+
+				.blog-post-content {
+					// post content
+				}
+			}
+		}
+	}
+}
+
+// == Basic Blog ====================
+
+.blog-basic {
+
+	.blog-post {
+		margin-bottom: 1em;
+
+		// Banner with default padding. A default image can be used for banner with background fill. The fill helps for transparent pngs.
+		.blog-post-banner {
+			padding: 1em;
+
+			img {
+				width: 100%;
+
+				&.bkg-fill {
+					background-color: $color-primary;
+				}
+			}
+		}
+
+		.blog-post-author {
+			position: relative;
+
+			.blog-post-author-avatar {
+				width: 80px;
+				height: 80px;
+
+				img {
+					width: 100%;
+				}
+
+				&.circled1 {
+					background-color: $color-primary;
+				}
+			}
+
+			.blog-post-author-info {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: inline-block;
+			}
+		}
+
+		.blog-post-content-wrap {
+
+			.blog-post-content {
+				padding: 1em;
+
+				.blog-post-title {
+					font-size: $font-size-5;
+				}
+			}
+		}
+
+		@include responsive-min( screen-tablet-small ) {
+
+			.blog-post-banner {
+				float: left;
+				width: 350px;
+			}
+
+			.blog-post-author {
+				width: 100%;
+				padding-left: 350px;
+				position: relative;
+			}
+		}
+	}
+}
+
+// == Regular Blog ==================
+
+.blog-regular {
+
+	.blog-post {
+		margin-bottom: 1em;
+
+		// Banner with default padding. A default image can be used for banner with background fill. The fill helps for transparent logos.
+		.blog-post-banner {
+			padding: 1em;
+
+			img {
+				width: 100%;
+
+				&.bkg-fill {
+					background-color: $color-primary;
+				}
+			}
+		}
+
+		.blog-post-author {
+			position: relative;
+
+			.blog-post-author-avatar {
+				width: 80px;
+				height: 80px;
+
+				img {
+					width: 100%;
+				}
+
+				&.circled1 {
+					background-color: $color-primary;
+				}
+			}
+
+			.blog-post-author-info {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: inline-block;
+			}
+		}
+
+		.blog-post-content-wrap {
+
+			.blog-post-content {
+				padding: 1em;
+
+				.blog-post-title {
+					font-size: $font-size-5;
+				}
+			}
+		}
+
+		@include responsive-min( screen-tablet-small ) {
+
+			.blog-post-banner {
+				float: left;
+				width: 350px;
+			}
+
+			.blog-post-author {
+				width: 100%;
+				padding-left: 350px;
+				position: relative;
+			}
+		}
+	}
+}
+
+// == Banner Blog ===================
+
+.blog-banner {
+
+	.blog-post {
+		margin-bottom: 1em;
+		background-color: $color-primary;
+		color: $color-primary-text;
+
+		// Banner with background image. A tecture can also be applied to it.
+		.blog-post-banner {
+			position: relative;
+			height: 120px;
+			@include bkg-image;
+
+			.blog-post-view {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				z-index: 50;
+				visibility: hidden;
+				opacity: 0;
+				background-color: $color-transparent-black;
+				@include transit-visibility-opacity( $transit-eio, $transit-time-medium );
+
+				.blog-post-summary {
+					text-align: center;
+
+					.blog-post-icon {
+						color: $color-white;
+					}
+				}
+			}
+
+			&:hover {
+
+				.blog-post-view {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+
+		.blog-post-author {
+			position: relative;
+
+			span {
+				display: inline-block;
+			}
+
+			.blog-post-author-avatar {
+				width: 40px;
+				height: 40px;
+
+				img {
+					width: 100%;
+				}
+
+				&.circled1 {
+					background-color: $color-primary;
+				}
+			}
+		}
+
+		.blog-post-content-wrap {
+			padding: 1rem;
+			line-height: 1.5em;
+
+			.blog-post-title {
+				margin: 0;
+
+				a {
+					display: inline-block;
+					width: 100%;
+				}
+			}
+
+			.blog-post-info {
+
+				.publish-time {
+					text-align: center;
+				}
+			}
+
+			.blog-post-content {
+				padding: 1rem 0;
+			}
+		}
+
+		@include responsive-min( screen-tablet-small ) {
+
+			.blog-post-banner {
+				height: 180px;
+			}
+
+			.blog-post-content-wrap {
+
+				.blog-post-info {
+
+					.publish-time {
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		@include responsive-min( screen-tablet-large ) {
+
+			.blog-post-banner {
+				height: 250px;
+			}
+		}
+	}
+}
+
+// == Blog - Recent Widget ==========
+
+// Notes: It works well with Banner Blog using same html template
+
+.blog-banner-recent {
+
+	.blog-post {
+		padding: 0.5rem;
+		margin-bottom: 1em;
+		background-color: $color-primary;
+		color: $color-primary-text;
+
+		// Banner with background image. A tecture can also be applied to it.
+		.blog-post-banner {
+			position: relative;
+			float: left;
+			width: 50%;
+			height: 65px;
+			@include bkg-image;
+
+			.blog-post-view {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				z-index: 50;
+				visibility: hidden;
+				opacity: 0;
+				background-color: $color-transparent-black;
+				@include transit-visibility-opacity( $transit-eio, $transit-time-medium );
+
+				.blog-post-summary {
+					text-align: center;
+
+					.icon {
+						color: $color-white;
+					}
+				}
+			}
+
+			&:hover {
+
+				.blog-post-view {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+
+		.blog-post-author {
+			display: none;
+		}
+
+		.blog-post-content-wrap {
+			padding: 0;
+			padding-left: 0.5rem;
+			float: left;
+			width: 50%;
+			height: 65px;
+
+			.blog-post-title {
+				margin: 0;
+				padding: 0;
+				margin-bottom: 0.5em;
+
+				a {
+					display: inline-block;
+					width: 100%;
+				}
+			}
+
+			.blog-post-info {
+				display: none;
+			}
+
+			.blog-post-content {
+				padding: 0;
+				height: 60px;
+				overflow: hidden;
+			}
+		}
+
+		@include responsive-min( screen-tablet-small ) {
+
+			.blog-post-banner {
+				height: 80px;
+			}
+		}
+
+		@include responsive-min( screen-tablet-large ) {
+
+			.blog-post-banner {
+				height: 120px;
+			}
+		}
+	}
+}

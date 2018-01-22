@@ -1,0 +1,496 @@
+/**********************************************************************
+Description: This file define the text and background colors used by CMT-UI css framework.
+
+Dependencies: variables, mixins
+
+Details: It defines the text and background colors as listed below:
+* Default Color     - The default background and text color is set to primary from the 3 Color Scheme.
+* Colors            - This section define the classes having appropriate background and text color following 3 Color
+*                     Scheme and the standard colors.
+***********************************************************************/
+
+/**
+ * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
+ * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
+ * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
+ */
+
+.color {
+
+/**
+ * Color Palatte:
+ * 1. primary: #{$color-primary}
+ * 2. primary text: #{$color-primary-text}
+ * 3. primary light: #{$color-primary-l}
+ * 4. primary text light: #{$color-primary-text-l}
+ * 5. primary dark: #{$color-primary-d}
+ * 6. primary text dark: #{$color-primary-text-d}
+ * 7. secondary: #{$color-secondary}
+ * 8. secondary text: #{$color-secondary-text}
+ * 9. secondary light: #{$color-secondary-l}
+ * 10. secondary text light: #{$color-secondary-text-l}
+ * 11. secondary dark: #{$color-secondary-d}
+ * 12. secondary text dark: #{$color-secondary-text-d}
+ * 13. tertiary: #{$color-tertiary}
+ * 14. tertiary text: #{$color-tertiary-text}
+ * 15. tertiary light: #{$color-tertiary-l}
+ * 16. tertiary text light: #{$color-tertiary-text-l}
+ * 17. tertiary dark: #{$color-tertiary-d}
+ * 18. tertiary text dark: #{$color-tertiary-text-d}
+ */
+
+	&.color-primary {
+		background-color: $color-primary;
+		color: $color-primary-text;
+	}
+
+	&.color-primary-l {
+		background-color: $color-primary-l;
+		color: $color-primary-text-l;
+	}
+
+	&.color-primary-d {
+		background-color: $color-primary-d;
+		color: $color-primary-text-d;
+	}
+
+	&.color-secondary {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+	}
+
+	&.color-secondary-l {
+		background-color: $color-secondary-l;
+		color: $color-secondary-text-l;
+	}
+
+	&.color-secondary-d {
+		background-color: $color-secondary-d;
+		color: $color-secondary-text-d;
+	}
+
+	&.color-tertiary {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+	}
+
+	&.color-tertiary-l {
+		background-color: $color-tertiary-l;
+		color: $color-tertiary-text-l;
+	}
+
+	&.color-tertiary-d {
+		background-color: $color-tertiary-d;
+		color: $color-tertiary-text-d;
+	}
+
+	&.color-white {
+		background-color: $color-white;
+		color: $color-black;
+	}
+
+	&.color-black {
+		background-color: $color-black;
+		color: $color-white;
+	}
+}
+
+// Background Colors
+.bkg {
+
+	&.bkg-primary {
+		background-color: $color-primary !important;
+	}
+
+	&.bkg-primary-l {
+		background-color: $color-primary-l !important;
+	}
+
+	&.bkg-primary-d {
+		background-color: $color-primary-d !important;
+	}
+
+	&.bkg-secondary {
+		background-color: $color-secondary !important;
+	}
+
+	&.bkg-secondary-l {
+		background-color: $color-secondary-l !important;
+	}
+
+	&.bkg-secondary-d {
+		background-color: $color-secondary-d !important;
+	}
+
+	&.bkg-tertiary {
+		background-color: $color-tertiary !important;
+	}
+
+	&.bkg-tertiary-l {
+		background-color: $color-tertiary-l !important;
+	}
+
+	&.bkg-tertiary-d {
+		background-color: $color-tertiary-d !important;
+	}
+
+	&.bkg-black {
+		background-color: $color-black !important;
+	}
+
+	&.bkg-black-transparent {
+		background-color: $color-transparent-black !important;
+	}
+
+	&.bkg-gray {
+		background-color: $color-gray !important;
+	}
+
+	&.bkg-gray-l {
+		background-color: $color-gray-l !important;
+	}
+
+	&.bkg-gray-d {
+		background-color: $color-gray-d !important;
+	}
+
+	&.bkg-white {
+		background-color: $color-white !important;
+	}
+
+	&.bkg-blue {
+		background-color: $color-blue !important;
+	}
+
+	&.bkg-blue-l {
+		background-color: $color-blue-l !important;
+	}
+
+	&.bkg-blue-d {
+		background-color: $color-blue-d !important;
+	}
+
+	&.bkg-purple {
+		background-color: $color-purple !important;
+	}
+
+	&.bkg-purple-l {
+		background-color: $color-purple-l !important;
+	}
+
+	&.bkg-purple-d {
+		background-color: $color-purple-d !important;
+	}
+
+	&.bkg-orange {
+		background-color: $color-orange !important;
+	}
+
+	&.bkg-orange-l {
+		background-color: $color-orange-l !important;
+	}
+
+	&.bkg-orange-d {
+		background-color: $color-orange-d !important;
+	}
+
+	&.bkg-yellow {
+		background-color: $color-yellow !important;
+	}
+
+	&.bkg-yellow-l {
+		background-color: $color-yellow-l !important;
+	}
+
+	&.bkg-yellow-d {
+		background-color: $color-yellow-d !important;
+	}
+
+	&.bkg-red {
+		background-color: $color-red !important;
+	}
+
+	&.bkg-red-l {
+		background-color: $color-red-l !important;
+	}
+
+	&.bkg-red-d {
+		background-color: $color-red-d !important;
+	}
+
+	&.bkg-pink {
+		background-color: $color-pink !important;
+	}
+
+	&.bkg-pink-l {
+		background-color: $color-pink-l !important;
+	}
+
+	&.bkg-pink-d {
+		background-color: $color-pink-d !important;
+	}
+
+	&.bkg-magenta {
+		background-color: $color-magenta !important;
+	}
+
+	&.bkg-magenta-l {
+		background-color: $color-magenta-l !important;
+	}
+
+	&.bkg-magenta-d {
+		background-color: $color-magenta-d !important;
+	}
+
+	&.bkg-green {
+		background-color: $color-green !important;
+	}
+
+	&.bkg-green-l {
+		background-color: $color-green-l !important;
+	}
+
+	&.bkg-brown-d {
+		background-color: $color-brown-d !important;
+	}
+
+	&.bkg-brown {
+		background-color: $color-brown !important;
+	}
+
+	&.bkg-brown-l {
+		background-color: $color-brown-l !important;
+	}
+
+	&.bkg-brown-d {
+		background-color: $color-brown-d !important;
+	}
+
+	&.bkg-aqua {
+		background-color: $color-aqua !important;
+	}
+
+	&.bkg-golden {
+		background-color: $color-golden !important;
+	}
+
+	&.bkg-silver {
+		background-color: $color-silver !important;
+	}
+
+	&.bkg-maroon {
+		background-color: $color-maroon !important;
+	}
+
+	&.bkg-olive {
+		background-color: $color-olive !important;
+	}
+
+	&.bkg-lime {
+		background-color: $color-lime !important;
+	}
+
+	&.bkg-navy {
+		background-color: $color-navy !important;
+	}
+}
+
+// Text Colors
+.text {
+
+	&.text-primary {
+		color: $color-primary-text !important;
+	}
+
+	&.text-primary-l {
+		color: $color-primary-text-l !important;
+	}
+
+	&.text-primary-d {
+		color: $color-primary-text-d !important;
+	}
+
+	&.text-secondary {
+		color: $color-secondary-text !important;
+	}
+
+	&.text-secondary-l {
+		color: $color-secondary-text-l !important;
+	}
+
+	&.text-secondary-d {
+		color: $color-secondary-text-d !important;
+	}
+
+	&.text-tertiary {
+		color: $color-tertiary-text !important;
+	}
+
+	&.text-tertiary-l {
+		color: $color-tertiary-text-l !important;
+	}
+
+	&.text-tertiary-d {
+		color: $color-tertiary-text-d !important;
+	}
+
+	&.text-link {
+		color: $color-link !important;
+	}
+
+	&.text-black {
+		color: $color-black !important;
+	}
+
+	&.text-gray {
+		color: $color-gray !important;
+	}
+
+	&.text-gray-l {
+		color: $color-gray-l !important;
+	}
+
+	&.text-gray-d {
+		color: $color-gray-d !important;
+	}
+
+	&.text-white {
+		color: $color-white !important;
+	}
+
+	&.text-blue {
+		color: $color-blue !important;
+	}
+
+	&.text-blue-l {
+		color: $color-blue-l !important;
+	}
+
+	&.text-blue-d {
+		color: $color-blue-d !important;
+	}
+
+	&.text-purple {
+		color: $color-purple !important;
+	}
+
+	&.text-purple-l {
+		color: $color-purple-l !important;
+	}
+
+	&.text-purple-d {
+		color: $color-purple-d !important;
+	}
+
+	&.text-orange {
+		color: $color-orange !important;
+	}
+
+	&.text-orange-l {
+		color: $color-orange-l !important;
+	}
+
+	&.text-orange-d {
+		color: $color-orange-d !important;
+	}
+
+	&.text-yellow {
+		color: $color-yellow !important;
+	}
+
+	&.text-yellow-l {
+		color: $color-yellow-l !important;
+	}
+
+	&.text-yellow-d {
+		color: $color-yellow-d !important;
+	}
+
+	&.text-red {
+		color: $color-red !important;
+	}
+
+	&.text-red-l {
+		color: $color-red-l !important;
+	}
+
+	&.text-red-d {
+		color: $color-red-d !important;
+	}
+
+	&.text-pink {
+		color: $color-pink !important;
+	}
+
+	&.text-pink-l {
+		color: $color-pink-l !important;
+	}
+
+	&.text-pink-d {
+		color: $color-pink-d !important;
+	}
+
+	&.text-magenta {
+		color: $color-magenta !important;
+	}
+
+	&.text-magenta-l {
+		color: $color-magenta-l !important;
+	}
+
+	&.text-magenta-d {
+		color: $color-magenta-d !important;
+	}
+
+	&.text-green {
+		color: $color-green !important;
+	}
+
+	&.text-green-l {
+		color: $color-green-l !important;
+	}
+
+	&.text-brown-d {
+		color: $color-brown-d !important;
+	}
+
+	&.text-brown {
+		color: $color-brown !important;
+	}
+
+	&.text-brown-l {
+		color: $color-brown-l !important;
+	}
+
+	&.text-brown-d {
+		color: $color-brown-d !important;
+	}
+
+	&.text-aqua {
+		color: $color-aqua !important;
+	}
+
+	&.btextkg-golden {
+		color: $color-golden !important;
+	}
+
+	&.text-silver {
+		color: $color-silver !important;
+	}
+
+	&.text-maroon {
+		color: $color-maroon !important;
+	}
+
+	&.text-olive {
+		color: $color-olive !important;
+	}
+
+	&.text-lime {
+		color: $color-lime !important;
+	}
+
+	&.text-navy {
+		color: $color-navy !important;
+	}
+}

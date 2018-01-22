@@ -1,0 +1,149 @@
+// == File Uploader Box =============
+
+.box-file-uploader {
+
+	.btn-chooser {
+		position: absolute;
+		right: 0;
+		cursor: pointer;
+		z-index: 10;
+	}
+
+	.box-content-wrap {
+
+		.box-content {
+
+			.file-wrap {
+				position: relative;
+				margin: 0 auto;
+			}
+
+			.chooser-wrap {
+				display: none;
+
+				.file-preloader {
+					padding-top: 10px;
+
+					.file-preloader-bar {
+						background-color: $color-tertiary;
+						width: 0%;
+						height: 10px;
+					}
+				}
+			}
+
+			.form-wrap {
+
+				.post-action {
+					text-align: center;
+				}
+
+				.file-info, .file-fields {
+					position: relative;
+				}
+			}
+		}
+	}
+}
+
+.box-file-uploader-direct {
+
+	.btn-chooser {
+		display: none;
+	}
+
+	.box-content-wrap {
+
+		.box-content {
+
+			.file-wrap {
+				display: none;
+			}
+
+			.chooser-wrap {
+				display: block;
+			}
+		}
+	}
+}
+
+// == File Uploader - Cards =========
+
+.card-file {
+	text-align: center;
+	padding: 1em;
+
+	.card-data {
+
+		.icon-file {
+			font-size: 10em;
+		}
+	}
+
+	.card-footer {
+		margin: 1em 0;
+		display: none;
+	}
+}
+
+.card-file-chooser {
+
+	.card-data {
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+
+		input[type="file"] {
+			opacity: 0;
+			cursor: pointer !important;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+	}
+}
+
+.card-file-dragger {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+
+	.card-data {
+
+		.drag-wrap {
+			position: relative;
+			margin: 0 auto;
+			width: 120px;
+			height: 120px;
+
+			.drag {
+				background-color: $color-primary;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 120px;
+				height: 120px;
+				z-index: 10;
+				text-align: center;
+				line-height: 120px;
+
+				&.hover {
+					background-color: $color-tertiary;
+					color: $color-tertiary-text;
+				}
+			}
+
+			canvas {
+			  position: absolute;
+			  top: 0px;
+			  left: 0px;
+			  width: 120px;
+			  height: 120px;
+			  z-index: 50;
+			  display: none;
+			}
+		}
+	}
+}

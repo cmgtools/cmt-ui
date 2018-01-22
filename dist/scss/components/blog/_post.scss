@@ -1,0 +1,114 @@
+/**********************************************************************
+Description: It defines the styles of the blog post single page.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of blog post as listed below:
+* Single Post   - The barebone class for single post. The post will be displayed on it's page showing full content, banner
+*                 and author details.
+* Basic Single  - Banner at top covering 100% widget followed by post content. Author avatar, name and time below content.
+***********************************************************************/
+
+// == Single Post - Structure =======
+
+.post {
+	// post
+
+	.post-banner {
+		// banner
+
+		> .texture {
+			// texture on top of banner
+			z-index: 10;
+		}
+
+		.post-title {
+			// post title - sometimes title goes with post banner
+			z-index: 20;
+		}
+	}
+
+	.post-author {
+
+		.post-author-avatar {
+			// author avatar
+		}
+
+		.post-author-info {
+			// author details like name, time
+		}
+	}
+
+	.post-content-wrap {
+
+		.post-title {
+			// post title
+		}
+
+		.post-info {
+			// post info like time
+		}
+
+		.post-content {
+			// post content
+		}
+	}
+}
+
+// == Basic Single Post =============
+
+.post-basic {
+	padding: 1em;
+	background-color: $color-primary-l;
+
+	.post-banner {
+		height: 150px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.post-author {
+		position: relative;
+
+		.post-author-avatar {
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+
+			img {
+				width: 100%;
+			}
+
+			&.circled1 {
+				background-color: $color-primary;
+			}
+		}
+
+		.post-author-info {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+		}
+	}
+
+	.post-content {
+		margin-bottom: 1em;
+	}
+
+	@include responsive-min( screen-mobile-large ) {
+
+		.post-banner {
+			height: 200px;
+		}
+	}
+
+	@include responsive-min( screen-tablet-large ) {
+
+		.post-banner {
+			height: 250px;
+		}
+	}
+}

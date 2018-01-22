@@ -1,0 +1,31 @@
+/**********************************************************************
+Description: It defines the styles of the sorting components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of sorting components as listed below:
+
+* Sort        - The barebone sort class with minimum styles common for all the sorting.
+***********************************************************************/
+
+// == Structure - Pagination ========
+
+// Sorting
+.grid-sort {
+
+	.sort {
+		cursor: pointer;
+
+		&.sort-inline {
+			padding-right: 0.5rem;
+		}
+
+		&.sort-asc {
+			color: $color-success !important;
+		}
+
+		&.sort-desc {
+			color: $color-error !important;
+		}
+	}
+}

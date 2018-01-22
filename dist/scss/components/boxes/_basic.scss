@@ -1,0 +1,131 @@
+/**********************************************************************
+Description: It defines the styles of box components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of box components as listed below:
+
+* Footer      - The barebone box class with minimum styles.
+*
+* Basic       - The basic box define the styles of simple box having icon and header within header wrapper and
+*               content within content box. The content is aligned center by default.
+*
+* Collapsible - The collapsible boxes are similar to basic, but these can also be collapsed hiding content keeping
+*               header and footer visible. The content collapse on clicking header / collapse button on header.
+***********************************************************************/
+
+// == Structure - Box ===============
+
+.box {
+	position: relative;
+
+	.box-header {
+		position: relative;
+
+		.box-header-icon {
+			// Header Icon
+		}
+
+		.box-header-title {
+			// Header Title
+		}
+
+		.box-header-info {
+			// Header Info
+		}
+
+		.box-header-content {
+			// Header Content
+		}
+	}
+
+	.box-content-wrap {
+		position: relative;
+
+		// Space for background
+
+		// Space for texture
+
+		.box-content {
+			position: relative;
+		}
+	}
+
+	.box-footer {
+		// Footer having box info
+		position: relative;
+
+		.box-footer-info {
+			// Footer Info
+		}
+
+		.box-footer-content {
+			// Footer Content
+		}
+	}
+}
+
+// == Basic Box =====================
+
+.box-basic {
+	padding: 1rem;
+
+	.box-header {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+		padding: 0.5rem;
+	 }
+
+	 .box-content-wrap {
+		background-color: $color-primary;
+		color: $color-primary-text;
+		padding: 0.5rem;
+	 }
+
+	.box-footer {
+		// Footer having box info
+		background-color: $color-secondary-l;
+		color: $color-secondary-text-l;
+		padding: 0.25rem;
+	}
+}
+
+.box-basic-icon {
+	padding: 1rem;
+
+	// Icon, text at center
+	.box-header {
+
+		.box-header-icon {
+			position: absolute;
+			display: inline-block;
+			top: 0.5rem;
+			left: 0.5rem;
+		}
+
+		.box-header-title {
+			padding-left: 1.5rem;
+		}
+	 }
+}
+
+// == Collapsible Box ===============
+
+.box-collapsible {
+
+	.box-header {
+
+		.box-collapse-trigger {
+			position: absolute;
+			display: inline-block;
+			top: 0.5em;
+			right: 0.5em;
+			color: $color-secondary-text;
+			cursor: pointer;
+
+			&:hover {
+				color: $color-link-h;
+			}
+		}
+	}
+}

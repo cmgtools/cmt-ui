@@ -1,0 +1,149 @@
+// == Structure - Time Picker =======
+
+.cmt-timepicker {
+	position: absolute;
+	display: none;
+
+	.cmt-timepicker-header {
+
+		.cmt-timepicker-apm {
+
+			&.cmt-timepicker-am {
+
+			}
+
+			&.cmt-timepicker-pm {
+
+			}
+
+			&.active {
+
+			}
+		}
+	}
+
+	.cmt-timepicker-content {
+
+		.cmt-timepicker-hr-wrap {
+
+			.cmt-timepicker-hr {
+				text-align: center;
+
+				&.active {
+
+				}
+			}
+		}
+
+		.cmt-timepicker-min-wrap {
+
+			.cmt-timepicker-min {
+				text-align: center;
+
+				&.active {
+
+				}
+			}
+		}
+	}
+
+	.cmt-timepicker-footer {
+
+		.cmt-timepicker-time {
+
+		}
+
+		.cmt-timepicker-ok {
+
+		}
+
+		.cmt-timepicker-close {
+
+		}
+	}
+}
+
+// == Basic Time Picker =============
+
+.cmt-timepicker-basic {
+	background: $color-secondary;
+	color: $color-secondary-text;
+	border: 1px solid $color-border-d;
+
+	.cmt-timepicker-header {
+		border-bottom: 1px solid $color-border-d;
+
+		.cmt-timepicker-apm {
+			padding: 0.5em;
+
+			&.cmt-timepicker-am {
+				cursor: pointer;
+				border-right: 1px solid $color-border;
+			}
+
+			&.cmt-timepicker-pm {
+				cursor: pointer;
+			}
+
+			&.cmt-timepicker-mm {
+				border-left: 1px solid $color-border-d;
+			}
+
+			&.active {
+				background: $color-secondary-l;
+				color: $color-secondary-text-l;
+			}
+		}
+	}
+
+	.cmt-timepicker-content {
+		border-bottom: 1px solid $color-border-d;
+
+		.cmt-timepicker-hr-wrap {
+
+			.cmt-timepicker-hr {
+				padding: 0.5em;
+				border-left: 1px solid $color-border;
+				border-bottom: 1px solid $color-border;
+				cursor: pointer;
+
+				&.active {
+					background: $color-secondary-l;
+					color: $color-secondary-text-l;
+				}
+			}
+		}
+
+		.cmt-timepicker-min-wrap {
+			border-left: 1px solid $color-border-d;
+
+			.cmt-timepicker-min {
+				padding: 0.5em;
+				border-left: 1px solid $color-border;
+				border-bottom: 1px solid $color-border;
+				cursor: pointer;
+
+				&.active {
+					background: $color-secondary-l;
+					color: $color-secondary-text-l;
+				}
+			}
+		}
+	}
+
+	.cmt-timepicker-footer {
+		padding: 0.25em;
+
+		.cmt-timepicker-time {
+
+		}
+
+		.cmt-timepicker-ok {
+			margin-left: 0.25em;
+		}
+
+		.cmt-timepicker-close {
+			margin-left: 0.25em;
+		}
+	}
+}

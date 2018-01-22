@@ -1,0 +1,124 @@
+/**********************************************************************
+Description: It defines the styles for login components available in CMT-UI css framework.
+
+Dependencies: none
+
+Details: It defines the styles for login components as listed below:
+
+* Login box wrapper - It's a group of boxes having wrapper for login, register and forgot password forms.
+					  It depends on cmtLoginRegister jQuery plugin available in CMT-JS framework.
+***********************************************************************/
+
+// TODO: Update naming convention using box prefix in order to follow unified approach.
+
+// == Structure - Login =============
+
+.box-login-wrap {
+
+	.btn-login, .btn-signup, .btn-forgot {
+		cursor: pointer;
+	}
+
+	// The parent element to hold login and signup buttons seperately outside the boxes
+	.login-actions {
+
+		.btn-login {
+			// login button
+		}
+
+		.btn-signup {
+			// signup button
+		}
+
+		.btn-forgot {
+			// forgot password button
+		}
+	}
+
+	.box-login {
+		// Visible by default
+
+		.box-content-wrap {
+			position: relative;
+
+			.box-content {
+
+				.box-login-fields {
+					// login fields
+				}
+
+				.btn-forgot-wrap {
+
+					.btn-forgot {
+						// forgot password button
+					}
+				}
+
+				.btn-signup-wrap {
+
+					.btn-signup {
+						// signup button
+					}
+				}
+			}
+		}
+	}
+
+	.box-forgot {
+		display: none;
+
+		.box-content-wrap {
+			position: relative;
+
+			.box-content {
+
+				.box-forgot-fields {
+					// forgot password fields
+				}
+
+				.btn-login-wrap {
+
+					.btn-login {
+						// login button
+					}
+				}
+
+				.btn-signup-wrap {
+
+					.btn-signup {
+						// signup button
+					}
+				}
+			}
+		}
+	}
+
+	.box-signup {
+		display: none;
+
+		.box-content-wrap {
+			position: relative;
+
+			.box-content {
+
+				.box-signup-fields {
+					// signup fields
+				}
+
+				.btn-forgot-wrap {
+
+					.btn-forgot {
+						// forgot password button
+					}
+				}
+
+				.btn-login-wrap {
+
+					.btn-login {
+						// login button
+					}
+				}
+			}
+		}
+	}
+}

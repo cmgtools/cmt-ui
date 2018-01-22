@@ -1,0 +1,138 @@
+/**********************************************************************
+Description: It defines the styles of the table grid components forming the grid using html tables.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for data table components as listed below:
+
+* Table Grid  - The barebone grid class with minimum styles common for all the table grids.
+*
+* Basic       - The basic data grid having default coloring.
+***********************************************************************/
+
+// == Structure - Table Grid ========
+
+.grid-table {
+
+	// Table Header
+	.grid-table-header {
+		display: none;
+	}
+
+	// Table Rows
+	.grid-table-rows {
+
+		&.grid-table-rows-zebra {
+
+			.grid-table-row:nth-child( even ) {
+				background-color: $color-primary;
+			}
+		}
+
+		.grid-table-row {
+
+			.grid-table-row-header {
+				// row title
+			}
+
+			.grid-table-row-data {
+				// row data - it can be anything ex: content box
+
+				.data {
+					display: inline-block;
+					width: 68%;
+					padding: 1%;
+					word-wrap: break-word;
+
+					&.title {
+						width: 28%;
+					}
+				}
+			}
+
+			.grid-table-row-footer {
+				// row footer
+			}
+		}
+	}
+
+	// Table Footer
+	.grid-table-footer {
+		display: none;
+	}
+
+	@include responsive-min( screen-tablet-large ) {
+
+		.grid-table-header {
+			display: block;
+		}
+
+		// Table Rows
+		.grid-table-rows {
+
+			.grid-table-row {
+
+				.grid-table-row-header {
+					display: none;
+				}
+
+				.grid-table-row-data {
+
+					.data {
+						width: 100%;
+						padding: 0;
+
+						&.title {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		.grid-table-footer {
+			display: block;
+		}
+	}
+}
+
+// == Basic Grid Table ==============
+
+.grid-table-basic {
+	background-color: $color-primary-d;
+
+	// Table Header
+	.grid-table-header {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+		padding: 0.25em 0.25rem;
+		text-align: left;
+	}
+
+	// Table Rows
+	.grid-table-rows {
+		border: 1px solid $color-secondary;
+
+		// Avatar in grid rows
+		.avatar {
+			width: 48px;
+		}
+
+		.grid-table-row {
+			padding: 0.25em 0.25rem;
+			border-bottom: 1px solid $color-secondary;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	// Table Footer
+	.grid-table-footer {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+		padding: 0.25em 0.25rem;
+		text-align: left;
+	}
+}

@@ -1,56 +1,62 @@
 /**********************************************************************
-Description: The translation effects available in CMGTools.
+Description: This file define the animation effects available in CMT-UI css framework. These animations give
+			 smooth and nice visual effects to an element.
+
 Dependencies: none
+
+Details: It defines the animation mixins and default implementation as listed below:
+
+* Spin      - The spin animation spins an element infinitely.
 ***********************************************************************/
 
 @-moz-keyframes spin {
 
-    0% {
-        -moz-transform: rotate( 0deg );
-             transform: rotate( 0deg );
-    }
+	0% {
+		-moz-transform: rotate( 0deg );
+			 transform: rotate( 0deg );
+	}
 
-    100% {
-        -moz-transform: rotate( 359deg );
-             transform: rotate( 359deg );
-    }
+	100% {
+		-moz-transform: rotate( 359deg );
+			 transform: rotate( 359deg );
+	}
 }
 
 @-webkit-keyframes spin {
 
-    0% {
-        -webkit-transform: rotate( 0deg );
-                transform: rotate( 0deg );
-    }
+	0% {
+		-webkit-transform: rotate( 0deg );
+				transform: rotate( 0deg );
+	}
 
-    100% {
-        -webkit-transform: rotate( 359deg );
-                transform: rotate( 359deg );
-    }
+	100% {
+		-webkit-transform: rotate( 359deg );
+				transform: rotate( 359deg );
+	}
 }
 
 @keyframes spin {
 
-    0% {
-        -webkit-transform: rotate( 0deg );
-                transform: rotate( 0deg );
-    }
+	0% {
+		-webkit-transform: rotate( 0deg );
+				transform: rotate( 0deg );
+	}
 
-    100% {
-        -webkit-transform: rotate( 359deg );
-                transform: rotate( 359deg );
-    }
+	100% {
+		-webkit-transform: rotate( 359deg );
+				transform: rotate( 359deg );
+	}
 }
 
 // Spin Mixins
 
 @mixin spin( $duration, $velocity ) {
   -webkit-animation: spin $duration infinite $velocity;
-          animation: spin $duration infinite $velocity;
+		  animation: spin $duration infinite $velocity;
 }
 
 // Animations default implementation *******************
 
 .spin {
-    @include spin( 2s, linear );
+	@include spin( 2s, linear );
 }

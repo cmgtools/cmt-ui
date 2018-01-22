@@ -1,0 +1,198 @@
+/**********************************************************************
+Description: It defines the styles of the pagination components having links to navigate pages.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for pagination components as listed below:
+
+* Pagination  - The barebone pagination class with minimum styles common for all the data grids.
+*
+* Basic       - The basic pagination. It uses button colors to decorate pagination states.
+*
+* Full        - Full pagination having both info and pagination links.
+***********************************************************************/
+
+// == Structure - Pagination ========
+
+.pagination {
+	display: inline-block;
+
+	li, .page-link {
+		// List Item having Links, Prev and Next
+		display: inline-block;
+		list-style: none;
+
+		span, a {
+			// Links, Prev and Next - Normal state
+			text-decoration: none;
+
+			&:hover {
+				// Links, Prev and Next - Hover state
+			}
+
+			.icon {
+				// Icons for Prev - Next
+			}
+		}
+
+		&.first, &.prev, &.next, &.last {
+
+			&.disabled {
+
+				span {
+					// Prev - Next in disabled state
+
+					&:hover {
+						// Prev - Next in disabled state
+					}
+
+					.icon {
+						// Icon used for Prev and Next
+
+						&:hover {
+							// Icon state on hover in disabled state
+						}
+					}
+				}
+			}
+		}
+
+		&.active {
+
+			a {
+				// Link in active state
+			}
+		}
+
+		&.first {
+			// First link
+		}
+
+		&.prev {
+			// Previous link
+		}
+
+		&.next {
+			// Next link
+		}
+
+		&.last {
+		   // Last link
+		}
+	}
+}
+
+// == Basic Pagination ==============
+
+.pagination-basic {
+
+	li, .page-link {
+
+		span, a {
+			padding: 0.3em 0.5em;
+			background-color: $color-btn;
+			color: $color-btn-text;
+
+			&:hover {
+				background-color: $color-btn-h;
+				color: $color-btn-text-h;
+			}
+
+			.icon {
+				margin-top: -0.2em;
+			}
+		}
+
+		&.first, &.prev, &.next, &.last {
+
+			&.disabled {
+
+				span {
+					background-color: $color-btn-d;
+					color: $color-btn-text-d;
+
+					&:hover {
+						background-color: $color-btn-d;
+						color: $color-btn-text-d;
+					}
+
+					.icon {
+						color: $color-btn-text-d;
+
+						&:hover {
+							color: $color-btn-text-d;
+						}
+					}
+				}
+			}
+		}
+
+		&.active {
+
+			a {
+				background-color: $color-btn-a;
+				color: $color-btn-text-a;
+			}
+		}
+	}
+}
+
+// == Full Pagination ===============
+
+.pagination-full {
+
+	.page-info {
+		display: inline-block;
+		width: 40%;
+		text-align: left;
+		font-weight: normal;
+	}
+
+	.page-links {
+		display: inline-block;
+		width: 59%;
+		text-align: right;
+
+		.pagination {
+
+			li, .page-link {
+				display: inline-block;
+				list-style: none;
+				margin: 0;
+				margin-left: 3px;
+				height: 2.1em;
+				line-height: 2.1em;
+
+				span, a {
+					background-color: $color-tertiary;
+					color: $color-secondary-text;
+					padding: 0.5em 0.75em;
+					text-decoration: none;
+				}
+
+				.active a {
+					background-color: $color-tertiary-d;
+					color: $color-tertiary-text-d;
+				}
+
+				a:hover {
+					background-color: $color-primary;
+					color: $color-primary-text;
+				}
+
+				.disabled span {
+					background-color: $color-gray;
+					color: $color-white;
+				}
+			}
+		}
+	}
+
+	@media only screen and ( max-width: $screen-tablet-large ) {
+
+		.page-info, .page-links {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
