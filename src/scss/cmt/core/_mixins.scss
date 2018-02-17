@@ -1,70 +1,72 @@
 /**********************************************************************
-Description: This file define the mixins available in CMT-UI css framework. It also define the default classes
-			 for all the mixins.
+Description	:	This file define the mixins available in CMT-UI css framework. It also define the 
+				default classes for all the mixins.
 
-Dependencies: variables
+Dependency	:	variables
 
-Details: It define the mixins and their default implementation as listed below:
+Details		:	It define the mixins and their default implementation as listed below:
 
-* Clearfix          - It allows parent element to fix zero height issue in case it consist of floating children by
-*                     forcing itself to self-clear floating children.
-*
-* Opacity           - The opacity mixin is cross-browser solution to make elements opaque. The passed value must be
-*                     between 0 to 1. Higher value means higher opacity and less transparency and vice versa.
-*
-* Transparency      - The transparency mixin is cross-browser solution to make elements transparent. The passed value must be
-*                     between 0 to 1. Higher value means higher transparency and less opacity and vice versa.
-*
-* Background        - Transparent background mixin allows to add transparency effect to background color.
-*
-* Round corners     - These mixins provide different ways to achieve round corner effects including all, top, right,
-*                     bottom, left, top left, top right, bottom left and bottom right.
-*
-* Shadow            - The shadow mixins add shadow effects to elements including outer and inner.
-*
-* Text shadow       - The text shadow mixins add shadow effects to text including outer and inner.
-*
-* Border            - The border mixins provide options to add border including all, top, right, bottom and left.
-*
-* Gradients         - These mixins provide options to apply gradient effects. These include linear, linear with angle
-*                     and radial.
-*
-* Circle effect 1   - It make the parent round cornered and child aligned at center. The parent must be either square
-*                     or rectangular in order to work with this effect.
-*
-* Circle effect 2   - It make the element circular having fixed width and height. It does not consider child alignment.
-*
-* Circle effect 3   - It make the element circular by applying padding at bottom. It does not consider child alignment.
-*
-* Text Shape        - It make shape behind text having elliptical or circular effect.
-*
-* Vertical Center   - It provide mixin to vertically align a child at center of parent.
-*
-* Child Center      - It provide mixin to align child at center both horizontally and vertically.
-*
-* Max area          - These mixins allows child to 100% cover parent. The childs can be either opaque or transparent.
-*
-* Max area cover    - It adds option to have text aligned at center to max area mixins. Initially these elements will be
-*                     hidden and displayed when required.
-*
-* Background        - The background mixins provide options to have below listed backgrounds:
-*                     Tiled              - The background will repeat image both horizontally and vertically.
-*                     Background Image   - The background will be filled with image aligned at center. The image will adjust
-*                                          it's position to fully cover the element.
-*                     Background Fill    - The background will be filled at center with image having specified width and height.
-*                     Background Auto    - The background will be filled with image covering 100% width and auto height.
-*                     Background Scroll  - The background will scroll at low speed as compared to user scroll giving parallax effect.
-*                     Background Fixed   - The background will be filled 100% with fixed image and allows user to scroll content.
-*                     Background Element - The element will adjust itself to allow img tag to fill it completely. The element
-*                                          must be child of parent having fixed height.
-*
-* Textures          - Textures are special tiles having a pattern occupying few pixels. These will give special effects to underlying
-*                     content and images.
-*
-* Blur              - Blus is another mixin adding lens effect to blur underlying content and images.
-*
-* Media Queries     - These mixins are pre-defined media queries using the screen sizes declared in variables file. This section
-*                     includes mixins for in-between, desktop first and mobile first approaches.
+Clearfix			-	It allows parent element to fix zero height issue in case it consist of floating 
+						children by forcing itself to self-clear floating children.
+
+Opacity				-	The opacity mixin is cross-browser solution to make elements opaque. The passed value 
+						must be between 0 to 1. Higher value means higher opacity and less transparency and 
+						vice versa.
+
+Transparency		-	The transparency mixin is cross-browser solution to make elements transparent. The passed 
+						value must be between 0 to 1. Higher value means higher transparency and less opacity 
+						and vice versa.
+
+Background			-	Transparent background mixin allows to add transparency effect to background color.
+
+Round corners		-	These mixins provide different ways to achieve round corner effects including all, top, 
+						right, bottom, left, top left, top right, bottom left and bottom right.
+
+Shadow				-	The shadow mixins add shadow effects to elements including outer and inner.
+
+Text shadow			-	The text shadow mixins add shadow effects to text including outer and inner.
+
+Border				-	The border mixins provide options to add border including all, top, right, bottom and left.
+
+Gradients			-	These mixins provide options to apply gradient effects. These include linear, linear with 
+						angle and radial.
+
+Circle effect 1		-	It make the parent round cornered and child aligned at center. The parent must be either square
+						or rectangular in order to work with this effect.
+
+Circle effect 2		-	It make the element circular having fixed width and height. It does not consider child alignment.
+
+Circle effect 3		-	It make the element circular by applying padding at bottom. It does not consider child alignment.
+
+Text Shape			-	It make shape behind text having elliptical or circular effect.
+
+Vertical Center		-	It provide mixin to vertically align a child at center of parent.
+
+Child Center		-	It provide mixin to align child at center both horizontally and vertically.
+
+Max area			-	These mixins allows child to 100% cover parent. The childs can be either opaque or transparent.
+
+Max area cover		-	It adds option to have text aligned at center to max area mixins. Initially these elements will be
+						hidden and displayed when required.
+
+Background			-	The background mixins provide options to have below listed backgrounds:
+						Tiled              - The background will repeat image both horizontally and vertically.
+						Background Image   - The background will be filled with image aligned at center. The image will 
+											 adjust it's position to fully cover the element.
+						Background Fill    - The background will be filled at center with image having specified width and height.
+						Background Auto    - The background will be filled with image covering 100% width and auto height.
+						Background Scroll  - The background will scroll at low speed as compared to user scroll giving parallax effect.
+						Background Fixed   - The background will be filled 100% with fixed image and allows user to scroll content.
+						Background Element - The element will adjust itself to allow img tag to fill it completely. The element
+											 must be child of parent having fixed height.
+
+Textures			-	Textures are special tiles having a pattern occupying few pixels. These will give special effects 
+						to underlying content and images.
+
+Blur				-	Blus is another mixin adding lens effect to blur underlying content and images.
+
+Media Queries		-	These mixins are pre-defined media queries using the screen sizes declared in variables file. This 
+						section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
 
 // Clearfix
@@ -86,124 +88,124 @@ Details: It define the mixins and their default implementation as listed below:
 // Opacity
 @mixin opaque( $value ) {
 	zoom: 1;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = " + $value*100 + " )";
-	-moz-opacity: $value;
 	-khtml-opacity: $value;
-	filter: alpha( opacity = ( $value*100 ) );
-	opacity: $value;
+	  -moz-opacity: $value;
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = " + $value*100 + " )";
+	       opacity: $value;
+	        filter: alpha( opacity = ( $value*100 ) );
 }
 
 // Transparency
 @mixin transparent( $value ) {
 	zoom: 1;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = " + ( 100 - $value*100 ) + " )";
-	-moz-opacity: ( 1 - $value );
 	-khtml-opacity: ( 1 - $value );
-	filter: alpha( opacity = ( 100 - $value*100 ) );
-	opacity: ( 1 - $value );
+	  -moz-opacity: ( 1 - $value );
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha( Opacity = " + ( 100 - $value*100 ) + " )";
+	       opacity: ( 1 - $value );
+	        filter: alpha( opacity = ( 100 - $value*100 ) );
 }
 
 // Transparent Background
-@mixin transparentBkg( $color, $alpha: $color-transparent-medium ) {
+@mixin transparent-bkg( $color, $alpha: $color-transparent-medium ) {
 	background-color: rgba( $color, $alpha );
 }
 
 // Round Corners
 @mixin rounded( $radius ) {
 	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	border-radius: $radius;
-	-khtml-border-radius: $radius;
+	 -khtml-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
 }
 
 @mixin rounded-top( $radius ) {
-	-moz-border-radius-top-left: $radius;       -moz-border-radius-top-right: $radius;
-	-webkit-border-radius-top-left: $radius;    -webkit-border-radius-top-right: $radius;
 	border-radius: $radius $radius 0 0;
-	-khtml-border-radius-top-left: $radius;     -khtml-border-radius-top-right: $radius;
+	-webkit-border-radius-top-left: $radius;    -webkit-border-radius-top-right: $radius;
+	 -khtml-border-radius-top-left: $radius;     -khtml-border-radius-top-right: $radius;
+	   -moz-border-radius-top-left: $radius;       -moz-border-radius-top-right: $radius;
 }
 
 @mixin rounded-right( $radius ) {
-	-moz-border-radius-top-right: $radius;      -moz-border-radius-bottom-right: $radius;
-	-webkit-border-radius-top-right: $radius;   -webkit-border-radius-bottom-right: $radius;
 	border-radius: 0 $radius $radius 0;
-	-khtml-border-radius-top-right: $radius;    -khtml-border-radius-bottom-right: $radius;
+	-webkit-border-radius-top-right: $radius;   -webkit-border-radius-bottom-right: $radius;
+	 -khtml-border-radius-top-right: $radius;    -khtml-border-radius-bottom-right: $radius;
+	   -moz-border-radius-top-right: $radius;      -moz-border-radius-bottom-right: $radius;
 }
 
 @mixin rounded-bottom( $radius ) {
-	-moz-border-radius-bottom-left: $radius;      -moz-border-radius-bottom-right: $radius;
-	-webkit-border-radius-bottom-left: $radius;   -webkit-border-radius-bottom-right: $radius;
 	border-radius: 0 0 $radius $radius;
-	-khtml-border-radius-bottom-left: $radius;    -khtml-border-radius-bottom-right: $radius;
+	-webkit-border-radius-bottom-left: $radius;   -webkit-border-radius-bottom-right: $radius;
+	 -khtml-border-radius-bottom-left: $radius;    -khtml-border-radius-bottom-right: $radius;
+	   -moz-border-radius-bottom-left: $radius;      -moz-border-radius-bottom-right: $radius;
 }
 
 @mixin rounded-left( $radius ) {
-	-moz-border-radius-top-left: $radius;      -moz-border-radius-bottom-left: $radius;
-	-webkit-border-radius-top-left: $radius;   -webkit-border-radius-bottom-left: $radius;
 	border-radius: $radius 0 0 $radius;
-	-khtml-border-radius-top-left: $radius;    -khtml-border-radius-bottom-left: $radius;
+	-webkit-border-radius-top-left: $radius;   -webkit-border-radius-bottom-left: $radius;
+	 -khtml-border-radius-top-left: $radius;    -khtml-border-radius-bottom-left: $radius;
+	   -moz-border-radius-top-left: $radius;      -moz-border-radius-bottom-left: $radius;
 }
 
 @mixin rounded-top-left( $radius ) {
-	-moz-border-radius-top-left: $radius;
 	-webkit-border-radius-top-left: $radius;
-	border-radius: $radius 0 0 0;
-	-khtml-border-radius-top-left: $radius;
+	 -khtml-border-radius-top-left: $radius;
+	   -moz-border-radius-top-left: $radius;
+					 border-radius: $radius 0 0 0;
 }
 
 @mixin rounded-top-right( $radius ) {
-	-moz-border-radius-top-right: $radius;
 	-webkit-border-radius-top-right: $radius;
-	border-radius: 0 $radius 0 0;
-	-khtml-border-radius-top-right: $radius;
+	 -khtml-border-radius-top-right: $radius;
+	   -moz-border-radius-top-right: $radius;
+					 border-radius: 0 $radius 0 0;
 }
 
 @mixin rounded-bottom-left( $radius ) {
-	-moz-border-radius-bottom-left: $radius;
 	-webkit-border-radius-bottom-left: $radius;
-	border-radius: 0 0 $radius 0;
-	-khtml-border-radius-bottom-left: $radius;
+	 -khtml-border-radius-bottom-left: $radius;
+	   -moz-border-radius-bottom-left: $radius;
+					    border-radius: 0 0 $radius 0;
 }
 
 @mixin rounded-bottom-right( $radius ) {
-	-moz-border-radius-bottom-right: $radius;
 	-webkit-border-radius-bottom-right: $radius;
-	border-radius: 0 0 0 $radius;
-	-khtml-border-radius-bottom-right: $radius;
+	 -khtml-border-radius-bottom-right: $radius;
+	   -moz-border-radius-bottom-right: $radius;
+					     border-radius: 0 0 0 $radius;;
 }
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
 
 @mixin shadow( $x, $y, $blur, $color, $spread: 0 ) {
 	-webkit-box-shadow: $x $y $blur $spread $color;
-	-moz-box-shadow: $x $y $blur $spread $color;
-	box-shadow: $x $y $blur $spread $color;
+	   -moz-box-shadow: $x $y $blur $spread $color;
+			box-shadow: $x $y $blur $spread $color;
 }
 
 @mixin shadow-inset( $x, $y, $blur, $color, $spread: 0 ) {
 	-webkit-box-shadow: inset $x $y $blur $spread $color;
-	-moz-box-shadow: inset $x $y $blur $spread $color;
-	box-shadow: inset $x $y $blur $spread $color;
+	   -moz-box-shadow: inset $x $y $blur $spread $color;
+			box-shadow: inset $x $y $blur $spread $color;
 }
 
 @mixin shadow-inset-top-bottom( $x1, $y1, $blur1, $color1, $x2, $y2, $blur2, $color2, $spread1: 0, $spread2: 0 ) {
 	-webkit-box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
-	-moz-box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
-	box-shadow: inset inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
+	   -moz-box-shadow: inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
+			box-shadow: inset inset $spread1 $x1 $y1 $blur1 $color1, inset $spread2 $x2 $y2 $blur2 $color2;
 }
 
 // Box Shadow with x and y distance having blur ratio and color of shadow
 
 @mixin text-shadow( $x, $y, $blur, $color, $spread: 0 ) {
 	-webkit-text-shadow: $x $y $blur $spread $color;
-	-moz-text-shadow: $x $y $blur $spread $color;
-	text-shadow: $x $y $blur $spread $color;
+	   -moz-text-shadow: $x $y $blur $spread $color;
+			text-shadow: $x $y $blur $spread $color;
 }
 
 @mixin text-shadow-inset( $x, $y, $blur, $color, $spread: 0 ) {
 	-webkit-text-shadow: inset $x $y $blur $spread $color;
-	-moz-text-shadow: inset $x $y $blur $spread $color;
-	text-shadow: inset $x $y $blur $spread $color;
+	   -moz-text-shadow: inset $x $y $blur $spread $color;
+			text-shadow: inset $x $y $blur $spread $color;
 }
 
 // Borders
@@ -242,14 +244,12 @@ Details: It define the mixins and their default implementation as listed below:
 }
 
 @mixin linear-angle-gradient( $angle, $start, $startPos, $end, $endPos, $linearAngle: 0deg ) {
-
-	background: $start;
-	background: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
-	background: -webkit-linear-gradient($angle, $start $startPos, $end $endPos);
-	background: -o-linear-gradient($angle, $start $startPos, $end $endPos);
-	background: -ms-linear-gradient($angle, $start $startPos, $end $endPos);
-
-	background: linear-gradient($linearAngle, $start $startPos, $end $endPos);
+	background-color: $start;
+	background-image: -webkit-linear-gradient($angle, $start $startPos, $end $endPos);
+	background-image: -moz-linear-gradient($angle, $start $startPos, $end $endPos);
+	background-image: -ms-linear-gradient($angle, $start $startPos, $end $endPos);
+	background-image: -o-linear-gradient($angle, $start $startPos, $end $endPos);
+	background-image: linear-gradient($linearAngle, $start $startPos, $end $endPos);
 }
 
 // Radial Gradient - Default - Top to Bottom
@@ -266,10 +266,10 @@ Details: It define the mixins and their default implementation as listed below:
 	vertical-align: middle;
 	background-color: $bkg-color;
 	color: $color;
-	-moz-border-radius: 100%;
 	-webkit-border-radius: 100%;
-	border-radius: 100%;
-	-khtml-border-radius: 100%;
+	 -khtml-border-radius: 100%;
+	   -moz-border-radius: 100%;
+			border-radius: 100%;
 }
 
 // Circled - Style having border radius 50% with fixed height and width without child consideration
@@ -277,9 +277,9 @@ Details: It define the mixins and their default implementation as listed below:
 	width: $width;
 	height: $height;
 	background: $bkg-color;
-	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
-	border-radius: 50%;
+	   -moz-border-radius: 50%;
+			border-radius: 50%;
 }
 
 // Circled - Style having border radius 50% and responsive without child consideration
@@ -288,9 +288,9 @@ Details: It define the mixins and their default implementation as listed below:
 	height:0;
 	background-color: $bkg-color;
 	padding-bottom: $pad;
-	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
-	border-radius: 50%;
+	   -moz-border-radius: 50%;
+			border-radius: 50%;
 }
 
 // Text wrapper - Can be used to wrap text aligned centre both horizontally and vertically. The radius can be set to 50% for circle effect.
@@ -304,9 +304,9 @@ Details: It define the mixins and their default implementation as listed below:
 		content: "";
 		display: block;
 		padding-bottom: $pad1;
-		-moz-border-radius: $radius;
 		-webkit-border-radius: $radius;
-		border-radius: $radius;
+		   -moz-border-radius: $radius;
+				border-radius: $radius;
 	}
 
 	span {
@@ -326,8 +326,8 @@ Details: It define the mixins and their default implementation as listed below:
 	position: relative;
 	top: 50%;
 	-webkit-transform: translateY( -50% );
-	  -ms-transform: translateY( -50% );
-		transform: translateY( -50% );
+	    -ms-transform: translateY( -50% );
+			transform: translateY( -50% );
 }
 
 // Align child - vertically and horizontally at center
@@ -340,39 +340,39 @@ Details: It define the mixins and their default implementation as listed below:
 // Max area boxes - Parent must have position attribute
 
 %max-area {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 @mixin max-area() {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 @mixin max-area-color( $color ) {
-	  @include max-area;
-	  background-color: $color;
+	@include max-area;
+	background-color: $color;
 }
 
 @mixin max-area-rgb( $r: 0, $g: 0, $b: 0 ) {
-	  @include max-area;
-	  background-color: rgba( $r, $g, $b, 0 );
+	@include max-area;
+	background-color: rgba( $r, $g, $b, 0 );
 }
 
 @mixin max-area-transparent( $color: $color-black, $alpha: $color-transparent-medium ) {
-	  @include max-area;
-	  background-color: rgba( $color, $alpha );
+	@include max-area;
+	background-color: rgba( $color, $alpha );
 }
 
 @mixin max-area-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium ) {
-	  @include max-area;
-	  background-color: rgba( $r, $g, $b, $alpha );
+	@include max-area;
+	background-color: rgba( $r, $g, $b, $alpha );
 }
 
 // Max Area Cover - The element overlays(cover) all other child elements of it's parent unless the other child got greater z-index.
@@ -388,23 +388,23 @@ Details: It define the mixins and their default implementation as listed below:
 }
 
 @mixin max-area-cover-color( $color: $color-black, $display: none ) {
-	  @include max-area-cover( $display );
-	  background-color: $color;
+	@include max-area-cover( $display );
+	background-color: $color;
 }
 
 @mixin max-area-cover-rgb( $r: 0, $g: 0, $b: 0, $display: none ) {
-	  @include max-area-cover( $display );
-	  background-color: rgba( $r, $g, $b, 0 );
+	@include max-area-cover( $display );
+	background-color: rgba( $r, $g, $b, 0 );
 }
 
 @mixin max-area-cover-transparent( $color: $color-black, $alpha: $color-transparent-medium, $display: none ) {
-	  @include max-area-cover( $display );
-	  background-color: rgba( $color, $alpha );
+	@include max-area-cover( $display );
+	background-color: rgba( $color, $alpha );
 }
 
 @mixin max-area-cover-transparent-rgb( $r: 0, $g: 0, $b: 0, $alpha: $color-transparent-medium, $display: none ) {
-	  @include max-area-cover( $display );
-	  background-color: rgba( $r, $g, $b, $alpha );
+	@include max-area-cover( $display );
+	ackground-color: rgba( $r, $g, $b, $alpha );
 }
 
 // Backgrounds
@@ -424,9 +424,9 @@ Notes:
 	background-position: center center;
 	background-position: 50% 50%9 !important;
 	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
 }
 
 // Cover the background and fill with specified width and height
@@ -435,9 +435,9 @@ Notes:
 	background-position: center center;
 	background-position: 50% 50%9 !important;
 	-webkit-background-size: $width $height;
-	-moz-background-size: $width $height;
-	-o-background-size: $width $height;
-	background-size: $width $height;
+	   -moz-background-size: $width $height;
+		 -o-background-size: $width $height;
+			background-size: $width $height;
 }
 
 // background center align with auto height
@@ -457,26 +457,26 @@ Notes:
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-position: 50% 50%9 !important;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
 	background-attachment: scroll;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+			background-size: cover;
 }
 
 @mixin bkg-image-fixed {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-position: 50% 50%9 !important;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+			background-size: cover;
 }
 
 // background filled with img - use it inside a block having fixed height
 @mixin bkg-element {
-	position: relative;
 	display: block;
+	position: relative;
 	top: -50%;
 	left: -50%;
 	width: 200%;
@@ -495,8 +495,8 @@ Notes:
 }
 
 @mixin bkg-element-medium {
-	position: relative;
 	display: block;
+	position: relative;
 	top: -30%;
 	left: -30%;
 	width: 160%;
@@ -517,8 +517,8 @@ Notes:
 }
 
 @mixin bkg-element-small {
-	position: relative;
 	display: block;
+	position: relative;
 	top: -20%;
 	left: -20%;
 	width: 140%;
@@ -550,11 +550,11 @@ Notes:
 }
 
 @mixin blur( $value ) {
-	filter: blur($value);
 	-webkit-filter: blur($value);
-	-moz-filter: blur($value);
-	-o-filter: blur($value);
-	-ms-filter: blur($value);
+	   -moz-filter: blur($value);
+		 -o-filter: blur($value);
+		-ms-filter: blur($value);
+			filter: blur($value);
 }
 
 // Mixins Default implementation ***********************
@@ -624,66 +624,96 @@ Notes:
 
 // Transparent backgrounds
 .transparent-bkg {
-	@include transparentBkg( $color-transparent-white );
+	@include transparent-bkg( $color-transparent-white );
 
-	// Transparent backgrounds - 3 Color Scheme
+	// Transparent backgrounds - 3-Color Scheme
 
 	&.transparent-bkg-primary {
-		@include transparentBkg( $color-transparent-primary );
+		@include transparent-bkg( $color-transparent-primary );
 	}
 
 	&.transparent-bkg-secondary {
-		@include transparentBkg( $color-transparent-secondary );
+		@include transparent-bkg( $color-transparent-secondary );
 	}
 
 	&.transparent-bkg-tertiary {
-		@include transparentBkg( $color-transparent-tertiary );
+		@include transparent-bkg( $color-transparent-tertiary );
 	}
 
 	// Standard Background Colors
 
 	&.transparent-bkg-gray {
-		@include transparentBkg( $color-transparent-gray );
+		@include transparent-bkg( $color-transparent-gray );
 	}
 
 	&.transparent-bkg-black {
-		@include transparentBkg( $color-transparent-black );
+		@include transparent-bkg( $color-transparent-black );
 	}
 
 	&.transparent-bkg-blue {
-		@include transparentBkg( $color-transparent-blue );
+		@include transparent-bkg( $color-transparent-blue );
 	}
 
 	&.transparent-bkg-purple {
-		@include transparentBkg( $color-transparent-purple );
+		@include transparent-bkg( $color-transparent-purple );
 	}
 
 	&.transparent-bkg-orange {
-		@include transparentBkg( $color-transparent-orange );
+		@include transparent-bkg( $color-transparent-orange );
 	}
 
 	&.transparent-bkg-yellow {
-		@include transparentBkg( $color-transparent-yellow );
+		@include transparent-bkg( $color-transparent-yellow );
 	}
 
 	&.transparent-bkg-red {
-		@include transparentBkg( $color-transparent-red );
+		@include transparent-bkg( $color-transparent-red );
 	}
 
 	&.transparent-bkg-pink {
-		@include transparentBkg( $color-transparent-pink );
+		@include transparent-bkg( $color-transparent-pink );
 	}
 
 	&.transparent-bkg-magenta {
-		@include transparentBkg( $color-transparent-magenta );
+		@include transparent-bkg( $color-transparent-magenta );
 	}
 
 	&.transparent-bkg-green {
-		@include transparentBkg( $color-transparent-green );
+		@include transparent-bkg( $color-transparent-green );
 	}
 
 	&.transparent-bkg-brown {
-		@include transparentBkg( $color-transparent-brown );
+		@include transparent-bkg( $color-transparent-brown );
+	}
+
+	// Special Background Colors
+
+	&.transparent-bkg-aqua {
+		@include transparent-bkg( $color-transparent-aqua );
+	}	
+
+	&.transparent-bkg-golden {
+		@include transparent-bkg( $color-transparent-golden );
+	}
+
+	&.transparent-bkg-silver {
+		@include transparent-bkg( $color-transparent-silver );
+	}
+
+	&.transparent-bkg-maroon {
+		@include transparent-bkg( $color-transparent-maroon );
+	}
+	
+	&.transparent-bkg-olive {
+		@include transparent-bkg( $color-transparent-olive );
+	}
+	
+	&.transparent-bkg-lime {
+		@include transparent-bkg( $color-transparent-lime );
+	}
+	
+	&.transparent-bkg-navy {
+		@include transparent-bkg( $color-transparent-navy );
 	}
 }
 
@@ -880,7 +910,7 @@ Notes:
 .shadow {
 	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
 
-	// 3 Color Scheme
+	// 3-Color Scheme
 
 	&.shadow-primary {
 		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
@@ -936,8 +966,38 @@ Notes:
 		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
 	}
 
-	&.shadow-green-d {
-		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+	&.shadow-brown {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-brown, $color-transparent-medium ) );
+	}
+	
+	// Special Shadows
+
+	&.shadow-aqua {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
+	}	
+
+	&.shadow-golden {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
+	}
+
+	&.shadow-silver {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-silver, $color-transparent-medium ) );
+	}
+
+	&.shadow-maroon {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
+	}
+	
+	&.shadow-olive {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
+	}
+	
+	&.shadow-lime {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
+	}
+	
+	&.shadow-navy {
+		@include shadow( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
 }
 
@@ -945,7 +1005,7 @@ Notes:
 .shadow-inset {
 	@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
 
-	// 3 Color Scheme
+	// 3-Color Scheme
 
 	&.shadow-inset-primary {
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
@@ -1001,8 +1061,38 @@ Notes:
 		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
 	}
 
-	&.shadow-inset-green-d {
-		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+	&.shadow-inset-brown {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-brown, $color-transparent-medium ) );
+	}
+
+	// Special Inset Shadows
+
+	&.shadow-aqua {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
+	}	
+
+	&.shadow-golden {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
+	}
+
+	&.shadow-silver {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-silver, $color-transparent-medium ) );
+	}
+
+	&.shadow-maroon {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
+	}
+	
+	&.shadow-olive {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
+	}
+	
+	&.shadow-lime {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
+	}
+	
+	&.shadow-navy {
+		@include shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
 }
 
@@ -1010,7 +1100,7 @@ Notes:
 .text-shadow {
 	@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
 
-	// 3 Color Scheme
+	// 3-Color Scheme
 
 	&.text-shadow-primary {
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
@@ -1066,8 +1156,38 @@ Notes:
 		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-green, $color-transparent-medium ) );
 	}
 
-	&.text-shadow-green-d {
-		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+	&.text-shadow-brown {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-brown, $color-transparent-medium ) );
+	}
+
+	// Special Inset Shadows
+
+	&.shadow-aqua {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
+	}	
+
+	&.shadow-golden {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
+	}
+
+	&.shadow-silver {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-silver, $color-transparent-medium ) );
+	}
+
+	&.shadow-maroon {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
+	}
+	
+	&.shadow-olive {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
+	}
+	
+	&.shadow-lime {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
+	}
+	
+	&.shadow-navy {
+		@include text-shadow( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
 }
 
@@ -1075,7 +1195,7 @@ Notes:
 .text-shadow-inset {
 	@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
 
-	// 3 Color Scheme
+	// 3-Color Scheme
 
 	&.text-shadow-inset-primary {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-primary, $color-transparent-medium ) );
@@ -1133,6 +1253,36 @@ Notes:
 
 	&.text-shadow-inset-green-d {
 		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-green-d, $color-transparent-medium ) );
+	}
+	
+	// Special Inset Text Shadows
+
+	&.shadow-aqua {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-aqua, $color-transparent-medium ) );
+	}	
+
+	&.shadow-golden {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-golden, $color-transparent-medium ) );
+	}
+
+	&.shadow-silver {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-silver, $color-transparent-medium ) );
+	}
+
+	&.shadow-maroon {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-maroon, $color-transparent-medium ) );
+	}
+	
+	&.shadow-olive {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-olive, $color-transparent-medium ) );
+	}
+	
+	&.shadow-lime {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-lime, $color-transparent-medium ) );
+	}
+	
+	&.shadow-navy {
+		@include text-shadow-inset( $size-default, $size-default, $size-medium, rgba( $color-navy, $color-transparent-medium ) );
 	}
 }
 
@@ -1516,7 +1666,7 @@ Notes:
 }
 
 .blur {
-	transform: scale(1.1);
+	transform: scale( 1.1 );
 	@include blur( $size-default );
 
 	&.blur-small {

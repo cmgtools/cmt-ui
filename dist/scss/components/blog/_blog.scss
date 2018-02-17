@@ -268,7 +268,7 @@ Details: It defines the styles of blog components as listed below:
 				visibility: hidden;
 				opacity: 0;
 				background-color: $color-transparent-black;
-				@include transit-visibility-opacity( $transit-eio, $transit-time-medium );
+				@include transit-opacity-visibility( $transit-eio, $transit-time-medium );
 
 				.blog-post-summary {
 					text-align: center;
@@ -388,7 +388,7 @@ Details: It defines the styles of blog components as listed below:
 				visibility: hidden;
 				opacity: 0;
 				background-color: $color-transparent-black;
-				@include transit-visibility-opacity( $transit-eio, $transit-time-medium );
+				@include transit-opacity-visibility( $transit-eio, $transit-time-medium );
 
 				.blog-post-summary {
 					text-align: center;

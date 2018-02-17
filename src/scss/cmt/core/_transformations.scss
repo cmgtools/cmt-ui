@@ -1,31 +1,99 @@
 /**********************************************************************
-Description: This file define the transformation effects available in CMT-UI css framework. These effects change the physical
-			 look of an element i.e. position, orientation and scale.
+Description	:	This file define the 2d transformation effects available in CMT-UI css framework. These effects 
+				change the physical look of an element i.e. position, orientation and scale on 2d plane.
 
-Dependencies: none
+Dependency	:	None
 
-Details: It defines the transformation mixins and default implementation as listed below:
+Details		:	It defines the transformation mixins and default implementation as listed below:
 
-* Rotate      - The rotate effect rotates an element to given degrees.
-*
-* Scale       - The scale transformation change the size of an element.
-*
-* Flip        - It flip an element either vertically or horizontally.
+Translate	-	The translate effect moves an element on x and y axis.
+
+Rotate		-	The rotate effect rotates an element to given degrees.
+
+Scale		-	The scale transformation change the size of an element.
+
+Skew
+
+Matrix
+
+Flip		-	It flip an element either vertically or horizontally.
 ***********************************************************************/
+
+@mixin transform-translate( $x, $y ) {
+	-webkit-transform: translate( $x, $y );
+	   -moz-transform: translate( $x, $y );
+	    -ms-transform: translate( $x, $y );
+            transform: translate( $x, $y );
+}
+
+@mixin transform-translate-x( $x ) {
+	-webkit-transform: translateX( $x );
+	   -moz-transform: translateX( $x );
+	    -ms-transform: translateX( $x );
+            transform: translateX( $x );
+}
+
+@mixin transform-translate-y( $y ) {
+	-webkit-transform: translateY( $y );
+	   -moz-transform: translateY( $y );
+	    -ms-transform: translateY( $y );
+            transform: translateY( $y );
+}
 
 @mixin transform-rotate( $degrees, $angle ) {
   filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=#{ $angle } );
   -webkit-transform: rotate( $degrees );
+	 -moz-transform: rotate( $degrees );
 	  -ms-transform: rotate( $degrees );
 		  transform: rotate( $degrees );
 }
 
-@mixin transform-scale( $value ) {
-  -webkit-transform:scale( $value );
-	 -moz-transform:scale( $value );
-	  -ms-transform:scale( $value );
-	   -o-transform:scale( $value );
-		  transform:scale( $value );
+@mixin transform-scale( $sx, $sy ) {
+  -webkit-transform:scale( $sx, $sy );
+	 -moz-transform:scale( $sx, $sy );
+	  -ms-transform:scale( $sx, $sy );
+	   -o-transform:scale( $sx, $sy );
+		  transform:scale( $sx, $sy );
+}
+
+@mixin transform-scale-x( $sx ) {
+  -webkit-transform:scaleX( $sx );
+	 -moz-transform:scaleX( $sx );
+	  -ms-transform:scaleX( $sx );
+	   -o-transform:scaleX( $sx );
+		  transform:scaleX( $sx );
+}
+
+@mixin transform-scale-y( $sy ) {
+  -webkit-transform:scaleY( $sy );
+	 -moz-transform:scaleY( $sy );
+	  -ms-transform:scaleY( $sy );
+	   -o-transform:scaleY( $sy );
+		  transform:scaleY( $sy );
+}
+
+@mixin transform-skew( $xDegrees, $yDegrees ) {
+	-webkit-transform: skew( $xDegrees, $yDegrees );
+	    -ms-transform: skew( $xDegrees, $yDegrees );
+            transform: skew( $xDegrees, $yDegrees );
+}
+
+@mixin transform-skew-x( $degrees ) {
+	-webkit-transform: skewX( $degrees );
+	    -ms-transform: skewX( $degrees );
+            transform: skewX( $degrees );
+}
+
+@mixin transform-skew-y( $degrees ) {
+	-webkit-transform: skewY( $degrees );
+	    -ms-transform: skewY( $degrees );
+            transform: skewY( $degrees );
+}
+
+@mixin transform-matrix( $xDegrees, $yDegrees ) {
+	-webkit-transform: matrix( $xDegrees, $yDegrees );
+	    -ms-transform: matrix( $xDegrees, $yDegrees );
+            transform: matrix( $xDegrees, $yDegrees );
 }
 
 @mixin transform-flip( $horizontal, $vertical, $angle ) {
@@ -35,7 +103,31 @@ Details: It defines the transformation mixins and default implementation as list
 		  transform: scale( $horizontal, $vertical );
 }
 
-// Transformations default implementation **************
+// Mixins Default implementation ***********************
+
+.translate-small {
+	@include transform-translate( $size-small, $size-small );
+}
+
+.translate-medium {
+	@include transform-translate( $size-medium, $size-medium );
+}
+
+.translate-large {
+	@include transform-translate( $size-large, $size-large );
+}
+
+.translate-xlarge {
+	@include transform-translate( $size-xlarge, $size-xlarge );
+}
+
+.translate-xxlarge {
+	@include transform-translate( $size-xxlarge, $size-xxlarge );
+}
+
+.translate-xxxlarge {
+	@include transform-translate( $size-xxxlarge, $size-xxxlarge );
+}
 
 .rotate-45 {
 	@include transform-rotate( 45deg, 0.5 );
@@ -65,8 +157,40 @@ Details: It defines the transformation mixins and default implementation as list
 	@include transform-rotate( 315deg, 3.5 );
 }
 
+.scale-small {
+	@include transform-scale( $size-small, $size-small );
+}
+
+.scale-medium {
+	@include transform-scale( $size-medium, $size-medium );
+}
+
+.scale-large {
+	@include transform-scale( $size-large, $size-large );
+}
+
+.scale-xlarge {
+	@include transform-scale( $size-xlarge, $size-xlarge );
+}
+
+.scale-xxlarge {
+	@include transform-scale( $size-xxlarge, $size-xxlarge );
+}
+
+.scale-xxxlarge {
+	@include transform-scale( $size-xxxlarge, $size-xxxlarge );
+}
+
 .flip-horizontal {
-	 @include transform-flip( -1, 1, 0 );
+	@include transform-flip( -1, 1, 0 );
+}
+
+.skew-left {
+	@include transform-skew-x( 5deg );
+}
+
+.skew-right {
+	@include transform-skew-x( -5deg );
 }
 
 .flip-vertical {
@@ -79,6 +203,6 @@ Details: It defines the transformation mixins and default implementation as list
 	@include transit-all( $transit-eio, $transit-time-medium );
 
 	&:hover {
-		@include transform-scale( 1.2 );
+		@include transform-scale( 1.2, 1.2 );
 	}
 }
