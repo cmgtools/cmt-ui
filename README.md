@@ -1,16 +1,34 @@
-Project 	- CMGTools (http://www.cmgtools.org)
+Project		-	CMGTools (https://www.cmgtools.org)
 
-Module  	- CMGTools UI
+Module		-	CMT-UI (CMGTools UI)
 
-License 	- GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
+License		-	GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html)
 
-Description - CMGTools UI is CSS Framework which provide responsive grid, commonly used mixins, themeable color scheme and several re-usable components.
+Website		-	https://cmtui.cmgtools.org
 
-Highlighted Features
-=========================================
-1. Variables can be used to define fonts, colors and screen resolutions.
-2. Responsive Grid System provide grid with and without margins.
-3. Commonly used mixins and transformations.
-4. Highly re-usable UI Components designed specially for CMSGears theme designing.
+Description	-	CMT-UI is component oriented CSS Framework which provide responsive grid, commonly used mixins, 
+				themeable color scheme, re-usable components structure and ready to use components using the 
+				pre-defined component structure.
 
-Notes: The detailed description for each feature can be found at http://www.cmgtools.org.
+#Highlighted Features#
+
+##Color Scheme##
+It consist of 3-Color Scheme having primary, secondary and tertiary colors with light and dark variations. There 
+are additional color variables for form fields, buttons, borders, headers, footers, special, standard and social 
+platforms.
+
+##Responsive Grid##
+The grid is pre-configured to be used for 12 and 15 column layouts with and without margins. There are standard 
+variables defining the screen sizes and mixins to be used for screens fully compatible with all the standard screens.
+
+##Mixins##
+CMT-UI consist of pre-defined mixins for animations, transitions and transformations. There are also commonly used 
+mixins for clearfix, opacity, transparency, round corners, shadows, borders, gradients, background images etc with 
+default implementation.
+
+##Elements##
+CMT-UI override the standard elements and ensure that these looks same in all the browsers. It also provide advanced 
+elements(structure and default implementation) commonly used for interactive pages and screens.
+
+##Components##
+Highly re-usable UI Components structure and default implementation.
