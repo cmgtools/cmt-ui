@@ -1017,6 +1017,21 @@ Notes:
     -moz-text-shadow: inset 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
     text-shadow: inset 1px 1px 5px 0 rgba(0, 54, 83, 0.6); }
 
+.border.border-ignore {
+  border: none !important; }
+
+.border.border-top-ignore {
+  border-top: none !important; }
+
+.border.border-right-ignore {
+  border-right: none !important; }
+
+.border.border-bottom-ignore {
+  border-bottom: none !important; }
+
+.border.border-left-ignore {
+  border-left: none !important; }
+
 .border.border-default {
   border: 1px solid #7F7F7F; }
 
@@ -1218,7 +1233,7 @@ Notes:
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent; }
+  background-color: rgba(0, 0, 0, 0); }
 
 .max-area-transparent {
   position: absolute;
@@ -1275,7 +1290,7 @@ Notes:
   display: none;
   text-align: center;
   color: #363636;
-  background-color: transparent; }
+  background-color: rgba(0, 0, 0, 0); }
 
 .max-area-cover-transparent {
   position: absolute;
@@ -2604,6 +2619,15 @@ Details: It defines the text and background colors as listed below:
 
 .bkg.bkg-navy {
   background-color: #003653 !important; }
+
+.bkg-transparent.bkg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.6) !important; }
+
+.bkg-transparent.bkg-transparent-black-l {
+  background-color: rgba(0, 0, 0, 0.25) !important; }
+
+.bkg-transparent.bkg-transparent-black-h {
+  background-color: rgba(0, 0, 0, 0.8) !important; }
 
 .text.text-primary {
   color: #363636 !important; }
@@ -4000,6 +4024,146 @@ Details: It defines the grid system and basic containers as listed below:
   position: absolute;
   width: 100%; }
 
+.hover-color-primary {
+  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  .hover-color-primary:hover {
+    background-color: #F2F2F2;
+    color: #363636; }
+
+.hover-color-secondary {
+  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  .hover-color-secondary:hover {
+    background-color: #3C4655;
+    color: #96B0D6; }
+
+.hover-color-tertiary {
+  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  .hover-color-tertiary:hover {
+    background-color: #87BA45;
+    color: #E6E6E6; }
+
+.hover-color-white {
+  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  .hover-color-white:hover {
+    background-color: #FFFFFF;
+    color: #000000; }
+
+.hover-color-black {
+  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  .hover-color-black:hover {
+    background-color: #000000;
+    color: #FFFFFF; }
+
+.hover-bkg-primary {
+  -moz-transition: background-color 250ms ease-in-out 0s;
+  -ms-transition: background-color 250ms ease-in-out 0s;
+  -o-transition: background-color 250ms ease-in-out 0s;
+  -webkit-transition: background-color 250ms ease-in-out 0s;
+  transition: background-color 250ms ease-in-out 0s; }
+  .hover-bkg-primary:hover {
+    background-color: #F2F2F2; }
+
+.hover-bkg-secondary {
+  -moz-transition: background-color 250ms ease-in-out 0s;
+  -ms-transition: background-color 250ms ease-in-out 0s;
+  -o-transition: background-color 250ms ease-in-out 0s;
+  -webkit-transition: background-color 250ms ease-in-out 0s;
+  transition: background-color 250ms ease-in-out 0s; }
+  .hover-bkg-secondary:hover {
+    background-color: #3C4655; }
+
+.hover-bkg-tertiary {
+  -moz-transition: background-color 250ms ease-in-out 0s;
+  -ms-transition: background-color 250ms ease-in-out 0s;
+  -o-transition: background-color 250ms ease-in-out 0s;
+  -webkit-transition: background-color 250ms ease-in-out 0s;
+  transition: background-color 250ms ease-in-out 0s; }
+  .hover-bkg-tertiary:hover {
+    background-color: #87BA45; }
+
+.hover-bkg-white {
+  -moz-transition: background-color 250ms ease-in-out 0s;
+  -ms-transition: background-color 250ms ease-in-out 0s;
+  -o-transition: background-color 250ms ease-in-out 0s;
+  -webkit-transition: background-color 250ms ease-in-out 0s;
+  transition: background-color 250ms ease-in-out 0s; }
+  .hover-bkg-white:hover {
+    background-color: #FFFFFF; }
+
+.hover-bkg-black {
+  -moz-transition: background-color 250ms ease-in-out 0s;
+  -ms-transition: background-color 250ms ease-in-out 0s;
+  -o-transition: background-color 250ms ease-in-out 0s;
+  -webkit-transition: background-color 250ms ease-in-out 0s;
+  transition: background-color 250ms ease-in-out 0s; }
+  .hover-bkg-black:hover {
+    background-color: #000000; }
+
+.hover-text-primary {
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s; }
+  .hover-text-primary:hover {
+    color: #363636; }
+
+.hover-text-secondary {
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s; }
+  .hover-text-secondary:hover {
+    color: #96B0D6; }
+
+.hover-text-tertiary {
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s; }
+  .hover-text-tertiary:hover {
+    color: #E6E6E6; }
+
+.hover-text-white {
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s; }
+  .hover-text-white:hover {
+    color: #FFFFFF; }
+
+.hover-text-black {
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s; }
+  .hover-text-black:hover {
+    color: #000000; }
+
 /**********************************************************************
 Description: It defines the styles for html elements except form and table for CMT-UI css framework.
 
@@ -4757,19 +4921,19 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
   -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
   box-shadow: inset 0 0 0 1px #F2F2F2; }
-  input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
+  input:hover[type="text"], input:hover[type="email"], input:hover[type="password"], textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
     background-color: #E9E9E9;
     color: #363636;
     -webkit-box-shadow: inset 0 0 0 1px #E9E9E9;
     -moz-box-shadow: inset 0 0 0 1px #E9E9E9;
     box-shadow: inset 0 0 0 1px #E9E9E9; }
-  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
+  input:focus[type="text"], input:focus[type="email"], input:focus[type="password"], textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
     background-color: #E1E1E1;
     color: #4F688E;
     -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
     -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
     box-shadow: inset 0 0 0 1px #E1E1E1; }
-  input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
+  input:disabled[type="text"], input:disabled[type="email"], input:disabled[type="password"], textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
     background-color: #CCCCCC;
     color: #909090;
     -webkit-box-shadow: inset 0 0 0 1px #CCCCCC;
@@ -4786,13 +4950,13 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   color: #FFFFFF;
   text-align: center;
   cursor: pointer; }
-  .btn:hover, .btn-icon:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover {
+  .btn:hover, .btn-icon:hover, input:hover[type="submit"], input:hover[type="button"], button:hover {
     background-color: #FF3636;
     color: #FFFFFF; }
-  .btn:active, .btn-icon:active, input[type="submit"]:active, input[type="button"]:active, button:active {
+  .btn:active, .btn-icon:active, input:active[type="submit"], input:active[type="button"], button:active {
     background-color: #b51717;
     color: #FFFFFF; }
-  .btn:disabled, .btn-icon:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
+  .btn:disabled, .btn-icon:disabled, input:disabled[type="submit"], input:disabled[type="button"], button:disabled {
     background-color: gray;
     color: #363636;
     cursor: default; }

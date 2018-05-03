@@ -1290,6 +1290,26 @@ Notes:
 
 .border {
 
+	&.border-ignore {
+		border: none !important;
+	}
+
+    &.border-top-ignore {
+        border-top: none !important;
+    }
+
+    &.border-right-ignore {
+        border-right: none !important;
+    }
+
+    &.border-bottom-ignore {
+        border-bottom: none !important;
+    }
+
+    &.border-left-ignore {
+        border-left: none !important;
+    }
+
 	&.border-default {
 		@include border( $size-default, solid, $color-border );
 	}
