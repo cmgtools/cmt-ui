@@ -665,6 +665,10 @@ Notes:
   -webkit-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
   -moz-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
   box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6); }
+  .shadow.shadow-ignore {
+    -webkit-box-shadow: 0 0 0 0 white;
+    -moz-box-shadow: 0 0 0 0 white;
+    box-shadow: 0 0 0 0 white; }
   .shadow.shadow-primary {
     -webkit-box-shadow: 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
     -moz-box-shadow: 1px 1px 5px 0 rgba(242, 242, 242, 0.6);
@@ -3133,24 +3137,16 @@ html, body {
       font-size: 18px; } }
 
 /**
- * Standard Fonts - The font classes default, heading and code based on font families defined in variables file.
- */
-.font {
-  font-family: Arial, Helvetica, sans-serif; }
-  .font .font-light {
-    font-weight: lighter; }
-  .font .font-bold {
-    font-weight: bold; }
-  .font.font-heading {
-    font-family: Verdana, Geneva, sans-serif; }
-  .font.font-code {
-    font-family: "Courier New", Courier, monospace; }
-
-/**
  * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
-.text .text-default {
-  font-size: 1em; }
+.text.text-default {
+  font-family: Arial, Helvetica, sans-serif; }
+
+.text.text-heading {
+  font-family: Verdana, Geneva, sans-serif; }
+
+.text.text-code {
+  font-family: "Courier New", Courier, monospace; }
 
 .text.text-xxlarge {
   font-size: 7.2em; }
@@ -3178,6 +3174,9 @@ html, body {
 
 .text.text-large-6 {
   font-size: 1.08em; }
+
+.text.text-regular {
+  font-size: 1em; }
 
 .text.text-small {
   font-size: 0.8em; }
@@ -5304,73 +5303,6 @@ Details: It defines the styles for breadcrumbs.
     display: inline-block; }
 
 /**********************************************************************
-Description: It defines the styles for mapper components available in CMT-UI css framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for mapper components as listed below:
-
-* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
-*
-* List        - The list mapper allows user to map multiple resources to active resource. The mappings
-*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
-*
-* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
-*				when user click on one of the auto suggest item.
-*
-* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
-*
-* Action	  - The action mapper will allow users to toggle each item individually by click.
-*
-***********************************************************************/
-.mapper {
-  position: relative; }
-  .mapper .mapper-items .mapper-item {
-    position: relative; }
-
-.mapper-list {
-  width: 100%;
-  margin: 0 auto; }
-  .mapper-list .mapper-items {
-    height: 250px;
-    background-color: #F2F2F2; }
-    .mapper-list .mapper-items .mapper-item {
-      display: inline-block;
-      width: 100%;
-      margin: 10px;
-      background-color: #FFFFFF; }
-      .mapper-list .mapper-items .mapper-item.depth-1 {
-        padding-left: 15px; }
-      .mapper-list .mapper-items .mapper-item.depth-2 {
-        padding-left: 30px; }
-      .mapper-list .mapper-items .mapper-item.depth-3 {
-        padding-left: 45px; }
-
-.mapper-auto .mapper-items .mapper-item {
-  background-color: #3C4655;
-  display: inline-block;
-  padding: 0.5rem;
-  margin-right: 0.5rem; }
-
-.mapper-submit {
-  width: 100%;
-  margin: 0 auto; }
-  .mapper-submit .mapper-items .mapper-item {
-    background-color: #3C4655;
-    display: inline-block;
-    padding: 0.5rem;
-    margin-right: 0.5rem; }
-
-.mapper-action {
-  width: 100%;
-  margin: 0 auto; }
-  .mapper-action .mapper-items .mapper-item {
-    background-color: #3C4655;
-    display: inline-block;
-    padding: 0.5rem;
-    margin-right: 0.5rem; }
-
-/**********************************************************************
 Description: It defines the styles of auto fill elements available in CMT-UI css framework. These
 			 elements require Javascript/JQuery to populate the suggestions.
 
@@ -6072,6 +6004,99 @@ Details: It defines the styles for sidebar components as listed below:
       display: block; }
       .sidebar-basic .sidebar-header .sidebar-content-wrap {
         display: none; } }
+
+/**********************************************************************
+Description: It defines the styles for mapper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
+*
+* List        - The list mapper allows user to map multiple resources to active resource. The mappings
+*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
+*
+* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
+*				when user click on one of the auto suggest item.
+*
+* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+*
+* Action	  - The action mapper will allow users to toggle each item individually by click.
+*
+***********************************************************************/
+.mapper {
+  position: relative; }
+  .mapper .mapper-items .mapper-item {
+    position: relative; }
+
+.mapper-list {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-list .mapper-items {
+    height: 250px;
+    background-color: #F2F2F2; }
+    .mapper-list .mapper-items .mapper-item {
+      display: inline-block;
+      width: 100%;
+      margin: 10px;
+      background-color: #FFFFFF; }
+      .mapper-list .mapper-items .mapper-item.depth-1 {
+        padding-left: 15px; }
+      .mapper-list .mapper-items .mapper-item.depth-2 {
+        padding-left: 30px; }
+      .mapper-list .mapper-items .mapper-item.depth-3 {
+        padding-left: 45px; }
+
+.mapper-auto .mapper-items .mapper-item {
+  background-color: #3C4655;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 0.5rem; }
+
+.mapper-auto-items .mapper-items .mapper-item {
+  padding-right: 2.5em;
+  margin-bottom: 0.5em; }
+
+.mapper-auto-items .spinner {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  z-index: 1;
+  background: lightgray;
+  color: #555555;
+  padding: 0.25em; }
+
+.mapper-submit {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-submit .mapper-items .mapper-item {
+    background-color: #3C4655;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem; }
+
+.mapper-submit-items .mapper-items .mapper-item {
+  padding-right: 2.5em;
+  margin-bottom: 0.5em; }
+
+.mapper-submit-items .spinner {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  z-index: 1;
+  background: lightgray;
+  color: #555555;
+  padding: 0.25em; }
+
+.mapper-action {
+  width: 100%;
+  margin: 0 auto; }
+  .mapper-action .mapper-items .mapper-item {
+    background-color: #3C4655;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem; }
 
 /**********************************************************************
 Description: It defines the styles for popup components available in CMT-UI css framework.

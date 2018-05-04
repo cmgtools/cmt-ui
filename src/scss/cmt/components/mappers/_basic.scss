@@ -1,0 +1,184 @@
+/**********************************************************************
+Description: It defines the styles for mapper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
+*
+* List        - The list mapper allows user to map multiple resources to active resource. The mappings
+*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
+*
+* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
+*				when user click on one of the auto suggest item.
+*
+* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+*
+* Action	  - The action mapper will allow users to toggle each item individually by click.
+*
+***********************************************************************/
+
+// == Structure - Mapper ============
+
+.mapper {
+	position: relative;
+	// Mapper
+
+	.mapper-items {
+		// Mapper items wrapper
+
+		.mapper-item {
+			position: relative;
+			// Mapper item
+
+			.mapper-item-remove {
+				// Trigger to remove mapped item
+
+				// Notes: Use btn-icon or icon-o as trigger
+			}
+		}
+	}
+}
+
+// == Mapper - List =================
+
+.mapper-list {
+	width: 100%;
+	margin: 0 auto;
+
+	.mapper-items {
+		height: 250px;
+		background-color: $color-primary;
+		// Add scroll based on needs
+
+		.mapper-item {
+			display: inline-block;
+			width: 100%;
+			margin: 10px;
+			background-color: $color-white;
+
+			&.depth-1 {
+				padding-left: 15px;
+			}
+
+			&.depth-2 {
+				padding-left: 30px;
+			}
+
+			&.depth-3 {
+				padding-left: 45px;
+			}
+		}
+	}
+}
+
+// == Mapper - Auto =================
+
+// Auto Suggest with mapper - It works together with auto fill component
+.mapper-auto {
+
+	// Auto Fill element, request trigger
+
+	.mapper-items {
+
+		.mapper-item {
+			background-color: $color-secondary;
+			display: inline-block;
+			padding: 0.5rem;
+			margin-right: 0.5rem;
+		}
+	}
+}
+
+// == Mapper - Auto - Items =========
+
+.mapper-auto-items {
+
+	.mapper-items {
+
+		.mapper-item {
+			padding-right: 2.5em;
+			margin-bottom: 0.5em;
+
+			.mapper-item-remove {
+
+			}
+		}
+	}
+
+	.spinner {
+		position: absolute;
+		top: 0.25em;
+		right: 0.25em;
+		z-index: 1;
+		background: $color-primary-d;
+		color: $color-primary-text-d;
+		padding: 0.25em;
+	}
+}
+
+// == Mapper - Submit ===============
+
+.mapper-submit {
+	width: 100%;
+	margin: 0 auto;
+
+	// Mapping element, request trigger
+
+	.mapper-items {
+
+		.mapper-item {
+			background-color: $color-secondary;
+			display: inline-block;
+			padding: 0.5rem;
+			margin-right: 0.5rem;
+		}
+	}
+}
+
+// == Mapper - Submit - Items =======
+
+.mapper-submit-items {
+
+	.mapper-items {
+
+		.mapper-item {
+			padding-right: 2.5em;
+			margin-bottom: 0.5em;
+
+			.mapper-item-remove {
+
+			}
+		}
+	}
+
+	.spinner {
+		position: absolute;
+		top: 0.25em;
+		right: 0.25em;
+		z-index: 1;
+		background: $color-primary-d;
+		color: $color-primary-text-d;
+		padding: 0.25em;
+	}
+}
+
+// == Mapper - Action ===============
+
+.mapper-action {
+	width: 100%;
+	margin: 0 auto;
+
+	// Mapping element, request trigger
+
+	.mapper-items {
+
+		.mapper-item {
+			background-color: $color-secondary;
+			display: inline-block;
+			padding: 0.5rem;
+			margin-right: 0.5rem;
+		}
+	}
+}

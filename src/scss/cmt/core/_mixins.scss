@@ -910,6 +910,10 @@ Notes:
 .shadow {
 	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-white, $color-transparent-medium ) );
 
+	&.shadow-ignore {
+		@include shadow( 0, 0, 0, white );
+	}
+
 	// 3-Color Scheme
 
 	&.shadow-primary {

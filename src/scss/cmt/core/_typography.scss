@@ -64,37 +64,21 @@ html, body {
 }
 
 /**
- * Standard Fonts - The font classes default, heading and code based on font families defined in variables file.
- */
-
-.font {
-	font-family: $font-default;
-
-	.font-light {
-		font-weight: lighter;
-	}
-
-	.font-bold {
-		font-weight: bold;
-	}
-
-	&.font-heading {
-		font-family: $font-heading;
-	}
-
-	&.font-code {
-		font-family: $font-code;
-	}
-}
-
-/**
  * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
 
 .text {
 
-	.text-default {
-		font-size: $font-size-7;
+	&.text-default {
+		font-family: $font-default;
+	}
+
+	&.text-heading {
+		font-family: $font-heading;
+	}
+
+	&.text-code {
+		font-family: $font-code;
 	}
 
 	&.text-xxlarge {
@@ -131,6 +115,10 @@ html, body {
 
 	&.text-large-6 {
 		font-size: $font-size-6;
+	}
+
+	&.text-regular {
+		font-size: $font-size-7;
 	}
 
 	&.text-small {

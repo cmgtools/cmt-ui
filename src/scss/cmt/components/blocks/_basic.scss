@@ -101,7 +101,7 @@ Details: It defines the styles for header components as listed below:
 		// Block Content
 		.block-content {
 
-			// Default Content Box having title and text content
+			// Block Content Box
 			.box-block-content {
 
 				// Box layout - derived from box component
@@ -115,6 +115,14 @@ Details: It defines the styles for header components as listed below:
 
 		// Block Footer
 		.block-footer {
+
+			.block-footer-icon {
+				// Footer icon
+			}
+
+			.block-footer-title {
+				// Footer title
+			}
 
 			.block-footer-info {
 				// Footer Info

@@ -118,9 +118,6 @@ Baidu		- <min>
 @import "cmt/elements/breadcrumbs";
 // project - breadcrumbs
 
-@import "cmt/elements/mappers";
-// project - mappers
-
 @import "cmt/elements/auto-fill";
 // project - auto fill
 
@@ -142,6 +139,9 @@ Baidu		- <min>
 
 @import "cmt/components/sidebars/basic";
 // project - sidebars
+
+@import "cmt/components/mappers/basic";
+// project - mappers
 
 @import "cmt/components/popups/basic";
 @import "cmt/components/popups/popouts";

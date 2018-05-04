@@ -91,6 +91,33 @@ Details: It defines the styles for mapper components as listed below:
 	}
 }
 
+// == Mapper - Auto - Items =========
+
+.mapper-auto-items {
+
+	.mapper-items {
+
+		.mapper-item {
+			padding-right: 2.5em;
+			margin-bottom: 0.5em;
+
+			.mapper-item-remove {
+
+			}
+		}
+	}
+
+	.spinner {
+		position: absolute;
+		top: 0.25em;
+		right: 0.25em;
+		z-index: 1;
+		background: $color-primary-d;
+		color: $color-primary-text-d;
+		padding: 0.25em;
+	}
+}
+
 // == Mapper - Submit ===============
 
 .mapper-submit {
@@ -107,6 +134,33 @@ Details: It defines the styles for mapper components as listed below:
 			padding: 0.5rem;
 			margin-right: 0.5rem;
 		}
+	}
+}
+
+// == Mapper - Submit - Items =======
+
+.mapper-submit-items {
+
+	.mapper-items {
+
+		.mapper-item {
+			padding-right: 2.5em;
+			margin-bottom: 0.5em;
+
+			.mapper-item-remove {
+
+			}
+		}
+	}
+
+	.spinner {
+		position: absolute;
+		top: 0.25em;
+		right: 0.25em;
+		z-index: 1;
+		background: $color-primary-d;
+		color: $color-primary-text-d;
+		padding: 0.25em;
 	}
 }
 
