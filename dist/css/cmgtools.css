@@ -1422,34 +1422,47 @@ Notes:
     max-width: 100%;
     max-height: 100%; }
 
-.texture {
+.texture.texture-default {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC"); }
-  .texture.texture-bar-s {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC"); }
-  .texture.texture-bar-m {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAAHHBk5tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDIAAJIVDGz9cSP7AAAAAElFTkSuQmCC"); }
-  .texture.texture-bar-l {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAAHaA37VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMEEwMjQzNTdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMEEwMjQzNjdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwQTAyNDMzN0U0NzExRTU5MDY4RUFDMzhGMEREQzY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwQTAyNDM0N0U0NzExRTU5MDY4RUFDMzhGMEREQzY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mZqYcQAAADJJREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDJAUYUMAA2TD2qNBZ0eAAAAAElFTkSuQmCC"); }
-  .texture.texture-grid-w {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//vy9AADGACIAAYgSzgAAggOAMJgYoAAgguAgMMDGgAYAAIqyCsABAgIFdAcQ4aUwdBI0kVQEAViAs7e1rqlEAAAAASUVORK5CYII="); }
-  .texture.texture-grid-b {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYGBX/P//HyeNqYOgkaQqAAAXoxjjLGdo/wAAAABJRU5ErkJggg=="); }
-  .texture.texture-grain-w {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi+P//fwxAADGACIAAYgSzgAAggMA8JhADIIAQQkAAEEAgDozNwMSABFA4AAGGogynKqIkAGovFsbm0NI0AAAAAElFTkSuQmCC"); }
-  .texture.texture-grain-w-l {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi+P//fwxAADGACIAAYgSzgAAggEAMEM3AxAAFAAEEF4EBJgY0ABBAYBNAqmA0Vi0xUHYMVkMBAgzuACBYgqwSxsfQgQ5gdsQgiaHwCZoAAAFwL9t1tvLGAAAAAElFTkSuQmCC"); }
-  .texture.texture-grain-b {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC"); }
-  .texture.texture-grain-b-l {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIMb///+DaAYmBigACCC4CAwwMaABgAACmwBSBaMxtBBWARBgcAccPXo4HURbW9ui8DHNRAOUmwAAwWk26e28KNgAAAAASUVORK5CYII="); }
-  .texture.texture-diagonal-w {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpi+P//fwxAADEACQaAAGIEEUAQAxBAYB4TiAkQQGAWSAGIBgggFA5MMVxDDFSWASDAUJSh68cQRNaBoQAAHDFj9Tn4HhEAAAAASUVORK5CYII="); }
-  .texture.texture-diagonal-w-r {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwNAADGACIAAYgSzGBhiAAIIxIsBCwEEEJgFYoAwQADB5OFq4LIoygACDEUGXRVWSayqQRgATKlm8CR0i1QAAAAASUVORK5CYII="); }
-  .texture.texture-diagonal-b {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpi+P//PwNAADGACIAAYrCysikGMQACCMxgBLEAAggsDsIgEYAAQuXAFMOVwQQAAgxFBkMVuiDcYGy6AIpfVV7EbepaAAAAAElFTkSuQmCC"); }
-  .texture.texture-diagonal-b-r {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg=="); }
+
+.texture.texture-bar-s {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC"); }
+
+.texture.texture-bar-m {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAADCAYAAAHHBk5tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDIAAJIVDGz9cSP7AAAAAElFTkSuQmCC"); }
+
+.texture.texture-bar-l {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAAHaA37VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMEEwMjQzNTdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMEEwMjQzNjdFNDcxMUU1OTA2OEVBQzM4RjBEREM2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkIwQTAyNDMzN0U0NzExRTU5MDY4RUFDMzhGMEREQzY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkIwQTAyNDM0N0U0NzExRTU5MDY4RUFDMzhGMEREQzY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mZqYcQAAADJJREFUeNpisLKymQkQQAwgAiCAwARAADH+//+fAQYAAogRLAzjIMsABBiKDDJAUYUMAA2TD2qNBZ0eAAAAAElFTkSuQmCC"); }
+
+.texture.texture-grid-w {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//vy9AADGACIAAYgSzgAAggOAMJgYoAAgguAgMMDGgAYAAIqyCsABAgIFdAcQ4aUwdBI0kVQEAViAs7e1rqlEAAAAASUVORK5CYII="); }
+
+.texture.texture-grid-b {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYGBX/P//HyeNqYOgkaQqAAAXoxjjLGdo/wAAAABJRU5ErkJggg=="); }
+
+.texture.texture-grain-w {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpi+P//fwxAADGACIAAYgSzgAAggMA8JhADIIAQQkAAEEAgDozNwMSABFA4AAGGogynKqIkAGovFsbm0NI0AAAAAElFTkSuQmCC"); }
+
+.texture.texture-grain-w-l {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFZJREFUeNpi+P//fwxAADGACIAAYgSzgAAggEAMEM3AxAAFAAEEF4EBJgY0ABBAYBNAqmA0Vi0xUHYMVkMBAgzuACBYgqwSxsfQgQ5gdsQgiaHwCZoAAAFwL9t1tvLGAAAAAElFTkSuQmCC"); }
+
+.texture.texture-grain-b {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC"); }
+
+.texture.texture-grain-b-l {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFJJREFUeNpisLKymQkQQAwgAiCAGMEsIAAIIMb///+DaAYmBigACCC4CAwwMaABgAACmwBSBaMxtBBWARBgcAccPXo4HURbW9ui8DHNRAOUmwAAwWk26e28KNgAAAAASUVORK5CYII="); }
+
+.texture.texture-diagonal-w {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpi+P//fwxAADEACQaAAGIEEUAQAxBAYB4TiAkQQGAWSAGIBgggFA5MMVxDDFSWASDAUJSh68cQRNaBoQAAHDFj9Tn4HhEAAAAASUVORK5CYII="); }
+
+.texture.texture-diagonal-w-r {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEBJREFUeNpi+P//PwNAADGACIAAYgSzGBhiAAIIxIsBCwEEEJgFYoAwQADB5OFq4LIoygACDEUGXRVWSayqQRgATKlm8CR0i1QAAAAASUVORK5CYII="); }
+
+.texture.texture-diagonal-b {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpi+P//PwNAADGACIAAYrCysikGMQACCMxgBLEAAggsDsIgEYAAQuXAFMOVwQQAAgxFBkMVuiDcYGy6AIpfVV7EbepaAAAAAElFTkSuQmCC"); }
+
+.texture.texture-diagonal-b-r {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg=="); }
 
 .blur {
   transform: scale(1.1);
@@ -5908,13 +5921,14 @@ Details: It defines the styles for header components as listed below:
   z-index: 10000; }
   .header-basic .header-logo {
     cursor: pointer;
-    margin: 5px;
-    width: 140px;
-    display: inline-block;
+    padding: 10px;
+    display: block;
     position: absolute;
     z-index: 2; }
+    .header-basic .header-logo .logo {
+      width: 140px; }
   .header-basic #menu-main {
-    margin-top: 5px;
+    padding: 10px;
     text-align: right;
     display: block;
     z-index: 1; }
@@ -5924,7 +5938,7 @@ Details: It defines the styles for header components as listed below:
     position: absolute;
     right: 0px;
     cursor: pointer;
-    margin: 10px;
+    padding: 10px;
     display: none;
     z-index: 2; }
   @media only screen and (max-width: 1024px) {
@@ -6665,54 +6679,75 @@ Details: It defines the styles of box components as listed below:
 *
 * Basic       - The basic box define the styles of simple box having icon and header within header wrapper and
 *               content within content box. The content is aligned center by default.
+*				The Avatar, Banner and Video can be placed any any position within the Box. The possible postions 
+*				are before header, within header, within content, within footer.
 *
 * Collapsible - The collapsible boxes are similar to basic, but these can also be collapsed hiding content keeping
 *               header and footer visible. The content collapse on clicking header / collapse button on header.
 ***********************************************************************/
 .box {
   position: relative; }
-  .box .box-header {
-    position: relative; }
+  .box .box-bkg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .box > .texture {
+    z-index: 10; }
   .box .box-content-wrap {
-    position: relative; }
+    position: relative;
+    z-index: 15; }
+    .box .box-content-wrap .box-header {
+      position: relative; }
     .box .box-content-wrap .box-content {
       position: relative; }
-  .box .box-footer {
-    position: relative; }
+      .box .box-content-wrap .box-content .box-content-data {
+        position: relative; }
+    .box .box-content-wrap .box-footer {
+      position: relative; }
 
 .box-basic {
   padding: 1rem; }
-  .box-basic .box-header {
+  .box-basic .box-content-wrap .box-header {
     background-color: #3C4655;
     color: #96B0D6;
     padding: 0.5rem; }
-  .box-basic .box-content-wrap {
+  .box-basic .box-content-wrap .box-content {
     background-color: #F2F2F2;
     color: #363636;
     padding: 0.5rem; }
-  .box-basic .box-footer {
+  .box-basic .box-content-wrap .box-footer {
     background-color: #556479;
     color: #6a8fc5;
     padding: 0.25rem; }
 
 .box-basic-icon {
   padding: 1rem; }
-  .box-basic-icon .box-header .box-header-icon {
+  .box-basic-icon .box-content-wrap .box-header .box-header-icon {
     position: absolute;
     display: inline-block;
     top: 0.5rem;
     left: 0.5rem; }
-  .box-basic-icon .box-header .box-header-title {
+  .box-basic-icon .box-content-wrap .box-header .box-header-title {
     padding-left: 1.5rem; }
 
-.box-collapsible .box-header .box-collapse-trigger {
+.box-collapsible .box-content-wrap .box-header .box-collapse-trigger {
   position: absolute;
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
   color: #96B0D6;
   cursor: pointer; }
-  .box-collapsible .box-header .box-collapse-trigger:hover {
+  .box-collapsible .box-content-wrap .box-header .box-collapse-trigger:hover {
     color: #E74343; }
 
 /**********************************************************************
@@ -6789,32 +6824,32 @@ Details: It defines the styles of form box components as listed below:
   cursor: pointer;
   z-index: 10; }
 
-.box-file-uploader .box-content-wrap .box-content .file-wrap {
+.box-file-uploader .box-content .box-content-data .file-wrap {
   position: relative;
   margin: 0 auto; }
 
-.box-file-uploader .box-content-wrap .box-content .chooser-wrap {
+.box-file-uploader .box-content .box-content-data .chooser-wrap {
   display: none; }
-  .box-file-uploader .box-content-wrap .box-content .chooser-wrap .file-preloader {
+  .box-file-uploader .box-content .box-content-data .chooser-wrap .file-preloader {
     padding-top: 10px; }
-    .box-file-uploader .box-content-wrap .box-content .chooser-wrap .file-preloader .file-preloader-bar {
+    .box-file-uploader .box-content .box-content-data .chooser-wrap .file-preloader .file-preloader-bar {
       background-color: #87BA45;
       width: 0%;
       height: 10px; }
 
-.box-file-uploader .box-content-wrap .box-content .form-wrap .post-action {
+.box-file-uploader .box-content .box-content-data .form-wrap .post-action {
   text-align: center; }
 
-.box-file-uploader .box-content-wrap .box-content .form-wrap .file-info, .box-file-uploader .box-content-wrap .box-content .form-wrap .file-fields {
+.box-file-uploader .box-content .box-content-data .form-wrap .file-info, .box-file-uploader .box-content .box-content-data .form-wrap .file-fields {
   position: relative; }
 
 .box-file-uploader-direct .btn-chooser {
   display: none; }
 
-.box-file-uploader-direct .box-content-wrap .box-content .file-wrap {
+.box-file-uploader-direct .box-content .box-content-data .file-wrap {
   display: none; }
 
-.box-file-uploader-direct .box-content-wrap .box-content .chooser-wrap {
+.box-file-uploader-direct .box-content .box-content-data .chooser-wrap {
   display: block; }
 
 .card-file {

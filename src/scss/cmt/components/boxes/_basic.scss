@@ -9,6 +9,8 @@ Details: It defines the styles of box components as listed below:
 *
 * Basic       - The basic box define the styles of simple box having icon and header within header wrapper and
 *               content within content box. The content is aligned center by default.
+*				The Avatar, Banner and Video can be placed any any position within the Box. The possible postions 
+*				are before header, within header, within content, within footer.
 *
 * Collapsible - The collapsible boxes are similar to basic, but these can also be collapsed hiding content keeping
 *               header and footer visible. The content collapse on clicking header / collapse button on header.
@@ -19,48 +21,82 @@ Details: It defines the styles of box components as listed below:
 .box {
 	position: relative;
 
-	.box-header {
-		position: relative;
-
-		.box-header-icon {
-			// Header Icon
-		}
-
-		.box-header-title {
-			// Header Title
-		}
-
-		.box-header-info {
-			// Header Info
-		}
-
-		.box-header-content {
-			// Header Content
-		}
+	// background cover
+	.box-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
 	}
 
+	// Texture on top of box background but under content
+	> .texture {
+		z-index: 10;
+	}
+
+	// Content Wrapper on top of texture
 	.box-content-wrap {
 		position: relative;
+		z-index: 15;
 
-		// Space for background
+		.box-header {
+			position: relative;
 
-		// Space for texture
+			.box-header-icon {
+				// Header Icon or Avatar
+			}
+
+			.box-header-title {
+				// Header Title
+			}
+
+			.box-header-info {
+				// Header Info
+			}
+
+			.box-header-content {
+				// Header Content
+			}
+		}
 
 		.box-content {
 			position: relative;
+
+			.box-content-banner {
+				// Banner
+			}
+
+			.box-content-video {
+				// Video
+			}
+
+			.box-content-data {
+				position: relative;
+			}
 		}
-	}
 
-	.box-footer {
-		// Footer having box info
-		position: relative;
+		.box-footer {
+			// Footer having box info
+			position: relative;
 
-		.box-footer-info {
-			// Footer Info
-		}
+			.box-footer-icon {
+				// Footer Icon
+			}
 
-		.box-footer-content {
-			// Footer Content
+			.box-footer-title {
+				// Footer Title
+			}
+
+			.box-footer-info {
+				// Footer Info
+			}
+
+			.box-footer-content {
+				// Footer Content
+			}
 		}
 	}
 }
@@ -70,61 +106,70 @@ Details: It defines the styles of box components as listed below:
 .box-basic {
 	padding: 1rem;
 
-	.box-header {
-		background-color: $color-secondary;
-		color: $color-secondary-text;
-		padding: 0.5rem;
-	 }
+	.box-content-wrap {
 
-	 .box-content-wrap {
-		background-color: $color-primary;
-		color: $color-primary-text;
-		padding: 0.5rem;
-	 }
+		.box-header {
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			padding: 0.5rem;
+		 }
 
-	.box-footer {
-		// Footer having box info
-		background-color: $color-secondary-l;
-		color: $color-secondary-text-l;
-		padding: 0.25rem;
+		 .box-content {
+			background-color: $color-primary;
+			color: $color-primary-text;
+			padding: 0.5rem;
+		 }
+
+		.box-footer {
+			// Footer having box info
+			background-color: $color-secondary-l;
+			color: $color-secondary-text-l;
+			padding: 0.25rem;
+		}
 	}
 }
 
 .box-basic-icon {
 	padding: 1rem;
 
-	// Icon, text at center
-	.box-header {
+	.box-content-wrap {
 
-		.box-header-icon {
-			position: absolute;
-			display: inline-block;
-			top: 0.5rem;
-			left: 0.5rem;
-		}
+		// Icon, text at center
+		.box-header {
 
-		.box-header-title {
-			padding-left: 1.5rem;
+			.box-header-icon {
+				position: absolute;
+				display: inline-block;
+				top: 0.5rem;
+				left: 0.5rem;
+			}
+
+			.box-header-title {
+				padding-left: 1.5rem;
+			}
 		}
-	 }
+	}
 }
 
 // == Collapsible Box ===============
 
 .box-collapsible {
 
-	.box-header {
+	.box-content-wrap {
 
-		.box-collapse-trigger {
-			position: absolute;
-			display: inline-block;
-			top: 0.5em;
-			right: 0.5em;
-			color: $color-secondary-text;
-			cursor: pointer;
+		.box-header {
 
-			&:hover {
-				color: $color-link-h;
+			.box-collapse-trigger {
+				position: absolute;
+				display: inline-block;
+				top: 0.5em;
+				right: 0.5em;
+				color: $color-secondary-text;
+				cursor: pointer;
+
+				&:hover {
+					color: $color-link-h;
+				}
 			}
 		}
 	}

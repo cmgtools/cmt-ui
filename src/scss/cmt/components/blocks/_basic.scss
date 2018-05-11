@@ -101,10 +101,12 @@ Details: It defines the styles for header components as listed below:
 		// Block Content
 		.block-content {
 
-			// Block Content Box
-			.box-block-content {
-
-				// Box layout - derived from box component
+			// Wraps Block Boxes
+			.block-box-wrap {
+				
+				.block-box {
+					// Box layout - derived from box component
+				}
 			}
 		}
 

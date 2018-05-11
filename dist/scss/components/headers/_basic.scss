@@ -45,31 +45,37 @@ Details: It defines the styles for header components as listed below:
 	position: relative;
 	z-index: 10000;
 
+	// Absolute positioned on left side wrapping the logo
 	.header-logo {
 		cursor: pointer;
-		margin: 5px;
-		width: 140px;
-		display:inline-block;
+		padding: 10px;
+		display: block;
 		position: absolute;
 		z-index: 2;
+
+		.logo {
+			width: 140px;
+		}
 	}
 
 	#menu-main {
-		margin-top: 5px;
+		padding: 10px;
 		text-align: right;
 		display: block;
 		z-index: 1;
 	}
 
+	// Added option to toggle mobile menu. Mobile Menu designing can be done on need, else main menu itself can be used.
 	#menu-main-mobile {
 		display: none;
 	}
 
+	// Button to toggle mobile menu
 	#btn-menu-mobile {
 		position: absolute;
 		right: 0px;
 		cursor: pointer;
-		margin: 10px;
+		padding: 10px;
 		display: none;
 		z-index: 2;
 	}
