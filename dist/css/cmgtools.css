@@ -7396,6 +7396,14 @@ Details: It defines the styles for header components as listed below:
   .block .block-content-wrap {
     position: relative;
     z-index: 15; }
+    .block .block-content-wrap .block-header {
+      position: relative; }
+    .block .block-content-wrap .block-content {
+      position: relative; }
+      .block .block-content-wrap .block-content .block-content-data {
+        position: relative; }
+    .block .block-content-wrap .block-footer {
+      position: relative; }
   .block .block-splitter {
     position: absolute;
     width: 100%;

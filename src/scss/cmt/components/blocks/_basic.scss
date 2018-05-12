@@ -80,6 +80,7 @@ Details: It defines the styles for header components as listed below:
 
 		// Block Header
 		.block-header {
+			position: relative;
 
 			.block-header-icon {
 				// Header icon
@@ -100,6 +101,12 @@ Details: It defines the styles for header components as listed below:
 
 		// Block Content
 		.block-content {
+			position: relative;
+
+			.block-content-data {
+				position: relative;
+				// Text Content
+			}
 
 			// Wraps Block Boxes
 			.block-box-wrap {
@@ -117,6 +124,7 @@ Details: It defines the styles for header components as listed below:
 
 		// Block Footer
 		.block-footer {
+			position: relative;
 
 			.block-footer-icon {
 				// Footer icon
