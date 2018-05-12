@@ -285,6 +285,15 @@ $transit-time-large: 640ms;
 			transition: width $duration $transit $delay, height $duration $transit $delay;
 }
 
+// Transitions - Transform - Work together with transformations for small animations
+@mixin transit-transform( $transit, $duration, $delay: 0s ) {
+	-webkit-transition: transform $duration $transit $delay;
+	   -moz-transition: transform $duration $transit $delay;
+	    -ms-transition: transform $duration $transit $delay;
+	     -o-transition: transform $duration $transit $delay;
+	        transition: transform $duration $transit $delay;
+}
+
 // Mixins Default implementation ***********************
 
 // All transitions

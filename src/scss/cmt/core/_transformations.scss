@@ -158,31 +158,31 @@ Flip		-	It flip an element either vertically or horizontally.
 }
 
 .scale-small {
-	@include transform-scale( $size-small, $size-small );
+	@include transform-scale( 1.25, 1.25 );
 }
 
 .scale-medium {
-	@include transform-scale( $size-medium, $size-medium );
+	@include transform-scale( 1.5, 1.5 );
 }
 
 .scale-large {
-	@include transform-scale( $size-large, $size-large );
+	@include transform-scale( 2, 2 );
 }
 
 .scale-xlarge {
-	@include transform-scale( $size-xlarge, $size-xlarge );
+	@include transform-scale( 3, 3 );
 }
 
 .scale-xxlarge {
-	@include transform-scale( $size-xxlarge, $size-xxlarge );
+	@include transform-scale( 5, 5 );
 }
 
 .scale-xxxlarge {
-	@include transform-scale( $size-xxxlarge, $size-xxxlarge );
+	@include transform-scale( 10, 10 );
 }
 
-.flip-horizontal {
-	@include transform-flip( -1, 1, 0 );
+.skew {
+	@include transform-skew( 5deg, 5deg );
 }
 
 .skew-left {
@@ -193,16 +193,10 @@ Flip		-	It flip an element either vertically or horizontally.
 	@include transform-skew-x( -5deg );
 }
 
-.flip-vertical {
-	@include transform-flip( 1, -1, 2 );
+.flip-horizontal {
+	@include transform-flip( -1, 1, 0 );
 }
 
-// Transitions & Transformations ***********************
-
-.grow {
-	@include transit-all( $transit-eio, $transit-time-medium );
-
-	&:hover {
-		@include transform-scale( 1.2, 1.2 );
-	}
+.flip-vertical {
+	@include transform-flip( 1, -1, 2 );
 }

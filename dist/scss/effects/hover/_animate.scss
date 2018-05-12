@@ -1,0 +1,10 @@
+@mixin hover-spin( $duration, $velocity  ) {
+	
+	&:hover {
+		@include spin( $duration, $velocity );
+	}
+}
+
+.hover-spin {
+	@include hover-spin( 2s, linear );
+}

@@ -1,0 +1,169 @@
+@mixin hover-move( $x, $y, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-translate( $x, $y );
+    }
+}
+
+@mixin hover-move-x( $x, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-translate-x( $x );
+    }
+}
+
+@mixin hover-move-y( $y, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-translate-y( $y );
+    }
+}
+
+@mixin hover-rotate( $degrees, $angle, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-rotate( $degrees, $angle );
+    }
+}
+
+@mixin hover-scale( $sx, $sy, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-scale( $sx, $sy );
+    }
+}
+
+@mixin hover-scale-x( $sx, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-scale-x( $sx );
+    }
+}
+
+@mixin hover-scale-y( $sy, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-scale-y( $sy );
+    }
+}
+
+@mixin hover-skew( $xDegrees, $yDegrees, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-skew( $xDegrees, $yDegrees );
+    }
+}
+
+@mixin hover-skew-x( $degrees, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-skew-x( $degrees );
+    }
+}
+
+@mixin hover-skew-y( $degrees, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-skew-y( $degrees );
+    }
+}
+
+@mixin hover-flip( $horizontal, $vertical, $angle, $transit, $duration, $delay: 0s ) {
+	@include transit-transform( $transit, $duration, $delay );
+
+    &:hover {
+        @include transform-flip( $horizontal, $vertical, $angle );
+    }
+}
+
+// Mixins Default implementation ***********************
+
+.hover-move {
+	@include hover-move( $size-medium, $size-medium, $transit-eio, $transit-time-medium );
+}
+
+.hover-move-x {
+	@include hover-move-x( $size-medium, $transit-eio, $transit-time-medium );
+}
+
+.hover-move-y {
+	@include hover-move-y( $size-medium, $size-medium, $transit-eio, $transit-time-medium );
+}
+
+.hover-rotate-45 {
+	@include hover-rotate( 45deg, 0.5, $transit-eio, $transit-time-medium );
+}
+
+.hover-rotate-90 {
+	@include hover-rotate( 90deg, 1, $transit-eio, $transit-time-medium );
+}
+
+.hover-rotate-135 {
+	@include hover-rotate( 135deg, 1.5, $transit-eio, $transit-time-medium );
+}
+
+.hover-rotate-180 {
+	@include hover-rotate( 180deg, 2, $transit-eio, $transit-time-medium );
+}
+
+.hover-rotate-225 {
+	@include hover-rotate( 225deg, 2.5, $transit-eio, $transit-time-medium );
+}
+
+.hover-rotate-270 {
+	@include hover-rotate( 270deg, 3, $transit-eio, $transit-time-medium );
+}
+
+.hover-rotate-315 {
+	@include hover-rotate( 315deg, 3.5, $transit-eio, $transit-time-medium );
+}
+
+.hover-scale {
+	@include hover-scale( 1.25, 1.25, $transit-eio, $transit-time-medium );
+}
+
+.hover-scale-x {
+	@include hover-scale-x( 1.25, $transit-eio, $transit-time-medium );
+}
+
+.hover-scale-y {
+	@include hover-scale-y( 1.25, $transit-eio, $transit-time-medium );
+}
+
+.hover-grow {
+	@include hover-scale( 1.2, 1.2, $transit-eio, $transit-time-medium );
+}
+
+.hover-shrink {
+	@include hover-scale( .8, 0.8, $transit-eio, $transit-time-medium );
+}
+
+.hover-skew {
+	@include hover-skew( 5deg, 5deg, $transit-eio, $transit-time-medium );
+}
+
+.hover-skew-left {
+	@include hover-skew-x( 5deg, $transit-eio, $transit-time-medium );
+}
+
+.hover-skew-right {
+	@include hover-skew-x( -5deg, $transit-eio, $transit-time-medium );
+}
+
+.hover-flip-horizontal {
+	@include hover-flip( -1, 1, 0, $transit-eio, $transit-time-medium );
+}
+
+.hover-flip-vertical {
+	@include hover-flip( 1, -1, 2, $transit-eio, $transit-time-medium );
+}

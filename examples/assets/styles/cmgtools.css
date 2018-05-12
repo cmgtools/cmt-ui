@@ -1720,52 +1720,51 @@ Flip		-	It flip an element either vertically or horizontally.
   transform: rotate(315deg); }
 
 .scale-small {
-  -webkit-transform: scale(3px, 3px);
-  -moz-transform: scale(3px, 3px);
-  -ms-transform: scale(3px, 3px);
-  -o-transform: scale(3px, 3px);
-  transform: scale(3px, 3px); }
+  -webkit-transform: scale(1.25, 1.25);
+  -moz-transform: scale(1.25, 1.25);
+  -ms-transform: scale(1.25, 1.25);
+  -o-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25); }
 
 .scale-medium {
-  -webkit-transform: scale(5px, 5px);
-  -moz-transform: scale(5px, 5px);
-  -ms-transform: scale(5px, 5px);
-  -o-transform: scale(5px, 5px);
-  transform: scale(5px, 5px); }
+  -webkit-transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5); }
 
 .scale-large {
-  -webkit-transform: scale(8px, 8px);
-  -moz-transform: scale(8px, 8px);
-  -ms-transform: scale(8px, 8px);
-  -o-transform: scale(8px, 8px);
-  transform: scale(8px, 8px); }
+  -webkit-transform: scale(2, 2);
+  -moz-transform: scale(2, 2);
+  -ms-transform: scale(2, 2);
+  -o-transform: scale(2, 2);
+  transform: scale(2, 2); }
 
 .scale-xlarge {
-  -webkit-transform: scale(13px, 13px);
-  -moz-transform: scale(13px, 13px);
-  -ms-transform: scale(13px, 13px);
-  -o-transform: scale(13px, 13px);
-  transform: scale(13px, 13px); }
+  -webkit-transform: scale(3, 3);
+  -moz-transform: scale(3, 3);
+  -ms-transform: scale(3, 3);
+  -o-transform: scale(3, 3);
+  transform: scale(3, 3); }
 
 .scale-xxlarge {
-  -webkit-transform: scale(21px, 21px);
-  -moz-transform: scale(21px, 21px);
-  -ms-transform: scale(21px, 21px);
-  -o-transform: scale(21px, 21px);
-  transform: scale(21px, 21px); }
+  -webkit-transform: scale(5, 5);
+  -moz-transform: scale(5, 5);
+  -ms-transform: scale(5, 5);
+  -o-transform: scale(5, 5);
+  transform: scale(5, 5); }
 
 .scale-xxxlarge {
-  -webkit-transform: scale(34px, 34px);
-  -moz-transform: scale(34px, 34px);
-  -ms-transform: scale(34px, 34px);
-  -o-transform: scale(34px, 34px);
-  transform: scale(34px, 34px); }
+  -webkit-transform: scale(10, 10);
+  -moz-transform: scale(10, 10);
+  -ms-transform: scale(10, 10);
+  -o-transform: scale(10, 10);
+  transform: scale(10, 10); }
 
-.flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=0 );
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1); }
+.skew {
+  -webkit-transform: skew(5deg, 5deg);
+  -ms-transform: skew(5deg, 5deg);
+  transform: skew(5deg, 5deg); }
 
 .skew-left {
   -webkit-transform: skewX(5deg);
@@ -1777,62 +1776,113 @@ Flip		-	It flip an element either vertically or horizontally.
   -ms-transform: skewX(-5deg);
   transform: skewX(-5deg); }
 
+.flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=0 );
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
 .flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=2 );
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
-.grow {
-  -webkit-transition: all 420ms ease-in-out 0s;
-  -moz-transition: all 420ms ease-in-out 0s;
-  -ms-transition: all 420ms ease-in-out 0s;
-  -o-transition: all 420ms ease-in-out 0s;
-  transition: all 420ms ease-in-out 0s; }
-  .grow:hover {
-    -webkit-transform: scale(1.2, 1.2);
-    -moz-transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2);
-    -o-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2); }
-
 /**********************************************************************
-Description: This file define the animation effects available in CMT-UI css framework. These animations give
-			 smooth and nice visual effects to an element.
+Description: This file define the basic animation effects available in CMT-UI css framework. These 
+			 animations give smooth and nice visual effects to an element. The animations within effects 
+			 section can be used for more advanced animations.
 
 Dependencies: none
 
 Details: It defines the animation mixins and default implementation as listed below:
 
 * Spin      - The spin animation spins an element infinitely.
+* Zoom		- The zoom animation use the scale property to zoom in and zoom out an element.
 ***********************************************************************/
 @-moz-keyframes spin {
-  0% {
+  from {
     -moz-transform: rotate(0deg);
     transform: rotate(0deg); }
-  100% {
+  to {
     -moz-transform: rotate(359deg);
     transform: rotate(359deg); } }
 
 @-webkit-keyframes spin {
-  0% {
+  from {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
-  100% {
+  to {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
 
 @keyframes spin {
-  0% {
+  from {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
-  100% {
+  to {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
+@-moz-keyframes zoom-in {
+  from {
+    opacity: 0;
+    -moz-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25); }
+  75% {
+    opacity: 1; } }
+
+@-webkit-keyframes zoom-in {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25); }
+  75% {
+    opacity: 1; } }
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25); }
+  75% {
+    opacity: 1; } }
+
+@-moz-keyframes zoom-out {
+  25% {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    -moz-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25); } }
+
+@-webkit-keyframes zoom-out {
+  25% {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25); } }
+
+@keyframes zoom-out {
+  25% {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25); } }
 
 .spin {
   -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear; }
+
+.zoom-in {
+  -webkit-animation: zoom-in 2s infinite linear;
+  animation: zoom-in 2s infinite linear; }
+
+.zoom-out {
+  -webkit-animation: zoom-out 2s infinite linear;
+  animation: zoom-out 2s infinite linear; }
 
 /**********************************************************************
 Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com),
@@ -4037,144 +4087,470 @@ Details: It defines the grid system and basic containers as listed below:
   width: 100%; }
 
 .hover-color-primary {
-  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s; }
   .hover-color-primary:hover {
     background-color: #F2F2F2;
     color: #363636; }
 
 .hover-color-secondary {
-  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s; }
   .hover-color-secondary:hover {
     background-color: #3C4655;
     color: #96B0D6; }
 
 .hover-color-tertiary {
-  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s; }
   .hover-color-tertiary:hover {
     background-color: #87BA45;
     color: #E6E6E6; }
 
 .hover-color-white {
-  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s; }
   .hover-color-white:hover {
     background-color: #FFFFFF;
     color: #000000; }
 
 .hover-color-black {
-  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s; }
   .hover-color-black:hover {
     background-color: #000000;
     color: #FFFFFF; }
 
 .hover-bkg-primary {
-  -moz-transition: background-color 250ms ease-in-out 0s;
-  -ms-transition: background-color 250ms ease-in-out 0s;
-  -o-transition: background-color 250ms ease-in-out 0s;
-  -webkit-transition: background-color 250ms ease-in-out 0s;
-  transition: background-color 250ms ease-in-out 0s; }
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s; }
   .hover-bkg-primary:hover {
     background-color: #F2F2F2; }
 
 .hover-bkg-secondary {
-  -moz-transition: background-color 250ms ease-in-out 0s;
-  -ms-transition: background-color 250ms ease-in-out 0s;
-  -o-transition: background-color 250ms ease-in-out 0s;
-  -webkit-transition: background-color 250ms ease-in-out 0s;
-  transition: background-color 250ms ease-in-out 0s; }
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s; }
   .hover-bkg-secondary:hover {
     background-color: #3C4655; }
 
 .hover-bkg-tertiary {
-  -moz-transition: background-color 250ms ease-in-out 0s;
-  -ms-transition: background-color 250ms ease-in-out 0s;
-  -o-transition: background-color 250ms ease-in-out 0s;
-  -webkit-transition: background-color 250ms ease-in-out 0s;
-  transition: background-color 250ms ease-in-out 0s; }
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s; }
   .hover-bkg-tertiary:hover {
     background-color: #87BA45; }
 
 .hover-bkg-white {
-  -moz-transition: background-color 250ms ease-in-out 0s;
-  -ms-transition: background-color 250ms ease-in-out 0s;
-  -o-transition: background-color 250ms ease-in-out 0s;
-  -webkit-transition: background-color 250ms ease-in-out 0s;
-  transition: background-color 250ms ease-in-out 0s; }
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s; }
   .hover-bkg-white:hover {
     background-color: #FFFFFF; }
 
 .hover-bkg-black {
-  -moz-transition: background-color 250ms ease-in-out 0s;
-  -ms-transition: background-color 250ms ease-in-out 0s;
-  -o-transition: background-color 250ms ease-in-out 0s;
-  -webkit-transition: background-color 250ms ease-in-out 0s;
-  transition: background-color 250ms ease-in-out 0s; }
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s; }
   .hover-bkg-black:hover {
     background-color: #000000; }
 
 .hover-text-primary {
-  -moz-transition: color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s; }
   .hover-text-primary:hover {
     color: #363636; }
 
 .hover-text-secondary {
-  -moz-transition: color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s; }
   .hover-text-secondary:hover {
     color: #96B0D6; }
 
 .hover-text-tertiary {
-  -moz-transition: color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s; }
   .hover-text-tertiary:hover {
     color: #E6E6E6; }
 
 .hover-text-white {
-  -moz-transition: color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s; }
   .hover-text-white:hover {
     color: #FFFFFF; }
 
 .hover-text-black {
-  -moz-transition: color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s; }
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s; }
   .hover-text-black:hover {
     color: #000000; }
+
+.hover-move {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-move:hover {
+    -webkit-transform: translate(5px, 5px);
+    -moz-transform: translate(5px, 5px);
+    -ms-transform: translate(5px, 5px);
+    transform: translate(5px, 5px); }
+
+.hover-move-x {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-move-x:hover {
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    transform: translateX(5px); }
+
+.hover-move-y {
+  -webkit-transition: transform ease-in-out 5px 420ms;
+  -moz-transition: transform ease-in-out 5px 420ms;
+  -ms-transition: transform ease-in-out 5px 420ms;
+  -o-transition: transform ease-in-out 5px 420ms;
+  transition: transform ease-in-out 5px 420ms; }
+  .hover-move-y:hover {
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px); }
+
+.hover-rotate-45 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-rotate-45:hover {
+    filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=0.5 );
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+.hover-rotate-90 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-rotate-90:hover {
+    filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=1 );
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+.hover-rotate-135 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-rotate-135:hover {
+    filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=1.5 );
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg); }
+
+.hover-rotate-180 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-rotate-180:hover {
+    filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=2 );
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+.hover-rotate-225 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-rotate-225:hover {
+    filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=2.5 );
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg); }
+
+.hover-rotate-270 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-rotate-270:hover {
+    filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=3 );
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg); }
+
+.hover-rotate-315 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-rotate-315:hover {
+    filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=3.5 );
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    transform: rotate(315deg); }
+
+.hover-scale {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-scale:hover {
+    -webkit-transform: scale(1.25, 1.25);
+    -moz-transform: scale(1.25, 1.25);
+    -ms-transform: scale(1.25, 1.25);
+    -o-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25); }
+
+.hover-scale-x {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-scale-x:hover {
+    -webkit-transform: scaleX(1.25);
+    -moz-transform: scaleX(1.25);
+    -ms-transform: scaleX(1.25);
+    -o-transform: scaleX(1.25);
+    transform: scaleX(1.25); }
+
+.hover-scale-y {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-scale-y:hover {
+    -webkit-transform: scaleY(1.25);
+    -moz-transform: scaleY(1.25);
+    -ms-transform: scaleY(1.25);
+    -o-transform: scaleY(1.25);
+    transform: scaleY(1.25); }
+
+.hover-grow {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-grow:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -o-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
+
+.hover-shrink {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-shrink:hover {
+    -webkit-transform: scale(0.8, 0.8);
+    -moz-transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+    -o-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8); }
+
+.hover-skew {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-skew:hover {
+    -webkit-transform: skew(5deg, 5deg);
+    -ms-transform: skew(5deg, 5deg);
+    transform: skew(5deg, 5deg); }
+
+.hover-skew-left {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-skew-left:hover {
+    -webkit-transform: skewX(5deg);
+    -ms-transform: skewX(5deg);
+    transform: skewX(5deg); }
+
+.hover-skew-right {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-skew-right:hover {
+    -webkit-transform: skewX(-5deg);
+    -ms-transform: skewX(-5deg);
+    transform: skewX(-5deg); }
+
+.hover-flip-horizontal {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-flip-horizontal:hover {
+    filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=0 );
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1); }
+
+.hover-flip-vertical {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s; }
+  .hover-flip-vertical:hover {
+    filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=2 );
+    -webkit-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1); }
+
+.hover-spin:hover {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear; }
+
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear; }
+  .animate.animate-micro {
+    -webkit-animation-duration: 0.25s;
+    animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear; }
+  .animate.animate-tiny {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear; }
+  .animate.animate-small {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear; }
+  .animate.animate-medium {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear; }
+  .animate.animate-large {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear; }
+  .animate.animate-infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+  .animate.animate-ease {
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease; }
+  .animate.animate-linear {
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear; }
+  .animate.animate-ei {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  .animate.animate-eo {
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  .animate.animate-eio {
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+
+.animate-spin {
+  -webkit-animation-name: spin;
+  animation-name: spin; }
+
+.animate-zoom-in {
+  -webkit-animation-name: zoom-in;
+  animation-name: zoom-in; }
+
+.animate-zoom-out {
+  -webkit-animation-name: zoom-out;
+  animation-name: zoom-out; }
 
 /**********************************************************************
 Description: It defines the styles for html elements except form and table for CMT-UI css framework.

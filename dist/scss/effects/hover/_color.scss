@@ -1,0 +1,84 @@
+@mixin hover-color( $bkg, $text, $transit, $duration, $delay: 0s ) {
+	@include transit-color-bkg-color( $transit, $duration, $delay );
+    
+    &:hover {
+        background-color: $bkg;
+        color: $text;
+    }
+}
+
+@mixin hover-bkg( $bkg, $transit, $duration, $delay: 0s ) {
+	@include transit-bkg-color( $transit, $duration, $delay );
+    
+    &:hover {
+        background-color: $bkg;
+    }
+}
+
+@mixin hover-text( $text, $transit, $duration, $delay: 0s ) {
+	@include transit-color( $transit, $duration, $delay );
+    
+    &:hover {
+        color: $text;
+    }
+}
+
+.hover-color-primary {
+    @include hover-color( $color-primary, $color-primary-text, $transit-eio, $transit-time-medium );
+}
+
+.hover-color-secondary {
+    @include hover-color( $color-secondary, $color-secondary-text, $transit-eio, $transit-time-medium );
+}
+
+.hover-color-tertiary {
+    @include hover-color( $color-tertiary, $color-tertiary-text, $transit-eio, $transit-time-medium );
+}
+
+.hover-color-white {
+    @include hover-color( $color-white, $color-black, $transit-eio, $transit-time-medium );
+}
+
+.hover-color-black {
+    @include hover-color( $color-black, $color-white, $transit-eio, $transit-time-medium );
+}
+
+.hover-bkg-primary {
+    @include hover-bkg( $color-primary, $transit-eio, $transit-time-medium );
+}
+
+.hover-bkg-secondary {
+    @include hover-bkg( $color-secondary, $transit-eio, $transit-time-medium );
+}
+
+.hover-bkg-tertiary {
+    @include hover-bkg( $color-tertiary, $transit-eio, $transit-time-medium );
+}
+
+.hover-bkg-white {
+    @include hover-bkg( $color-white, $transit-eio, $transit-time-medium );
+}
+
+.hover-bkg-black {
+    @include hover-bkg( $color-black, $transit-eio, $transit-time-medium );
+}
+
+.hover-text-primary {
+    @include hover-text( $color-primary-text, $transit-eio, $transit-time-medium );
+}
+
+.hover-text-secondary {
+    @include hover-text( $color-secondary-text, $transit-eio, $transit-time-medium );
+}
+
+.hover-text-tertiary {
+    @include hover-text( $color-tertiary-text, $transit-eio, $transit-time-medium );
+}
+
+.hover-text-white {
+    @include hover-text( $color-white, $transit-eio, $transit-time-medium );
+}
+
+.hover-text-black {
+    @include hover-text( $color-black, $transit-eio, $transit-time-medium );
+}

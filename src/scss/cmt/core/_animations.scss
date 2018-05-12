@@ -1,22 +1,26 @@
 /**********************************************************************
-Description: This file define the animation effects available in CMT-UI css framework. These animations give
-			 smooth and nice visual effects to an element.
+Description: This file define the basic animation effects available in CMT-UI css framework. These 
+			 animations give smooth and nice visual effects to an element. The animations within effects 
+			 section can be used for more advanced animations.
 
 Dependencies: none
 
 Details: It defines the animation mixins and default implementation as listed below:
 
 * Spin      - The spin animation spins an element infinitely.
+* Zoom		- The zoom animation use the scale property to zoom in and zoom out an element.
 ***********************************************************************/
+
+// Spin ----------------------------
 
 @-moz-keyframes spin {
 
-	0% {
+	from {
 		-moz-transform: rotate( 0deg );
 			 transform: rotate( 0deg );
 	}
 
-	100% {
+	to {
 		-moz-transform: rotate( 359deg );
 			 transform: rotate( 359deg );
 	}
@@ -24,12 +28,12 @@ Details: It defines the animation mixins and default implementation as listed be
 
 @-webkit-keyframes spin {
 
-	0% {
+	from {
 		-webkit-transform: rotate( 0deg );
 				transform: rotate( 0deg );
 	}
 
-	100% {
+	to {
 		-webkit-transform: rotate( 359deg );
 				transform: rotate( 359deg );
 	}
@@ -37,26 +41,124 @@ Details: It defines the animation mixins and default implementation as listed be
 
 @keyframes spin {
 
-	0% {
+	from {
 		-webkit-transform: rotate( 0deg );
 				transform: rotate( 0deg );
 	}
 
-	100% {
+	to {
 		-webkit-transform: rotate( 359deg );
 				transform: rotate( 359deg );
 	}
 }
 
-// Spin Mixins
+@mixin spin( $duration, $transit ) {
+  -webkit-animation: spin $duration infinite $transit;
+		  animation: spin $duration infinite $transit;
+}
 
-@mixin spin( $duration, $velocity ) {
-  -webkit-animation: spin $duration infinite $velocity;
-		  animation: spin $duration infinite $velocity;
+// Zoom In -------------------------
+
+@-moz-keyframes zoom-in {
+
+	from {
+		opacity: 0;
+		-moz-transform: scale( 0.25, 0.25 );
+		transform: scale( 0.25, 0.25 );
+	}
+
+	75% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes zoom-in {
+	
+	from {
+		opacity: 0;
+		-webkit-transform: scale( 0.25, 0.25 );
+		transform: scale( 0.25, 0.25 );
+	}
+
+	75% {
+		opacity: 1;
+	}
+}
+
+@keyframes zoom-in {
+
+	from {
+		opacity: 0;
+		-webkit-transform: scale( 0.25, 0.25 );
+		transform: scale( 0.25, 0.25 );
+	}
+
+	75% {
+		opacity: 1;
+	}
+}
+
+@mixin zoom-in( $duration, $transit ) {
+  -webkit-animation: zoom-in $duration infinite $transit;
+		  animation: zoom-in $duration infinite $transit;
+}
+
+// Zoom Out ------------------------
+
+@-moz-keyframes zoom-out {
+
+	25% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		-moz-transform: scale( 0.25, 0.25 );
+		transform: scale( 0.25, 0.25 );
+	}
+}
+
+@-webkit-keyframes zoom-out {
+	
+	25% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		-webkit-transform: scale( 0.25, 0.25 );
+		transform: scale( 0.25, 0.25 );
+	}
+}
+
+@keyframes zoom-out {
+
+	25% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		-webkit-transform: scale( 0.25, 0.25 );
+		transform: scale( 0.25, 0.25 );
+	}
+}
+
+@mixin zoom-out( $duration, $transit ) {
+  -webkit-animation: zoom-out $duration infinite $transit;
+		  animation: zoom-out $duration infinite $transit;
 }
 
 // Animations default implementation *******************
 
 .spin {
-	@include spin( 2s, linear );
+	@include spin( 2s, $transit-linear );
+}
+
+.zoom-in {
+	@include zoom-in( 2s, $transit-linear );
+}
+
+.zoom-out {
+	@include zoom-out( 2s, $transit-linear );
 }

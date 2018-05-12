@@ -95,8 +95,13 @@ Baidu		- <min>
 // Custom effects including animations, transtitions and transformations
 // ---------------------------------------//
 
-@import "cmt/effects/hover";
+@import "cmt/effects/hover/color";
+@import "cmt/effects/hover/transform";
+@import "cmt/effects/hover/animate";
 // project - hover
+
+@import "cmt/effects/animations/basic";
+// project - animations
 
 // ---------------------------------------//
 // Elements Division - Optional

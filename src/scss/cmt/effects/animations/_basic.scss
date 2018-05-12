@@ -1,0 +1,93 @@
+// Animate
+@mixin animate( $duration, $mode: both ) {
+	-webkit-animation-duration: $duration;
+		    animation-duration: $duration;
+	-webkit-animation-fill-mode: $mode;
+		    animation-fill-mode: $mode;
+	-webkit-animation-timing-function: $transit-linear;
+		    animation-timing-function: $transit-linear;
+}
+
+// Spin
+@mixin animate-spin() {
+   -webkit-animation-name: spin;
+		   animation-name: spin;
+}
+
+// Zoom In
+@mixin animate-zoom-in() {
+   -webkit-animation-name: zoom-in;
+		   animation-name: zoom-in;
+}
+
+// Zoom Out
+@mixin animate-zoom-out() {
+   -webkit-animation-name: zoom-out;
+		   animation-name: zoom-out;
+}
+
+.animate {
+   @include animate( 1s );
+
+	&.animate-micro {
+		@include animate( 0.25s );
+	}
+
+	&.animate-tiny {
+		@include animate( 0.5s );
+	}
+
+	&.animate-small {
+		@include animate( 2s );
+	}
+	
+	&.animate-medium {
+		@include animate( 3s );
+	}
+
+	&.animate-large {
+		@include animate( 5s );
+	}
+
+	&.animate-infinite {
+		-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+	}
+
+	&.animate-ease {
+		-webkit-animation-timing-function: $transit-ease;
+		       animation-timing-function: $transit-ease;
+	}
+
+	&.animate-linear {
+		-webkit-animation-timing-function: $transit-linear;
+		       animation-timing-function: $transit-linear;
+	}
+
+	&.animate-ei {
+		-webkit-animation-timing-function: $transit-ei;
+		       animation-timing-function: $transit-ei;
+	}
+
+	&.animate-eo {
+		-webkit-animation-timing-function: $transit-eo;
+		       animation-timing-function: $transit-eo;
+	}
+
+	&.animate-eio {
+		-webkit-animation-timing-function: $transit-eio;
+		       animation-timing-function: $transit-eio;
+	}
+}
+
+.animate-spin {
+   @include animate-spin();
+}
+
+.animate-zoom-in {
+   @include animate-zoom-in();
+}
+
+.animate-zoom-out {
+   @include animate-zoom-out();
+}
