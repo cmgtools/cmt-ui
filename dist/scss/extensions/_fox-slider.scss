@@ -155,7 +155,8 @@ Details: It defines the styles for foxslider components as listed below:
 			float: right;
 			right: 20px;
 			background-position: -48px 80px;
-
+			text-align: right;
+			
 			&:hover {
 				background-position: -48px 0px;
 			}
@@ -293,6 +294,7 @@ Details: It defines the styles for foxslider components as listed below:
 			float: right;
 			right: 20px;
 			background-position: -48px 80px;
+			text-align: right;
 
 			&:hover {
 				background-position: -48px 0px;

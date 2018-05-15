@@ -681,6 +681,10 @@ Notes:
     -webkit-box-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
     -moz-box-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
     box-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6); }
+  .shadow.shadow-white {
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6); }
   .shadow.shadow-gray {
     -webkit-box-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
     -moz-box-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
@@ -770,6 +774,10 @@ Notes:
     -webkit-box-shadow: inset 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
     -moz-box-shadow: inset 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
     box-shadow: inset 1px 1px 5px 0 rgba(135, 186, 69, 0.6); }
+  .shadow-inset.shadow-inset-white {
+    -webkit-box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+    box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6); }
   .shadow-inset.shadow-inset-gray {
     -webkit-box-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
     -moz-box-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
@@ -859,6 +867,10 @@ Notes:
     -webkit-text-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
     -moz-text-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6);
     text-shadow: 1px 1px 5px 0 rgba(135, 186, 69, 0.6); }
+  .text-shadow.text-shadow-white {
+    -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+    -moz-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+    text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6); }
   .text-shadow.text-shadow-gray {
     -webkit-text-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
     -moz-text-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
@@ -1463,6 +1475,42 @@ Notes:
 
 .texture.texture-diagonal-b-r {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg=="); }
+
+.texture.texture-black {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgaAAIMAAAhQCB69VMmQAAAABJRU5ErkJggg=="); }
+
+.texture.texture-white {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//fwNAgAEACXwDfugyhDIAAAAASUVORK5CYII="); }
+
+.texture.texture-purple {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi6HQ7kgYQYAAE6QH6X645SgAAAABJRU5ErkJggg=="); }
+
+.texture.texture-red {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi+O9o5gsQYAAFfQHETi5yBwAAAABJRU5ErkJggg=="); }
+
+.texture.texture-yellow {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi+H+HwQEgwAAG1QIc8QQ4ogAAAABJRU5ErkJggg=="); }
+
+.texture.texture-blue {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYCi5mQYQYAADeQG02sTEiAAAAABJRU5ErkJggg=="); }
+
+.texture.texture-brown {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi6HYV9gUIMAADcwEx4AygWgAAAABJRU5ErkJggg=="); }
+
+.texture.texture-gray {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiqK+vbwAIMAAE/AH+bxqbQAAAAABJRU5ErkJggg=="); }
+
+.texture.texture-green {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiqFml6wsQYAAEmgGhkKzKGgAAAABJRU5ErkJggg=="); }
+
+.texture.texture-magenta {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi2MSwyRcgwAAEfgGye9u+TgAAAABJRU5ErkJggg=="); }
+
+.texture.texture-orange {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi+N8q7QsQYAAGEwHtbBCh8wAAAABJRU5ErkJggg=="); }
+
+.texture.texture-pink {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpieKJR4wsQYAAFUgHWLezVJwAAAABJRU5ErkJggg=="); }
 
 .blur {
   transform: scale(1.1);
@@ -3203,13 +3251,13 @@ html, body {
  * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
 .text.text-default {
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif !important; }
 
 .text.text-heading {
-  font-family: Verdana, Geneva, sans-serif; }
+  font-family: Verdana, Geneva, sans-serif !important; }
 
 .text.text-code {
-  font-family: "Courier New", Courier, monospace; }
+  font-family: "Courier New", Courier, monospace !important; }
 
 .text.text-xxlarge {
   font-size: 7.2em; }
@@ -4479,6 +4527,30 @@ Details: It defines the grid system and basic containers as listed below:
   -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear; }
 
+@-moz-keyframes width {
+  from {
+    width: 0; } }
+
+@-webkit-keyframes width {
+  from {
+    width: 0; } }
+
+@keyframes width {
+  from {
+    width: 0; } }
+
+@-moz-keyframes height {
+  from {
+    height: 0; } }
+
+@-webkit-keyframes height {
+  from {
+    height: 0; } }
+
+@keyframes height {
+  from {
+    height: 0; } }
+
 .animate {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -4551,6 +4623,14 @@ Details: It defines the grid system and basic containers as listed below:
 .animate-zoom-out {
   -webkit-animation-name: zoom-out;
   animation-name: zoom-out; }
+
+.animate-width {
+  -webkit-animation-name: width;
+  animation-name: width; }
+
+.animate-height {
+  -webkit-animation-name: height;
+  animation-name: height; }
 
 /**********************************************************************
 Description: It defines the styles for html elements except form and table for CMT-UI css framework.
@@ -5749,6 +5829,41 @@ Details: It defines the custom element styles as listed below:
       .auto-suggest .wrap-auto-list .list-item:hover, .auto-suggest .wrap-auto-list li:hover {
         background-color: #3C4655;
         color: #96B0D6; }
+
+.tabs-basic .tab-links-wrap {
+  border-bottom: 1px solid #595959; }
+  .tabs-basic .tab-links-wrap .tab-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-left: -4px;
+    cursor: pointer; }
+    .tabs-basic .tab-links-wrap .tab-link.active {
+      border: 1px solid #595959;
+      border-bottom: 1px solid white;
+      margin-bottom: -1px; }
+
+.tabs-basic .tab-content-wrap .tab-content {
+  display: none; }
+
+.accordian {
+  position: relative; }
+  .accordian .accordian-trigger {
+    position: relative; }
+  .accordian .accordian-view {
+    position: relative; }
+
+.accordian-basic .accordian-trigger {
+  background-color: #87BA45;
+  color: #E6E6E6;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.17em;
+  padding: 1em;
+  cursor: pointer; }
+
+.accordian-basic .accordian-view {
+  background-color: #3C4655;
+  color: #96B0D6;
+  padding: 1em; }
 
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.
@@ -7082,18 +7197,24 @@ Details: It defines the styles of box components as listed below:
   .box .box-content-wrap {
     position: relative;
     z-index: 15; }
-    .box .box-content-wrap .box-header {
+    .box .box-content-wrap .box-header-wrap {
       position: relative; }
+      .box .box-content-wrap .box-header-wrap .box-header {
+        position: relative; }
     .box .box-content-wrap .box-content {
       position: relative; }
       .box .box-content-wrap .box-content .box-content-data {
         position: relative; }
-    .box .box-content-wrap .box-footer {
+      .box .box-content-wrap .box-content .box-content-buffer {
+        position: relative; }
+    .box .box-content-wrap .box-footer-wrap {
       position: relative; }
+      .box .box-content-wrap .box-footer-wrap .box-footer {
+        position: relative; }
 
 .box-basic {
   padding: 1rem; }
-  .box-basic .box-content-wrap .box-header {
+  .box-basic .box-content-wrap .box-header-wrap {
     background-color: #3C4655;
     color: #96B0D6;
     padding: 0.5rem; }
@@ -7101,29 +7222,29 @@ Details: It defines the styles of box components as listed below:
     background-color: #F2F2F2;
     color: #363636;
     padding: 0.5rem; }
-  .box-basic .box-content-wrap .box-footer {
+  .box-basic .box-content-wrap .box-footer-wrap {
     background-color: #556479;
     color: #6a8fc5;
     padding: 0.25rem; }
 
 .box-basic-icon {
   padding: 1rem; }
-  .box-basic-icon .box-content-wrap .box-header .box-header-icon {
+  .box-basic-icon .box-content-wrap .box-header-wrap .box-header .box-header-icon {
     position: absolute;
     display: inline-block;
     top: 0.5rem;
     left: 0.5rem; }
-  .box-basic-icon .box-content-wrap .box-header .box-header-title {
+  .box-basic-icon .box-content-wrap .box-header-wrap .box-header .box-header-title {
     padding-left: 1.5rem; }
 
-.box-collapsible .box-content-wrap .box-header .box-collapse-trigger {
+.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapse-trigger {
   position: absolute;
   display: inline-block;
   top: 0.5em;
   right: 0.5em;
   color: #96B0D6;
   cursor: pointer; }
-  .box-collapsible .box-content-wrap .box-header .box-collapse-trigger:hover {
+  .box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapse-trigger:hover {
     color: #E74343; }
 
 /**********************************************************************
@@ -7153,14 +7274,15 @@ Details: It defines the styles for login components as listed below:
     position: relative; }
 
 /**********************************************************************
-Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info for display purpose and
-			 the real form can be displayed when user click the swap trigger.
+Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info 
+			 for display purpose and the real form can be displayed when user click the swap trigger.
 
 Dependencies: variables, variables-ext, mixins, boxes/basic
 
 Details: It defines the styles of form box components as listed below:
 
-* Form        - The barebone form box class having trigger and wrappers for info and content. The info and content can be swapped using trigger.
+* Form        - The barebone form box class having trigger and wrappers for info and content. The info and 
+*				content can be swapped using trigger keeping content as hidden by default.
 *
 * Basic       - The basic form define styles to position the edit icon.
 *
@@ -7396,14 +7518,20 @@ Details: It defines the styles for header components as listed below:
   .block .block-content-wrap {
     position: relative;
     z-index: 15; }
-    .block .block-content-wrap .block-header {
+    .block .block-content-wrap .block-header-wrap {
       position: relative; }
+      .block .block-content-wrap .block-header-wrap .block-header {
+        position: relative; }
     .block .block-content-wrap .block-content {
       position: relative; }
       .block .block-content-wrap .block-content .block-content-data {
         position: relative; }
-    .block .block-content-wrap .block-footer {
+      .block .block-content-wrap .block-content .block-content-buffer {
+        position: relative; }
+    .block .block-content-wrap .block-footer-wrap {
       position: relative; }
+      .block .block-content-wrap .block-footer-wrap .block-footer {
+        position: relative; }
   .block .block-splitter {
     position: absolute;
     width: 100%;

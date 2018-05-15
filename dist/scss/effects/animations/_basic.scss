@@ -8,6 +8,8 @@
 		    animation-timing-function: $transit-linear;
 }
 
+// Animations ----------------------
+
 // Spin
 @mixin animate-spin() {
    -webkit-animation-name: spin;
@@ -25,6 +27,64 @@
    -webkit-animation-name: zoom-out;
 		   animation-name: zoom-out;
 }
+
+// Width ---------------------------
+
+@-moz-keyframes width {
+
+	from {
+		width: 0;
+	}
+}
+
+@-webkit-keyframes width {
+
+	from {
+		width: 0;
+	}
+}
+
+@keyframes width {
+
+	from {
+		width: 0;
+	}
+}
+
+@mixin animate-width() {
+   -webkit-animation-name: width;
+		   animation-name: width;
+}
+
+// Height --------------------------
+
+@-moz-keyframes height {
+
+	from {
+		height: 0;
+	}
+}
+
+@-webkit-keyframes height {
+
+	from {
+		height: 0;
+	}
+}
+
+@keyframes height {
+
+	from {
+		height: 0;
+	}
+}
+
+@mixin animate-height() {
+   -webkit-animation-name: height;
+		   animation-name: height;
+}
+
+// Mixins Default implementation ***********************
 
 .animate {
    @include animate( 1s );
@@ -90,4 +150,12 @@
 
 .animate-zoom-out {
    @include animate-zoom-out();
+}
+
+.animate-width {
+   @include animate-width();
+}
+
+.animate-height {
+   @include animate-height();
 }

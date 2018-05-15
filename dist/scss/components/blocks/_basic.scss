@@ -79,23 +79,27 @@ Details: It defines the styles for header components as listed below:
 		z-index: 15;
 
 		// Block Header
-		.block-header {
+		.block-header-wrap {
 			position: relative;
 
-			.block-header-icon {
-				// Header icon
-			}
+			.block-header {
+				position: relative;
 
-			.block-header-title {
-				// Header title
-			}
+				.block-header-icon {
+					// Header icon
+				}
 
-			.block-header-info {
-				// Header Info
-			}
+				.block-header-title {
+					// Header title
+				}
 
-			.block-header-content {
-				// Header content
+				.block-header-info {
+					// Header Info
+				}
+
+				.block-header-content {
+					// Header content
+				}
 			}
 		}
 
@@ -106,6 +110,11 @@ Details: It defines the styles for header components as listed below:
 			.block-content-data {
 				position: relative;
 				// Text Content
+			}
+
+			.block-content-buffer {
+				position: relative;
+				// Widget buffer data
 			}
 
 			// Wraps Block Boxes
@@ -123,23 +132,27 @@ Details: It defines the styles for header components as listed below:
 		}
 
 		// Block Footer
-		.block-footer {
+		.block-footer-wrap {
 			position: relative;
 
-			.block-footer-icon {
-				// Footer icon
-			}
+			.block-footer {
+				position: relative;
 
-			.block-footer-title {
-				// Footer title
-			}
+				.block-footer-icon {
+					// Footer icon
+				}
 
-			.block-footer-info {
-				// Footer Info
-			}
+				.block-footer-title {
+					// Footer title
+				}
 
-			.block-footer-content {
-				// Footer Content
+				.block-footer-info {
+					// Footer Info
+				}
+
+				.block-footer-content {
+					// Footer Content
+				}
 			}
 		}
 	}

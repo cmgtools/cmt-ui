@@ -1,12 +1,13 @@
 /**********************************************************************
-Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info for display purpose and
-			 the real form can be displayed when user click the swap trigger.
+Description: It defines the styles of boxes wrapping a form. The Form Box can be used to show form info 
+			 for display purpose and the real form can be displayed when user click the swap trigger.
 
 Dependencies: variables, variables-ext, mixins, boxes/basic
 
 Details: It defines the styles of form box components as listed below:
 
-* Form        - The barebone form box class having trigger and wrappers for info and content. The info and content can be swapped using trigger.
+* Form        - The barebone form box class having trigger and wrappers for info and content. The info and 
+*				content can be swapped using trigger keeping content as hidden by default.
 *
 * Basic       - The basic form define styles to position the edit icon.
 *
@@ -18,6 +19,7 @@ Details: It defines the styles of form box components as listed below:
 
 // == Structure - Form Box ==========
 
+// Adds trigger to flip info and content.
 .box-form {
 	position: relative;
 

@@ -1,6 +1,31 @@
-// TODO: Plan the layout and add default implementation for horizontal and vertical arrangement.
+// == Structure - Tabs ==============
 
-.cmt-tabs {
+.tabs {
+
+	.tab-links-wrap {
+		// Links wrapper
+		
+		.tab-link {
+			// Link
+
+			&.active {
+				// Link active state
+			}
+		}
+	}
+
+	.tab-content-wrap {
+		// Tab Content wrapper
+
+		.tab-content {
+			// Tab Content
+		}
+	}
+}
+
+// == Basic Tabs ====================
+
+.tabs-basic {
 
 	.tab-links-wrap {
 		border-bottom: 1px solid $color-border-d;

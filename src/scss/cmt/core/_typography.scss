@@ -70,15 +70,15 @@ html, body {
 .text {
 
 	&.text-default {
-		font-family: $font-default;
+		font-family: $font-default !important;
 	}
 
 	&.text-heading {
-		font-family: $font-heading;
+		font-family: $font-heading !important;
 	}
 
 	&.text-code {
-		font-family: $font-code;
+		font-family: $font-code !important;
 	}
 
 	&.text-xxlarge {

@@ -1,0 +1,33 @@
+// == Structure - Accordian =========
+
+.accordian {
+	position: relative;
+
+	.accordian-trigger {
+		position: relative;
+	}
+
+	.accordian-view {
+		position: relative;
+	}
+}
+
+// == Basic Accordian ===============
+
+.accordian-basic {
+
+	.accordian-trigger {
+		background-color: $color-tertiary;
+		color: $color-tertiary-text;
+		font-family: $font-heading;
+		font-size: $font-size-5;
+		padding: 1em;
+		cursor: pointer;
+	}
+
+	.accordian-view {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+		padding: 1em;
+	}
+}

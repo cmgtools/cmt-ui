@@ -42,23 +42,27 @@ Details: It defines the styles of box components as listed below:
 		position: relative;
 		z-index: 15;
 
-		.box-header {
+		.box-header-wrap {
 			position: relative;
+			
+			.box-header {
+				position: relative;
 
-			.box-header-icon {
-				// Header Icon or Avatar
-			}
+				.box-header-icon {
+					// Header Icon or Avatar
+				}
 
-			.box-header-title {
-				// Header Title
-			}
+				.box-header-title {
+					// Header Title
+				}
 
-			.box-header-info {
-				// Header Info
-			}
+				.box-header-info {
+					// Header Info
+				}
 
-			.box-header-content {
-				// Header Content
+				.box-header-content {
+					// Header Content
+				}
 			}
 		}
 
@@ -77,26 +81,35 @@ Details: It defines the styles of box components as listed below:
 				position: relative;
 				// Text Content
 			}
+			
+			.box-content-buffer {
+				position: relative;
+				// Widget buffer data
+			}
 		}
 
-		.box-footer {
+		.box-footer-wrap {
 			// Footer having box info
 			position: relative;
 
-			.box-footer-icon {
-				// Footer Icon
-			}
+			.box-footer {
+				position: relative;
 
-			.box-footer-title {
-				// Footer Title
-			}
+				.box-footer-icon {
+					// Footer Icon
+				}
 
-			.box-footer-info {
-				// Footer Info
-			}
+				.box-footer-title {
+					// Footer Title
+				}
 
-			.box-footer-content {
-				// Footer Content
+				.box-footer-info {
+					// Footer Info
+				}
+
+				.box-footer-content {
+					// Footer Content
+				}
 			}
 		}
 	}
@@ -109,7 +122,7 @@ Details: It defines the styles of box components as listed below:
 
 	.box-content-wrap {
 
-		.box-header {
+		.box-header-wrap {
 			background-color: $color-secondary;
 			color: $color-secondary-text;
 			padding: 0.5rem;
@@ -121,7 +134,7 @@ Details: It defines the styles of box components as listed below:
 			padding: 0.5rem;
 		 }
 
-		.box-footer {
+		.box-footer-wrap {
 			// Footer having box info
 			background-color: $color-secondary-l;
 			color: $color-secondary-text-l;
@@ -136,17 +149,20 @@ Details: It defines the styles of box components as listed below:
 	.box-content-wrap {
 
 		// Icon, text at center
-		.box-header {
+		.box-header-wrap {
 
-			.box-header-icon {
-				position: absolute;
-				display: inline-block;
-				top: 0.5rem;
-				left: 0.5rem;
-			}
+			.box-header {
 
-			.box-header-title {
-				padding-left: 1.5rem;
+				.box-header-icon {
+					position: absolute;
+					display: inline-block;
+					top: 0.5rem;
+					left: 0.5rem;
+				}
+
+				.box-header-title {
+					padding-left: 1.5rem;
+				}
 			}
 		}
 	}
@@ -158,18 +174,21 @@ Details: It defines the styles of box components as listed below:
 
 	.box-content-wrap {
 
-		.box-header {
+		.box-header-wrap {
 
-			.box-collapse-trigger {
-				position: absolute;
-				display: inline-block;
-				top: 0.5em;
-				right: 0.5em;
-				color: $color-secondary-text;
-				cursor: pointer;
+			.box-header {
 
-				&:hover {
-					color: $color-link-h;
+				.box-collapse-trigger {
+					position: absolute;
+					display: inline-block;
+					top: 0.5em;
+					right: 0.5em;
+					color: $color-secondary-text;
+					cursor: pointer;
+
+					&:hover {
+						color: $color-link-h;
+					}
 				}
 			}
 		}
