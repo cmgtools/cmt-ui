@@ -3510,7 +3510,7 @@ Details: It defines the grid system and basic containers as listed below:
     .row.row-inline > .col5 {
       width: 17%; }
     @media only screen and (max-width: 1024px) {
-      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4, .row.row-inline.max-cols-50 > .col5 {
+      .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4, .row.row-inline.max-cols-50 > .col5, .row.row-inline.max-cols-50s > .col3, .row.row-inline.max-cols-50s > .col4, .row.row-inline.max-cols-50s > .col5 {
         width: 47%; }
       .row.row-inline.max-cols-100 > .col3, .row.row-inline.max-cols-100 > .col4, .row.row-inline.max-cols-100 > .col5 {
         width: 98%; } }
@@ -3580,13 +3580,13 @@ Details: It defines the grid system and basic containers as listed below:
 @media only screen and (max-width: 1024px) {
   .row.row-small, .row.row-medium, .row.row-large, .row.row-xlarge {
     width: 100%; }
-  .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15 {
+  .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15, .max-cols-25s > .col1, .max-cols-25s > .col2, .max-cols-25s > .col3, .max-cols-25s > .col4, .max-cols-25s > .col5, .max-cols-25s > .col6, .max-cols-25s > .col7, .max-cols-25s > .col8, .max-cols-25s > .col9, .max-cols-25s > .col10, .max-cols-25s > .col11, .max-cols-25s > .col12, .max-cols-25s > .col13, .max-cols-25s > .col14, .max-cols-25s > .col15 {
     width: 23%; }
-  .max-cols-25 > .col:nth-child(4) {
+  .max-cols-25 > .col:nth-child(4), .max-cols-25s > .col:nth-child(4) {
     clear: both; }
-  .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15 {
+  .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15, .max-cols-50s > .col1, .max-cols-50s > .col2, .max-cols-50s > .col3, .max-cols-50s > .col4, .max-cols-50s > .col5, .max-cols-50s > .col6, .max-cols-50s > .col7, .max-cols-50s > .col8, .max-cols-50s > .col9, .max-cols-50s > .col10, .max-cols-50s > .col11, .max-cols-50s > .col12, .max-cols-50s > .col13, .max-cols-50s > .col14, .max-cols-50s > .col15 {
     width: 48%; }
-  .max-cols-50 > .col:nth-child(odd) {
+  .max-cols-50 > .col:nth-child(odd), .max-cols-50s > .col:nth-child(odd) {
     clear: both; }
   .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
     width: 98%; } }
@@ -3698,11 +3698,15 @@ Details: It defines the grid system and basic containers as listed below:
 @media only screen and (max-width: 1024px) {
   .max-cols-25 > .col3x2, .max-cols-25 > .col4x2, .max-cols-25 > .col4x3, .max-cols-25 > .col5x2, .max-cols-25 > .col5x3, .max-cols-25 > .col5x4, .max-cols-25 > .col6x2, .max-cols-25 > .col6x3, .max-cols-25 > .col6x4, .max-cols-25 > .col6x5,
   .max-cols-25 > .col12x2, .max-cols-25 > .col12x3, .max-cols-25 > .col12x4, .max-cols-25 > .col12x5, .max-cols-25 > .col12x6, .max-cols-25 > .col12x7, .max-cols-25 > .col12x8, .max-cols-25 > .col12x9, .max-cols-25 > .col12x10, .max-cols-25 > .col12x11,
-  .max-cols-25 > .col15x2, .max-cols-25 > .col15x3, .max-cols-25 > .col15x4, .max-cols-25 > .col15x5, .max-cols-25 > .col15x6, .max-cols-25 > .col15x7, .max-cols-25 > .col15x8, .max-cols-25 > .col15x9, .max-cols-25 > .col15x10, .max-cols-25 > .col15x11, .max-cols-25 > .col15x12, .max-cols-25 > .col15x13, .max-cols-25 > .col15x14 {
+  .max-cols-25 > .col15x2, .max-cols-25 > .col15x3, .max-cols-25 > .col15x4, .max-cols-25 > .col15x5, .max-cols-25 > .col15x6, .max-cols-25 > .col15x7, .max-cols-25 > .col15x8, .max-cols-25 > .col15x9, .max-cols-25 > .col15x10, .max-cols-25 > .col15x11, .max-cols-25 > .col15x12, .max-cols-25 > .col15x13, .max-cols-25 > .col15x14, .max-cols-25s > .col3x2, .max-cols-25s > .col4x2, .max-cols-25s > .col4x3, .max-cols-25s > .col5x2, .max-cols-25s > .col5x3, .max-cols-25s > .col5x4, .max-cols-25s > .col6x2, .max-cols-25s > .col6x3, .max-cols-25s > .col6x4, .max-cols-25s > .col6x5,
+  .max-cols-25s > .col12x2, .max-cols-25s > .col12x3, .max-cols-25s > .col12x4, .max-cols-25s > .col12x5, .max-cols-25s > .col12x6, .max-cols-25s > .col12x7, .max-cols-25s > .col12x8, .max-cols-25s > .col12x9, .max-cols-25s > .col12x10, .max-cols-25s > .col12x11,
+  .max-cols-25s > .col15x2, .max-cols-25s > .col15x3, .max-cols-25s > .col15x4, .max-cols-25s > .col15x5, .max-cols-25s > .col15x6, .max-cols-25s > .col15x7, .max-cols-25s > .col15x8, .max-cols-25s > .col15x9, .max-cols-25s > .col15x10, .max-cols-25s > .col15x11, .max-cols-25s > .col15x12, .max-cols-25s > .col15x13, .max-cols-25s > .col15x14 {
     width: 23%; }
   .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5,
   .max-cols-50 > .col12x2, .max-cols-50 > .col12x3, .max-cols-50 > .col12x4, .max-cols-50 > .col12x5, .max-cols-50 > .col12x6, .max-cols-50 > .col12x7, .max-cols-50 > .col12x8, .max-cols-50 > .col12x9, .max-cols-50 > .col12x10, .max-cols-50 > .col12x11,
-  .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14 {
+  .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14, .max-cols-50s > .col3x2, .max-cols-50s > .col4x2, .max-cols-50s > .col4x3, .max-cols-50s > .col5x2, .max-cols-50s > .col5x3, .max-cols-50s > .col5x4, .max-cols-50s > .col6x2, .max-cols-50s > .col6x3, .max-cols-50s > .col6x4, .max-cols-50s > .col6x5,
+  .max-cols-50s > .col12x2, .max-cols-50s > .col12x3, .max-cols-50s > .col12x4, .max-cols-50s > .col12x5, .max-cols-50s > .col12x6, .max-cols-50s > .col12x7, .max-cols-50s > .col12x8, .max-cols-50s > .col12x9, .max-cols-50s > .col12x10, .max-cols-50s > .col12x11,
+  .max-cols-50s > .col15x2, .max-cols-50s > .col15x3, .max-cols-50s > .col15x4, .max-cols-50s > .col15x5, .max-cols-50s > .col15x6, .max-cols-50s > .col15x7, .max-cols-50s > .col15x8, .max-cols-50s > .col15x9, .max-cols-50s > .col15x10, .max-cols-50s > .col15x11, .max-cols-50s > .col15x12, .max-cols-50s > .col15x13, .max-cols-50s > .col15x14 {
     width: 48%; }
   .max-cols-100 > .col3x2, .max-cols-100 > .col4x2, .max-cols-100 > .col4x3, .max-cols-100 > .col5x2, .max-cols-100 > .col5x3, .max-cols-100 > .col5x4, .max-cols-100 > .col6x2, .max-cols-100 > .col6x3, .max-cols-100 > .col6x4, .max-cols-100 > .col6x5,
   .max-cols-100 > .col12x2, .max-cols-100 > .col12x3, .max-cols-100 > .col12x4, .max-cols-100 > .col12x5, .max-cols-100 > .col12x6, .max-cols-100 > .col12x7, .max-cols-100 > .col12x8, .max-cols-100 > .col12x9, .max-cols-100 > .col12x10, .max-cols-100 > .col12x11,
@@ -3772,9 +3776,9 @@ Details: It defines the grid system and basic containers as listed below:
   width: 6.5%; }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12 {
+  .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12, .max-cols-50s > .colc1, .max-cols-50s > .colc2, .max-cols-50s > .colc3, .max-cols-50s > .colc4, .max-cols-50s > .colc5, .max-cols-50s > .colc6, .max-cols-50s > .colc7, .max-cols-50s > .colc8, .max-cols-50s > .colc9, .max-cols-50s > .colc10, .max-cols-50s > .colc11, .max-cols-50s > .colc12 {
     width: 48%; }
-  .max-cols-50 > .colc:nth-child(odd) {
+  .max-cols-50 > .colc:nth-child(odd), .max-cols-50s > .colc:nth-child(odd) {
     clear: both; }
   .max-cols-100 > .colc1, .max-cols-100 > .colc2, .max-cols-100 > .colc3, .max-cols-100 > .colc4, .max-cols-100 > .colc5, .max-cols-100 > .colc6, .max-cols-100 > .colc7, .max-cols-100 > .colc8, .max-cols-100 > .colc9, .max-cols-100 > .colc10, .max-cols-100 > .colc11, .max-cols-100 > .colc12 {
     width: 98%; } }
@@ -3794,7 +3798,8 @@ Details: It defines the grid system and basic containers as listed below:
 
 @media only screen and (max-width: 1024px) {
   .max-cols-50 > .colc3x2, .max-cols-50 > .colc4x2, .max-cols-50 > .colc4x3,
-  .max-cols-50 > .colc12x2, .max-cols-50 > .colc12x3, .max-cols-50 > .colc12x4, .max-cols-50 > .colc12x5, .max-cols-50 > .colc12x6, .max-cols-50 > .colc12x7, .max-cols-50 > .colc12x8, .max-cols-50 > .colc12x9, .max-cols-50 > .colc12x10, .max-cols-50 > .colc12x11 {
+  .max-cols-50 > .colc12x2, .max-cols-50 > .colc12x3, .max-cols-50 > .colc12x4, .max-cols-50 > .colc12x5, .max-cols-50 > .colc12x6, .max-cols-50 > .colc12x7, .max-cols-50 > .colc12x8, .max-cols-50 > .colc12x9, .max-cols-50 > .colc12x10, .max-cols-50 > .colc12x11, .max-cols-50s > .colc3x2, .max-cols-50s > .colc4x2, .max-cols-50s > .colc4x3,
+  .max-cols-50s > .colc12x2, .max-cols-50s > .colc12x3, .max-cols-50s > .colc12x4, .max-cols-50s > .colc12x5, .max-cols-50s > .colc12x6, .max-cols-50s > .colc12x7, .max-cols-50s > .colc12x8, .max-cols-50s > .colc12x9, .max-cols-50s > .colc12x10, .max-cols-50s > .colc12x11 {
     width: 48%; }
   .max-cols-100 > .colc3x2, .max-cols-100 > .colc4x2, .max-cols-100 > .colc4x3,
   .max-cols-100 > .colc12x2, .max-cols-100 > .colc12x3, .max-cols-100 > .colc12x4, .max-cols-100 > .colc12x5, .max-cols-100 > .colc12x6, .max-cols-100 > .colc12x7, .max-cols-100 > .colc12x8, .max-cols-100 > .colc12x9, .max-cols-100 > .colc12x10, .max-cols-100 > .colc12x11 {
@@ -3859,13 +3864,13 @@ Details: It defines the grid system and basic containers as listed below:
   width: 6.66666%; }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols-25 > .colf1, .max-cols-25 > .colf2, .max-cols-25 > .colf3, .max-cols-25 > .colf4, .max-cols-25 > .colf5, .max-cols-25 > .colf6, .max-cols-25 > .colf7, .max-cols-25 > .colf8, .max-cols-25 > .colf9, .max-cols-25 > .colf10, .max-cols-25 > .colf11, .max-cols-25 > .colf12, .max-cols-25 > .colf13, .max-cols-25 > .colf14, .max-cols-25 > .colf15 {
+  .max-cols-25 > .colf1, .max-cols-25 > .colf2, .max-cols-25 > .colf3, .max-cols-25 > .colf4, .max-cols-25 > .colf5, .max-cols-25 > .colf6, .max-cols-25 > .colf7, .max-cols-25 > .colf8, .max-cols-25 > .colf9, .max-cols-25 > .colf10, .max-cols-25 > .colf11, .max-cols-25 > .colf12, .max-cols-25 > .colf13, .max-cols-25 > .colf14, .max-cols-25 > .colf15, .max-cols-25s > .colf1, .max-cols-25s > .colf2, .max-cols-25s > .colf3, .max-cols-25s > .colf4, .max-cols-25s > .colf5, .max-cols-25s > .colf6, .max-cols-25s > .colf7, .max-cols-25s > .colf8, .max-cols-25s > .colf9, .max-cols-25s > .colf10, .max-cols-25s > .colf11, .max-cols-25s > .colf12, .max-cols-25s > .colf13, .max-cols-25s > .colf14, .max-cols-25s > .colf15 {
     width: 25%; }
-  .max-cols-25 > .colf:nth-child(4) {
+  .max-cols-25 > .colf:nth-child(4), .max-cols-25s > .colf:nth-child(4) {
     clear: both; }
-  .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15 {
+  .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15, .max-cols-50s > .colf1, .max-cols-50s > .colf2, .max-cols-50s > .colf3, .max-cols-50s > .colf4, .max-cols-50s > .colf5, .max-cols-50s > .colf6, .max-cols-50s > .colf7, .max-cols-50s > .colf8, .max-cols-50s > .colf9, .max-cols-50s > .colf10, .max-cols-50s > .colf11, .max-cols-50s > .colf12, .max-cols-50s > .colf13, .max-cols-50s > .colf14, .max-cols-50s > .colf15 {
     width: 50%; }
-  .max-cols-50 > .colf:nth-child(odd) {
+  .max-cols-50 > .colf:nth-child(odd), .max-cols-50s > .colf:nth-child(odd) {
     clear: both; }
   .max-cols-100 > .colf1, .max-cols-100 > .colf2, .max-cols-100 > .colf3, .max-cols-100 > .colf4, .max-cols-100 > .colf5, .max-cols-100 > .colf6, .max-cols-100 > .colf7, .max-cols-100 > .colf8, .max-cols-100 > .colf9, .max-cols-100 > .colf10, .max-cols-100 > .colf11, .max-cols-100 > .colf12, .max-cols-100 > .colf13, .max-cols-100 > .colf14, .max-cols-100 > .colf15 {
     width: 100%; } }
@@ -3976,11 +3981,15 @@ Details: It defines the grid system and basic containers as listed below:
 @media only screen and (max-width: 1024px) {
   .max-cols-25 > .colf3x2, .max-cols-25 > .colf4x2, .max-cols-25 > .colf4x3, .max-cols-25 > .colf5x2, .max-cols-25 > .colf5x3, .max-cols-25 > .colf5x4, .max-cols-25 > .colf6x2, .max-cols-25 > .colf6x3, .max-cols-25 > .colf6x4, .max-cols-25 > .colf6x5,
   .max-cols-25 > .colf12x2, .max-cols-25 > .colf12x3, .max-cols-25 > .colf12x4, .max-cols-25 > .colf12x5, .max-cols-25 > .colf12x6, .max-cols-25 > .colf12x7, .max-cols-25 > .colf12x8, .max-cols-25 > .colf12x9, .max-cols-25 > .colf12x10, .max-cols-25 > .colf12x11,
-  .max-cols-25 > .colf15x2, .max-cols-25 > .colf15x3, .max-cols-25 > .colf15x4, .max-cols-25 > .colf15x5, .max-cols-25 > .colf15x6, .max-cols-25 > .colf15x7, .max-cols-25 > .colf15x8, .max-cols-25 > .colf15x9, .max-cols-25 > .colf15x10, .max-cols-25 > .colf15x11, .max-cols-25 > .colf15x12, .max-cols-25 > .colf15x13, .max-cols-25 > .colf15x14 {
+  .max-cols-25 > .colf15x2, .max-cols-25 > .colf15x3, .max-cols-25 > .colf15x4, .max-cols-25 > .colf15x5, .max-cols-25 > .colf15x6, .max-cols-25 > .colf15x7, .max-cols-25 > .colf15x8, .max-cols-25 > .colf15x9, .max-cols-25 > .colf15x10, .max-cols-25 > .colf15x11, .max-cols-25 > .colf15x12, .max-cols-25 > .colf15x13, .max-cols-25 > .colf15x14, .max-cols-25s > .colf3x2, .max-cols-25s > .colf4x2, .max-cols-25s > .colf4x3, .max-cols-25s > .colf5x2, .max-cols-25s > .colf5x3, .max-cols-25s > .colf5x4, .max-cols-25s > .colf6x2, .max-cols-25s > .colf6x3, .max-cols-25s > .colf6x4, .max-cols-25s > .colf6x5,
+  .max-cols-25s > .colf12x2, .max-cols-25s > .colf12x3, .max-cols-25s > .colf12x4, .max-cols-25s > .colf12x5, .max-cols-25s > .colf12x6, .max-cols-25s > .colf12x7, .max-cols-25s > .colf12x8, .max-cols-25s > .colf12x9, .max-cols-25s > .colf12x10, .max-cols-25s > .colf12x11,
+  .max-cols-25s > .colf15x2, .max-cols-25s > .colf15x3, .max-cols-25s > .colf15x4, .max-cols-25s > .colf15x5, .max-cols-25s > .colf15x6, .max-cols-25s > .colf15x7, .max-cols-25s > .colf15x8, .max-cols-25s > .colf15x9, .max-cols-25s > .colf15x10, .max-cols-25s > .colf15x11, .max-cols-25s > .colf15x12, .max-cols-25s > .colf15x13, .max-cols-25s > .colf15x14 {
     width: 25%; }
   .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5,
   .max-cols-50 > .colf12x2, .max-cols-50 > .colf12x3, .max-cols-50 > .colf12x4, .max-cols-50 > .colf12x5, .max-cols-50 > .colf12x6, .max-cols-50 > .colf12x7, .max-cols-50 > .colf12x8, .max-cols-50 > .colf12x9, .max-cols-50 > .colf12x10, .max-cols-50 > .colf12x11,
-  .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 > .colf15x14 {
+  .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 > .colf15x14, .max-cols-50s > .colf3x2, .max-cols-50s > .colf4x2, .max-cols-50s > .colf4x3, .max-cols-50s > .colf5x2, .max-cols-50s > .colf5x3, .max-cols-50s > .colf5x4, .max-cols-50s > .colf6x2, .max-cols-50s > .colf6x3, .max-cols-50s > .colf6x4, .max-cols-50s > .colf6x5,
+  .max-cols-50s > .colf12x2, .max-cols-50s > .colf12x3, .max-cols-50s > .colf12x4, .max-cols-50s > .colf12x5, .max-cols-50s > .colf12x6, .max-cols-50s > .colf12x7, .max-cols-50s > .colf12x8, .max-cols-50s > .colf12x9, .max-cols-50s > .colf12x10, .max-cols-50s > .colf12x11,
+  .max-cols-50s > .colf15x2, .max-cols-50s > .colf15x3, .max-cols-50s > .colf15x4, .max-cols-50s > .colf15x5, .max-cols-50s > .colf15x6, .max-cols-50s > .colf15x7, .max-cols-50s > .colf15x8, .max-cols-50s > .colf15x9, .max-cols-50s > .colf15x10, .max-cols-50s > .colf15x11, .max-cols-50s > .colf15x12, .max-cols-50s > .colf15x13, .max-cols-50s > .colf15x14 {
     width: 50%; }
   .max-cols-100 > .colf3x2, .max-cols-100 > .colf4x2, .max-cols-100 > .colf4x3, .max-cols-100 > .colf5x2, .max-cols-100 > .colf5x3, .max-cols-100 > .colf5x4, .max-cols-100 > .colf6x2, .max-cols-100 > .colf6x3, .max-cols-100 > .colf6x4, .max-cols-100 > .colf6x5,
   .max-cols-100 > .colf12x2, .max-cols-100 > .colf12x3, .max-cols-100 > .colf12x4, .max-cols-100 > .colf12x5, .max-cols-100 > .colf12x6, .max-cols-100 > .colf12x7, .max-cols-100 > .colf12x8, .max-cols-100 > .colf12x9, .max-cols-100 > .colf12x10, .max-cols-100 > .colf12x11,
@@ -7150,6 +7159,34 @@ Details: It defines the styles of card components as listed below:
 *
 * Element     - The element cards will be used by blocks to show content having header icon and text.
 ***********************************************************************/
+.card {
+  position: relative; }
+  .card .card-bkg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 50% 50% 9 !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .card > .texture {
+    z-index: 10; }
+  .card .card-header {
+    position: relative;
+    z-index: 15; }
+  .card .card-data {
+    position: relative;
+    z-index: 15; }
+  .card .card-footer {
+    position: relative;
+    z-index: 15; }
+
 .card-element .card-header {
   text-align: center; }
 

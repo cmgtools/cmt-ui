@@ -13,8 +13,27 @@ Details: It defines the styles of card components as listed below:
 // == Structure - Card ==============
 
 .card {
+	position: relative;
+
+	// background cover
+	.card-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// Texture on top of box background but under content
+	> .texture {
+		z-index: 10;
+	}
 
 	.card-header {
+		position: relative;
+		z-index: 15;
 
 		.card-header-icon {
 
@@ -30,10 +49,13 @@ Details: It defines the styles of card components as listed below:
 	}
 
 	.card-data {
-
+		position: relative;
+		z-index: 15;
 	}
 
 	.card-footer {
+		position: relative;
+		z-index: 15;
 
 		.card-footer-info {
 

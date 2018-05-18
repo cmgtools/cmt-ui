@@ -78,7 +78,7 @@ Details: It defines the grid system and basic containers as listed below:
 
 		@include responsive-max( screen-tablet-large ) {
 
-			&.max-cols-50 {
+			&.max-cols-50, &.max-cols-50s {
 
 				& >.col3, & >.col4, & >.col5 {
 					width: 47%;
@@ -160,7 +160,7 @@ Details: It defines the grid system and basic containers as listed below:
 		}
 	}
 
-	.max-cols-25 {
+	.max-cols-25, .max-cols-25s {
 
 		& >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
 			width: 23%;
@@ -171,7 +171,7 @@ Details: It defines the grid system and basic containers as listed below:
 		}
 	}
 
-	.max-cols-50 {
+	.max-cols-50, .max-cols-50s {
 
 		& >.col1, & >.col2, & >.col3, & >.col4, & >.col5, & >.col6, & >.col7, & >.col8, & >.col9, & >.col10, & >.col11, & >.col12, & >.col13, & >.col14, & >.col15 {
 			width: 48%;
@@ -247,7 +247,7 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-	.max-cols-25 {
+	.max-cols-25, .max-cols-25s {
 
 		& >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
 		& >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
@@ -256,7 +256,7 @@ Details: It defines the grid system and basic containers as listed below:
 		}
 	}
 
-	.max-cols-50 {
+	.max-cols-50, .max-cols-50s {
 
 		& >.col3x2, & >.col4x2, & >.col4x3, & >.col5x2, & >.col5x3, & >.col5x4, & >.col6x2, & >.col6x3, & >.col6x4, & >.col6x5,
 		& >.col12x2, & >.col12x3, & >.col12x4, & >.col12x5, & >.col12x6, & >.col12x7, & >.col12x8, & >.col12x9, & >.col12x10, & >.col12x11,
@@ -333,7 +333,7 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-	.max-cols-50 {
+	.max-cols-50, .max-cols-50s {
 
 		& >.colc1, & >.colc2, & >.colc3, & >.colc4, & >.colc5, & >.colc6, & >.colc7, & >.colc8, & >.colc9, & >.colc10, & >.colc11, & >.colc12 {
 			width: 48%;
@@ -369,7 +369,7 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-	.max-cols-50 {
+	.max-cols-50, .max-cols-50s {
 
 		& >.colc3x2, & >.colc4x2, & >.colc4x3,
 		& >.colc12x2, & >.colc12x3, & >.colc12x4, & >.colc12x5, & >.colc12x6, & >.colc12x7, & >.colc12x8, & >.colc12x9, & >.colc12x10, & >.colc12x11 {
@@ -437,7 +437,7 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-	.max-cols-25 {
+	.max-cols-25, .max-cols-25s {
 
 		& >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
 			width: 25%;
@@ -448,7 +448,7 @@ Details: It defines the grid system and basic containers as listed below:
 		}
 	}
 
-	.max-cols-50 {
+	.max-cols-50, .max-cols-50s {
 
 		& >.colf1, & >.colf2, & >.colf3, & >.colf4, & >.colf5, & >.colf6, & >.colf7, & >.colf8, & >.colf9, & >.colf10, & >.colf11, & >.colf12, & >.colf13, & >.colf14, & >.colf15 {
 			width: 50%;
@@ -522,7 +522,7 @@ Details: It defines the grid system and basic containers as listed below:
 
 @include responsive-max( screen-tablet-large ) {
 
-	.max-cols-25 {
+	.max-cols-25, .max-cols-25s {
 
 		& >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
 		& >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
@@ -531,7 +531,7 @@ Details: It defines the grid system and basic containers as listed below:
 		}
 	}
 
-	.max-cols-50 {
+	.max-cols-50, .max-cols-50s {
 
 		& >.colf3x2, & >.colf4x2, & >.colf4x3, & >.colf5x2, & >.colf5x3, & >.colf5x4, & >.colf6x2, & >.colf6x3, & >.colf6x4, & >.colf6x5,
 		& >.colf12x2, & >.colf12x3, & >.colf12x4, & >.colf12x5, & >.colf12x6, & >.colf12x7, & >.colf12x8, & >.colf12x9, & >.colf12x10, & >.colf12x11,
