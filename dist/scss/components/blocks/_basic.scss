@@ -107,6 +107,14 @@ Details: It defines the styles for header components as listed below:
 		.block-content {
 			position: relative;
 
+			.block-content-title {
+				// Content title
+			}
+			
+			.block-content-info {
+				// Content info
+			}
+			
 			.block-content-data {
 				position: relative;
 				// Text Content
@@ -114,7 +122,7 @@ Details: It defines the styles for header components as listed below:
 
 			.block-content-buffer {
 				position: relative;
-				// Widget buffer data
+				// Additional data
 			}
 
 			// Wraps Block Boxes
@@ -124,11 +132,25 @@ Details: It defines the styles for header components as listed below:
 					// Box layout - derived from box component
 				}
 			}
+			
+			// Wraps Block Widgets
+			.block-widget-wrap {
+				// Widget Data
+
+				.block-widget {
+					// Widget layout - derived from widget component
+				}
+			}
 		}
 
 		// Block Sidebar
 		.block-sidebar {
 			// Block sidebar in case block is splitted into content and sidebar
+		}
+
+		// Wraps Blocks
+		.block-wrap {
+			// Blocks embedded within the block
 		}
 
 		// Block Footer

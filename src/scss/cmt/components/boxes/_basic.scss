@@ -60,6 +60,10 @@ Details: It defines the styles of box components as listed below:
 					// Header Info
 				}
 
+				.box-header-actions {
+					// Header Actions
+				}
+				
 				.box-header-content {
 					// Header Content
 				}
@@ -77,11 +81,19 @@ Details: It defines the styles of box components as listed below:
 				// Video
 			}
 
+			.box-content-title {
+				// Content title
+			}
+
+			.box-content-info {
+				// Content info
+			}
+
 			.box-content-data {
 				position: relative;
 				// Text Content
 			}
-			
+
 			.box-content-buffer {
 				position: relative;
 				// Widget buffer data
@@ -107,6 +119,10 @@ Details: It defines the styles of box components as listed below:
 					// Footer Info
 				}
 
+				.box-footer-actions {
+					// Footer Actions
+				}
+				
 				.box-footer-content {
 					// Footer Content
 				}

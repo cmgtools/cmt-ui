@@ -481,7 +481,8 @@ Notes:
 	left: -50%;
 	width: 200%;
 	height: 200%;
-
+	overflow: hidden;
+	
 	img {
 		position: absolute;
 		top: 0;
@@ -501,6 +502,7 @@ Notes:
 	left: -30%;
 	width: 160%;
 	height: 160%;
+	overflow: hidden;
 
 	img {
 		position: absolute;
@@ -523,6 +525,7 @@ Notes:
 	left: -20%;
 	width: 140%;
 	height: 140%;
+	overflow: hidden;
 
 	img {
 		position: absolute;

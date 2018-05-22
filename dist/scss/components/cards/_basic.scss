@@ -36,15 +36,15 @@ Details: It defines the styles of card components as listed below:
 		z-index: 15;
 
 		.card-header-icon {
-
+			// Header Icon or Avatar
 		}
 
 		.card-header-title {
-
+			// Header Title
 		}
 
 		.card-header-actions {
-
+			// Header Actions
 		}
 	}
 
@@ -57,12 +57,20 @@ Details: It defines the styles of card components as listed below:
 		position: relative;
 		z-index: 15;
 
-		.card-footer-info {
+		.card-footer-icon {
+			// Footer Icon
+		}
 
+		.card-footer-title {
+			// Footer Title
+		}
+		
+		.card-footer-info {
+			// Footer Info
 		}
 
 		.card-footer-actions {
-
+			// Footer Actions
 		}
 	}
 }
