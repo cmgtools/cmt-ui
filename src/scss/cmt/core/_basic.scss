@@ -315,6 +315,31 @@ html, body {
 	position: fixed !important;
 }
 
+// Stacked
+.layer {
+	z-index: 1;
+
+	&.layer-1 {
+		z-index: 10;
+	}
+	
+	&.layer-2 {
+		z-index: 20;
+	}
+	
+	&.layer-3 {
+		z-index: 30;
+	}
+	
+	&.layer-4 {
+		z-index: 40;
+	}
+	
+	&.layer-5 {
+		z-index: 50;
+	}
+}
+
 // Display Type
 
 .block {

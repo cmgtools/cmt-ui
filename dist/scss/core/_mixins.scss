@@ -1779,7 +1779,10 @@ Notes:
 // Add default image
 .pattern {
 	@extend %textures;
-	background-image: url( $images-path + "pattern-default.jpg" );
+	
+	&.pattern-default {
+		background-image: url( $images-path + "pattern-default.png" );
+	}
 }
 
 // Media Queries **************************************

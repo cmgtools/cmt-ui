@@ -1,0 +1,59 @@
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Rating          - The rating element can be used to provide ratings.
+*
+***********************************************************************/
+
+// == Rating ========================
+
+.cmt-rating {
+	text-align: left;
+
+	.wrap-stars {
+
+		.star {
+			display: inline-block;
+			padding: 0.30em;
+			margin-bottom: 0.75rem;
+			cursor: pointer;
+		}
+	}
+
+	.wrap-messages {
+
+		.star-message {
+			display: none;
+			padding: 0.30em;
+			margin-bottom: 0.75rem;
+
+			&.selected {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.cmt-rating-native {
+	text-align: left;
+
+	// Radio or Checkbox - these styles work together with cmt-choice
+
+	input[type=checkbox] + .label.label-rating::before, input[type=radio] + .label.label-rating::before {
+		margin-right: 8px;
+	}
+
+	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
+		content: "\e0f3";
+	}
+
+	input[type=radio]:checked+.label::before {
+		content: "\e0f3";
+	}
+}

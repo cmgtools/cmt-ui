@@ -1,0 +1,76 @@
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Icon picker     - The icon picker element allows users to pick an item. It depends on cmtIconPicker jQuery
+*                   plugin available in CMT-JS framework.
+*
+***********************************************************************/
+
+// == Icon Picker ===================
+
+.icon-picker-wrap {
+	width: 100%;
+
+	.icon-picker {
+		position: relative;
+		display: inline-block;
+
+		.picker-icon-wrap {
+			display: inline-block;
+			position: relative;
+			width: 64px;
+			height: 64px;
+			text-align: center;
+			cursor: pointer;
+			background-color: $color-secondary;
+			color: $color-secondary-text;
+			@include transit-color-bkg-color( $transit-eio, $transit-time-small );
+
+			&:hover {
+				background-color: $color-btn;
+				color: $color-btn-text;
+			}
+
+			.picker-icon {
+				display: inline-block;
+				height: 64px;
+				line-height: 64px;
+				font-size: 48px;
+				cursor: pointer;
+			}
+		}
+
+		.picker-icon-sets {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 64px;
+			width: 264px;
+			padding: 5px;
+			height: 216px;
+			background-color: $color-primary-d;
+			z-index: 1000000;
+
+			.picker-icon-wrap {
+				margin: 2px;
+				width: 48px;
+				height: 48px;
+
+				.picker-icon {
+					display: inline-block;
+					width: 48px;
+					height: 48px;
+					line-height: 48px;
+					font-size: 36px;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

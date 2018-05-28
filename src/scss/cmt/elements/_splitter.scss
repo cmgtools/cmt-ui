@@ -1,0 +1,84 @@
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Splitter		  - The splitters can be used to split an element either vertically or horizontally.
+***********************************************************************/
+
+// == Splitter ======================
+
+.splitter {
+	margin: 0 auto;
+
+	&.splitter-h {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		border-bottom: 1px solid $color-border;
+
+		&.splitter-h-25 {
+			width: 25%;
+		}
+
+		&.splitter-h-50 {
+			width: 50%;
+		}
+
+		&.splitter-h-75 {
+			width: 75%;
+		}
+
+		&.splitter-h-80 {
+			width: 80%;
+		}
+
+		&.splitter-h-small {
+			width: 25px;
+		}
+
+		&.splitter-h-medium {
+			width: 50px;
+		}
+
+		&.splitter-h-large {
+			width: 150px;
+		}
+	}
+
+	&.splitter-v {
+		border-right: 1px solid $color-border;
+		width: 1px;
+
+		&.splitter-v-25 {
+			height: 25%;
+		}
+
+		&.splitter-v-50 {
+			height: 50%;
+		}
+
+		&.splitter-v-75 {
+			height: 75%;
+		}
+
+		&.splitter-v-80 {
+			height: 80%;
+		}
+
+		&.splitter-v-small {
+			height: 125px;
+		}
+
+		&.splitter-v-medium {
+			height: 250px;
+		}
+
+		&.splitter-v-large {
+			height: 500px;
+		}
+	}
+}

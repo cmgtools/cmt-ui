@@ -1,0 +1,21 @@
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* List		  - 
+***********************************************************************/
+
+// == Radio List ====================
+
+.list-radio {
+
+	label {
+		width: auto;
+		clear: none;
+	}
+}

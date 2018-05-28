@@ -1,0 +1,200 @@
+/**********************************************************************
+Description: It defines the styles of the page component. We can devide the entire page 
+			 in multiple sections. Each page can have background image with or without 
+			 parallax effect, a content wrapper which wraps page header, content and footer.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for header components as listed below:
+
+* Page       - The barebone page class with minimum styles common for all the pages. The base class can have below
+*               listed options:
+*                   - It can have background image with or without parallax effects.
+*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
+*                     background and even content wrapper background in the form of image or texture.
+*                   - Height of page must not be set using min-height to get background with parallax working.
+***********************************************************************/
+
+// == Structure - Block =============
+
+.page {
+	position: relative;
+
+	// responsive background
+	.page-bkg {
+		@include bkg-image;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// fixed background
+	.page-bkg-fixed {
+		@include bkg-image-fixed;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// scrollable background
+	.page-bkg-scroll {
+		@include bkg-image-scroll;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	// parallax background
+	.page-bkg-parallax {
+		@include bkg-image;
+		width: 100%;
+		height: 150%;
+		position: absolute;
+		top: -50%;
+		left: 0;
+		z-index: 5;
+	}
+
+	// Texture on top of block background but under content
+	> .texture {
+		z-index: 10;
+	}
+
+	// Content Wrapper on top of texture
+	.page-content-wrap {
+		position: relative;
+		z-index: 15;
+
+		// Page Header
+		.page-header-wrap {
+			position: relative;
+
+			.page-header {
+				position: relative;
+
+				.page-header-icon {
+					// Header icon
+				}
+
+				.page-header-title {
+					// Header title
+				}
+
+				.page-header-info {
+					// Header Info
+				}
+
+				.page-header-content {
+					// Header content
+				}
+			}
+		}
+
+		// Page Content
+		.page-content {
+			position: relative;
+
+			.page-content-title {
+				// Content title
+			}
+			
+			.page-content-info {
+				// Content info
+			}
+
+			.page-content-summary {
+				// Content info
+			}
+
+			.page-content-data {
+				position: relative;
+				// Text Content
+			}
+
+			.page-content-buffer {
+				position: relative;
+				// Additional data
+			}
+
+			// Wraps Block Boxes
+			.page-box-wrap {
+				
+				.page-box {
+					// Box layout - derived from box component
+				}
+			}
+
+			// Wraps Page Blocks
+			.page-block-wrap {
+				// Block Data
+
+				.page-block {
+					// Block layout - derived from block component
+				}
+			}
+
+			// Wraps Block Widgets
+			.page-widget-wrap {
+				// Widget Data
+
+				.page-widget {
+					// Widget layout - derived from widget component
+				}
+			}
+		}
+
+		// Page Sidebar Top
+		.page-sidebar-top {
+			// Top Sidebar
+		}
+
+		// Page Sidebar Right
+		.page-sidebar-right {
+			// Right Sidebar
+		}
+
+		// Page Sidebar Bottom
+		.page-sidebar-bottom {
+			// Bottom Sidebar
+		}
+		
+		// Page Sidebar Left
+		.page-sidebar-left {
+			// Left Sidebar
+		}
+
+		// Page Footer
+		.page-footer-wrap {
+			position: relative;
+
+			.page-footer {
+				position: relative;
+
+				.page-footer-icon {
+					// Footer icon
+				}
+
+				.page-footer-title {
+					// Footer title
+				}
+
+				.page-footer-info {
+					// Footer Info
+				}
+
+				.page-footer-content {
+					// Footer Content
+				}
+			}
+		}
+	}
+}

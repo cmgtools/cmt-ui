@@ -31,46 +31,53 @@ Details: It defines the styles of card components as listed below:
 		z-index: 10;
 	}
 
-	.card-header {
+	// Content Wrapper on top of texture
+	.card-content-wrap {
 		position: relative;
 		z-index: 15;
 
-		.card-header-icon {
-			// Header Icon or Avatar
+		.card-header {
+			position: relative;
+
+			.card-header-icon {
+				// Header Icon or Avatar
+			}
+
+			.card-header-title {
+				// Header Title
+			}
+
+			.card-header-info {
+				// Header Info
+			}
+
+			.card-header-actions {
+				// Header Actions
+			}
 		}
 
-		.card-header-title {
-			// Header Title
+		.card-data {
+			position: relative;
 		}
 
-		.card-header-actions {
-			// Header Actions
-		}
-	}
+		.card-footer {
+			position: relative;
 
-	.card-data {
-		position: relative;
-		z-index: 15;
-	}
+			.card-footer-icon {
+				// Footer Icon
+			}
 
-	.card-footer {
-		position: relative;
-		z-index: 15;
+			.card-footer-title {
+				// Footer Title
+			}
 
-		.card-footer-icon {
-			// Footer Icon
-		}
+			.card-footer-info {
+				// Footer Info
+			}
 
-		.card-footer-title {
-			// Footer Title
-		}
-		
-		.card-footer-info {
-			// Footer Info
-		}
-
-		.card-footer-actions {
-			// Footer Actions
+			.card-footer-actions {
+				// Footer Actions
+			}
 		}
 	}
 }
@@ -79,15 +86,21 @@ Details: It defines the styles of card components as listed below:
 
 .card-element {
 
-	.card-header {
-		text-align: center;
-	 }
+	.card-content-wrap {
 
-	 .card-data {
-		text-align: center;
-	 }
+		.card-header {
+			text-align: center;
+			padding: 1em;
+		}
 
-	 .card-footer {
-		text-align: center;
-	 }
+		 .card-data {
+			text-align: center;
+			padding: 1em;
+		}
+
+		 .card-footer {
+			text-align: center;
+			padding: 1em;
+		}
+	}
 }

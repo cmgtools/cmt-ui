@@ -189,14 +189,14 @@ Blur				-	Blus is another mixin adding lens effect to blur underlying content an
 Media Queries		-	These mixins are pre-defined media queries using the screen sizes declared in variables file. This 
 						section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .frm-split-40-60 .form-group, .sidebar-basic .sidebar-header .sidebar-title {
+.clearfix, .row, .frm-split-40-60 .form-group, .header-basic, .sidebar-basic .sidebar-header .sidebar-title {
   zoom: 1; }
-  .clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .sidebar-basic .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-basic .sidebar-header .sidebar-title:after {
+  .clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .header-basic:before, .sidebar-basic .sidebar-header .sidebar-title:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .sidebar-basic .sidebar-header .sidebar-title:after {
+  .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .header-basic:after, .sidebar-basic .sidebar-header .sidebar-title:after {
     clear: both; }
 
 /*
@@ -1547,8 +1547,8 @@ Notes:
     -ms-filter: blur(13px);
     filter: blur(13px); }
 
-.pattern {
-  background-image: url("../images/pattern-default.jpg"); }
+.pattern.pattern-default {
+  background-image: url("../images/pattern-default.png"); }
 
 /**********************************************************************
 Description	:	This file define the transition effects available in CMT-UI css framework. These allow changes 
@@ -2433,6 +2433,19 @@ html, body {
 
 .fixed {
   position: fixed !important; }
+
+.layer {
+  z-index: 1; }
+  .layer.layer-1 {
+    z-index: 10; }
+  .layer.layer-2 {
+    z-index: 20; }
+  .layer.layer-3 {
+    z-index: 30; }
+  .layer.layer-4 {
+    z-index: 40; }
+  .layer.layer-5 {
+    z-index: 50; }
 
 .block {
   display: block !important; }
@@ -4725,25 +4738,6 @@ Details: It defines the custom element styles as listed below:
 * Icon picker     - The icon picker element allows users to pick an item. It depends on cmtIconPicker jQuery
 *                   plugin available in CMT-JS framework.
 *
-* Select          - The custom select allows user to select an item. It override the default select ui dependent
-*                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
-*
-* Choice          - The choice allows user to select single or multiple options from available options. It include
-*                   radio and checkbox html components and change their default behaviour by showing good looking
-*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
-*
-* Rating          - The rating element can be used to provide ratings.
-*
-* Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
-*
-* Button          - This class turns an element into button and does not need any JS to work.
-*
-* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
-*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
-*                   appropriate postion.
-*
-* Splitter		  - The splitters can be used to split an element either vertically or horizontally.
-*
 ***********************************************************************/
 .icon-picker-wrap {
   width: 100%; }
@@ -4795,6 +4789,87 @@ Details: It defines the custom element styles as listed below:
           font-size: 36px;
           cursor: pointer; }
 
+.cmt-timepicker {
+  position: absolute;
+  display: none; }
+  .cmt-timepicker .cmt-timepicker-content .cmt-timepicker-hr-wrap .cmt-timepicker-hr {
+    text-align: center; }
+  .cmt-timepicker .cmt-timepicker-content .cmt-timepicker-min-wrap .cmt-timepicker-min {
+    text-align: center; }
+
+.cmt-timepicker-basic {
+  background: #3C4655;
+  color: #96B0D6;
+  border: 1px solid #595959; }
+  .cmt-timepicker-basic .cmt-timepicker-header {
+    border-bottom: 1px solid #595959; }
+    .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm {
+      padding: 0.5em; }
+      .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.cmt-timepicker-am {
+        cursor: pointer;
+        border-right: 1px solid #7F7F7F; }
+      .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.cmt-timepicker-pm {
+        cursor: pointer; }
+      .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.cmt-timepicker-mm {
+        border-left: 1px solid #595959; }
+      .cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.active {
+        background: #556479;
+        color: #6a8fc5; }
+  .cmt-timepicker-basic .cmt-timepicker-content {
+    border-bottom: 1px solid #595959; }
+    .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-hr-wrap .cmt-timepicker-hr {
+      padding: 0.5em;
+      border-left: 1px solid #7F7F7F;
+      border-bottom: 1px solid #7F7F7F;
+      cursor: pointer; }
+      .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-hr-wrap .cmt-timepicker-hr.active {
+        background: #556479;
+        color: #6a8fc5; }
+    .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-min-wrap {
+      border-left: 1px solid #595959; }
+      .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-min-wrap .cmt-timepicker-min {
+        padding: 0.5em;
+        border-left: 1px solid #7F7F7F;
+        border-bottom: 1px solid #7F7F7F;
+        cursor: pointer; }
+        .cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-min-wrap .cmt-timepicker-min.active {
+          background: #556479;
+          color: #6a8fc5; }
+  .cmt-timepicker-basic .cmt-timepicker-footer {
+    padding: 0.25em; }
+    .cmt-timepicker-basic .cmt-timepicker-footer .cmt-timepicker-ok {
+      margin-left: 0.25em; }
+    .cmt-timepicker-basic .cmt-timepicker-footer .cmt-timepicker-close {
+      margin-left: 0.25em; }
+
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* List		  - 
+***********************************************************************/
+.list-radio label {
+  width: auto;
+  clear: none; }
+
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Select          - The custom select allows user to select an item. It override the default select ui dependent
+*                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
+*
+***********************************************************************/
 .cmt-select-wrap {
   width: 100%;
   display: inline-block; }
@@ -4925,6 +5000,20 @@ Details: It defines the custom element styles as listed below:
     padding-right: 0.60em;
     margin: 0; }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Choice          - The choice allows user to select single or multiple options from available options. It include
+*                   radio and checkbox html components and change their default behaviour by showing good looking
+*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
+*
+***********************************************************************/
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
   cursor: pointer;
@@ -4987,6 +5076,18 @@ Details: It defines the custom element styles as listed below:
 .cmt-choice input[type=checkbox]:checked + .label::before {
   content: "\3a"; }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Rating          - The rating element can be used to provide ratings.
+*
+***********************************************************************/
 .cmt-rating {
   text-align: left; }
   .cmt-rating .wrap-stars .star {
@@ -5010,6 +5111,17 @@ Details: It defines the custom element styles as listed below:
   .cmt-rating-native input[type=radio]:checked + .label::before {
     content: "\e0f3"; }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
+***********************************************************************/
 .cmt-switch {
   position: relative;
   display: inline-block; }
@@ -5061,6 +5173,21 @@ Details: It defines the custom element styles as listed below:
   .cmt-switch .cmt-toggle-round:checked + label:after {
     margin-left: 3.5em; }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Button          - This class turns an element into button and does not need any JS to work.
+*
+* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
+*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
+*                   appropriate postion.
+***********************************************************************/
 .btn.btn-auto {
   width: auto; }
 
@@ -5190,8 +5317,11 @@ Details: It defines the custom element styles as listed below:
   background-color: #E74343 !important;
   color: #FFFFFF !important; }
 
-a.btn {
+a.btn, .link.btn {
   color: #FFFFFF; }
+
+a:hover, .link:hover {
+  color: #FF3636; }
 
 .btn-icon-o {
   position: absolute;
@@ -5275,52 +5405,10 @@ a.btn {
   .btn-group > .edit:hover, .btn-group > .save:hover, .btn-group > .delete:hover {
     color: #FF3636; }
 
-.splitter {
-  margin: 0 auto; }
-  .splitter.splitter-h {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    border-bottom: 1px solid #7F7F7F; }
-    .splitter.splitter-h.splitter-h-25 {
-      width: 25%; }
-    .splitter.splitter-h.splitter-h-50 {
-      width: 50%; }
-    .splitter.splitter-h.splitter-h-75 {
-      width: 75%; }
-    .splitter.splitter-h.splitter-h-80 {
-      width: 80%; }
-    .splitter.splitter-h.splitter-h-small {
-      width: 25px; }
-    .splitter.splitter-h.splitter-h-medium {
-      width: 50px; }
-    .splitter.splitter-h.splitter-h-large {
-      width: 150px; }
-  .splitter.splitter-v {
-    border-right: 1px solid #7F7F7F;
-    width: 1px; }
-    .splitter.splitter-v.splitter-v-25 {
-      height: 25%; }
-    .splitter.splitter-v.splitter-v-50 {
-      height: 50%; }
-    .splitter.splitter-v.splitter-v-75 {
-      height: 75%; }
-    .splitter.splitter-v.splitter-v-80 {
-      height: 80%; }
-    .splitter.splitter-v.splitter-v-small {
-      height: 125px; }
-    .splitter.splitter-v.splitter-v-medium {
-      height: 250px; }
-    .splitter.splitter-v.splitter-v-large {
-      height: 500px; }
-
 .cmt-click {
   cursor: pointer; }
   .cmt-click.disabled {
     cursor: default; }
-
-.list-radio label {
-  width: auto;
-  clear: none; }
 
 /**********************************************************************
 Description: It defines the styles of form elements for CMT-UI css framework.
@@ -5768,6 +5856,114 @@ table td {
         width: 100%; } }
 
 /**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Splitter		  - The splitters can be used to split an element either vertically or horizontally.
+***********************************************************************/
+.splitter {
+  margin: 0 auto; }
+  .splitter.splitter-h {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #7F7F7F; }
+    .splitter.splitter-h.splitter-h-25 {
+      width: 25%; }
+    .splitter.splitter-h.splitter-h-50 {
+      width: 50%; }
+    .splitter.splitter-h.splitter-h-75 {
+      width: 75%; }
+    .splitter.splitter-h.splitter-h-80 {
+      width: 80%; }
+    .splitter.splitter-h.splitter-h-small {
+      width: 25px; }
+    .splitter.splitter-h.splitter-h-medium {
+      width: 50px; }
+    .splitter.splitter-h.splitter-h-large {
+      width: 150px; }
+  .splitter.splitter-v {
+    border-right: 1px solid #7F7F7F;
+    width: 1px; }
+    .splitter.splitter-v.splitter-v-25 {
+      height: 25%; }
+    .splitter.splitter-v.splitter-v-50 {
+      height: 50%; }
+    .splitter.splitter-v.splitter-v-75 {
+      height: 75%; }
+    .splitter.splitter-v.splitter-v-80 {
+      height: 80%; }
+    .splitter.splitter-v.splitter-v-small {
+      height: 125px; }
+    .splitter.splitter-v.splitter-v-medium {
+      height: 250px; }
+    .splitter.splitter-v.splitter-v-large {
+      height: 500px; }
+
+.tabs-basic .tab-links-wrap {
+  border-bottom: 1px solid #595959; }
+  .tabs-basic .tab-links-wrap .tab-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-left: -4px;
+    cursor: pointer; }
+    .tabs-basic .tab-links-wrap .tab-link.active {
+      border: 1px solid #595959;
+      border-bottom: 1px solid white;
+      margin-bottom: -1px; }
+
+.tabs-basic .tab-content-wrap .tab-content {
+  display: none; }
+
+.accordian {
+  position: relative; }
+  .accordian .accordian-trigger {
+    position: relative; }
+  .accordian .accordian-view {
+    position: relative; }
+
+.accordian-basic .accordian-trigger {
+  background-color: #87BA45;
+  color: #E6E6E6;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.08em;
+  padding: 0.25em 1em;
+  cursor: pointer; }
+
+.accordian-basic .accordian-view {
+  background-color: #3C4655;
+  color: #96B0D6;
+  padding: 1em; }
+
+.accordian-basic.accordian-primary .accordian-trigger {
+  background-color: #F2F2F2;
+  color: #87BA45; }
+
+.accordian-basic.accordian-primary .accordian-view {
+  background-color: #F2F2F2;
+  color: #363636; }
+
+.accordian-basic.accordian-secondary .accordian-trigger {
+  background-color: #3C4655;
+  color: #3C4655; }
+
+.accordian-basic.accordian-secondary .accordian-view {
+  background-color: #3C4655;
+  color: #96B0D6; }
+
+.accordian-border .accordian-trigger.active {
+  border-left: 2px solid #87BA45; }
+
+.accordian-border .accordian-view {
+  border: 1px solid #7F7F7F; }
+  .accordian-border .accordian-view.active {
+    border-left: 2px solid #87BA45; }
+
+/**********************************************************************
 Description: It defines the styles for breadcrumbs available in CMT-UI css framework.
 
 Dependencies: variables, variables-ext, mixins
@@ -5842,41 +6038,15 @@ Details: It defines the custom element styles as listed below:
         background-color: #3C4655;
         color: #96B0D6; }
 
-.tabs-basic .tab-links-wrap {
-  border-bottom: 1px solid #595959; }
-  .tabs-basic .tab-links-wrap .tab-link {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin-left: -4px;
-    cursor: pointer; }
-    .tabs-basic .tab-links-wrap .tab-link.active {
-      border: 1px solid #595959;
-      border-bottom: 1px solid white;
-      margin-bottom: -1px; }
-
-.tabs-basic .tab-content-wrap .tab-content {
-  display: none; }
-
-.accordian {
-  position: relative; }
-  .accordian .accordian-trigger {
-    position: relative; }
-  .accordian .accordian-view {
-    position: relative; }
-
-.accordian-basic .accordian-trigger {
-  background-color: #87BA45;
-  color: #E6E6E6;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 1.17em;
-  padding: 1em;
-  cursor: pointer; }
-
-.accordian-basic .accordian-view {
-  background-color: #3C4655;
-  color: #96B0D6;
-  padding: 1em; }
-
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27 Jan, 2018, 2:02:01 PM
+    Author     : bhagwatchouhan
+*/
 /**********************************************************************
 Description: It defines the styles for menu components available in CMT-UI css framework.
 
@@ -6403,12 +6573,12 @@ Details: It defines the styles for header components as listed below:
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10000; }
+    z-index: 10001; }
   .header.header-absolute {
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 10000; }
+    z-index: 10001; }
 
 /* Basic Header having fixed width logo, main menu and mobile menu icon.
  * Responsive approach - Desktop first
@@ -6421,35 +6591,62 @@ Details: It defines the styles for header components as listed below:
   background-color: #363636;
   color: #ffffff;
   position: relative;
-  z-index: 10000; }
+  z-index: 10001; }
   .header-basic .header-logo {
     cursor: pointer;
     padding: 10px;
     display: block;
-    position: absolute;
-    z-index: 2; }
+    z-index: 2;
+    float: left; }
     .header-basic .header-logo .logo {
       width: 140px; }
   .header-basic #menu-main {
     padding: 10px;
     text-align: right;
     display: block;
-    z-index: 1; }
+    z-index: 1;
+    float: right; }
   .header-basic #menu-main-mobile {
-    display: none; }
-  .header-basic #btn-menu-mobile {
     position: absolute;
-    right: 0px;
-    cursor: pointer;
-    padding: 10px;
-    display: none;
-    z-index: 2; }
+    display: none; }
+    .header-basic #menu-main-mobile li {
+      background-color: white;
+      color: #171717;
+      padding: 0.75em 0; }
+      .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
+        color: #171717; }
+        .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
+          color: #298ccf; }
   @media only screen and (max-width: 1024px) {
-    .header-basic .header-logo {
+    .header-basic .header-logo .logo {
       width: 70px; }
     .header-basic #menu-main {
       margin-top: 55px;
-      display: none; } }
+      display: none; }
+    .header-basic #mobile-actions {
+      padding: 20px 10px;
+      text-align: right;
+      display: block;
+      z-index: 1;
+      float: right; }
+      .header-basic #mobile-actions .mobile-action {
+        cursor: pointer;
+        margin-left: 0.5em; }
+    .header-basic #menu-main-mobile {
+      width: 320px;
+      right: 0; } }
+  @media only screen and (max-width: 480px) {
+    .header-basic #menu-main-mobile {
+      width: 100%; } }
+  @media only screen and (min-width: 1025px) {
+    .header-basic {
+      padding: 0 5%; }
+      .header-basic .header-logo {
+        padding-left: 0; }
+      .header-basic #menu-main {
+        padding-right: 0; }
+      .header-basic #mobile-actions, .header-basic #menu-mobile-wrap {
+        display: none; } }
 
 /**********************************************************************
 Description: It defines the styles for footer components available in CMT-UI css framework.
@@ -7180,24 +7377,27 @@ Details: It defines the styles of card components as listed below:
     z-index: 1; }
   .card > .texture {
     z-index: 10; }
-  .card .card-header {
+  .card .card-content-wrap {
     position: relative;
     z-index: 15; }
-  .card .card-data {
-    position: relative;
-    z-index: 15; }
-  .card .card-footer {
-    position: relative;
-    z-index: 15; }
+    .card .card-content-wrap .card-header {
+      position: relative; }
+    .card .card-content-wrap .card-data {
+      position: relative; }
+    .card .card-content-wrap .card-footer {
+      position: relative; }
 
-.card-element .card-header {
-  text-align: center; }
+.card-element .card-content-wrap .card-header {
+  text-align: center;
+  padding: 1em; }
 
-.card-element .card-data {
-  text-align: center; }
+.card-element .card-content-wrap .card-data {
+  text-align: center;
+  padding: 1em; }
 
-.card-element .card-footer {
-  text-align: center; }
+.card-element .card-content-wrap .card-footer {
+  text-align: center;
+  padding: 1em; }
 
 /**********************************************************************
 Description: It defines the styles of box components available in CMT-UI css framework.

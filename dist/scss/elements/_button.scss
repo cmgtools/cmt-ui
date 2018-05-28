@@ -1,0 +1,352 @@
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Button          - This class turns an element into button and does not need any JS to work.
+*
+* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
+*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
+*                   appropriate postion.
+***********************************************************************/
+
+// == Button ========================
+
+.btn {
+	@extend %element-style;
+	@extend %element-size;
+	@extend %element-style-action;
+
+	&.btn-auto {
+		width: auto;
+	}
+
+	&.btn-25 {
+		width: 25% !important;
+	}
+
+	&.btn-50 {
+		width: 50% !important;
+	}
+
+	&.btn-75 {
+		width: 75% !important;
+	}
+
+	&.btn-small {
+		width: 80px !important;
+	}
+
+	&.btn-medium {
+		width: 120px !important;
+	}
+
+	&.btn-large {
+		width: 180px !important;
+	}
+
+	&.btn-xlarge {
+		width: 250px !important;
+	}
+
+	// White button with dark gray hover
+	&.btn-white {
+		background-color: $color-white;
+		color: $color-black;
+
+		&:hover {
+			background-color: $color-gray-d;
+			color: $color-gray-l;
+		}
+	}
+
+	// Black button with dark gray hover
+	&.btn-black {
+		background-color: $color-black;
+		color: $color-white;
+
+		&:hover {
+			background-color: $color-gray-d;
+			color: $color-gray-l;
+		}
+	}
+
+	// Gray button with dark gray hover
+	&.btn-gray {
+		background-color: $color-gray;
+		color: $color-white;
+
+		&:hover {
+			background-color: $color-gray-d;
+			color: $color-gray-l;
+		}
+	}
+
+	&.btn-blue {
+		background-color: $color-blue;
+
+		&:hover {
+			background-color: $color-blue-d;
+		}
+	}
+
+	&.btn-purple {
+		background-color: $color-purple;
+
+		&:hover {
+			background-color: $color-purple-d;
+		}
+	}
+
+	&.btn-orange {
+		background-color: $color-orange;
+
+		&:hover {
+			background-color: $color-orange-d;
+		}
+	}
+
+	&.btn-yellow {
+		background-color: $color-yellow;
+
+		&:hover {
+			background-color: $color-yellow-d;
+		}
+	}
+
+	&.btn-red {
+		background-color: $color-red;
+
+		&:hover {
+			background-color: $color-red-d;
+		}
+	}
+
+	&.btn-pink {
+		background-color: $color-pink;
+
+		&:hover {
+			background-color: $color-pink-d;
+		}
+	}
+
+	&.btn-magenta {
+		background-color: $color-magenta;
+
+		&:hover {
+			background-color: $color-magenta-d;
+		}
+	}
+
+	&.btn-green {
+		background-color: $color-green;
+
+		&:hover {
+			background-color: $color-green-d;
+		}
+	}
+
+	&.btn-brown {
+		background-color: $color-brown;
+
+		&:hover {
+			background-color: $color-brown-d;
+		}
+	}
+
+	&.btn-aqua {
+		background-color: $color-aqua;
+
+		&:hover {
+			background-color: darken( $color-aqua, 15% );
+		}
+	}
+
+	&.btn-golden {
+		background-color: $color-golden;
+
+		&:hover {
+			background-color: darken( $color-golden, 15% );
+		}
+	}
+
+	&.btn-silver {
+		background-color: $color-silver;
+
+		&:hover {
+			background-color: darken( $color-silver, 15% );
+		}
+	}
+
+	&.btn-maroon {
+		background-color: $color-maroon;
+
+		&:hover {
+			background-color: darken( $color-maroon, 15% );
+		}
+	}
+
+	&.btn-olive {
+		background-color: $color-olive;
+
+		&:hover {
+			background-color: darken( $color-olive, 15% );
+		}
+	}
+
+	&.btn-lime {
+		background-color: $color-lime;
+
+		&:hover {
+			background-color: darken( $color-lime, 15% );
+		}
+	}
+
+	&.btn-navy {
+		background-color: $color-navy;
+
+		&:hover {
+			background-color: darken( $color-navy, 15% );
+		}
+	}
+
+	// Reversed hover of button color and text for white, black and gray buttons
+	&.btn-reverse {
+
+		&:hover {
+			background-color: $color-btn !important;
+			color: $color-btn-text !important;
+		}
+	}
+}
+
+a, .link {
+
+    &.btn {
+        color: $color-btn-text;
+    }
+
+    &:hover {
+        color: $color-btn-h;
+    }
+}
+
+// == Icon Button ===================
+
+.btn-icon {
+	@extend %element-style;
+	@extend %element-style-action;
+}
+
+// == Rounded Icon Button ===========
+
+.btn-icon-o {
+	position: absolute;
+	top: 0.25em;
+	right: 0.25em;
+	width: 1.5em;
+	height: 1.5em;
+	line-height: 1.2em;
+	display: inline-block;
+	cursor: pointer;
+	@include circled1( $color-tertiary, $color-tertiary-text );
+	@include transit-bkg-color( $transit-eio, $transit-time-medium );
+
+	.icon {
+		font-size: 1em;
+	}
+
+	&:hover {
+		background-color: $color-tertiary-d;
+		color: $color-tertiary-text-d;
+	}
+
+	&.btn-icon-o-small {
+		width: 2em;
+		height: 2em;
+		line-height: 1.6em;
+
+		.icon {
+			font-size: 1.5em;
+		}
+	}
+
+	&.btn-icon-o-medium {
+		width: 2.5em;
+		height: 2.5em;
+		line-height: 2.1em;
+
+		.icon {
+			font-size: 2em;
+		}
+	}
+
+	&.btn-icon-o-large {
+		width: 3em;
+		height: 3em;
+		line-height: 2.5em;
+
+		.icon {
+			font-size: 2.5em;
+		}
+	}
+}
+
+// == Button Group ==================
+
+// parents using button group must use positioning.
+
+.btn-group {
+
+	&.btn-group-top-left {
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: left;
+	}
+
+	&.btn-group-top-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: right;
+	}
+
+	&.btn-group-bottom-left {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		text-align: left;
+	}
+
+	&.btn-group-bottom-right {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		text-align: right;
+	}
+
+	& >.edit, & >.save, & >.delete {
+		color: $color-btn;
+		cursor: pointer;
+		@include transit-color( $transit-eio, $transit-time-small );
+
+		&:hover {
+			color: $color-btn-h;
+		}
+	}
+}
+
+// == Additionals ===================
+
+.cmt-click {
+	cursor: pointer;
+
+	&.disabled {
+		cursor: default;
+	}
+}

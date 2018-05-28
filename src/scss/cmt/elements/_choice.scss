@@ -1,0 +1,107 @@
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Choice          - The choice allows user to select single or multiple options from available options. It include
+*                   radio and checkbox html components and change their default behaviour by showing good looking
+*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
+*
+***********************************************************************/
+
+// == Choice ========================
+
+// Choices using radio or checkbox
+
+.cmt-choice {
+
+	input[type=checkbox],
+	input[type=radio] {
+		cursor: pointer;
+		display: none;
+	}
+
+	label {
+		cursor: pointer;
+		padding: 0;
+	}
+
+	.label {
+		margin-top: 0.25em;
+	}
+
+	// Normal State
+
+	input[type=checkbox] + .label.pad-label::before,
+	input[type=radio] + .label.pad-label::before {
+		margin-right: 8px;
+	}
+
+	input[type=checkbox]+.label::before,
+	input[type=radio]+.label::before {
+		font-family: "cmti-core";
+		font-weight: normal;
+		color: gray;
+		border-radius: 16px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: -5px;
+		line-height: 13px;
+	}
+
+	// Checked State
+
+	input[type=checkbox]:checked, input[type=checkbox]:focus,
+	input[type=radio]:checked, input[type=radio]:focus {
+		outline:none !important;
+	}
+
+	input[type=checkbox]:checked + .label::before,
+	input[type=radio]:checked + .label::before {
+		display: inline-block;
+		background-color: #F5F8FC;
+		color: $color-btn;
+	}
+
+	input[type=checkbox]:checked + .label,
+	input[type=radio]:checked + .label {
+		color: $color-btn-a;
+	}
+
+	// Hover State - Normal, Checked
+
+	input[type=checkbox]:hover + .label::before, input[type=checkbox] + .label:hover::before, input[type=checkbox]:checked + .label::before,
+	input[type=radio]:hover + .label::before, input[type=radio] + .label:hover::before, input[type=radio]:checked + .label::before {
+		color: $color-btn-h;
+	}
+
+	// Disabled State
+
+	input[type=checkbox]:disabled + .label::before,
+	input[type=radio]:disabled + .label::before {
+		background-color: #DDD !important;
+		color: #BBB;
+	}
+
+	// Display Content - Icon
+
+	input[type=radio] + .label::before, input[type=radio]:disabled + .label::before {
+		content: "\e0a2";
+	}
+
+	input[type=radio]:checked + .label::before {
+		content: "\e0a3";
+	}
+
+	input[type=checkbox] + .label::before, input[type=checkbox]:disabled + .label::before {
+		content: "\3b";
+	}
+
+	input[type=checkbox]:checked + .label::before {
+		content: "\3a";
+	}
+}

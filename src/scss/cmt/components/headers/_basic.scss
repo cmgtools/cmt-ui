@@ -19,14 +19,14 @@ Details: It defines the styles for header components as listed below:
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 10000; // modal popups must override this index
+		z-index: 10001; // modal popups must override this index
 	}
 
 	&.header-absolute {
 		position: absolute;
 		top: 0;
 		width: 100%;
-		z-index: 10000; // modal popups must override this index
+		z-index: 10001; // modal popups must override this index
 	}
 }
 
@@ -43,15 +43,16 @@ Details: It defines the styles for header components as listed below:
 	background-color: $color-header;
 	color: $color-header-text;
 	position: relative;
-	z-index: 10000;
+	z-index: 10001;
+	@extend %clearfix;
 
 	// Absolute positioned on left side wrapping the logo
 	.header-logo {
 		cursor: pointer;
 		padding: 10px;
 		display: block;
-		position: absolute;
 		z-index: 2;
+		float: left;
 
 		.logo {
 			width: 140px;
@@ -63,31 +64,81 @@ Details: It defines the styles for header components as listed below:
 		text-align: right;
 		display: block;
 		z-index: 1;
+		float: right;
 	}
 
-	// Added option to toggle mobile menu. Mobile Menu designing can be done on need, else main menu itself can be used.
+	// Should be wrapped within #menu-mobile-wrap
 	#menu-main-mobile {
-		display: none;
-	}
-
-	// Button to toggle mobile menu
-	#btn-menu-mobile {
 		position: absolute;
-		right: 0px;
-		cursor: pointer;
-		padding: 10px;
 		display: none;
-		z-index: 2;
+
+		li {
+			background-color: $color-primary-l;
+			color: $color-primary-text-l;
+			padding: 0.75em 0;
+
+			a, .link {
+				color: $color-primary-text-l;
+				
+				&:hover {
+					color: $color-link;
+				}
+			}
+		}
 	}
 
 	@include responsive-max( screen-tablet-large ) {
 
 		.header-logo {
-			width: 70px;
+			
+			.logo {
+				width: 70px;
+			}
 		}
 
 		#menu-main {
 			margin-top: 55px;
+			display: none;
+		}
+
+		#mobile-actions {
+			padding: 20px 10px;
+			text-align: right;
+			display: block;
+			z-index: 1;
+			float: right;
+
+			.mobile-action {
+				cursor: pointer;
+				margin-left: 0.5em;
+			}
+		}
+		
+		#menu-main-mobile {
+			width: 320px;
+			right: 0;
+		}
+	}
+
+	@include responsive-max( screen-mobile-large ) {
+		
+		#menu-main-mobile {
+			width: 100%;
+		}
+	}
+
+    @include responsive-min( screen-tablet-large ) {
+		padding: 0 5%;
+
+		.header-logo {
+			padding-left: 0;
+		}
+
+		#menu-main {
+			padding-right: 0;
+		}
+		
+		#mobile-actions, #menu-mobile-wrap {
 			display: none;
 		}
 	}

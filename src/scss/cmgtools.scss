@@ -109,26 +109,29 @@ Baidu		- <min>
 // ---------------------------------------//
 
 @import "cmt/elements/basic";
-// project - basic
+// project - native
 
-@import "cmt/elements/custom";
+@import "cmt/elements/icon-picker";
+@import "cmt/elements/time-picker";
+@import "cmt/elements/list";
+@import "cmt/elements/select";
+@import "cmt/elements/choice";
+@import "cmt/elements/rating";
+@import "cmt/elements/switch";
+@import "cmt/elements/button";
 // project - custom
 
 @import "cmt/elements/form";
-// project - form
-
 @import "cmt/elements/table";
-// project - table
+// project - native
 
-@import "cmt/elements/breadcrumbs";
-// project - breadcrumbs
-
-@import "cmt/elements/auto-fill";
-// project - auto fill
-
+@import "cmt/elements/splitter";
 @import "cmt/elements/tabs";
-@import "cmt/elements/accordians";
-// project - tabs and accordians
+@import "cmt/elements/accordian";
+@import "cmt/elements/breadcrumb";
+@import "cmt/elements/auto-fill";
+@import "cmt/elements/uploader";
+// project - custom
 
 // ---------------------------------------//
 // Components Division - Optional
@@ -165,6 +168,8 @@ Baidu		- <min>
 // Notes: Cards can be used in Boxes, Widgets, Blocks, Grid, Blog
 
 @import "cmt/components/cards/basic";
+@import "cmt/components/cards/icon";
+@import "cmt/components/cards/banner";
 // project - data cards
 
 // Notes: Boxes can be used in Widgets, Blocks, Grid, Blog

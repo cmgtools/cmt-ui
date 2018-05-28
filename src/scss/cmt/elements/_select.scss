@@ -1,0 +1,193 @@
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Select          - The custom select allows user to select an item. It override the default select ui dependent
+*                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
+*
+***********************************************************************/
+
+// == Select ========================
+
+.cmt-select-wrap {
+	width: 100%;
+	display: inline-block;
+
+	// Hide native select
+	select {
+		display: none;
+	}
+
+	.cmt-select {
+		position: relative;
+		background-color: $color-field;
+
+		// Select Value - default icon having width 32px. It can be changed based on icon dimensions.
+		.cmt-selected {
+			cursor: pointer;
+			position: relative;
+			z-index: 100000;
+			padding-right: 1.5em;
+			@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
+
+			// text for selected value
+			.s-text {
+				display: inline-block;
+				width: 100%;
+				overflow: hidden;
+				white-space: nowrap;
+				text-align: left;
+				color: $color-field-text;
+				font-size: 1em;
+				padding: 0.30em 0.25em;
+			}
+
+			// icon for select box
+			.s-icon {
+				position: absolute;
+				top: 0;
+				right: 0;
+				display: inline-block;
+				padding: 0.25em;
+			}
+
+			// disabled
+			&.disabled {
+				cursor: default;
+			}
+		}
+
+		// Select options
+		.cmt-select-list {
+			position: absolute;
+			width: 100%;
+			background-color: $color-field;
+			z-index: 100001;
+			max-height: 180px;
+			overflow-y: auto;
+			@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
+
+			li {
+				width: 100%;
+				overflow: hidden;
+				cursor: pointer;
+				background-color: $color-white;
+				padding: 0.25em;
+			}
+
+			li:hover {
+				color: $color-btn-text-a;
+				background-color: $color-btn;
+			}
+		}
+	}
+}
+
+.cmt-multiselect {
+	position: relative;
+	background-color: $color-field;
+
+	// Select Value - default icon having width 32px. It can be changed based on icon dimensions.
+	.cmt-selected {
+		cursor: pointer;
+		position: relative;
+		z-index: 100000;
+		padding-right: 1.5em;
+		@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
+
+		// text for selected value
+		.s-text {
+			display: inline-block;
+			width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-align: left;
+			color: $color-field-text;
+			font-size: 1em;
+			padding: 0.30em 0.25em;
+		}
+
+		// icon for select box
+		.s-icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			padding: 0.25em;
+		}
+
+		// disabled
+		&.disabled {
+			cursor: default;
+		}
+	}
+
+	// Select options
+	.cmt-select-list {
+		position: absolute;
+		width: 100%;
+		background-color: $color-field;
+		z-index: 100001;
+		max-height: 180px;
+		overflow-y: auto;
+		display: none;
+		@include shadow-inset( 0, 0, 0, $color-shadow-inset, 1px );
+
+		li {
+			width: 100%;
+			overflow: hidden;
+			cursor: pointer;
+			background-color: $color-white;
+			padding: 0.25em;
+		}
+
+		li:hover {
+			color: $color-btn-text-a;
+			background-color: $color-btn;
+		}
+	}
+}
+
+.cmt-select-native {
+	position: relative;
+	display: inline-block;
+
+	// Decorate native select
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		padding: 0.5em;
+		cursor: pointer;
+		padding-right: 1.8em;
+		text-shadow: 0 0 0 #000;
+	}
+
+	select:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+	}
+
+	select::-ms-expand {
+		display: none;
+	}
+
+	// Compatible with CMT-Icons and other frameworks
+	.icon, .cmti, .fa {
+		position: absolute;
+		right: 0;
+		border: none;
+		box-shadow: none;
+		outline: none;
+		font-size: 1em;
+		padding-top: 0.70em;
+		padding-left: 0.20em;
+		padding-right: 0.60em;
+		margin: 0;
+	}
+}
